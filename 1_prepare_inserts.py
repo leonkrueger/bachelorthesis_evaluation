@@ -13,6 +13,10 @@ max_inserts = 500
 random = Random(8463)
 
 
+def remove_quotes(attribute: str) -> str:
+    return attribute[1:-1] if attribute[0] == "'" or attribute[0] == '"' else attribute
+
+
 def map_type(type: str) -> str:
     type_mapping = {
         "TEXT": "VARCHAR(255)",
@@ -111,7 +115,7 @@ for path in os.listdir(folder):
 
                 # Get the right data types and create the correct "CREATE TABLE" statement
                 attribute_data = [
-                    [attribute[0], map_type(attribute[1])]
+                    [remove_quotes(attribute[0]), map_type(attribute[1])]
                     for attribute in attribute_data
                     if attribute[1].lower() != "key"
                 ]
@@ -142,7 +146,7 @@ for path in os.listdir(folder):
         json.dump(primary_keys, primary_keys_file)
 
     open(
-        os.path.join(subfolder, "gold_standard_results.json", "w", encoding="utf-8")
+        os.path.join(subfolder, "gold_standard_results.json"), "w", encoding="utf-8"
     ).close()
 
     shutil.copy2(full_path, os.path.join(subfolder, path))

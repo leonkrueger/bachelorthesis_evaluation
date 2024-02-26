@@ -30,16 +30,16 @@ def calculate_accuracy(
 
 accuracies = []
 
-with open("gold_standard_results.json") as gold_standard_results_file:
+with open("bird/address/gold_standard_results.json") as gold_standard_results_file:
     gold_standard = json.load(gold_standard_results_file)
 
-with open("evaluation_results_10.json") as results_file:
+with open("bird/address/delete_table/evaluation_results_0.1.json") as results_file:
     accuracies.append(calculate_accuracy(json.load(results_file), gold_standard))
 
-with open("evaluation_results_50.json") as results_file:
+with open("bird/address/delete_table/evaluation_results_0.5.json") as results_file:
     accuracies.append(calculate_accuracy(json.load(results_file), gold_standard))
 
-with open("evaluation_results_90.json") as results_file:
+with open("bird/address/delete_table/evaluation_results_0.9.json") as results_file:
     accuracies.append(calculate_accuracy(json.load(results_file), gold_standard))
 
 plt.bar(["0.1", "0.5", "0.9"], accuracies)

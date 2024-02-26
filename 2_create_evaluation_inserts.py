@@ -1,0 +1,95 @@
+from random import Random
+import os
+from typing import Any
+from util.insert_query_parser import parse_insert_query
+from util.make_adjustment import make_adjustment
+from util.adjustments import Adjustments
+
+
+folder = "bird"
+
+# Dictionary defines the different experiments
+# Lists describe the adjustments made in each experiment
+# Tuples define the adjustment and parameters
+experiments = {
+    "delete_table": [(Adjustments.DELETE_TABLE, [0.1, 0.5, 0.9])],
+}
+
+random = Random(2572)
+
+
+def create_experiment(
+    experiment_folder: str, experiment: list[tuple[Any]], queries: list[dict[str, Any]]
+) -> None:
+    adjustment_combinations = {"": queries}
+
+    # Create all combinations of params of the adjustments
+    for adjustment in experiment:
+        adjustment_combinations = make_adjustment(adjustment, adjustment_combinations)
+
+    # Gernerate the files with the inputs and an empty file for the results
+    for name, queries in adjustment_combinations.items():
+        with open(
+            os.path.join(experiment_folder, f"evaluation_input{name}.sql"),
+            "w",
+            encoding="utf-8",
+        ) as output_file:
+            for query in queries:
+                table_str = "" if "table" not in query.keys() else query["table"] + " "
+                columns_str = (
+                    ""
+                    if "columns" not in query.keys()
+                    else f"({', '.join(query['columns'])}) "
+                )
+                modified_query = f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(query['values'])});\n"
+
+                output_file.write(modified_query)
+
+        open(
+            os.path.join(experiment_folder, f"evaluation_results{name}.json"),
+            "w",
+            encoding="utf-8",
+        ).close()
+
+
+# Create all experiments for all databases
+for path in os.listdir(folder):
+    subfolder = os.path.join(folder, path)
+    if not os.path.isdir(subfolder):
+        continue
+
+    # Read all queries
+    with open(
+        os.path.join(subfolder, "inserts_only.sql"), encoding="utf-8"
+    ) as queries_file:
+        queries = [
+            parse_insert_query(query)
+            for query in queries_file.readlines()
+            if query.strip() != ""
+        ]
+    random.shuffle(queries)
+
+    # Remove all NULL-values from queries
+    for query in queries:
+        # SQLite produces a separate statement for each row
+        query["values"] = query["values"][0]
+        query["columns"] = [
+            column
+            for column, value in zip(query["columns"], query["values"])
+            if value.lower() != "null"
+        ]
+        query["values"] = [
+            value for value in query["values"] if value.lower() != "null"
+        ]
+
+    # Create all experiments
+    for experiment_name, experiment in experiments.items():
+        experiment_folder = os.path.join(subfolder, experiment_name)
+
+        # Do not overwrite existing experiments
+        if os.path.exists(experiment_folder):
+            continue
+
+        os.makedirs(experiment_folder, exist_ok=True)
+
+        create_experiment(experiment_folder, experiment, queries)

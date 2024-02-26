@@ -1,0 +1,1 @@
+{"CBSA": ["CBSA"], "state": ["abbreviation"], "congress": ["cognress_rep_id"], "zip_data": ["zip_code"], "alias": ["zip_code"], "area_code": ["zip_code", "area_code"], "avoid": ["zip_code", "bad_alias"], "country": ["zip_code", "county"], "zip_congress": ["zip_code", "district"]}

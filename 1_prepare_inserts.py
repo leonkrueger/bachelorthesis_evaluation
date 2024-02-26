@@ -141,5 +141,9 @@ for path in os.listdir(folder):
     ) as primary_keys_file:
         json.dump(primary_keys, primary_keys_file)
 
+    open(
+        os.path.join(subfolder, "gold_standard_results.json", "w", encoding="utf-8")
+    ).close()
+
     shutil.copy2(full_path, os.path.join(subfolder, path))
     os.remove(full_path)

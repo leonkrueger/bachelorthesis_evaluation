@@ -4,4 +4,4 @@ RUN pip install mysql-connector-python tabulate torch accelerate langchain trans
 RUN python -c 'from transformers import AutoModelForCausalLM, AutoTokenizer; AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1"); tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")'
 COPY ./bachelorthesis /app
 COPY ./evaluation/bachelorthesis /app/evaluation
-CMD ["python3", "main.py"]
+CMD ["python3", "evaluation.py"]

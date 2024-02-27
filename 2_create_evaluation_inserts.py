@@ -3,17 +3,10 @@ import os
 from typing import Any
 from util.insert_query_parser import parse_insert_query
 from util.make_adjustment import make_adjustment
-from util.adjustments import Adjustments
+from util.adjustments import EXPERIMENTS
 
 
 folder = "bird"
-
-# Dictionary defines the different experiments
-# Lists describe the adjustments made in each experiment
-# Tuples define the adjustment and parameters
-experiments = {
-    "delete_table": [(Adjustments.DELETE_TABLE, [0.1, 0.5, 0.9])],
-}
 
 random = Random(2572)
 
@@ -83,7 +76,7 @@ for path in os.listdir(folder):
         ]
 
     # Create all experiments
-    for experiment_name, experiment in experiments.items():
+    for experiment_name, experiment in EXPERIMENTS.items():
         experiment_folder = os.path.join(subfolder, experiment_name)
 
         # Do not overwrite existing experiments
@@ -92,4 +85,4 @@ for path in os.listdir(folder):
 
         os.makedirs(experiment_folder, exist_ok=True)
 
-        create_experiment(experiment_folder, experiment, queries)
+        create_experiment(experiment_folder, experiment[0], queries)

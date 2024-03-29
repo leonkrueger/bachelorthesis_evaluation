@@ -129,7 +129,8 @@ for path in databases:
         # Create database state
         database_state_for_query = dict(
             random.sample(
-                database_state.items(), random.randint(0, len(database_state.items()))
+                list(database_state.items()),
+                random.randint(0, len(database_state.items())),
             )
         )
         database_str = (
@@ -148,7 +149,7 @@ for path in databases:
             f"Query: {query_str}\n"
             f"Database State:\n{database_str}"
         )
-        response = f"Table: {table_name if table_name in database_state_for_query.keys() else 'New table'}"
+        response = f"Table: {table_name}"
 
         data.append({"Instruction": instruction, "Response": response})
 

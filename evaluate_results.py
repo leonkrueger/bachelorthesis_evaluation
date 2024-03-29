@@ -1,39 +1,35 @@
 import json
 import os
 from typing import Any
+
 import matplotlib.pyplot as plt
 from numpy import average
+
 from util.adjustments import EXPERIMENTS
 
 folder = "bird"
 
 
 def calculate_accuracy(
-    results: dict[str, list[list[str]]], gold_standard: dict[str, list[list[str]]]
+    results: dict[str, list[list[str]]],
+    gold_standard: dict[str, list[list[str]]],
+    primary_keys: dict[str, list[str]],
 ) -> float:
     correct_inserts = 0
     total_inserts = 0
-    for query in gold_standard.keys():
-        if (
-            "area_code" in query
-            or "avoid" in query
-            or "country" in query
-            or "zip_congress" in query
-        ):
-            gold_standard_keys = [(row[0], row[1]) for row in gold_standard[query]]
-            result_keys = (
-                [(row[0], row[1]) for row in results[query]]
-                if query in results.keys()
-                else []
-            )
-        else:
-            gold_standard_keys = [row[0] for row in gold_standard[query]]
-            result_keys = (
-                [row[0] for row in results[query]] if query in results.keys() else []
-            )
+    for query, gold_standard_table in gold_standard.items():
+        # If the table does not exist in the result, continue with the next.
+        if not query in results.keys():
+            total_inserts += len(gold_standard_table)
+            continue
 
-        for inserted_value in gold_standard_keys:
-            if inserted_value in result_keys:
+        for gold_standard_row in gold_standard_table:
+            if any(
+                [
+                    all([value in result_row for value in gold_standard_row])
+                    for result_row in results[query]
+                ]
+            ):
                 correct_inserts += 1
             total_inserts += 1
 
@@ -41,12 +37,13 @@ def calculate_accuracy(
 
 
 def calculate_number_of_null_values(results: dict[str, list[list[str]]]) -> int:
-    return sum(
+    return len(
         [
-            1 if value is None else 0
+            value
             for query, table in results.items()
             for row in table
             for value in row
+            if value is not None
         ]
     )
 
@@ -63,10 +60,15 @@ def plot_results(
 
 
 def evaluate_experiment_on_one_database(
-    folder: str, gold_standard: dict[str, list[list[str]]], plot_information: tuple[Any]
+    folder: str,
+    gold_standard: dict[str, list[list[str]]],
+    primary_keys: dict[str, list[str]],
+    plot_information: tuple[Any],
+    null_values_gold_standard: int,
 ) -> tuple[dict[str, Any]]:
     accuracies = {}
-    null_values = {}
+    null_values_absolute = {}
+    null_values_relative = {}
 
     for path in os.listdir(folder):
         results_file_path = os.path.join(folder, path)
@@ -75,10 +77,15 @@ def evaluate_experiment_on_one_database(
 
         parameters = path[19:-5]  # Remove "evaluation_results" and ".json"
 
-        with open(results_file_path) as results_file:
+        with open(results_file_path, encoding="utf-8") as results_file:
             results = json.load(results_file)
-            accuracies[parameters] = calculate_accuracy(results, gold_standard)
-            null_values[parameters] = calculate_number_of_null_values(results)
+            accuracies[parameters] = calculate_accuracy(
+                results, gold_standard, primary_keys
+            )
+            null_values_absolute[parameters] = calculate_number_of_null_values(results)
+            null_values_relative[parameters] = (
+                null_values_absolute[parameters] / null_values_gold_standard
+            )
 
     plot_results(
         os.path.join(folder, "accuracy.png"),
@@ -87,13 +94,19 @@ def evaluate_experiment_on_one_database(
         accuracies,
     )
     plot_results(
-        os.path.join(folder, "null_values.png"),
+        os.path.join(folder, "null_values_absolute.png"),
         plot_information[0],
         "Number of NULL-values",
-        null_values,
+        null_values_absolute,
+    )
+    plot_results(
+        os.path.join(folder, "null_values_relative.png"),
+        plot_information[0],
+        "Number of NULL-values relative to Gold Standard",
+        null_values_relative,
     )
 
-    return accuracies, null_values
+    return accuracies, null_values_relative
 
 
 def evaluate_experiment(experiment_name: str, plot_information: tuple[Any]) -> None:
@@ -105,14 +118,21 @@ def evaluate_experiment(experiment_name: str, plot_information: tuple[Any]) -> N
             continue
 
         with open(
-            os.path.join(folder, path, "gold_standard_results.json")
+            os.path.join(folder, path, "gold_standard_results.json"), encoding="utf-8"
         ) as gold_standard_file:
             gold_standard = json.load(gold_standard_file)
+        with open(
+            os.path.join(folder, path, "primary_keys.json"), encoding="utf-8"
+        ) as primary_keys_file:
+            primary_keys = json.load(primary_keys_file)
 
         db_accuracies, db_null_values = evaluate_experiment_on_one_database(
-            subfolder, gold_standard, plot_information
+            subfolder,
+            gold_standard,
+            primary_keys,
+            plot_information,
+            calculate_number_of_null_values(gold_standard),
         )
-        db_null_values["Gold standard"] = calculate_number_of_null_values(gold_standard)
         accuracies.append(db_accuracies)
         null_values.append(db_null_values)
 
@@ -134,7 +154,7 @@ def evaluate_experiment(experiment_name: str, plot_information: tuple[Any]) -> N
     plot_results(
         os.path.join(folder, f"{experiment_name}_null_values.png"),
         plot_information[0],
-        "Number of NULL-values",
+        "Number of NULL-values relative to Gold Standard",
         average_null_values,
     )
 

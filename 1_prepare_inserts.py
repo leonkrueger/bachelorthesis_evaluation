@@ -1,8 +1,9 @@
+import io
+import json
 import os
 import shutil
+import tokenize
 from random import Random
-import json
-
 
 # !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
@@ -14,7 +15,11 @@ random = Random(8463)
 
 
 def remove_quotes(attribute: str) -> str:
-    return attribute[1:-1] if attribute[0] == "'" or attribute[0] == '"' else attribute
+    return (
+        attribute[1:-1].replace(" ", "_")
+        if attribute[0] == "'" or attribute[0] == '"'
+        else attribute
+    )
 
 
 def map_type(type: str) -> str:
@@ -37,8 +42,11 @@ def dump_inserts(
         inserts,
         min(max_inserts, len(inserts)),
     ):
-        index = insert.find("VALUES")
-        insert_with_attributes = insert[:index] + attributes + insert[index:]
+        # Write query for inserts only
+        values_index = insert.find("VALUES")
+        insert_with_attributes = (
+            insert[:values_index] + attributes + insert[values_index:]
+        )
         inserts_only_file.write(insert_with_attributes + ";\n")
         gold_standard_file.write(insert + ";\n")
 
@@ -64,6 +72,8 @@ for path in os.listdir(folder):
         number_tables = queries_file_content.count("CREATE TABLE")
         max_inserts_per_table = int(max_inserts / number_tables)
 
+        table_old_name = ""
+        table_new_name = ""
         attributes = "()"
         inserts_into_current_table = []
         for query in queries_file_content.split(";\n"):
@@ -82,18 +92,36 @@ for path in os.listdir(folder):
                 # Get the column information needed
                 attribute_start_index = query.find("(")
                 attribute_data = [
-                    attribute.split()
+                    [
+                        token.string
+                        for token in tokenize.generate_tokens(
+                            io.StringIO(attribute).readline
+                        )
+                        if token.string.strip() != ""
+                    ]
                     for attribute in query[
                         attribute_start_index + 1 : len(query) - 1
                     ].split(",\n")
                 ]
 
-                # Save primary keys of each table
+                # Get table name
+                query_table_name_data = [
+                    token.string
+                    for token in tokenize.generate_tokens(
+                        io.StringIO(query[:attribute_start_index]).readline
+                    )
+                    if token.string.strip() != ""
+                ]
                 table_name = (
-                    query.split()[2]
-                    if not "IF NOT EXISTS" in query
-                    else query.split()[5]
+                    query_table_name_data[2]
+                    if "if" != query_table_name_data[2].lower()
+                    else query_table_name_data[5]
                 )
+                table_old_name = table_name
+                table_name = remove_quotes(table_name)
+                table_new_name = table_name
+
+                # Save primary keys of the table
                 if len(attribute_data[0]) > 2 and attribute_data[0][2] == "primary":
                     primary_keys[table_name] = [attribute_data[0][0]]
                 else:
@@ -123,7 +151,7 @@ for path in os.listdir(folder):
                     f"({', '.join([attribute[0] for attribute in attribute_data])}) "
                 )
                 fixed_create_statement = (
-                    query[: attribute_start_index + 1]
+                    f"CREATE TABLE {table_name}\n("
                     + ",\n".join([" ".join(attribute) for attribute in attribute_data])
                     + ")"
                 )
@@ -131,7 +159,9 @@ for path in os.listdir(folder):
 
             if query.startswith("INSERT"):
                 # Create correct insert statement
-                inserts_into_current_table.append(query)
+                inserts_into_current_table.append(
+                    query.replace(table_old_name, table_new_name)
+                )
 
         dump_inserts(
             inserts_into_current_table,

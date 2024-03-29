@@ -1,9 +1,10 @@
-from typing import Any
-from util.adjustments import Adjustments
 import copy
 from random import Random
+from typing import Any
 
-random = Random(3434)
+from util.adjustments import Adjustments
+
+random = Random()
 
 
 def make_adjustment(

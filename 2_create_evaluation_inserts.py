@@ -1,10 +1,10 @@
-from random import Random
 import os
+from random import Random
 from typing import Any
+
+from util.adjustments import EXPERIMENTS
 from util.insert_query_parser import parse_insert_query
 from util.make_adjustment import make_adjustment
-from util.adjustments import EXPERIMENTS
-
 
 folder = "bird"
 

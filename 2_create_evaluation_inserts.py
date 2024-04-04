@@ -8,6 +8,8 @@ from util.make_adjustment import make_adjustment
 
 folder = "bird"
 
+strategies = ["Llama2_finetuned", "Llama2", "GPT4", "Heuristics"]
+
 random = Random(2572)
 
 
@@ -20,8 +22,8 @@ def create_experiment(
     for adjustment in experiment:
         adjustment_combinations = make_adjustment(adjustment, adjustment_combinations)
 
-    # Gernerate the files with the inputs and an empty file for the results
     for name, queries in adjustment_combinations.items():
+        # Generate the files with the inputs
         with open(
             os.path.join(experiment_folder, f"evaluation_input{name}.sql"),
             "w",
@@ -38,11 +40,16 @@ def create_experiment(
 
                 output_file.write(modified_query)
 
-        open(
-            os.path.join(experiment_folder, f"evaluation_results{name}.json"),
-            "w",
-            encoding="utf-8",
-        ).close()
+        # Generate empty files for each strategy for the results
+        for strategy in strategies:
+            os.makedirs(os.path.join(experiment_folder, strategy), exist_ok=True)
+            open(
+                os.path.join(
+                    experiment_folder, strategy, f"evaluation_results{name}.json"
+                ),
+                "w",
+                encoding="utf-8",
+            ).close()
 
 
 # Create all experiments for all databases

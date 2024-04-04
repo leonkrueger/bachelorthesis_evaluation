@@ -43,7 +43,7 @@ def calculate_number_of_null_values(results: dict[str, list[list[str]]]) -> int:
             for query, table in results.items()
             for row in table
             for value in row
-            if value is not None
+            if value is None
         ]
     )
 
@@ -59,13 +59,56 @@ def plot_results(
     plt.close()
 
 
-def evaluate_experiment_on_one_database(
+def create_evaluation_plots(
+    accuracies: list[dict[str, dict[str, float]]],
+    null_values: list[dict[str, dict[str, float]]],
+    folder: str,
+    experiment_name: str,
+    plot_information: tuple[Any],
+) -> None:
+    """Creates the plots for evaluating an experiment"""
+    # Strategies are the same for accuracies and null values and for each database
+    for strategy in accuracies[0].keys():
+        average_accuracies = {
+            parameters: average(
+                [db_accuracies[strategy][parameters] for db_accuracies in accuracies]
+            )
+            for parameters in accuracies[0][strategy].keys()
+        }
+        average_null_values = {
+            parameters: average(
+                [db_null_values[strategy][parameters] for db_null_values in null_values]
+            )
+            for parameters in null_values[0][strategy].keys()
+        }
+
+        strategy_evaluation_folder = os.path.join(folder, strategy)
+        os.makedirs(strategy_evaluation_folder, exist_ok=True)
+
+        plot_results(
+            os.path.join(strategy_evaluation_folder, f"{experiment_name}_accuracy.png"),
+            plot_information[0],
+            "Accuracy",
+            average_accuracies,
+        )
+        plot_results(
+            os.path.join(
+                strategy_evaluation_folder, f"{experiment_name}_null_values.png"
+            ),
+            plot_information[0],
+            "Number of NULL-values relative to Gold Standard",
+            average_null_values,
+        )
+
+
+def evaluate_experiment_on_one_database_for_one_strategy(
     folder: str,
     gold_standard: dict[str, list[list[str]]],
     primary_keys: dict[str, list[str]],
     plot_information: tuple[Any],
     null_values_gold_standard: int,
-) -> tuple[dict[str, Any]]:
+) -> tuple[dict[str, float], dict[str, float]]:
+    """Returns two dict that map the parameters of the experiment to its accuracy and its relative null values"""
     accuracies = {}
     null_values_absolute = {}
     null_values_relative = {}
@@ -109,9 +152,42 @@ def evaluate_experiment_on_one_database(
     return accuracies, null_values_relative
 
 
-def evaluate_experiment(experiment_name: str, plot_information: tuple[Any]) -> None:
+def evaluate_experiment_on_one_database(
+    folder: str,
+    gold_standard: dict[str, list[list[str]]],
+    primary_keys: dict[str, list[str]],
+    plot_information: tuple[Any],
+    null_values_gold_standard: int,
+) -> tuple[dict[str, dict[str, float]], dict[str, dict[str, float]]]:
+    """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
+    accuracies = {}
+    null_values = {}
+
+    for path in os.listdir(folder):
+        strategy_results_path = os.path.join(folder, path)
+        if not os.path.isdir(strategy_results_path):
+            continue
+
+        accuracies[path], null_values[path] = (
+            evaluate_experiment_on_one_database_for_one_strategy(
+                strategy_results_path,
+                gold_standard,
+                primary_keys,
+                plot_information,
+                null_values_gold_standard,
+            )
+        )
+
+    return accuracies, null_values
+
+
+def evaluate_experiment(
+    folder: str, experiment_name: str, plot_information: tuple[Any]
+) -> None:
+    # Lists that contain dicts that map the strategy and paramaters to its accuracy and null values
     accuracies = []
     null_values = []
+
     for path in os.listdir(folder):
         subfolder = os.path.join(folder, path, experiment_name)
         if not os.path.isdir(subfolder):
@@ -136,28 +212,10 @@ def evaluate_experiment(experiment_name: str, plot_information: tuple[Any]) -> N
         accuracies.append(db_accuracies)
         null_values.append(db_null_values)
 
-    average_accuracies = {
-        parameters: average([accuracy[parameters] for accuracy in accuracies])
-        for parameters in accuracies[0].keys()
-    }
-    average_null_values = {
-        parameters: average([null_value[parameters] for null_value in null_values])
-        for parameters in null_values[0].keys()
-    }
-
-    plot_results(
-        os.path.join(folder, f"{experiment_name}_accuracy.png"),
-        plot_information[0],
-        "Accuracy",
-        average_accuracies,
-    )
-    plot_results(
-        os.path.join(folder, f"{experiment_name}_null_values.png"),
-        plot_information[0],
-        "Number of NULL-values relative to Gold Standard",
-        average_null_values,
+    create_evaluation_plots(
+        accuracies, null_values, folder, experiment_name, plot_information
     )
 
 
 for experiment_name, experiment in EXPERIMENTS.items():
-    evaluate_experiment(experiment_name, experiment[1:])
+    evaluate_experiment(folder, experiment_name, experiment[1:])

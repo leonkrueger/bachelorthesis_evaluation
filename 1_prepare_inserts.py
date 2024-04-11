@@ -8,15 +8,16 @@ from random import Random
 # !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
 
-folder = "bird"
+folder = "data"
 max_inserts = 500
 
 random = Random(8463)
 
 
 def remove_quotes(attribute: str) -> str:
+    """Replace the quotes used in SQLITE with the ones used in MYSQL"""
     return (
-        attribute[1:-1].replace(" ", "_")
+        f"`{attribute[1:-1]}`"
         if attribute[0] == "'" or attribute[0] == '"'
         else attribute
     )
@@ -25,14 +26,20 @@ def remove_quotes(attribute: str) -> str:
 def map_type(type: str) -> str:
     type_mapping = {
         "TEXT": "VARCHAR(255)",
+        "VARCHAR": "VARCHAR(255)",
         "REAL": "DOUBLE",
+        "DECIMAL": "DOUBLE",
         "INTEGER": "BIGINT",
+        "INT": "BIGINT",
+        "NUMERIC": "BIGINT",
         "DATE": "DATE",
+        "DATETIME": "DATETIME",
+        "BLOB": "BLOB",
     }
-    if type not in type_mapping.keys():
+    if type.upper() not in type_mapping.keys():
         print(f"ERROR: NO TYPE MAPPING FOR TYPE {type}")
         return type
-    return type_mapping[type]
+    return type_mapping[type.upper()]
 
 
 def dump_inserts(
@@ -66,7 +73,8 @@ for path in os.listdir(folder):
     ) as inserts_only_file, open(
         os.path.join(subfolder, "gold_standard_input.sql"), "w", encoding="utf-8"
     ) as gold_standard_file:
-        queries_file_content = queries_file.read()
+        # Replace call because sometimes sql-files contain commas in weird position
+        queries_file_content = queries_file.read().replace("\n,", ",\n")
 
         # Calculate max number of inserts per table
         number_tables = queries_file_content.count("CREATE TABLE")
@@ -79,7 +87,7 @@ for path in os.listdir(folder):
         for query in queries_file_content.split(";\n"):
             query = query.strip()
 
-            if query.startswith("CREATE"):
+            if query.startswith("CREATE TABLE"):
                 # Dump the insert statements of the last table
                 dump_inserts(
                     inserts_into_current_table,
@@ -112,10 +120,13 @@ for path in os.listdir(folder):
                     )
                     if token.string.strip() != ""
                 ]
+                table_name_offset = (
+                    1 if any([token == "`" for token in query_table_name_data]) else 0
+                )
                 table_name = (
-                    query_table_name_data[2]
+                    query_table_name_data[2 + table_name_offset]
                     if "if" != query_table_name_data[2].lower()
-                    else query_table_name_data[5]
+                    else query_table_name_data[5 + table_name_offset]
                 )
                 table_old_name = table_name
                 table_name = remove_quotes(table_name)
@@ -143,9 +154,15 @@ for path in os.listdir(folder):
 
                 # Get the right data types and create the correct "CREATE TABLE" statement
                 attribute_data = [
-                    [remove_quotes(attribute[0]), map_type(attribute[1])]
+                    (
+                        [remove_quotes(attribute[0]), map_type(attribute[1])]
+                        if attribute[0] != "`"
+                        else [remove_quotes(attribute[1]), map_type(attribute[3])]
+                    )
                     for attribute in attribute_data
                     if attribute[1].lower() != "key"
+                    and attribute[0].lower() != "constraint"
+                    and (attribute[0] != "-" or attribute[1] != "-")
                 ]
                 attributes = (
                     f"({', '.join([attribute[0] for attribute in attribute_data])}) "

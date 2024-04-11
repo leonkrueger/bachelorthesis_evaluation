@@ -6,7 +6,7 @@ from util.adjustments import EXPERIMENTS
 from util.insert_query_parser import parse_insert_query
 from util.make_adjustment import make_adjustment
 
-folder = "bird"
+folder = "data"
 
 strategies = ["Llama2_finetuned", "Llama2", "GPT4", "Heuristics"]
 
@@ -36,7 +36,7 @@ def create_experiment(
                     if "columns" not in query.keys()
                     else f"({', '.join(query['columns'])}) "
                 )
-                modified_query = f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(query['values'])});\n"
+                modified_query = f"INSERT INTO {table_str}{columns_str} VALUES ({', '.join(query['values'])});\n"
 
                 output_file.write(modified_query)
 
@@ -73,14 +73,14 @@ for path in os.listdir(folder):
     for query in queries:
         # SQLite produces a separate statement for each row
         query["values"] = query["values"][0]
-        query["columns"] = [
-            column
-            for column, value in zip(query["columns"], query["values"])
-            if value.lower() != "null"
-        ]
-        query["values"] = [
-            value for value in query["values"] if value.lower() != "null"
-        ]
+    #     query["columns"] = [
+    #         column
+    #         for column, value in zip(query["columns"], query["values"])
+    #         if value.lower() != "null"
+    #     ]
+    #     query["values"] = [
+    #         value for value in query["values"] if value.lower() != "null"
+    #     ]
 
     # Create all experiments
     for experiment_name, experiment in EXPERIMENTS.items():

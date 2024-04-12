@@ -161,3 +161,9 @@ cython_debug/
 
 # VS Code files
 .vscode/
+
+# Databases for fine-tuning
+fine_tuning/databases/
+
+# Too large databases
+data/menu/menu.sql

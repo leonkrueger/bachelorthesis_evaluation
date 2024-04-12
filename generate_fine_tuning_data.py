@@ -1,30 +1,22 @@
 import io
 import json
+import math
 import os
-import shutil
 import tokenize
-from curses.ascii import alt
 from random import Random
 from typing import Any
 
 from util.adjustments import FINE_TUNING, Adjustments
 from util.insert_query_parser import parse_insert_query
+from util.processing_utils import get_data_from_create_table
 
 # !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
-name = "fine_tuning"
-num_data_points = 100
+name = "missing_tables"
+num_data_points = 500
 data_sources = ["bird", "spider", "wikidb"]
 
 random = Random(6541)
-
-
-def remove_quotes(attribute: str) -> str:
-    return (
-        attribute[1:-1].replace(" ", "_")
-        if attribute[0] == "'" or attribute[0] == '"'
-        else attribute
-    )
 
 
 def apply_alterations(query: dict[str, Any]) -> None:
@@ -39,125 +31,103 @@ def apply_alterations(query: dict[str, Any]) -> None:
             del query["columns"]
 
 
-def process_create_statement(query: str) -> tuple[str, list[str]]:
-    # Get the column information needed
-    attribute_start_index = query.find("(")
-    attribute_data = [
-        [
-            token.string
-            for token in tokenize.generate_tokens(io.StringIO(attribute).readline)
-            if token.string.strip() != ""
-        ]
-        for attribute in query[attribute_start_index + 1 : len(query) - 1].split(",\n")
-    ]
-
-    # Get table name
-    query_table_name_data = [
-        token.string
-        for token in tokenize.generate_tokens(
-            io.StringIO(query[:attribute_start_index]).readline
-        )
-        if token.string.strip() != ""
-    ]
-    table_name = remove_quotes(
-        query_table_name_data[2]
-        if "if" != query_table_name_data[2].lower()
-        else query_table_name_data[5]
-    )
-
-    # Get attributes of table
-    attributes = [
-        remove_quotes(attribute[0])
-        for attribute in attribute_data
-        if attribute[1].lower() != "key"
-    ]
-
-    return table_name, attributes
-
-
 def get_data_for_one_data_source(data_sorce_folder: str) -> list[dict[str, str]]:
     data = []
 
     databases = os.listdir(os.path.join("fine_tuning", "databases", data_sorce_folder))
-    num_data_points_per_database = int(num_data_points / len(databases))
+    num_data_points_per_database = int(math.ceil(num_data_points / len(databases)))
 
-    for path in databases:
-        full_path = os.path.join("fine_tuning", "databases", path)
-        if not os.path.isfile(full_path) or not full_path.endswith(".sql"):
-            continue
-
-        queries = []
-        database_state = {}
-
-        with open(full_path, encoding="utf-8") as queries_file:
-            queries_file_content = queries_file.read()
-
-            table_name = ""
-            columns = []
-
-            # Preprocess all
-            for query in queries_file_content.split(";\n"):
-                query = query.strip()
-
-                if query.startswith("CREATE"):
-                    table_name, columns = process_create_statement(query)
-                    database_state[table_name] = columns
-
-                if query.startswith("INSERT"):
-                    queries.append((query, table_name, columns))
-
-        # Sample data points from all queries and create fine tuning data
-        for query, table_name, columns in random.sample(
-            queries, num_data_points_per_database
-        ):
-            parsed_query = parse_insert_query(query)
-            parsed_query["table"] = table_name
-            parsed_query["columns"] = columns
-            # Every insert statement contains only one row
-            parsed_query["values"] = parsed_query["values"][0]
-            apply_alterations(parsed_query)
-
-            # Create insert statement as string
-            table_str = (
-                ""
-                if "table" not in parsed_query.keys()
-                else parsed_query["table"] + " "
+    for db_index, path in enumerate(databases):
+        try:
+            full_path = os.path.join(
+                "fine_tuning", "databases", data_sorce_folder, path
             )
-            columns_str = (
-                ""
-                if "columns" not in parsed_query.keys()
-                else f"({', '.join(parsed_query['columns'])}) "
-            )
-            query_str = f"INSERT INTO {table_str}{columns_str} VALUES ({', '.join(parsed_query['values'])});\n"
+            if not os.path.isfile(full_path) or not full_path.endswith(".sql"):
+                continue
 
-            # Create database state
-            database_state_for_query = dict(
-                random.sample(
-                    list(database_state.items()),
-                    random.randint(0, len(database_state.items())),
+            queries = []
+            database_state = {}
+
+            with open(full_path, encoding="utf-8") as queries_file:
+                queries_file_content = queries_file.read()
+
+                table_name = ""
+                columns = []
+
+                # Preprocess all
+                for query in queries_file_content.split(";\n"):
+                    query = query.strip()
+
+                    if query.startswith("CREATE TABLE"):
+                        _, table_name, _, column_data = get_data_from_create_table(
+                            query
+                        )
+                        columns = [column[0] for column in column_data]
+                        database_state[table_name] = columns
+
+                    if query.startswith("INSERT"):
+                        queries.append((query, table_name, columns))
+
+            # Sample data points from all queries and create fine tuning data
+            for query, table_name, columns in random.sample(
+                queries, min(num_data_points_per_database, len(queries))
+            ):
+                parsed_query = parse_insert_query(query)
+                parsed_query["table"] = table_name
+                parsed_query["columns"] = columns
+                # Every insert statement contains only one row
+                parsed_query["values"] = parsed_query["values"][0]
+                apply_alterations(parsed_query)
+
+                # Create insert statement as string
+                table_str = (
+                    ""
+                    if "table" not in parsed_query.keys()
+                    else parsed_query["table"] + " "
                 )
-            )
-            database_str = (
-                "\n".join(
-                    [
-                        f"- Table: {table}, Columns: [{', '.join([column for column in columns])}]"
-                        for table, columns in database_state_for_query.items()
-                    ]
+                columns_str = (
+                    ""
+                    if "columns" not in parsed_query.keys()
+                    else f"({', '.join(parsed_query['columns'])}) "
                 )
-                if len(database_state_for_query) > 0
-                else "No table exists yet"
+                query_str = f"INSERT INTO {table_str}{columns_str} VALUES ({', '.join(parsed_query['values'])});\n"
+
+                # Create database state
+                database_state_for_query = dict(
+                    random.sample(
+                        list(database_state.items()),
+                        random.randint(0, len(database_state.items())),
+                    )
+                )
+                database_str = (
+                    "\n".join(
+                        [
+                            f"- Table: {table}, Columns: [{', '.join([column for column in columns])}]"
+                            for table, columns in database_state_for_query.items()
+                        ]
+                    )
+                    if len(database_state_for_query) > 0
+                    else "No table exists yet"
+                )
+
+                instruction = (
+                    "Predict the table for this example:\n"
+                    f"Query: {query_str}\n"
+                    f"Database State:\n{database_str}"
+                )
+                response = f"Table: {table_name}"
+
+                data.append({"Instruction": instruction, "Response": response})
+
+            print(
+                f"\033[92m{data_sorce_folder}: Processed database {path}, {db_index} / {len(databases)}\033[0m"
+            )
+        except Exception:
+            print(
+                f"\033[91mERROR: {data_sorce_folder}: Database {path}, {db_index} / {len(databases)}\033[0m"
             )
 
-            instruction = (
-                "Predict the table for this example:\n"
-                f"Query: {query_str}\n"
-                f"Database State:\n{database_str}"
-            )
-            response = f"Table: {table_name}"
-
-            data.append({"Instruction": instruction, "Response": response})
-
-    return data
+    return random.sample(data, min(num_data_points, len(data)))
 
 
 data = []

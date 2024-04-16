@@ -48,7 +48,7 @@ def map_type(type: str) -> str:
 
 
 def get_data_from_create_table(
-    query: str,
+    query: str, use_mysql_quotes: bool = True
 ) -> tuple[str, str, list[str], list[list[str]]]:
     """Get all information needed to create the SQL statements that can be run on a MYSQL database"""
     # Get the column information needed
@@ -79,7 +79,7 @@ def get_data_from_create_table(
         else query_table_name_data[5 + table_name_offset]
     )
     table_old_name = table_name
-    table_new_name = remove_quotes(table_name)
+    table_new_name = remove_quotes(table_name, use_mysql_quotes)
 
     # Save primary keys of the table
     if len(attribute_data[0]) > 2 and attribute_data[0][2] == "primary":
@@ -103,9 +103,9 @@ def get_data_from_create_table(
     # Get the right data types and create the correct "CREATE TABLE" statement
     attribute_data = [
         (
-            [remove_quotes(attribute[0]), map_type(attribute[1])]
+            [remove_quotes(attribute[0], use_mysql_quotes), map_type(attribute[1])]
             if attribute[0] != "`"
-            else [remove_quotes(attribute[1]), map_type(attribute[3])]
+            else [remove_quotes(attribute[1], use_mysql_quotes), map_type(attribute[3])]
         )
         for attribute in attribute_data
         if attribute[1].lower() != "key"

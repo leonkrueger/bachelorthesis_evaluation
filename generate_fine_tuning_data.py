@@ -13,7 +13,7 @@ from util.processing_utils import get_data_from_create_table
 # !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
 name = "missing_tables"
-num_data_points = 500
+num_data_points = 100
 data_sources = ["bird", "spider", "wikidb"]
 
 random = Random(6541)
@@ -60,7 +60,7 @@ def get_data_for_one_data_source(data_sorce_folder: str) -> list[dict[str, str]]
 
                     if query.startswith("CREATE TABLE"):
                         _, table_name, _, column_data = get_data_from_create_table(
-                            query
+                            query, use_mysql_quotes=False
                         )
                         columns = [column[0] for column in column_data]
                         database_state[table_name] = columns

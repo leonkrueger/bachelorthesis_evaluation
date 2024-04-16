@@ -99,10 +99,10 @@ for path in os.listdir(folder):
             gold_standard_file,
         )
 
-    with open(
-        os.path.join(subfolder, "primary_keys.json"), "w", encoding="utf-8"
-    ) as primary_keys_file:
-        json.dump(primary_keys, primary_keys_file)
+    # with open(
+    #     os.path.join(subfolder, "primary_keys.json"), "w", encoding="utf-8"
+    # ) as primary_keys_file:
+    #     json.dump(primary_keys, primary_keys_file)
 
     open(
         os.path.join(subfolder, "gold_standard_results.json"), "w", encoding="utf-8"

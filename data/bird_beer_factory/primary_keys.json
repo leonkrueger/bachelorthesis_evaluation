@@ -1,1 +1,0 @@
-{"customers": ["CustomerID"], "geolocation": ["LocationID"], "location": ["LocationID"], "rootbeerbrand": ["BrandID"], "rootbeer": ["RootBeerID"], "rootbeerreview": ["CustomerID", "BrandID", "StarRating", "ReviewDate", "Review"], "transaction": ["TransactionID"]}

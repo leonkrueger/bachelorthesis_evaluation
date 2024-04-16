@@ -4,13 +4,16 @@ import tokenize
 
 def remove_quotes(attribute: str, use_mysql_quotes: bool = True) -> str:
     """Replace the quotes used in SQLITE with the ones used in MYSQL"""
-    if attribute[0] == "'" or attribute[0] == '"':
+    if attribute[0] == "'" or attribute[0] == '"' or attribute[0] == "`":
         if use_mysql_quotes:
             return f"`{attribute[1:-1]}`"
         else:
-            return f"{attribute[1:-1].replace(' ', '_')}"
+            return f"{attribute[1:-1].replace(' ', '_').replace('-', '_')}"
     else:
-        return attribute
+        if use_mysql_quotes:
+            return f"`{attribute}`"
+        else:
+            return attribute
 
 
 def map_type(type: str) -> str:

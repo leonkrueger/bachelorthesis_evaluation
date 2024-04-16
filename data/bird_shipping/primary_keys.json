@@ -1,1 +1,0 @@
-{"city": ["city_id"], "customer": ["cust_id"], "driver": ["driver_id"], "truck": ["truck_id"], "shipment": ["ship_id"]}

@@ -1,0 +1,661 @@
+CREATE TABLE awards_players
+(playerID VARCHAR(255),
+award VARCHAR(255),
+year BIGINT,
+lgID VARCHAR(255),
+note VARCHAR(255),
+pos VARCHAR(255));
+INSERT INTO awards_players VALUES('hawkico01','All-NBA First Team',1969,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('howardw01','All-Defensive First Team',2011,'NBA',NULL,'C');
+INSERT INTO awards_players VALUES('lovebo01','All-Defensive Second Team',1973,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('bingda01','All-NBA First Team',1967,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('rodmade01','All-NBA Third Team',1994,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('englial01','All-NBA Second Team',1981,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('kiddja01','All-NBA First Team',1999,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('duncati01','Rookie of the Year',1997,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('brownpj01','All-Defensive Second Team',2000,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('malonka01','All-NBA First Team',1988,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('archina01','All-NBA First Team',1975,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('cummite01','Rookie of the Year',1982,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('maravpe01','All-NBA Second Team',1977,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('robinda01','All-NBA Second Team',1997,'NBA',NULL,'C');
+INSERT INTO awards_players VALUES('jonesed02','All-Defensive Second Team',1998,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('buehlke01','Rookie of the Year',1942,'NBL',NULL,NULL);
+INSERT INTO awards_players VALUES('stockjo01','All-NBA Second Team',1989,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('mingya01','All-NBA Third Team',2007,'NBA',NULL,'C');
+INSERT INTO awards_players VALUES('washike01','All-Defensive Second Team',1979,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('havlijo01','All-NBA Second Team',1963,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('duckwke01','Most Improved Player',1987,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('barklch01','All-NBA Second Team',1986,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('pettibo01','All-NBA Second Team',1964,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('abdulka01','Rookie of the Year',1969,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('gilmoar01','All-ABA First Team',1975,'ABA',NULL,'C');
+INSERT INTO awards_players VALUES('nealga01','All-Rookie First Team',2010,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('birdla01','Most Valuable Player',1984,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('nancela01','All-Defensive Second Team',1991,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('silaspa01','All-Defensive Second Team',1972,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('schaydo01','All-NBA Second Team',1955,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('johnsma02','All-NBA First Team',1987,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('mournal01','All-Defensive First Team',1999,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('johnsla02','All-NBA Second Team',1992,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('hillgr01','All-NBA Second Team',1998,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('jordami01','All-NBA First Team',1991,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('mcclate01','All-Defensive Team',1973,'ABA',NULL,NULL);
+INSERT INTO awards_players VALUES('fernaru01','All-Rookie Second Team',2008,'NBA','tie',NULL);
+INSERT INTO awards_players VALUES('cousybo01','All-NBA First Team',1958,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('phillbo01','All-Defensive Second Team',1995,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('gervige01','All-NBA Second Team',1976,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('willibu01','All-NBA Second Team',1982,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('hendeal01','Most Improved Player',1997,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('rondora01','All-Defensive Second Team',2008,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('chambwi01','All-NBA First Team',1967,'NBA',NULL,'C');
+INSERT INTO awards_players VALUES('duncati01','All-Defensive First Team',2006,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('fordph01','Rookie of the Year',1978,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('breweji01','All-Defensive Second Team',1976,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('chambwi01','All-Defensive First Team',1971,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('whitejo01','All-NBA Second Team',1974,'NBA',NULL,'G');
+INSERT INTO awards_players VALUES('ervinju01','All-NBA First Team',1977,'NBA',NULL,'F');
+INSERT INTO awards_players VALUES('bogutan01','All-NBA Third Team',2009,'NBA',NULL,'C');
+INSERT INTO awards_players VALUES('holzmre01','Rookie of the Year',1944,'NBL',NULL,NULL);
+INSERT INTO awards_players VALUES('collida01','All-Rookie First Team',2009,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('duncati01','All-Defensive Second Team',2009,'NBA',NULL,NULL);
+INSERT INTO awards_players VALUES('piercpa01','Finals MVP',2007,'NBA',NULL,NULL);
+CREATE TABLE coaches
+(coachID VARCHAR(255),
+year BIGINT,
+tmID VARCHAR(255),
+lgID VARCHAR(255),
+stint BIGINT,
+won BIGINT,
+lost BIGINT,
+post_wins BIGINT,
+post_losses BIGINT);
+INSERT INTO coaches VALUES('farmemi01',1966,'BAL','NBA',1,1,8,0,0);
+INSERT INTO coaches VALUES('loughke01',1979,'NJN','NBA',1,34,48,0,0);
+INSERT INTO coaches VALUES('jeannbu01',1949,'BLB','NBA',1,25,43,0,0);
+INSERT INTO coaches VALUES('cheekma01',2008,'PHI','NBA',1,9,14,0,0);
+INSERT INTO coaches VALUES('cleamji01',1996,'DAL','NBA',1,24,58,0,0);
+INSERT INTO coaches VALUES('rileypa01',2002,'MIA','NBA',1,25,57,0,0);
+INSERT INTO coaches VALUES('lynamji01',1991,'PHI','NBA',1,35,47,0,0);
+INSERT INTO coaches VALUES('jacksph01',2005,'LAL','NBA',1,45,37,3,4);
+INSERT INTO coaches VALUES('mccloja01',1973,'POR','NBA',1,27,55,0,0);
+INSERT INTO coaches VALUES('nelsodo01',1997,'DAL','NBA',2,16,50,0,0);
+INSERT INTO coaches VALUES('auerbre01',1951,'BOS','NBA',1,39,27,1,2);
+INSERT INTO coaches VALUES('vitaldi01',1978,'DET','NBA',1,30,52,0,0);
+INSERT INTO coaches VALUES('brownhu01',1983,'NYK','NBA',1,47,35,6,6);
+INSERT INTO coaches VALUES('lapchjo01',1951,'NYK','NBA',1,37,29,8,6);
+INSERT INTO coaches VALUES('jordaed01',2005,'WAS','NBA',1,42,40,2,4);
+INSERT INTO coaches VALUES('hugheki01',2009,'LAC','NBA',2,8,25,0,0);
+INSERT INTO coaches VALUES('jordaed01',2007,'WAS','NBA',1,43,39,2,4);
+INSERT INTO coaches VALUES('carrml01',1995,'BOS','NBA',1,33,49,0,0);
+INSERT INTO coaches VALUES('reedwi01',1978,'NYK','NBA',1,6,8,0,0);
+INSERT INTO coaches VALUES('carnelo01',1970,'NYA','ABA',1,40,44,2,4);
+INSERT INTO coaches VALUES('lucasjo01',2001,'CLE','NBA',1,29,53,0,0);
+INSERT INTO coaches VALUES('scottby01',2005,'NOK','NBA',1,38,44,0,0);
+INSERT INTO coaches VALUES('mcmahja01',1969,'SDR','NBA',1,9,17,0,0);
+INSERT INTO coaches VALUES('pollaji01',1967,'MNM','ABA',1,50,28,4,6);
+INSERT INTO coaches VALUES('isselda01',1994,'DEN','NBA',1,18,16,0,0);
+INSERT INTO coaches VALUES('costela01',1972,'MIL','NBA',1,60,22,2,4);
+INSERT INTO coaches VALUES('westppa01',2011,'SAC','NBA',1,2,5,0,0);
+INSERT INTO coaches VALUES('curtigl01',1946,'DTF','NBA',1,12,22,0,0);
+INSERT INTO coaches VALUES('leonasl01',1979,'IND','NBA',1,37,45,0,0);
+INSERT INTO coaches VALUES('ramsaja01',1969,'PHI','NBA',1,42,40,1,4);
+INSERT INTO coaches VALUES('bertkbi01',1993,'LAL','NBA',2,1,1,0,0);
+INSERT INTO coaches VALUES('fitchbi01',1970,'CLE','NBA',1,15,67,0,0);
+INSERT INTO coaches VALUES('chanedo01',2003,'NYK','NBA',1,15,24,0,0);
+INSERT INTO coaches VALUES('joneskc01',1974,'WSB','NBA',1,60,22,8,9);
+INSERT INTO coaches VALUES('lapchjo01',1948,'NYK','NBA',1,32,28,3,3);
+INSERT INTO coaches VALUES('westhpa01',1982,'CHI','NBA',1,28,54,0,0);
+INSERT INTO coaches VALUES('harride01',1989,'MIL','NBA',1,44,38,1,3);
+INSERT INTO coaches VALUES('robersc01',1981,'DET','NBA',1,39,43,0,0);
+INSERT INTO coaches VALUES('adelmri01',2003,'SAC','NBA',1,55,27,7,5);
+INSERT INTO coaches VALUES('cohalne01',1946,'NYK','NBA',1,33,27,2,3);
+INSERT INTO coaches VALUES('wittmra01',2006,'MIN','NBA',2,12,30,0,0);
+INSERT INTO coaches VALUES('nelsodo01',1989,'GSW','NBA',1,37,45,0,0);
+INSERT INTO coaches VALUES('scottra01',1972,'DET','NBA',2,38,37,0,0);
+INSERT INTO coaches VALUES('nissato01',1972,'SEA','NBA',1,13,32,0,0);
+INSERT INTO coaches VALUES('bayloel01',1976,'NOJ','NBA',2,21,35,0,0);
+INSERT INTO coaches VALUES('debusda01',1966,'DET','NBA',1,28,45,0,0);
+INSERT INTO coaches VALUES('albecst01',1984,'NJN','NBA',1,42,40,0,3);
+INSERT INTO coaches VALUES('mullajo01',1975,'SSL','ABA',2,15,22,0,0);
+INSERT INTO coaches VALUES('bachjo01',1983,'GSW','NBA',1,37,45,0,0);
+INSERT INTO coaches VALUES('vanguje01',2006,'HOU','NBA',1,52,30,3,4);
+INSERT INTO coaches VALUES('collido01',1997,'DET','NBA',1,21,24,0,0);
+INSERT INTO coaches VALUES('wintebr01',2001,'GSW','NBA',2,13,46,0,0);
+INSERT INTO coaches VALUES('cheekma01',2007,'PHI','NBA',1,40,42,2,4);
+INSERT INTO coaches VALUES('berrybi01',2001,'CHI','NBA',2,0,2,0,0);
+INSERT INTO coaches VALUES('nissato01',1974,'UTS','ABA',2,14,14,2,4);
+CREATE TABLE draft
+(id BIGINT,
+draftYear BIGINT,
+draftRound BIGINT,
+draftSelection BIGINT,
+draftOverall BIGINT,
+tmID VARCHAR(255),
+firstName VARCHAR(255),
+lastName VARCHAR(255),
+suffixName VARCHAR(255),
+playerID VARCHAR(255),
+draftFrom VARCHAR(255),
+lgID VARCHAR(255));
+INSERT INTO draft VALUES(6783,1983,5,23,116,'PHI','Mike','Milligan',NULL,NULL,'Tennessee State','NBA');
+INSERT INTO draft VALUES(2665,1959,8,3,56,'PHW','Dave','Gunther',NULL,'gunthda01','Iowa','NBA');
+INSERT INTO draft VALUES(8756,2007,2,23,53,'POR','Demetris','Nichols',NULL,'nichode01','Syracuse','NBA');
+INSERT INTO draft VALUES(5054,1974,9,16,160,'BOS','Al','Skinner',NULL,'skinnal01','Massachusetts','NBA');
+INSERT INTO draft VALUES(8185,1998,1,7,7,'SAC','Jason','Williams',NULL,'willija02','Florida','NBA');
+INSERT INTO draft VALUES(1524,1947,1,10,10,'BLB','Larry','Killick',NULL,NULL,'Vermont','NBA');
+INSERT INTO draft VALUES(2643,1959,5,4,34,'MNL','Bobby','Mason',NULL,NULL,'Bradley','NBA');
+INSERT INTO draft VALUES(3878,1969,7,7,92,'SFW','Pat','Foley',NULL,NULL,'Pacific','NBA');
+INSERT INTO draft VALUES(2814,1961,2,13,22,'CHP','Doug','Moe',NULL,'moedo01','North Carolina','NBA');
+INSERT INTO draft VALUES(804,1972,0,0,0,'DNR','Harold','Little',NULL,NULL,'New Mexico','ABA');
+INSERT INTO draft VALUES(950,1972,0,0,0,'UTS','Gary','Ladd',NULL,NULL,'Seattle','ABA');
+INSERT INTO draft VALUES(8239,1999,1,3,3,'CHH','Baron','Davis',NULL,'davisba01','UCLA','NBA');
+INSERT INTO draft VALUES(3187,1965,0,0,0,'DET','Bill','Buntin',NULL,'buntibi01','Michigan','NBA');
+INSERT INTO draft VALUES(2912,1962,2,4,11,'DET','Kevin','Loughery',NULL,'loughke01','St. John''s','NBA');
+INSERT INTO draft VALUES(1112,1973,4,0,0,'UTS','Charles','Golson',NULL,NULL,'College of Emporia','ABA');
+INSERT INTO draft VALUES(543,1970,0,0,0,'TEX','Ron','Pitts',NULL,NULL,'Wiley','ABA');
+INSERT INTO draft VALUES(6022,1980,1,17,17,'DET','Larry','Drew',NULL,'drewla01','Missouri','NBA');
+INSERT INTO draft VALUES(1695,1949,3,0,0,'BLB','Paul','Gordon',NULL,'gordopa01','Notre Dame','NBA');
+INSERT INTO draft VALUES(2071,1953,0,0,0,'MNL','Harold','Christensen',NULL,NULL,'Brigham Young','NBA');
+INSERT INTO draft VALUES(7077,1984,8,22,184,'BOS','Champ','Godboldt',NULL,NULL,'Holy Cross','NBA');
+INSERT INTO draft VALUES(5708,1978,5,19,107,'PHO','Andre','Wakefield',NULL,'wakefan01','Loyola (IL)','NBA');
+INSERT INTO draft VALUES(2698,1960,1,6,6,'STL','Lenny','Wilkens',NULL,'wilkele01','Providence','NBA');
+INSERT INTO draft VALUES(3362,1966,7,5,64,'BAL','Dave','Mills',NULL,NULL,'DePaul','NBA');
+INSERT INTO draft VALUES(6829,1983,7,23,162,'PHI','Tony','Bruin',NULL,NULL,'Syracuse','NBA');
+INSERT INTO draft VALUES(8280,1999,2,15,44,'HOU','Tyrone','Washington',NULL,NULL,'Mississippi State','NBA');
+INSERT INTO draft VALUES(6114,1980,5,17,109,'MIL','Ken','Jones',NULL,NULL,'Virginia Commonwealth','NBA');
+INSERT INTO draft VALUES(3525,1967,11,2,115,'CHI','Jim','Andros',NULL,NULL,'New Haven','NBA');
+INSERT INTO draft VALUES(1884,1951,6,1,50,'BLB','Glen','Duggins',NULL,NULL,'Utah','NBA');
+INSERT INTO draft VALUES(5378,1976,8,10,132,'HOU','Dan','Kruger',NULL,NULL,'Texas','NBA');
+INSERT INTO draft VALUES(4427,1971,11,11,179,'PHO','Paul','Leitz',NULL,NULL,'Western Carolina','NBA');
+INSERT INTO draft VALUES(4198,1970,13,1,194,'SDR','Harry','Lozon',NULL,NULL,'Old Dominion','NBA');
+INSERT INTO draft VALUES(7748,1990,1,13,13,'LAC','Loy','Vaught',NULL,'vaughlo01','Michigan','NBA');
+INSERT INTO draft VALUES(4438,1971,12,8,190,'DET','Bob','Horn',NULL,NULL,'Drake','NBA');
+INSERT INTO draft VALUES(8562,2004,2,9,38,'CHI','Chris','Duhon',NULL,'duhonch01','Duke','NBA');
+INSERT INTO draft VALUES(3638,1968,6,2,66,'SEA','Ron','Guziak',NULL,NULL,'Tulsa','NBA');
+INSERT INTO draft VALUES(4442,1971,12,12,194,'NYK','Carl','Greenfield',NULL,NULL,'Eastern Kentucky','NBA');
+INSERT INTO draft VALUES(5226,1975,9,10,154,'HOU','Steve','Storther',NULL,NULL,'Providence','NBA');
+INSERT INTO draft VALUES(5118,1975,3,10,46,'NYK','John','Ramsey',NULL,NULL,'Seton Hall','NBA');
+INSERT INTO draft VALUES(7365,1986,4,12,82,'WSB','Barry','Mungar',NULL,NULL,'St. Bonaventure','NBA');
+INSERT INTO draft VALUES(7469,1987,2,1,24,'DET','Fred','Banks',NULL,NULL,'Nevada-Las Vegas','NBA');
+INSERT INTO draft VALUES(3981,1969,16,1,195,'PHO','Wayne','Huckel',NULL,NULL,'Davidson','NBA');
+INSERT INTO draft VALUES(1096,1973,3,0,0,'UTS','Ted','Manakas',NULL,'manakte01','Princeton','ABA');
+INSERT INTO draft VALUES(8930,2010,2,17,47,'MIL','Tiny','Gallon',NULL,NULL,'Oklahoma','NBA');
+INSERT INTO draft VALUES(6467,1982,2,2,25,'WSB','Bryan','Warrick',NULL,'warribr01','St. Joseph''s','NBA');
+INSERT INTO draft VALUES(6179,1980,8,14,174,'MIL','Keith','Valentine',NULL,NULL,'Virginia Union','NBA');
+INSERT INTO draft VALUES(8482,2003,1,16,16,'BOS','Troy','Bell',NULL,'belltr01','Boston College','NBA');
+INSERT INTO draft VALUES(7208,1985,4,17,87,'DET','Spud','Webb',NULL,'webbsp01','North Carolina State','NBA');
+INSERT INTO draft VALUES(8589,2005,1,6,6,'POR','Martell','Webster',NULL,'webstma02','Seattle Prep. School (Seattle, WA) HS','NBA');
+INSERT INTO draft VALUES(1992,1952,0,0,0,'ROC','Ronnie','MacGilvray',NULL,'macgiro01','St. John''s','NBA');
+INSERT INTO draft VALUES(8052,1995,2,18,47,'SAC','Tyus','Edney',NULL,'edneyty01','UCLA','NBA');
+INSERT INTO draft VALUES(3512,1967,9,11,102,'SDR','Ron','Coleman',NULL,NULL,'Missouri','NBA');
+INSERT INTO draft VALUES(8335,2000,2,12,41,'SAS','Chris','Carrawell',NULL,NULL,'Duke','NBA');
+INSERT INTO draft VALUES(6681,1983,1,14,14,'POR','Clyde','Drexler',NULL,'drexlcl01','Houston','NBA');
+INSERT INTO draft VALUES(1433,1975,7,0,0,'UTS','Tim','Van Blommesteyn',NULL,NULL,'Princeton','ABA');
+INSERT INTO draft VALUES(7127,1985,1,6,6,'SAC','Joe','Kleine',NULL,'kleinjo01','Arkansas','NBA');
+CREATE TABLE player_allstar
+(playerID VARCHAR(255),
+last_name VARCHAR(255),
+first_name VARCHAR(255),
+season_id BIGINT,
+conference VARCHAR(255),
+league_id VARCHAR(255),
+games_played BIGINT,
+minutes BIGINT,
+points BIGINT,
+o_rebounds BIGINT,
+d_rebounds BIGINT,
+rebounds BIGINT,
+assists BIGINT,
+steals BIGINT,
+blocks BIGINT,
+turnovers BIGINT,
+personal_fouls BIGINT,
+fg_attempted BIGINT,
+fg_made BIGINT,
+ft_attempted BIGINT,
+ft_made BIGINT,
+three_attempted BIGINT,
+three_made BIGINT);
+INSERT INTO player_allstar VALUES('martisl01','Martin','Slater',1953,'West','NBA',1,23,2,NULL,NULL,0,3,NULL,NULL,NULL,NULL,5,1,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('dumarjo01','Dumars','Joe',1994,'East','NBA',1,21,11,NULL,NULL,0,6,NULL,NULL,NULL,NULL,8,5,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('dandrbo01','Dandridge','Bob',1974,'West','NBA',1,18,4,NULL,NULL,2,1,NULL,NULL,NULL,NULL,6,2,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('russebi01','Russell','Bill',1957,'East','NBA',1,26,11,NULL,NULL,11,2,NULL,NULL,NULL,NULL,12,5,3,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('cunnibi01','Cunningham','Billy',1970,'East','NBA',1,19,5,NULL,NULL,4,3,NULL,NULL,NULL,NULL,8,2,2,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('birdla01','Bird','Larry',1986,'East','NBA',1,35,18,NULL,NULL,6,5,NULL,NULL,NULL,NULL,18,7,4,4,NULL,NULL);
+INSERT INTO player_allstar VALUES('barnedi01','Barnett','Dick',1967,'East','NBA',1,22,15,NULL,NULL,1,0,NULL,NULL,NULL,NULL,12,7,2,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('whitejo01','White','Jo Jo',1970,'East','NBA',1,22,10,NULL,NULL,9,2,NULL,NULL,NULL,NULL,10,5,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('lucasje01','Lucas','Jerry',1964,'East','NBA',1,35,25,NULL,NULL,10,1,NULL,NULL,NULL,NULL,19,12,1,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('gallaha01','Gallatin','Harry',1953,'East','NBA',1,28,5,NULL,NULL,18,3,NULL,NULL,NULL,NULL,2,0,6,5,NULL,NULL);
+INSERT INTO player_allstar VALUES('millere01','Miller','Reggie',1999,'East','NBA',1,21,5,0,2,2,3,1,0,1,1,7,1,2,2,6,1);
+INSERT INTO player_allstar VALUES('heinsto01','Heinsohn','Tom',1961,'East','NBA',1,13,10,NULL,NULL,2,1,NULL,NULL,NULL,NULL,11,4,2,2,NULL,NULL);
+INSERT INTO player_allstar VALUES('onealsh01','O''Neal','Shaquille',2001,'West','NBA',1,99,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO player_allstar VALUES('malonmo01','Malone','Moses',1987,'East','NBA',1,22,7,NULL,NULL,9,2,NULL,NULL,NULL,NULL,6,2,6,3,NULL,NULL);
+INSERT INTO player_allstar VALUES('birdsot01','Birdsong','Otis',1978,'West','NBA',1,14,9,NULL,NULL,2,0,NULL,NULL,NULL,NULL,6,4,2,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('moncrsi01','Moncrief','Sidney',1985,'East','NBA',1,26,16,NULL,NULL,3,1,NULL,NULL,NULL,NULL,11,4,7,7,NULL,NULL);
+INSERT INTO player_allstar VALUES('pettibo01','Pettit','Bob',1958,'West','NBA',1,34,25,NULL,NULL,16,5,NULL,NULL,NULL,NULL,21,8,9,9,NULL,NULL);
+INSERT INTO player_allstar VALUES('jabalwa01','Jabali','Warren',1973,'West','ABA',1,24,6,1,1,2,3,1,0,4,2,15,3,1,0,5,0);
+INSERT INTO player_allstar VALUES('whitejo01','White','Jo',1975,'East','NBA',1,16,6,NULL,NULL,1,1,NULL,NULL,NULL,NULL,7,3,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('barryri01','Barry','Rick',1973,'West','NBA',1,19,8,NULL,NULL,4,3,NULL,NULL,NULL,NULL,6,3,2,2,NULL,NULL);
+INSERT INTO player_allstar VALUES('paulch01','Paul','Chris',2008,'West','NBA',1,29,14,1,6,7,14,3,0,1,4,14,7,0,0,1,0);
+INSERT INTO player_allstar VALUES('twardda01','Twardzik','Dave',1974,'East','ABA',1,15,14,1,0,1,3,4,0,0,6,4,4,7,6,0,0);
+INSERT INTO player_allstar VALUES('daughbr01','Daugherty','Brad',1991,'East','NBA',1,15,6,NULL,NULL,6,1,NULL,NULL,NULL,NULL,8,3,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('drexlcl01','Drexler','Clyde',1995,'West','NBA',1,19,11,NULL,NULL,2,3,NULL,NULL,NULL,NULL,8,5,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('hayesel01','Hayes','Elvin',1975,'East','NBA',1,31,12,NULL,NULL,10,1,NULL,NULL,NULL,NULL,14,6,2,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('freemdo01','Freeman','Donnie',1968,'East','ABA',1,27,21,3,3,6,7,NULL,NULL,4,6,13,7,7,7,0,0);
+INSERT INTO player_allstar VALUES('greerha01','Greer','Hal',1966,'East','NBA',1,31,27,NULL,NULL,4,1,NULL,NULL,NULL,NULL,16,5,8,7,NULL,NULL);
+INSERT INTO player_allstar VALUES('thurmna01','Thurmond','Nate',1969,'West','NBA',1,99,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO player_allstar VALUES('cartevi01','Carter','Vince',2006,'East','NBA',1,16,7,0,1,1,2,1,0,0,0,7,3,2,1,1,0);
+INSERT INTO player_allstar VALUES('hayesel01','Hayes','Elvin',1974,'East','NBA',1,17,4,NULL,NULL,5,2,NULL,NULL,NULL,NULL,6,2,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('birdla01','Bird','Larry',1983,'East','NBA',1,33,16,NULL,NULL,7,3,NULL,NULL,NULL,NULL,18,6,4,4,NULL,NULL);
+INSERT INTO player_allstar VALUES('sundedo01','Sunderlage','Don',1953,'West','NBA',1,6,4,NULL,NULL,0,1,NULL,NULL,NULL,NULL,2,1,2,2,NULL,NULL);
+INSERT INTO player_allstar VALUES('dantlad01','Dantley','Adrian',1983,'West','NBA',1,18,2,NULL,NULL,2,1,NULL,NULL,NULL,NULL,8,1,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('ladnewe01','Ladner','Wendell',1971,'West','ABA',1,14,4,1,5,6,1,NULL,NULL,0,2,5,2,0,0,2,0);
+INSERT INTO player_allstar VALUES('sprewla01','Sprewell','Latrell',2000,'East','NBA',1,15,7,1,0,1,4,0,0,1,1,6,3,3,1,1,0);
+INSERT INTO player_allstar VALUES('yardlge01','Yardley','George',1959,'East','NBA',1,16,11,NULL,NULL,3,0,NULL,NULL,NULL,NULL,9,5,2,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('scolafr01','Scolari','Fred',1951,'East','NBA',1,15,10,NULL,NULL,0,2,NULL,NULL,NULL,NULL,9,5,0,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('havlijo01','Havlicek','John',1974,'East','NBA',1,31,16,NULL,NULL,6,1,NULL,NULL,NULL,NULL,12,7,2,2,NULL,NULL);
+INSERT INTO player_allstar VALUES('brownro01','Brown','Roger',1969,'East','ABA',1,28,15,NULL,NULL,6,2,NULL,NULL,NULL,4,10,5,6,5,0,0);
+INSERT INTO player_allstar VALUES('ervinju01','Erving','Julius',1979,'East','NBA',1,20,11,NULL,NULL,5,2,NULL,NULL,NULL,NULL,12,4,4,3,NULL,NULL);
+INSERT INTO player_allstar VALUES('mcgratr01','McGrady','Tracy',2005,'West','NBA',1,27,36,0,0,0,2,1,0,1,1,26,15,7,2,10,4);
+INSERT INTO player_allstar VALUES('blackro01','Blackman','Rolando',1986,'West','NBA',1,22,29,NULL,NULL,4,1,NULL,NULL,NULL,NULL,15,9,13,11,NULL,NULL);
+INSERT INTO player_allstar VALUES('abdulka01','Abdul-Jabbar','Kareem',1976,'West','NBA',1,23,21,NULL,NULL,4,2,NULL,NULL,NULL,NULL,14,8,6,5,NULL,NULL);
+INSERT INTO player_allstar VALUES('mashbja01','Mashburn','Jamal',2002,'East','NBA',1,14,10,0,4,4,2,2,0,0,0,7,4,0,0,2,2);
+INSERT INTO player_allstar VALUES('daviebo01','Davies','Bob',1950,'West','NBA',1,0,13,NULL,NULL,5,5,NULL,NULL,NULL,NULL,6,4,5,5,NULL,NULL);
+INSERT INTO player_allstar VALUES('petrige01','Petrie','Geoff',1973,'West','NBA',1,26,8,NULL,NULL,2,4,NULL,NULL,NULL,NULL,11,3,2,2,NULL,NULL);
+INSERT INTO player_allstar VALUES('bayloel01','Baylor','Elgin',1958,'West','NBA',1,32,24,NULL,NULL,11,1,NULL,NULL,NULL,NULL,20,10,5,4,NULL,NULL);
+INSERT INTO player_allstar VALUES('jordami01','Jordan','Michael',2002,'East','NBA',1,36,20,2,3,5,2,2,0,2,3,27,9,2,2,2,0);
+INSERT INTO player_allstar VALUES('russebi01','Russell','Bill',1960,'East','NBA',1,28,24,NULL,NULL,11,1,NULL,NULL,NULL,NULL,15,9,8,6,NULL,NULL);
+INSERT INTO player_allstar VALUES('harribo02','Harrison','Bob',1955,'West','NBA',1,25,5,NULL,NULL,0,1,NULL,NULL,NULL,NULL,7,2,2,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('whitejo01','White','Jo Jo',1971,'East','NBA',1,18,12,NULL,NULL,4,3,NULL,NULL,NULL,NULL,15,6,2,0,NULL,NULL);
+INSERT INTO player_allstar VALUES('mingya01','Ming','Yao',2003,'West','NBA',1,18,16,2,2,4,1,0,0,0,2,14,8,0,0,2,0);
+INSERT INTO player_allstar VALUES('johnsma01','Johnson','Magic',1991,'West','NBA',1,29,25,NULL,NULL,5,9,NULL,NULL,NULL,NULL,12,9,4,4,NULL,NULL);
+INSERT INTO player_allstar VALUES('golato01','Gola','Tom',1963,'East','NBA',1,7,1,NULL,NULL,0,1,NULL,NULL,NULL,NULL,0,0,2,1,NULL,NULL);
+INSERT INTO player_allstar VALUES('havlijo01','Havlicek','John',1970,'East','NBA',1,24,12,NULL,NULL,3,2,NULL,NULL,NULL,NULL,12,6,2,0,NULL,NULL);
+CREATE TABLE players
+(playerID VARCHAR(255),
+useFirst VARCHAR(255),
+firstName VARCHAR(255),
+middleName VARCHAR(255),
+lastName VARCHAR(255),
+nameGiven VARCHAR(255),
+fullGivenName VARCHAR(255),
+nameSuffix VARCHAR(255),
+nameNick VARCHAR(255),
+pos VARCHAR(255),
+firstseason BIGINT,
+lastseason BIGINT,
+height DOUBLE,
+weight BIGINT,
+college VARCHAR(255),
+collegeOther VARCHAR(255),
+birthDate DATE,
+birthCity VARCHAR(255),
+birthState VARCHAR(255),
+birthCountry VARCHAR(255),
+highSchool VARCHAR(255),
+hsCity VARCHAR(255),
+hsState VARCHAR(255),
+hsCountry VARCHAR(255),
+deathDate DATE,
+race VARCHAR(255));
+INSERT INTO players VALUES('spectar01','Art','Arthur','Edward','Spector',NULL,NULL,NULL,'Art, Speed','F',0,0,76.0,200,'Villanova',NULL,'1920-10-17','Philadelphia','PA','USA','Bartram','Philadelphia','PA','USA','1987-06-18','W');
+INSERT INTO players VALUES('knoblbu01',NULL,'Bernard',NULL,'Knoblauch',NULL,NULL,NULL,'Buzz','F',0,0,73.0,170,'Carroll (WI)',NULL,'0000-00-00',NULL,NULL,NULL,'Tomah','Tomah','WI','USA','0000-00-00','W');
+INSERT INTO players VALUES('nostrge01','George','George','Thomas','Nostrand',NULL,NULL,NULL,NULL,'C-F',0,0,80.0,195,'Wyoming','High Point','1924-01-25','Uniondale','NY','USA','Uniondale','Uniondale','NY','USA','1981-11-08','W');
+INSERT INTO players VALUES('milledi01','Dick','Richard','Mathias','Miller',NULL,NULL,NULL,'Dick','F',0,0,78.0,215,'Toledo',NULL,'1958-04-26','Milwaukee','WI','USA','Thomas More','Milwaukee','WI','USA','0000-00-00','W');
+INSERT INTO players VALUES('kearnto01','Tommy','Thomas','Francis','Kearns',NULL,NULL,'Jr.','Tommy','G',0,0,71.0,185,'North Carolina',NULL,'1936-10-06','New York','NY','USA','St. Ann''s Academy','New York','NY','USA','0000-00-00','W');
+INSERT INTO players VALUES('bradlbi01','Bill','William','Warren','Bradley',NULL,NULL,NULL,'Bill, Dollar Bill','F-G',0,0,77.0,205,'Princeton','Oxford','1943-07-28','Crystal City','MO','USA','Crystal City','Crystal City','MO','USA','0000-00-00','W');
+INSERT INTO players VALUES('kundljo01','John','John',NULL,'Kundla',NULL,NULL,NULL,NULL,NULL,0,0,74.0,180,'Minnesota',NULL,'1916-07-03',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0000-00-00',NULL);
+INSERT INTO players VALUES('meelycl01','Cliff','Cliff',NULL,'Meely',NULL,NULL,NULL,NULL,'F-C',0,0,80.0,215,'Colorado','Northeastern JC','1947-07-10','Rosedale','MS','USA','Northwestern','Sterling','CO','USA','0000-00-00','B');
+INSERT INTO players VALUES('bradlbi02','Bill','William','C.','Bradley',NULL,NULL,NULL,'Bill','G',0,0,71.0,165,'Tennessee State','Evansville','1941-06-16',NULL,NULL,NULL,'Central','Louisville','KY','USA','2002-06-05','B');
+INSERT INTO players VALUES('schulho01','Howie','Howard','Henry','Schultz',NULL,NULL,NULL,'Howie, Stretch, Steeple','C-F',0,0,78.0,200,'Hamline',NULL,'1922-07-03','St. Paul','MN','USA','Central','St. Paul','MN','USA','2009-10-30','W');
+INSERT INTO players VALUES('prebope01',NULL,'Felix',NULL,'Preboski',NULL,NULL,NULL,'Pete','F',0,0,73.0,195,'Wisconsin',NULL,'0000-00-00',NULL,NULL,NULL,'Antigo','Antigo','WI','USA','0000-00-00','W');
+INSERT INTO players VALUES('hicksjj01','J.J.','James','Edward','Hickson',NULL,NULL,NULL,'J.J.','F',0,0,81.0,242,'North Carolina State',NULL,'1988-09-04','Atlanta','GA','USA','Carver / SW Atlanta Christian / Weaver','Columbus / Atlanta / Marietta','GA','USA','0000-00-00','B');
+INSERT INTO players VALUES('hendeda01','Dave','David','McKinley','Henderson',NULL,NULL,NULL,'Dave','G',0,0,77.0,195,'Duke',NULL,'1964-07-21','Henderson','NC','USA','Warren County','Warrenton','NC','USA','0000-00-00','B');
+INSERT INTO players VALUES('anderan01','Andy','Andrew','Emil','Anderson',NULL,NULL,NULL,'Andy','G',0,0,74.0,184,'Canisius',NULL,'1945-07-06','Buffalo','NY','USA','Maryvale','Maryvale','NY','USA','0000-00-00','W');
+INSERT INTO players VALUES('walkeph01','Phil','Phillip','B.','Walker',NULL,NULL,NULL,'Phil','G',0,0,75.0,180,'Millersville St. (PA)',NULL,'1956-03-20','Philadelphia','PA','USA','Central','Philadelphia','PA','USA','0000-00-00','B');
+INSERT INTO players VALUES('hallmi01','Mike','Michael','Horus','Hall',NULL,NULL,NULL,NULL,'F',0,0,80.0,230,'George Washington',NULL,'1984-06-05','Chicago','IL','USA','Alan B. Shepard','Palos Heights','IL','USA','0000-00-00','B');
+INSERT INTO players VALUES('holmade01','Denny','Dennis','R.','Holman',NULL,NULL,NULL,'Denny','G',0,0,75.0,175,'Southern Methodist',NULL,'1945-10-08',NULL,NULL,NULL,'Hillcrest ','Dallas','TX','USA','0000-00-00','W');
+INSERT INTO players VALUES('daviste01','Terry','Terry','Raymond','Davis',NULL,NULL,NULL,NULL,'F-C',0,0,81.0,225,'Virginia Union',NULL,'1967-06-17','Danville','VA','USA','George Washington','Danville','VA','USA','0000-00-00','B');
+INSERT INTO players VALUES('keacl01','Clarence','Clarence','Leroy','Kea',NULL,NULL,NULL,NULL,'F',0,0,78.0,218,'Lamar',NULL,'1959-02-02','Wilmington','NC','USA','Hanover','Wilmington','NC','USA','0000-00-00','B');
+INSERT INTO players VALUES('ferrybo01','Bob','Robert','Dean','Ferry',NULL,NULL,NULL,'Bob, Big Flipper','C-F',0,0,80.0,230,'St. Louis',NULL,'1937-05-31','St. Louis','MO','USA','Cleveland / DuBourg','St. Louis','MO','USA','0000-00-00','W');
+INSERT INTO players VALUES('sparkda01','Dan','Daniel','E.','Sparks',NULL,NULL,NULL,'Dan','F',0,0,79.5,200,'Weber State','Vincennes JC','1945-04-17','Bloomington','IN','USA','Bloomington','Bloomington','IN','USA','0000-00-00','W');
+INSERT INTO players VALUES('mcdonro01','Rod','Roderick','William','McDonald',NULL,NULL,NULL,'Rod','F',0,0,78.0,205,'Whitworth',NULL,'1945-04-09','Jacksonville','FL','USA','Clover Park','Tacoma','WA','USA','0000-00-00','W');
+INSERT INTO players VALUES('surabo01','Bob','Robert',NULL,'Sura',NULL,NULL,'Jr.','Bobby, Bob','G',0,0,77.0,200,'Florida State',NULL,'1973-03-25','Wilkes-Barre','PA','USA','G.A.R. Memorial','Wilkes-Barre','PA','USA','0000-00-00','W');
+INSERT INTO players VALUES('lieboba01','Barry','Barry',NULL,'Liebowitz',NULL,NULL,NULL,NULL,'G',0,0,74.0,180,'LIU',NULL,'1945-09-10','New York','NY','USA','DeWitt Clinton','Bronx','NY','USA','0000-00-00','W');
+INSERT INTO players VALUES('oshaubo01',NULL,'Bob',NULL,'O''Shaughnessy',NULL,NULL,NULL,NULL,'G',0,0,72.0,175,'Nevada',NULL,'0000-00-00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0000-00-00','W');
+INSERT INTO players VALUES('butleca01','Caron','James','Caron','Butler',NULL,NULL,NULL,'Caron','F',0,0,79.0,217,'Connecticut',NULL,'1980-03-13','Racine','WI','USA','Park / Maine Central Institute','Racine / Pittsfield','WI / ME','USA','0000-00-00','B');
+INSERT INTO players VALUES('eddiepa01','Patrick','Patrick',NULL,'Eddie',NULL,NULL,NULL,NULL,'C',0,0,83.0,240,'Mississippi','Arkansas State','1967-12-27','Milwaukee','WI','USA','Milwaukee Trade & Tech','Milwaukee','WI','USA','0000-00-00','B');
+INSERT INTO players VALUES('terjeri01',NULL,'Irving','B.','Terjesen',NULL,NULL,NULL,'Rip, Swede','F-C',0,0,75.0,195,'NYU',NULL,'1915-03-04','Brooklyn','NY','USA','James Madison','Brooklyn','NY','USA','1990-04-12','W');
+INSERT INTO players VALUES('paineal01',NULL,'Alva','L.','Paine',NULL,NULL,NULL,'Allie','G',0,0,72.0,165,'Oklahoma',NULL,'1919-07-22','Harrah','OK','USA','Oklahoma City Central','Oklahoma City','OK','USA','2008-03-22','W');
+INSERT INTO players VALUES('armstbo02',NULL,'Bob',NULL,'Armstrong',NULL,NULL,NULL,NULL,'F',0,0,73.0,180,'Glenville State',NULL,'0000-00-00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0000-00-00','W');
+INSERT INTO players VALUES('vaughvi01','Virgil','Virgil','V.','Vaughn',NULL,NULL,NULL,NULL,'F-C',0,0,76.0,205,'Kentucky Wesleyan',NULL,'1918-05-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2007-02-26','W');
+INSERT INTO players VALUES('smithdo03','Doug','Douglas',NULL,'Smith',NULL,NULL,NULL,'Doug','F',0,0,82.0,220,'Missouri',NULL,'1969-09-17','Detroit','MI','USA','MacKenzie','Detroit','MI','USA','0000-00-00','B');
+INSERT INTO players VALUES('carran01','Antoine','Antoine','Labotte','Carr',NULL,NULL,NULL,'A.C., The Big Dog','F-C',0,0,81.0,225,'Wichita State',NULL,'1961-07-23','Oklahoma City','OK','USA','Wichita Heights','Wichita','KS','USA','0000-00-00','B');
+INSERT INTO players VALUES('harriot01','Othella','Othella',NULL,'Harrington',NULL,NULL,NULL,NULL,'F-C',0,0,81.0,235,'Georgetown',NULL,'1974-01-31','Jackson','MS','USA','Murrah','Jackson','MS','USA','0000-00-00','B');
+INSERT INTO players VALUES('brandte01','Terrell','Thomas','Terrell','Brandon',NULL,NULL,NULL,'Terrell, Tee Bee','G',0,0,71.0,173,'Oregon',NULL,'1970-05-20','Portland','OR','USA','Grant','Portland','OR','USA','0000-00-00','B');
+INSERT INTO players VALUES('marlaha01','Harvey','Harvey','W.','Marlatt',NULL,NULL,NULL,NULL,'G',0,0,75.0,185,'Eastern Michigan',NULL,'1948-08-26',NULL,NULL,NULL,'Alpena','Alpena','MI','USA','0000-00-00','W');
+INSERT INTO players VALUES('rosendi01','Dick','Richard','Anthony','Rosenthal',NULL,NULL,NULL,'Dick','F-G',0,0,77.0,205,'Notre Dame',NULL,'1930-01-20',NULL,NULL,NULL,'McBride','St. Louis','MO','USA','0000-00-00','W');
+INSERT INTO players VALUES('higgiea01','Earlie','Earle','Brent','Higgins',NULL,NULL,NULL,'Sticks','F',0,0,80.0,195,'Eastern Michigan','Casper JC','1946-12-30',NULL,NULL,NULL,'Ann Arbor','Ann Arbor','MI','USA','0000-00-00','B');
+INSERT INTO players VALUES('supruma01',NULL,'Mack',NULL,'Suprunowicz',NULL,NULL,NULL,NULL,'G',0,0,72.0,170,'Michigan',NULL,'1927-01-17','Long Island City','NY','USA','Mont Pleasant','Schenectady','NY','USA','2010-06-04','W');
+INSERT INTO players VALUES('hartidi01','Dick','Dick',NULL,'Hartier',NULL,NULL,NULL,NULL,NULL,0,0,0.0,0,NULL,NULL,'0000-00-00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0000-00-00',NULL);
+INSERT INTO players VALUES('daniema01','Marquis','Marquis','Antwane','Daniels',NULL,NULL,NULL,NULL,'F',0,0,78.0,200,'Auburn',NULL,'1981-01-07','Orlando','FL','USA','Mt. Zion Christian Academy','Durham','NC','USA','0000-00-00','B');
+INSERT INTO players VALUES('morrimi01','Mike','Michael','Fitzgerald','Morrison',NULL,NULL,NULL,'Mike','G',0,0,76.0,195,'Loyola (MD)',NULL,'1967-08-16','Washington','DC','USA','Northwestern','Hyattsville','MD','USA','0000-00-00','B');
+INSERT INTO players VALUES('aubucch01','Chet','Chester','J.','Aubuchon',NULL,NULL,'Jr.','Chet','G',0,0,70.0,137,'Michigan State',NULL,'1916-05-18','Gary','IN','USA','Horace Mann','Gary','IN','USA','2005-04-14','W');
+INSERT INTO players VALUES('cofferi01','Richard','Richard','Lee','Coffey',NULL,NULL,NULL,NULL,'F',0,0,78.0,212,'Minnesota',NULL,'1965-09-02','Aurora','NC','USA','Aurora','Aurora','NC','USA','0000-00-00','B');
+INSERT INTO players VALUES('rouxgi01','Giff','Gifford','H.','Roux',NULL,NULL,NULL,'Giff','F-C',0,0,77.0,195,'Kansas',NULL,'1923-06-28',NULL,NULL,NULL,'East Alton-Wood River','Wood River','IL','USA','2011-08-19','W');
+INSERT INTO players VALUES('pressdo01','Dominic','Dominic','Ivan','Pressley',NULL,NULL,NULL,NULL,'G',0,0,74.0,170,'Boston College',NULL,'1964-05-30','Washington','DC','USA','Mackin','Washington','DC','USA','0000-00-00','B');
+INSERT INTO players VALUES('mihmch01','Chris','Christopher','Steven','Mihm',NULL,NULL,NULL,'Chris','C',0,0,84.0,265,'Texas',NULL,'1979-07-16','Milwaukee','WI','USA','Westlake','Austin','TX','USA','0000-00-00','W');
+INSERT INTO players VALUES('grossbo01','Bob','Robert','Edwin','Gross',NULL,NULL,NULL,'Bob','F-G',0,0,78.0,200,'Long Beach State','Seattle / Los Angeles Harbor','1953-08-03','San Pedro','CA','USA','Fermin Lausen','San Pedro','CA','USA','0000-00-00','W');
+INSERT INTO players VALUES('gibsomi01','Mike','Michael','Jerome','Gibson',NULL,NULL,NULL,'Mike','F',0,0,82.0,205,'SC-Spartanburg',NULL,'1960-10-27','Williamsburg Co.','SC','USA','Hemingway','Hemingway','SC','USA','0000-00-00','B');
+INSERT INTO players VALUES('davisem01','Emanual','Emanual',NULL,'Davis',NULL,NULL,NULL,'E-Mail, Vel','G',0,0,76.0,194,'Delaware State',NULL,'1968-08-27','Philadelphia','PA','USA','Kensington','Philadelphia','PA','USA','0000-00-00','B');
+INSERT INTO players VALUES('jaricma01','Marko','Marko',NULL,'Jaric',NULL,NULL,NULL,NULL,'G',0,0,80.0,210,'none',NULL,'1978-12-10','Belgrade',NULL,'YUG',NULL,NULL,NULL,NULL,'0000-00-00','W');
+INSERT INTO players VALUES('johnsed03','Eddie','Edward','Arnet','Johnson',NULL,NULL,NULL,'Eddie','F-G',0,0,79.0,215,'Illinois',NULL,'1959-05-01','Chicago','IL','USA','Westinghouse Vocational','Chicago','IL','USA','0000-00-00','B');
+INSERT INTO players VALUES('jorgejo01','Johnny','John','J.','Jorgensen',NULL,NULL,NULL,'Johnny','G-F',0,0,74.0,180,'DePaul','William & Mary','1921-12-28','Chicago','IL','USA',NULL,NULL,NULL,NULL,'1973-01-19','W');
+INSERT INTO players VALUES('freemga01','Gary','Gary','C.','Freeman',NULL,NULL,NULL,NULL,'F',0,0,81.0,208,'Oregon State',NULL,'1948-07-25','Plainsville','OH','USA','Borah','Boise','ID','USA','0000-00-00','W');
+INSERT INTO players VALUES('forreba01','Bayard','Bayard',NULL,'Forrest',NULL,NULL,NULL,NULL,'C',0,0,82.0,235,'Grand Canyon',NULL,'1954-07-08','San Jose','CA','USA','Bandon','Bandon','OR','USA','0000-00-00','W');
+CREATE TABLE teams
+(year BIGINT,
+lgID VARCHAR(255),
+tmID VARCHAR(255),
+franchID VARCHAR(255),
+confID VARCHAR(255),
+divID VARCHAR(255),
+rank BIGINT,
+confRank BIGINT,
+playoff VARCHAR(255),
+name VARCHAR(255),
+o_fgm BIGINT,
+o_ftm BIGINT,
+o_pts BIGINT,
+d_pts BIGINT,
+homeWon BIGINT,
+homeLost BIGINT,
+awayWon BIGINT,
+awayLost BIGINT,
+won BIGINT,
+lost BIGINT,
+games BIGINT,
+arena VARCHAR(255));
+INSERT INTO teams VALUES(1996,'NBA','HOU','HOU','WC','MW',2,3,'CF','Houston Rockets',3037,1503,8248,7881,30,11,27,14,57,25,82,'The Summit');
+INSERT INTO teams VALUES(1983,'NBA','POR','POR','WC','PC',2,3,'C1','Portland Trail Blazers',3632,1988,9277,8986,33,8,15,26,48,34,82,'Memorial Coliseum');
+INSERT INTO teams VALUES(1964,'NBA','BAL','WAS',NULL,'WD',3,0,'DF','Baltimore Bullets',3421,2245,9087,9264,23,14,12,19,37,43,80,'Baltimore Civic Center');
+INSERT INTO teams VALUES(1979,'NBA','NJN','NJN','EC','AT',5,10,NULL,'New Jersey Nets',3456,1882,8879,8975,22,19,12,29,34,48,82,'Rutgers Athletic Center');
+INSERT INTO teams VALUES(1954,'NBA','NYK','NYK',NULL,'ED',2,0,'DS','New York Knicks',2392,1887,6671,6665,17,8,8,19,38,34,72,'Madison Square Garden (III)');
+INSERT INTO teams VALUES(1996,'NBA','GSW','GSW','WC','PC',7,10,NULL,'Golden State Warriors',2997,1696,8171,8557,18,23,12,29,30,52,82,'San Jose Arena');
+INSERT INTO teams VALUES(1971,'ABA','DLC','SAS',NULL,'WD',3,0,'DS','Dallas Chaparrals',3362,1943,8770,8760,25,15,15,25,42,42,84,'Moody Coliseum');
+INSERT INTO teams VALUES(1970,'NBA','DET','DET','WC','MW',4,6,NULL,'Detroit Pistons',3468,2093,9029,9090,24,17,20,19,45,37,82,'Cobo Arena');
+INSERT INTO teams VALUES(1972,'NBA','CHI','CHI','WC','MW',2,3,'CS','Chicago Bulls',3480,1574,8534,8248,29,12,20,19,51,31,82,'Chicago Stadium');
+INSERT INTO teams VALUES(1987,'NBA','DEN','DEN','WC','MW',1,2,'CS','Denver Nuggets',3770,1841,9573,9239,35,6,19,22,54,28,82,'McNichols Sports Arena');
+INSERT INTO teams VALUES(1980,'NBA','DET','DET','EC','CD',6,11,NULL,'Detroit Pistons',3236,1689,8174,8692,14,27,7,34,21,61,82,'Pontiac Silverdome');
+INSERT INTO teams VALUES(1937,'NBL','CNC','CNC',NULL,'WE',5,0,NULL,'Richmond King Clothiers/Cincinnati Comellos',110,42,262,338,3,1,0,5,3,7,10,NULL);
+INSERT INTO teams VALUES(2011,'NBA','DAL','DAL','WC','SW',3,0,'C1','Dallas Mavericks',2398,1029,6322,6259,0,0,0,0,36,30,0,NULL);
+INSERT INTO teams VALUES(1949,'NBA','WSC','WSC',NULL,'ED',3,0,'DS','Washington Capitols',1813,1575,5201,5264,21,13,10,20,32,36,68,'Uline Arena');
+INSERT INTO teams VALUES(2007,'NBA','DAL','DAL','WC','SW',4,7,'C1','Dallas Mavericks',3025,1690,8234,7862,34,7,17,24,51,31,82,'American Airlines Center');
+INSERT INTO teams VALUES(1973,'NBA','ATL','ATL','EC','CD',2,5,NULL,'Atlanta Hawks',3602,1703,8907,9024,23,18,12,25,35,47,82,'Omni Coliseum');
+INSERT INTO teams VALUES(1949,'NBA','ROC','SAC',NULL,'CD',1,0,'DS','Rochester Royals',1956,1690,5602,5074,33,1,17,16,51,17,68,'Edgerton Park Arena');
+INSERT INTO teams VALUES(1979,'NBA','SDC','LAC','WC','PC',5,7,NULL,'San Diego Clippers',3524,1595,8820,9160,24,17,11,30,35,47,82,'San Diego Sports Arena');
+INSERT INTO teams VALUES(1990,'NBA','HOU','HOU','WC','MW',3,6,'C1','Houston Rockets',3403,1631,8753,8466,31,10,21,20,52,30,82,'The Summit');
+INSERT INTO teams VALUES(1989,'NBA','CHH','NOH','WC','MW',7,14,NULL,'Charlotte Hornets',3270,1487,8232,8873,13,28,6,35,19,63,82,'Charlotte Coliseum');
+INSERT INTO teams VALUES(1985,'NBA','HOU','HOU','WC','MW',1,2,'F','Houston Rockets',3759,1776,9379,9165,36,5,15,26,51,31,82,'The Summit');
+INSERT INTO teams VALUES(1953,'NBA','SYR','PHI',NULL,'ED',3,0,'F','Syracuse Nationals',2054,1905,6013,5660,27,5,10,19,42,30,72,'Onondaga War Memorial');
+INSERT INTO teams VALUES(1957,'NBA','CIN','SAC',NULL,'WD',2,0,'DS','Cincinnati Royals',2817,1688,7322,7420,17,12,10,19,33,39,72,'Cincinnati Gardens');
+INSERT INTO teams VALUES(1962,'NBA','CIN','SAC',NULL,'ED',3,0,'DF','Cincinnati Royals',3672,2183,9527,9426,23,10,15,19,42,38,80,'Cincinnati Gardens');
+INSERT INTO teams VALUES(1986,'NBA','UTA','UTA','WC','MW',2,4,'C1','Utah Jazz',3485,1735,8844,8811,31,10,13,28,44,38,82,'Salt Palace');
+INSERT INTO teams VALUES(1958,'NBA','STL','ATL',NULL,'WD',1,0,'DF','St. Louis Hawks',2879,2072,7830,7564,28,3,14,15,49,23,72,'Kiel Auditorium');
+INSERT INTO teams VALUES(1967,'NBA','NYK','NYK',NULL,'ED',3,0,'DS','New York Knicks',3682,2159,9523,9374,20,17,21,16,43,39,82,'Madison Square Garden (III)');
+INSERT INTO teams VALUES(2008,'NBA','CHI','CHI','EC','CD',2,7,'C1','Chicago Bulls',3126,1633,8378,8401,28,13,13,28,41,41,82,'United Center');
+INSERT INTO teams VALUES(1992,'NBA','BOS','BOS','EC','AT',2,4,'C1','Boston Celtics',3453,1486,8502,8429,28,13,20,21,48,34,82,'Boston Garden');
+INSERT INTO teams VALUES(1997,'NBA','MIA','MIA','EC','AT',1,2,'C1','Miami Heat',2850,1539,7787,7383,30,11,25,16,55,27,82,'Miami Arena');
+INSERT INTO teams VALUES(1981,'NBA','NYK','NYK','EC','AT',5,10,NULL,'New York Knicks',3523,1603,8707,8926,19,22,14,27,33,49,82,'Madison Square Garden (IV)');
+INSERT INTO teams VALUES(1989,'NBA','MIN','MIN','WC','MW',6,13,NULL,'Minnesota Timberwolves',3067,1596,7803,8150,17,24,5,36,22,60,82,'Hubert H. Humphrey Metrodome');
+INSERT INTO teams VALUES(1969,'NBA','NYK','NYK',NULL,'ED',1,0,'NC','New York Knicks',3803,1821,9427,8682,30,11,27,10,60,22,82,'Madison Square Garden (IV)');
+INSERT INTO teams VALUES(1988,'NBA','DEN','DEN','WC','MW',3,6,'C1','Denver Nuggets',3813,1821,9675,9536,35,6,9,32,44,38,82,'McNichols Sports Arena');
+INSERT INTO teams VALUES(1970,'NBA','SFW','GSW','WC','PC',2,4,'CS','San Francisco Warriors',3454,1875,8783,8901,20,18,19,21,41,41,82,'Oakland-Alameda County Coliseum Arena');
+INSERT INTO teams VALUES(1950,'NPBL','DNN','DNN',NULL,'WE',2,0,NULL,'Denver Refiners',0,0,2498,2704,12,2,3,14,18,16,34,'Denver Auditorium Arena');
+INSERT INTO teams VALUES(1947,'NBL','TRI','ATL',NULL,'WE',2,0,'CF','Tri-Cities Blackhawks',1340,976,3656,3665,17,9,11,19,30,30,60,NULL);
+INSERT INTO teams VALUES(1990,'NBA','DEN','DEN','WC','MW',7,14,NULL,'Denver Nuggets',3901,1726,9828,10723,17,24,3,38,20,62,82,'McNichols Sports Arena');
+INSERT INTO teams VALUES(2006,'NBA','MEM','MEM','WC','SW',5,15,NULL,'Memphis Grizzlies',2998,1835,8331,8753,14,27,8,33,22,60,82,'FedExForum');
+INSERT INTO teams VALUES(2004,'NBA','MIN','MIN','WC','NW',3,9,NULL,'Minnesota Timberwolves',3045,1449,7934,7815,24,17,20,21,44,38,82,'Target Center');
+INSERT INTO teams VALUES(1998,'NBA','DET','DET','EC','CD',3,5,'C1','Detroit Pistons',1660,950,4518,4347,17,8,12,13,29,21,50,'The Palace of Auburn Hills');
+INSERT INTO teams VALUES(1993,'NBA','DET','DET','EC','CD',6,14,NULL,'Detroit Pistons',3169,1253,7949,8587,10,31,10,31,20,62,82,'The Palace of Auburn Hills');
+INSERT INTO teams VALUES(2001,'NBA','TOR','TOR','EC','CD',3,7,'C1','Toronto Raptors',2919,1269,7494,7530,24,17,18,23,42,40,82,'Air Canada Centre');
+INSERT INTO teams VALUES(2007,'NBA','ORL','ORL','EC','SE',1,3,'CS','Orlando Magic',3058,1650,8567,8119,25,16,27,14,52,30,82,'Amway Arena');
+INSERT INTO teams VALUES(1969,'ABA','NOB','MMS',NULL,'WD',5,0,NULL,'New Orleans Buccaneers',3463,1970,9064,8999,28,11,11,26,42,42,84,'Tulane Gym');
+INSERT INTO teams VALUES(1996,'NBA','SAC','SAC','WC','PC',6,9,NULL,'Sacramento Kings',3000,1494,7908,8185,22,19,12,29,34,48,82,'ARCO Arena (II)');
+INSERT INTO teams VALUES(2011,'NBA','ATL','ATL','EC','SE',2,0,'C1','Atlanta Hawks',2429,1025,6375,6148,0,0,0,0,40,26,0,NULL);
+INSERT INTO teams VALUES(1971,'NBA','MIL','MIL','WC','MW',1,2,'CF','Milwaukee Bucks',3813,1774,9400,8485,31,5,27,12,63,19,82,'Milwaukee Arena');
+INSERT INTO teams VALUES(1971,'ABA','DNR','DEN',NULL,'WD',4,0,'DS','Denver Rockets',3703,1953,9400,9500,25,15,7,32,34,50,84,'Denver Auditorium Arena');
+INSERT INTO teams VALUES(1969,'ABA','INA','IND',NULL,'ED',1,0,'AC','Indiana Pacers',3593,2110,9511,9220,28,9,26,14,59,25,84,'Indiana State Fair Coliseum');
+INSERT INTO teams VALUES(1941,'NBL','TCH','TCH',NULL,NULL,7,0,NULL,'Toledo Jim White Chevrolets',323,228,874,1126,2,4,0,16,3,21,24,NULL);
+INSERT INTO teams VALUES(1991,'NBA','SEA','SEA','WC','PC',4,6,'CS','Seattle Supersonics',3380,1772,8737,8583,28,13,19,22,47,35,82,'Seattle Center Coliseum');
+INSERT INTO teams VALUES(2000,'NBA','CLE','CLE','EC','CD',6,11,NULL,'Cleveland Cavaliers',2890,1561,7561,7909,20,21,10,31,30,52,82,'Gund Arena');
+INSERT INTO teams VALUES(1988,'NBA','BOS','BOS','EC','AT',3,8,'C1','Boston Celtics',3520,1840,8958,8863,32,9,10,31,42,40,82,'Boston Garden');
+INSERT INTO teams VALUES(1941,'NBL','SHE','SHE',NULL,NULL,5,0,NULL,'Sheboygan Redskins',373,196,942,1017,8,5,2,9,10,14,24,NULL);
+CREATE TABLE awards_coaches
+(id BIGINT,
+year BIGINT,
+coachID VARCHAR(255),
+award VARCHAR(255),
+lgID VARCHAR(255),
+note VARCHAR(255));
+INSERT INTO awards_coaches VALUES(52,2002,'popovgr01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(23,1974,'johnsph01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(37,1987,'moedo01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(46,1996,'rileypa01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(2,1963,'hannual01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(31,1981,'shuege01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(19,1973,'mccarba01','ABA Coach of the Year','ABA','tie');
+INSERT INTO awards_coaches VALUES(20,1973,'mullajo01','ABA Coach of the Year','ABA','tie');
+INSERT INTO awards_coaches VALUES(55,2005,'johnsav01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(15,1971,'nissato01','ABA Coach of the Year','ABA',NULL);
+INSERT INTO awards_coaches VALUES(49,1999,'riverdo01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(25,1975,'fitchbi01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(33,1983,'laydefr01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(22,1974,'brownla01','ABA Coach of the Year','ABA',NULL);
+INSERT INTO awards_coaches VALUES(30,1980,'mckinja01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(38,1988,'fitzsco01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(26,1976,'nissato01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(45,1995,'jacksph01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(11,1969,'belmojo01','ABA Coach of the Year','ABA','tie');
+INSERT INTO awards_coaches VALUES(1,1962,'gallaha01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(29,1979,'fitchbi01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(16,1971,'sharmbi01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(12,1969,'holzmre01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(50,2000,'brownla01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(39,1989,'rileypa01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(13,1970,'biancal01','ABA Coach of the Year','ABA',NULL);
+INSERT INTO awards_coaches VALUES(40,1990,'chanedo01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(4,1965,'schaydo01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(5,1966,'kerrjo01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(48,1998,'dunlemi01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(41,1991,'nelsodo01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(58,2008,'brownmi02','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(17,1972,'brownla01','ABA Coach of the Year','ABA',NULL);
+INSERT INTO awards_coaches VALUES(27,1977,'brownhu01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(42,1992,'rileypa01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(61,2011,'popovgr01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(34,1984,'nelsodo01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(14,1970,'mottadi01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(18,1972,'heinsto01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(47,1997,'birdla01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(57,2007,'scottby01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(56,2006,'mitchsa01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(36,1986,'schulmi01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(51,2001,'carliri01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(59,2009,'brooksc01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(35,1985,'fratemi01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(7,1967,'gueriri01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(10,1969,'sharmbi01','ABA Coach of the Year','ABA','tie');
+INSERT INTO awards_coaches VALUES(8,1968,'hannual01','ABA Coach of the Year','ABA',NULL);
+INSERT INTO awards_coaches VALUES(43,1993,'wilkele01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(24,1975,'brownla01','ABA Coach of the Year','ABA',NULL);
+INSERT INTO awards_coaches VALUES(44,1994,'harride01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(28,1978,'fitzsco01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(60,2010,'thiboto01','NBA Coach of the Year','NBA',NULL);
+INSERT INTO awards_coaches VALUES(6,1967,'cazzevi01','ABA Coach of the Year','ABA',NULL);
+CREATE TABLE players_teams
+(id BIGINT,
+playerID VARCHAR(255),
+year BIGINT,
+stint BIGINT,
+tmID VARCHAR(255),
+lgID VARCHAR(255),
+GP BIGINT,
+GS BIGINT,
+minutes BIGINT,
+points BIGINT,
+oRebounds BIGINT,
+dRebounds BIGINT,
+rebounds BIGINT,
+assists BIGINT,
+steals BIGINT,
+blocks BIGINT,
+turnovers BIGINT,
+PF BIGINT,
+fgAttempted BIGINT,
+fgMade BIGINT,
+ftAttempted BIGINT,
+ftMade BIGINT,
+threeAttempted BIGINT,
+threeMade BIGINT,
+PostGP BIGINT,
+PostGS BIGINT,
+PostMinutes BIGINT,
+PostPoints BIGINT,
+PostoRebounds BIGINT,
+PostdRebounds BIGINT,
+PostRebounds BIGINT,
+PostAssists BIGINT,
+PostSteals BIGINT,
+PostBlocks BIGINT,
+PostTurnovers BIGINT,
+PostPF BIGINT,
+PostfgAttempted BIGINT,
+PostfgMade BIGINT,
+PostftAttempted BIGINT,
+PostftMade BIGINT,
+PostthreeAttempted BIGINT,
+PostthreeMade BIGINT,
+note VARCHAR(255));
+INSERT INTO players_teams VALUES(20140,'steveba01',1992,1,'GSW','NBA',2,0,6,2,2,0,2,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(10270,'jaricma01',2004,1,'LAC','NBA',50,0,1656,493,20,141,161,303,84,17,98,107,457,189,82,59,151,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(12869,'luety01',2003,1,'ORL','NBA',76,0,2332,799,26,161,187,317,61,5,124,185,714,309,131,101,209,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(8272,'hairsha01',1966,1,'CIN','NBA',79,0,2442,1174,0,0,631,62,0,0,0,273,962,461,382,252,0,0,4,0,140,64,0,0,27,6,0,0,0,15,54,28,15,8,0,0,NULL);
+INSERT INTO players_teams VALUES(20317,'stricro02',1992,1,'POR','NBA',78,0,2474,1069,120,217,337,559,131,24,199,153,816,396,381,273,30,4,4,0,156,54,9,17,26,37,5,2,7,10,52,22,12,10,1,0,NULL);
+INSERT INTO players_teams VALUES(2641,'brownjo01',1976,1,'ATL','NBA',77,0,1405,441,75,161,236,103,46,7,0,217,350,160,150,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(17161,'quinnbr01',1990,1,'NYK','NBA',68,0,1011,319,65,80,145,53,22,13,52,100,303,139,36,26,43,15,3,0,36,9,0,1,1,3,1,0,2,2,8,4,0,0,3,1,NULL);
+INSERT INTO players_teams VALUES(16361,'pavloal01',2010,1,'DAL','NBA',10,6,163,41,0,12,12,7,5,3,5,15,35,15,5,4,16,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(11981,'lacyed01',1968,1,'LAS','ABA',46,0,609,234,70,110,180,30,0,0,63,92,219,98,67,38,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(14226,'mensapo01',2008,1,'SAS','NBA',3,0,20,15,5,5,10,0,1,1,2,6,7,5,7,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(22726,'wilkele01',1974,1,'POR','NBA',65,0,1161,420,38,82,120,235,77,9,0,96,305,134,198,152,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(2070,'borchcu01',2003,1,'UTA','NBA',16,0,258,58,13,41,54,15,4,14,18,40,56,22,18,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(5721,'dumarjo01',1990,1,'DET','NBA',80,0,3046,1629,62,125,187,443,89,7,189,135,1292,622,417,371,45,14,15,0,588,309,21,29,50,62,16,1,17,33,245,105,97,82,42,17,NULL);
+INSERT INTO players_teams VALUES(18903,'scottwi01',1969,1,'DLC','ABA',8,0,51,13,2,2,4,2,0,0,8,16,15,6,6,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(3876,'clarkdi01',1968,1,'HSM','ABA',32,0,723,218,30,58,88,68,0,0,73,99,222,64,124,89,8,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(13947,'mcinnje01',1996,1,'CHH','NBA',13,0,117,65,2,4,6,18,2,1,13,16,49,23,10,7,26,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(20498,'szukast01',1947,0,'GRR','PBLA',6,0,0,59,0,0,0,0,0,0,0,11,0,23,20,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(12662,'longgr01',1988,1,'MIA','NBA',82,0,2435,976,240,306,546,149,122,48,201,337,692,336,406,304,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(20637,'terrych01',1975,1,'NYA','ABA',66,0,970,220,45,99,144,38,36,6,21,116,246,96,29,22,21,6,4,0,23,0,1,1,2,1,0,0,5,7,7,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(21343,'turneje01',1984,1,'NJN','NBA',72,0,1429,421,88,130,218,108,29,7,90,243,377,171,92,79,3,0,3,0,21,4,2,2,4,2,0,0,0,6,5,2,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(4589,'curlebi01',1999,1,'HOU','NBA',4,0,50,12,4,4,8,0,2,0,4,10,11,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(10995,'joneskc01',1966,1,'BOS','NBA',78,0,2446,483,0,0,239,389,0,0,0,273,459,182,189,119,0,0,9,0,254,59,0,0,24,48,0,0,0,36,75,24,18,11,0,0,NULL);
+INSERT INTO players_teams VALUES(19648,'smithjr01',2009,1,'DEN','NBA',75,0,2076,1156,28,206,234,183,99,20,139,174,1033,428,201,142,467,158,6,0,159,67,5,18,23,10,4,2,6,17,57,21,16,14,31,11,NULL);
+INSERT INTO players_teams VALUES(11194,'kaftage01',1951,1,'NYK','NBA',52,0,955,322,0,0,196,88,0,0,0,107,307,115,134,92,0,0,13,0,232,80,0,0,30,22,0,0,0,41,66,26,42,28,0,0,NULL);
+INSERT INTO players_teams VALUES(20660,'terzyra01',1944,0,'OSH','NBL',29,0,0,127,0,0,0,0,0,0,0,0,0,41,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(9464,'holstji01',1955,1,'MNL','NBA',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(938,'bakervi01',2000,1,'SEA','NBA',76,0,2129,927,179,251,430,90,38,73,158,264,822,347,321,232,16,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(21810,'walkebi01',2010,1,'NYK','NBA',61,1,784,298,16,106,122,34,21,6,37,81,236,104,44,31,153,59,4,0,89,23,5,8,13,4,5,0,7,9,30,9,3,2,11,3,NULL);
+INSERT INTO players_teams VALUES(6852,'foxri01',2001,1,'LAL','NBA',82,0,2289,645,90,299,389,283,67,21,132,244,605,255,85,70,208,65,19,0,652,186,24,78,102,64,21,6,45,70,139,67,49,37,43,15,NULL);
+INSERT INTO players_teams VALUES(7056,'gainere01',2005,1,'MIL','NBA',12,0,54,13,0,0,0,3,1,0,1,1,12,6,4,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(18983,'selvyfr01',1954,1,'BLB','NBA',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(8775,'hassejo01',1980,1,'DAL','NBA',17,0,280,138,11,14,25,18,5,0,11,21,142,59,13,10,40,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(21585,'varejan01',2010,1,'CLE','NBA',31,31,994,282,98,203,301,45,27,38,40,87,216,114,81,54,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(2219,'braddga01',1970,1,'CAR','ABA',7,0,114,44,13,28,41,2,0,0,12,15,45,17,18,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(19829,'snydedi01',1972,1,'SEA','NBA',82,0,3060,1132,0,0,323,311,0,0,0,216,1022,473,216,186,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(23144,'willimo01',1997,1,'SAS','NBA',72,0,1314,453,67,112,179,89,34,24,82,133,368,165,182,122,2,1,5,0,28,12,2,4,6,1,0,0,4,2,8,5,3,2,0,0,NULL);
+INSERT INTO players_teams VALUES(12620,'lochmbo01',1952,1,'SYR','NBA',62,0,802,232,0,0,162,47,0,0,0,143,245,79,122,74,0,0,2,0,21,5,0,0,5,2,0,0,0,12,10,2,4,1,0,0,NULL);
+INSERT INTO players_teams VALUES(10813,'jonesbi02',1942,0,'TCH','NBL',4,0,0,22,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(21978,'walthpa01',1949,1,'MNL','NBA',22,0,0,75,0,0,0,10,0,0,0,39,80,32,21,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(1607,'bercege01',1948,0,'OSH','NBL',58,0,0,341,0,0,0,0,0,0,0,137,0,120,153,101,0,0,7,0,0,48,0,0,0,0,0,0,0,0,0,8,39,32,0,0,NULL);
+INSERT INTO players_teams VALUES(12411,'leverfa01',1985,1,'DEN','NBA',78,0,2616,1080,136,284,420,584,178,15,210,204,1061,468,182,132,38,12,10,0,347,143,15,33,48,53,20,2,23,33,131,59,24,17,14,8,NULL);
+INSERT INTO players_teams VALUES(8357,'hamiljo01',1971,1,'DLC','ABA',82,0,1959,881,41,153,194,240,0,0,110,202,791,317,256,201,132,46,4,0,89,40,0,0,11,13,0,0,2,10,46,15,9,7,0,3,NULL);
+INSERT INTO players_teams VALUES(22636,'wiethjo01',1937,0,'CNC','NBL',6,0,0,32,0,0,0,0,0,0,0,0,0,10,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(1435,'becker01',1959,1,'PHW','NBA',66,0,809,255,0,0,127,72,0,0,0,90,294,114,32,27,0,0,4,0,22,8,0,0,6,3,0,0,0,1,9,4,1,0,0,0,NULL);
+INSERT INTO players_teams VALUES(18942,'sefolth01',2006,1,'CHI','NBA',71,0,868,256,35,118,153,60,33,11,60,100,256,109,45,23,42,15,9,0,100,30,4,13,17,7,2,0,7,11,26,10,12,7,8,3,NULL);
+INSERT INTO players_teams VALUES(8773,'hassejo01',1978,1,'SEA','NBA',55,0,463,223,13,32,45,42,14,4,32,58,211,100,23,23,0,0,8,0,15,6,0,1,1,1,0,0,2,0,7,3,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(561,'anthogr01',2000,1,'POR','NBA',58,0,856,282,21,40,61,82,40,3,43,63,253,97,35,23,159,65,2,0,17,5,0,0,0,0,1,0,1,2,6,2,0,0,3,1,NULL);
+INSERT INTO players_teams VALUES(9132,'hertzso01',1947,1,'NYK','NBA',4,0,0,5,0,0,0,1,0,0,0,3,14,1,4,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(13609,'mccanbo01',1989,1,'DAL','NBA',10,0,62,26,4,8,12,6,2,2,6,7,21,7,14,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(4424,'creigji01',1975,1,'ATL','NBA',32,0,172,31,13,32,45,4,2,9,0,23,43,12,16,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(23624,'wrighlo02',2004,1,'MEM','NBA',80,0,2287,771,177,436,613,87,58,69,100,251,683,320,198,131,3,0,4,0,85,33,6,14,20,9,1,1,2,10,28,16,2,1,0,0,NULL);
+INSERT INTO players_teams VALUES(7725,'grahagr01',1995,1,'PHI','NBA',8,0,128,56,5,10,15,11,5,0,17,16,32,17,17,15,14,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(421,'anderde01',2005,2,'CHA','NBA',23,0,465,133,9,51,60,48,8,2,17,49,130,40,38,32,67,21,8,0,66,24,0,9,9,5,2,0,3,13,20,6,8,7,14,5,NULL);
+INSERT INTO players_teams VALUES(20347,'strotla01',1992,1,'DAL','NBA',9,0,138,50,8,6,14,13,8,0,15,13,61,20,10,8,13,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+INSERT INTO players_teams VALUES(18245,'rosenno01',1947,0,'NOL','PBLA',8,0,0,101,0,0,0,0,0,0,0,22,0,49,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
+CREATE TABLE series_post
+(id BIGINT,
+year BIGINT,
+round VARCHAR(255),
+series VARCHAR(255),
+tmIDWinner VARCHAR(255),
+lgIDWinner VARCHAR(255),
+tmIDLoser VARCHAR(255),
+lgIDLoser VARCHAR(255),
+W BIGINT,
+L BIGINT);
+INSERT INTO series_post VALUES(484,1996,'CSF','M','HOU','NBA','SEA','NBA',4,3);
+INSERT INTO series_post VALUES(93,1959,'DSF','J','PHW','NBA','SYR','NBA',2,1);
+INSERT INTO series_post VALUES(390,1990,'CFR','L','GSW','NBA','SAS','NBA',3,1);
+INSERT INTO series_post VALUES(544,2000,'CSF','M','SAS','NBA','DAL','NBA',4,1);
+INSERT INTO series_post VALUES(742,1971,'F','D','INA','ABA','NYA','ABA',4,2);
+INSERT INTO series_post VALUES(445,1994,'CSF','M','ORL','NBA','CHI','NBA',4,2);
+INSERT INTO series_post VALUES(460,1995,'CSF','M','CHI','NBA','NYK','NBA',4,1);
+INSERT INTO series_post VALUES(304,1984,'CFR','L','UTA','NBA','HOU','NBA',3,2);
+INSERT INTO series_post VALUES(741,1970,'DT','A','TEX','ABA','DNR','ABA',1,0);
+INSERT INTO series_post VALUES(132,1966,'DSF','J','SFW','NBA','LAL','NBA',3,0);
+INSERT INTO series_post VALUES(450,1994,'CFR','L','SAS','NBA','DEN','NBA',3,0);
+INSERT INTO series_post VALUES(120,1964,'DF','K','LAL','NBA','BAL','NBA',4,2);
+INSERT INTO series_post VALUES(490,1997,'CSF','M','CHI','NBA','CHH','NBA',4,1);
+INSERT INTO series_post VALUES(206,1976,'F','O','POR','NBA','PHI','NBA',4,2);
+INSERT INTO series_post VALUES(384,1990,'CFR','L','DET','NBA','ATL','NBA',3,2);
+INSERT INTO series_post VALUES(311,1985,'CFR','L','PHI','NBA','WSB','NBA',3,2);
+INSERT INTO series_post VALUES(327,1986,'CSF','M','DET','NBA','ATL','NBA',4,1);
+INSERT INTO series_post VALUES(597,2004,'F','O','SAS','NBA','DET','NBA',4,3);
+INSERT INTO series_post VALUES(249,1980,'CSF','M','PHI','NBA','MIL','NBA',4,3);
+INSERT INTO series_post VALUES(726,1968,'DSF','B','OAK','ABA','DNR','ABA',4,3);
+INSERT INTO series_post VALUES(614,2005,'CFR','L','DAL','NBA','MEM','NBA',4,0);
+INSERT INTO series_post VALUES(303,1984,'CFR','L','DEN','NBA','SAS','NBA',3,2);
+INSERT INTO series_post VALUES(680,2010,'CF','N','MIA','NBA','CHI','NBA',4,1);
+INSERT INTO series_post VALUES(398,1991,'CFR','L','CLE','NBA','NJN','NBA',3,1);
+INSERT INTO series_post VALUES(67,1954,'DSF','J','MNL','NBA','ROC','NBA',2,1);
+INSERT INTO series_post VALUES(706,2011,'CFR','L','LAC','NBA','MEM','NBA',4,3);
+INSERT INTO series_post VALUES(679,2009,'CSF','M','PHO','NBA','SAS','NBA',4,0);
+INSERT INTO series_post VALUES(746,1971,'DSF','B','VIR','ABA','FLO','ABA',4,0);
+INSERT INTO series_post VALUES(689,2010,'CFR','L','OKC','NBA','DEN','NBA',4,1);
+INSERT INTO series_post VALUES(609,2005,'CFR','L','NJN','NBA','IND','NBA',4,2);
+INSERT INTO series_post VALUES(156,1970,'CSF','M','NYK','NBA','ATL','NBA',4,1);
+INSERT INTO series_post VALUES(152,1969,'DF','K','LAL','NBA','ATL','NBA',4,0);
+INSERT INTO series_post VALUES(612,2005,'F','O','MIA','NBA','DAL','NBA',4,2);
+INSERT INTO series_post VALUES(334,1986,'CSF','M','LAL','NBA','GSW','NBA',4,1);
+INSERT INTO series_post VALUES(116,1963,'DSF','J','STL','NBA','LAL','NBA',3,2);
+INSERT INTO series_post VALUES(171,1972,'CSF','M','BOS','NBA','ATL','NBA',4,2);
+INSERT INTO series_post VALUES(465,1995,'CFR','L','SAS','NBA','PHO','NBA',3,1);
+INSERT INTO series_post VALUES(161,1970,'CSF','M','LAL','NBA','CHI','NBA',4,3);
+INSERT INTO series_post VALUES(458,1995,'CFR','L','ORL','NBA','DET','NBA',3,0);
+INSERT INTO series_post VALUES(330,1986,'CFR','L','LAL','NBA','DEN','NBA',3,0);
+INSERT INTO series_post VALUES(547,2001,'CFR','L','BOS','NBA','PHI','NBA',3,2);
+INSERT INTO series_post VALUES(148,1969,'DF','K','NYK','NBA','MIL','NBA',4,1);
+INSERT INTO series_post VALUES(26,1949,'DSF','J','NYK','NBA','WSC','NBA',2,0);
+INSERT INTO series_post VALUES(598,2004,'CF','N','SAS','NBA','PHO','NBA',4,1);
+INSERT INTO series_post VALUES(382,1990,'CFR','L','PHI','NBA','MIL','NBA',3,0);
+INSERT INTO series_post VALUES(676,2009,'CFR','L','SAS','NBA','DAL','NBA',4,2);
+INSERT INTO series_post VALUES(526,1999,'CFR','L','LAL','NBA','SAC','NBA',3,2);
+INSERT INTO series_post VALUES(70,1955,'DT','A','SYR','NBA','NYK','NBA',1,0);
+INSERT INTO series_post VALUES(738,1970,'DSF','B','VIR','ABA','NYA','ABA',4,2);
+INSERT INTO series_post VALUES(743,1971,'DF','C','NYA','ABA','VIR','ABA',4,3);
+INSERT INTO series_post VALUES(500,1998,'CF','N','NYK','NBA','IND','NBA',4,2);
+INSERT INTO series_post VALUES(307,1985,'CF','N','BOS','NBA','MIL','NBA',4,0);
+INSERT INTO series_post VALUES(570,2002,'CFR','L','LAL','NBA','MIN','NBA',4,2);
+INSERT INTO series_post VALUES(83,1957,'DSF','J','PHW','NBA','SYR','NBA',2,1);
+INSERT INTO series_post VALUES(114,1963,'F','O','BOS','NBA','SFW','NBA',4,1);

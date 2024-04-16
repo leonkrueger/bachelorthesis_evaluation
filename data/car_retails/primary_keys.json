@@ -1,1 +1,0 @@
-{"payments": ["customerNumber", "checkNumber", "paymentDate", "amount", "primary"], "`orderdetails`": ["orderNumber", "productCode", "quantityOrdered", "priceEach", "orderLineNumber"]}

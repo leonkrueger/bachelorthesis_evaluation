@@ -166,4 +166,4 @@ cython_debug/
 fine_tuning/databases/
 
 # Too large databases
-data/menu/menu.sql
+data/bird_menu/menu.sql

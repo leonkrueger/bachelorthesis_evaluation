@@ -11,7 +11,7 @@ class Adjustments(Enum):
 # Tuples define the adjustment and parameters
 EXPERIMENTS = {
     "delete_table": (
-        [(Adjustments.DELETE_TABLE, [0.1, 0.5, 0.9])],
+        [(Adjustments.DELETE_TABLE, [0.0, 0.25, 0.5, 0.75, 1.0])],
         "Ratio of removed table names",
     ),
 }

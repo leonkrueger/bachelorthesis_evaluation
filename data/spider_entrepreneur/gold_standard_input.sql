@@ -1,0 +1,26 @@
+CREATE TABLE entrepreneur
+(Entrepreneur_ID BIGINT,
+People_ID BIGINT,
+Company VARCHAR(255),
+Money_Requested DOUBLE,
+Investor VARCHAR(255));
+INSERT INTO entrepreneur VALUES(4,5,'IV Cam',50000.0,'Peter Jones');
+INSERT INTO entrepreneur VALUES(3,3,'Le Beanock',54000.0,'Rachel Elnaugh');
+INSERT INTO entrepreneur VALUES(5,6,'Mycorrhizal Systems',75000.0,'Simon Woodroffe');
+INSERT INTO entrepreneur VALUES(1,1,'Umbrolly',150000.0,'Duncan Bannatyne');
+INSERT INTO entrepreneur VALUES(2,2,'Grails Ltd',120000.0,'Doug Richard');
+INSERT INTO entrepreneur VALUES(6,8,'Elizabeth Galton Ltd',110000.0,'Duncan Bannatyne');
+CREATE TABLE people
+(People_ID BIGINT,
+Name VARCHAR(255),
+Height DOUBLE,
+Weight DOUBLE,
+Date_of_Birth VARCHAR(255));
+INSERT INTO people VALUES(5,'Roberto Calcaterra',1.75,67.0,'1972-02-06');
+INSERT INTO people VALUES(3,'Fabrizio Buonocore',1.830000000000000071,45.0,'1977-04-28');
+INSERT INTO people VALUES(7,'Alberto Angelini',1.820000000000000062,58.0,'1974-09-28');
+INSERT INTO people VALUES(4,'Marco Gerini',1.719999999999999974,75.0,'1971-08-05');
+INSERT INTO people VALUES(8,'Maurizio Felugo',1.949999999999999956,76.0,'1981-03-04');
+INSERT INTO people VALUES(6,'Goran Fiorentini',1.780000000000000026,89.0,'1981-11-21');
+INSERT INTO people VALUES(1,'Francesco Postiglione',1.899999999999999912,80.0,'1972-04-29');
+INSERT INTO people VALUES(2,'Leonardo Binchi',1.860000000000000097,57.0,'1975-08-27');

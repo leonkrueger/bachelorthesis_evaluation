@@ -336,7 +336,6 @@ INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milli
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES(2157,'Red Mosquito',178,1,1,'Jeff Ament & Stone Gossard & Jack Irons & Mike McCready & Eddie Vedder',242991,7944923,0.989999999999999992);
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES(1858,'Leper Messiah',152,1,3,'C.Burton',347428,11310434,0.989999999999999992);
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES(130,'Do what cha wanna',13,1,2,'George Duke',274155,9018565,0.989999999999999992);
-INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES(602,'''Round Midnight',48,1,2,'Miles Davis',357459,11590284,0.989999999999999992);
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES(3497,'Erlkonig, D.328',341,2,24,NULL,261849,4307907,0.989999999999999992);
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES(499,'Don''t Lie To Me',40,1,1,'David Coverdale/Earl Slick',283585,9288007,0.989999999999999992);
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES(3009,'Bad',238,1,1,'U2',351817,11628058,0.989999999999999992);

@@ -1,0 +1,16 @@
+INSERT INTO Tryout (pID, cName, pPos, decision)  VALUES (30003, 'OU', 'mid', 'no');
+INSERT INTO Player (pID, pName, yCard, HS)  VALUES (50005, 'Eddie', 'yes', 600);
+INSERT INTO Tryout (pID, cName, pPos, decision)  VALUES (10001, 'LSU', 'goalie', 'no');
+INSERT INTO College (cName, state, enr)  VALUES ('OU', 'OK', 22000);
+INSERT INTO College (cName, state, enr)  VALUES ('FSU', 'FL', 19000);
+INSERT INTO (cName, state, enr)  VALUES ('ASU', 'AZ', 12000);
+INSERT INTO Player (pID, pName, yCard, HS)  VALUES (10001, 'Andrew', 'no', 1200);
+INSERT INTO (pID, cName, pPos, decision)  VALUES (10001, 'ASU', 'goalie', 'yes');
+INSERT INTO Tryout (pID, cName, pPos, decision)  VALUES (40004, 'ASU', 'goalie', 'no');
+INSERT INTO (pID, pName, yCard, HS)  VALUES (40004, 'David', 'yes', 1600);
+INSERT INTO (pID, pName, yCard, HS)  VALUES (30003, 'Charles', 'no', 300);
+INSERT INTO College (cName, state, enr)  VALUES ('LSU', 'LA', 18000);
+INSERT INTO Tryout (pID, cName, pPos, decision)  VALUES (20002, 'FSU', 'striker', 'yes');
+INSERT INTO (pID, pName, yCard, HS)  VALUES (20002, 'Blake', 'no', 1600);
+INSERT INTO (pID, cName, pPos, decision)  VALUES (50005, 'LSU', 'mid', 'no');
+INSERT INTO Player (pID, pName, yCard, HS)  VALUES (40002, 'Drago', 'yes', 1600);

@@ -1,9 +1,9 @@
 CREATE TABLE entrepreneur
 (Entrepreneur_ID BIGINT,
 People_ID BIGINT,
-Company VARCHAR(255),
+Company VARCHAR(1023),
 Money_Requested DOUBLE,
-Investor VARCHAR(255));
+Investor VARCHAR(1023));
 INSERT INTO entrepreneur VALUES(4,5,'IV Cam',50000.0,'Peter Jones');
 INSERT INTO entrepreneur VALUES(3,3,'Le Beanock',54000.0,'Rachel Elnaugh');
 INSERT INTO entrepreneur VALUES(5,6,'Mycorrhizal Systems',75000.0,'Simon Woodroffe');
@@ -12,10 +12,10 @@ INSERT INTO entrepreneur VALUES(2,2,'Grails Ltd',120000.0,'Doug Richard');
 INSERT INTO entrepreneur VALUES(6,8,'Elizabeth Galton Ltd',110000.0,'Duncan Bannatyne');
 CREATE TABLE people
 (People_ID BIGINT,
-Name VARCHAR(255),
+Name VARCHAR(1023),
 Height DOUBLE,
 Weight DOUBLE,
-Date_of_Birth VARCHAR(255));
+Date_of_Birth VARCHAR(1023));
 INSERT INTO people VALUES(5,'Roberto Calcaterra',1.75,67.0,'1972-02-06');
 INSERT INTO people VALUES(3,'Fabrizio Buonocore',1.830000000000000071,45.0,'1977-04-28');
 INSERT INTO people VALUES(7,'Alberto Angelini',1.820000000000000062,58.0,'1974-09-28');

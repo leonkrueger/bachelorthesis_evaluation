@@ -1,8 +1,8 @@
 CREATE TABLE workshop
 (Workshop_ID BIGINT,
-Date VARCHAR(255),
-Venue VARCHAR(255),
-Name VARCHAR(255));
+Date VARCHAR(1023),
+Venue VARCHAR(1023),
+Name VARCHAR(1023));
 INSERT INTO workshop VALUES(5,'January 14, 2008','New York USA','2008 qualification');
 INSERT INTO workshop VALUES(6,'July 5, 2011','Istanbul Turkey','Anual Workshop 2011');
 INSERT INTO workshop VALUES(2,'August 21, 2007','London UK','Conference 2007');
@@ -12,8 +12,8 @@ INSERT INTO workshop VALUES(1,'August 18, 2007','London UK','ABC 2007');
 CREATE TABLE submission
 (Submission_ID BIGINT,
 Scores DOUBLE,
-Author VARCHAR(255),
-College VARCHAR(255));
+Author VARCHAR(1023),
+College VARCHAR(1023));
 INSERT INTO submission VALUES(4,79.0,'Steve Raible','Georgia Tech');
 INSERT INTO submission VALUES(7,92.0,'Don Bitterlich','Temple');
 INSERT INTO submission VALUES(6,89.0,'Rick Engles','Tulsa');
@@ -27,7 +27,7 @@ INSERT INTO submission VALUES(2,79.0,'Sammy Green','Florida');
 CREATE TABLE Acceptance
 (Submission_ID BIGINT,
 Workshop_ID BIGINT,
-Result VARCHAR(255));
+Result VARCHAR(1023));
 INSERT INTO Acceptance VALUES(1,1,'Accepted');
 INSERT INTO Acceptance VALUES(2,5,'Accepted');
 INSERT INTO Acceptance VALUES(5,6,'Rejected');

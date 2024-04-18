@@ -1,16 +1,16 @@
 CREATE TABLE customers
 (CustomerID BIGINT,
-First VARCHAR(255),
-Last VARCHAR(255),
-StreetAddress VARCHAR(255),
-City VARCHAR(255),
-State VARCHAR(255),
+First VARCHAR(1023),
+Last VARCHAR(1023),
+StreetAddress VARCHAR(1023),
+City VARCHAR(1023),
+State VARCHAR(1023),
 ZipCode BIGINT,
-Email VARCHAR(255),
-PhoneNumber VARCHAR(255),
+Email VARCHAR(1023),
+PhoneNumber VARCHAR(1023),
 FirstPurchaseDate DATE,
-SubscribedToEmailList VARCHAR(255),
-Gender VARCHAR(255));
+SubscribedToEmailList VARCHAR(1023),
+Gender VARCHAR(1023));
 INSERT INTO customers VALUES(202612,'LeVar','Burton','9224 Belladonna Ct','Sacramento','CA',94271,'b_levar@mail.com','(916) 123-3788','2013-07-17','FALSE','M');
 INSERT INTO customers VALUES(996970,'Alice','Colletti','3826 Doreen Way','Antelope','CA',95843,'calice@hotmail.com','(916) 375-9890','2013-04-21','TRUE','F');
 INSERT INTO customers VALUES(616028,'Janet','Corcoran','9774 W Harvard Ave','Folsom','CA',95630,'corcoranj@mail.com','(916) 695-5603','2012-08-07','FALSE','F');
@@ -91,35 +91,35 @@ INSERT INTO geolocation VALUES(2,38.55961500000000086,-121.4224300000000056);
 INSERT INTO geolocation VALUES(1,38.56612899999999655,-121.4264320000000054);
 CREATE TABLE location
 (LocationID BIGINT,
-LocationName VARCHAR(255),
-StreetAddress VARCHAR(255),
-City VARCHAR(255),
-State VARCHAR(255),
+LocationName VARCHAR(1023),
+StreetAddress VARCHAR(1023),
+City VARCHAR(1023),
+State VARCHAR(1023),
 ZipCode BIGINT);
 INSERT INTO location VALUES(2,'Sac State Union','6000 J St','Sacramento','CA',95819);
 INSERT INTO location VALUES(0,'LOST',NULL,NULL,NULL,NULL);
 INSERT INTO location VALUES(1,'Sac State American River Courtyard','6000 J St','Sacramento','CA',95819);
 CREATE TABLE rootbeerbrand
 (BrandID BIGINT,
-BrandName VARCHAR(255),
+BrandName VARCHAR(1023),
 FirstBrewedYear BIGINT,
-BreweryName VARCHAR(255),
-City VARCHAR(255),
-State VARCHAR(255),
-Country VARCHAR(255),
-Description VARCHAR(255),
-CaneSugar VARCHAR(255),
-CornSyrup VARCHAR(255),
-Honey VARCHAR(255),
-ArtificialSweetener VARCHAR(255),
-Caffeinated VARCHAR(255),
-Alcoholic VARCHAR(255),
-AvailableInCans VARCHAR(255),
-AvailableInBottles VARCHAR(255),
-AvailableInKegs VARCHAR(255),
-Website VARCHAR(255),
-FacebookPage VARCHAR(255),
-Twitter VARCHAR(255),
+BreweryName VARCHAR(1023),
+City VARCHAR(1023),
+State VARCHAR(1023),
+Country VARCHAR(1023),
+Description VARCHAR(1023),
+CaneSugar VARCHAR(1023),
+CornSyrup VARCHAR(1023),
+Honey VARCHAR(1023),
+ArtificialSweetener VARCHAR(1023),
+Caffeinated VARCHAR(1023),
+Alcoholic VARCHAR(1023),
+AvailableInCans VARCHAR(1023),
+AvailableInBottles VARCHAR(1023),
+AvailableInKegs VARCHAR(1023),
+Website VARCHAR(1023),
+FacebookPage VARCHAR(1023),
+Twitter VARCHAR(1023),
 WholesaleCost DOUBLE,
 CurrentRetailPrice DOUBLE);
 INSERT INTO rootbeerbrand VALUES(10010,'Dog n Suds',1953,'DNS Distributing','Chicago','IL','United States',replace('The Dog ''n Suds Brand\n …in the early 50’s two school teachers from Champaign, Illinois started a small hot dog & Root Beer stand that rapidly grew thru out the Midwest. Soon there were Dog ‘n Suds Drive-In restaurants from coast to coast. Canada, our neig','\n',char(10)),'FALSE','TRUE','FALSE','FALSE','FALSE','FALSE','FALSE','TRUE','FALSE','http://supplies.dog-n-suds.com/page.php?5','https://www.facebook.com/Dog-N-Suds-Bottled-Root-Beer-117372294947833/',NULL,0.910000000000000031,3.0);
@@ -149,7 +149,7 @@ INSERT INTO rootbeerbrand VALUES(10019,'Frostie',1939,'Frostie Beverage','Detroi
 CREATE TABLE rootbeer
 (RootBeerID BIGINT,
 BrandID BIGINT,
-ContainerType VARCHAR(255),
+ContainerType VARCHAR(1023),
 LocationID BIGINT,
 PurchaseDate DATE);
 INSERT INTO rootbeer VALUES(101416,10006,'Bottle',2,'2015-06-23');
@@ -228,7 +228,7 @@ CREATE TABLE rootbeerreview
 BrandID BIGINT,
 StarRating BIGINT,
 ReviewDate DATE,
-Review VARCHAR(255));
+Review VARCHAR(1023));
 INSERT INTO rootbeerreview VALUES(266633,10020,1,'2013-12-22',NULL);
 INSERT INTO rootbeerreview VALUES(386950,10016,4,'2013-02-22',NULL);
 INSERT INTO rootbeerreview VALUES(950299,10022,1,'2014-01-23',NULL);
@@ -305,7 +305,7 @@ CREATE TABLE transaction
 CreditCardNumber BIGINT,
 CustomerID BIGINT,
 TransactionDate DATE,
-CreditCardType VARCHAR(255),
+CreditCardType VARCHAR(1023),
 LocationID BIGINT,
 RootBeerID BIGINT,
 PurchasePrice DOUBLE);

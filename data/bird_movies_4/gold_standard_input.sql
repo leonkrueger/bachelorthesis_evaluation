@@ -1,7 +1,7 @@
 CREATE TABLE country
 (country_id BIGINT,
-country_iso_code VARCHAR(255),
-country_name VARCHAR(255));
+country_iso_code VARCHAR(1023),
+country_name VARCHAR(1023));
 INSERT INTO country VALUES(142,'CA','Canada');
 INSERT INTO country VALUES(151,'DE','Germany');
 INSERT INTO country VALUES(130,'AO','Angola');
@@ -33,7 +33,7 @@ INSERT INTO country VALUES(212,'TW','Taiwan');
 INSERT INTO country VALUES(207,'SI','Slovenia');
 CREATE TABLE department
 (department_id BIGINT,
-department_name VARCHAR(255));
+department_name VARCHAR(1023));
 INSERT INTO department VALUES(2,'Directing');
 INSERT INTO department VALUES(3,'Production');
 INSERT INTO department VALUES(11,'Lighting');
@@ -48,13 +48,13 @@ INSERT INTO department VALUES(10,'Visual Effects');
 INSERT INTO department VALUES(7,'Art');
 CREATE TABLE gender
 (gender_id BIGINT,
-gender VARCHAR(255));
+gender VARCHAR(1023));
 INSERT INTO gender VALUES(2,'Male');
 INSERT INTO gender VALUES(0,'Unspecified');
 INSERT INTO gender VALUES(1,'Female');
 CREATE TABLE genre
 (genre_id BIGINT,
-genre_name VARCHAR(255));
+genre_name VARCHAR(1023));
 INSERT INTO genre VALUES(10770,'TV Movie');
 INSERT INTO genre VALUES(28,'Action');
 INSERT INTO genre VALUES(9648,'Mystery');
@@ -77,7 +77,7 @@ INSERT INTO genre VALUES(36,'History');
 INSERT INTO genre VALUES(27,'Horror');
 CREATE TABLE keyword
 (keyword_id BIGINT,
-keyword_name VARCHAR(255));
+keyword_name VARCHAR(1023));
 INSERT INTO keyword VALUES(3185,'crocodile');
 INSERT INTO keyword VALUES(208394,'logician');
 INSERT INTO keyword VALUES(8971,'oktoberfest');
@@ -109,8 +109,8 @@ INSERT INTO keyword VALUES(190654,'russian spy');
 INSERT INTO keyword VALUES(4455,'snail');
 CREATE TABLE language
 (language_id BIGINT,
-language_code VARCHAR(255),
-language_name VARCHAR(255));
+language_code VARCHAR(1023),
+language_name VARCHAR(1023));
 INSERT INTO language VALUES(24615,'ko','ud55cuad6duc5b4/uc870uc120ub9d0');
 INSERT INTO language VALUES(24606,'pl','Polski');
 INSERT INTO language VALUES(24659,'bm','Bamanankan');
@@ -142,21 +142,21 @@ INSERT INTO language VALUES(24658,'ky','??????');
 INSERT INTO language VALUES(24648,'st','');
 CREATE TABLE language_role
 (role_id BIGINT,
-language_role VARCHAR(255));
+language_role VARCHAR(1023));
 INSERT INTO language_role VALUES(1,'Original');
 INSERT INTO language_role VALUES(2,'Spoken');
 CREATE TABLE movie
 (movie_id BIGINT,
-title VARCHAR(255),
+title VARCHAR(1023),
 budget BIGINT,
-homepage VARCHAR(255),
-overview VARCHAR(255),
+homepage VARCHAR(1023),
+overview VARCHAR(1023),
 popularity DOUBLE,
 release_date DATE,
 revenue BIGINT,
 runtime BIGINT,
-movie_status VARCHAR(255),
-tagline VARCHAR(255),
+movie_status VARCHAR(1023),
+tagline VARCHAR(1023),
 vote_average DOUBLE,
 vote_count BIGINT);
 INSERT INTO movie VALUES(5854,'Family Plot',2000000,'','Lighthearted suspense film about a phony psychic/con artist and her taxi driver/private investigator boyfriend who encounter a pair of serial kidnappers while trailing a missing heir in California.',3.832857999999999877,'1976-04-09',7900000,121,'Released','There’s no body in the family plot.',6.700000000000000177,86);
@@ -255,7 +255,7 @@ INSERT INTO movie_languages VALUES(10478,24574,1);
 INSERT INTO movie_languages VALUES(503,24580,2);
 CREATE TABLE person
 (person_id BIGINT,
-person_name VARCHAR(255));
+person_name VARCHAR(1023));
 INSERT INTO person VALUES(106370,'Jeff Bowser');
 INSERT INTO person VALUES(1427380,'Liam Ford');
 INSERT INTO person VALUES(1464018,'Javier Bilbao');
@@ -289,7 +289,7 @@ CREATE TABLE movie_crew
 (movie_id BIGINT,
 person_id BIGINT,
 department_id BIGINT,
-job VARCHAR(255));
+job VARCHAR(1023));
 INSERT INTO movie_crew VALUES(9760,35734,2,'Director');
 INSERT INTO movie_crew VALUES(158852,5338,6,'Sound Designer');
 INSERT INTO movie_crew VALUES(581,102231,10,'Visual Effects');
@@ -321,7 +321,7 @@ INSERT INTO movie_crew VALUES(12658,5328,3,'Casting');
 INSERT INTO movie_crew VALUES(228066,1574071,9,'CG Supervisor');
 CREATE TABLE production_company
 (company_id BIGINT,
-company_name VARCHAR(255));
+company_name VARCHAR(1023));
 INSERT INTO production_company VALUES(23486,'Sienna Films');
 INSERT INTO production_company VALUES(7739,'UW3 Film Productions');
 INSERT INTO production_company VALUES(73316,'Vengeance is Mine Productions');
@@ -386,7 +386,7 @@ INSERT INTO production_country VALUES(42057,162);
 CREATE TABLE movie_cast
 (movie_id BIGINT,
 person_id BIGINT,
-character_name VARCHAR(255),
+character_name VARCHAR(1023),
 gender_id BIGINT,
 cast_order BIGINT);
 INSERT INTO movie_cast VALUES(667,10068,'Aki',1,1);

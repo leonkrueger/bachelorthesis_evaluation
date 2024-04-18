@@ -1,15 +1,15 @@
 CREATE TABLE swimmer
 (ID BIGINT,
-name VARCHAR(255),
-Nationality VARCHAR(255),
+name VARCHAR(1023),
+Nationality VARCHAR(1023),
 meter_100 DOUBLE,
-meter_200 VARCHAR(255),
-meter_300 VARCHAR(255),
-meter_400 VARCHAR(255),
-meter_500 VARCHAR(255),
-meter_600 VARCHAR(255),
-meter_700 VARCHAR(255),
-Time VARCHAR(255));
+meter_200 VARCHAR(1023),
+meter_300 VARCHAR(1023),
+meter_400 VARCHAR(1023),
+meter_500 VARCHAR(1023),
+meter_600 VARCHAR(1023),
+meter_700 VARCHAR(1023),
+Time VARCHAR(1023));
 INSERT INTO swimmer VALUES(7,'Przemysław Stańczyk','Poland',57.31000000000000227,'1:57.10','2:56.02','3:55.36','4:54.21','5:52.59','6:50.91','7:47.91');
 INSERT INTO swimmer VALUES(1,'Sergiy Fesenko','Ukraine',57.34000000000000341,'1:57.26','2:57.10','3:57.12','4:57.03','5:56.31','6:55.07','7:53.43');
 INSERT INTO swimmer VALUES(4,'Craig Stevens','Australia',57.35000000000000142,'1:56.34','2:55.90','3:55.72','4:55.08','5:54.45','6:52.69','7:48.67');
@@ -20,10 +20,10 @@ INSERT INTO swimmer VALUES(6,'Ryan Cochrane','Canada',57.84000000000000341,'1:57
 INSERT INTO swimmer VALUES(8,'Sébastien Rouault','France',55.6700000000000017,'1:54.40','2:53.46','3:52.93','4:52.85','5:53.03','6:53.34','7:52.04');
 CREATE TABLE stadium
 (ID BIGINT,
-name VARCHAR(255),
+name VARCHAR(1023),
 Capacity BIGINT,
-City VARCHAR(255),
-Country VARCHAR(255),
+City VARCHAR(1023),
+Country VARCHAR(1023),
 Opening_year BIGINT);
 INSERT INTO stadium VALUES(7,'Northumberland Development Project',56250,'London','England',2006);
 INSERT INTO stadium VALUES(3,'Baku Olympic Stadium',68000,'Baku','Azerbaijan',2005);
@@ -37,9 +37,9 @@ INSERT INTO stadium VALUES(5,'Ferenc Puskás Stadion',65000,'Budapest','Hungary'
 INSERT INTO stadium VALUES(4,'Estadio La Peineta',67500,'Madrid','Spain',2005);
 CREATE TABLE event
 (ID BIGINT,
-Name VARCHAR(255),
+Name VARCHAR(1023),
 Stadium_ID BIGINT,
-Year VARCHAR(255));
+Year VARCHAR(1023));
 INSERT INTO event VALUES(1,'FINA',1,'2016');
 INSERT INTO event VALUES(4,'World Junior',3,'2013');
 INSERT INTO event VALUES(5,'IPC',4,'2014');
@@ -48,7 +48,7 @@ INSERT INTO event VALUES(6,'European FINA',8,'2017');
 INSERT INTO event VALUES(2,'Pacific',10,'2011');
 CREATE TABLE record
 (ID BIGINT,
-Result VARCHAR(255),
+Result VARCHAR(1023),
 Swimmer_ID BIGINT,
 Event_ID BIGINT);
 INSERT INTO record VALUES(3,'Loss',3,3);

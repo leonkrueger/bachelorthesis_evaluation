@@ -1,16 +1,16 @@
 CREATE TABLE encodes
-(label VARCHAR(255),
-description VARCHAR(255),
-subclass_of VARCHAR(255),
-uniprot_protein_id VARCHAR(255),
-found_in_taxon VARCHAR(255),
-encoded_by VARCHAR(255),
-has_parts VARCHAR(255),
-molecular_function VARCHAR(255),
-biological_process VARCHAR(255),
-instance_of VARCHAR(255),
-refseq_protein_id VARCHAR(255),
-part_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+subclass_of VARCHAR(1023),
+uniprot_protein_id VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+encoded_by VARCHAR(1023),
+has_parts VARCHAR(1023),
+molecular_function VARCHAR(1023),
+biological_process VARCHAR(1023),
+instance_of VARCHAR(1023),
+refseq_protein_id VARCHAR(1023),
+part_of VARCHAR(1023));
 INSERT INTO encodes VALUES('Peptidase U32 family YdcP SO_3797','microbial protein found in Shewanella oneidensis MR-1','protein','Q8EAU4','Shewanella oneidensis MR-1','peptidase U32 family YdcP SO_3797','Peptidase U32, collagenase','hydrolase activity','proteolysis','protein','NP_719334','Peptidase U32');
 INSERT INTO encodes VALUES('Peptidase U32 Moth_1712','microbial protein found in Moorella thermoacetica ATCC 39073','protein','Q2RHS5','Moorella thermoacetica ATCC 39073','peptidase U32 Moth_1712','Peptidase U32, collagenase','peptidase activity','proteolysis','protein','YP_430557','Peptidase U32');
 INSERT INTO encodes VALUES('Protease FN1931','microbial protein found in Fusobacterium nucleatum subsp. nucleatum ATCC 25586','protein','Q8R6D7','Fusobacterium nucleatum subsp. nucleatum ATCC 25586','protease FN1931','Peptidase U32, collagenase','hydrolase activity','proteolysis','protein','NP_602731','Peptidase U32');
@@ -42,23 +42,23 @@ INSERT INTO encodes VALUES('Peptidase U32 ECL_02023','microbial protein found in
 INSERT INTO encodes VALUES('Collagenase SDY_1740','microbial protein found in Shigella dysenteriae Sd197','protein','Q32FP7','Shigella dysenteriae Sd197','collagenase SDY_1740','Peptidase U32, collagenase','peptidase activity','proteolysis','protein','YP_403349','Peptidase U32');
 INSERT INTO encodes VALUES('Peptidase STY1460','microbial protein found in Salmonella enterica subsp. enterica serovar Typhi str. CT18','protein','Q8Z751','Salmonella enterica subsp. enterica serovar Typhi str. CT18','peptidase STY1460','Peptidase U32, collagenase','nan','nan','protein','NP_455893','Peptidase U32');
 CREATE TABLE taxon
-(label VARCHAR(255),
-description VARCHAR(255),
-taxon_name VARCHAR(255),
-taxon_rank VARCHAR(255),
-freebase_id VARCHAR(255),
-instance_of VARCHAR(255),
-parent_taxon VARCHAR(255),
-ncbi_taxonomy_id VARCHAR(255),
-gbif_taxon_id VARCHAR(255),
-encyclopedia_of_life_id VARCHAR(255),
-itis_tsn VARCHAR(255),
-bacdive_id VARCHAR(255),
-gram_staining VARCHAR(255),
-irmng_id VARCHAR(255),
-lpsn_url VARCHAR(255),
-microsoft_academic_id VARCHAR(255),
-catalogue_of_life_id VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+taxon_name VARCHAR(1023),
+taxon_rank VARCHAR(1023),
+freebase_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+parent_taxon VARCHAR(1023),
+ncbi_taxonomy_id VARCHAR(1023),
+gbif_taxon_id VARCHAR(1023),
+encyclopedia_of_life_id VARCHAR(1023),
+itis_tsn VARCHAR(1023),
+bacdive_id VARCHAR(1023),
+gram_staining VARCHAR(1023),
+irmng_id VARCHAR(1023),
+lpsn_url VARCHAR(1023),
+microsoft_academic_id VARCHAR(1023),
+catalogue_of_life_id VARCHAR(1023));
 INSERT INTO taxon VALUES('Enterobacter cloacae','species of bacterium','Enterobacter cloacae','species','/m/02qsv3v','taxon','Enterobacter','550.0','3221980.0','972683.0','248.0','4373.0','Gram-negative bacteria','10033028.0','http://www.bacterio.net/enterobacter.html#cloacae','2777402170.0','39XXD');
 INSERT INTO taxon VALUES('Bacteroides','genus of bacteria','Bacteroides','genus','/m/0bykmt','taxon','Bacteroidaceae','816.0','3222857.0','97881.0','707770.0','nan','Gram-negative bacteria','1118616.0','http://www.bacterio.net/bacteroides.html','2778168646.0','3752');
 INSERT INTO taxon VALUES('Moorella','genus of bacteria','Moorella','genus','/m/0nb8t56','taxon','Thermoanaerobacteraceae','44260.0','6562811.0','nan','957630.0','nan','gram-positive bacteria','1093970.0','http://www.bacterio.net/moorella.html','2780436915.0','5V3J');
@@ -107,14 +107,14 @@ INSERT INTO taxon VALUES('Bacteroides thetaiotaomicron','species of bacterium','
 INSERT INTO taxon VALUES('Clostridium','genus of prokaryotes','Clostridium','genus','/m/01tpsv','taxon','Clostridiaceae','1485.0','3226206.0','83389.0','555645.0','nan','gram-positive bacteria','1282356.0','https://lpsn.dsmz.de/genus/clostridium','2781092032.0','3R7V');
 INSERT INTO taxon VALUES('Flavobacterium psychrophilum','species of bacterium','Flavobacterium psychrophilum','species','/m/012fd1vd','taxon','Flavobacterium','96345.0','3228583.0','975009.0','961686.0','5529.0','Gram-negative bacteria','10899276.0','http://www.bacterio.net/flavobacterium.html#psychrophilum','2778192709.0','6J9H4');
 CREATE TABLE natural_product
-(label VARCHAR(255),
-description VARCHAR(255),
-taxon_name VARCHAR(255),
-ncbi_taxonomy_id VARCHAR(255),
-instance_of VARCHAR(255),
-parent_taxon VARCHAR(255),
-gram_staining VARCHAR(255),
-genbank_assembly_accession_number VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+taxon_name VARCHAR(1023),
+ncbi_taxonomy_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+parent_taxon VARCHAR(1023),
+gram_staining VARCHAR(1023),
+genbank_assembly_accession_number VARCHAR(1023));
 INSERT INTO natural_product VALUES('Shewanella oneidensis MR-1','nan','Shewanella oneidensis MR-1','211586','strain','Shewanella oneidensis','Gram-negative bacteria','GCA_000146165.2');
 INSERT INTO natural_product VALUES('Rhodopirellula baltica SH 1','nan','Rhodopirellula baltica SH 1','243090','taxon','Rhodopirellula baltica','Gram-negative bacteria','GCA_000196115.1');
 INSERT INTO natural_product VALUES('Vibrio fischeri ES114','bacterial strain','Vibrio fischeri ES114','312309','strain','Aliivibrio fischeri','Gram-negative bacteria','GCA_000011805.1');
@@ -147,17 +147,17 @@ INSERT INTO natural_product VALUES('Enterobacter aerogenes KCTC 2190','bacterial
 INSERT INTO natural_product VALUES('Myxococcus xanthus DK 1622','nan','Myxococcus xanthus DK 1622','246197','taxon','Myxococcus xanthus','Gram-negative bacteria','GCA_000012685.1');
 INSERT INTO natural_product VALUES('Pseudomonas syringae pv. tomato str. DC3000','nan','Pseudomonas syringae pv. tomato str. DC3000','223283','taxon','Pseudomonas syringae pv. tomato','Gram-negative bacteria','GCA_000007805.1');
 CREATE TABLE encoded_by
-(label VARCHAR(255),
-description VARCHAR(255),
-found_in_taxon VARCHAR(255),
-subclass_of VARCHAR(255),
-entrez_gene_id VARCHAR(255),
-ncbi_locus_tag VARCHAR(255),
-encodes VARCHAR(255),
-instance_of VARCHAR(255),
-genomic_end VARCHAR(255),
-strand_orientation VARCHAR(255),
-genomic_start VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+subclass_of VARCHAR(1023),
+entrez_gene_id VARCHAR(1023),
+ncbi_locus_tag VARCHAR(1023),
+encodes VARCHAR(1023),
+instance_of VARCHAR(1023),
+genomic_end VARCHAR(1023),
+strand_orientation VARCHAR(1023),
+genomic_start VARCHAR(1023));
 INSERT INTO encoded_by VALUES('collagenase SDY_1740','microbial gene found in Shigella dysenteriae Sd197','Shigella dysenteriae Sd197','gene','3796304','SDY_1740','Collagenase SDY_1740','gene','1587834','reverse strand','1586197');
 INSERT INTO encoded_by VALUES('Peptidase, U32 family FP1027','microbial gene found in Flavobacterium psychrophilum JIP02/86','Flavobacterium psychrophilum JIP02/86','gene','5300335','FP1027','Peptidase, U32 family FP1027','gene','1168141','reverse strand','1166249');
 INSERT INTO encoded_by VALUES('putative protease KPHS_29100','microbial gene found in Klebsiella pneumoniae subsp. pneumoniae HS11286','Klebsiella pneumoniae subsp. pneumoniae HS11286','gene','11847928','KPHS_29100','Putative protease KPHS_29100','gene','2911235','reverse strand','2909274');
@@ -189,18 +189,18 @@ INSERT INTO encoded_by VALUES('peptidase STY1460','microbial gene found in Salmo
 INSERT INTO encoded_by VALUES('protease FN1931','microbial gene found in Fusobacterium nucleatum subsp. nucleatum ATCC 25586','Fusobacterium nucleatum subsp. nucleatum ATCC 25586','gene','992444','FN1931','Protease FN1931','gene','432510','reverse strand','430348');
 INSERT INTO encoded_by VALUES('protease DR_2130','microbial gene found in Deinococcus radiodurans R1','Deinococcus radiodurans R1','gene','1798533','DR_2130','Protease DR_2130','gene','2135181','reverse strand','2132659');
 CREATE TABLE peptidase_u32_collagenase_family
-(label VARCHAR(255),
-description VARCHAR(255),
-subclass_of VARCHAR(255),
-uniprot_protein_id VARCHAR(255),
-found_in_taxon VARCHAR(255),
-encoded_by VARCHAR(255),
-has_parts VARCHAR(255),
-molecular_function VARCHAR(255),
-biological_process VARCHAR(255),
-instance_of VARCHAR(255),
-refseq_protein_id VARCHAR(255),
-part_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+subclass_of VARCHAR(1023),
+uniprot_protein_id VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+encoded_by VARCHAR(1023),
+has_parts VARCHAR(1023),
+molecular_function VARCHAR(1023),
+biological_process VARCHAR(1023),
+instance_of VARCHAR(1023),
+refseq_protein_id VARCHAR(1023),
+part_of VARCHAR(1023));
 INSERT INTO peptidase_u32_collagenase_family VALUES('U32 family peptidase VF_1383','microbial protein found in Aliivibrio fischeri ES114','protein','Q5E518','Vibrio fischeri ES114','U32 family peptidase VF_1383','Peptidase U32, collagenase','peptidase activity','proteolysis','protein','YP_204766','Peptidase U32');
 INSERT INTO peptidase_u32_collagenase_family VALUES('U32 family peptidase CD630_07030','microbial protein found in Clostridioides difficile 630','protein','Q189P9','Peptoclostridium difficile 630','U32 family peptidase CD630_07030','Peptidase U32, collagenase','peptidase activity','proteolysis','protein','YP_001087179','Peptidase U32');
 INSERT INTO peptidase_u32_collagenase_family VALUES('Protease STM1604','microbial protein found in Salmonella enterica subsp. enterica serovar Typhimurium str. LT2','protein','Q8ZPC7','Salmonella enterica subsp. enterica serovar Typhimurium str. LT2','protease STM1604','Peptidase U32, collagenase','peptidase activity','proteolysis','protein','NP_460563','Peptidase U32');

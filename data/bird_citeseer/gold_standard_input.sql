@@ -1,6 +1,6 @@
 CREATE TABLE cites
-(cited_paper_id VARCHAR(255),
-citing_paper_id VARCHAR(255));
+(cited_paper_id VARCHAR(1023),
+citing_paper_id VARCHAR(1023));
 INSERT INTO cites VALUES('xu98neural','30494');
 INSERT INTO cites VALUES('150449','randell00shopping');
 INSERT INTO cites VALUES('295535','340329');
@@ -168,8 +168,8 @@ INSERT INTO cites VALUES('michaud98learning','rosenstein99continuous');
 INSERT INTO cites VALUES('bonifati01pushing','bailey01analysis');
 INSERT INTO cites VALUES('56231','9546');
 CREATE TABLE paper
-(paper_id VARCHAR(255),
-class_label VARCHAR(255));
+(paper_id VARCHAR(1023),
+class_label VARCHAR(1023));
 INSERT INTO paper VALUES('degaris00simulating','ML');
 INSERT INTO paper VALUES('robbert01astrolabe','IR');
 INSERT INTO paper VALUES('tran00videograph','DB');
@@ -337,8 +337,8 @@ INSERT INTO paper VALUES('flank98layered','IR');
 INSERT INTO paper VALUES('rasheed98adaptive','ML');
 INSERT INTO paper VALUES('silverman01more','Agents');
 CREATE TABLE content
-(paper_id VARCHAR(255),
-word_cited_id VARCHAR(255));
+(paper_id VARCHAR(1023),
+word_cited_id VARCHAR(1023));
 INSERT INTO content VALUES('decker95environment','word2070');
 INSERT INTO content VALUES('siddiqi98shock','word1054');
 INSERT INTO content VALUES('artale01reasoning','word3447');

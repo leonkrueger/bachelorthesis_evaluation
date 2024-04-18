@@ -1,10 +1,10 @@
 CREATE TABLE buildings
 (id BIGINT,
-name VARCHAR(255),
-City VARCHAR(255),
+name VARCHAR(1023),
+City VARCHAR(1023),
 Height BIGINT,
 Stories BIGINT,
-Status VARCHAR(255));
+Status VARCHAR(1023));
 INSERT INTO buildings VALUES(7,'Torre New York Life','Mexico City',50,6,'under construction');
 INSERT INTO buildings VALUES(8,'LIU East','Monterrey',73,20,'under construction');
 INSERT INTO buildings VALUES(10,'Residencial Vidalta Torre Altaire 3','Mexico City',200,44,'on-hold');
@@ -19,13 +19,13 @@ INSERT INTO buildings VALUES(11,'Reforma 90','Mexico City',200,42,'on-hold');
 INSERT INTO buildings VALUES(3,'Punto Chapultepec','Mexico City',210,59,'proposed');
 CREATE TABLE Companies
 (id BIGINT,
-name VARCHAR(255),
-Headquarters VARCHAR(255),
-Industry VARCHAR(255),
+name VARCHAR(1023),
+Headquarters VARCHAR(1023),
+Industry VARCHAR(1023),
 Sales_billion DOUBLE,
 Profits_billion DOUBLE,
 Assets_billion DOUBLE,
-Market_Value_billion VARCHAR(255));
+Market_Value_billion VARCHAR(1023));
 INSERT INTO Companies VALUES(12,'Wells Fargo','USA','Banking',93.2000000000000028,12.40000000000000035,1258.09999999999991,'170.6');
 INSERT INTO Companies VALUES(5,'Royal Dutch Shell','Netherlands','Oil and gas',369.1000000000000227,20.10000000000000143,317.1999999999999887,'212.9');
 INSERT INTO Companies VALUES(11,'BNP Paribas','France','Banking',130.4000000000000056,10.5,2680.699999999999819,'88');

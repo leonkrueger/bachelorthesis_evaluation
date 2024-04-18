@@ -1,7 +1,7 @@
 CREATE TABLE city
 (city_id BIGINT,
-city_name VARCHAR(255),
-state VARCHAR(255),
+city_name VARCHAR(1023),
+state VARCHAR(1023),
 population BIGINT,
 area DOUBLE);
 INSERT INTO city VALUES(461,'Simi Valley','California',111351,39.20000000000000285);
@@ -106,14 +106,14 @@ INSERT INTO city VALUES(468,'Lake Charles','Louisiana',71757,40.2000000000000028
 INSERT INTO city VALUES(444,'Sterling Heights','Michigan',124471,36.60000000000000142);
 CREATE TABLE customer
 (cust_id BIGINT,
-cust_name VARCHAR(255),
+cust_name VARCHAR(1023),
 annual_revenue BIGINT,
-cust_type VARCHAR(255),
-address VARCHAR(255),
-city VARCHAR(255),
-state VARCHAR(255),
+cust_type VARCHAR(1023),
+address VARCHAR(1023),
+city VARCHAR(1023),
+state VARCHAR(1023),
 zip DOUBLE,
-phone VARCHAR(255));
+phone VARCHAR(1023));
 INSERT INTO customer VALUES(4421,'Cole Muffler Brake',24751643,'manufacturer','206 Central Avenue','Albany','NY',12206.0,'(518) 426-7679');
 INSERT INTO customer VALUES(3800,'Advanced Toys for Trucks',47827408,'manufacturer','12803 Highway 99','Everett','WA',98204.0,'(425) 355-5299');
 INSERT INTO customer VALUES(2001,'So Cal Trailer Repair Inc',45173186,'wholesaler','9263 Orco Parkway Suite E','Riverside','CA',92509.0,'(951) 361-4968');
@@ -216,13 +216,13 @@ INSERT INTO customer VALUES(381,'Autoware Inc',5583961,'wholesaler','854 Southwe
 INSERT INTO customer VALUES(721,'Southern Pride RV Specialist',46797354,'manufacturer','4526 Lenox Avenue','Jacksonville','FL',32205.0,'(904) 388-4055');
 CREATE TABLE driver
 (driver_id BIGINT,
-first_name VARCHAR(255),
-last_name VARCHAR(255),
-address VARCHAR(255),
-city VARCHAR(255),
-state VARCHAR(255),
+first_name VARCHAR(1023),
+last_name VARCHAR(1023),
+address VARCHAR(1023),
+city VARCHAR(1023),
+state VARCHAR(1023),
 zip_code BIGINT,
-phone VARCHAR(255));
+phone VARCHAR(1023));
 INSERT INTO driver VALUES(29,'Kristie','Sims','2877 Laredo St','Memphis','TN',38127,'(901) 534-4388');
 INSERT INTO driver VALUES(27,'Holger','Nohr','572 Delta Rd','Memphis','TN',38109,'(901) 789-7564');
 INSERT INTO driver VALUES(20,'Sue','Newell','268 Richmond Ave','Memphis','TN',38106,'(901) 774-6569');
@@ -236,7 +236,7 @@ INSERT INTO driver VALUES(25,'Leszek','Kieltyka','4089 Persimmon View Cv','Memph
 INSERT INTO driver VALUES(30,'Maria','Craft','3522 Mimosa Ave','Memphis','TN',38111,'(901) 323-0258');
 CREATE TABLE truck
 (truck_id BIGINT,
-make VARCHAR(255),
+make VARCHAR(1023),
 model_year BIGINT);
 INSERT INTO truck VALUES(4,'Kenworth',2007);
 INSERT INTO truck VALUES(8,'Kenworth',2009);
@@ -257,7 +257,7 @@ weight DOUBLE,
 truck_id BIGINT,
 driver_id BIGINT,
 city_id BIGINT,
-ship_date VARCHAR(255));
+ship_date VARCHAR(1023));
 INSERT INTO shipment VALUES(1949,381,6957.0,2,20,606,'2017-12-22');
 INSERT INTO shipment VALUES(1857,615,9837.0,6,23,324,'2017-10-25');
 INSERT INTO shipment VALUES(1889,3876,1827.0,2,25,282,'2017-11-13');

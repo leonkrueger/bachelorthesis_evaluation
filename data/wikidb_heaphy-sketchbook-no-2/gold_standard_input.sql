@@ -1,10 +1,10 @@
 CREATE TABLE depiction
-(label VARCHAR(255),
-description VARCHAR(255),
-instance_of VARCHAR(255),
-freebase_id VARCHAR(255),
-commons_category VARCHAR(255),
-image VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+instance_of VARCHAR(1023),
+freebase_id VARCHAR(1023),
+commons_category VARCHAR(1023),
+image VARCHAR(1023));
 INSERT INTO depiction VALUES('Weka','species of flightless bird','taxon','/m/020pq0','Gallirallus australis','Gallirallus australis LC0248.jpg');
 INSERT INTO depiction VALUES('Queen Charlotte Sound / Tōtaranui','part of Marlborough Sounds, in New Zealand''s South Island','bay','/m/04b032','Queen Charlotte Sound','00 1134 Piccton - Neuseeland.jpg');
 INSERT INTO depiction VALUES('man','male adult human','nan','/m/04yx4','Men','Pioneer plaque line-drawing of a human male.svg');
@@ -24,23 +24,23 @@ INSERT INTO depiction VALUES('hill','landform that extends above the surrounding
 INSERT INTO depiction VALUES('human','common name of Homo sapiens, unique extant species of the genus Homo, from embryo to adult','organisms known by a particular common name','/m/0dgw9r','People','Anterior view of human female and male, with labels.svg');
 INSERT INTO depiction VALUES('Paradise Shelduck','species of bird','taxon','/m/04lfwy','Tadorna variegata','Paradise-Shelduck-pair.jpg');
 CREATE TABLE heaphy_sketchbook_no_2
-(label VARCHAR(255),
-description VARCHAR(255),
-inventory_number VARCHAR(255),
-instance_of VARCHAR(255),
-creator VARCHAR(255),
+(label VARCHAR(1023),
+description VARCHAR(1023),
+inventory_number VARCHAR(1023),
+instance_of VARCHAR(1023),
+creator VARCHAR(1023),
 height DOUBLE,
 width DOUBLE,
-described_at_url VARCHAR(255),
-collection VARCHAR(255),
-image VARCHAR(255),
-part_of VARCHAR(255),
-location VARCHAR(255),
-country VARCHAR(255),
-copyright_status VARCHAR(255),
-depicts VARCHAR(255),
-inception VARCHAR(255),
-made_from_material VARCHAR(255));
+described_at_url VARCHAR(1023),
+collection VARCHAR(1023),
+image VARCHAR(1023),
+part_of VARCHAR(1023),
+location VARCHAR(1023),
+country VARCHAR(1023),
+copyright_status VARCHAR(1023),
+depicts VARCHAR(1023),
+inception VARCHAR(1023),
+made_from_material VARCHAR(1023));
 INSERT INTO heaphy_sketchbook_no_2 VALUES('Mana or Flat Id. Cook Straits [sic]','artwork by Charles Heaphy (Auckland War Memorial Museum, PD-1952-2-2-14 )','PD-1952-2-2-14','drawing','Charles Heaphy',255.0,360.0,'http://www.aucklandmuseum.com/collections-research/collections/record/am_library-paintinganddrawings-225','Auckland War Memorial Museum Tāmaki Paenga Hira','Mana or Flat Id. Cook Straits (sic).jpg','Heaphy sketchbook no. 2','Auckland War Memorial Museum Tāmaki Paenga Hira','New Zealand','public domain','Cook Strait','+1840-00-00T00:00:00Z','pencil');
 INSERT INTO heaphy_sketchbook_no_2 VALUES('Waitekuri Valley Coromandel','artwork by Charles Heaphy (Auckland War Memorial Museum, PD-1952-2-2-16 )','PD-1952-2-2-16','drawing','Charles Heaphy',255.0,360.0,'http://www.aucklandmuseum.com/collections-research/collections/record/am_library-paintinganddrawings-227','Auckland War Memorial Museum Tāmaki Paenga Hira','Waitekuri Valley Coromandel.jpg','Heaphy sketchbook no. 2','Auckland War Memorial Museum Tāmaki Paenga Hira','nan','public domain','man','+1840-00-00T00:00:00Z','pencil');
 INSERT INTO heaphy_sketchbook_no_2 VALUES('On the Rotorua Lake Middle Island','artwork by Charles Heaphy (Auckland War Memorial Museum, PD-1952-2-2-2 )','PD-1952-2-2-2','drawing','Charles Heaphy',255.0,360.0,'http://www.aucklandmuseum.com/collections-research/collections/record/am_library-paintinganddrawings-213','Auckland War Memorial Museum Tāmaki Paenga Hira','On the Rotorua Lake Middle Island.jpg','Heaphy sketchbook no. 2','Auckland War Memorial Museum Tāmaki Paenga Hira','New Zealand','public domain','human','+1840-00-00T00:00:00Z','pencil');

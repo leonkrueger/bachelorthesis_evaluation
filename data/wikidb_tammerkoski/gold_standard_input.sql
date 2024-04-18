@@ -1,21 +1,21 @@
 CREATE TABLE architect
-(label VARCHAR(255),
-description VARCHAR(255),
-instance_of VARCHAR(255),
-sex_or_gender VARCHAR(255),
-country_of_citizenship VARCHAR(255),
-date_of_birth VARCHAR(255),
-date_of_death VARCHAR(255),
-place_of_birth VARCHAR(255),
-place_of_death VARCHAR(255),
-occupation VARCHAR(255),
-given_name VARCHAR(255),
-commons_category VARCHAR(255),
-family_name VARCHAR(255),
-google_knowledge_graph_id VARCHAR(255),
-kanto_id VARCHAR(255),
-genicom_profile_id VARCHAR(255),
-uppslagsverket_finland_id VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+instance_of VARCHAR(1023),
+sex_or_gender VARCHAR(1023),
+country_of_citizenship VARCHAR(1023),
+date_of_birth VARCHAR(1023),
+date_of_death VARCHAR(1023),
+place_of_birth VARCHAR(1023),
+place_of_death VARCHAR(1023),
+occupation VARCHAR(1023),
+given_name VARCHAR(1023),
+commons_category VARCHAR(1023),
+family_name VARCHAR(1023),
+google_knowledge_graph_id VARCHAR(1023),
+kanto_id VARCHAR(1023),
+genicom_profile_id VARCHAR(1023),
+uppslagsverket_finland_id VARCHAR(1023));
 INSERT INTO architect VALUES('Jussi Paatela','Finnish architect','human','male','Finland','+1886-02-27T00:00:00Z','+1962-05-30T00:00:00Z','Vantaa','Helsinki','architect','Johan','Jussi Paatela','Paatela','/g/121k3hch','86636','6.000000006900674e+18','PaatelaJussi');
 INSERT INTO architect VALUES('Bertel Strömmer','Finnish architect','human','male','Finland','+1890-07-11T00:00:00Z','+1962-04-18T00:00:00Z','Ikaalinen','Tampere','architect','Bertel','Bertel Strömmer','Strömmer','/g/122bxpg2','100592','nan','StroemmerBertel');
 INSERT INTO architect VALUES('Frans Ludvig Calonius','Finnish architect','human','male','Grand Duchy of Finland','+1833-11-19T00:00:00Z','+1903-12-08T00:00:00Z','Helsinki','Tampere','architect','Frans','Frans Ludvig Calonius','Calonius','/g/121bv_h7','162659','6.00000000880351e+18','CaloniusFransLudvig');
@@ -27,17 +27,17 @@ INSERT INTO architect VALUES('Georg Schreck','Finnish architect (1859-1925)','hu
 INSERT INTO architect VALUES('Hjalmar Åberg','Finnish architect (1870-1935)','human','male','Finland','+1870-10-15T00:00:00Z','+1935-08-08T00:00:00Z','Ekenäs','Vyborg','architect','Hjalmar','Hjalmar Åberg','Åberg','/g/122y06ds','109285','6.000000015554202e+18','AabergHjalmar');
 INSERT INTO architect VALUES('August Krook','Finnish architect (1860-1935)','human','male','Finland','+1860-05-19T00:00:00Z','+1935-09-20T00:00:00Z','Veliky Novgorod','Turku','architect','August','August Krook','Krook','/g/15dpyy67','108930','6.000000006604057e+18','KrookAugust');
 CREATE TABLE tammerkoski
-(label VARCHAR(255),
-description VARCHAR(255),
-commons_category VARCHAR(255),
-architect VARCHAR(255),
-country VARCHAR(255),
-located_in_the_administrative_territorial_entity VARCHAR(255),
-instance_of VARCHAR(255),
-coordinate_location VARCHAR(255),
-image VARCHAR(255),
-part_of VARCHAR(255),
-google_knowledge_graph_id VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+commons_category VARCHAR(1023),
+architect VARCHAR(1023),
+country VARCHAR(1023),
+located_in_the_administrative_territorial_entity VARCHAR(1023),
+instance_of VARCHAR(1023),
+coordinate_location VARCHAR(1023),
+image VARCHAR(1023),
+part_of VARCHAR(1023),
+google_knowledge_graph_id VARCHAR(1023));
 INSERT INTO tammerkoski VALUES('Tampere Market Hall','market hall in Tampere, Finland','Tampere Market Hall','Hjalmar Åberg','Finland','Tampere','market hall','61.4970398','Tampere market hall.jpg','Tammerkoski','/g/1213vcy7');
 INSERT INTO tammerkoski VALUES('Tuulensuu house','building in Tampere, Finland','Tuulensuun talo','Bertel Strömmer','Finland','Tampere','building','61.49738889','Tuulensuun talo.JPG','Tammerkoski','/g/1yprtzknj');
 INSERT INTO tammerkoski VALUES('Tampere Central Square','square in Tampere, Finland','Keskustori','nan','Finland','Tampere','square','61.4982','Tampere keskustori.jpg','Tammerkoski','nan');

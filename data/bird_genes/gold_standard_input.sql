@@ -1,6 +1,6 @@
 CREATE TABLE Classification
-(GeneID VARCHAR(255),
-Localization VARCHAR(255));
+(GeneID VARCHAR(1023),
+Localization VARCHAR(1023));
 INSERT INTO Classification VALUES('G235172','nucleus');
 INSERT INTO Classification VALUES('G234993','nucleus');
 INSERT INTO Classification VALUES('G234371','cytoplasm');
@@ -168,15 +168,15 @@ INSERT INTO Classification VALUES('G238061','plasma membrane');
 INSERT INTO Classification VALUES('G235011','mitochondria');
 INSERT INTO Classification VALUES('G234516','plasma membrane');
 CREATE TABLE Genes
-(GeneID VARCHAR(255),
-Essential VARCHAR(255),
-Class VARCHAR(255),
-Complex VARCHAR(255),
-Phenotype VARCHAR(255),
-Motif VARCHAR(255),
+(GeneID VARCHAR(1023),
+Essential VARCHAR(1023),
+Class VARCHAR(1023),
+Complex VARCHAR(1023),
+Phenotype VARCHAR(1023),
+Motif VARCHAR(1023),
 Chromosome BIGINT,
-Function VARCHAR(255),
-Localization VARCHAR(255));
+Function VARCHAR(1023),
+Localization VARCHAR(1023));
 INSERT INTO Genes VALUES('G234868','Non-Essential','Protein Kinases','Casein kinase','Conditional phenotypes','PS00108',14,'CELL GROWTH, CELL DIVISION AND DNA SYNTHESIS','plasma membrane');
 INSERT INTO Genes VALUES('G234654','Essential','ATPases','Proteasome','Nucleic acid metabolism defects','?',11,'CELL GROWTH, CELL DIVISION AND DNA SYNTHESIS','nucleus');
 INSERT INTO Genes VALUES('G238990','?','?','?','?','PS00194',15,'CELLULAR ORGANIZATION (proteins are localized to the corresponding organelle)','ER');
@@ -344,9 +344,9 @@ INSERT INTO Genes VALUES('G235177','Non-Essential','?','Glucan synthases','Cell 
 INSERT INTO Genes VALUES('G235157','Essential','?','Transcription complexes/Transcriptosome','?','PS00626',2,'CELLULAR ORGANIZATION (proteins are localized to the corresponding organelle)','nucleus');
 INSERT INTO Genes VALUES('G235616','Essential','?','Intracellular transport complexes','Conditional phenotypes','?',12,'CELLULAR ORGANIZATION (proteins are localized to the corresponding organelle)','ER');
 CREATE TABLE Interactions
-(GeneID1 VARCHAR(255),
-GeneID2 VARCHAR(255),
-Type VARCHAR(255),
+(GeneID1 VARCHAR(1023),
+GeneID2 VARCHAR(1023),
+Type VARCHAR(1023),
 Expression_Corr DOUBLE);
 INSERT INTO Interactions VALUES('G239628','G236745','Physical',0.07497326999999999463);
 INSERT INTO Interactions VALUES('G235407','G235632','Physical',0.962220218000000016);

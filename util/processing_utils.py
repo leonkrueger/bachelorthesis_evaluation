@@ -18,10 +18,10 @@ def remove_quotes(attribute: str, use_mysql_quotes: bool = True) -> str:
 
 def map_type(type: str) -> str:
     type_mapping = {
-        "VARCHAR": "VARCHAR(255)",
+        "VARCHAR": "VARCHAR(1023)",
         "VARCHAR2": "VARHCAR(255)",
-        "TEXT": "VARCHAR(255)",
-        "CHAR": "VARCHAR(255)",
+        "TEXT": "VARCHAR(1023)",
+        "CHAR": "VARCHAR(1023)",
         "DOUBLE": "DOUBLE",
         "REAL": "DOUBLE",
         "FLOAT": "DOUBLE",
@@ -42,7 +42,7 @@ def map_type(type: str) -> str:
         "DATETIME": "DATETIME",
         "TIMESTAMP": "DATETIME",
         "BLOB": "BLOB",
-        "DEFAULT": "VARCHAR(255)",
+        "DEFAULT": "VARCHAR(1023)",
     }
     if type.upper() not in type_mapping.keys():
         print(f"ERROR: NO TYPE MAPPING FOR TYPE {type}")

@@ -1,7 +1,7 @@
 CREATE TABLE Dish
 (id BIGINT,
-name VARCHAR(255),
-description VARCHAR(255),
+name VARCHAR(1023),
+description VARCHAR(1023),
 menus_appeared BIGINT,
 times_appeared BIGINT,
 first_appeared BIGINT,
@@ -135,23 +135,23 @@ INSERT INTO Dish VALUES(477536,'Selinon',NULL,1,1,0,0,0.0,0.0);
 INSERT INTO Dish VALUES(223324,'Truite bleu ou a la meuniere, pommes vapeur...selon grand',NULL,1,1,1978,1978,0.0,0.0);
 CREATE TABLE Menu
 (id BIGINT,
-name VARCHAR(255),
-sponsor VARCHAR(255),
-event VARCHAR(255),
-venue VARCHAR(255),
-place VARCHAR(255),
-physical_description VARCHAR(255),
-occasion VARCHAR(255),
-notes VARCHAR(255),
-call_number VARCHAR(255),
-keywords VARCHAR(255),
-language VARCHAR(255),
+name VARCHAR(1023),
+sponsor VARCHAR(1023),
+event VARCHAR(1023),
+venue VARCHAR(1023),
+place VARCHAR(1023),
+physical_description VARCHAR(1023),
+occasion VARCHAR(1023),
+notes VARCHAR(1023),
+call_number VARCHAR(1023),
+keywords VARCHAR(1023),
+language VARCHAR(1023),
 date DATE,
-location VARCHAR(255),
-location_type VARCHAR(255),
-currency VARCHAR(255),
-currency_symbol VARCHAR(255),
-status VARCHAR(255),
+location VARCHAR(1023),
+location_type VARCHAR(1023),
+currency VARCHAR(1023),
+currency_symbol VARCHAR(1023),
+status VARCHAR(1023),
 page_count BIGINT,
 dish_count BIGINT);
 INSERT INTO Menu VALUES(27480,'','Norddeutscher Lloyd Bremen','Breakfast Menu',NULL,NULL,'',NULL,'','1910-842 Item A,B & C',NULL,NULL,'1910-03-14','S.S. Vaderland',NULL,NULL,NULL,'complete',6,185);
@@ -286,7 +286,7 @@ page_number BIGINT,
 image_id DOUBLE,
 full_height BIGINT,
 full_width BIGINT,
-uuid VARCHAR(255));
+uuid VARCHAR(1023));
 INSERT INTO MenuPage VALUES(55988,29327,1,3974553.0,6054,3605,'b2e1f0e6-edaf-1c97-e040-e00a18060949');
 INSERT INTO MenuPage VALUES(47197,26883,12,2042359.0,3804,2118,'a4958095-46b0-074d-e040-e00a1806792c');
 INSERT INTO MenuPage VALUES(25393,21250,2,4000002650.0,2640,1908,'510d47db-269e-a3d9-e040-e00a18064a99');
@@ -418,8 +418,8 @@ menu_page_id BIGINT,
 price DOUBLE,
 high_price DOUBLE,
 dish_id BIGINT,
-created_at VARCHAR(255),
-updated_at VARCHAR(255),
+created_at VARCHAR(1023),
+updated_at VARCHAR(1023),
 xpos DOUBLE,
 ypos DOUBLE);
 INSERT INTO MenuItem VALUES(58410,21971,NULL,NULL,60,'2011-04-25 16:39:57 UTC','2011-04-25 16:39:57 UTC',0.2371429999999999927,0.5411030000000000006);

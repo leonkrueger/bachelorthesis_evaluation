@@ -1,7 +1,7 @@
 CREATE TABLE artist
 (Artist_ID BIGINT,
-Name VARCHAR(255),
-Country VARCHAR(255),
+Name VARCHAR(1023),
+Country VARCHAR(1023),
 Year_Join BIGINT,
 Age BIGINT);
 INSERT INTO artist VALUES(7,'Larry Nelson','United States',1981,50);
@@ -14,7 +14,7 @@ INSERT INTO artist VALUES(1,'Vijay Singh','Fiji',1998,45);
 CREATE TABLE exhibition
 (Exhibition_ID BIGINT,
 Year BIGINT,
-Theme VARCHAR(255),
+Theme VARCHAR(1023),
 Artist_ID BIGINT,
 Ticket_Price DOUBLE);
 INSERT INTO exhibition VALUES(5,2008,'Spring',6,29.94999999999999929);
@@ -25,7 +25,7 @@ INSERT INTO exhibition VALUES(2,2005,'Christmas stocking',2,19.94999999999999929
 INSERT INTO exhibition VALUES(3,2006,'Santa Claus and Rudolph the Red-Nosed Reindeer',4,14.94999999999999929);
 CREATE TABLE exhibition_record
 (Exhibition_ID BIGINT,
-Date VARCHAR(255),
+Date VARCHAR(1023),
 Attendance BIGINT);
 INSERT INTO exhibition_record VALUES(3,'February 19',1233);
 INSERT INTO exhibition_record VALUES(1,'December 2',965);

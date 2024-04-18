@@ -1,13 +1,13 @@
 CREATE TABLE offices
-(officeCode VARCHAR(255),
-city VARCHAR(255),
-phone VARCHAR(255),
-addressLine1 VARCHAR(255),
-addressLine2 VARCHAR(255),
-state VARCHAR(255),
-country VARCHAR(255),
-postalCode VARCHAR(255),
-territory VARCHAR(255));
+(officeCode VARCHAR(1023),
+city VARCHAR(1023),
+phone VARCHAR(1023),
+addressLine1 VARCHAR(1023),
+addressLine2 VARCHAR(1023),
+state VARCHAR(1023),
+country VARCHAR(1023),
+postalCode VARCHAR(1023),
+territory VARCHAR(1023));
 INSERT INTO offices VALUES('2','Boston','+1 215 837 0825','1550 Court Place','Suite 102','MA','USA','02107','NA');
 INSERT INTO offices VALUES('5','Tokyo','+81 33 224 5000','4-1 Kioicho',NULL,'Chiyoda-Ku','Japan','102-8578','Japan');
 INSERT INTO offices VALUES('7','London','+44 20 7877 2041','25 Old Broad Street','Level 7',NULL,'UK','EC2N 1HN','EMEA');
@@ -17,13 +17,13 @@ INSERT INTO offices VALUES('3','NYC','+1 212 555 3000','523 East 53rd Street','a
 INSERT INTO offices VALUES('4','Paris','+33 14 723 4404','43 Rue Jouffroy D''abbans',NULL,NULL,'France','75017','EMEA');
 CREATE TABLE employees
 (employeeNumber BIGINT,
-lastName VARCHAR(255),
-firstName VARCHAR(255),
-extension VARCHAR(255),
-email VARCHAR(255),
-officeCode VARCHAR(255),
+lastName VARCHAR(1023),
+firstName VARCHAR(1023),
+extension VARCHAR(1023),
+email VARCHAR(1023),
+officeCode VARCHAR(1023),
 reportsTo BIGINT,
-jobTitle VARCHAR(255));
+jobTitle VARCHAR(1023));
 INSERT INTO employees VALUES(1102,'Bondur','Gerard','x5408','gbondur@classicmodelcars.com','4',1056,'Sale Manager (EMEA)');
 INSERT INTO employees VALUES(1056,'Patterson','Mary','x4611','mpatterso@classicmodelcars.com','1',1002,'VP Sales');
 INSERT INTO employees VALUES(1611,'Fixter','Andy','x101','afixter@classicmodelcars.com','6',1088,'Sales Rep');
@@ -49,16 +49,16 @@ INSERT INTO employees VALUES(1165,'Jennings','Leslie','x3291','ljennings@classic
 INSERT INTO employees VALUES(1088,'Patterson','William','x4871','wpatterson@classicmodelcars.com','6',1056,'Sales Manager (APAC)');
 CREATE TABLE customers
 (customerNumber BIGINT,
-customerName VARCHAR(255),
-contactLastName VARCHAR(255),
-contactFirstName VARCHAR(255),
-phone VARCHAR(255),
-addressLine1 VARCHAR(255),
-addressLine2 VARCHAR(255),
-city VARCHAR(255),
-state VARCHAR(255),
-postalCode VARCHAR(255),
-country VARCHAR(255),
+customerName VARCHAR(1023),
+contactLastName VARCHAR(1023),
+contactFirstName VARCHAR(1023),
+phone VARCHAR(1023),
+addressLine1 VARCHAR(1023),
+addressLine2 VARCHAR(1023),
+city VARCHAR(1023),
+state VARCHAR(1023),
+postalCode VARCHAR(1023),
+country VARCHAR(1023),
 salesRepEmployeeNumber BIGINT,
 creditLimit DOUBLE);
 INSERT INTO customers VALUES(386,'L''ordine Souveniers','Moroni','Maurizio ','0522-556555','Strada Provinciale 124',NULL,'Reggio Emilia',NULL,'42100','Italy',1401,121400.0);
@@ -128,8 +128,8 @@ CREATE TABLE orders
 orderDate DATE,
 requiredDate DATE,
 shippedDate DATE,
-status VARCHAR(255),
-comments VARCHAR(255),
+status VARCHAR(1023),
+comments VARCHAR(1023),
 customerNumber BIGINT);
 INSERT INTO orders VALUES(10385,'2005-02-28','2005-03-09','2005-03-01','Shipped',NULL,124);
 INSERT INTO orders VALUES(10210,'2004-01-12','2004-01-22','2004-01-20','Shipped',NULL,177);
@@ -195,7 +195,7 @@ INSERT INTO orders VALUES(10254,'2004-06-03','2004-06-13','2004-06-04','Shipped'
 INSERT INTO orders VALUES(10424,'2005-05-31','2005-06-08',NULL,'In Process',NULL,141);
 CREATE TABLE payments
 (customerNumber BIGINT,
-checkNumber VARCHAR(255),
+checkNumber VARCHAR(1023),
 paymentDate DATE,
 amount DOUBLE);
 INSERT INTO payments VALUES(198,'HQ920205','2003-07-06',6036.960000000000036);
@@ -261,9 +261,9 @@ INSERT INTO payments VALUES(320,'MU817160','2003-11-24',52548.48999999999797);
 INSERT INTO payments VALUES(362,'FP170292','2004-07-11',18473.70999999999913);
 INSERT INTO payments VALUES(381,'MS154481','2003-08-22',1128.200000000000045);
 CREATE TABLE productlines
-(productLine VARCHAR(255),
-textDescription VARCHAR(255),
-htmlDescription VARCHAR(255),
+(productLine VARCHAR(1023),
+textDescription VARCHAR(1023),
+htmlDescription VARCHAR(1023),
 image BLOB);
 INSERT INTO productlines VALUES('Trains','Model trains are a rewarding hobby for enthusiasts of all ages. Whether you''re looking for collectible wooden trains, electric streetcars or locomotives, you''ll find a number of great choices for any budget within this category. The interactive aspect of ',NULL,NULL);
 INSERT INTO productlines VALUES('Vintage Cars','Our Vintage Car models realistically portray automobiles produced from the early 1900s through the 1940s. Materials used include Bakelite, diecast, plastic and wood. Most of the replicas are in the 1:18 and 1:24 scale sizes, which provide the optimum in d',NULL,NULL);
@@ -273,12 +273,12 @@ INSERT INTO productlines VALUES('Motorcycles','Our motorcycles are state of the 
 INSERT INTO productlines VALUES('Classic Cars','Attention car enthusiasts: Make your wildest car ownership dreams come true. Whether you are looking for classic muscle cars, dream sports cars or movie-inspired miniatures, you will find great choices in this category. These replicas feature superb atten',NULL,NULL);
 INSERT INTO productlines VALUES('Trucks and Buses','The Truck and Bus models are realistic replicas of buses and specialized trucks produced from the early 1920s to present. The models range in size from 1:12 to 1:50 scale and include numerous limited edition and several out-of-production vehicles. Materia',NULL,NULL);
 CREATE TABLE products
-(productCode VARCHAR(255),
-productName VARCHAR(255),
-productLine VARCHAR(255),
-productScale VARCHAR(255),
-productVendor VARCHAR(255),
-productDescription VARCHAR(255),
+(productCode VARCHAR(1023),
+productName VARCHAR(1023),
+productLine VARCHAR(1023),
+productScale VARCHAR(1023),
+productVendor VARCHAR(1023),
+productDescription VARCHAR(1023),
 quantityInStock BIGINT,
 buyPrice DOUBLE,
 MSRP DOUBLE);
@@ -346,7 +346,7 @@ INSERT INTO products VALUES('S18_3232','1992 Ferrari 360 Spider red','Classic Ca
 INSERT INTO products VALUES('S10_4698','2003 Harley-Davidson Eagle Drag Bike','Motorcycles','1:10','Red Start Diecast',replace('Model features, official Harley Davidson logos and insignias, detachable rear wheelie bar, heavy diecast metal with resin parts, authentic multi-color tampo-printed graphics, separate engine drive belts, free-turning front fork, rotating tires and rear racing slick, certificate of authenticity, detailed engine, display stand\n, precision diecast replica, baked enamel finish, 1:10 scale model, removable fender, seat and tank cover piece for displaying the superior detail of the v-twin engine','\n',char(10)),5582,91.01999999999999603,193.6599999999999966);
 CREATE TABLE orderdetails
 (orderNumber BIGINT,
-productCode VARCHAR(255),
+productCode VARCHAR(1023),
 quantityOrdered BIGINT,
 priceEach DOUBLE,
 orderLineNumber BIGINT);

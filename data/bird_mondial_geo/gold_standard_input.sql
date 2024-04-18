@@ -1,6 +1,6 @@
 CREATE TABLE borders
-(Country1 VARCHAR(255),
-Country2 VARCHAR(255),
+(Country1 VARCHAR(1023),
+Country2 VARCHAR(1023),
 Length DOUBLE);
 INSERT INTO borders VALUES('GE','TR',252.0);
 INSERT INTO borders VALUES('MNE','SRB',124.0);
@@ -17,9 +17,9 @@ INSERT INTO borders VALUES('SUD','TCH',1360.0);
 INSERT INTO borders VALUES('JOR','SA',728.0);
 INSERT INTO borders VALUES('EAT','MW',475.0);
 CREATE TABLE city
-(Name VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255),
+(Name VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023),
 Population BIGINT,
 Longitude DOUBLE,
 Latitude DOUBLE);
@@ -38,7 +38,7 @@ INSERT INTO city VALUES('Urawa','J','Saitama',NULL,NULL,NULL);
 INSERT INTO city VALUES('Xinyu','TJ','Jiangxi',173524,NULL,NULL);
 INSERT INTO city VALUES('Sapporo','J','Hokkaido',1748000,141.3499999999999944,43.06669999999999731);
 CREATE TABLE continent
-(Name VARCHAR(255),
+(Name VARCHAR(1023),
 Area DOUBLE);
 INSERT INTO continent VALUES('Europe',9562490.0);
 INSERT INTO continent VALUES('Africa',30254700.0);
@@ -46,10 +46,10 @@ INSERT INTO continent VALUES('Asia',45095300.0);
 INSERT INTO continent VALUES('Australia/Oceania',8503470.0);
 INSERT INTO continent VALUES('America',39872000.0);
 CREATE TABLE country
-(Name VARCHAR(255),
-Code VARCHAR(255),
-Capital VARCHAR(255),
-Province VARCHAR(255),
+(Name VARCHAR(1023),
+Code VARCHAR(1023),
+Capital VARCHAR(1023),
+Province VARCHAR(1023),
 Area DOUBLE,
 Population BIGINT);
 INSERT INTO country VALUES('Trinidad and Tobago','TT','Port-of-Spain','Trinidad and Tobago',5130.0,1272385);
@@ -67,7 +67,7 @@ INSERT INTO country VALUES('Qatar','Q','Doha','Qatar',11000.0,547761);
 INSERT INTO country VALUES('El Salvador','ES','San Salvador','El Salvador',21040.0,5828987);
 INSERT INTO country VALUES('Cocos Islands','COCO','West Island','Cocos Islands',14.0,596);
 CREATE TABLE desert
-(Name VARCHAR(255),
+(Name VARCHAR(1023),
 Area DOUBLE,
 Longitude DOUBLE,
 Latitude DOUBLE);
@@ -86,7 +86,7 @@ INSERT INTO desert VALUES('Erg Ouarane',80000.0,-11.0,21.0);
 INSERT INTO desert VALUES('Great Basin',300000.0,-117.0,38.0);
 INSERT INTO desert VALUES('Gibson Desert',310800.0,125.0,-23.0);
 CREATE TABLE economy
-(Country VARCHAR(255),
+(Country VARCHAR(1023),
 GDP DOUBLE,
 Agriculture DOUBLE,
 Service DOUBLE,
@@ -107,8 +107,8 @@ INSERT INTO economy VALUES('BOL',20000.0,NULL,NULL,NULL,12.0);
 INSERT INTO economy VALUES('SD',3600.0,25.0,40.0,35.0,14.69999999999999929);
 INSERT INTO economy VALUES('BI',4000.0,54.10000000000000142,16.80000000000000071,29.10000000000000142,10.0);
 CREATE TABLE encompasses
-(Country VARCHAR(255),
-Continent VARCHAR(255),
+(Country VARCHAR(1023),
+Continent VARCHAR(1023),
 Percentage DOUBLE);
 INSERT INTO encompasses VALUES('SVAX','Europe',100.0);
 INSERT INTO encompasses VALUES('D','Europe',100.0);
@@ -125,8 +125,8 @@ INSERT INTO encompasses VALUES('GROX','America',100.0);
 INSERT INTO encompasses VALUES('GR','Europe',100.0);
 INSERT INTO encompasses VALUES('Z','Africa',100.0);
 CREATE TABLE ethnicGroup
-(Country VARCHAR(255),
-Name VARCHAR(255),
+(Country VARCHAR(1023),
+Name VARCHAR(1023),
 Percentage DOUBLE);
 INSERT INTO ethnicGroup VALUES('SME','Javanese',15.30000000000000071);
 INSERT INTO ethnicGroup VALUES('SD','European',3.0);
@@ -143,9 +143,9 @@ INSERT INTO ethnicGroup VALUES('TT','East Indian',40.0);
 INSERT INTO ethnicGroup VALUES('RG','Malinke',30.0);
 INSERT INTO ethnicGroup VALUES('HR','Slovene',0.5);
 CREATE TABLE geo_desert
-(Desert VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(Desert VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_desert VALUES('Syrian Desert','SYR','Syria');
 INSERT INTO geo_desert VALUES('Colorado Plateau','USA','Colorado');
 INSERT INTO geo_desert VALUES('Owyhee','USA','Oregon');
@@ -161,9 +161,9 @@ INSERT INTO geo_desert VALUES('Nefud','SA','Saudi Arabia');
 INSERT INTO geo_desert VALUES('Libyan Desert','ET','El Minya');
 INSERT INTO geo_desert VALUES('Dascht-e-Kavir','IR','Tehran');
 CREATE TABLE geo_estuary
-(River VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(River VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_estuary VALUES('Merrimack River','USA','Massachusetts');
 INSERT INTO geo_estuary VALUES('Jordan','JOR','Jordan');
 INSERT INTO geo_estuary VALUES('Vaal','RSA','Northern Cape');
@@ -179,9 +179,9 @@ INSERT INTO geo_estuary VALUES('Irtysch','R','Tyumenskaya oblast');
 INSERT INTO geo_estuary VALUES('Luvua','ZRE','Shaba/Katanga');
 INSERT INTO geo_estuary VALUES('Chatanga','R','Krasnoyarskiy kray');
 CREATE TABLE geo_island
-(Island VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(Island VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_island VALUES('Langeoog','Ostf','20');
 INSERT INTO geo_island VALUES('Lanzarote','Cana','846');
 INSERT INTO geo_island VALUES('Montserrat','Less','102');
@@ -197,9 +197,9 @@ INSERT INTO geo_island VALUES('Tortola','Less','55');
 INSERT INTO geo_island VALUES('Kavaratti','Lacc','6');
 INSERT INTO geo_island VALUES('East Falkland','Falk','6605');
 CREATE TABLE geo_lake
-(Lake VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(Lake VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_lake VALUES('Loch Ness','GB','Central');
 INSERT INTO geo_lake VALUES('Lake Erie','USA','Michigan');
 INSERT INTO geo_lake VALUES('Dead Sea','WEST','West Bank');
@@ -215,9 +215,9 @@ INSERT INTO geo_lake VALUES('Lake Keban','TR','Tunceli');
 INSERT INTO geo_lake VALUES('Lake Erie','USA','New York');
 INSERT INTO geo_lake VALUES('Ozero Chanka','R','Primorsky kray');
 CREATE TABLE geo_mountain
-(Mountain VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(Mountain VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_mountain VALUES('Nanga Parbat','PK','Pakistan');
 INSERT INTO geo_mountain VALUES('Sulitjelma','N','Nordland');
 INSERT INTO geo_mountain VALUES('Kailash','TJ','Tibet');
@@ -233,9 +233,9 @@ INSERT INTO geo_mountain VALUES('Pik Pobeda','KGZ','Kyrgyzstan');
 INSERT INTO geo_mountain VALUES('Mt. Babel','CDN','Quebec');
 INSERT INTO geo_mountain VALUES('Damavand','IR','Mazandaran');
 CREATE TABLE geo_river
-(River VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(River VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_river VALUES('Rhein','NL','Zuid Holland');
 INSERT INTO geo_river VALUES('Euphrat','IRQ','Ninawa');
 INSERT INTO geo_river VALUES('Tigris','IRQ','Ad Tamim');
@@ -251,9 +251,9 @@ INSERT INTO geo_river VALUES('Mosel','F','Lorraine');
 INSERT INTO geo_river VALUES('Elbe','CZ','Vychodocesky');
 INSERT INTO geo_river VALUES('Theiss','H','Szeged (munic.)');
 CREATE TABLE geo_sea
-(Sea VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(Sea VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_sea VALUES('Pacific Ocean','J','Miyazaki');
 INSERT INTO geo_sea VALUES('North Sea','GB','Northumberland');
 INSERT INTO geo_sea VALUES('Caribbean Sea','YV','Delta Amacuro');
@@ -269,9 +269,9 @@ INSERT INTO geo_sea VALUES('Gulf of Mexico','MEX','Campeche');
 INSERT INTO geo_sea VALUES('North Sea','GB','North Yorkshire');
 INSERT INTO geo_sea VALUES('Mediterranean Sea','TR','Mugla');
 CREATE TABLE geo_source
-(River VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255));
+(River VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023));
 INSERT INTO geo_source VALUES('Pjandsh','AFG','Afghanistan');
 INSERT INTO geo_source VALUES('Saone','F','Lorraine');
 INSERT INTO geo_source VALUES('Bani','CI','Cote dIvoire');
@@ -287,11 +287,11 @@ INSERT INTO geo_source VALUES('Nelson River','CDN','Manitoba');
 INSERT INTO geo_source VALUES('Limmat','CH','ZH');
 INSERT INTO geo_source VALUES('Weser','D','Niedersachsen');
 CREATE TABLE island
-(Name VARCHAR(255),
-Islands VARCHAR(255),
+(Name VARCHAR(1023),
+Islands VARCHAR(1023),
 Area DOUBLE,
 Height DOUBLE,
-Type VARCHAR(255),
+Type VARCHAR(1023),
 Longitude DOUBLE,
 Latitude DOUBLE);
 INSERT INTO island VALUES('Te Waka-a-Maui (South Island)','New Zealand',151757.0,3754.0,NULL,170.4000000000000056,-44.0);
@@ -309,10 +309,10 @@ INSERT INTO island VALUES('Bioko',NULL,2017.0,3011.0,'volcanic',8.69999999999999
 INSERT INTO island VALUES('Prince Edward Island',NULL,5660.0,142.0,NULL,-63.39999999999999858,46.29999999999999716);
 INSERT INTO island VALUES('Te Ika-a-Maui (North Island)','New Zealand',114597.0,2797.0,NULL,175.6999999999999887,-38.39999999999999858);
 CREATE TABLE islandIn
-(Island VARCHAR(255),
-Sea VARCHAR(255),
-Lake VARCHAR(255),
-River VARCHAR(255));
+(Island VARCHAR(1023),
+Sea VARCHAR(1023),
+Lake VARCHAR(1023),
+River VARCHAR(1023));
 INSERT INTO islandIn VALUES('Mayotte','Indian Ocean',NULL,NULL);
 INSERT INTO islandIn VALUES('Graciosa','Atlantic Ocean',NULL,NULL);
 INSERT INTO islandIn VALUES('Long Island','Atlantic Ocean',NULL,NULL);
@@ -328,9 +328,9 @@ INSERT INTO islandIn VALUES('Kavaratti','Arabian Sea',NULL,NULL);
 INSERT INTO islandIn VALUES('Sokotra','Gulf of Aden',NULL,NULL);
 INSERT INTO islandIn VALUES('Jamaica','Caribbean Sea',NULL,NULL);
 CREATE TABLE isMember
-(Country VARCHAR(255),
-Organization VARCHAR(255),
-Type VARCHAR(255));
+(Country VARCHAR(1023),
+Organization VARCHAR(1023),
+Type VARCHAR(1023));
 INSERT INTO isMember VALUES('RA','IFAD','Category III');
 INSERT INTO isMember VALUES('PITC','SPC','member');
 INSERT INTO isMember VALUES('WV','WTrO','member');
@@ -346,12 +346,12 @@ INSERT INTO isMember VALUES('GCA','IFRCS','member');
 INSERT INTO isMember VALUES('PL','UNCRO','member');
 INSERT INTO isMember VALUES('R','UNIKOM','member');
 CREATE TABLE lake
-(Name VARCHAR(255),
+(Name VARCHAR(1023),
 Area DOUBLE,
 Depth DOUBLE,
 Altitude DOUBLE,
-Type VARCHAR(255),
-River VARCHAR(255),
+Type VARCHAR(1023),
+River VARCHAR(1023),
 Longitude DOUBLE,
 Latitude DOUBLE);
 INSERT INTO lake VALUES('Daryacheh ye Namak',1800.0,1.0,790.0,'salt',NULL,51.88000000000000255,34.5);
@@ -369,8 +369,8 @@ INSERT INTO lake VALUES('Lake Malawi',29600.0,704.0,474.0,NULL,'Chire',34.0,-12.
 INSERT INTO lake VALUES('Lake Maracaibo',13000.0,50.0,0.0,NULL,NULL,-71.54999999999999716,9.72000000000000063);
 INSERT INTO lake VALUES('Lac Assal',54.0,NULL,-155.0,'salt',NULL,42.39999999999999858,11.65000000000000035);
 CREATE TABLE language
-(Country VARCHAR(255),
-Name VARCHAR(255),
+(Country VARCHAR(1023),
+Name VARCHAR(1023),
 Percentage DOUBLE);
 INSERT INTO language VALUES('PK','Urdu',8.0);
 INSERT INTO language VALUES('PITC','Pitkern',100.0);
@@ -387,12 +387,12 @@ INSERT INTO language VALUES('WAFU','French',10.80000000000000072);
 INSERT INTO language VALUES('B','French',32.0);
 INSERT INTO language VALUES('PK','Sindhi',12.0);
 CREATE TABLE located
-(City VARCHAR(255),
-Province VARCHAR(255),
-Country VARCHAR(255),
-River VARCHAR(255),
-Lake VARCHAR(255),
-Sea VARCHAR(255));
+(City VARCHAR(1023),
+Province VARCHAR(1023),
+Country VARCHAR(1023),
+River VARCHAR(1023),
+Lake VARCHAR(1023),
+Sea VARCHAR(1023));
 INSERT INTO located VALUES('Suva','Fiji','FJI',NULL,NULL,'Pacific Ocean');
 INSERT INTO located VALUES('Oranjestad','Aruba','ARU',NULL,NULL,'Caribbean Sea');
 INSERT INTO located VALUES('Haifa','Haifa','IL',NULL,NULL,'Mediterranean Sea');
@@ -408,10 +408,10 @@ INSERT INTO located VALUES('Ingolstadt','Bayern','D','Donau',NULL,NULL);
 INSERT INTO located VALUES('Murmansk','Murmanskaya oblast','R',NULL,NULL,'Barents Sea');
 INSERT INTO located VALUES('Palikir','Micronesia','FSM',NULL,NULL,'Pacific Ocean');
 CREATE TABLE locatedOn
-(City VARCHAR(255),
-Province VARCHAR(255),
-Country VARCHAR(255),
-Island VARCHAR(255));
+(City VARCHAR(1023),
+Province VARCHAR(1023),
+Country VARCHAR(1023),
+Island VARCHAR(1023));
 INSERT INTO locatedOn VALUES('Fukuoka','Fukuoka','J','Kyushu');
 INSERT INTO locatedOn VALUES('Blitar','Indonesia','RI','Java');
 INSERT INTO locatedOn VALUES('City','Province','Coun','Island');
@@ -427,8 +427,8 @@ INSERT INTO locatedOn VALUES('Havana','Ciudad de la Habana','C','Cuba');
 INSERT INTO locatedOn VALUES('Samarinda','Indonesia','RI','Borneo');
 INSERT INTO locatedOn VALUES('Kyoto','Kyoto','J','Honshu');
 CREATE TABLE mergesWith
-(Sea1 VARCHAR(255),
-Sea2 VARCHAR(255));
+(Sea1 VARCHAR(1023),
+Sea2 VARCHAR(1023));
 INSERT INTO mergesWith VALUES('Sulawesi Sea','Sunda Sea');
 INSERT INTO mergesWith VALUES('North Sea','The Channel');
 INSERT INTO mergesWith VALUES('East China Sea','Yellow Sea');
@@ -444,15 +444,15 @@ INSERT INTO mergesWith VALUES('Kattegat','Skagerrak');
 INSERT INTO mergesWith VALUES('East China Sea','Pacific Ocean');
 INSERT INTO mergesWith VALUES('Pacific Ocean','Sea of Okhotsk');
 CREATE TABLE mountain
-(Name VARCHAR(255),
-Mountains VARCHAR(255),
+(Name VARCHAR(1023),
+Mountains VARCHAR(1023),
 Height DOUBLE,
-Type VARCHAR(255),
+Type VARCHAR(1023),
 Longitude DOUBLE,
 Latitude DOUBLE);
 CREATE TABLE mountainOnIsland
-(Mountain VARCHAR(255),
-Island VARCHAR(255));
+(Mountain VARCHAR(1023),
+Island VARCHAR(1023));
 INSERT INTO mountainOnIsland VALUES('Olympos','Cyprus');
 INSERT INTO mountainOnIsland VALUES('Snaefell','Iceland');
 INSERT INTO mountainOnIsland VALUES('La Soufriere','Basse-Terre');
@@ -468,11 +468,11 @@ INSERT INTO mountainOnIsland VALUES('Psiloritis','Kreta');
 INSERT INTO mountainOnIsland VALUES('Pico de los Nieves','Gran Canaria');
 INSERT INTO mountainOnIsland VALUES('Mauna Loa','Hawaii');
 CREATE TABLE organization
-(Abbreviation VARCHAR(255),
-Name VARCHAR(255),
-City VARCHAR(255),
-Country VARCHAR(255),
-Province VARCHAR(255),
+(Abbreviation VARCHAR(1023),
+Name VARCHAR(1023),
+City VARCHAR(1023),
+Country VARCHAR(1023),
+Province VARCHAR(1023),
 Established DATE);
 INSERT INTO organization VALUES('G-15','Group of 15','Geneva','CH','GE',NULL);
 INSERT INTO organization VALUES('G-19','Group of 19',NULL,NULL,NULL,'1975-10-01');
@@ -489,10 +489,10 @@ INSERT INTO organization VALUES('UPU','Universal Postal Union','Bern','CH','BE',
 INSERT INTO organization VALUES('Abbreviation','Name','City','Coun','Province','Established');
 INSERT INTO organization VALUES('CERN','European Organization for Nuclear Research','Geneva','CH','GE','1953-07-01');
 CREATE TABLE politics
-(Country VARCHAR(255),
+(Country VARCHAR(1023),
 Independence DATE,
-Dependent VARCHAR(255),
-Government VARCHAR(255));
+Dependent VARCHAR(1023),
+Government VARCHAR(1023));
 INSERT INTO politics VALUES('BZ','1981-09-21',NULL,'parliamentary democracy');
 INSERT INTO politics VALUES('HR','1991-06-25',NULL,'parliamentary democracy');
 INSERT INTO politics VALUES('OM','1650-01-01',NULL,'monarchy');
@@ -508,7 +508,7 @@ INSERT INTO politics VALUES('RCA','1960-08-13',NULL,'republic');
 INSERT INTO politics VALUES('IR','1979-04-01',NULL,'theocratic republic');
 INSERT INTO politics VALUES('TN','1956-03-20',NULL,'republic');
 CREATE TABLE population
-(Country VARCHAR(255),
+(Country VARCHAR(1023),
 Population_Growth DOUBLE,
 Infant_Mortality DOUBLE);
 INSERT INTO population VALUES('MAYO',3.319999999999999841,56.28999999999999915);
@@ -526,12 +526,12 @@ INSERT INTO population VALUES('TT',0.08000000000000000166,18.19999999999999929);
 INSERT INTO population VALUES('IR',2.209999999999999965,52.70000000000000284);
 INSERT INTO population VALUES('A',0.4099999999999999756,6.200000000000000177);
 CREATE TABLE province
-(Name VARCHAR(255),
-Country VARCHAR(255),
+(Name VARCHAR(1023),
+Country VARCHAR(1023),
 Population BIGINT,
 Area DOUBLE,
-Capital VARCHAR(255),
-CapProv VARCHAR(255));
+Capital VARCHAR(1023),
+CapProv VARCHAR(1023));
 INSERT INTO province VALUES('Ontario','CDN',10753573,1068580.0,'Toronto','Ontario');
 INSERT INTO province VALUES('Vienna','A',1583000,415.0,'Vienna','Vienna');
 INSERT INTO province VALUES('Luxembourg','B',234664,4441.0,'Arlon','Luxembourg');
@@ -547,8 +547,8 @@ INSERT INTO province VALUES('Santa Catarina','BR',4865090,95442.0,'Florianopolis
 INSERT INTO province VALUES('Khorasan','IR',6013200,313337.0,'Mashhad','Khorasan');
 INSERT INTO province VALUES('Valle de Cauca','CO',3027247,22140.0,'Cali','Valle de Cauca');
 CREATE TABLE religion
-(Country VARCHAR(255),
-Name VARCHAR(255),
+(Country VARCHAR(1023),
+Name VARCHAR(1023),
 Percentage DOUBLE);
 INSERT INTO religion VALUES('MYA','Buddhist',89.0);
 INSERT INTO religion VALUES('ROK','Buddhist',47.39999999999999858);
@@ -565,14 +565,14 @@ INSERT INTO religion VALUES('LB','Christian',10.0);
 INSERT INTO religion VALUES('RB','Christian',50.0);
 INSERT INTO religion VALUES('BRU','Muslim',63.0);
 CREATE TABLE river
-(Name VARCHAR(255),
-River VARCHAR(255),
-Lake VARCHAR(255),
-Sea VARCHAR(255),
+(Name VARCHAR(1023),
+River VARCHAR(1023),
+Lake VARCHAR(1023),
+Sea VARCHAR(1023),
 Length DOUBLE,
 SourceLongitude DOUBLE,
 SourceLatitude DOUBLE,
-Mountains VARCHAR(255),
+Mountains VARCHAR(1023),
 SourceAltitude DOUBLE,
 EstuaryLongitude DOUBLE,
 EstuaryLatitude DOUBLE);
@@ -591,7 +591,7 @@ INSERT INTO river VALUES('Vaal','Oranje',NULL,NULL,1251.0,30.0,-26.0,'Drakensber
 INSERT INTO river VALUES('Ganges',NULL,NULL,'Gulf of Bengal',2511.0,79.5,30.5,NULL,NULL,90.0,22.0);
 INSERT INTO river VALUES('Sobat','White Nile',NULL,NULL,740.0,NULL,NULL,NULL,NULL,31.64999999999999858,9.63000000000000079);
 CREATE TABLE sea
-(Name VARCHAR(255),
+(Name VARCHAR(1023),
 Depth DOUBLE);
 INSERT INTO sea VALUES('Skagerrak',725.0);
 INSERT INTO sea VALUES('Andaman Sea',3113.0);
@@ -608,8 +608,8 @@ INSERT INTO sea VALUES('Caribbean Sea',7240.0);
 INSERT INTO sea VALUES('Pacific Ocean',11034.0);
 INSERT INTO sea VALUES('Malakka Strait',104.0);
 CREATE TABLE target
-(Country VARCHAR(255),
-Target VARCHAR(255));
+(Country VARCHAR(1023),
+Target VARCHAR(1023));
 INSERT INTO target VALUES('DK','Christian');
 INSERT INTO target VALUES('CAYM','Christian');
 INSERT INTO target VALUES('ARM','Christian');

@@ -110,7 +110,7 @@ def parse_single_value(tokens: list[str], index: int) -> tuple[str, str, int]:
     # Replace call
     if tokens[index] == "replace":
         value, index = parse_replace_function(tokens, index + 1)
-        return ("replace" + value, "VARCHAR(255)", index)
+        return ("replace" + value, "VARCHAR(1023)", index)
 
     # Negative numbers
     if tokens[index] == "-":
@@ -164,7 +164,7 @@ def get_column_type(value: str) -> str:
     elif re.match(r"[\"\'][0-9]{4}-[0-9]{2}-[0-9]{2}[\"\']", value):
         return "DATE"
     elif value.startswith('"') or value.startswith("'"):
-        return "VARCHAR(255)"
+        return "VARCHAR(1023)"
     elif "." in value:
         return "DOUBLE"
     else:

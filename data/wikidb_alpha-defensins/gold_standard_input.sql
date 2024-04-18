@@ -1,17 +1,17 @@
 CREATE TABLE citation
-(label VARCHAR(255),
-description VARCHAR(255),
-pubmed_id VARCHAR(255),
-instance_of VARCHAR(255),
-title VARCHAR(255),
-published_in VARCHAR(255),
-volume VARCHAR(255),
-issue VARCHAR(255),
-publication_date VARCHAR(255),
-pages VARCHAR(255),
-author_name_string VARCHAR(255),
-language_of_work_or_name VARCHAR(255),
-doi VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+pubmed_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+title VARCHAR(1023),
+published_in VARCHAR(1023),
+volume VARCHAR(1023),
+issue VARCHAR(1023),
+publication_date VARCHAR(1023),
+pages VARCHAR(1023),
+author_name_string VARCHAR(1023),
+language_of_work_or_name VARCHAR(1023),
+doi VARCHAR(1023));
 INSERT INTO citation VALUES('Paneth cell trypsin is the processing enzyme for human defensin-5.','scientific article','12021776','scholarly article','Paneth cell trypsin is the processing enzyme for human defensin-5.','Nature Immunology','3','6.0','+2002-05-20T00:00:00Z','583-590','Dipankar Ghosh','English','10.1038/NI797');
 INSERT INTO citation VALUES('Defensins: endogenous antibiotic peptides from human leukocytes','scientific article published on January 1, 1992','1302183','scholarly article','Defensins: endogenous antibiotic peptides from human leukocytes','Ciba Foundation Symposium','171','nan','+1992-01-01T00:00:00Z','276–290; discussion 290-293','R. I. Lehrer','English','10.1002/9780470514344.CH16');
 INSERT INTO citation VALUES('Activity of alpha- and theta-defensins against primary isolates of HIV-1','scientific journal article','15210812','scholarly article','Activity of alpha- and theta-defensins against primary isolates of HIV-1','Journal of Immunology','173','1.0','+2004-07-01T00:00:00Z','515–520','Wei Wang','English','10.4049/JIMMUNOL.173.1.515');
@@ -23,15 +23,15 @@ INSERT INTO citation VALUES('Interactions between human defensins and lipid bila
 INSERT INTO citation VALUES('Crystal structure of defensin HNP-3, an amphiphilic dimer: mechanisms of membrane permeabilization','scientific article','2006422','scholarly article','Crystal structure of defensin HNP-3, an amphiphilic dimer: mechanisms of membrane permeabilization','Science','251','5000.0','+1991-03-22T00:00:00Z','1481-5','C P Hill','English','10.1126/SCIENCE.2006422');
 INSERT INTO citation VALUES('ADP ribosylation of human neutrophil peptide-1 regulates its biological properties','scientific article','12060767','scholarly article','ADP ribosylation of human neutrophil peptide-1 regulates its biological properties','Proceedings of the National Academy of Sciences of the United States of America','99','12.0','+2002-06-01T00:00:00Z','8231-8235','Gregorino Paone','English','10.1073/PNAS.122238899');
 CREATE TABLE alpha_defensins
-(label VARCHAR(255),
-description VARCHAR(255),
-has_parts VARCHAR(255),
-found_in_taxon VARCHAR(255),
-instance_of VARCHAR(255),
-part_of VARCHAR(255),
-cites_work VARCHAR(255),
-reactome_id VARCHAR(255),
-exact_match VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+has_parts VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+instance_of VARCHAR(1023),
+part_of VARCHAR(1023),
+cites_work VARCHAR(1023),
+reactome_id VARCHAR(1023),
+exact_match VARCHAR(1023));
 INSERT INTO alpha_defensins VALUES('HNP1-4 are stored in primary neutrophil granules','An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-1462003)','Defensins alpha 1-4 [Golgi lumen]','Homo sapiens','biological process','Alpha-defensins','Defensins. Natural peptide antibiotics of human neutrophils','R-HSA-1462003','https://identifiers.org/reactome:R-HSA-1462003');
 INSERT INTO alpha_defensins VALUES('pro-HD5 is cleaved by trypsin','An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-1461993)','Defensin alpha 5','Homo sapiens','biological process','Alpha-defensins','Paneth cell trypsin is the processing enzyme for human defensin-5.','R-HSA-1461993','https://identifiers.org/reactome:R-HSA-1461993');
 INSERT INTO alpha_defensins VALUES('pro-defensin alpha 5 is stored in Paneth cell granules','An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-1461995)','Defensin alpha 5','Homo sapiens','biological process','Alpha-defensins','Localization of human intestinal defensin 5 in Paneth cell granules','R-HSA-1461995','https://identifiers.org/reactome:R-HSA-1461995');

@@ -1,10 +1,10 @@
 CREATE TABLE awards_players
-(playerID VARCHAR(255),
-award VARCHAR(255),
+(playerID VARCHAR(1023),
+award VARCHAR(1023),
 year BIGINT,
-lgID VARCHAR(255),
-note VARCHAR(255),
-pos VARCHAR(255));
+lgID VARCHAR(1023),
+note VARCHAR(1023),
+pos VARCHAR(1023));
 INSERT INTO awards_players VALUES('hawkico01','All-NBA First Team',1969,'NBA',NULL,'F');
 INSERT INTO awards_players VALUES('howardw01','All-Defensive First Team',2011,'NBA',NULL,'C');
 INSERT INTO awards_players VALUES('lovebo01','All-Defensive Second Team',1973,'NBA',NULL,NULL);
@@ -61,10 +61,10 @@ INSERT INTO awards_players VALUES('collida01','All-Rookie First Team',2009,'NBA'
 INSERT INTO awards_players VALUES('duncati01','All-Defensive Second Team',2009,'NBA',NULL,NULL);
 INSERT INTO awards_players VALUES('piercpa01','Finals MVP',2007,'NBA',NULL,NULL);
 CREATE TABLE coaches
-(coachID VARCHAR(255),
+(coachID VARCHAR(1023),
 year BIGINT,
-tmID VARCHAR(255),
-lgID VARCHAR(255),
+tmID VARCHAR(1023),
+lgID VARCHAR(1023),
 stint BIGINT,
 won BIGINT,
 lost BIGINT,
@@ -131,13 +131,13 @@ draftYear BIGINT,
 draftRound BIGINT,
 draftSelection BIGINT,
 draftOverall BIGINT,
-tmID VARCHAR(255),
-firstName VARCHAR(255),
-lastName VARCHAR(255),
-suffixName VARCHAR(255),
-playerID VARCHAR(255),
-draftFrom VARCHAR(255),
-lgID VARCHAR(255));
+tmID VARCHAR(1023),
+firstName VARCHAR(1023),
+lastName VARCHAR(1023),
+suffixName VARCHAR(1023),
+playerID VARCHAR(1023),
+draftFrom VARCHAR(1023),
+lgID VARCHAR(1023));
 INSERT INTO draft VALUES(6783,1983,5,23,116,'PHI','Mike','Milligan',NULL,NULL,'Tennessee State','NBA');
 INSERT INTO draft VALUES(2665,1959,8,3,56,'PHW','Dave','Gunther',NULL,'gunthda01','Iowa','NBA');
 INSERT INTO draft VALUES(8756,2007,2,23,53,'POR','Demetris','Nichols',NULL,'nichode01','Syracuse','NBA');
@@ -194,12 +194,12 @@ INSERT INTO draft VALUES(6681,1983,1,14,14,'POR','Clyde','Drexler',NULL,'drexlcl
 INSERT INTO draft VALUES(1433,1975,7,0,0,'UTS','Tim','Van Blommesteyn',NULL,NULL,'Princeton','ABA');
 INSERT INTO draft VALUES(7127,1985,1,6,6,'SAC','Joe','Kleine',NULL,'kleinjo01','Arkansas','NBA');
 CREATE TABLE player_allstar
-(playerID VARCHAR(255),
-last_name VARCHAR(255),
-first_name VARCHAR(255),
+(playerID VARCHAR(1023),
+last_name VARCHAR(1023),
+first_name VARCHAR(1023),
 season_id BIGINT,
-conference VARCHAR(255),
-league_id VARCHAR(255),
+conference VARCHAR(1023),
+league_id VARCHAR(1023),
 games_played BIGINT,
 minutes BIGINT,
 points BIGINT,
@@ -273,32 +273,32 @@ INSERT INTO player_allstar VALUES('johnsma01','Johnson','Magic',1991,'West','NBA
 INSERT INTO player_allstar VALUES('golato01','Gola','Tom',1963,'East','NBA',1,7,1,NULL,NULL,0,1,NULL,NULL,NULL,NULL,0,0,2,1,NULL,NULL);
 INSERT INTO player_allstar VALUES('havlijo01','Havlicek','John',1970,'East','NBA',1,24,12,NULL,NULL,3,2,NULL,NULL,NULL,NULL,12,6,2,0,NULL,NULL);
 CREATE TABLE players
-(playerID VARCHAR(255),
-useFirst VARCHAR(255),
-firstName VARCHAR(255),
-middleName VARCHAR(255),
-lastName VARCHAR(255),
-nameGiven VARCHAR(255),
-fullGivenName VARCHAR(255),
-nameSuffix VARCHAR(255),
-nameNick VARCHAR(255),
-pos VARCHAR(255),
+(playerID VARCHAR(1023),
+useFirst VARCHAR(1023),
+firstName VARCHAR(1023),
+middleName VARCHAR(1023),
+lastName VARCHAR(1023),
+nameGiven VARCHAR(1023),
+fullGivenName VARCHAR(1023),
+nameSuffix VARCHAR(1023),
+nameNick VARCHAR(1023),
+pos VARCHAR(1023),
 firstseason BIGINT,
 lastseason BIGINT,
 height DOUBLE,
 weight BIGINT,
-college VARCHAR(255),
-collegeOther VARCHAR(255),
+college VARCHAR(1023),
+collegeOther VARCHAR(1023),
 birthDate DATE,
-birthCity VARCHAR(255),
-birthState VARCHAR(255),
-birthCountry VARCHAR(255),
-highSchool VARCHAR(255),
-hsCity VARCHAR(255),
-hsState VARCHAR(255),
-hsCountry VARCHAR(255),
+birthCity VARCHAR(1023),
+birthState VARCHAR(1023),
+birthCountry VARCHAR(1023),
+highSchool VARCHAR(1023),
+hsCity VARCHAR(1023),
+hsState VARCHAR(1023),
+hsCountry VARCHAR(1023),
 deathDate DATE,
-race VARCHAR(255));
+race VARCHAR(1023));
 INSERT INTO players VALUES('spectar01','Art','Arthur','Edward','Spector',NULL,NULL,NULL,'Art, Speed','F',0,0,76.0,200,'Villanova',NULL,'1920-10-17','Philadelphia','PA','USA','Bartram','Philadelphia','PA','USA','1987-06-18','W');
 INSERT INTO players VALUES('knoblbu01',NULL,'Bernard',NULL,'Knoblauch',NULL,NULL,NULL,'Buzz','F',0,0,73.0,170,'Carroll (WI)',NULL,'0000-00-00',NULL,NULL,NULL,'Tomah','Tomah','WI','USA','0000-00-00','W');
 INSERT INTO players VALUES('nostrge01','George','George','Thomas','Nostrand',NULL,NULL,NULL,NULL,'C-F',0,0,80.0,195,'Wyoming','High Point','1924-01-25','Uniondale','NY','USA','Uniondale','Uniondale','NY','USA','1981-11-08','W');
@@ -356,15 +356,15 @@ INSERT INTO players VALUES('freemga01','Gary','Gary','C.','Freeman',NULL,NULL,NU
 INSERT INTO players VALUES('forreba01','Bayard','Bayard',NULL,'Forrest',NULL,NULL,NULL,NULL,'C',0,0,82.0,235,'Grand Canyon',NULL,'1954-07-08','San Jose','CA','USA','Bandon','Bandon','OR','USA','0000-00-00','W');
 CREATE TABLE teams
 (year BIGINT,
-lgID VARCHAR(255),
-tmID VARCHAR(255),
-franchID VARCHAR(255),
-confID VARCHAR(255),
-divID VARCHAR(255),
+lgID VARCHAR(1023),
+tmID VARCHAR(1023),
+franchID VARCHAR(1023),
+confID VARCHAR(1023),
+divID VARCHAR(1023),
 rank BIGINT,
 confRank BIGINT,
-playoff VARCHAR(255),
-name VARCHAR(255),
+playoff VARCHAR(1023),
+name VARCHAR(1023),
 o_fgm BIGINT,
 o_ftm BIGINT,
 o_pts BIGINT,
@@ -376,7 +376,7 @@ awayLost BIGINT,
 won BIGINT,
 lost BIGINT,
 games BIGINT,
-arena VARCHAR(255));
+arena VARCHAR(1023));
 INSERT INTO teams VALUES(1996,'NBA','HOU','HOU','WC','MW',2,3,'CF','Houston Rockets',3037,1503,8248,7881,30,11,27,14,57,25,82,'The Summit');
 INSERT INTO teams VALUES(1983,'NBA','POR','POR','WC','PC',2,3,'C1','Portland Trail Blazers',3632,1988,9277,8986,33,8,15,26,48,34,82,'Memorial Coliseum');
 INSERT INTO teams VALUES(1964,'NBA','BAL','WAS',NULL,'WD',3,0,'DF','Baltimore Bullets',3421,2245,9087,9264,23,14,12,19,37,43,80,'Baltimore Civic Center');
@@ -435,10 +435,10 @@ INSERT INTO teams VALUES(1941,'NBL','SHE','SHE',NULL,NULL,5,0,NULL,'Sheboygan Re
 CREATE TABLE awards_coaches
 (id BIGINT,
 year BIGINT,
-coachID VARCHAR(255),
-award VARCHAR(255),
-lgID VARCHAR(255),
-note VARCHAR(255));
+coachID VARCHAR(1023),
+award VARCHAR(1023),
+lgID VARCHAR(1023),
+note VARCHAR(1023));
 INSERT INTO awards_coaches VALUES(52,2002,'popovgr01','NBA Coach of the Year','NBA',NULL);
 INSERT INTO awards_coaches VALUES(23,1974,'johnsph01','NBA Coach of the Year','NBA',NULL);
 INSERT INTO awards_coaches VALUES(37,1987,'moedo01','NBA Coach of the Year','NBA',NULL);
@@ -496,11 +496,11 @@ INSERT INTO awards_coaches VALUES(60,2010,'thiboto01','NBA Coach of the Year','N
 INSERT INTO awards_coaches VALUES(6,1967,'cazzevi01','ABA Coach of the Year','ABA',NULL);
 CREATE TABLE players_teams
 (id BIGINT,
-playerID VARCHAR(255),
+playerID VARCHAR(1023),
 year BIGINT,
 stint BIGINT,
-tmID VARCHAR(255),
-lgID VARCHAR(255),
+tmID VARCHAR(1023),
+lgID VARCHAR(1023),
 GP BIGINT,
 GS BIGINT,
 minutes BIGINT,
@@ -537,7 +537,7 @@ PostftAttempted BIGINT,
 PostftMade BIGINT,
 PostthreeAttempted BIGINT,
 PostthreeMade BIGINT,
-note VARCHAR(255));
+note VARCHAR(1023));
 INSERT INTO players_teams VALUES(20140,'steveba01',1992,1,'GSW','NBA',2,0,6,2,2,0,2,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
 INSERT INTO players_teams VALUES(10270,'jaricma01',2004,1,'LAC','NBA',50,0,1656,493,20,141,161,303,84,17,98,107,457,189,82,59,151,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
 INSERT INTO players_teams VALUES(12869,'luety01',2003,1,'ORL','NBA',76,0,2332,799,26,161,187,317,61,5,124,185,714,309,131,101,209,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL);
@@ -596,12 +596,12 @@ INSERT INTO players_teams VALUES(18245,'rosenno01',1947,0,'NOL','PBLA',8,0,0,101
 CREATE TABLE series_post
 (id BIGINT,
 year BIGINT,
-round VARCHAR(255),
-series VARCHAR(255),
-tmIDWinner VARCHAR(255),
-lgIDWinner VARCHAR(255),
-tmIDLoser VARCHAR(255),
-lgIDLoser VARCHAR(255),
+round VARCHAR(1023),
+series VARCHAR(1023),
+tmIDWinner VARCHAR(1023),
+lgIDWinner VARCHAR(1023),
+tmIDLoser VARCHAR(1023),
+lgIDLoser VARCHAR(1023),
 W BIGINT,
 L BIGINT);
 INSERT INTO series_post VALUES(484,1996,'CSF','M','HOU','NBA','SEA','NBA',4,3);

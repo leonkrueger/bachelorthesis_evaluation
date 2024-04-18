@@ -1,8 +1,8 @@
 CREATE TABLE candidate
 (Candidate_ID BIGINT,
 People_ID BIGINT,
-Poll_Source VARCHAR(255),
-Date VARCHAR(255),
+Poll_Source VARCHAR(1023),
+Date VARCHAR(1023),
 Support_rate DOUBLE,
 Consider_rate DOUBLE,
 Oppose_rate DOUBLE,
@@ -15,9 +15,9 @@ INSERT INTO candidate VALUES(5,7,'Newsweek Poll','Nov 9–10, 2006',0.2399999999
 INSERT INTO candidate VALUES(3,4,'FOX News/Opinion Dynamics Poll','Feb 13–14, 2007',0.1799999999999999934,0.3400000000000000244,0.4400000000000000022,0.2999999999999999889);
 CREATE TABLE people
 (People_ID BIGINT,
-Sex VARCHAR(255),
-Name VARCHAR(255),
-Date_of_Birth VARCHAR(255),
+Sex VARCHAR(1023),
+Name VARCHAR(1023),
+Date_of_Birth VARCHAR(1023),
 Height DOUBLE,
 Weight DOUBLE);
 INSERT INTO people VALUES(1,'M','Hubert Henno','06.10.1976',188.0,83.0);

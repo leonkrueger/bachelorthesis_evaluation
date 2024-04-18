@@ -1,12 +1,12 @@
 CREATE TABLE time_zone
-(label VARCHAR(255),
-description VARCHAR(255),
-instance_of VARCHAR(255),
-commons_category VARCHAR(255),
+(label VARCHAR(1023),
+description VARCHAR(1023),
+instance_of VARCHAR(1023),
+commons_category VARCHAR(1023),
 utc_timezone_offset DOUBLE,
-image VARCHAR(255),
-freebase_id VARCHAR(255),
-said_to_be_the_same_as VARCHAR(255));
+image VARCHAR(1023),
+freebase_id VARCHAR(1023),
+said_to_be_the_same_as VARCHAR(1023));
 INSERT INTO time_zone VALUES('Eastern Time Zone','time zone observing UTC−05:00 during standard time and UTC−04:00 during daylight saving time','time zone','Eastern Time (U.S.)',-5.0,'Timezones2008 UTC-5 gray.png','/m/02hcv8','UTC−05:00');
 INSERT INTO time_zone VALUES('Central Time Zone','time zone in North America','time zone','Central Time (U.S.)',-6.0,'Timezones2008 UTC-6 gray.png','/m/02fqwt','UTC−06:00');
 INSERT INTO time_zone VALUES('UTC−05:00','identifier for a time offset from UTC of −5','time zone named for a UTC offset','UTC−05:00',-5.0,'Timezones2008 UTC-5 gray.png','/m/02_37z','Central Daylight Time');
@@ -20,36 +20,36 @@ INSERT INTO time_zone VALUES('Pacific Time Zone','time zone in North America','t
 INSERT INTO time_zone VALUES('UTC−06:00','Identifier for a time offset from UTC of −6','time zone named for a UTC offset','UTC−06:00',-6.0,'Timezones2008 UTC-6 gray.png','/m/07f584','Mountain Time Zone');
 INSERT INTO time_zone VALUES('UTC+03:00','identifier for a time offset from UTC of +3','time zone named for a UTC offset','UTC+03:00',3.0,'Timezones2008 UTC+3 gray.png','/m/0731l2','nan');
 CREATE TABLE place_of_birth
-(label VARCHAR(255),
-description VARCHAR(255),
-country VARCHAR(255),
-located_in_the_administrative_territorial_entity VARCHAR(255),
-coordinate_location VARCHAR(255),
-topics_main_category VARCHAR(255),
-freebase_id VARCHAR(255),
-instance_of VARCHAR(255),
-geonames_id VARCHAR(255),
-musicbrainz_area_id VARCHAR(255),
-commons_category VARCHAR(255),
-locator_map_image VARCHAR(255),
-image VARCHAR(255),
+(label VARCHAR(1023),
+description VARCHAR(1023),
+country VARCHAR(1023),
+located_in_the_administrative_territorial_entity VARCHAR(1023),
+coordinate_location VARCHAR(1023),
+topics_main_category VARCHAR(1023),
+freebase_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+geonames_id VARCHAR(1023),
+musicbrainz_area_id VARCHAR(1023),
+commons_category VARCHAR(1023),
+locator_map_image VARCHAR(1023),
+image VARCHAR(1023),
 population DOUBLE,
-category_of_associated_people VARCHAR(255),
+category_of_associated_people VARCHAR(1023),
 area DOUBLE,
-us_national_archives_identifier VARCHAR(255),
-archinform_location_id VARCHAR(255),
+us_national_archives_identifier VARCHAR(1023),
+archinform_location_id VARCHAR(1023),
 elevation_above_sea_level DOUBLE,
-library_of_congress_authority_id VARCHAR(255),
-whos_on_first_id VARCHAR(255),
-official_website VARCHAR(255),
+library_of_congress_authority_id VARCHAR(1023),
+whos_on_first_id VARCHAR(1023),
+official_website VARCHAR(1023),
 per_capita_income DOUBLE,
 number_of_households DOUBLE,
-national_library_of_israel_j9u_id VARCHAR(255),
-located_in_time_zone VARCHAR(255),
-inception VARCHAR(255),
-viaf_id VARCHAR(255),
-quora_topic_id VARCHAR(255),
-worldcat_identities_id VARCHAR(255));
+national_library_of_israel_j9u_id VARCHAR(1023),
+located_in_time_zone VARCHAR(1023),
+inception VARCHAR(1023),
+viaf_id VARCHAR(1023),
+quora_topic_id VARCHAR(1023),
+worldcat_identities_id VARCHAR(1023));
 INSERT INTO place_of_birth VALUES('Canada','country in North America','Canada','nan','56.0','Category:Canada','/m/0d060g','country','6251999.0','71bbafaa-e825-3e15-8ca9-017dcad1748b','Canada','CAN orthographic.svg','NASA astronaut Scott Kelly took this aurora image over Canada on Jan. 21, 2016 01.jpg',36991981.0,'Category:Canadian people',9984670.0,'10044701.0','3002.0',NULL,'n79007233','85633041.0','https://www.canada.ca',NULL,NULL,'9.870075525311052e+17','Newfoundland Time Zone','+1867-07-01T00:00:00Z','136600716.0','Canada','lccn-n79007233');
 INSERT INTO place_of_birth VALUES('Bisbee','city in and county seat of Cochise County, Arizona, United States','United States of America','Cochise County','31.448055555555555','Category:Bisbee, Arizona','/m/0qnrg','city in the United States','5284905.0','nan','Bisbee, Arizona','Cochise County Incorporated and Unincorporated areas Bisbee highlighted.svg','Bisbee Arizona.jpg',4923.0,'Category:People from Bisbee, Arizona',13.37162000000000006,'10039787.0','17756.0',1688.0,'n80153762','85917167.0','http://www.cityofbisbee.com',26325.0,2645.0,'9.870075641993052e+17','Mountain Time Zone','+1880-00-00T00:00:00Z','137912931.0','Bisbee-AZ','lccn-n80153762');
 INSERT INTO place_of_birth VALUES('Taganrog','port city in Rostov Oblast in southern Russia','Russia','Taganrogskiy Okrug','47.233333333333','Category:Taganrog','/m/04q9h1','subdivision of Russia','484907.0','09edef28-cda4-45c5-9dba-91eb500cfb70','Taganrog','nan','Port of Taganrog.jpg',250287.0,'Category:People from Taganrog',95.0,'nan','5420.0',30.0,'nan','102007289.0','http://www.tagancity.ru',NULL,NULL,'9.870075530808051e+17','UTC+03:00','+1698-01-01T00:00:00Z','nan','Taganrog-Russia','nan');
@@ -84,21 +84,21 @@ INSERT INTO place_of_birth VALUES('Millville','civil town in Grant County, Wisco
 INSERT INTO place_of_birth VALUES('Miami','second-largest city in Florida, United States of America','United States of America','Miami-Dade County','25.783333333333','Category:Miami','/m/0f2v0','city in the United States','4164138.0','4a9aeb42-3763-4234-8fb8-1167ac1dfdfe','Miami, Florida','Miami-Dade County Florida Incorporated and Unincorporated areas Miami Highlighted.svg','Downtown Miami aerial 2008.jpg',442241.0,'Category:People from Miami',143148642.0,'10046128.0','1805.0',2.0,'n81063248','85933669.0','https://www.miamigov.com/Home',31437.0,180676.0,'9.870075645740051e+17','Eastern Time Zone','+1825-01-01T00:00:00Z','153063179.0','Miami','lccn-no98026511');
 INSERT INTO place_of_birth VALUES('Beverly','city in Burlington County, New Jersey, United States','United States of America','Burlington County','40.0648','Category:Beverly, New Jersey','/m/0xl2j','city in New Jersey','5095691.0','d3388d4e-3df4-4870-b00e-d2bebce9285b','Beverly, New Jersey','Map of Burlington County highlighting Beverly.png','St. Stephen''s Beverly Exterior.jpg',2577.0,'nan',0.785000000000000031,'nan','6437.0',23.0,'n84201802','85975541.0','http://www.thecityofbeverly.com/',35033.0,822.0,'9.870075597971052e+17','Eastern Time Zone','+1850-03-05T00:00:00Z','138430230.0','Beverly-NJ','lccn-n84201802');
 CREATE TABLE author
-(label VARCHAR(255),
-description VARCHAR(255),
-library_of_congress_authority_id VARCHAR(255),
-viaf_id VARCHAR(255),
-isni VARCHAR(255),
-country_of_citizenship VARCHAR(255),
-instance_of VARCHAR(255),
-date_of_birth VARCHAR(255),
-freebase_id VARCHAR(255),
-given_name VARCHAR(255),
-place_of_birth VARCHAR(255),
-occupation VARCHAR(255),
-internet_speculative_fiction_database_author_id VARCHAR(255),
-sex_or_gender VARCHAR(255),
-worldcat_identities_id VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+library_of_congress_authority_id VARCHAR(1023),
+viaf_id VARCHAR(1023),
+isni VARCHAR(1023),
+country_of_citizenship VARCHAR(1023),
+instance_of VARCHAR(1023),
+date_of_birth VARCHAR(1023),
+freebase_id VARCHAR(1023),
+given_name VARCHAR(1023),
+place_of_birth VARCHAR(1023),
+occupation VARCHAR(1023),
+internet_speculative_fiction_database_author_id VARCHAR(1023),
+sex_or_gender VARCHAR(1023),
+worldcat_identities_id VARCHAR(1023));
 INSERT INTO author VALUES('P. Djèlí Clark','American historian and writer','no2018111411','27153530861648700131','nan','United States of America','human','+1971-06-11T00:00:00Z','nan','nan','Queens','writer','155198.0','male','lccn-no2018111411');
 INSERT INTO author VALUES('Ursula K. Le Guin','American fantasy and science fiction author (1929-2018)','n78095474','101734435','0000 0001 2145 7729','United States of America','human','+1929-10-21T00:00:00Z','/m/07w21','Ursula','Berkeley','writer','37.0','female','lccn-n78095474');
 INSERT INTO author VALUES('Peter S. Beagle','American writer','n50005710','110010491','0000 0001 0934 0384','United States of America','human','+1939-04-20T00:00:00Z','/m/03299v','Peter','Manhattan','writer','1039.0','male','lccn-n50005710');
@@ -147,11 +147,11 @@ INSERT INTO author VALUES('Samuel R. Delany','American author and literary criti
 INSERT INTO author VALUES('Arthur D. Howden Smith','American historian, writer and journalist','n84140791','62558863','0000 0004 4458 1273','United States of America','human','+1887-12-29T00:00:00Z','/m/05qdcrr','Arthur','New York City','historian','15211.0','male','lccn-n84140791');
 INSERT INTO author VALUES('Harold Lamb','Historian, screenwriter, short story writer, novelist','n50037864','51824770','0000 0001 2279 8808','United States of America','human','+1892-09-01T00:00:00Z','/m/07g9m_','Harold','Alpine','historian','19453.0','male','lccn-n50037864');
 CREATE TABLE novelette
-(label VARCHAR(255),
-description VARCHAR(255),
-author VARCHAR(255),
-instance_of VARCHAR(255),
-publication_date VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+author VARCHAR(1023),
+instance_of VARCHAR(1023),
+publication_date VARCHAR(1023));
 INSERT INTO novelette VALUES('Coming of Age in Karhide','science fiction novelette by Ursula K. Le Guin, 1995 in New Legends','Ursula K. Le Guin','novelette','+1995-00-00T00:00:00Z');
 INSERT INTO novelette VALUES('Pride and Prometheus','novelette by John Kessel','John Kessel','novelette','+2008-01-00T00:00:00Z');
 INSERT INTO novelette VALUES('What We Found','novelette by Geoff Ryman','Geoff Ryman','novelette','+2011-09-00T00:00:00Z');

@@ -1,12 +1,12 @@
 CREATE TABLE expressed_in
-(label VARCHAR(255),
-description VARCHAR(255),
-instance_of VARCHAR(255),
-uberon_id VARCHAR(255),
-subclass_of VARCHAR(255),
-microsoft_academic_id VARCHAR(255),
-foundational_model_of_anatomy_id VARCHAR(255),
-openalex_id VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+instance_of VARCHAR(1023),
+uberon_id VARCHAR(1023),
+subclass_of VARCHAR(1023),
+microsoft_academic_id VARCHAR(1023),
+foundational_model_of_anatomy_id VARCHAR(1023),
+openalex_id VARCHAR(1023));
 INSERT INTO expressed_in VALUES('pineal gland','small endocrine gland found in most vertebrates, which produces melatonin; in humans, located in the epithalamus, in a groove where the two halves of the thalamus join; its shape and size resembles a pine nut, after which it is named','brain region','1905.0','organ component gland','2780059843.0','62033.0','C2780059843');
 INSERT INTO expressed_in VALUES('prostate','gland of the male reproductive system in most mammals','organ type','2367.0','male accessory sex gland','2776235491.0','9600.0','C3017587882');
 INSERT INTO expressed_in VALUES('bone marrow','cells and soft materials in the hollow space of long bones','tissue','2371.0','tissue','2780007613.0','9608.0','C2909801294');
@@ -32,12 +32,12 @@ INSERT INTO expressed_in VALUES('ganglionic eminence','developmental brain struc
 INSERT INTO expressed_in VALUES('embryo','multicellular diploid eukaryote in its earliest stage of development','developmental stage of animal','922.0','organism','196843134.0','nan','C196843134');
 INSERT INTO expressed_in VALUES('spermatocyte','Sperm precursor cell that undergoes meiosis','cell type','nan','gametocyte','2776053789.0','84049.0','C2776053789');
 CREATE TABLE molecular_function
-(label VARCHAR(255),
-description VARCHAR(255),
-subclass_of VARCHAR(255),
-gene_ontology_id VARCHAR(255),
-exact_match VARCHAR(255),
-instance_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+subclass_of VARCHAR(1023),
+gene_ontology_id VARCHAR(1023),
+exact_match VARCHAR(1023),
+instance_of VARCHAR(1023));
 INSERT INTO molecular_function VALUES('endoribonuclease activity, cleaving siRNA-paired mRNA','Catalysis of the endonucleolytic cleavage of the mRNA in a double-stranded RNA molecule formed by the base pairing of an mRNA with an siRNA, yielding 5''-phosphomonoesters.','endoribonuclease activity, producing 5''-phosphomonoesters','GO:0070551','http://purl.obolibrary.org/obo/GO_0070551','molecular function');
 INSERT INTO molecular_function VALUES('protein domain specific binding','Interacting selectively and non-covalently with a specific domain of a protein.','protein binding','GO:0019904','http://purl.obolibrary.org/obo/GO_0019904','molecular function');
 INSERT INTO molecular_function VALUES('DNA binding','Any molecular function by which a gene product interacts selectively and non-covalently with DNA (deoxyribonucleic acid).','nucleic acid binding','GO:0003677','http://purl.obolibrary.org/obo/GO_0003677','molecular function');
@@ -55,12 +55,12 @@ INSERT INTO molecular_function VALUES('protein binding','Interacting selectively
 INSERT INTO molecular_function VALUES('RNA 7-methylguanosine cap binding','Interacting selectively and non-covalently with the 7-methylguanosine group added cotranscriptionally to the 5'' end of RNA molecules transcribed by polymerase II.','RNA cap binding','GO:0000340','http://purl.obolibrary.org/obo/GO_0000340','molecular function');
 INSERT INTO molecular_function VALUES('RNA polymerase II complex binding','Interacting selectively and non-covalently with RNA polymerase II core enzyme, a multisubunit eukaryotic nuclear RNA polymerase typically composed of twelve subunits.','RNA polymerase core enzyme binding','GO:0000993','http://purl.obolibrary.org/obo/GO_0000993','molecular function');
 CREATE TABLE biological_process
-(label VARCHAR(255),
-description VARCHAR(255),
-gene_ontology_id VARCHAR(255),
-exact_match VARCHAR(255),
-instance_of VARCHAR(255),
-subclass_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+gene_ontology_id VARCHAR(1023),
+exact_match VARCHAR(1023),
+instance_of VARCHAR(1023),
+subclass_of VARCHAR(1023));
 INSERT INTO biological_process VALUES('germ cell development','The process whose specific outcome is the progression of an immature germ cell over time, from its formation to the mature structure (gamete). A germ cell is any reproductive cell in a multicellular organism.','GO:0007281','http://purl.obolibrary.org/obo/GO_0007281','biological process','developmental process involved in reproduction');
 INSERT INTO biological_process VALUES('cell differentiation','process in which relatively unspecialized cells acquire specialized features','GO:0030154','http://purl.obolibrary.org/obo/GO_0030154','biological process','cellular developmental process');
 INSERT INTO biological_process VALUES('miRNA-mediated gene silencing by inhibition of translation','The process in which microRNAs (miRNAs) block the translation of target mRNAs into proteins. Once incorporated into a RNA-induced silencing complex (RISC), a miRNA will typically mediate repression of translation if the miRNA imperfectly base-pairs w','GO:0035278','http://purl.obolibrary.org/obo/GO_0035278','biological process','negative regulation of translation');
@@ -88,18 +88,18 @@ INSERT INTO biological_process VALUES('mRNA destabilization-mediated gene silenc
 INSERT INTO biological_process VALUES('RNA processing','Any process involved in the conversion of one or more primary RNA transcripts into one or more mature RNA molecules.','GO:0006396','http://purl.obolibrary.org/obo/GO_0006396','biological process','RNA metabolic process');
 INSERT INTO biological_process VALUES('spermatogenesis','process of formation of spermatozoa germ cells','GO:0007283','http://purl.obolibrary.org/obo/GO_0007283','biological process','male gamete generation');
 CREATE TABLE encodes
-(label VARCHAR(255),
-description VARCHAR(255),
-ensembl_protein_id VARCHAR(255),
-encoded_by VARCHAR(255),
-uniprot_protein_id VARCHAR(255),
-biological_process VARCHAR(255),
-molecular_function VARCHAR(255),
-has_parts VARCHAR(255),
-found_in_taxon VARCHAR(255),
-refseq_protein_id VARCHAR(255),
-instance_of VARCHAR(255),
-part_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+ensembl_protein_id VARCHAR(1023),
+encoded_by VARCHAR(1023),
+uniprot_protein_id VARCHAR(1023),
+biological_process VARCHAR(1023),
+molecular_function VARCHAR(1023),
+has_parts VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+refseq_protein_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+part_of VARCHAR(1023));
 INSERT INTO encodes VALUES('Piwi-like RNA-mediated gene silencing 2','Protein found in Danio rerio','ENSDARP00000114406','piwil2','A2CEI6','nan','nan','PAZ domain','Danio rerio','NP_001073668','protein','Ribonuclease H superfamily');
 INSERT INTO encodes VALUES('Piwi like RNA-mediated gene silencing 4','mammalian protein found in Homo sapiens','ENSP00000299001','PIWIL4','Q7Z3Z4','multicellular organism development','piRNA binding','Piwi domain','Homo sapiens','NP_689644','protein','Ribonuclease H superfamily');
 INSERT INTO encodes VALUES('Argonaute RISC component 4','Protein found in Danio rerio','ENSDARP00000131528','ago4','K4IAH1','regulation of translation','nucleic acid binding','Protein argonaute, Mid domain','Danio rerio','NP_001239488','protein','Ribonuclease H superfamily');
@@ -158,11 +158,11 @@ INSERT INTO encodes VALUES('Piwi like RNA-mediated gene silencing 3','mammalian 
 INSERT INTO encodes VALUES('Protein argonaute CELE_T23D8.7','protein found in Caenorhabditis elegans','T23D8.7','alg-5','Q9XVI3','gene silencing','nucleic acid binding','Protein argonaute, Mid domain','Caenorhabditis elegans','NP_492643','protein','Ribonuclease H superfamily');
 INSERT INTO encodes VALUES('Argonaute RISC catalytic component 3','mammalian protein found in Rattus norvegicus','nan','Ago3','F1LUS2','mRNA catabolic process','nucleic acid binding','Protein argonaute, N-terminal','brown rat','NP_001258122','protein','Ribonuclease H superfamily');
 CREATE TABLE chromosome
-(label VARCHAR(255),
-description VARCHAR(255),
-refseq_genome_id VARCHAR(255),
-found_in_taxon VARCHAR(255),
-instance_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+refseq_genome_id VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+instance_of VARCHAR(1023));
 INSERT INTO chromosome VALUES('Caenorhabditis elegans chromosome X','chromosome','NC_003284','Caenorhabditis elegans','chromosome');
 INSERT INTO chromosome VALUES('Rattus norvegicus chromosome 5','mammalian chromosome','NC_051340','brown rat','chromosome');
 INSERT INTO chromosome VALUES('Danio rerio chromosome 8','chromosome','NC_007119','Danio rerio','chromosome');
@@ -194,21 +194,21 @@ INSERT INTO chromosome VALUES('human chromosome 22','human chromosome','NC_00002
 INSERT INTO chromosome VALUES('rat chromosome 5','Rattus norvegicus chromosome','NC_005104','brown rat','chromosome');
 INSERT INTO chromosome VALUES('Rattus norvegicus chromosome 15','mammalian chromosome','NC_051350','brown rat','chromosome');
 CREATE TABLE encoded_by
-(label VARCHAR(255),
-description VARCHAR(255),
-entrez_gene_id VARCHAR(255),
-ensembl_gene_id VARCHAR(255),
-homologene_id VARCHAR(255),
-refseq_rna_id VARCHAR(255),
-ensembl_transcript_id VARCHAR(255),
-encodes VARCHAR(255),
-found_in_taxon VARCHAR(255),
-strand_orientation VARCHAR(255),
-genomic_end VARCHAR(255),
-genomic_start VARCHAR(255),
-chromosome VARCHAR(255),
-instance_of VARCHAR(255),
-expressed_in VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+entrez_gene_id VARCHAR(1023),
+ensembl_gene_id VARCHAR(1023),
+homologene_id VARCHAR(1023),
+refseq_rna_id VARCHAR(1023),
+ensembl_transcript_id VARCHAR(1023),
+encodes VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+strand_orientation VARCHAR(1023),
+genomic_end VARCHAR(1023),
+genomic_start VARCHAR(1023),
+chromosome VARCHAR(1023),
+instance_of VARCHAR(1023),
+expressed_in VARCHAR(1023));
 INSERT INTO encoded_by VALUES('sago-1','protein-coding gene in the species Caenorhabditis elegans','179016','WBGene00019666','43260.0','NM_072209','K12B6.1.1','Piwi-like protein CELE_K12B6.1','Caenorhabditis elegans','forward strand','6308337.0','6303771.0','Caenorhabditis elegans chromosome V','gene','material anatomical entity');
 INSERT INTO encoded_by VALUES('prg-1','protein-coding gene in the species Caenorhabditis elegans','172515','WBGene00004178','37963.0','NM_059720','D2030.6.1','Piwi-like protein CELE_D2030.6','Caenorhabditis elegans','reverse strand','7588367.0','7585324.0','Caenorhabditis elegans chromosome I','gene','embryo');
 INSERT INTO encoded_by VALUES('alg-4','protein-coding gene in the species Caenorhabditis elegans','176400','WBGene00006449','119397.0','NM_066790','ZK757.3a.1','Putative protein tag-76 CELE_ZK757.3','Caenorhabditis elegans','reverse strand','9891458.0','9887210.0','Caenorhabditis elegans chromosome III','gene','nan');
@@ -267,17 +267,17 @@ INSERT INTO encoded_by VALUES('Ago1','protein-coding gene in the species Rattus 
 INSERT INTO encoded_by VALUES('Piwil4','protein-coding gene in the species Mus musculus','330890','ENSMUSG00000036912','45122.0','NM_177905','ENSMUST00000076946','Piwi-like RNA-mediated gene silencing 4','house mouse','reverse strand','14652036.0','14607526.0','mouse chromosome 9','gene','pineal gland');
 INSERT INTO encoded_by VALUES('aub','protein-coding gene in the species Drosophila melanogaster','34524','FBgn0000146','37963.0','NM_001103674','FBtr0080165','Aubergine Dmel_CG6137','Drosophila melanogaster','reverse strand','11001476.0','10997819.0','Drosophila melanogaster chromosome 2L','gene','invertebrate nurse cell');
 CREATE TABLE paz_domain_superfamily
-(label VARCHAR(255),
-description VARCHAR(255),
-encoded_by VARCHAR(255),
-uniprot_protein_id VARCHAR(255),
-biological_process VARCHAR(255),
-molecular_function VARCHAR(255),
-has_parts VARCHAR(255),
-found_in_taxon VARCHAR(255),
-refseq_protein_id VARCHAR(255),
-instance_of VARCHAR(255),
-part_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+encoded_by VARCHAR(1023),
+uniprot_protein_id VARCHAR(1023),
+biological_process VARCHAR(1023),
+molecular_function VARCHAR(1023),
+has_parts VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+refseq_protein_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+part_of VARCHAR(1023));
 INSERT INTO paz_domain_superfamily VALUES('Dicer 1, ribonuclease III','mammalian protein found in Homo sapiens','DICER1','Q9UPY3','neuron projection morphogenesis','nucleotide binding','PAZ domain','Homo sapiens','NP_001182502','protein','PAZ domain superfamily');
 INSERT INTO paz_domain_superfamily VALUES('Argonaute RISC catalytic component 2','mammalian protein found in Rattus norvegicus','Ago2','Q9QZ81','regulation of transcription, DNA-templated','RNA 7-methylguanosine cap binding','Protein argonaute, N-terminal','brown rat','XP_038936149','protein','Ribonuclease H superfamily');
 INSERT INTO paz_domain_superfamily VALUES('Dicer 1 ribonuclease III','mammalian protein found in Rattus norvegicus','Dicer1','E9PU15','apoptotic DNA fragmentation','molecular function','Helicase superfamily 1/2, ATP-binding domain','brown rat','XP_008763126','protein','PAZ domain superfamily');

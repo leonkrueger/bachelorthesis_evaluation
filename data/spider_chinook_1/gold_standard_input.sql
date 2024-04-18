@@ -1,6 +1,6 @@
 CREATE TABLE Album
 (AlbumId BIGINT,
-Title VARCHAR(255),
+Title VARCHAR(1023),
 ArtistId BIGINT);
 INSERT INTO Album VALUES(66,'The Battle Rages On',58);
 INSERT INTO Album VALUES(85,'As Canções de Eu Tu Eles',27);
@@ -49,7 +49,7 @@ INSERT INTO Album VALUES(335,'J.S. Bach: Chaconne, Suite in E Minor, Partita in 
 INSERT INTO Album VALUES(218,'Voodoo Lounge',142);
 CREATE TABLE Artist
 (ArtistId BIGINT,
-Name VARCHAR(255));
+Name VARCHAR(1023));
 INSERT INTO Artist VALUES(22,'Led Zeppelin');
 INSERT INTO Artist VALUES(16,'Caetano Veloso');
 INSERT INTO Artist VALUES(210,'Hilary Hahn, Jeffrey Kahane, Los Angeles Chamber Orchestra & Margaret Batjer');
@@ -97,17 +97,17 @@ INSERT INTO Artist VALUES(8,'Audioslave');
 INSERT INTO Artist VALUES(258,'Les Arts Florissants & William Christie');
 CREATE TABLE Customer
 (CustomerId BIGINT,
-FirstName VARCHAR(255),
-LastName VARCHAR(255),
-Company VARCHAR(255),
-Address VARCHAR(255),
-City VARCHAR(255),
-State VARCHAR(255),
-Country VARCHAR(255),
-PostalCode VARCHAR(255),
-Phone VARCHAR(255),
-Fax VARCHAR(255),
-Email VARCHAR(255),
+FirstName VARCHAR(1023),
+LastName VARCHAR(1023),
+Company VARCHAR(1023),
+Address VARCHAR(1023),
+City VARCHAR(1023),
+State VARCHAR(1023),
+Country VARCHAR(1023),
+PostalCode VARCHAR(1023),
+Phone VARCHAR(1023),
+Fax VARCHAR(1023),
+Email VARCHAR(1023),
 SupportRepId BIGINT);
 INSERT INTO Customer VALUES(17,'Jack','Smith','Microsoft Corporation','1 Microsoft Way','Redmond','WA','USA','98052-8300','+1 (425) 882-8080','+1 (425) 882-8081','jacksmith@microsoft.com',5);
 INSERT INTO Customer VALUES(52,'Emma','Jones',NULL,'202 Hoxton Street','London',NULL,'United Kingdom','N1 5LH','+44 020 7707 0707',NULL,'emma_jones@hotmail.com',3);
@@ -156,20 +156,20 @@ INSERT INTO Customer VALUES(40,'Dominique','Lefebvre',NULL,'8, Rue Hanovre','Par
 INSERT INTO Customer VALUES(24,'Frank','Ralston',NULL,'162 E Superior Street','Chicago','IL','USA','60611','+1 (312) 332-3232',NULL,'fralston@gmail.com',3);
 CREATE TABLE Employee
 (EmployeeId BIGINT,
-LastName VARCHAR(255),
-FirstName VARCHAR(255),
-Title VARCHAR(255),
+LastName VARCHAR(1023),
+FirstName VARCHAR(1023),
+Title VARCHAR(1023),
 ReportsTo BIGINT,
 BirthDate DATETIME,
 HireDate DATETIME,
-Address VARCHAR(255),
-City VARCHAR(255),
-State VARCHAR(255),
-Country VARCHAR(255),
-PostalCode VARCHAR(255),
-Phone VARCHAR(255),
-Fax VARCHAR(255),
-Email VARCHAR(255));
+Address VARCHAR(1023),
+City VARCHAR(1023),
+State VARCHAR(1023),
+Country VARCHAR(1023),
+PostalCode VARCHAR(1023),
+Phone VARCHAR(1023),
+Fax VARCHAR(1023),
+Email VARCHAR(1023));
 INSERT INTO Employee VALUES(5,'Johnson','Steve','Sales Support Agent',2,'1965-03-03 00:00:00','2003-10-17 00:00:00','7727B 41 Ave','Calgary','AB','Canada','T3B 1Y7','1 (780) 836-9987','1 (780) 836-9543','steve@chinookcorp.com');
 INSERT INTO Employee VALUES(2,'Edwards','Nancy','Sales Manager',1,'1958-12-08 00:00:00','2002-05-01 00:00:00','825 8 Ave SW','Calgary','AB','Canada','T2P 2T3','+1 (403) 262-3443','+1 (403) 262-3322','nancy@chinookcorp.com');
 INSERT INTO Employee VALUES(3,'Peacock','Jane','Sales Support Agent',2,'1973-08-29 00:00:00','2002-04-01 00:00:00','1111 6 Ave SW','Calgary','AB','Canada','T2P 5M5','+1 (403) 262-3443','+1 (403) 262-6712','jane@chinookcorp.com');
@@ -180,7 +180,7 @@ INSERT INTO Employee VALUES(6,'Mitchell','Michael','IT Manager',1,'1973-07-01 00
 INSERT INTO Employee VALUES(4,'Park','Margaret','Sales Support Agent',2,'1947-09-19 00:00:00','2003-05-03 00:00:00','683 10 Street SW','Calgary','AB','Canada','T2P 5G3','+1 (403) 263-4423','+1 (403) 263-4289','margaret@chinookcorp.com');
 CREATE TABLE Genre
 (GenreId BIGINT,
-Name VARCHAR(255));
+Name VARCHAR(1023));
 INSERT INTO Genre VALUES(12,'Easy Listening');
 INSERT INTO Genre VALUES(21,'Drama');
 INSERT INTO Genre VALUES(14,'R&B/Soul');
@@ -210,11 +210,11 @@ CREATE TABLE Invoice
 (InvoiceId BIGINT,
 CustomerId BIGINT,
 InvoiceDate DATETIME,
-BillingAddress VARCHAR(255),
-BillingCity VARCHAR(255),
-BillingState VARCHAR(255),
-BillingCountry VARCHAR(255),
-BillingPostalCode VARCHAR(255),
+BillingAddress VARCHAR(1023),
+BillingCity VARCHAR(1023),
+BillingState VARCHAR(1023),
+BillingCountry VARCHAR(1023),
+BillingPostalCode VARCHAR(1023),
 Total DOUBLE);
 INSERT INTO Invoice VALUES(291,38,'2012-06-30 00:00:00','Barbarossastraße 19','Berlin',NULL,'Germany','10779',8.910000000000000142);
 INSERT INTO Invoice VALUES(150,39,'2010-10-16 00:00:00','4, Rue Milton','Paris',NULL,'France','75009',5.94000000000000039);
@@ -314,7 +314,7 @@ INSERT INTO InvoiceLine VALUES(1419,263,1620,0.989999999999999992,1);
 INSERT INTO InvoiceLine VALUES(529,96,3232,1.989999999999999992,1);
 CREATE TABLE MediaType
 (MediaTypeId BIGINT,
-Name VARCHAR(255));
+Name VARCHAR(1023));
 INSERT INTO MediaType VALUES(2,'Protected AAC audio file');
 INSERT INTO MediaType VALUES(4,'Purchased AAC audio file');
 INSERT INTO MediaType VALUES(5,'AAC audio file');
@@ -322,7 +322,7 @@ INSERT INTO MediaType VALUES(3,'Protected MPEG-4 video file');
 INSERT INTO MediaType VALUES(1,'MPEG audio file');
 CREATE TABLE Playlist
 (PlaylistId BIGINT,
-Name VARCHAR(255));
+Name VARCHAR(1023));
 INSERT INTO Playlist VALUES(7,'Movies');
 INSERT INTO Playlist VALUES(9,'Music Videos');
 INSERT INTO Playlist VALUES(4,'Audiobooks');
@@ -391,11 +391,11 @@ INSERT INTO PlaylistTrack VALUES(5,3139);
 INSERT INTO PlaylistTrack VALUES(3,2870);
 CREATE TABLE Track
 (TrackId BIGINT,
-Name VARCHAR(255),
+Name VARCHAR(1023),
 AlbumId BIGINT,
 MediaTypeId BIGINT,
 GenreId BIGINT,
-Composer VARCHAR(255),
+Composer VARCHAR(1023),
 Milliseconds BIGINT,
 Bytes BIGINT,
 UnitPrice DOUBLE);

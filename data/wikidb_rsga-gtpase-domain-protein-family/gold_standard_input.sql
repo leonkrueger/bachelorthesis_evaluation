@@ -1,12 +1,12 @@
 CREATE TABLE natural_product
-(label VARCHAR(255),
-description VARCHAR(255),
-taxon_name VARCHAR(255),
-parent_taxon VARCHAR(255),
-ncbi_taxonomy_id VARCHAR(255),
-instance_of VARCHAR(255),
-gram_staining VARCHAR(255),
-genbank_assembly_accession_number VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+taxon_name VARCHAR(1023),
+parent_taxon VARCHAR(1023),
+ncbi_taxonomy_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+gram_staining VARCHAR(1023),
+genbank_assembly_accession_number VARCHAR(1023));
 INSERT INTO natural_product VALUES('Pseudomonas syringae pv. tomato str. DC3000','nan','Pseudomonas syringae pv. tomato str. DC3000','Pseudomonas syringae pv. tomato','223283','taxon','Gram-negative bacteria','GCA_000007805.1');
 INSERT INTO natural_product VALUES('Salmonella enterica subsp. enterica serovar Typhi str. CT18','bacterial strain','Salmonella enterica subsp. enterica serovar Typhi str. CT18','Salmonella enterica','220341','strain','Gram-negative bacteria','GCA_000195995.1');
 INSERT INTO natural_product VALUES('Leptospira interrogans serovar Lai str. 56601','bacterial strain','Leptospira interrogans serovar Lai str. 56601','Leptospira interrogans','189518','strain','Gram-negative bacteria','GCA_000092565.1');
@@ -92,17 +92,17 @@ INSERT INTO natural_product VALUES('Clostridium botulinum A str. Hall','bacteria
 INSERT INTO natural_product VALUES('Bacteroides fragilis YCH46','bacterial strain','Bacteroides fragilis YCH46','Bacteroides fragilis','295405','strain','Gram-negative bacteria','GCA_000009925.1');
 INSERT INTO natural_product VALUES('Desulfovibrio vulgaris subsp. vulgaris str. Hildenborough','nan','Desulfovibrio vulgaris subsp. vulgaris str. Hildenborough','Desulfovibrio vulgaris subsp. vulgaris','882','taxon','Gram-negative bacteria','GCA_000195755.1');
 CREATE TABLE encoded_by
-(label VARCHAR(255),
-description VARCHAR(255),
-found_in_taxon VARCHAR(255),
-entrez_gene_id VARCHAR(255),
-subclass_of VARCHAR(255),
-encodes VARCHAR(255),
-ncbi_locus_tag VARCHAR(255),
-genomic_end VARCHAR(255),
-strand_orientation VARCHAR(255),
-instance_of VARCHAR(255),
-genomic_start VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+entrez_gene_id VARCHAR(1023),
+subclass_of VARCHAR(1023),
+encodes VARCHAR(1023),
+ncbi_locus_tag VARCHAR(1023),
+genomic_end VARCHAR(1023),
+strand_orientation VARCHAR(1023),
+instance_of VARCHAR(1023),
+genomic_start VARCHAR(1023));
 INSERT INTO encoded_by VALUES('ribosome-associated GTPase SSUBM407_1856','microbial gene found in Streptococcus suis BM407','Streptococcus suis BM407','8153242','gene','Ribosome-associated GTPase SSUBM407_1856','SSUBM407_1856','1953591','reverse strand','gene','1952716');
 INSERT INTO encoded_by VALUES('hypothetical protein NCgl0729','microbial gene found in Corynebacterium glutamicum ATCC 13032','Corynebacterium glutamicum ATCC 13032','1018758','gene','Hypothetical protein NCgl0729','NCgl0729','801088','reverse strand','gene','800204');
 INSERT INTO encoded_by VALUES('ribosome-associated GTPase VP2824','microbial gene found in Vibrio parahaemolyticus RIMD 2210633','Vibrio parahaemolyticus RIMD 2210633','1190387','gene','Ribosome-associated GTPase VP2824','VP2824','2991960','forward strand','gene','2990896');
@@ -200,19 +200,19 @@ INSERT INTO encoded_by VALUES('translation factor, GTPase lp_1620','microbial ge
 INSERT INTO encoded_by VALUES('ribosome-associated GTPase BC2005','microbial gene found in Bacillus cereus ATCC 14579','Bacillus cereus ATCC 14579','1204354','gene','Ribosome-associated GTPase BC2005','BC2005','1952374','forward strand','gene','1951325');
 INSERT INTO encoded_by VALUES('ribosome small subunit-dependent GTPase A MXAN_RS10985','microbial gene found in Myxococcus xanthus DK 1622','Myxococcus xanthus DK 1622','4105071','gene','Ribosome small subunit-dependent GTPase A MXAN_RS10985','MXAN_RS10985','2638648','forward strand','gene','2637563');
 CREATE TABLE rsga_gtpase_domain_protein_family
-(label VARCHAR(255),
-description VARCHAR(255),
-uniprot_protein_id VARCHAR(255),
-refseq_protein_id VARCHAR(255),
-found_in_taxon VARCHAR(255),
-subclass_of VARCHAR(255),
-encoded_by VARCHAR(255),
-has_parts VARCHAR(255),
-molecular_function VARCHAR(255),
-biological_process VARCHAR(255),
-cell_component VARCHAR(255),
-part_of VARCHAR(255),
-instance_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+uniprot_protein_id VARCHAR(1023),
+refseq_protein_id VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+subclass_of VARCHAR(1023),
+encoded_by VARCHAR(1023),
+has_parts VARCHAR(1023),
+molecular_function VARCHAR(1023),
+biological_process VARCHAR(1023),
+cell_component VARCHAR(1023),
+part_of VARCHAR(1023),
+instance_of VARCHAR(1023));
 INSERT INTO rsga_gtpase_domain_protein_family VALUES('GTPase YjeQ TDE1449','microbial protein found in Treponema denticola ATCC 35405','Q73MQ9','NP_972055','Treponema denticola ATCC 35405','protein','GTPase YjeQ TDE1449','RsgA GTPase domain','GTP binding','translational initiation','cytoplasm','Nucleic acid-binding, OB-fold','protein');
 INSERT INTO rsga_gtpase_domain_protein_family VALUES('Ribosome-associated GTPase BPSL2483','microbial protein found in Burkholderia pseudomallei K96243','Q63S39','YP_109078','Burkholderia pseudomallei K96243','protein','ribosome-associated GTPase BPSL2483','Circularly permuted (CP)-type guanine nucleotide-binding (G) domain','nucleotide binding','ribosome biogenesis','cytoplasm','Nucleic acid-binding, OB-fold','protein');
 INSERT INTO rsga_gtpase_domain_protein_family VALUES('Ribosome-associated GTPase ECs5140','microbial protein found in Escherichia coli O157:H7 str. Sakai','Q8XDP1','NP_313167','Escherichia coli O157:H7 str. Sakai','protein','ribosome-associated GTPase ECs5140','Circularly permuted (CP)-type guanine nucleotide-binding (G) domain','nan','nan','nan','Ribosome biogenesis GTPase RsgA','protein');

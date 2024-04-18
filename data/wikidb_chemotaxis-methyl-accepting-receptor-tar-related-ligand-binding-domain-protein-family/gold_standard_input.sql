@@ -1,12 +1,12 @@
 CREATE TABLE natural_product
-(label VARCHAR(255),
-description VARCHAR(255),
-taxon_name VARCHAR(255),
-parent_taxon VARCHAR(255),
-ncbi_taxonomy_id VARCHAR(255),
-instance_of VARCHAR(255),
-genbank_assembly_accession_number VARCHAR(255),
-gram_staining VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+taxon_name VARCHAR(1023),
+parent_taxon VARCHAR(1023),
+ncbi_taxonomy_id VARCHAR(1023),
+instance_of VARCHAR(1023),
+genbank_assembly_accession_number VARCHAR(1023),
+gram_staining VARCHAR(1023));
 INSERT INTO natural_product VALUES('Escherichia coli O83:H1 str. NRG 857C','bacterial strain','Escherichia coli O83:H1 str. NRG 857C','Escherichia coli','685038','strain','GCA_000183345.1','Gram-negative bacteria');
 INSERT INTO natural_product VALUES('Escherichia coli IAI39','bacterial strain','Escherichia coli IAI39','Escherichia coli','585057','strain','GCA_000026345.1','nan');
 INSERT INTO natural_product VALUES('Shigella dysenteriae Sd197','bacterial strain','Shigella dysenteriae Sd197','Shigella dysenteriae','300267','strain','GCA_000012005.1','Gram-negative bacteria');
@@ -30,17 +30,17 @@ INSERT INTO natural_product VALUES('Escherichia coli str. K-12 substr. MG1655','
 INSERT INTO natural_product VALUES('Rhodospirillum rubrum ATCC 11170','bacterial strain','Rhodospirillum rubrum ATCC 11170','Rhodospirillum rubrum','269796','strain','GCA_000013085.1','Gram-negative bacteria');
 INSERT INTO natural_product VALUES('Burkholderia pseudomallei K96243','bacterial strain','Burkholderia pseudomallei K96243','Burkholderia pseudomallei','272560','strain','GCA_000959285.1','Gram-negative bacteria');
 CREATE TABLE encoded_by
-(label VARCHAR(255),
-description VARCHAR(255),
-ncbi_locus_tag VARCHAR(255),
-subclass_of VARCHAR(255),
-found_in_taxon VARCHAR(255),
-entrez_gene_id VARCHAR(255),
-encodes VARCHAR(255),
-instance_of VARCHAR(255),
-genomic_end VARCHAR(255),
-strand_orientation VARCHAR(255),
-genomic_start VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+ncbi_locus_tag VARCHAR(1023),
+subclass_of VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+entrez_gene_id VARCHAR(1023),
+encodes VARCHAR(1023),
+instance_of VARCHAR(1023),
+genomic_end VARCHAR(1023),
+strand_orientation VARCHAR(1023),
+genomic_start VARCHAR(1023));
 INSERT INTO encoded_by VALUES('methyl-accepting chemotaxis sensory transducer EAE_15535','microbial gene found in Klebsiella aerogenes KCTC 2190','EAE_15535','gene','Enterobacter aerogenes KCTC 2190','10793328','Methyl-accepting chemotaxis sensory transducer EAE_15535','gene','3359965','forward strand','3358295');
 INSERT INTO encoded_by VALUES('methyl-accepting chemotaxis sensory transducer ECL_01991','microbial gene found in Enterobacter cloacae subsp. cloacae ATCC 13047','ECL_01991','gene','Enterobacter cloacae subsp. cloacae ATCC 13047','9124486','Methyl-accepting chemotaxis sensory transducer ECL_01991','gene','2028223','reverse strand','2026634');
 INSERT INTO encoded_by VALUES('methyl-accepting chemotaxis protein BN112_0390','microbial gene found in Bordetella bronchiseptica 253','BN112_0390','gene','Bordetella bronchiseptica 253','13977448','Methyl-accepting chemotaxis protein BN112_0390','gene','405689','forward strand','404079');
@@ -110,18 +110,18 @@ INSERT INTO encoded_by VALUES('methyl-accepting chemotaxis protein II ECs2596','
 INSERT INTO encoded_by VALUES('methyl-accepting chemotaxis protein II BP1385','microbial gene found in Bordetella pertussis Tohama I','BP1385','gene','Bordetella pertussis Tohama I','2665058','Methyl-accepting chemotaxis protein II BP1385','gene','1463733','forward strand','1462114');
 INSERT INTO encoded_by VALUES('Methyl-accepting chemotaxis protein BN117_2406','microbial gene found in Bordetella parapertussis Bpp5','BN117_2406','gene','Bordetella parapertussis Bpp5','13890443','Methyl-accepting chemotaxis protein BN117_2406','gene','2605982','forward strand','2603751');
 CREATE TABLE chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family
-(label VARCHAR(255),
-description VARCHAR(255),
-uniprot_protein_id VARCHAR(255),
-found_in_taxon VARCHAR(255),
-encoded_by VARCHAR(255),
-has_parts VARCHAR(255),
-molecular_function VARCHAR(255),
-cell_component VARCHAR(255),
-biological_process VARCHAR(255),
-instance_of VARCHAR(255),
-refseq_protein_id VARCHAR(255),
-part_of VARCHAR(255));
+(label VARCHAR(1023),
+description VARCHAR(1023),
+uniprot_protein_id VARCHAR(1023),
+found_in_taxon VARCHAR(1023),
+encoded_by VARCHAR(1023),
+has_parts VARCHAR(1023),
+molecular_function VARCHAR(1023),
+cell_component VARCHAR(1023),
+biological_process VARCHAR(1023),
+instance_of VARCHAR(1023),
+refseq_protein_id VARCHAR(1023),
+part_of VARCHAR(1023));
 INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family VALUES('Methyl-accepting chemotaxis protein BMA3389','microbial protein found in Burkholderia mallei ATCC 23344','A0A0H2WI55','Burkholderia mallei ATCC 23344','methyl-accepting chemotaxis protein BMA3389','Methyl-accepting chemotaxis protein (MCP) signalling domain','signal transducer activity','membrane','chemotaxis','protein','YP_104847','Methyl-accepting chemotaxis protein');
 INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family VALUES('Methyl-accepting chemotaxis protein III ECUMN_1668','microbial protein found in Escherichia coli UMN026','B7N4H9','Escherichia coli UMN026','methyl-accepting chemotaxis protein III ECUMN_1668','Methyl-accepting chemotaxis protein (MCP) signalling domain','signal transducer activity','integral component of membrane','signal transduction','protein','YP_002412409','Methyl-accepting chemotaxis protein');
 INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family VALUES('Methyl-accepting chemotaxis protein STM1626','microbial protein found in Salmonella enterica subsp. enterica serovar Typhimurium str. LT2','Q8ZPA9','Salmonella enterica subsp. enterica serovar Typhimurium str. LT2','methyl-accepting chemotaxis protein STM1626','Methyl-accepting chemotaxis protein (MCP) signalling domain','signal transducer activity','membrane','chemotaxis','protein','NP_460585','Methyl-accepting chemotaxis protein');

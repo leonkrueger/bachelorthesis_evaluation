@@ -72,7 +72,7 @@ for path in os.listdir(folder):
                 inserts_into_current_table = []
 
                 table_old_name, table_new_name, table_keys, attribute_data = (
-                    get_data_from_create_table(query, use_mysql_quotes=False)
+                    get_data_from_create_table(query)
                 )
                 primary_keys[table_new_name] = table_keys
 

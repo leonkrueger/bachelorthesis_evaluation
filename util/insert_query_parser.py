@@ -20,7 +20,9 @@ def parse_insert_query(query: str) -> dict[str, str | list[str] | list[list[str]
     query_data = {}
 
     tokens = [
-        token.string for token in tokenize.generate_tokens(io.StringIO(query).readline)
+        token.string
+        for token in tokenize.generate_tokens(io.StringIO(query).readline)
+        if token.string.strip() != ""
     ]
     if tokens[0].upper() != "INSERT":
         raise UnexpectedTokenException("INSERT", tokens[0])
@@ -47,7 +49,7 @@ def parse_insert_query(query: str) -> dict[str, str | list[str] | list[list[str]
 
 
 def parse_table(tokens: list[str], index: int) -> tuple[str, int]:
-    return (tokens[index], index + 1)
+    return parse_identifier(tokens, index)
 
 
 def parse_columns(tokens: list[str], index: int) -> tuple[list[str], int]:
@@ -55,18 +57,31 @@ def parse_columns(tokens: list[str], index: int) -> tuple[list[str], int]:
         raise UnexpectedTokenException("(", tokens[index])
 
     columns = []
-    columns.append(tokens[index + 1])
-    index += 2
+    column, index = parse_identifier(tokens, index + 1)
+    columns.append(column)
 
     while tokens[index] != ")":
-        if tokens[index] == ",":
-            columns.append(tokens[index + 1])
-            index += 2
-        else:
-            columns[-1] = columns[-1] + tokens[index]
-            index += 1
+        column, index = parse_identifier(tokens, index + 1)
+        columns.append(column)
 
     return (columns, index + 1)
+
+
+def parse_identifier(tokens: list[str], index: int) -> tuple[str, int]:
+    if tokens[index] == "`":
+        identifier = tokens[index + 1]
+        index += 2
+        while tokens[index] != "`":
+            identifier += tokens[index]
+            index += 1
+        return (identifier, index + 1)
+
+    identifier = tokens[index]
+    index += 1
+    while re.match(r"[A-Za-z0-9_$]+", tokens[index]):
+        identifier += tokens[index]
+        index += 1
+    return (identifier, index)
 
 
 def parse_values(

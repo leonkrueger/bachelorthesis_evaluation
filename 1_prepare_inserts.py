@@ -11,7 +11,7 @@ from util.processing_utils import get_data_from_create_table
 
 
 folder = "data"
-max_inserts = 500
+max_inserts = 250
 
 random = Random(8463)
 
@@ -88,8 +88,9 @@ for path in os.listdir(folder):
 
             if query.startswith("INSERT"):
                 # Create correct insert statement
+
                 inserts_into_current_table.append(
-                    query.replace(table_old_name, table_new_name)
+                    f"INSERT INTO {table_new_name} {query[query.find('VALUES') :]}"
                 )
 
         dump_inserts(

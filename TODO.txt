@@ -1,2 +1,4 @@
-bird_legislator -> Neu machen mit "current" als current benannt
 errors file durchschauen
+
+run data generation again with less queries
+write llama2 prompt again (https://developer.ibm.com/tutorials/awb-prompt-engineering-llama-2/)

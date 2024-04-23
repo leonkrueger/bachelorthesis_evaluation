@@ -40,10 +40,8 @@ def create_experiment(
                     if "columns" in query.keys()
                     else ""
                 )
-                row_values_strings = [
-                    f"({', '.join(row_values)})" for row_values in query["values"]
-                ]
-                modified_query = f"INSERT INTO {table_string}{columns_string}VALUES {', '.join(row_values_strings)};\n"
+                row_values_strings = ", ".join(query["values"])
+                modified_query = f"INSERT INTO {table_string}{columns_string}VALUES ({row_values_strings});\n"
 
                 output_file.write(modified_query)
 

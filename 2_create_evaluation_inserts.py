@@ -30,13 +30,20 @@ def create_experiment(
             encoding="utf-8",
         ) as output_file:
             for query in queries:
-                table_str = "" if "table" not in query.keys() else query["table"] + " "
-                columns_str = (
-                    ""
-                    if "columns" not in query.keys()
-                    else f"({', '.join(query['columns'])}) "
+                table_string = (
+                    (f"`{query['table']}` ") if "table" in query.keys() else ""
                 )
-                modified_query = f"INSERT INTO {table_str}{columns_str} VALUES ({', '.join(query['values'])});\n"
+                columns_string = (
+                    "("
+                    + ", ".join([f"`{column}`" for column in query["columns"]])
+                    + ") "
+                    if "columns" in query.keys()
+                    else ""
+                )
+                row_values_strings = [
+                    f"({', '.join(row_values)})" for row_values in query["values"]
+                ]
+                modified_query = f"INSERT INTO {table_string}{columns_string}VALUES {', '.join(row_values_strings)};\n"
 
                 output_file.write(modified_query)
 

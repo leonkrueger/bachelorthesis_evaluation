@@ -107,7 +107,7 @@ def get_data_for_one_data_source(data_sorce_folder: str) -> list[dict[str, str]]
                         ]
                     )
                     if len(database_state_for_query) > 0
-                    else "No table exists yet"
+                    else "No table exists yet."
                 )
 
                 instruction = (

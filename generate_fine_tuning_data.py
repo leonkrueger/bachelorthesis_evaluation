@@ -112,7 +112,7 @@ def get_data_for_one_data_source(data_sorce_folder: str) -> list[dict[str, str]]
 
                 instruction = (
                     "Predict the table for this example:\n"
-                    f"Query: {query_str}\n"
+                    f"Query: {query_str}"
                     f"Database State:\n{database_str}"
                 )
                 response = f"Table: {table_name}"

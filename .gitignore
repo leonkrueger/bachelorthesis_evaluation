@@ -167,3 +167,6 @@ fine_tuning/databases/
 
 # Too large databases
 data/bird_menu/menu.sql
+
+# Plots
+*.png

@@ -14,6 +14,10 @@ EXPERIMENTS = {
         [(Adjustments.DELETE_TABLE, [0.0, 0.25, 0.5, 0.75, 1.0])],
         "Ratio of removed table names",
     ),
+    "finetuning_missing_tables": (
+        [(Adjustments.DELETE_TABLE, [0.0, 0.5, 1.0])],
+        "Ratio of removed table names",
+    ),
 }
 
 FINE_TUNING = {"missing_tables": [(Adjustments.DELETE_TABLE, 0.5)]}

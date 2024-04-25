@@ -8,7 +8,8 @@ from util.make_adjustment import make_adjustment
 
 folder = "data"
 
-strategies = ["Llama2_finetuned", "Llama2", "GPT4", "Heuristics"]
+# strategies = ["Llama2_finetuned", "Llama2", "GPT4", "Heuristics"]
+strategies = ["missing_tables_300", "missing_tables_600", "missing_tables_1500"]
 
 random = Random(2572)
 
@@ -60,7 +61,7 @@ def create_experiment(
 # Create all experiments for all databases
 for path in os.listdir(folder):
     subfolder = os.path.join(folder, path)
-    if not os.path.isdir(subfolder):
+    if not os.path.isdir(subfolder) or path == "evaluation":
         continue
 
     # Read all queries

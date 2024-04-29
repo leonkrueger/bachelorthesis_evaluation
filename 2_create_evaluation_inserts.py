@@ -95,6 +95,9 @@ for path in os.listdir(folder):
 
     # Create all experiments
     for experiment_name, experiment in EXPERIMENTS.items():
+        if "databases" in experiment and not path in experiment["databases"]:
+            continue
+
         experiment_folder = os.path.join(subfolder, experiment_name)
 
         # Do not overwrite existing experiments
@@ -103,4 +106,4 @@ for path in os.listdir(folder):
 
         os.makedirs(experiment_folder, exist_ok=True)
 
-        create_experiment(experiment_folder, experiment[0], queries)
+        create_experiment(experiment_folder, experiment["adjustments"], queries)

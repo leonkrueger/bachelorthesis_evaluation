@@ -37,7 +37,7 @@ def create_evaluation_plots(
     results: dict[str, dict[str, dict[str, float]]],
     folder: str,
     experiment_name: str,
-    plot_information: tuple[Any],
+    y_label: str,
 ) -> None:
     """Creates the plots for evaluating an experiment"""
     # Strategies are the same for accuracies and null values and for each database
@@ -58,7 +58,7 @@ def create_evaluation_plots(
                     strategy_evaluation_folder,
                     f"{experiment_name}_{evaluation.get_filename()}.png",
                 ),
-                plot_information[0],
+                y_label,
                 evaluation.get_y_label(),
                 averages,
             )
@@ -79,7 +79,7 @@ def evaluate_experiment_on_one_database_for_one_strategy(
     evaluation: Evaluation,
     folder: str,
     gold_standard: dict[str, list[list[str]]],
-    plot_information: tuple[Any],
+    y_label: str,
 ) -> tuple[dict[str, float], dict[str, float]]:
     """Returns two dict that map the parameters of the experiment to its accuracy and its relative null values"""
     results = {}
@@ -105,7 +105,7 @@ def evaluate_experiment_on_one_database_for_one_strategy(
     if create_individual_plots:
         plot_results(
             os.path.join(folder, evaluation.get_filename() + ".png"),
-            plot_information[0],
+            y_label,
             evaluation.get_y_label(),
             results,
         )
@@ -117,7 +117,7 @@ def evaluate_experiment_on_one_database(
     evaluation: Evaluation,
     folder: str,
     gold_standard: dict[str, list[list[str]]],
-    plot_information: tuple[Any],
+    y_label: str,
 ) -> dict[str, dict[str, float]]:
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
     results = {}
@@ -131,7 +131,7 @@ def evaluate_experiment_on_one_database(
             evaluation,
             strategy_results_path,
             gold_standard,
-            plot_information,
+            y_label,
         )
 
     return results
@@ -141,7 +141,7 @@ def evaluate_experiment(
     evaluation: Evaluation,
     folder: str,
     experiment_name: str,
-    plot_information: tuple[Any],
+    y_label: str,
 ) -> None:
     # Lists that contain dicts that map the strategy and paramaters to its accuracy and null values
     results = {}
@@ -160,7 +160,7 @@ def evaluate_experiment(
             evaluation,
             subfolder,
             gold_standard,
-            plot_information,
+            y_label,
         )
         results[path] = db_accuracies
 
@@ -176,10 +176,8 @@ def evaluate_experiment(
         ) as json_file:
             json.dump(results, json_file)
 
-    create_evaluation_plots(
-        evaluation, results, folder, experiment_name, plot_information
-    )
+    create_evaluation_plots(evaluation, results, folder, experiment_name, y_label)
 
 
 for experiment_name, experiment in EXPERIMENTS.items():
-    evaluate_experiment(evaluation, folder, experiment_name, experiment[1:])
+    evaluate_experiment(evaluation, folder, experiment_name, experiment["y_label"])

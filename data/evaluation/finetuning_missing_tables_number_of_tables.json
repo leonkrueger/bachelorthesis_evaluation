@@ -1,0 +1,200 @@
+{
+    "wikidb_japans-top-100-waterfalls": {
+        "missing_tables_1500": {
+            "0.5": 7,
+            "1.0": 4,
+            "0.0": 8
+        },
+        "missing_tables_600": {
+            "0.5": 4,
+            "1.0": 4,
+            "0.0": 7
+        },
+        "missing_tables_300": {
+            "0.5": 4,
+            "1.0": 3,
+            "0.0": 8
+        },
+        "missing_tables_0": {
+            "0.5": 4,
+            "1.0": 5,
+            "0.0": 7
+        }
+    },
+    "spider_company_office": {
+        "missing_tables_1500": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_600": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_300": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_0": {
+            "0.5": 3,
+            "1.0": 1,
+            "0.0": 3
+        }
+    },
+    "spider_workshop_paper": {
+        "missing_tables_1500": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_600": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_300": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_0": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 2
+        }
+    },
+    "bird_genes": {
+        "missing_tables_1500": {
+            "0.5": 3,
+            "1.0": 1,
+            "0.0": 3
+        },
+        "missing_tables_600": {
+            "0.5": 3,
+            "1.0": 1,
+            "0.0": 3
+        },
+        "missing_tables_300": {
+            "0.5": 3,
+            "1.0": 1,
+            "0.0": 3
+        },
+        "missing_tables_0": {
+            "0.5": 3,
+            "1.0": 1,
+            "0.0": 3
+        }
+    },
+    "bird_citeseer": {
+        "missing_tables_1500": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_600": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_300": {
+            "0.5": 4,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_0": {
+            "0.5": 3,
+            "1.0": 1,
+            "0.0": 2
+        }
+    },
+    "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
+        "missing_tables_1500": {
+            "0.5": 3,
+            "1.0": 3,
+            "0.0": 3
+        },
+        "missing_tables_600": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_300": {
+            "0.5": 2,
+            "1.0": 3,
+            "0.0": 3
+        },
+        "missing_tables_0": {
+            "0.5": 2,
+            "1.0": 2,
+            "0.0": 2
+        }
+    },
+    "bird_professional_basketball": {
+        "missing_tables_1500": {
+            "0.5": 11,
+            "1.0": 5,
+            "0.0": 9
+        },
+        "missing_tables_600": {
+            "0.5": 10,
+            "1.0": 5,
+            "0.0": 9
+        },
+        "missing_tables_300": {
+            "0.5": 10,
+            "1.0": 5,
+            "0.0": 9
+        },
+        "missing_tables_0": {
+            "0.5": 9,
+            "1.0": 9,
+            "0.0": 10
+        }
+    },
+    "spider_theme_gallery": {
+        "missing_tables_1500": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_600": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        },
+        "missing_tables_300": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 2
+        },
+        "missing_tables_0": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 3
+        }
+    },
+    "wikidb_burial-vault": {
+        "missing_tables_1500": {
+            "0.5": 12,
+            "1.0": 2,
+            "0.0": 10
+        },
+        "missing_tables_600": {
+            "0.5": 3,
+            "1.0": 14,
+            "0.0": 11
+        },
+        "missing_tables_300": {
+            "0.5": 16,
+            "1.0": 41,
+            "0.0": 8
+        },
+        "missing_tables_0": {
+            "0.5": 3,
+            "1.0": 2,
+            "0.0": 10
+        }
+    }
+}

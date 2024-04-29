@@ -15,7 +15,8 @@ folder = "data"
 
 create_evaluation_plots = False
 create_individual_plots = False
-create_evaluation_jsons = True
+create_evaluation_jsons = False
+print_result_dict = True
 
 evaluation = AccuracyEvaluation()
 
@@ -162,6 +163,18 @@ def evaluate_experiment(
             plot_information,
         )
         results[path] = db_accuracies
+
+    if print_result_dict:
+        with open(
+            os.path.join(
+                folder,
+                "evaluation",
+                f"{experiment_name}_{evaluation.get_filename()}.json",
+            ),
+            "w",
+            encoding="utf-8",
+        ) as json_file:
+            json.dump(results, json_file)
 
     create_evaluation_plots(
         evaluation, results, folder, experiment_name, plot_information

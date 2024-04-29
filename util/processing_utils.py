@@ -6,7 +6,7 @@ def remove_quotes(attribute: str, use_mysql_quotes: bool = True) -> str:
     """Replace the quotes used in SQLITE with the ones used in MYSQL"""
     if attribute[0] == "'" or attribute[0] == '"' or attribute[0] == "`":
         if use_mysql_quotes:
-            return f"`{attribute[1:-1]}`"
+            return f"`{attribute[1:-1].replace(' ', '_')}`"
         else:
             return f"{attribute[1:-1].replace(' ', '_').replace('-', '_')}"
     else:
@@ -104,17 +104,31 @@ def get_data_from_create_table(
             primary_keys = []
 
     # Get the right data types and create the correct "CREATE TABLE" statement
-    attribute_data = [
-        (
-            [remove_quotes(attribute[0], use_mysql_quotes), map_type(attribute[1])]
-            if attribute[0] != "`"
-            else [remove_quotes(attribute[1], use_mysql_quotes), map_type(attribute[3])]
-        )
-        for attribute in attribute_data
-        if attribute[1].lower() != "key"
-        and attribute[0].lower() != "constraint"
-        and attribute[0].lower() != "unique"
-        and (attribute[0] != "-" or attribute[1] != "-")
-    ]
+    attributes = []
+    for attribute in attribute_data:
+        if (
+            attribute[1].lower() == "key"
+            or attribute[0].lower() == "constraint"
+            or attribute[0].lower() == "unique"
+            or (attribute[0] == "-" and attribute[1] == "-")
+        ):
+            continue
 
-    return (table_old_name, table_new_name, primary_keys, attribute_data)
+        if attribute[0] == "`":
+            attribute_name = attribute[1]
+            i = 2
+            while attribute[i] != "`":
+                attribute_name += "_" + attribute[i]
+                i += 1
+            attributes.append(
+                [
+                    remove_quotes(attribute_name, use_mysql_quotes),
+                    map_type(attribute[i + 1]),
+                ]
+            )
+        else:
+            attributes.append(
+                [remove_quotes(attribute[0], use_mysql_quotes), map_type(attribute[1])]
+            )
+
+    return (table_old_name, table_new_name, primary_keys, attributes)

@@ -8,7 +8,7 @@ from util.make_adjustment import make_adjustment
 
 folder = "data"
 
-# strategies = ["Llama2_finetuned", "Llama2", "GPT4", "Heuristics"]
+# strategies = ["Llama3_finetuned", "Llama3", "GPT4", "Heuristics"]
 strategies = [
     "missing_tables_0",
     "missing_tables_300",

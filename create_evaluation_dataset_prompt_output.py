@@ -12,7 +12,7 @@ from util.processing_utils import get_data_from_create_table
 folder = "data"
 num_data_points = 100
 query_alterations = [(Adjustments.DELETE_TABLE, 0.0)]
-databases = EXPERIMENTS["finetuning_missing_tables"]["databases"]
+experiment = EXPERIMENTS["finetuning_missing_tables"]
 
 random = Random(3514)
 
@@ -115,7 +115,7 @@ for path in os.listdir(folder):
     if (
         not os.path.isdir(subfolder)
         or path == "evaluation"
-        or (databases and not path in databases)
+        or ("databases" in experiment and not path in experiment["databases"])
     ):
         continue
 
@@ -125,13 +125,26 @@ for path in os.listdir(folder):
 random.shuffle(data)
 
 # Dump fine tuning data
+dataset_folder = os.path.join(
+    "further_evaluation",
+    "error_cases_missing_tables",
+)
+experiment_input_file_path = "different_name_in_database.json"
+
 with open(
     os.path.join(
-        "further_evaluation",
-        "error_cases_missing_tables",
-        "different_name_in_database" + ".json",
+        dataset_folder,
+        experiment_input_file_path,
     ),
     mode="w",
     encoding="utf-8",
 ) as fine_tuning_data_file:
     json.dump(data, fine_tuning_data_file)
+
+for strategy in experiment["strategies"]:
+    os.makedirs(os.path.join(dataset_folder, strategy), exist_ok=True)
+    open(
+        os.path.join(dataset_folder, strategy, "results_" + experiment_input_file_path),
+        mode="w",
+        encoding="utf-8",
+    ).close()

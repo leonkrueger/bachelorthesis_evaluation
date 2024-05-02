@@ -8,19 +8,14 @@ from util.make_adjustment import make_adjustment
 
 folder = "data"
 
-# strategies = ["Llama3_finetuned", "Llama3", "GPT4", "Heuristics"]
-strategies = [
-    "missing_tables_0",
-    "missing_tables_300",
-    "missing_tables_600",
-    "missing_tables_1500",
-]
-
 random = Random(2572)
 
 
 def create_experiment(
-    experiment_folder: str, experiment: list[tuple[Any]], queries: list[dict[str, Any]]
+    experiment_folder: str,
+    experiment: list[tuple[Any]],
+    strategies: list[str],
+    queries: list[dict[str, Any]],
 ) -> None:
     adjustment_combinations = {"": queries}
 
@@ -106,4 +101,9 @@ for path in os.listdir(folder):
 
         os.makedirs(experiment_folder, exist_ok=True)
 
-        create_experiment(experiment_folder, experiment["adjustments"], queries)
+        create_experiment(
+            experiment_folder,
+            experiment["adjustments"],
+            experiment["strategies"],
+            queries,
+        )

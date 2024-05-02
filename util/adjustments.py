@@ -13,6 +13,7 @@ EXPERIMENTS = {
     "delete_table": {
         "adjustments": [(Adjustments.DELETE_TABLE, [0.0, 0.25, 0.5, 0.75, 1.0])],
         "y_label": "Ratio of removed table names",
+        "strategies": ["Llama3_finetuned", "Llama3", "GPT4", "Heuristics"],
     },
     "finetuning_missing_tables": {
         "adjustments": [(Adjustments.DELETE_TABLE, [0.0, 0.5, 1.0])],
@@ -27,6 +28,12 @@ EXPERIMENTS = {
             "wikidb_burial-vault",
             "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family",
             "wikidb_japans-top-100-waterfalls",
+        ],
+        "strategies": [
+            "missing_tables_0",
+            "missing_tables_300",
+            "missing_tables_600",
+            "missing_tables_1500",
         ],
     },
 }

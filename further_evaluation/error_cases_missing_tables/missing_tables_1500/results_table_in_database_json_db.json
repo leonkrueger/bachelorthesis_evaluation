@@ -119,7 +119,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, genbank_assembly_accession_number, gram_staining)  VALUES ('Bacillus subtilis subsp. subtilis str. 168', 'bacterial strain', 'Bacillus subtilis subsp. subtilis str. 168', 'Bacillus subtilis', '224308', 'strain', 'GCA_000789275.1', 'gram-positive bacteria');\n",
@@ -454,7 +454,7 @@
             ]
         },
         "expected_table_name": "replacing_subject",
-        "predicted_table_name": "replacing_subject"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start)  VALUES ('methyl-accepting protein IV ECs2595', 'microbial gene found in Escherichia coli O157:H7 str. Sakai', 'ECs2595', 'gene', 'Escherichia coli O157:H7 str. Sakai', '914196', 'Methyl-accepting protein IV ECs2595', 'gene', '2572913', 'reverse strand', '2571312');\n",
@@ -530,7 +530,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "sets"
+        "predicted_table_name": "foreign_data"
     },
     {
         "query": "INSERT INTO legalities (id, format, status, uuid)  VALUES (238737, 'pauper', 'Legal', '3590c2e3-a194-5d7e-9878-e8e132f4fad4');\n",
@@ -840,7 +840,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO part (label, description, instance_of, commons_category, country, coordinate_location, image, located_in_the_administrative_territorial_entity)  VALUES ('Takino Suzuran Hillside National Government Park', 'nan', 'National Government Park', 'Takino Suzuran Hillside National Government Park', 'Japan', '42.9168', '\u6edd\u91ce\u3059\u305a\u3089\u3093\u4e18\u9675\u516c\u5712 (takino national goverment park) - panoramio (16).jpg', 'Takino');\n",
@@ -992,7 +992,7 @@
             ]
         },
         "expected_table_name": "part",
-        "predicted_table_name": "part"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO rulings (id, date, text, uuid)  VALUES (24754, '2016-06-08', 'You may return this creature itself to its owner\u2019s hand as its triggered ability resolves. If you don\u2019t control enough other creatures, you must return it.', '272c5060-bc4f-5a91-84c2-514d6ebd2e30');\n",
@@ -1516,7 +1516,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (748293, 2552, '1995-05-11', 'VYDAJ', 'PREVOD NA UCET', 7035, 45614, 'SIPO', 'GH', 17411059);\n",
@@ -1541,7 +1541,7 @@
             ]
         },
         "expected_table_name": "trans",
-        "predicted_table_name": "trans"
+        "predicted_table_name": "account"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (648028, 2216, '1996-05-13', 'PRIJEM', 'VKLAD', 33034, 72398, NULL, NULL, NULL);\n",
@@ -1688,7 +1688,7 @@
             ]
         },
         "expected_table_name": "japans_top_100_waterfalls",
-        "predicted_table_name": "administrative_territorial_entity"
+        "predicted_table_name": "japans_top_100_waterfalls"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (2438573, 8039, '1997-04-30', 'VYDAJ', 'VYBER', 15, 89751, 'SLUZBY', NULL, NULL);\n",
@@ -5202,7 +5202,7 @@
             ]
         },
         "expected_table_name": "replacing_subject",
-        "predicted_table_name": "replacing_subject"
+        "predicted_table_name": "located_in_the_present_day_administrative_territ"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (1198638, 4103, '1995-05-31', 'VYDAJ', 'VYBER', 15, 72288, 'SLUZBY', NULL, NULL);\n",
@@ -7306,7 +7306,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO foreign_data (id, flavorText, language, multiverseid, name, text, type, uuid)  VALUES (132785, '', 'Japanese', 372078, '\u30f4\u30a1\u30eb\u30ab\u30b9\u306e\u707d\u3044\u9b54', '\u98db\u884c\u30f4\u30a1\u30eb\u30ab\u30b9\u306e\u707d\u3044\u9b54\u304b\u4ed6\u306e\u30c9\u30e9\u30b4\u30f3\u304c\uff11\u4f53\u3042\u306a\u305f\u306e\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u4e0b\u3067\u6226\u5834\u306b\u51fa\u308b\u305f\u3073\u3001\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\uff11\u4f53\u304b\u30d7\u30ec\u30a4\u30e4\u30fc\uff11\u4eba\u3092\u5bfe\u8c61\u3068\u3059\u308b\u3002\u305d\u306e\u6226\u5834\u306b\u51fa\u305f\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u306f\u3001\u305d\u308c\u306b\uff38\u70b9\u306e\u30c0\u30e1\u30fc\u30b8\u3092\u4e0e\u3048\u308b\u3002\uff38\u306f\u3042\u306a\u305f\u304c\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3059\u308b\u30c9\u30e9\u30b4\u30f3\u306e\u7dcf\u6570\u306b\u7b49\u3057\u3044\u3002{R}\uff1a\u30f4\u30a1\u30eb\u30ab\u30b9\u306e\u707d\u3044\u9b54\u306f\u30bf\u30fc\u30f3\u7d42\u4e86\u6642\u307e\u3067\uff0b\uff11/\uff0b\uff10\u306e\u4fee\u6574\u3092\u53d7\u3051\u308b\u3002', '\u30af\u30ea\u30fc\u30c1\u30e3\u30fc \u2014 \u30c9\u30e9\u30b4\u30f3', '4bf888ed-8055-5767-82fb-5074e12bc365');\n",
@@ -9013,7 +9013,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO replaced_entity (label, description, instance_of, country, replaced_by, dissolved_abolished_or_demolished_date, located_in_the_administrative_territorial_entity, inception, located_in_the_present_day_administrative_territorial_entity, coordinate_location, name_in_kana)  VALUES ('Aikawa', 'dissolved municipality in Nishiyamanashi district, Yamanashi prefecture, Japan', 'dissolved municipality of Japan', 'Japan', 'K\u014dfu', '+1937-08-01T00:00:00Z', 'Nishiyamanashi district', '+1889-07-01T00:00:00Z', 'K\u014dfu', '35.680444444444454', '\u3042\u3044\u304b\u308f\u3080\u3089');\n",
@@ -10965,7 +10965,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (155824, 179941, 106474, '2011-08-30 00:00:00', 69, 72, 'right', 'medium', 'medium', 59, 73, 54, 57, 63, 66, 39, 72, 44, 67, 73, 79, 71, 68, 61, 78, 57, 69, 78, 65, 57, 23, 67, 60, 69, 24, 26, 23, 10, 15, 12, 6, 16);\n",
@@ -11122,7 +11122,7 @@
             ]
         },
         "expected_table_name": "burial_vault",
-        "predicted_table_name": "part"
+        "predicted_table_name": "burial_vault"
     },
     {
         "query": "INSERT INTO exhibition (Exhibition_ID, Year, Theme, Artist_ID, Ticket_Price)  VALUES (3, 2006, 'Santa Claus and Rudolph the Red-Nosed Reindeer', 4, 14.94999999999999929);\n",
@@ -12061,7 +12061,7 @@
             ]
         },
         "expected_table_name": "replacing_subject",
-        "predicted_table_name": "replacing_subject"
+        "predicted_table_name": "located_in_the_present_day_administrative_territ"
     },
     {
         "query": "INSERT INTO buildings (id, name, City, Height, Stories, Status)  VALUES (1, 'Torre KOI', 'Monterrey', 220, 67, 'under construction');\n",
@@ -12394,7 +12394,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO burial_vault (label, description, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of)  VALUES ('Kirchstra\u00dfe 2', 'church building, sepulchral monuments and burial vault in Eibau', 'Kottmar', 'Germany', '50.980078', 'church building');\n",
@@ -12667,7 +12667,7 @@
             ]
         },
         "expected_table_name": "burial_vault",
-        "predicted_table_name": "burial_vault"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id)  VALUES ('Katta district', 'district in Miyagi prefecture, Japan', 415.9200000000000159, 'nan', 'nan', 'Miyagi Prefecture', 'Japan', '38.055', 'district of Japan', '/m/03mx8l', NULL, '2112306.0', 'nan', 'nan', 'Japan Standard Time', 'jNfM0X', 'nan', 'nan', '+1878-10-21T00:00:00Z', '631379.0', '257569852.0', 'Miyagi Katta-gun.png', 'nan', 'nan', 'viaf-257569852', 'nan', 'nan');\n",
@@ -12824,7 +12824,7 @@
             ]
         },
         "expected_table_name": "japans_top_100_waterfalls",
-        "predicted_table_name": "part"
+        "predicted_table_name": "japans_top_100_waterfalls"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (3556813, 810, '1998-09-30', 'PRIJEM', NULL, 93, 22707, 'UROK', NULL, NULL);\n",
@@ -14791,7 +14791,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "rulings"
+        "predicted_table_name": "rulings_dg_tmp"
     },
     {
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting chemotaxis protein II BP1385', 'microbial protein found in Bordetella pertussis Tohama I', 'Q7VYF7', 'Bordetella pertussis Tohama I', 'methyl-accepting chemotaxis protein II BP1385', 'HAMP domain', 'signal transducer activity', 'membrane', 'chemotaxis', 'protein', 'NP_880132', 'Methyl-accepting chemotaxis protein');\n",
@@ -15244,7 +15244,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting chemotaxis protein ECL_03266', 'microbial protein found in Enterobacter cloacae subsp. cloacae ATCC 13047', 'A0A0H3CN65', 'Enterobacter cloacae subsp. cloacae ATCC 13047', 'Methyl-accepting chemotaxis protein ECL_03266', 'Methyl-accepting chemotaxis protein (MCP) signalling domain', 'signal transducer activity', 'membrane', 'chemotaxis', 'protein', 'YP_003613749', 'Methyl-accepting chemotaxis protein');\n",
@@ -15751,7 +15751,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO legalities (id, format, status, uuid)  VALUES (72689, 'pioneer', 'Legal', '28f33578-7b47-5387-9148-0ba627e33780');\n",
@@ -18418,7 +18418,7 @@
             ]
         },
         "expected_table_name": "japans_top_100_waterfalls",
-        "predicted_table_name": "part"
+        "predicted_table_name": "japans_top_100_waterfalls"
     },
     {
         "query": "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight)  VALUES (2401, 37545, 'David Pizarro', 24248, '1979-09-11 00:00:00', 170.1800000000000068, 143);\n",
@@ -19288,7 +19288,7 @@
             ]
         },
         "expected_table_name": "Match",
-        "predicted_table_name": "1</on</1</</on</on"
+        "predicted_table_name": "'"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (86889, 183711, 156008, '2015-09-21 00:00:00', 79, 84, 'right', 'high', 'high', 81, 67, 65, 83, 72, 74, 80, 71, 81, 78, 76, 73, 74, 79, 71, 75, 81, 93, 73, 71, 78, 72, 74, 80, 64, 67, 75, 68, 7, 13, 7, 9, 13);\n",
@@ -20182,7 +20182,7 @@
             ]
         },
         "expected_table_name": "burial_vault",
-        "predicted_table_name": "part"
+        "predicted_table_name": "burial_vault"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (85931, 288, '1996-03-08', 'VYDAJ', 'PREVOD NA UCET', 3257, 18911, 'SIPO', 'WX', 29425543);\n",
@@ -20958,7 +20958,7 @@
             ]
         },
         "expected_table_name": "replacing_subject",
-        "predicted_table_name": "replacing_subject"
+        "predicted_table_name": "located_in_the_present_day_administrative_territ"
     },
     {
         "query": "INSERT INTO foreign_data (id, flavorText, language, multiverseid, name, text, type, uuid)  VALUES (1080, '\u5176\u5916\u578b\u4ece\u672a\u56fa\u5b9a\uff0c\u88ab\u65e0\u5f71\u9634\u98ce\u63a8\u538b\u4e0d\u5df2\u3002', 'Chinese Simplified', 147810, '\u660f\u6697\u9634\u9b42', '{B}\uff1a\u660f\u6697\u9634\u9b42\u5f97+1/+1\u76f4\u5230\u56de\u5408\u7ed3\u675f\u3002', '\u751f\u7269\uff5e\u9634\u9b42', '8830d071-858a-534c-ba8f-376dcc56d74e');\n",
@@ -21355,7 +21355,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "foreign_data"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (432941, 1471, '1997-07-13', 'VYDAJ', 'PREVOD NA UCET', 7823, 25579, 'SIPO', 'CD', 85543155);\n",
@@ -23008,7 +23008,7 @@
             ]
         },
         "expected_table_name": "natural_product",
-        "predicted_table_name": "natural_product"
+        "predicted_table_name": "microorganism"
     },
     {
         "query": "INSERT INTO Office_locations (building_id, company_id, move_in_year)  VALUES (5, 7, 2026);\n",
@@ -23204,7 +23204,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting chemotaxis protein (membrane curvature dependent localisation) BSU_31250', 'microbial protein found in Bacillus subtilis subsp. subtilis str. 168', 'P39216', 'Bacillus subtilis subsp. subtilis str. 168', 'methyl-accepting chemotaxis protein TlpA BSU31250', 'Methyl-accepting chemotaxis protein (MCP) signalling domain', 'signal transducer activity', 'plasma membrane', 'chemotaxis', 'protein', 'NP_391003', 'Periplasmic sensor-like domain superfamily');\n",
@@ -24236,7 +24236,7 @@
             ]
         },
         "expected_table_name": "burial_vault",
-        "predicted_table_name": "burial_vault"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (166372, 164009, 24212, '2012-02-22 00:00:00', 61, 61, 'left', 'medium', 'medium', 58, 33, 58, 56, 45, 50, 52, 26, 52, 59, 68, 76, 69, 59, 66, 71, 76, 72, 71, 45, 64, 58, 48, 53, 31, 60, 61, 60, 13, 11, 10, 14, 9);\n",
@@ -24902,7 +24902,7 @@
             ]
         },
         "expected_table_name": "exhibition_record",
-        "predicted_table_name": "exhibition_record"
+        "predicted_table_name": "exhibition"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (365777, 1243, '1996-12-02', 'VYDAJ', 'VYBER', 6600, 30349, NULL, NULL, NULL);\n",
@@ -24980,7 +24980,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (3438000, 532, '1996-05-31', 'PRIJEM', NULL, 171, 36158, 'UROK', NULL, NULL);\n",
@@ -25397,7 +25397,7 @@
             ]
         },
         "expected_table_name": "rulings",
-        "predicted_table_name": "rulings"
+        "predicted_table_name": "set_translations"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id)  VALUES ('Onsen district', 'former district in Ehime prefecture, Japan', NULL, 'nan', 'nan', 'Ehime Prefecture', 'Japan', 'nan', 'former district of Japan', '/m/02h5j2', NULL, 'nan', 'nan', 'nan', 'nan', 'tDULYS', 'nan', '\u304a\u3093\u305b\u3093\u3050\u3093', '+1878-12-16T00:00:00Z', '413489.0', '259036208.0', 'nan', 'nan', 'nan', 'viaf-259036208', 'nan', 'nan');\n",
@@ -25774,7 +25774,7 @@
             ]
         },
         "expected_table_name": "located_in_the_present_day_administrative_territorial_entity",
-        "predicted_table_name": "located_in_the_present_day_administrative_territ"
+        "predicted_table_name": "cities"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id)  VALUES ('Yazu district', 'district in Tottori prefecture, Japan', NULL, 'Yazu, Tottori', 'nan', 'Tottori Prefecture', 'Japan', '35.311', 'district of Japan', '/m/02plxr', NULL, '1848416.0', 'nan', 'nan', 'nan', 'KpfJ6r', 'Map Yazu District, Tottori en.png', 'nan', '+1896-04-01T00:00:00Z', '390649.0', '126711797.0', 'nan', 'nan', 'nan', 'lccn-n83219173', 'nan', 'nan');\n",
@@ -25880,7 +25880,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id)  VALUES ('Shing\u016b', 'city in Wakayama Prefecture, Japan', 255.2299999999999898, 'Shingu, Wakayama', '302074.0', 'Wakayama Prefecture', 'Japan', '33.72416666666667', 'city of Japan', '/m/01wnxm', 26628.0, '1847947.0', 'Category:Shingu, Wakayama', 'https://www.city.shingu.lg.jp/', 'UTC+09:00', 'YGrudf', 'Shingu in Wakayama Prefecture Ja.svg', '\u3057\u3093\u3050\u3046\u3057', '+2005-10-01T00:00:00Z', '300414.0', '138382561.0', 'Kamikura-jinja08s1680.jpg', '4000020302074.0', 'jp/4000020302074', 'lccn-n81039910', 'Totsukawa', '101013.0');\n",
@@ -26140,7 +26140,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "rulings"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population)  VALUES ('Kottmar', 'municipality in Saxony, Germany', 'Germany', 'Kottmar (municipality)', 'G\u00f6rlitz', 'Niedercunnersdorf kirche.JPG', 'UTC+01:00', 'Kottmar in GR.svg', 'Wappen Kottmar.jpg', 'non-urban municipality of Germany', '51.0108', 'Category:Kottmar (municipality)', 'e2157a11-7d17-4e68-b48f-cde0c51d7f95', '/m/0r8nvld', '8658982.0', 'https://www.gemeinde-kottmar.de/', '294320745', 47.34000000000000341, 7173.0);\n",
@@ -26305,7 +26305,7 @@
             ]
         },
         "expected_table_name": "rulings_dg_tmp",
-        "predicted_table_name": "rulings"
+        "predicted_table_name": "rulings_dg_tmp"
     },
     {
         "query": "INSERT INTO located_in_the_present_day_administrative_territorial_entity (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, twinned_administrative_body, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana)  VALUES ('Numazu', 'city in Shizuoka Prefecture, Japan', 'Numazu and Mount Fuji.jpg', '222038', 'Numazu, Shizuoka', 'Flag of Numazu, Shizuoka.svg', 'Japan', 'Shizuoka Prefecture', '35.09558333333333', 'https://www.city.numazu.shizuoka.jp/', 'special city of Japan', '296041.0', '/m/01wlc5', 187653.0, 'b9691e60-649e-4bce-bd8a-0d5896e79282', 'Category:Numazu, Shizuoka', '1854902', 'Yueyang', '143065465.0', 186960000.0, '8000020222038', '\u6cbc\u6d25\u5e02', 'UTC+09:00', 'Numazu in Shizuoka Prefecture Ja.svg', 'jp/8000020222038', 'CEl8rW', '\u6cbc\u6d25\u5e02', '102031471.0', 'viaf-255814698', 'Mishima', '+1923-07-01T00:00:00Z', 'Numazu', '34805.0', '\u306c\u307e\u3065\u3057');\n",
@@ -26747,7 +26747,7 @@
             ]
         },
         "expected_table_name": "replaced_entity",
-        "predicted_table_name": "replaced_entity"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id)  VALUES ('Takino', 'nan', NULL, 'Takino, Sapporo', 'nan', 'Minami-ku', 'Japan', 'nan', '\u014daza', 'nan', NULL, 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'Bus Stop Kikaijo Iriguchi.jpg', 'nan', 'nan', 'nan', 'nan', 'nan');\n",
@@ -27671,7 +27671,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (62016, 186172, 162548, '2010-08-30 00:00:00', 67, 75, 'left', 'medium', 'medium', 45, 39, 64, 54, 33, 26, 50, 41, 41, 63, 60, 61, 67, 61, 63, 28, 67, 66, 72, 37, 69, 65, 50, 60, 44, 68, 72, 67, 13, 15, 13, 12, 9);\n",
@@ -28283,7 +28283,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO japans_top_100_waterfalls (label, description, instance_of, coordinate_location, country, image, part_of, located_in_the_administrative_territorial_entity)  VALUES ('Ame Falls', 'nan', 'waterfall', '35.478333333333', 'Japan', 'Amedaki 02.JPG', 'Japan''s Top 100 Waterfalls', 'Tottori');\n",
@@ -31024,7 +31024,7 @@
             ]
         },
         "expected_table_name": "administrative_territorial_entity",
-        "predicted_table_name": "administrative_territorial_entity"
+        "predicted_table_name": "located_in_the_present_day_administrative_territ"
     },
     {
         "query": "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start)  VALUES ('ribose sensor receptor SDY_1760', 'microbial gene found in Shigella dysenteriae Sd197', 'SDY_1760', 'gene', 'Shigella dysenteriae Sd197', '3796324', 'Ribose sensor receptor SDY_1760', 'gene', '1602268', 'reverse strand', '1600835');\n",
@@ -31086,7 +31086,7 @@
             ]
         },
         "expected_table_name": "trans",
-        "predicted_table_name": "trans"
+        "predicted_table_name": "account"
     },
     {
         "query": "INSERT INTO Companies (id, name, Headquarters, Industry, Sales_billion, Profits_billion, Assets_billion, Market_Value_billion)  VALUES (6, 'PetroChina', 'China', 'Oil and gas', 222.3000000000000113, 21.19999999999999929, 251.3000000000000113, '320.8');\n",
@@ -32954,7 +32954,7 @@
             ]
         },
         "expected_table_name": "burial_vault",
-        "predicted_table_name": "burial_vault"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting chemotaxis protein I ECUMN_4977', 'microbial protein found in Escherichia coli UMN026', 'B7NH23', 'Escherichia coli UMN026', 'methyl-accepting chemotaxis protein I ECUMN_4977', 'Methyl-accepting chemotaxis protein (MCP) signalling domain', 'signal transducer activity', 'membrane', 'chemotaxis', 'protein', 'YP_002415554', 'Methyl-accepting chemotaxis protein');\n",
@@ -33599,7 +33599,7 @@
             ]
         },
         "expected_table_name": "rulings_dg_tmp",
-        "predicted_table_name": "rulings"
+        "predicted_table_name": "rulings_dg_tmp"
     },
     {
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting protein IV ECs2595', 'microbial protein found in Escherichia coli O157:H7 str. Sakai', 'Q8XCF7', 'Escherichia coli O157:H7 str. Sakai', 'methyl-accepting protein IV ECs2595', 'Chemotaxis methyl-accepting receptor Tar-related, ligand-binding', 'nan', 'nan', 'nan', 'protein', 'NP_310622', 'Methyl-accepting chemotaxis protein');\n",
@@ -33795,7 +33795,7 @@
             ]
         },
         "expected_table_name": "political_border",
-        "predicted_table_name": "political_border"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, genbank_assembly_accession_number, gram_staining)  VALUES ('Escherichia coli str. K-12 substr. MG1655', 'bacterial strain', 'Escherichia coli str. K-12 substr. MG1655', 'Escherichia coli', '511145', 'reference strain', 'GCA_000005845.2', 'Gram-negative bacteria');\n",
@@ -33812,7 +33812,7 @@
             ]
         },
         "expected_table_name": "natural_product",
-        "predicted_table_name": "natural_product"
+        "predicted_table_name": "bacteria"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (1037957, 3550, '1997-05-30', 'VYDAJ', 'VYBER', 1500, 32989, NULL, NULL, NULL);\n",
@@ -34250,7 +34250,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (111000, 176894, 23675, '2015-09-25 00:00:00', 75, 75, 'right', 'high', 'medium', 71, 70, 65, 77, 72, 77, 77, 69, 70, 77, 77, 75, 78, 72, 90, 75, 74, 64, 56, 76, 87, 42, 73, 75, 66, 29, 42, 47, 13, 14, 10, 16, 9);\n",
@@ -35073,7 +35073,7 @@
             ]
         },
         "expected_table_name": "encoded_by",
-        "predicted_table_name": "encoded_by"
+        "predicted_table_name": "gene"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (3628102, 2949, '1997-02-28', 'PRIJEM', NULL, 91, 22580, 'UROK', NULL, NULL);\n",
@@ -35466,7 +35466,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "rulings_dg_tmp"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population)  VALUES ('The Hague', 'municipality in the Netherlands, seat of the Dutch government', 'Netherlands', 'The Hague', 'South Holland', 'The Hague Montage 2021.png', 'Central European Time', 'Map - NL - Municipality code 0518 (2009).svg', 'Den Haag wapen.svg', 'municipality of the Netherlands', '52.08', 'Category:The Hague', '1bf52e6e-d46b-4013-9427-3ad4446ecbc0', '/m/07g0_', '2747372.0', 'https://www.denhaag.nl', '151996116', 98.1200000000000045, 548320.0);\n",
@@ -35699,7 +35699,7 @@
             ]
         },
         "expected_table_name": "japans_top_100_waterfalls",
-        "predicted_table_name": "japans_top_100_waterfalls"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO replacing_subject (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana)  VALUES ('Tadami', 'town in Minamiaizu district, Fukushima prefecture, Japan', 'TadamiTownoffice.JPG', '73679', 'Tadami, Fukushima', 'Flag of Tadami, Fukushima.svg', 'Japan', 'Minamiaizu district', '37.34869444444445', 'https://www.town.tadami.lg.jp/', 'town of Japan', '303952.0', '/m/03kz8k', 4032.0, 'nan', 'Category:Tadami, Fukushima', '1851290', '255816742.0', 747.5599999999999454, '8000020073679', 'nan', 'UTC+09:00', 'Tadami in Fukushima Prefecture Ja.svg', 'jp/8000020073679', 'M6kFYa', 'nan', 'nan', 'viaf-255816742', 'Minamiaizu', '+1959-08-01T00:00:00Z', 'Meiwa', '33600.0', '\u305f\u3060\u307f\u307e\u3061');\n",
@@ -35993,7 +35993,7 @@
             ]
         },
         "expected_table_name": "administrative_territorial_entity",
-        "predicted_table_name": "administrative_territorial_entity"
+        "predicted_table_name": "located_in_the_present_day_administrative_territ"
     },
     {
         "query": "INSERT INTO Acceptance (Submission_ID, Workshop_ID, Result)  VALUES (5, 6, 'Rejected');\n",
@@ -37111,7 +37111,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start)  VALUES ('methyl-accepting chemotaxis protein I BN112_0387', 'microbial gene found in Bordetella bronchiseptica 253', 'BN112_0387', 'gene', 'Bordetella bronchiseptica 253', '13977445', 'Methyl-accepting chemotaxis protein I BN112_0387', 'gene', '401432', 'forward strand', '399600');\n",
@@ -37258,7 +37258,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "rulings"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (2523867, 8327, '1998-08-22', 'PRIJEM', 'VKLAD', 3600, 35180, NULL, NULL, NULL);\n",
@@ -37392,7 +37392,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (404360, 1376, '1998-02-28', 'VYDAJ', 'VYBER', 15, 15723, 'SLUZBY', NULL, NULL);\n",
@@ -38385,7 +38385,7 @@
             ]
         },
         "expected_table_name": "burial_vault",
-        "predicted_table_name": "administrative_territorial_entity"
+        "predicted_table_name": "burial_vault"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (1571, 208345, 308280, '2013-09-20 00:00:00', 60, 65, 'right', 'medium', 'medium', 42, 59, 65, 43, 48, 57, 40, 31, 29, 52, 58, 57, 61, 60, 58, 63, 65, 58, 72, 56, 70, 26, 65, 46, 62, 33, 33, 41, 11, 13, 14, 7, 6);\n",
@@ -38900,7 +38900,7 @@
             ]
         },
         "expected_table_name": "replacing_subject",
-        "predicted_table_name": "replacing_subject"
+        "predicted_table_name": "located_in_the_present_day_administrative_territ"
     },
     {
         "query": "INSERT INTO rulings_dg_tmp (id, date, text, uuid)  VALUES (16372, '2017-04-18', 'All split cards have two card faces on a single card, and you put a split card onto the stack with only the half you\u2019re casting. The characteristics of the half of the card you didn\u2019t cast are ignored while the spell is on the stack. For example, if an ef', 'ac6e7c1c-4336-5341-bb21-e603836ba29c');\n",
@@ -41819,7 +41819,7 @@
             ]
         },
         "expected_table_name": "natural_product",
-        "predicted_table_name": "natural_product"
+        "predicted_table_name": "microorganism"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (789858, 2694, '1994-05-11', 'VYDAJ', 'PREVOD NA UCET', 3532, 45168, 'SIPO', 'ST', 95437645);\n",
@@ -43416,7 +43416,7 @@
             ]
         },
         "expected_table_name": "replacing_subject",
-        "predicted_table_name": "replacing_subject"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start)  VALUES ('Methyl-accepting chemotaxis protein BN117_2406', 'microbial gene found in Bordetella parapertussis Bpp5', 'BN117_2406', 'gene', 'Bordetella parapertussis Bpp5', '13890443', 'Methyl-accepting chemotaxis protein BN117_2406', 'gene', '2605982', 'forward strand', '2603751');\n",
@@ -43436,7 +43436,7 @@
             ]
         },
         "expected_table_name": "encoded_by",
-        "predicted_table_name": "encoded_by"
+        "predicted_table_name": "gene"
     },
     {
         "query": "INSERT INTO rulings (id, date, text, uuid)  VALUES (64146, '2009-02-01', 'Exotic Orchard doesn\u2019t care about any restrictions or riders your opponents\u2019 lands (such as Ancient Ziggurat or Hall of the Bandit Lord) put on the mana they produce. It just cares about colors of mana.', 'dbe0a6cc-3356-5ba1-a02c-7fd2def0ded3');\n",
@@ -43746,7 +43746,7 @@
             ]
         },
         "expected_table_name": "rulings_dg_tmp",
-        "predicted_table_name": "rulings_dg_tmp"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight)  VALUES (4208, 26476, 'Henrico Drost', 162365, '1987-01-21 00:00:00', 182.8799999999999955, 176);\n",
@@ -44496,7 +44496,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (78373, 175567, 37580, '2009-08-30 00:00:00', 72, 77, 'right', 'medium', 'low', 72, 54, 49, 71, 49, 71, 68, 42, 72, 70, 82, 85, 67, 73, 70, 61, 69, 70, 68, 53, 59, 65, 66, 54, 71, 32, 40, 33, 8, 23, 72, 23, 23);\n",
@@ -45481,7 +45481,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start)  VALUES ('methyl-accepting chemotaxis protein BMAA1298', 'microbial gene found in Burkholderia mallei ATCC 23344', 'BMAA1298', 'gene', 'Burkholderia mallei ATCC 23344', '3087548', 'Methyl-accepting chemotaxis protein BMAA1298', 'gene', '1405330', 'reverse strand', '1403738');\n",
@@ -45973,7 +45973,7 @@
             ]
         },
         "expected_table_name": "japans_top_100_waterfalls",
-        "predicted_table_name": "japans_top_100_waterfalls"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id)  VALUES ('Minamiakita District', 'district in Akita prefecture, Japan', 449.9800000000000181, 'nan', 'nan', 'Akita Prefecture', 'Japan', '39.943000000000005', 'district of Japan', '/m/03ml4w', NULL, '2111935.0', 'nan', 'nan', 'nan', 'bL1c6X', 'Minamiakita District in Akita Prefecture.png', 'nan', '+1878-12-23T00:00:00Z', '412779.0', '147766399.0', 'nan', 'nan', 'nan', 'viaf-254141177', 'Akita', 'nan');\n",
@@ -47297,7 +47297,7 @@
             ]
         },
         "expected_table_name": "trans",
-        "predicted_table_name": "trans"
+        "predicted_table_name": "account"
     },
     {
         "query": "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA)  VALUES (12317, 10257, 10257, '2013/2014', 26, '2014-03-02 00:00:00', 1536772, 8524, 8533, 2, 1, 1, 2, 4, 6, 8, 2, 4, 6, 8, 5, 5, 1, 2, 4, 6, 8, 3, 5, 7, 5, 4, 6, 1, 3, 3, 3, 3, 7, 7, 7, 7, 9, 11, 1, 3, 3, 3, 3, 5, 5, 5, 8, 10, 10, 39170, 94326, 39726, 26315, 24500, 42650, 195413, 49940, 127460, 29587, 35421, 42502, 42008, 39304, 26223, 73845, 39426, 42651, 42579, 39487, 38920, 109121, '<goal><value><comment>n</comment><stats><goals>1</goals><shoton>1</shoton></stats><event_incident_typefk>71</event_incident_typefk><elapsed>21</elapsed><player1>49940</player1><sortorder>0</sortorder><team>8524</team><id>3299571</id><n>21</n><type>goal</type><goal_type>n</goal_type></value><value><comment>n</comment><stats><goals>1</goals><shoton>1</shoton></stats><event_incident_typefk>71</event_incident_typefk><elapsed>72</elapsed><player2>42579</player2><player1>39304</player1><sortorder>0</sortorder><team>8533</team><id>3300079</id><n>27</n><type>goal</type><goal_type>n</goal_type></value><value><comment>n</comment><stats><goals>1</goals><shoton>1</shoton></stats><event_incident_typefk>71</event_incident_typefk><elapsed>85</elapsed><player2>35421</player2><player1>27671</player1><sortorder>0</sortorder><team>8524</team><id>3300221</id><n>25</n><type>goal</type><goal_type>n</goal_type></value></goal>', '<shoton />', '<shotoff />', '<foulcommit />', '<card><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>35</elapsed><card_type>y</card_type><player1>39304</player1><sortorder>0</sortorder><team>8533</team><n>26</n><type>card</type><id>3299701</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>34</elapsed><card_type>y</card_type><player1>26223</player1><sortorder>1</sortorder><team>8533</team><n>22</n><type>card</type><id>3299724</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>53</elapsed><card_type>y</card_type><player1>42651</player1><sortorder>0</sortorder><team>8533</team><n>20</n><type>card</type><id>3299870</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>65</elapsed><card_type>y</card_type><player1>49940</player1><sortorder>0</sortorder><team>8524</team><n>23</n><type>card</type><id>3300003</id></value><value><comment>y2</comment><stats><rcards>1</rcards></stats><event_incident_typefk>26</event_incident_typefk><elapsed>68</elapsed><card_type>y2</card_type><player1>26223</player1><sortorder>0</sortorder><team>8533</team><n>24</n><type>card</type><id>3300044</id></value></card>', '<cross />', '<corner />', '<possession />', 2.049999999999999822, 3.25, 3.75, 2.0, 3.100000000000000088, 4.099999999999999644, 2.0, 3.200000000000000177, 3.75, 2.049999999999999822, 3.25, 3.75, 2.120000000000000106, 3.129999999999999894, 4.36000000000000032, 2.100000000000000088, 3.0, 4.0, 2.049999999999999822, 3.200000000000000177, 3.600000000000000088, 2.149999999999999912, 3.100000000000000088, 4.200000000000000177, NULL, NULL, NULL, NULL, NULL, NULL);\n",
@@ -48455,7 +48455,7 @@
             ]
         },
         "expected_table_name": "burial_vault",
-        "predicted_table_name": "administrative_territorial_entity"
+        "predicted_table_name": "burial_vault"
     },
     {
         "query": "INSERT INTO replacing_subject (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana)  VALUES ('Kai', 'city in Yamanashi Prefecture, Japan', 'Shingen embankment and Kamanashi River.JPG', '192104', 'Kai, Yamanashi', 'Flag of Kai, Yamanashi.svg', 'Japan', 'Yamanashi Prefecture', '35.660805555555555', 'https://www.city.kai.yamanashi.jp/', 'city of Japan', 'nan', '/m/050t7d', 75337.0, '29d4bdb7-f466-4dca-a348-cd591d531544', 'Category:Kai, Yamanashi', '9062326', 'nan', 71.93999999999999773, '3000020192104', '\u7532\u6590\u5e02', 'UTC+09:00', 'Kai in Yamanashi Prefecture Ja.svg', 'jp/3000020192104', '66RHgq', '\u7532\u6590\u5e02', 'nan', 'nan', 'K\u014dfu', '+2004-09-01T00:00:00Z', 'Ry\u016b\u014d', '35052.0', '\u304b\u3044\u3057');\n",
@@ -48744,7 +48744,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population)  VALUES ('Perg', 'town in Perg District, Upper Austria, Austria', 'Austria', 'Perg', 'Perg District', 'Perg Kalvarienbergkirche.jpg', 'UTC+01:00', 'nan', 'AUT Perg COA.svg', 'municipality of Austria', '48.250277777778', 'Category:Perg', '48386ee3-0af7-4554-9fe4-7da3b047b489', '/m/0271kb0', '7872072.0', 'https://www.perg.at/', '239621818', 26.44000000000000127, 8388.0);\n",
@@ -49684,7 +49684,7 @@
             ]
         },
         "expected_table_name": "Match",
-        "predicted_table_name": ","
+        "predicted_table_name": "'"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population)  VALUES ('Steyr', 'town in Austria', 'Austria', 'Steyr', 'Upper Austria', 'Blick ueber die Steyrer Altstadt 29-06-2011.jpg', 'UTC+01:00', 'nan', 'AUT Steyr COA.svg', 'municipality of Austria', '48.05', 'Category:Steyr', 'e5e0215d-0c09-4c18-8f7b-9b02fc704284', '/m/03q9ll', '2764347.0', 'https://www.steyr.at', '237247486', 26.55999999999999873, 38331.0);\n",
@@ -50780,7 +50780,7 @@
             ]
         },
         "expected_table_name": "administrative_territorial_entity",
-        "predicted_table_name": "administrative_territorial_entity"
+        "predicted_table_name": "located_in_the_administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start)  VALUES ('methyl-accepting chemotaxis protein III ECs2026', 'microbial gene found in Escherichia coli O157:H7 str. Sakai', 'ECs2026', 'gene', 'Escherichia coli O157:H7 str. Sakai', '917242', 'Methyl-accepting chemotaxis protein III ECs2026', 'gene', '2011618', 'forward strand', '2009978');\n",
@@ -52346,7 +52346,7 @@
             ]
         },
         "expected_table_name": "foreign_data",
-        "predicted_table_name": "foreign_data"
+        "predicted_table_name": "cards"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population)  VALUES ('Bagneux', 'commune in Hauts-de-Seine, France', 'France', 'Bagneux (Hauts-de-Seine)', 'arrondissement of Antony', 'Eglise Saint Hermeland.jpg', 'UTC+01:00', 'Bagneux map.svg', 'Blason ville fr Bagneux (Hauts-de-Seine).svg', 'commune of France', '48.797777777778', 'Category:Bagneux, Hauts-de-Seine', 'becd3c7e-eaa0-4bbe-a957-3ef10874c8b3', '/m/04cwr1', '6455381.0', 'http://www.bagneux92.fr', '268469117', 4.190000000000000391, 40936.0);\n",
@@ -53242,7 +53242,7 @@
             ]
         },
         "expected_table_name": "political_border",
-        "predicted_table_name": "political_border"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (89571, 198118, 161421, '2010-08-30 00:00:00', 61, 70, 'right', 'medium', 'high', 32, 37, 58, 63, 29, 30, 45, 51, 61, 60, 68, 65, 63, 60, 63, 31, 59, 63, 64, 37, 69, 54, 25, 58, 46, 56, 64, 57, 13, 7, 13, 9, 14);\n",
@@ -53685,7 +53685,7 @@
             ]
         },
         "expected_table_name": "Match",
-        "predicted_table_name": "7,"
+        "predicted_table_name": "1</'"
     },
     {
         "query": "INSERT INTO legalities (id, format, status, uuid)  VALUES (148228, 'duel', 'Legal', '028edd2d-eec3-59e6-a716-b120a4d89f97');\n",
@@ -54830,7 +54830,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO replaced_entity (label, description, instance_of, country, replaced_by, dissolved_abolished_or_demolished_date, located_in_the_administrative_territorial_entity, inception, located_in_the_present_day_administrative_territorial_entity, coordinate_location, name_in_kana)  VALUES ('Sakaino', 'dissolved municipality in Yamada district, Gunma prefecture, Japan', 'dissolved municipality of Japan', 'Japan', 'Kiryu', '+1933-04-01T00:00:00Z', 'Yamada district', '+1889-04-01T00:00:00Z', 'Kiryu', '36.38902777777778', '\u3055\u304b\u3044\u306e\u3080\u3089');\n",
@@ -55274,7 +55274,7 @@
             ]
         },
         "expected_table_name": "administrative_territorial_entity",
-        "predicted_table_name": "administrative_territorial_entity"
+        "predicted_table_name": "located_in_the_present_day_administrative_territ"
     },
     {
         "query": "INSERT INTO buildings (id, name, City, Height, Stories, Status)  VALUES (12, 'Ritz-Carlton Mexico City', 'Mexico City', 100, 34, 'on-hold');\n",
@@ -55676,7 +55676,7 @@
             ]
         },
         "expected_table_name": "political_border",
-        "predicted_table_name": "political_border"
+        "predicted_table_name": "located_in_the_administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting chemotaxis sensory transducer ECL_01991', 'microbial protein found in Enterobacter cloacae subsp. cloacae ATCC 13047', 'A0A0H3CLV4', 'Enterobacter cloacae subsp. cloacae ATCC 13047', 'methyl-accepting chemotaxis sensory transducer ECL_01991', 'Methyl-accepting chemotaxis protein (MCP) signalling domain', 'signal transducer activity', 'membrane', 'chemotaxis', 'protein', 'YP_003612492', 'Methyl-accepting chemotaxis protein');\n",
@@ -56763,7 +56763,7 @@
             ]
         },
         "expected_table_name": "Player_Attributes",
-        "predicted_table_name": "Player"
+        "predicted_table_name": "Player_Attributes"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (54420, 173132, 181921, '2012-08-31 00:00:00', 68, 75, 'right', 'high', 'low', 60, 68, 64, 65, 64, 64, 52, 52, 50, 64, 75, 77, 85, 70, 67, 67, 71, 86, 75, 60, 64, 29, 69, 60, 65, 23, 34, 28, 6, 11, 8, 6, 11);\n",
@@ -57445,7 +57445,7 @@
             ]
         },
         "expected_table_name": "located_in_the_present_day_administrative_territorial_entity",
-        "predicted_table_name": "located_in_the_present_day_administrative_territ"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO burial_vault (label, description, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of)  VALUES ('Newburgh, Old Churchyard, Udny Family Vault', 'burial vault in Newburgh, Aberdeenshire, Scotland, UK', 'Aberdeenshire', 'United Kingdom', '57.3214', 'burial vault');\n",
@@ -57621,7 +57621,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO exhibition_record (Exhibition_ID, Date, Attendance)  VALUES (3, 'February 19', 1233);\n",
@@ -57815,7 +57815,7 @@
             ]
         },
         "expected_table_name": "Match",
-        "predicted_table_name": "h."
+        "predicted_table_name": "home_player"
     },
     {
         "query": "INSERT INTO located_in_the_present_day_administrative_territorial_entity (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, twinned_administrative_body, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana)  VALUES ('Okaya', 'city in Nagano Prefecture, Japan', 'Okaya city office.jpg', '202045', 'Okaya, Nagano', 'Flag of Okaya, Nagano.svg', 'Japan', 'Nagano Prefecture', '36.06711111111111', 'https://www.city.okaya.lg.jp/', 'city of Japan', '296533.0', '/m/01wkvl', 47499.0, 'a123c284-88b1-4c40-b938-f6d85751399a', 'Category:Okaya, Nagano', '1854384', 'Mount Pleasant', '256541710.0', 85.09999999999999431, '2000020202045', 'nan', 'UTC+09:00', 'Okaya in Nagano Prefecture Ja.svg', 'jp/2000020202045', 'XbuLg6', '\u5ca1\u8c37\u5e02', '890531771.0', 'lccn-n81050703', 'Tatsuno', '+1936-04-01T00:00:00Z', 'Shiojiri', '34378.0', '\u304a\u304b\u3084\u3057');\n",
@@ -57977,7 +57977,7 @@
             ]
         },
         "expected_table_name": "located_in_the_present_day_administrative_territorial_entity",
-        "predicted_table_name": "located_in_the_present_day_administrative_territ"
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting chemotaxis protein BPSL1829', 'microbial protein found in Burkholderia pseudomallei K96243', 'Q63TY8', 'Burkholderia pseudomallei K96243', 'methyl-accepting chemotaxis protein BPSL1829', 'Methyl-accepting chemotaxis protein (MCP) signalling domain', 'signal transducer activity', 'membrane', 'chemotaxis', 'protein', 'YP_108428', 'Methyl-accepting chemotaxis protein');\n",
@@ -58011,7 +58011,7 @@
             ]
         },
         "expected_table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
-        "predicted_table_name": "chemotaxis_methyl_accepting_receptor_tar"
+        "predicted_table_name": "encoded_by"
     },
     {
         "query": "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA)  VALUES (5630, 4769, 4769, '2010/2011', 19, '2010-12-22 00:00:00', 830125, 9827, 8588, 2, 2, 1, 2, 4, 6, 8, 5, 4, 6, 4, 6, 6, 1, 2, 4, 6, 8, 5, 4, 6, 4, 6, 6, 1, 3, 3, 3, 3, 5, 7, 7, 9, 9, 11, 1, 3, 3, 3, 3, 5, 7, 7, 9, 9, 11, 26168, 240367, 39962, 179393, 41092, 39978, 30907, 26144, 40707, 93317, 71605, 39565, 230982, 33451, 41312, 41360, 40012, 154230, 40010, 33446, 26139, 78186, '<goal><value><comment>n</comment><stats><goals>1</goals><shoton>1</shoton></stats><event_incident_typefk>71</event_incident_typefk><elapsed>15</elapsed><player1>78186</player1><sortorder>0</sortorder><team>8588</team><id>1341431</id><n>26</n><type>goal</type><goal_type>n</goal_type></value><value><comment>n</comment><stats><goals>1</goals><shoton>1</shoton></stats><event_incident_typefk>71</event_incident_typefk><elapsed>45</elapsed><player1>40010</player1><sortorder>0</sortorder><team>8588</team><id>1341587</id><n>27</n><type>goal</type><goal_type>n</goal_type></value><value><comment>n</comment><stats><goals>1</goals><shoton>1</shoton></stats><event_incident_typefk>71</event_incident_typefk><elapsed>67</elapsed><player1>39978</player1><sortorder>0</sortorder><team>9827</team><id>1341744</id><n>29</n><type>goal</type><goal_type>n</goal_type></value><value><comment>n</comment><stats><goals>1</goals><shoton>1</shoton></stats><event_incident_typefk>71</event_incident_typefk><elapsed>90</elapsed><player1>31292</player1><sortorder>0</sortorder><team>9827</team><id>1341792</id><n>35</n><type>goal</type><goal_type>n</goal_type></value></goal>', '<shoton />', '<shotoff />', '<foulcommit />', '<card><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>24</elapsed><card_type>y</card_type><player1>26139</player1><sortorder>0</sortorder><team>8588</team><n>24</n><type>card</type><id>1341491</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>48</elapsed><card_type>y</card_type><player1>39978</player1><sortorder>0</sortorder><team>9827</team><n>25</n><type>card</type><id>1341678</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>60</elapsed><card_type>y</card_type><player1>33451</player1><sortorder>0</sortorder><team>8588</team><n>32</n><type>card</type><id>1341745</id></value><value><comment>y2</comment><stats><rcards>1</rcards></stats><event_incident_typefk>26</event_incident_typefk><elapsed>71</elapsed><card_type>y2</card_type><player1>39978</player1><sortorder>0</sortorder><team>9827</team><n>33</n><type>card</type><id>1341756</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>78</elapsed><card_type>y</card_type><player1>93317</player1><sortorder>0</sortorder><team>9827</team><n>28</n><type>card</type><id>1341781</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>78</elapsed><card_type>y</card_type><player1>39565</player1><sortorder>0</sortorder><team>8588</team><n>31</n><type>card</type><id>1341782</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>88</elapsed><card_type>y</card_type><player1>40707</player1><sortorder>0</sortorder><team>9827</team><n>34</n><type>card</type><id>1341793</id></value><value><comment>y</comment><stats><ycards>1</ycards></stats><event_incident_typefk>70</event_incident_typefk><elapsed>90</elapsed><card_type>y</card_type><player1>33446</player1><sortorder>0</sortorder><team>8588</team><n>30</n><type>card</type><id>1341794</id></value></card>', '<cross />', '<corner />', '<possession />', 1.570000000000000062, 3.600000000000000088, 6.5, 1.550000000000000044, 3.600000000000000088, 6.25, 1.600000000000000088, 3.5, 5.200000000000000177, 1.5, 3.5, 6.0, NULL, NULL, NULL, 1.550000000000000044, 3.600000000000000088, 7.0, 1.570000000000000062, 3.600000000000000088, 6.0, 1.620000000000000106, 3.799999999999999823, 6.5, 1.550000000000000044, 3.600000000000000088, 6.0, 1.570000000000000062, 3.5, 6.0);\n",
@@ -58455,7 +58455,7 @@
             ]
         },
         "expected_table_name": "legalities",
-        "predicted_table_name": "legalities"
+        "predicted_table_name": "set_translations"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (736481, 2515, '1998-01-11', 'PRIJEM', 'VKLAD', 16300, 26832, NULL, NULL, NULL);\n",

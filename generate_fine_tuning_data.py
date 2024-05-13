@@ -13,7 +13,8 @@ from util.processing_utils import get_data_from_create_table
 # !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
 name = "missing_tables"
-num_data_points = 100
+fine_tuning_data_points = 12000
+validation_data_points = 150
 data_sources = ["bird", "spider", "wikidb"]
 
 random = Random(6541)
@@ -31,17 +32,22 @@ def apply_alterations(query: dict[str, Any]) -> None:
             del query["columns"]
 
 
-def get_data_for_one_data_source(data_sorce_folder: str) -> list[dict[str, str]]:
+def get_data_for_one_data_source(
+    data_sorce_folder: str, data_points: int, validation: bool = False
+) -> list[dict[str, str]]:
     data = []
 
-    databases = os.listdir(os.path.join("fine_tuning", "databases", data_sorce_folder))
-    num_data_points_per_database = int(math.ceil(num_data_points / len(databases)))
+    databases_folder = os.path.join(
+        "fine_tuning",
+        "validation_databases" if validation else "databases",
+        data_sorce_folder,
+    )
+    databases = os.listdir(databases_folder)
+    data_points_per_database = int(math.ceil(data_points / len(databases)))
 
     for db_index, path in enumerate(databases):
         try:
-            full_path = os.path.join(
-                "fine_tuning", "databases", data_sorce_folder, path
-            )
+            full_path = os.path.join(databases_folder, path)
             if not os.path.isfile(full_path) or not full_path.endswith(".sql"):
                 continue
 
@@ -70,7 +76,7 @@ def get_data_for_one_data_source(data_sorce_folder: str) -> list[dict[str, str]]
 
             # Sample data points from all queries and create fine tuning data
             for query, table_name, columns in random.sample(
-                queries, min(num_data_points_per_database, len(queries))
+                queries, min(data_points_per_database, len(queries))
             ):
                 parsed_query = parse_insert_query(query)
                 parsed_query["table"] = table_name
@@ -127,17 +133,20 @@ def get_data_for_one_data_source(data_sorce_folder: str) -> list[dict[str, str]]
                 f"\033[91mERROR: {data_sorce_folder}: Database {path}, {db_index} / {len(databases)}\033[0m"
             )
 
-    return random.sample(data, min(num_data_points, len(data)))
+    return random.sample(data, min(fine_tuning_data_points, len(data)))
 
 
 data = []
+data_points_per_source = math.ceil(fine_tuning_data_points / len(data_sources))
 for data_source in data_sources:
-    data.extend(get_data_for_one_data_source(data_source))
+    data.extend(get_data_for_one_data_source(data_source, data_points_per_source))
 
 random.shuffle(data)
 
 # Dump fine tuning data
 with open(
-    os.path.join("fine_tuning", name + ".json"), mode="w", encoding="utf-8"
-) as fine_tuning_data_file:
-    json.dump(data, fine_tuning_data_file)
+    os.path.join("fine_tuning", "datasets", f"{name}_{fine_tuning_data_points}.json"),
+    mode="w",
+    encoding="utf-8",
+) as dataset_file:
+    json.dump(data, dataset_file)

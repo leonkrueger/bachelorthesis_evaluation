@@ -48,29 +48,33 @@ def get_data_for_one_database(
 
         for table_name, table_queries in queries.items():
             # Sample data point from all queries
-            query = random.choice(table_queries)
-            parsed_query = parse_insert_query(query)
-            parsed_query["table"] = table_name
-            parsed_query["columns"] = database_state[table_name]
-            # Every insert statement contains only one row
-            parsed_query["values"] = parsed_query["values"][0]
+            queries = random.choices(table_queries, k=3)
+            queries_as_str = []
+            for query in queries:
+                parsed_query = parse_insert_query(query)
+                parsed_query["table"] = table_name
+                parsed_query["columns"] = database_state[table_name]
+                # Every insert statement contains only one row
+                parsed_query["values"] = parsed_query["values"][0]
 
-            # Create insert statement as string
-            table_str = (
-                ""
-                if "table" not in parsed_query.keys()
-                else parsed_query["table"] + " "
-            )
-            columns_str = (
-                ""
-                if "columns" not in parsed_query.keys()
-                else f"({', '.join(parsed_query['columns'])}) "
-            )
-            query_str = f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(parsed_query['values'])});\n"
+                # Create insert statement as string
+                table_str = (
+                    ""
+                    if "table" not in parsed_query.keys()
+                    else parsed_query["table"] + " "
+                )
+                columns_str = (
+                    ""
+                    if "columns" not in parsed_query.keys()
+                    else f"({', '.join(parsed_query['columns'])}) "
+                )
+                queries_as_str.append(
+                    f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(parsed_query['values'])});\n"
+                )
 
             data.append(
                 {
-                    "query": query_str,
+                    "query": queries_as_str,
                     "database_name": database_name,
                     "table_name": table_name,
                 }

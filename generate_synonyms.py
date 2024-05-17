@@ -48,7 +48,8 @@ def get_data_for_one_database(
 
         for table_name, table_queries in queries.items():
             # Sample data point from all queries
-            queries = random.choices(table_queries, k=3)
+            table_queries = [query for query in table_queries if len(query) < 2000]
+            queries = random.choices(table_queries, k=min(3, len(table_queries)))
             queries_as_str = []
             for query in queries:
                 parsed_query = parse_insert_query(query)

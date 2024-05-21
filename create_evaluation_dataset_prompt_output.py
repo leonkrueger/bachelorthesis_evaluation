@@ -94,6 +94,11 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
             )
             database_state_for_query[table_name] = correct_table
 
+            # Shuffle entries so that the correct table is not always at the end
+            database_state_items = database_state_for_query.items()
+            random.shuffle(database_state_items)
+            database_state_for_query = dict(database_state_items)
+
             data.append(
                 {
                     "query": query_str,

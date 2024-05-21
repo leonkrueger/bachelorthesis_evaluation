@@ -174,3 +174,6 @@ data/bird_european_football_2/european_football_2.sql
 
 # Plots
 *.png
+
+# Test file
+test.py

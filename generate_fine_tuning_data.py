@@ -1,10 +1,14 @@
+import copy
 import io
 import json
 import math
 import os
 import tokenize
+import traceback
 from random import Random
 from typing import Any
+
+from tqdm import tqdm
 
 from util.adjustments import FINE_TUNING, Adjustments
 from util.insert_query_parser import parse_insert_query
@@ -17,11 +21,43 @@ fine_tuning_data_points = 12000
 validation_data_points = 150
 data_sources = ["bird", "spider", "wikidb"]
 
-random = Random(6541)
+random = Random()
 
 
-def apply_alterations(query: dict[str, Any]) -> None:
+def apply_alterations(
+    query: dict[str, Any],
+    database_state: dict[str, list[str]],
+    synonyms: list[str],
+) -> tuple[dict[str, Any], dict[str, list[str]], str]:
     """Applies the alterations specified in the dict FINE_TUNING"""
+    scenario = int(math.floor(3 * random.random()))
+    if scenario == 0:  # Table not in db
+        correct_prediction = query["table"]
+    elif scenario == 1:  # Table with correct name in db
+        correct_prediction = query["table"]
+        table_to_add = database_state[query["table"]]
+    elif scenario == 2:  # Table with different name in db
+        correct_prediction = (
+            random.choice(synonyms) if len(synonyms) > 0 else query["table"]
+        )
+        table_to_add = database_state[query["table"]]
+
+    del database_state[query["table"]]
+    database_state = dict(
+        random.sample(
+            list(database_state.items()),
+            random.randint(0, len(database_state.items())),
+        )
+    )
+
+    if scenario == 1 or scenario == 2:
+        database_state[correct_prediction] = table_to_add
+
+        # Shuffle entries so that the correct table is not always at the end
+        database_state_items = list(database_state.items())
+        random.shuffle(database_state_items)
+        database_state = dict(database_state_items)
+
     for alteration, probability in FINE_TUNING[name]:
         if random.random() > probability:
             continue
@@ -31,9 +67,14 @@ def apply_alterations(query: dict[str, Any]) -> None:
         elif alteration == Adjustments.DELETE_COLUMN:
             del query["columns"]
 
+    return query, database_state, correct_prediction
+
 
 def get_data_for_one_data_source(
-    data_sorce_folder: str, data_points: int, validation: bool = False
+    data_sorce_folder: str,
+    data_points: int,
+    synonyms: dict[str, dict[str, list[str]]],
+    validation: bool = False,
 ) -> list[dict[str, str]]:
     data = []
 
@@ -45,7 +86,7 @@ def get_data_for_one_data_source(
     databases = os.listdir(databases_folder)
     data_points_per_database = int(math.ceil(data_points / len(databases)))
 
-    for db_index, path in enumerate(databases):
+    for path in tqdm(databases):
         try:
             full_path = os.path.join(databases_folder, path)
             if not os.path.isfile(full_path) or not full_path.endswith(".sql"):
@@ -83,7 +124,18 @@ def get_data_for_one_data_source(
                 parsed_query["columns"] = columns
                 # Every insert statement contains only one row
                 parsed_query["values"] = parsed_query["values"][0]
-                apply_alterations(parsed_query)
+
+                parsed_query, database_state_for_query, correct_prediction = (
+                    apply_alterations(
+                        parsed_query,
+                        copy.deepcopy(database_state),
+                        (
+                            synonyms[path[:-4]][table_name]
+                            if table_name in synonyms[path[:-4]]
+                            else []
+                        ),
+                    )
+                )
 
                 # Create insert statement as string
                 table_str = (
@@ -96,15 +148,8 @@ def get_data_for_one_data_source(
                     if "columns" not in parsed_query.keys()
                     else f"({', '.join(parsed_query['columns'])}) "
                 )
-                query_str = f"INSERT INTO {table_str}{columns_str} VALUES ({', '.join(parsed_query['values'])});\n"
+                query_str = f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(parsed_query['values'])});\n"
 
-                # Create database state
-                database_state_for_query = dict(
-                    random.sample(
-                        list(database_state.items()),
-                        random.randint(0, len(database_state.items())),
-                    )
-                )
                 database_str = (
                     "\n".join(
                         [
@@ -121,31 +166,35 @@ def get_data_for_one_data_source(
                     f"Query: {query_str}"
                     f"Database State:\n{database_str}"
                 )
-                response = f"Table: {table_name}"
+                response = f"Table: {correct_prediction}"
 
                 data.append({"Instruction": instruction, "Response": response})
-
-            print(
-                f"\033[92m{data_sorce_folder}: Processed database {path}, {db_index} / {len(databases)}\033[0m"
-            )
         except Exception:
-            print(
-                f"\033[91mERROR: {data_sorce_folder}: Database {path}, {db_index} / {len(databases)}\033[0m"
-            )
+            print(f"\033[91mERROR: {data_sorce_folder}: Database {path}\033[0m")
+            print(traceback.format_exc())
 
     return random.sample(data, min(fine_tuning_data_points, len(data)))
 
 
+with open(
+    os.path.join("fine_tuning", "synonyms.json"), encoding="utf-8"
+) as synonyms_file:
+    synonyms = json.load(synonyms_file)
+
 data = []
 data_points_per_source = math.ceil(fine_tuning_data_points / len(data_sources))
-for data_source in data_sources:
-    data.extend(get_data_for_one_data_source(data_source, data_points_per_source))
+for data_source in tqdm(data_sources):
+    data.extend(
+        get_data_for_one_data_source(
+            data_source, data_points_per_source, synonyms, True
+        )
+    )
 
 random.shuffle(data)
 
 # Dump fine tuning data
 with open(
-    os.path.join("fine_tuning", "datasets", f"{name}_{fine_tuning_data_points}.json"),
+    os.path.join("fine_tuning", "validation_datasets", f"{name}.json"),
     mode="w",
     encoding="utf-8",
 ) as dataset_file:

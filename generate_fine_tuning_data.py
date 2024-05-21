@@ -185,16 +185,14 @@ data = []
 data_points_per_source = math.ceil(fine_tuning_data_points / len(data_sources))
 for data_source in tqdm(data_sources):
     data.extend(
-        get_data_for_one_data_source(
-            data_source, data_points_per_source, synonyms, True
-        )
+        get_data_for_one_data_source(data_source, data_points_per_source, synonyms)
     )
 
 random.shuffle(data)
 
 # Dump fine tuning data
 with open(
-    os.path.join("fine_tuning", "validation_datasets", f"{name}.json"),
+    os.path.join("fine_tuning", "datasets", f"{name}_{fine_tuning_data_points}.json"),
     mode="w",
     encoding="utf-8",
 ) as dataset_file:

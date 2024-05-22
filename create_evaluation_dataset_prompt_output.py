@@ -11,6 +11,11 @@ from util.processing_utils import get_data_from_create_table
 
 folder = "data"
 num_data_points = 100
+experiment_input_files = [
+    "table_not_in_database",
+    "table_in_database",
+    "different_name_in_database",
+]
 query_alterations = [(Adjustments.DELETE_TABLE, 0.0)]
 experiment = EXPERIMENTS["finetuning_missing_tables"]
 
@@ -29,7 +34,9 @@ def apply_alterations(query: dict[str, Any]) -> None:
             del query["columns"]
 
 
-def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
+def get_data_for_one_database(
+    database_file_path: str, experiment_input_file: str
+) -> list[dict[str, str]]:
     data = []
 
     try:
@@ -83,8 +90,13 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
             # Create database state
             database_state_for_query = copy.deepcopy(database_state)
 
-            # CHANGE THIS FOR DIFFERENT TESTS
-            correct_table = database_state_for_query[table_name]
+            # Change database state
+            if (
+                experiment_input_file == "table_in_database"
+                or experiment_input_file == "different_name_in_database"
+            ):
+                correct_table = database_state_for_query[table_name]
+
             del database_state_for_query[table_name]
             database_state_for_query = dict(
                 random.sample(
@@ -92,7 +104,12 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
                     random.randint(0, len(database_state_for_query.items())),
                 )
             )
-            database_state_for_query[table_name] = correct_table
+
+            if (
+                experiment_input_file == "table_in_database"
+                or experiment_input_file == "different_name_in_database"
+            ):
+                database_state_for_query[table_name] = correct_table
 
             # Shuffle entries so that the correct table is not always at the end
             database_state_items = database_state_for_query.items()
@@ -114,42 +131,52 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
     return random.sample(data, min(num_data_points, len(data)))
 
 
-data = []
-for path in os.listdir(folder):
-    subfolder = os.path.join(folder, path)
-    if (
-        not os.path.isdir(subfolder)
-        or path == "evaluation"
-        or ("databases" in experiment and not path in experiment["databases"])
-    ):
-        continue
+def generate_data_for_input_file(experiment_input_file: str):
+    data = []
+    for path in os.listdir(folder):
+        subfolder = os.path.join(folder, path)
+        if (
+            not os.path.isdir(subfolder)
+            or path == "evaluation"
+            or ("databases" in experiment and not path in experiment["databases"])
+        ):
+            continue
 
-    database_file = path[path.find("_") + 1 :] + ".sql"
-    data.extend(get_data_for_one_database(os.path.join(subfolder, database_file)))
+        database_file = path[path.find("_") + 1 :] + ".sql"
+        data.extend(
+            get_data_for_one_database(
+                os.path.join(subfolder, database_file), experiment_input_file
+            )
+        )
 
-random.shuffle(data)
+    random.shuffle(data)
 
-# Dump fine tuning data
-dataset_folder = os.path.join(
-    "further_evaluation",
-    "error_cases_missing_tables",
-)
-experiment_input_file_path = "different_name_in_database.json"
+    # Dump fine tuning data
+    dataset_folder = os.path.join(
+        "further_evaluation",
+        "error_cases_missing_tables",
+    )
 
-with open(
-    os.path.join(
-        dataset_folder,
-        experiment_input_file_path,
-    ),
-    mode="w",
-    encoding="utf-8",
-) as fine_tuning_data_file:
-    json.dump(data, fine_tuning_data_file)
-
-for strategy in experiment["strategies"]:
-    os.makedirs(os.path.join(dataset_folder, strategy), exist_ok=True)
-    open(
-        os.path.join(dataset_folder, strategy, "results_" + experiment_input_file_path),
+    with open(
+        os.path.join(
+            dataset_folder,
+            experiment_input_file + ".json",
+        ),
         mode="w",
         encoding="utf-8",
-    ).close()
+    ) as fine_tuning_data_file:
+        json.dump(data, fine_tuning_data_file)
+
+    for strategy in experiment["strategies"]:
+        os.makedirs(os.path.join(dataset_folder, strategy), exist_ok=True)
+        open(
+            os.path.join(
+                dataset_folder, strategy, "results_" + experiment_input_file + ".json"
+            ),
+            mode="w",
+            encoding="utf-8",
+        ).close()
+
+
+for experiment_input_file in experiment_input_files:
+    generate_data_for_input_file(experiment_input_file)

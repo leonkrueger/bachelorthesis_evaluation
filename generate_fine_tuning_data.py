@@ -19,7 +19,7 @@ from util.processing_utils import get_data_from_create_table
 
 name = "missing_tables"
 generate_validation_data = False
-fine_tuning_data_points = 24000
+fine_tuning_data_points = 12000
 validation_data_points = 150
 data_sources = ["bird", "spider", "wikidb"]
 
@@ -111,12 +111,8 @@ def get_data_for_one_data_source(
                         _, table_name, _, column_data = get_data_from_create_table(
                             query, use_mysql_quotes=False
                         )
-                        columns_str = ", ".join(
-                            [" ".join(column) for column in column_data]
-                        )
-                        database_state[table_name] = (
-                            f"CREATE TABLE {table_name} ({columns_str});"
-                        )
+                        columns = [column[0] for column in column_data]
+                        database_state[table_name] = columns
 
                     if query.startswith("INSERT"):
                         queries.append((query, table_name, columns))
@@ -159,7 +155,7 @@ def get_data_for_one_data_source(
                 database_str = (
                     "\n".join(
                         [
-                            columns  # f"- Table: {table}, Columns: [{', '.join([column for column in columns])}]"
+                            f"- Table: {table}, Columns: [{', '.join([column for column in columns])}]"
                             for table, columns in database_state_for_query.items()
                         ]
                     )
@@ -208,7 +204,7 @@ random.shuffle(data)
 with open(
     os.path.join(
         "fine_tuning",
-        "datasets",
+        "validation_datasets" if generate_validation_data else "datasets",
         (
             f"{name}.json"
             if generate_validation_data

@@ -1,0 +1,20 @@
+{
+    "table_not_in_database": {
+        "existing_table_with_correct_name": 0.0,
+        "existing_table_with_wrong_name": 0.12316176470588236,
+        "new_table_with_correct_name": 0.7867647058823529,
+        "new_table_with_wrong_name": 0.0900735294117647
+    },
+    "different_name_in_database": {
+        "existing_table_with_correct_name": 0.9272727272727272,
+        "existing_table_with_wrong_name": 0.0,
+        "new_table_with_correct_name": 0.0,
+        "new_table_with_wrong_name": 0.07272727272727272
+    },
+    "table_in_database": {
+        "existing_table_with_correct_name": 0.8886597938144329,
+        "existing_table_with_wrong_name": 0.016494845360824743,
+        "new_table_with_correct_name": 0.0,
+        "new_table_with_wrong_name": 0.09484536082474226
+    }
+}

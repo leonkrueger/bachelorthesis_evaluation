@@ -1,0 +1,1339 @@
+[
+    {
+        "query": [
+            "INSERT INTO customers (CustomerID, Segment, Currency) VALUES (27317, 'KAM', 'CZK');\n",
+            "INSERT INTO customers (CustomerID, Segment, Currency) VALUES (48617, 'SME', 'CZK');\n",
+            "INSERT INTO customers (CustomerID, Segment, Currency) VALUES (16418, 'SME', 'CZK');\n"
+        ],
+        "database_name": "debit_card_specializing",
+        "table_name": "customers"
+    },
+    {
+        "query": [
+            "INSERT INTO gasstations (GasStationID, ChainID, Country, Segment) VALUES (1251, 2, 'CZE', 'Noname');\n",
+            "INSERT INTO gasstations (GasStationID, ChainID, Country, Segment) VALUES (1676, 3, 'CZE', 'Other');\n",
+            "INSERT INTO gasstations (GasStationID, ChainID, Country, Segment) VALUES (5458, 9, 'CZE', 'Value for money');\n"
+        ],
+        "database_name": "debit_card_specializing",
+        "table_name": "gasstations"
+    },
+    {
+        "query": [
+            "INSERT INTO products (ProductID, Description) VALUES (388, 'Dopcet m\u00fdtn.');\n",
+            "INSERT INTO products (ProductID, Description) VALUES (25, 'Dalnic.popl.');\n",
+            "INSERT INTO products (ProductID, Description) VALUES (38, 'L\u00e9k\u00e1rna');\n"
+        ],
+        "database_name": "debit_card_specializing",
+        "table_name": "products"
+    },
+    {
+        "query": [
+            "INSERT INTO transactions_1k (TransactionID, Date, Time, CustomerID, CardID, GasStationID, ProductID, Amount, Price) VALUES (395, '2012-08-24', '07:06:00', 2738, 455495, 5337, 317, 18, 16.57000000000000028);\n",
+            "INSERT INTO transactions_1k (TransactionID, Date, Time, CustomerID, CardID, GasStationID, ProductID, Amount, Price) VALUES (363, '2012-08-24', '16:25:00', 22994, 228888, 4431, 11, 0, 55.5);\n",
+            "INSERT INTO transactions_1k (TransactionID, Date, Time, CustomerID, CardID, GasStationID, ProductID, Amount, Price) VALUES (762, '2012-08-25', '12:13:00', 25805, 615109, 354, 5, 6, 132.2899999999999921);\n"
+        ],
+        "database_name": "debit_card_specializing",
+        "table_name": "transactions_1k"
+    },
+    {
+        "query": [
+            "INSERT INTO yearmonth (CustomerID, Date, Consumption) VALUES (16509, '201303', 547.5900000000000318);\n",
+            "INSERT INTO yearmonth (CustomerID, Date, Consumption) VALUES (1498, '201311', 936.539999999999964);\n",
+            "INSERT INTO yearmonth (CustomerID, Date, Consumption) VALUES (25062, '201205', 112.0799999999999983);\n"
+        ],
+        "database_name": "debit_card_specializing",
+        "table_name": "yearmonth"
+    },
+    {
+        "query": [
+            "INSERT INTO atom (atom_id, molecule_id, element) VALUES ('TR220_5', 'TR220', 'c');\n",
+            "INSERT INTO atom (atom_id, molecule_id, element) VALUES ('TR427_4', 'TR427', 'c');\n",
+            "INSERT INTO atom (atom_id, molecule_id, element) VALUES ('TR344_56', 'TR344', 'h');\n"
+        ],
+        "database_name": "toxicology",
+        "table_name": "atom"
+    },
+    {
+        "query": [
+            "INSERT INTO bond (bond_id, molecule_id, bond_type) VALUES ('TR475_3_10', 'TR475', '-');\n",
+            "INSERT INTO bond (bond_id, molecule_id, bond_type) VALUES ('TR335_10_11', 'TR335', '=');\n",
+            "INSERT INTO bond (bond_id, molecule_id, bond_type) VALUES ('TR152_7_14', 'TR152', '-');\n"
+        ],
+        "database_name": "toxicology",
+        "table_name": "bond"
+    },
+    {
+        "query": [
+            "INSERT INTO connected (atom_id, atom_id2, bond_id) VALUES ('TR236_21', 'TR236_7', 'TR236_7_21');\n",
+            "INSERT INTO connected (atom_id, atom_id2, bond_id) VALUES ('TR446_3', 'TR446_4', 'TR446_3_4');\n",
+            "INSERT INTO connected (atom_id, atom_id2, bond_id) VALUES ('TR370_4', 'TR370_5', 'TR370_4_5');\n"
+        ],
+        "database_name": "toxicology",
+        "table_name": "connected"
+    },
+    {
+        "query": [
+            "INSERT INTO molecule (molecule_id, label) VALUES ('TR146', '-');\n",
+            "INSERT INTO molecule (molecule_id, label) VALUES ('TR064', '-');\n",
+            "INSERT INTO molecule (molecule_id, label) VALUES ('TR247', '-');\n"
+        ],
+        "database_name": "toxicology",
+        "table_name": "molecule"
+    },
+    {
+        "query": [
+            "INSERT INTO cards (id, artist, asciiName, availability, borderColor, cardKingdomFoilId, cardKingdomId, colorIdentity, colorIndicator, colors, convertedManaCost, duelDeck, edhrecRank, faceConvertedManaCost, faceName, flavorName, flavorText, frameEffects, frameVersion, hand, hasAlternativeDeckLimit, hasContentWarning, hasFoil, hasNonFoil, isAlternative, isFullArt, isOnlineOnly, isOversized, isPromo, isReprint, isReserved, isStarter, isStorySpotlight, isTextless, isTimeshifted, keywords, layout, leadershipSkills, life, loyalty, manaCost, mcmId, mcmMetaId, mtgArenaId, mtgjsonV4Id, mtgoFoilId, mtgoId, multiverseId, name, number, originalReleaseDate, originalText, originalType, otherFaceIds, power, printings, promoTypes, purchaseUrls, rarity, scryfallId, scryfallIllustrationId, scryfallOracleId, setCode, side, subtypes, supertypes, tcgplayerProductId, text, toughness, type, types, uuid, variations, watermark) VALUES (54877, 'John Avon', NULL, 'paper', 'gold', NULL, NULL, 'R', NULL, NULL, 0.0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2003', NULL, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'c0d00f12-77d5-5849-beb4-4c546eebb04f', NULL, NULL, NULL, 'Mountain', 'we344', NULL, NULL, NULL, NULL, NULL, '10E,2ED,2XM,3ED,4BB,4ED,5ED,6ED,7ED,8ED,9ED,AKH,AKR,ALA,ANA,ANB,ARC,ARN,ATH,AVR,BBD,BFZ,BRB,BTD,C13,C14,C15,C16,C17,C18,C19,CED,CEI,CHK,CM2,CMA,CMD,CMR,CST,DD1,DD2,DDE,DDG,DDH,DDI,DDJ,DDK,DDL,DDN,DDP,DDS,DDT,DDU,DKM,DOM,DPA,DTK,E01,ELD,EVG,FBB,FRF,G17,GK1', NULL, '{''tcgplayer'': ''https://mtgjson.com/links/95985bd6a937dd1c''}', 'common', 'a35ff5f3-56a1-4862-809e-7ec77f9cc9ee', '2cf4e34e-115f-4ee1-870c-2b38c8a0efa0', 'a3fb7228-e76b-4e96-a40e-20b5fed75685', 'WC03', NULL, 'Mountain', 'Basic', '174184', '({T}: Add {R}.)', NULL, 'Basic Land \u2014 Mountain', 'Land', 'b0928124-2cd1-58a5-ad6e-a96317fbc678', '87951e76-fda2-5d1c-a415-dbacdb4ed752,f9c59536-56bf-5dba-9d7a-44fa734903cf,b72c6976-7617-58e5-aefa-a9619139739a,c5dde9bd-3bd2-5569-a7ed-98d8e8384d5f,76482e7a-ad4b-525f-ac5a-83db7d78a118', NULL);\n",
+            "INSERT INTO cards (id, artist, asciiName, availability, borderColor, cardKingdomFoilId, cardKingdomId, colorIdentity, colorIndicator, colors, convertedManaCost, duelDeck, edhrecRank, faceConvertedManaCost, faceName, flavorName, flavorText, frameEffects, frameVersion, hand, hasAlternativeDeckLimit, hasContentWarning, hasFoil, hasNonFoil, isAlternative, isFullArt, isOnlineOnly, isOversized, isPromo, isReprint, isReserved, isStarter, isStorySpotlight, isTextless, isTimeshifted, keywords, layout, leadershipSkills, life, loyalty, manaCost, mcmId, mcmMetaId, mtgArenaId, mtgjsonV4Id, mtgoFoilId, mtgoId, multiverseId, name, number, originalReleaseDate, originalText, originalType, otherFaceIds, power, printings, promoTypes, purchaseUrls, rarity, scryfallId, scryfallIllustrationId, scryfallOracleId, setCode, side, subtypes, supertypes, tcgplayerProductId, text, toughness, type, types, uuid, variations, watermark) VALUES (10291, 'Viktor Titov', NULL, 'mtgo,paper', 'black', NULL, '226947', 'G', NULL, 'G', 2.0, NULL, 1735, NULL, NULL, NULL, NULL, NULL, '2015', NULL, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 'Megamorph', 'normal', NULL, NULL, NULL, '{1}{G}', '391362', '211172', NULL, '0c0d71aa-d3d0-56a5-a585-15b456e9930d', NULL, '77436', '470707', 'Den Protector', '161', NULL, replace('Creatures with power less than Den Protector''s power can''t block it.\\nMegamorph {1}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\\nWhen Den Protector is turned','\\n',char(10)), 'Creature \u2014 Human Warrior', NULL, '2', 'C16,C19,DTK,PDTK', NULL, '{''cardKingdom'': ''https://mtgjson.com/links/712039ddd4a745e1'', ''cardmarket'': ''https://mtgjson.com/links/4b286df9bec4c5a4'', ''tcgplayer'': ''https://mtgjson.com/links/f69c836064b32b4b''}', 'rare', 'f6c1c367-35a9-4932-86a6-d63d3b9b326a', '9c35114e-22d0-49bd-a491-059732939561', '59324efc-65b7-4b31-89c5-17aed5c7eeb1', 'C19', NULL, 'Human,Warrior', NULL, '196453', replace('Creatures with power less than Den Protector''s power can''t block it.\\nMegamorph {1}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\\nWhen Den Protector is turned','\\n',char(10)), '1', 'Creature \u2014 Human Warrior', 'Creature', '94e767cd-fda9-59d8-8cc1-8d7f8124e5fa', NULL, NULL);\n",
+            "INSERT INTO cards (id, artist, asciiName, availability, borderColor, cardKingdomFoilId, cardKingdomId, colorIdentity, colorIndicator, colors, convertedManaCost, duelDeck, edhrecRank, faceConvertedManaCost, faceName, flavorName, flavorText, frameEffects, frameVersion, hand, hasAlternativeDeckLimit, hasContentWarning, hasFoil, hasNonFoil, isAlternative, isFullArt, isOnlineOnly, isOversized, isPromo, isReprint, isReserved, isStarter, isStorySpotlight, isTextless, isTimeshifted, keywords, layout, leadershipSkills, life, loyalty, manaCost, mcmId, mcmMetaId, mtgArenaId, mtgjsonV4Id, mtgoFoilId, mtgoId, multiverseId, name, number, originalReleaseDate, originalText, originalType, otherFaceIds, power, printings, promoTypes, purchaseUrls, rarity, scryfallId, scryfallIllustrationId, scryfallOracleId, setCode, side, subtypes, supertypes, tcgplayerProductId, text, toughness, type, types, uuid, variations, watermark) VALUES (36272, 'Izzy', NULL, 'mtgo,paper', 'black', '205003', '204670', 'B', NULL, NULL, 5.0, NULL, 13340, NULL, NULL, NULL, 'From nothingness, sustenance.', 'devoid', '2015', NULL, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Devoid', 'normal', NULL, NULL, NULL, '{4}{B}', '287360', '221494', NULL, '6c7607eb-7da5-597d-8ac6-058f1686afc4', '59522', '59521', '407584', 'Kozilek''s Translator', '74', NULL, replace('Devoid (This card has no color.)\\nPay 1 life: Add {C} to your mana pool. Activate this ability only once each turn. ({C} represents colorless mana.)','\\n',char(10)), 'Creature \u2014 Eldrazi Drone', NULL, '3', 'OGW', NULL, '{''cardKingdom'': ''https://mtgjson.com/links/51f4223ac121f553'', ''cardKingdomFoil'': ''https://mtgjson.com/links/c62cc5920ce599a7'', ''cardmarket'': ''https://mtgjson.com/links/1e349190791e1312'', ''tcgplayer'': ''https://mtgjson.com/links/8882f24e33aec3bd''}', 'common', 'd80665ae-fcb2-48fd-95be-8768293bcef7', '7cad5a2e-30c1-4a09-9b6b-6c78e026a8e3', '6766c5e4-baa7-4db4-a900-c08fbcd98f5d', 'OGW', NULL, 'Eldrazi,Drone', NULL, '111048', replace('Devoid (This card has no color.)\\nPay 1 life: Add {C}. Activate this ability only once each turn. ({C} represents colorless mana.)','\\n',char(10)), '5', 'Creature \u2014 Eldrazi Drone', 'Creature', '1990ea10-2979-5d6a-a0a6-fa8171396f3d', NULL, NULL);\n"
+        ],
+        "database_name": "card_games",
+        "table_name": "cards"
+    },
+    {
+        "query": [
+            "INSERT INTO foreign_data (id, flavorText, language, multiverseid, name, text, type, uuid) VALUES (73845, '', 'Japanese', 444328, '\u30ea\u30c3\u30c1\u306e\u9a0e\u58eb\u3001\u30b8\u30e7\u30b9\u30fb\u30f4\u30a7\u30b9', replace('\u30ad\u30c3\u30ab\u30fc{5}{B}\uff08\u3042\u306a\u305f\u306f\u3053\u306e\u546a\u6587\u3092\u5531\u3048\u308b\u306b\u969b\u3057\u3001\u8ffd\u52a0\u3067{5}{B}\u3092\u652f\u6255\u3063\u3066\u3082\u3088\u3044\u3002\uff09\\n\u5a01\u8feb\\n\u30ea\u30c3\u30c1\u306e\u9a0e\u58eb\u3001\u30b8\u30e7\u30b9\u30fb\u30f4\u30a7\u30b9\u304c\u6226\u5834\u306b\u51fa\u305f\u3068\u304d\u3001\u3053\u308c\u304c\u30ad\u30c3\u30ab\u30fc\u3055\u308c\u3066\u3044\u305f\u5834\u5408\u3001\u5a01\u8feb\u3092\u6301\u3064\u9ed2\u306e\uff12/\uff12\u306e\u30be\u30f3\u30d3\u30fb\u9a0e\u58eb\u30fb\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u30fb\u30c8\u30fc\u30af\u30f3\u3092\uff18\u4f53\u751f\u6210\u3059\u308b\u3002','\\n',char(10)), '\u4f1d\u8aac\u306e\u30af\u30ea\u30fc\u30c1\u30e3\u30fc \u2014 \u30be\u30f3\u30d3\u30fb\u9a0e\u58eb', 'e6987065-ae64-5b6c-a4ed-4f94bd196c66');\n",
+            "INSERT INTO foreign_data (id, flavorText, language, multiverseid, name, text, type, uuid) VALUES (20337, '\u300c\u3069\u306e\u6b21\u5143\u306b\u3082\u3001\u5371\u967a\u306b\u7acb\u3061\u5411\u304b\u3046\u8005\u306f\u5fc5\u305a\u3044\u308b\u3002\u300d \u2015\u2015\u30ae\u30c7\u30aa\u30f3\u30fb\u30b8\u30e5\u30e9', 'Japanese', 442239, '\u82f1\u96c4\u7684\u884c\u52d5', '\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\uff11\u4f53\u3092\u5bfe\u8c61\u3068\u3057\u3001\u305d\u308c\u3092\u30a2\u30f3\u30bf\u30c3\u30d7\u3059\u308b\u3002\u30bf\u30fc\u30f3\u7d42\u4e86\u6642\u307e\u3067\u3001\u305d\u308c\u306f\uff0b\uff12/\uff0b\uff12\u306e\u4fee\u6574\u3092\u53d7\u3051\u308b\u3068\u3068\u3082\u306b\u3001\u3053\u306e\u30bf\u30fc\u30f3\u3001\u305d\u308c\u306f\u8ffd\u52a0\u306e\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u3092\uff11\u4f53\u30d6\u30ed\u30c3\u30af\u3067\u304d\u308b\u3002', '\u30a4\u30f3\u30b9\u30bf\u30f3\u30c8', '36ec140e-8588-5daa-af1d-7638cee8c0ab');\n",
+            "INSERT INTO foreign_data (id, flavorText, language, multiverseid, name, text, type, uuid) VALUES (73264, '\"In un mondo che sta guarendo io scrivo... Io, che non potr\u00f2 mai guarire. Possa il mio ultimo dono essere un ricordo: tra mille pensieri perduti, scegline uno e rimembra il mio nome.\"', 'Italian', 444001, 'Poetessa Tragica', '{T}, Sacrifica la Poetessa Tragica: Riprendi in mano una carta incantesimo bersaglio dal tuo cimitero.', 'Creatura \u2014 Umano', '45502d58-d89c-5bf4-9b4b-c01ff3b6605b');\n"
+        ],
+        "database_name": "card_games",
+        "table_name": "foreign_data"
+    },
+    {
+        "query": [
+            "INSERT INTO legalities (id, format, status, uuid) VALUES (368827, 'pioneer', 'Legal', 'ec30d374-624c-5028-8a2a-fb899486033b');\n",
+            "INSERT INTO legalities (id, format, status, uuid) VALUES (364930, 'legacy', 'Legal', '0949698c-b3b0-53a4-9d22-988f0e7d0ffc');\n",
+            "INSERT INTO legalities (id, format, status, uuid) VALUES (297782, 'commander', 'Legal', '291ff1f2-43ad-5532-8ed0-e2097c01a493');\n"
+        ],
+        "database_name": "card_games",
+        "table_name": "legalities"
+    },
+    {
+        "query": [
+            "INSERT INTO rulings (id, date, text, uuid) VALUES (79365, '2020-01-24', 'If you put an Aura on an opponent\u2019s permanent, you still control the Aura, and mana symbols in its mana cost count towards your devotion.', 'f2d1c03a-1af3-59ad-afcc-ef69a331adcb');\n",
+            "INSERT INTO rulings (id, date, text, uuid) VALUES (64726, '2010-08-15', 'If the permanent affected by Frost Titan\u2019s second ability changes controllers before its old controller\u2019s next untap step, Frost Titan\u2019s second ability will prevent it from being untapped during its new controller\u2019s next untap step.', 'beab403e-826c-579b-b2b0-47999f0840eb');\n",
+            "INSERT INTO rulings (id, date, text, uuid) VALUES (45408, '2017-02-09', 'When calculating a spell\u2019s total cost, include any alternative costs, additional costs, or anything else that increases or reduces the cost to cast the spell. Improvise applies after the total cost is calculated.', 'd369d2ca-eb5a-54fa-b888-eb41db9230d7');\n"
+        ],
+        "database_name": "card_games",
+        "table_name": "rulings"
+    },
+    {
+        "query": [
+            "INSERT INTO sets (id, baseSetSize, block, booster, code, isFoilOnly, isForeignOnly, isNonFoilOnly, isOnlineOnly, isPartialPreview, keyruneCode, mcmId, mcmIdExtras, mcmName, mtgoCode, name, parentCode, releaseDate, tcgplayerGroupId, totalSetSize, type) VALUES (407, 22, NULL, NULL, 'PPRO', 1, 0, 0, 0, 0, 'PMEI', 1596, NULL, 'Pro Tour Promos', NULL, 'Pro Tour Promos', NULL, '2007-02-09', 93, 22, 'promo');\n",
+            "INSERT INTO sets (id, baseSetSize, block, booster, code, isFoilOnly, isForeignOnly, isNonFoilOnly, isOnlineOnly, isPartialPreview, keyruneCode, mcmId, mcmIdExtras, mcmName, mtgoCode, name, parentCode, releaseDate, tcgplayerGroupId, totalSetSize, type) VALUES (398, 1, 'Onslaught', NULL, 'PONS', 1, 0, 0, 0, 0, 'ONS', NULL, NULL, NULL, NULL, 'Onslaught Promos', 'ONS', '2003-02-03', NULL, 1, 'promo');\n",
+            "INSERT INTO sets (id, baseSetSize, block, booster, code, isFoilOnly, isForeignOnly, isNonFoilOnly, isOnlineOnly, isPartialPreview, keyruneCode, mcmId, mcmIdExtras, mcmName, mtgoCode, name, parentCode, releaseDate, tcgplayerGroupId, totalSetSize, type) VALUES (542, 117, NULL, NULL, 'WC98', 0, 0, 0, 0, 0, 'DEFAULT', NULL, NULL, NULL, NULL, 'World Championship Decks 1998', NULL, '1998-08-12', NULL, 117, 'memorabilia');\n"
+        ],
+        "database_name": "card_games",
+        "table_name": "sets"
+    },
+    {
+        "query": [
+            "INSERT INTO set_translations (id, language, setCode, translation) VALUES (753, 'French', 'M15', '\u00c9dition de base\u00a0Magic 2015');\n",
+            "INSERT INTO set_translations (id, language, setCode, translation) VALUES (431, 'Chinese Simplified', 'DDL', 'Heroes vs. Monsters');\n",
+            "INSERT INTO set_translations (id, language, setCode, translation) VALUES (29, 'Russian', '5DN', 'Fifth Dawn');\n"
+        ],
+        "database_name": "card_games",
+        "table_name": "set_translations"
+    },
+    {
+        "query": [
+            "INSERT INTO rulings_dg_tmp (id, date, text, uuid) VALUES (87527, '2021-02-05', 'The Kaldheim set doesn\u2019t have any cards with mana costs that include {S}, but some previous sets do. If an effect says such a spell costs {1} less to cast, that reduction doesn\u2019t apply to any {S} costs. This is also true for activated abilities that inclu', 'a78f0947-fc4e-5831-89af-d7ff3e5a1e3c');\n",
+            "INSERT INTO rulings_dg_tmp (id, date, text, uuid) VALUES (5246, '2017-04-18', 'Untapping an attacking creature doesn\u2019t remove it from combat.', '96ba344c-00bd-5832-aa69-2156a464bdf9');\n",
+            "INSERT INTO rulings_dg_tmp (id, date, text, uuid) VALUES (4677, '2017-02-09', 'Energy counters aren\u2019t permanents. Paying {E} won\u2019t satisfy a revolt ability.', 'f0e11711-4d28-5f0b-9b0b-17c328b05004');\n"
+        ],
+        "database_name": "card_games",
+        "table_name": "rulings_dg_tmp"
+    },
+    {
+        "query": [
+            "INSERT INTO located_in_the_present_day_administrative_territorial_entity (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, twinned_administrative_body, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Hita', 'city in \u014cita Prefecture, Japan', 'Gionn Festival Hita Ooita.jpg', '442046', 'Hita, Oita', 'Flag of Hita, Oita.svg', 'Japan', 'Oita Prefecture', '33.321305555555554', 'https://www.city.hita.oita.jp/', 'city of Japan', '282546.0', '/m/01wqzh', 61755.0, 'ec12ab69-5d4c-4acb-b411-5c21a05a2bab', 'Category:Hita, Oita', '1862373', 'nan', '252617633.0', 666.1900000000000546, '2000020442046', '\u65e5\u7530\u5e02', 'UTC+09:00', 'Hita in Oita Prefecture Ja.svg', 'jp/2000020442046', 'BpQ37V', '\u65e5\u7530\u5e02', '890523067.0', 'lccn-n83057783', 'Nakatsu', '+1940-12-11T00:00:00Z', '\u014cyama', '34510.0', '\u3072\u305f\u3057');\n",
+            "INSERT INTO located_in_the_present_day_administrative_territorial_entity (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, twinned_administrative_body, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Shizuoka', 'capital city of Shizuoka Prefecture, Japan', 'Shizuoka montage.jpg', '221007', 'Shizuoka, Shizuoka', 'Flag of Shizuoka, Shizuoka.svg', 'Japan', 'Shizuoka Prefecture', '34.975555555556', 'https://www.city.shizuoka.lg.jp/', 'city designated by government ordinance', '261969.0', '/m/0gp5nf', 685589.0, 'f42c9f11-1bad-4a1a-b8a8-43d7bf2c15af', 'Category:Shizuoka (city)', '1851714', 'Cannes', '152390639.0', 1411900000.0, '8000020221007', '\u9759\u5ca1\u5e02', 'UTC+09:00', 'Shizuoka in Shizuoka Prefecture.png', 'jp/8000020221007', 'HyAMvg', '\u9759\u5ca1\u5e02', '102031373.0', 'lccn-n80026055', 'Fuji', '+2003-04-01T00:00:00Z', 'Minamishizuhata', '34814.0', '\u3057\u305a\u304a\u304b\u3057');\n",
+            "INSERT INTO located_in_the_present_day_administrative_territorial_entity (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, twinned_administrative_body, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Aomori', 'city in Aomori Prefecture, Japan', 'Aomori city from Hakkoda.jpg', '22012', 'Aomori, Aomori', 'Flag of Aomori, Aomori.svg', 'Japan', 'Aomori Prefecture', '40.82233333333333', 'https://www.city.aomori.aomori.jp/', 'core city of Japan', '276505.0', '/m/0gqhy', 425962.0, '63becc13-0988-45c2-80fa-9d8a1361fb0d', 'Category:Aomori (city)', '2130658', 'Kecskem\u00e9t', '153614531.0', 824.6100000000000136, '4000020022012', '\u9752\u68ee\u5e02', 'UTC+09:00', 'Aomori in Aomori Prefecture Ja.svg', 'jp/4000020022012', '3ww3qc', '\u9752\u68ee\u5e02', '102032075.0', 'lccn-n81058559', 'Kuroishi', '+2005-04-01T00:00:00Z', 'Uramachi', '33352.0', '\u3042\u304a\u3082\u308a\u3057');\n"
+        ],
+        "database_name": "japans-top-100-waterfalls",
+        "table_name": "located_in_the_present_day_administrative_territorial_entity"
+    },
+    {
+        "query": [
+            "INSERT INTO replacing_subject (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Hirosaki', 'city in T\u014dhoku, Aomori, Japan', 'The Hirosaki castle - panoramio.jpg', '22021', 'Hirosaki, Aomori', 'Flag of Hirosaki, Aomori.svg', 'Japan', 'Aomori Prefecture', '40.60311111111111', 'http://www.city.hirosaki.aomori.jp/', 'city of Japan', '282316.0', '/m/01wfjj', 167803.0, '63b3287c-f963-4f95-9efe-2bf8a130a152', 'Category:Hirosaki', '2130057', '139568288.0', 524.2000000000000454, '3000020022021', '\u5f18\u524d\u5e02', 'UTC+09:00', 'Hirosaki in Aomori Prefecture Ja.svg', 'jp/3000020022021', 'LsuW8f', '\u5f18\u524d\u5e02', '102032057.0', 'lccn-n81125571', 'Tsugaru', '+1889-04-01T00:00:00Z', 'Watoku', '33362.0', '\u3072\u308d\u3055\u304d\u3057');\n",
+            "INSERT INTO replacing_subject (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Taketa', 'city in \u014cita Prefecture, Japan', 'Okajoshi.jpg', '442089', 'Taketa, Oita', 'nan', 'Japan', 'Oita Prefecture', '32.973611111111', 'https://www.city.taketa.oita.jp/', 'city of Japan', '304309.0', '/m/01wq__', 19688.0, '069e3c5d-bf6a-480b-a06f-7eb9c58f4dbc', 'Category:Taketa, Oita', '1850878', '150120683.0', 477.589999999999975, '9000020442089', '\u7af9\u7530\u5e02', 'UTC+09:00', 'Taketa in Oita Prefecture Ja.svg', 'jp/9000020442089', 'r9LzY7', '\u7af9\u7530\u5e02', '890519187.0', 'lccn-n82104342', '\u014cita', '+2005-04-01T00:00:00Z', 'Taketa', '34518.0', '\u305f\u3051\u305f\u3057');\n",
+            "INSERT INTO replacing_subject (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Shiroishi', 'city in Miyagi Prefecture, Japan', 'Shiroishi image 2.jpg', '42064', 'Shiroishi, Miyagi', 'Flag of Shiroishi, Miyagi.svg', 'Japan', 'Miyagi Prefecture', '38.00244444444444', 'http://www.city.shiroishi.miyagi.jp/', 'city of Japan', '302529.0', '/m/01wg7s', 32570.0, '56cfade9-f402-460a-857c-3561c4df1d98', 'Category:Shiroishi, Miyagi', '2111016', '145453212.0', 286.4800000000000181, '8000020042064', '\u767d\u77f3\u5e02', 'UTC+09:00', 'Shiroishi in Miyagi Prefecture Ja.svg', 'jp/8000020042064', 'erqWUt', '\u767d\u77f3\u5e02', '890519729.0', 'lccn-n83057914', 'Kakuda', '+1954-04-01T00:00:00Z', 'Shiroishi', '34291.0', '\u3057\u308d\u3044\u3057\u3057');\n"
+        ],
+        "database_name": "japans-top-100-waterfalls",
+        "table_name": "replacing_subject"
+    },
+    {
+        "query": [
+            "INSERT INTO replaced_entity (label, description, instance_of, country, replaced_by, dissolved_abolished_or_demolished_date, located_in_the_administrative_territorial_entity, inception, located_in_the_present_day_administrative_territorial_entity, coordinate_location, name_in_kana) VALUES ('\u014cdate', 'dissolved municipality in Kitaakita district, Akita prefecture, Japan', 'dissolved municipality of Japan', 'Japan', 'Odate', '+1951-04-01T00:00:00Z', 'Kitaakita district', '+1889-04-01T00:00:00Z', 'Odate', '40.27136111111111', '\u304a\u304a\u3060\u3066\u307e\u3061');\n",
+            "INSERT INTO replaced_entity (label, description, instance_of, country, replaced_by, dissolved_abolished_or_demolished_date, located_in_the_administrative_territorial_entity, inception, located_in_the_present_day_administrative_territorial_entity, coordinate_location, name_in_kana) VALUES ('Takada', 'dissolved municipality in Niigata prefecture, Japan', 'dissolved municipality of Japan', 'Japan', 'J\u014detsu', '+1971-04-29T00:00:00Z', 'Niigata Prefecture', '+1911-09-01T00:00:00Z', 'J\u014detsu', '37.14786111111111', 'nan');\n",
+            "INSERT INTO replaced_entity (label, description, instance_of, country, replaced_by, dissolved_abolished_or_demolished_date, located_in_the_administrative_territorial_entity, inception, located_in_the_present_day_administrative_territorial_entity, coordinate_location, name_in_kana) VALUES ('Aikawa', 'dissolved municipality in Nishiyamanashi district, Yamanashi prefecture, Japan', 'dissolved municipality of Japan', 'Japan', 'K\u014dfu', '+1937-08-01T00:00:00Z', 'Nishiyamanashi district', '+1889-07-01T00:00:00Z', 'K\u014dfu', '35.680444444444454', '\u3042\u3044\u304b\u308f\u3080\u3089');\n"
+        ],
+        "database_name": "japans-top-100-waterfalls",
+        "table_name": "replaced_entity"
+    },
+    {
+        "query": [
+            "INSERT INTO part (label, description, instance_of, commons_category, country, coordinate_location, image, located_in_the_administrative_territorial_entity) VALUES ('Takino Suzuran Hillside National Government Park', 'nan', 'National Government Park', 'Takino Suzuran Hillside National Government Park', 'Japan', '42.9168', '\u6edd\u91ce\u3059\u305a\u3089\u3093\u4e18\u9675\u516c\u5712 (takino national goverment park) - panoramio (16).jpg', 'Takino');\n",
+            "INSERT INTO part (label, description, instance_of, commons_category, country, coordinate_location, image, located_in_the_administrative_territorial_entity) VALUES ('Abe River', 'river in Japan', 'river', 'Abe River', 'Japan', '34.929747222222', 'Abekawa Shizuoka.jpg', 'Shizuoka');\n",
+            "INSERT INTO part (label, description, instance_of, commons_category, country, coordinate_location, image, located_in_the_administrative_territorial_entity) VALUES ('Takino Suzuran Hillside National Government Park', 'nan', 'National Government Park', 'Takino Suzuran Hillside National Government Park', 'Japan', '42.9168', '\u6edd\u91ce\u3059\u305a\u3089\u3093\u4e18\u9675\u516c\u5712 (takino national goverment park) - panoramio (16).jpg', 'Takino');\n"
+        ],
+        "database_name": "japans-top-100-waterfalls",
+        "table_name": "part"
+    },
+    {
+        "query": [
+            "INSERT INTO political_border (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Mishima', 'city in Shizuoka Prefecture, Japan', 'Mishima city 20100518.jpg', '222062', 'Mishima, Shizuoka', 'Flag of Mishima, Shizuoka.svg', 'Japan', 'Shizuoka Prefecture', '35.1185', 'https://www.city.mishima.shizuoka.jp/', 'city of Japan', '300502.0', '/m/01wld1', 107416.0, '003b36ab-18fc-4ad3-afe4-42de6c928ae6', 'Category:Mishima, Shizuoka', '1856977', '146575335.0', 62130000.0, '8000020222062', '\u4e09\u5cf6\u5e02', 'UTC+09:00', 'Mishima in Shizuoka Prefecture Ja.svg', 'jp/8000020222062', 'KshMA5', '\u4e09\u5cf6\u5e02', '102031535.0', 'viaf-256542718', 'Numazu', '+1941-04-29T00:00:00Z', 'Mishima', '34801.0', '\u307f\u3057\u307e\u3057');\n",
+            "INSERT INTO political_border (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('J\u014detsu', 'city in Niigata prefecture, Japan', 'Takadajyo 1.jpg', '152226', 'Joetsu, Niigata', 'Flag of Joetsu, Niigata.svg', 'Japan', 'Niigata Prefecture', '37.14786111111111', 'https://www.city.joetsu.niigata.jp/', 'special city of Japan', '310520.0', '/m/0gp6d7', 187291.0, 'c309e1f2-c300-456e-bf2e-de2ca6316f86', 'Category:J\u014detsu, Niigata', '6825489', '143082020.0', 973.889999999999987, '9000020152226', '\u4e0a\u8d8a\u5e02', 'UTC+09:00', 'Joetsu in Niigata Prefecture Ja.svg', 'jp/9000020152226', 'QvZ5uG', '\u4e0a\u8d8a\u5e02', '102032203.0', 'lccn-n81138510', 'Kashiwazaki', '+1971-04-29T00:00:00Z', 'Takada', '100948.0', '\u3058\u3087\u3046\u3048\u3064\u3057');\n",
+            "INSERT INTO political_border (label, description, image, dantai_code, commons_category, flag_image, country, located_in_the_administrative_territorial_entity, coordinate_location, official_website, instance_of, ndl_authority_id, freebase_id, population, musicbrainz_area_id, topics_main_category, geonames_id, viaf_id, area, corporate_number_japan, native_label, located_in_time_zone, locator_map_image, opencorporates_id, geonlp_id, japan_search_name_id, whos_on_first_id, worldcat_identities_id, shares_border_with, inception, replaces, inaturalist_place_id, name_in_kana) VALUES ('Hachi\u014dji', 'city in Tokyo, Japan', 'Hachioji (27980514509).jpg', '132012', 'Hachioji, Tokyo', 'Flag of Hachioji, Tokyo.svg', 'Japan', 'Tokyo', '35.666444444444444', 'https://www.city.hachioji.tokyo.jp/', 'city of Japan', '279945.0', '/m/01wrg7', 575721.0, 'ab763c1c-d28b-46c2-a1db-e489c7e01a56', 'Category:Hachi\u014dji, Tokyo', '8304375', '159452757.0', 186.3799999999999955, '1000020132012', '\u516b\u738b\u5b50\u5e02', 'Japan Standard Time', 'Tokyo-hachioji-city.png', 'jp/1000020132012', 'nx34Is', '\u516b\u738b\u5b50\u5e02', '102031773.0', 'lccn-n81018279', 'Machida', '+1917-09-01T00:00:00Z', 'Motohachi\u014dji', '101004.0', '\u306f\u3061\u304a\u3046\u3058\u3057');\n"
+        ],
+        "database_name": "japans-top-100-waterfalls",
+        "table_name": "political_border"
+    },
+    {
+        "query": [
+            "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id) VALUES ('Kitaakita', 'city in Akita prefecture, Japan', 1152.759999999999991, 'Kitaakita, Akita', '52132.0', 'Akita Prefecture', 'Japan', '40.22602777777778', 'city of Japan', '/m/06w4_p', 29696.0, '7443156.0', 'Category:Kitaakita', 'https://www.city.kitaakita.akita.jp/', 'UTC+09:00', '3vvmVE', 'Kitaakita in Akita Prefecture Ja.svg', '\u304d\u305f\u3042\u304d\u305f\u3057', '+2005-03-22T00:00:00Z', '1189680.0', '258284414.0', '\u5317\u79cb\u7530\u5e02\u5f79\u6240.jpg', '5000020052132.0', 'jp/5000020052132', 'viaf-258284414', 'Odate', '33337.0');\n",
+            "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id) VALUES ('Matsumoto', 'city in Nagano Prefecture, Japan', 978770000.0, 'Matsumoto, Nagano', '202029.0', 'Nagano Prefecture', 'Japan', '36.238', 'special city of Japan', '/m/012xgc', 239115.0, '1857519.0', 'Category:Matsumoto, Nagano', 'https://www.city.matsumoto.nagano.jp/', 'UTC+09:00', 'xjwZQ0', 'Matsumoto in Nagano Prefecture Ja.svg', '\u307e\u3064\u3082\u3068\u3057', '+1889-04-01T00:00:00Z', '290716.0', '242193103.0', 'Matsumoto Castle05s5s4592.jpg', '2000020202029.0', 'jp/2000020202029', 'viaf-242193103', 'Shiojiri', '34361.0');\n",
+            "INSERT INTO administrative_territorial_entity (label, description, area, commons_category, dantai_code, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of, freebase_id, population, geonames_id, topics_main_category, official_website, located_in_time_zone, geonlp_id, locator_map_image, name_in_kana, inception, ndl_authority_id, viaf_id, image, corporate_number_japan, opencorporates_id, worldcat_identities_id, shares_border_with, inaturalist_place_id) VALUES ('Tateyama', 'town in Nakaniikawa district, Toyama prefecture, Japan', 307.2900000000000204, 'Tateyama, Toyama', '163236.0', 'Nakaniikawa district', 'Japan', '36.66355555555555', 'town of Japan', '/m/03j4cr', 24996.0, '1850521.0', 'Category:Tateyama, Toyama', 'http://www.town.tateyama.toyama.jp/', 'UTC+09:00', 'NPzkHa', 'Tateyama in Toyama Prefecture Ja.svg', '\u305f\u3066\u3084\u307e\u307e\u3061', '+1954-01-10T00:00:00Z', '387636.0', '129042461.0', 'Tateyama Town Hall.jpg', '4000020163236.0', 'jp/4000020163236', 'lccn-n83064708', 'Toyama', '34956.0');\n"
+        ],
+        "database_name": "japans-top-100-waterfalls",
+        "table_name": "administrative_territorial_entity"
+    },
+    {
+        "query": [
+            "INSERT INTO japans_top_100_waterfalls (label, description, instance_of, coordinate_location, country, image, part_of, located_in_the_administrative_territorial_entity) VALUES ('Sanj\u014d Falls', 'waterfall in Fukushima Prefecture, Japan', 'waterfall', '36.965533', 'Japan', 'Sanjo falls.jpg', 'Tadami River', 'Hinoemata');\n",
+            "INSERT INTO japans_top_100_waterfalls (label, description, instance_of, coordinate_location, country, image, part_of, located_in_the_administrative_territorial_entity) VALUES ('Nanataki Falls', 'waterfall in Akita Prefecture, Japan', 'waterfall', '40.35611111', 'Japan', 'Nanataki, kosaka.jpg', 'Japan''s Top 100 Waterfalls', 'Kosaka');\n",
+            "INSERT INTO japans_top_100_waterfalls (label, description, instance_of, coordinate_location, country, image, part_of, located_in_the_administrative_territorial_entity) VALUES ('Naka Falls', 'nan', 'waterfall', 'nan', 'Japan', 'nan', 'Japan''s Top 100 Waterfalls', 'Kamikitayama');\n"
+        ],
+        "database_name": "japans-top-100-waterfalls",
+        "table_name": "japans_top_100_waterfalls"
+    },
+    {
+        "query": [
+            "INSERT INTO buildings (id, name, City, Height, Stories, Status) VALUES (12, 'Ritz-Carlton Mexico City', 'Mexico City', 100, 34, 'on-hold');\n",
+            "INSERT INTO buildings (id, name, City, Height, Stories, Status) VALUES (3, 'Punto Chapultepec', 'Mexico City', 210, 59, 'proposed');\n",
+            "INSERT INTO buildings (id, name, City, Height, Stories, Status) VALUES (5, 'Corporativo BBVA Bancomer', 'Mexico City', 220, 50, 'under construction');\n"
+        ],
+        "database_name": "company_office",
+        "table_name": "buildings"
+    },
+    {
+        "query": [
+            "INSERT INTO Companies (id, name, Headquarters, Industry, Sales_billion, Profits_billion, Assets_billion, Market_Value_billion) VALUES (19, 'Total', 'France', 'Oil and gas', 188.0999999999999944, 14.19999999999999929, 192.8000000000000113, '138');\n",
+            "INSERT INTO Companies (id, name, Headquarters, Industry, Sales_billion, Profits_billion, Assets_billion, Market_Value_billion) VALUES (3, 'General Electric', 'USA', 'Conglomerate', 156.1999999999999887, 11.59999999999999965, 751.2000000000000454, '216.2');\n",
+            "INSERT INTO Companies (id, name, Headquarters, Industry, Sales_billion, Profits_billion, Assets_billion, Market_Value_billion) VALUES (6, 'PetroChina', 'China', 'Oil and gas', 222.3000000000000113, 21.19999999999999929, 251.3000000000000113, '320.8');\n"
+        ],
+        "database_name": "company_office",
+        "table_name": "Companies"
+    },
+    {
+        "query": [
+            "INSERT INTO Office_locations (building_id, company_id, move_in_year) VALUES (2, 2, 2022);\n",
+            "INSERT INTO Office_locations (building_id, company_id, move_in_year) VALUES (11, 5, 2027);\n",
+            "INSERT INTO Office_locations (building_id, company_id, move_in_year) VALUES (3, 4, 2023);\n"
+        ],
+        "database_name": "company_office",
+        "table_name": "Office_locations"
+    },
+    {
+        "query": [
+            "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, gram_staining, genbank_assembly_accession_number) VALUES ('Pseudomonas syringae pv. syringae B728a', 'bacterial strain', 'Pseudomonas syringae pv. syringae B728a', 'Pseudomonas syringae', '205918', 'strain', 'Gram-negative bacteria', 'GCA_000012245.1');\n",
+            "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, gram_staining, genbank_assembly_accession_number) VALUES ('Mesorhizobium ciceri biovar biserrulae WSM1271', 'bacterial strain', 'Mesorhizobium ciceri biovar biserrulae WSM1271', 'Mesorhizobium ciceri', '765698', 'taxon', 'Gram-negative bacteria', 'GCA_000185905.1');\n",
+            "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, gram_staining, genbank_assembly_accession_number) VALUES ('Leptospira interrogans serovar Lai str. 56601', 'bacterial strain', 'Leptospira interrogans serovar Lai str. 56601', 'Leptospira interrogans', '189518', 'strain', 'Gram-negative bacteria', 'GCA_000092565.1');\n"
+        ],
+        "database_name": "rsga-gtpase-domain-protein-family",
+        "table_name": "natural_product"
+    },
+    {
+        "query": [
+            "INSERT INTO encoded_by (label, description, found_in_taxon, entrez_gene_id, subclass_of, encodes, ncbi_locus_tag, genomic_end, strand_orientation, instance_of, genomic_start) VALUES ('ribosome-associated GTPase L187815', 'microbial gene found in Lactococcus lactis subsp. lactis Il1403', 'Lactococcus lactis subsp. lactis Il1403', '1115594', 'gene', 'Ribosome-associated GTPase L187815', 'L187815', '2005305', 'reverse strand', 'gene', '2004382');\n",
+            "INSERT INTO encoded_by (label, description, found_in_taxon, entrez_gene_id, subclass_of, encodes, ncbi_locus_tag, genomic_end, strand_orientation, instance_of, genomic_start) VALUES ('GTPase RsgA STY4709', 'microbial gene found in Salmonella enterica subsp. enterica serovar Typhi str. CT18', 'Salmonella enterica subsp. enterica serovar Typhi str. CT18', '1250910', 'gene', 'GTPase RsgA STY4709', 'STY4709', '4571295', 'reverse strand', 'gene', '4570219');\n",
+            "INSERT INTO encoded_by (label, description, found_in_taxon, entrez_gene_id, subclass_of, encodes, ncbi_locus_tag, genomic_end, strand_orientation, instance_of, genomic_start) VALUES ('GTPase EngC Moth_0913', 'microbial gene found in Moorella thermoacetica ATCC 39073', 'Moorella thermoacetica ATCC 39073', '3831301', 'gene', 'GTPase EngC Moth_0913', 'Moth_0913', '949443', 'forward strand', 'gene', '948571');\n"
+        ],
+        "database_name": "rsga-gtpase-domain-protein-family",
+        "table_name": "encoded_by"
+    },
+    {
+        "query": [
+            "INSERT INTO rsga_gtpase_domain_protein_family (label, description, uniprot_protein_id, refseq_protein_id, found_in_taxon, subclass_of, encoded_by, has_parts, molecular_function, biological_process, cell_component, part_of, instance_of) VALUES ('Ribosome-associated GTPase VF_A0018', 'microbial protein found in Aliivibrio fischeri ES114', 'Q5E1K8', 'YP_205976', 'Vibrio fischeri ES114', 'protein', 'ribosome-associated GTPase VF_A0018', 'RsgA GTPase domain', 'metal ion binding', 'ribosome biogenesis', 'cytoplasm', 'Ribosome biogenesis GTPase RsgA', 'protein');\n",
+            "INSERT INTO rsga_gtpase_domain_protein_family (label, description, uniprot_protein_id, refseq_protein_id, found_in_taxon, subclass_of, encoded_by, has_parts, molecular_function, biological_process, cell_component, part_of, instance_of) VALUES ('Ribosome-associated GTPase VC0340', 'microbial protein found in Vibrio cholerae O1 biovar El Tor str. N16961', 'Q9KV18', 'NP_229994', 'Vibrio cholerae O1 biovar El Tor str. N16961', 'protein', 'ribosome-associated GTPase VC0340', 'RsgA GTPase domain', 'nucleotide binding', 'ribosome biogenesis', 'cytoplasm', 'Ribosome biogenesis GTPase RsgA', 'protein');\n",
+            "INSERT INTO rsga_gtpase_domain_protein_family (label, description, uniprot_protein_id, refseq_protein_id, found_in_taxon, subclass_of, encoded_by, has_parts, molecular_function, biological_process, cell_component, part_of, instance_of) VALUES ('GTPase YjeQ TDE1449', 'microbial protein found in Treponema denticola ATCC 35405', 'Q73MQ9', 'NP_972055', 'Treponema denticola ATCC 35405', 'protein', 'GTPase YjeQ TDE1449', 'RsgA GTPase domain', 'GTP binding', 'translational initiation', 'cytoplasm', 'Nucleic acid-binding, OB-fold', 'protein');\n"
+        ],
+        "database_name": "rsga-gtpase-domain-protein-family",
+        "table_name": "rsga_gtpase_domain_protein_family"
+    },
+    {
+        "query": [
+            "INSERT INTO workshop (Workshop_ID, Date, Venue, Name) VALUES (3, 'August 25, 2007', 'New Jersey USA', 'Workshop 2007');\n",
+            "INSERT INTO workshop (Workshop_ID, Date, Venue, Name) VALUES (1, 'August 18, 2007', 'London UK', 'ABC 2007');\n",
+            "INSERT INTO workshop (Workshop_ID, Date, Venue, Name) VALUES (3, 'August 25, 2007', 'New Jersey USA', 'Workshop 2007');\n"
+        ],
+        "database_name": "workshop_paper",
+        "table_name": "workshop"
+    },
+    {
+        "query": [
+            "INSERT INTO submission (Submission_ID, Scores, Author, College) VALUES (9, 82.0, 'Randy Johnson', 'Georgia');\n",
+            "INSERT INTO submission (Submission_ID, Scores, Author, College) VALUES (9, 82.0, 'Randy Johnson', 'Georgia');\n",
+            "INSERT INTO submission (Submission_ID, Scores, Author, College) VALUES (10, 83.0, 'Andy Bolton', 'Fisk');\n"
+        ],
+        "database_name": "workshop_paper",
+        "table_name": "submission"
+    },
+    {
+        "query": [
+            "INSERT INTO Acceptance (Submission_ID, Workshop_ID, Result) VALUES (2, 5, 'Accepted');\n",
+            "INSERT INTO Acceptance (Submission_ID, Workshop_ID, Result) VALUES (2, 3, 'Rejected');\n",
+            "INSERT INTO Acceptance (Submission_ID, Workshop_ID, Result) VALUES (2, 5, 'Accepted');\n"
+        ],
+        "database_name": "workshop_paper",
+        "table_name": "Acceptance"
+    },
+    {
+        "query": [
+            "INSERT INTO Album (AlbumId, Title, ArtistId) VALUES (131, 'IV', 22);\n",
+            "INSERT INTO Album (AlbumId, Title, ArtistId) VALUES (219, 'Tangents', 143);\n",
+            "INSERT INTO Album (AlbumId, Title, ArtistId) VALUES (186, 'News Of The World', 51);\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Album"
+    },
+    {
+        "query": [
+            "INSERT INTO Artist (ArtistId, Name) VALUES (24, 'Marcos Valle');\n",
+            "INSERT INTO Artist (ArtistId, Name) VALUES (66, 'Santana Feat. Eagle-Eye Cherry');\n",
+            "INSERT INTO Artist (ArtistId, Name) VALUES (15, 'Buddy Guy');\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Artist"
+    },
+    {
+        "query": [
+            "INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (54, 'Steve', 'Murray', NULL, '110 Raeburn Pl', 'Edinburgh ', NULL, 'United Kingdom', 'EH4 1HH', '+44 0131 315 3300', NULL, 'steve.murray@yahoo.uk', 5);\n",
+            "INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (50, 'Enrique', 'Mu\u00f1oz', NULL, 'C/ San Bernardo 85', 'Madrid', NULL, 'Spain', '28015', '+34 914 454 454', NULL, 'enrique_munoz@yahoo.es', 5);\n",
+            "INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (53, 'Phil', 'Hughes', NULL, '113 Lupus St', 'London', NULL, 'United Kingdom', 'SW1V 3EN', '+44 020 7976 5722', NULL, 'phil.hughes@gmail.com', 3);\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Customer"
+    },
+    {
+        "query": [
+            "INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email) VALUES (5, 'Johnson', 'Steve', 'Sales Support Agent', 2, '1965-03-03 00:00:00', '2003-10-17 00:00:00', '7727B 41 Ave', 'Calgary', 'AB', 'Canada', 'T3B 1Y7', '1 (780) 836-9987', '1 (780) 836-9543', 'steve@chinookcorp.com');\n",
+            "INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email) VALUES (1, 'Adams', 'Andrew', 'General Manager', NULL, '1962-02-18 00:00:00', '2002-08-14 00:00:00', '11120 Jasper Ave NW', 'Edmonton', 'AB', 'Canada', 'T5K 2N1', '+1 (780) 428-9482', '+1 (780) 428-3457', 'andrew@chinookcorp.com');\n",
+            "INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email) VALUES (3, 'Peacock', 'Jane', 'Sales Support Agent', 2, '1973-08-29 00:00:00', '2002-04-01 00:00:00', '1111 6 Ave SW', 'Calgary', 'AB', 'Canada', 'T2P 5M5', '+1 (403) 262-3443', '+1 (403) 262-6712', 'jane@chinookcorp.com');\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Employee"
+    },
+    {
+        "query": [
+            "INSERT INTO Genre (GenreId, Name) VALUES (18, 'Science Fiction');\n",
+            "INSERT INTO Genre (GenreId, Name) VALUES (23, 'Alternative');\n",
+            "INSERT INTO Genre (GenreId, Name) VALUES (6, 'Blues');\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Genre"
+    },
+    {
+        "query": [
+            "INSERT INTO Invoice (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total) VALUES (122, 5, '2010-06-14 00:00:00', 'Klanova 9/506', 'Prague', NULL, 'Czech Republic', '14700', 5.94000000000000039);\n",
+            "INSERT INTO Invoice (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total) VALUES (156, 14, '2010-11-15 00:00:00', '8210 111 ST NW', 'Edmonton', 'AB', 'Canada', 'T6G 2C7', 3.959999999999999965);\n",
+            "INSERT INTO Invoice (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total) VALUES (148, 33, '2010-10-14 00:00:00', '5112 48 Street', 'Yellowknife', 'NT', 'Canada', 'X1A 1N6', 1.979999999999999983);\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Invoice"
+    },
+    {
+        "query": [
+            "INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (451, 82, 2750, 0.989999999999999992, 1);\n",
+            "INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (805, 150, 1385, 0.989999999999999992, 1);\n",
+            "INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (1145, 212, 3467, 0.989999999999999992, 1);\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "InvoiceLine"
+    },
+    {
+        "query": [
+            "INSERT INTO MediaType (MediaTypeId, Name) VALUES (1, 'MPEG audio file');\n",
+            "INSERT INTO MediaType (MediaTypeId, Name) VALUES (1, 'MPEG audio file');\n",
+            "INSERT INTO MediaType (MediaTypeId, Name) VALUES (3, 'Protected MPEG-4 video file');\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "MediaType"
+    },
+    {
+        "query": [
+            "INSERT INTO Playlist (PlaylistId, Name) VALUES (8, 'Music');\n",
+            "INSERT INTO Playlist (PlaylistId, Name) VALUES (18, 'On-The-Go 1');\n",
+            "INSERT INTO Playlist (PlaylistId, Name) VALUES (13, 'Classical 101 - Deep Cuts');\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Playlist"
+    },
+    {
+        "query": [
+            "INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (8, 636);\n",
+            "INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (1, 3094);\n",
+            "INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (8, 2541);\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "PlaylistTrack"
+    },
+    {
+        "query": [
+            "INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES (351, 'Debra Kadabra', 31, 1, 1, 'Frank Zappa', 234553, 7649679, 0.989999999999999992);\n",
+            "INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES (2028, 'Prazer E F\u00e9', 165, 1, 1, NULL, 214831, 7031383, 0.989999999999999992);\n",
+            "INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES (2112, 'Dee', 174, 1, 3, 'R. Rhoads', 261302, 8555963, 0.989999999999999992);\n"
+        ],
+        "database_name": "chinook_1",
+        "table_name": "Track"
+    },
+    {
+        "query": [
+            "INSERT INTO frpm (CDSCode, Academic_Year, County_Code, District_Code, School_Code, County_Name, District_Name, School_Name, District_Type, School_Type, Educational_Option_Type, NSLP_Provision_Status, Charter_School_(_Y_/_N_), Charter_School_Number, Charter_Funding_Type, IRC, Low_Grade, High_Grade, Enrollment_(_K_-_12_), Free_Meal_Count_(_K_-_12_), Percent_(_%_)_Eligible_Free_(_K_-_12_), FRPM_Count_(_K_-_12_), Percent_(_%_)_Eligible_FRPM_(_K_-_12_), Enrollment_(_Ages_5_-_17_), Free_Meal_Count_(_Ages_5_-_17_), Percent_(_%_)_Eligible_Free_(_Ages_5_-_17_), FRPM_Count_(_Ages_5_-_17_), Percent_(_%_)_Eligible_FRPM_(_Ages_5_-_17_), 2013_-_14_CALPADS_Fall_1_Certification_Status) VALUES ('27660926026355', '2014-2015', '27', 66092, '6026355', 'Monterey', 'Monterey Peninsula Unified', 'Ord Terrace Elementary', 'Unified School District', 'Elementary Schools (Public)', 'Traditional', 'Provision 2', 0, NULL, NULL, 0, 'K', '5', 489.0, 404.0, 0.826175869120653994, 454.0, 0.92842535787321101, 489.0, 404.0, 0.826175869120653994, 454.0, 0.92842535787321101, 1);\n",
+            "INSERT INTO frpm (CDSCode, Academic_Year, County_Code, District_Code, School_Code, County_Name, District_Name, School_Name, District_Type, School_Type, Educational_Option_Type, NSLP_Provision_Status, Charter_School_(_Y_/_N_), Charter_School_Number, Charter_Funding_Type, IRC, Low_Grade, High_Grade, Enrollment_(_K_-_12_), Free_Meal_Count_(_K_-_12_), Percent_(_%_)_Eligible_Free_(_K_-_12_), FRPM_Count_(_K_-_12_), Percent_(_%_)_Eligible_FRPM_(_K_-_12_), Enrollment_(_Ages_5_-_17_), Free_Meal_Count_(_Ages_5_-_17_), Percent_(_%_)_Eligible_Free_(_Ages_5_-_17_), FRPM_Count_(_Ages_5_-_17_), Percent_(_%_)_Eligible_FRPM_(_Ages_5_-_17_), 2013_-_14_CALPADS_Fall_1_Certification_Status) VALUES ('37683386039143', '2014-2015', '37', 68338, '6039143', 'San Diego', 'San Diego Unified', 'Audubon K-8', 'Unified School District', 'Elementary Schools (Public)', 'Traditional', 'Provision 2', 0, NULL, NULL, 0, 'K', '8', 459.0, 340.0, 0.7407407407407410326, 412.0, 0.8976034858387800241, 453.0, 334.0, 0.7373068432671080474, 406.0, 0.8962472406181020145, 1);\n",
+            "INSERT INTO frpm (CDSCode, Academic_Year, County_Code, District_Code, School_Code, County_Name, District_Name, School_Name, District_Type, School_Type, Educational_Option_Type, NSLP_Provision_Status, Charter_School_(_Y_/_N_), Charter_School_Number, Charter_Funding_Type, IRC, Low_Grade, High_Grade, Enrollment_(_K_-_12_), Free_Meal_Count_(_K_-_12_), Percent_(_%_)_Eligible_Free_(_K_-_12_), FRPM_Count_(_K_-_12_), Percent_(_%_)_Eligible_FRPM_(_K_-_12_), Enrollment_(_Ages_5_-_17_), Free_Meal_Count_(_Ages_5_-_17_), Percent_(_%_)_Eligible_Free_(_Ages_5_-_17_), FRPM_Count_(_Ages_5_-_17_), Percent_(_%_)_Eligible_FRPM_(_Ages_5_-_17_), 2013_-_14_CALPADS_Fall_1_Certification_Status) VALUES ('41690474134557', '2014-2015', '41', 69047, '4134557', 'San Mateo', 'San Mateo Union High', 'Mills High', 'High School District', 'High Schools (Public)', 'Traditional', NULL, 0, NULL, NULL, 0, '9', '12', 1214.0, 128.0, 0.1054365733113669933, 193.0, 0.1589785831960459917, 1184.0, 120.0, 0.1013513513513509962, 184.0, 0.1554054054054050115, 1);\n"
+        ],
+        "database_name": "california_schools",
+        "table_name": "frpm"
+    },
+    {
+        "query": [
+            "INSERT INTO satscores (cds, rtype, sname, dname, cname, enroll12, NumTstTakr, AvgScrRead, AvgScrMath, AvgScrWrite, NumGE1500) VALUES ('33672153336492', 'S', 'Ramona High', 'Riverside Unified', 'Riverside', 560, 230, 440, 452, 442, 48);\n",
+            "INSERT INTO satscores (cds, rtype, sname, dname, cname, enroll12, NumTstTakr, AvgScrRead, AvgScrMath, AvgScrWrite, NumGE1500) VALUES ('19643780000000', 'D', NULL, 'Charter Oak Unified', 'Los Angeles', 484, 262, 470, 485, 466, 97);\n",
+            "INSERT INTO satscores (cds, rtype, sname, dname, cname, enroll12, NumTstTakr, AvgScrRead, AvgScrMath, AvgScrWrite, NumGE1500) VALUES ('1612590114868', 'S', 'Oakland Charter High', 'Oakland Unified', 'Alameda', 55, 56, 520, 583, 524, 38);\n"
+        ],
+        "database_name": "california_schools",
+        "table_name": "satscores"
+    },
+    {
+        "query": [
+            "INSERT INTO schools (CDSCode, NCESDist, NCESSchool, StatusType, County, District, School, Street, StreetAbr, City, Zip, State, MailStreet, MailStrAbr, MailCity, MailZip, MailState, Phone, Ext, Website, OpenDate, ClosedDate, Charter, CharterNum, FundingType, DOC, DOCType, SOC, SOCType, EdOpsCode, EdOpsName, EILCode, EILName, GSoffered, GSserved, Virtual, Magnet, Latitude, Longitude, AdmFName1, AdmLName1, AdmEmail1, AdmFName2, AdmLName2, AdmEmail2, AdmFName3, AdmLName3, AdmEmail3, LastUpdate) VALUES ('33672156059158', '0633150', '05160', 'Active', 'Riverside', 'Riverside Unified', 'University Heights Middle', '1155 Massachusetts Avenue', '1155 Massachusetts Ave.', 'Riverside', '92507-2897', 'CA', '1155 Massachusetts Avenue', '1155 Massachusetts Ave.', 'Riverside', '92507-2897', 'CA', '(951) 788-7388', NULL, NULL, '1980-07-01', NULL, 0, NULL, NULL, '54', 'Unified School District', '62', 'Intermediate/Middle Schools (Public)', 'TRAD', 'Traditional', 'INTMIDJR', 'Intermediate/Middle/Junior High', '7-8', '7-8', 'N', 0, 33.98669600000000201, -117.3370000000000032, 'Coleman', 'Kells', 'ckells@rusd.k12.ca.us', NULL, NULL, NULL, NULL, NULL, NULL, '2015-06-18');\n",
+            "INSERT INTO schools (CDSCode, NCESDist, NCESSchool, StatusType, County, District, School, Street, StreetAbr, City, Zip, State, MailStreet, MailStrAbr, MailCity, MailZip, MailState, Phone, Ext, Website, OpenDate, ClosedDate, Charter, CharterNum, FundingType, DOC, DOCType, SOC, SOCType, EdOpsCode, EdOpsName, EILCode, EILName, GSoffered, GSserved, Virtual, Magnet, Latitude, Longitude, AdmFName1, AdmLName1, AdmEmail1, AdmFName2, AdmLName2, AdmEmail2, AdmFName3, AdmLName3, AdmEmail3, LastUpdate) VALUES ('19111976097596', NULL, NULL, 'Closed', 'Los Angeles', 'Los Angeles County Special Ed', 'Wright (Arthur E.) Aphasia', '4029 N. Las Virgenes Road', '4029 N. Las Virgenes Rd.', 'Calabassas', '91302', 'CA', '4029 N. Las Virgenes Road', '4029 N. Las Virgenes Rd.', 'Calabassas', '91302', 'CA', NULL, NULL, NULL, '1980-07-01', '1985-11-13', 0, NULL, NULL, '00', 'County Office of Education (COE)', '09', 'Special Education Schools (Public)', NULL, NULL, 'UG', 'Ungraded', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1999-06-24');\n",
+            "INSERT INTO schools (CDSCode, NCESDist, NCESSchool, StatusType, County, District, School, Street, StreetAbr, City, Zip, State, MailStreet, MailStrAbr, MailCity, MailZip, MailState, Phone, Ext, Website, OpenDate, ClosedDate, Charter, CharterNum, FundingType, DOC, DOCType, SOC, SOCType, EdOpsCode, EdOpsName, EILCode, EILName, GSoffered, GSserved, Virtual, Magnet, Latitude, Longitude, AdmFName1, AdmLName1, AdmEmail1, AdmFName2, AdmLName2, AdmEmail2, AdmFName3, AdmLName3, AdmEmail3, LastUpdate) VALUES ('19753090130898', '0600001', '13835', 'Closed', 'Los Angeles', 'Acton-Agua Dulce Unified', 'Valley Prep 9-12', '14701 Friar Street', '14701 Friar St.', 'Van Nuys', '91411-2207', 'CA', '900 A Hampshire RoadSte A', '900 A Hampshire Rd.Ste A', 'Westlake Village', '91361', 'CA', NULL, NULL, 'www.valleyprep.org', '2014-07-01', '2015-06-30', 1, '1672', 'Directly funded', '54', 'Unified School District', '66', 'High Schools (Public)', 'TRAD', 'Traditional', 'HS', 'High School', '9-12', '9-11', 'P', 0, 34.18608199999999898, -118.4534900000000021, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2015-07-01');\n"
+        ],
+        "database_name": "california_schools",
+        "table_name": "schools"
+    },
+    {
+        "query": [
+            "INSERT INTO expressed_in (label, description, instance_of, uberon_id, subclass_of, microsoft_academic_id, foundational_model_of_anatomy_id, openalex_id) VALUES ('bone marrow', 'cells and soft materials in the hollow space of long bones', 'tissue', '2371.0', 'tissue', '2780007613.0', '9608.0', 'C2909801294');\n",
+            "INSERT INTO expressed_in (label, description, instance_of, uberon_id, subclass_of, microsoft_academic_id, foundational_model_of_anatomy_id, openalex_id) VALUES ('ovary', 'ovum-producing reproductive organ, often found in pairs as part of the vertebrate female reproductive system', 'organ type', '992.0', 'gonad', '2778324911.0', '7209.0', 'C2778324911');\n",
+            "INSERT INTO expressed_in (label, description, instance_of, uberon_id, subclass_of, microsoft_academic_id, foundational_model_of_anatomy_id, openalex_id) VALUES ('stomach', 'digestive organ', 'organ type', '945.0', 'animal organ', '2779422922.0', '7148.0', 'C2909667141');\n"
+        ],
+        "database_name": "paz-domain-superfamily",
+        "table_name": "expressed_in"
+    },
+    {
+        "query": [
+            "INSERT INTO molecular_function (label, description, subclass_of, gene_ontology_id, exact_match, instance_of) VALUES ('miRNA binding', 'Interacting selectively and non-covalently with a microRNA, a 21-23 nucleotide RNA that is processed from a stem-loop RNA precursor (pre-miRNA) that is encoded within plant and animal genomes.', 'regulatory RNA binding', 'GO:0035198', 'http://purl.obolibrary.org/obo/GO_0035198', 'molecular function');\n",
+            "INSERT INTO molecular_function (label, description, subclass_of, gene_ontology_id, exact_match, instance_of) VALUES ('endoribonuclease activity, cleaving siRNA-paired mRNA', 'Catalysis of the endonucleolytic cleavage of the mRNA in a double-stranded RNA molecule formed by the base pairing of an mRNA with an siRNA, yielding 5''-phosphomonoesters.', 'endoribonuclease activity, producing 5''-phosphomonoesters', 'GO:0070551', 'http://purl.obolibrary.org/obo/GO_0070551', 'molecular function');\n",
+            "INSERT INTO molecular_function (label, description, subclass_of, gene_ontology_id, exact_match, instance_of) VALUES ('protein kinase binding', 'Interacting selectively and non-covalently with a protein kinase, any enzyme that catalyzes the transfer of a phosphate group, usually from ATP, to a protein substrate.', 'kinase binding', 'GO:0019901', 'http://purl.obolibrary.org/obo/GO_0019901', 'molecular function');\n"
+        ],
+        "database_name": "paz-domain-superfamily",
+        "table_name": "molecular_function"
+    },
+    {
+        "query": [
+            "INSERT INTO biological_process (label, description, gene_ontology_id, exact_match, instance_of, subclass_of) VALUES ('reproduction', 'production of new individuals that contain some portion of genetic material inherited from one or more parent organisms', 'GO:0000003', 'http://purl.obolibrary.org/obo/GO_0000003', 'biological process', 'biological process');\n",
+            "INSERT INTO biological_process (label, description, gene_ontology_id, exact_match, instance_of, subclass_of) VALUES ('mRNA destabilization-mediated gene silencing by siRNA', 'The process in which small interfering RNAs (siRNAs) direct the cleavage of target mRNAs. Once incorporated into a RNA-induced silencing complex (RISC), a siRNA will typically direct cleavage by base pairing with perfect or near-perfect complementari', 'GO:0090625', 'http://purl.obolibrary.org/obo/GO_0090625', 'biological process', 'mRNA destabilization');\n",
+            "INSERT INTO biological_process (label, description, gene_ontology_id, exact_match, instance_of, subclass_of) VALUES ('apoptotic DNA fragmentation', 'The cleavage of DNA during apoptosis, which usually occurs in two stages: cleavage into fragments of about 50 kbp followed by cleavage between nucleosomes to yield 200 bp fragments.', 'GO:0006309', 'http://purl.obolibrary.org/obo/GO_0006309', 'biological process', 'DNA catabolic process, endonucleolytic');\n"
+        ],
+        "database_name": "paz-domain-superfamily",
+        "table_name": "biological_process"
+    },
+    {
+        "query": [
+            "INSERT INTO encodes (label, description, ensembl_protein_id, encoded_by, uniprot_protein_id, biological_process, molecular_function, has_parts, found_in_taxon, refseq_protein_id, instance_of, part_of) VALUES ('Nuclear RNAi defective-3 protein CELE_R04A9.2', 'protein found in Caenorhabditis elegans', 'R04A9.2', 'nrde-3', 'Q21691', 'RNA import into nucleus', 'nucleic acid binding', 'PAZ domain', 'Caenorhabditis elegans', 'NP_508092', 'protein', 'Ribonuclease H superfamily');\n",
+            "INSERT INTO encodes (label, description, ensembl_protein_id, encoded_by, uniprot_protein_id, biological_process, molecular_function, has_parts, found_in_taxon, refseq_protein_id, instance_of, part_of) VALUES ('Acriflavin resistance protein B FN0474', 'microbial protein found in Fusobacterium nucleatum subsp. nucleatum ATCC 25586', 'nan', 'acriflavin resistance protein B FN0474', 'Q8RG44', 'transmembrane transport', 'transmembrane transporter activity', 'nan', 'Fusobacterium nucleatum subsp. nucleatum ATCC 25586', 'NP_603371', 'protein', 'Acriflavin resistance protein');\n",
+            "INSERT INTO encodes (label, description, ensembl_protein_id, encoded_by, uniprot_protein_id, biological_process, molecular_function, has_parts, found_in_taxon, refseq_protein_id, instance_of, part_of) VALUES ('Acriflavin resistance protein B FN0474', 'microbial protein found in Fusobacterium nucleatum subsp. nucleatum ATCC 25586', 'nan', 'acriflavin resistance protein B FN0474', 'Q8RG44', 'transmembrane transport', 'transmembrane transporter activity', 'nan', 'Fusobacterium nucleatum subsp. nucleatum ATCC 25586', 'NP_603371', 'protein', 'Acriflavin resistance protein');\n"
+        ],
+        "database_name": "paz-domain-superfamily",
+        "table_name": "encodes"
+    },
+    {
+        "query": [
+            "INSERT INTO chromosome (label, description, refseq_genome_id, found_in_taxon, instance_of) VALUES ('mouse chromosome 5', 'Mus musculus chromosome', 'NC_000071', 'house mouse', 'chromosome');\n",
+            "INSERT INTO chromosome (label, description, refseq_genome_id, found_in_taxon, instance_of) VALUES ('human chromosome 22', 'human chromosome', 'NC_000022.11', 'Homo sapiens', 'chromosome');\n",
+            "INSERT INTO chromosome (label, description, refseq_genome_id, found_in_taxon, instance_of) VALUES ('Rattus norvegicus chromosome 15', 'mammalian chromosome', 'NC_051350', 'brown rat', 'chromosome');\n"
+        ],
+        "database_name": "paz-domain-superfamily",
+        "table_name": "chromosome"
+    },
+    {
+        "query": [
+            "INSERT INTO encoded_by (label, description, entrez_gene_id, ensembl_gene_id, homologene_id, refseq_rna_id, ensembl_transcript_id, encodes, found_in_taxon, strand_orientation, genomic_end, genomic_start, chromosome, instance_of, expressed_in) VALUES ('AGO2', 'protein-coding gene in the species Homo sapiens', '27161', 'ENSG00000123908', '81825.0', 'XM_011516968', 'ENST00000524328', 'Argonaute RISC catalytic component 2', 'Homo sapiens', 'reverse strand', '141645718.0', '140520156.0', 'human chromosome 8', 'gene', 'superficial temporal artery');\n",
+            "INSERT INTO encoded_by (label, description, entrez_gene_id, ensembl_gene_id, homologene_id, refseq_rna_id, ensembl_transcript_id, encodes, found_in_taxon, strand_orientation, genomic_end, genomic_start, chromosome, instance_of, expressed_in) VALUES ('wago-4', 'protein-coding gene in the species Caenorhabditis elegans', '174932', 'WBGene00010263', '43260.0', 'NM_064350', 'F58G1.1.1', 'Piwi-like protein CELE_F58G1.1', 'Caenorhabditis elegans', 'forward strand', '12923377.0', '12919551.0', 'Caenorhabditis elegans chromosome II', 'gene', 'embryo');\n",
+            "INSERT INTO encoded_by (label, description, entrez_gene_id, ensembl_gene_id, homologene_id, refseq_rna_id, ensembl_transcript_id, encodes, found_in_taxon, strand_orientation, genomic_end, genomic_start, chromosome, instance_of, expressed_in) VALUES ('piwil1', 'protein-coding gene in the species Danio rerio', '368200', 'ENSDARG00000041699', '37963.0', 'NM_183338', 'ENSDART00000061115', 'Piwi-like RNA-mediated gene silencing 1', 'Danio rerio', 'reverse strand', '44299247.0', '44224693.0', 'Danio rerio chromosome 8', 'gene', 'testicle');\n"
+        ],
+        "database_name": "paz-domain-superfamily",
+        "table_name": "encoded_by"
+    },
+    {
+        "query": [
+            "INSERT INTO paz_domain_superfamily (label, description, encoded_by, uniprot_protein_id, biological_process, molecular_function, has_parts, found_in_taxon, refseq_protein_id, instance_of, part_of) VALUES ('Argonaute RISC component 4', 'mammalian protein found in Homo sapiens', 'AGO4', 'Q9HCK5', 'mRNA destabilization-mediated gene silencing by siRNA', 'protein binding', 'Argonaute linker 2 domain', 'Homo sapiens', 'NP_060099', 'protein', 'Ribonuclease H superfamily');\n",
+            "INSERT INTO paz_domain_superfamily (label, description, encoded_by, uniprot_protein_id, biological_process, molecular_function, has_parts, found_in_taxon, refseq_protein_id, instance_of, part_of) VALUES ('Dicer-1 Dmel_CG4792', 'Protein found in Drosophila melanogaster', 'Dcr-1', 'Q9VCU9', 'apoptotic DNA fragmentation', 'nucleotide binding', 'Double-stranded RNA-binding domain', 'Drosophila melanogaster', 'NP_524453', 'protein', 'PAZ domain superfamily');\n",
+            "INSERT INTO paz_domain_superfamily (label, description, encoded_by, uniprot_protein_id, biological_process, molecular_function, has_parts, found_in_taxon, refseq_protein_id, instance_of, part_of) VALUES ('Acriflavin resistance protein B FN0474', 'microbial protein found in Fusobacterium nucleatum subsp. nucleatum ATCC 25586', 'acriflavin resistance protein B FN0474', 'Q8RG44', 'transmembrane transport', 'transmembrane transporter activity', 'nan', 'Fusobacterium nucleatum subsp. nucleatum ATCC 25586', 'NP_603371', 'protein', 'Acriflavin resistance protein');\n"
+        ],
+        "database_name": "paz-domain-superfamily",
+        "table_name": "paz_domain_superfamily"
+    },
+    {
+        "query": [
+            "INSERT INTO encodes (label, description, subclass_of, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Peptidase, U32 family CBO3122', 'microbial protein found in Clostridium botulinum A str. ATCC 3502', 'protein', 'A5I6K3', 'Clostridium botulinum A str. ATCC 3502', 'U32 family peptidase CLC_3026', 'Peptidase U32, collagenase', 'nan', 'nan', 'protein', 'YP_001255614', 'Peptidase U32');\n",
+            "INSERT INTO encodes (label, description, subclass_of, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Protease DR_2130', 'microbial protein found in Deinococcus radiodurans R1', 'protein', 'Q9RSJ4', 'Deinococcus radiodurans R1', 'protease DR_2130', 'Peptidase U32, collagenase', 'peptidase activity', 'proteolysis', 'protein', 'NP_295853', 'Peptidase U32');\n",
+            "INSERT INTO encodes (label, description, subclass_of, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Peptidase STY1460', 'microbial protein found in Salmonella enterica subsp. enterica serovar Typhi str. CT18', 'protein', 'Q8Z751', 'Salmonella enterica subsp. enterica serovar Typhi str. CT18', 'peptidase STY1460', 'Peptidase U32, collagenase', 'nan', 'nan', 'protein', 'NP_455893', 'Peptidase U32');\n"
+        ],
+        "database_name": "peptidase-u32-collagenase-family",
+        "table_name": "encodes"
+    },
+    {
+        "query": [
+            "INSERT INTO taxon (label, description, taxon_name, taxon_rank, freebase_id, instance_of, parent_taxon, ncbi_taxonomy_id, gbif_taxon_id, encyclopedia_of_life_id, itis_tsn, bacdive_id, gram_staining, irmng_id, lpsn_url, microsoft_academic_id, catalogue_of_life_id) VALUES ('Fusobacterium nucleatum', 'species of bacterium', 'Fusobacterium nucleatum', 'species', '/m/05pdbhl', 'taxon', 'Fusobacterium', '851.0', '3225878.0', '6380902.0', '958580.0', '5765.0', 'Gram-negative bacteria', '10032020.0', 'https://lpsn.dsmz.de/species/fusobacterium-nucleatum', '2777349128.0', '6K68F');\n",
+            "INSERT INTO taxon (label, description, taxon_name, taxon_rank, freebase_id, instance_of, parent_taxon, ncbi_taxonomy_id, gbif_taxon_id, encyclopedia_of_life_id, itis_tsn, bacdive_id, gram_staining, irmng_id, lpsn_url, microsoft_academic_id, catalogue_of_life_id) VALUES ('Fusobacterium nucleatum', 'species of bacterium', 'Fusobacterium nucleatum', 'species', '/m/05pdbhl', 'taxon', 'Fusobacterium', '851.0', '3225878.0', '6380902.0', '958580.0', '5765.0', 'Gram-negative bacteria', '10032020.0', 'https://lpsn.dsmz.de/species/fusobacterium-nucleatum', '2777349128.0', '6K68F');\n",
+            "INSERT INTO taxon (label, description, taxon_name, taxon_rank, freebase_id, instance_of, parent_taxon, ncbi_taxonomy_id, gbif_taxon_id, encyclopedia_of_life_id, itis_tsn, bacdive_id, gram_staining, irmng_id, lpsn_url, microsoft_academic_id, catalogue_of_life_id) VALUES ('Gloeobacter violaceus', 'species of Cyanobacteria', 'Gloeobacter violaceus', 'species', 'nan', 'taxon', 'Gloeobacter', '33072.0', '3216319.0', '900606.0', 'nan', 'nan', 'Gram-negative bacteria', '10694545.0', 'https://lpsn.dsmz.de/species/gloeobacter-violaceus', 'nan', 'nan');\n"
+        ],
+        "database_name": "peptidase-u32-collagenase-family",
+        "table_name": "taxon"
+    },
+    {
+        "query": [
+            "INSERT INTO natural_product (label, description, taxon_name, ncbi_taxonomy_id, instance_of, parent_taxon, gram_staining, genbank_assembly_accession_number) VALUES ('Shigella dysenteriae Sd197', 'bacterial strain', 'Shigella dysenteriae Sd197', '300267', 'strain', 'Shigella dysenteriae', 'Gram-negative bacteria', 'GCA_000012005.1');\n",
+            "INSERT INTO natural_product (label, description, taxon_name, ncbi_taxonomy_id, instance_of, parent_taxon, gram_staining, genbank_assembly_accession_number) VALUES ('Salmonella enterica subsp. enterica serovar Typhi str. CT18', 'bacterial strain', 'Salmonella enterica subsp. enterica serovar Typhi str. CT18', '220341', 'strain', 'Salmonella enterica', 'Gram-negative bacteria', 'GCA_000195995.1');\n",
+            "INSERT INTO natural_product (label, description, taxon_name, ncbi_taxonomy_id, instance_of, parent_taxon, gram_staining, genbank_assembly_accession_number) VALUES ('Peptoclostridium difficile 630', 'bacterial strain', 'Peptoclostridium difficile 630', '272563', 'strain', 'Clostridium difficile', 'gram-positive bacteria', 'GCA_000932055.2');\n"
+        ],
+        "database_name": "peptidase-u32-collagenase-family",
+        "table_name": "natural_product"
+    },
+    {
+        "query": [
+            "INSERT INTO encoded_by (label, description, found_in_taxon, subclass_of, entrez_gene_id, ncbi_locus_tag, encodes, instance_of, genomic_end, strand_orientation, genomic_start) VALUES ('peptidase PP_3497', 'microbial gene found in Pseudomonas putida KT2440', 'Pseudomonas putida KT2440', 'gene', '1046418', 'PP_3497', 'Peptidase PP_3497', 'gene', '3967807', 'forward strand', '3965807');\n",
+            "INSERT INTO encoded_by (label, description, found_in_taxon, subclass_of, entrez_gene_id, ncbi_locus_tag, encodes, instance_of, genomic_end, strand_orientation, genomic_start) VALUES ('peptidase U32 family YdcP SO_3797', 'microbial gene found in Shewanella oneidensis MR-1', 'Shewanella oneidensis MR-1', 'gene', '1171441', 'SO_3797', 'Peptidase U32 family YdcP SO_3797', 'gene', '3950690', 'reverse strand', '3948774');\n",
+            "INSERT INTO encoded_by (label, description, found_in_taxon, subclass_of, entrez_gene_id, ncbi_locus_tag, encodes, instance_of, genomic_end, strand_orientation, genomic_start) VALUES ('peptidase STY1460', 'microbial gene found in Salmonella enterica subsp. enterica serovar Typhi str. CT18', 'Salmonella enterica subsp. enterica serovar Typhi str. CT18', 'gene', '1247850', 'STY1460', 'Peptidase STY1460', 'gene', '1412057', 'forward strand', '1410093');\n"
+        ],
+        "database_name": "peptidase-u32-collagenase-family",
+        "table_name": "encoded_by"
+    },
+    {
+        "query": [
+            "INSERT INTO peptidase_u32_collagenase_family (label, description, subclass_of, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Putative peptidase ECUMN_1683', 'microbial protein found in Escherichia coli UMN026', 'protein', 'B7N4J2', 'Escherichia coli UMN026', 'putative peptidase ECUMN_1683', 'Peptidase U32, collagenase', 'hydrolase activity', 'proteolysis', 'protein', 'YP_002412422', 'Peptidase U32');\n",
+            "INSERT INTO peptidase_u32_collagenase_family (label, description, subclass_of, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Putative peptidase NRG857_07090', 'microbial protein found in Escherichia coli O83:H1 str. NRG 857C', 'protein', 'A0A0H3EH76', 'Escherichia coli O83:H1 str. NRG 857C', 'putative peptidase NRG857_07090', 'Peptidase U32, collagenase', 'peptidase activity', 'proteolysis', 'protein', 'YP_006119778', 'Peptidase U32');\n",
+            "INSERT INTO peptidase_u32_collagenase_family (label, description, subclass_of, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('U32 family peptidase AHA_1043', 'microbial protein found in Aeromonas hydrophila subsp. hydrophila ATCC 7966', 'protein', 'A0KH35', 'Aeromonas hydrophila subsp. hydrophila ATCC 7966', 'U32 family peptidase AHA_1043', 'Peptidase U32, collagenase', 'peptidase activity', 'proteolysis', 'protein', 'YP_855585', 'Peptidase U32');\n"
+        ],
+        "database_name": "peptidase-u32-collagenase-family",
+        "table_name": "peptidase_u32_collagenase_family"
+    },
+    {
+        "query": [
+            "INSERT INTO citation (label, description, pubmed_id, instance_of, title, published_in, volume, issue, publication_date, pages, author_name_string, language_of_work_or_name, doi) VALUES ('Activity of alpha- and theta-defensins against primary isolates of HIV-1', 'scientific journal article', '15210812', 'scholarly article', 'Activity of alpha- and theta-defensins against primary isolates of HIV-1', 'Journal of Immunology', '173', '1.0', '+2004-07-01T00:00:00Z', '515\u2013520', 'Wei Wang', 'English', '10.4049/JIMMUNOL.173.1.515');\n",
+            "INSERT INTO citation (label, description, pubmed_id, instance_of, title, published_in, volume, issue, publication_date, pages, author_name_string, language_of_work_or_name, doi) VALUES ('Localization of human intestinal defensin 5 in Paneth cell granules', 'scientific article', '9169779', 'scholarly article', 'Localization of human intestinal defensin 5 in Paneth cell granules', 'Infection and Immunity', '65', '6.0', '+1997-06-01T00:00:00Z', '2389-2395', 'E M Porter', 'English', '10.1128/IAI.65.6.2389-2395.1997');\n",
+            "INSERT INTO citation (label, description, pubmed_id, instance_of, title, published_in, volume, issue, publication_date, pages, author_name_string, language_of_work_or_name, doi) VALUES ('Posttranslational processing of defensins in immature human myeloid cells', 'scientific article (publication date: 15 March 1992)', '1339298', 'scholarly article', 'Posttranslational processing of defensins in immature human myeloid cells', 'Blood', '79', '6.0', '+1992-03-15T00:00:00Z', '1538-44', 'E V Valore', 'English', 'nan');\n"
+        ],
+        "database_name": "alpha-defensins",
+        "table_name": "citation"
+    },
+    {
+        "query": [
+            "INSERT INTO alpha_defensins (label, description, has_parts, found_in_taxon, instance_of, part_of, cites_work, reactome_id, exact_match) VALUES ('HNP1-3 bind gp120', 'An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-1471354)', 'Defensins alpha 1-3 [extracellular region]', 'Homo sapiens', 'biological process', 'Alpha-defensins', 'Activity of alpha- and theta-defensins against primary isolates of HIV-1', 'R-HSA-1471354', 'https://identifiers.org/reactome:R-HSA-1471354');\n",
+            "INSERT INTO alpha_defensins (label, description, has_parts, found_in_taxon, instance_of, part_of, cites_work, reactome_id, exact_match) VALUES ('Alpha-defensins form biologically active dimers', 'An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-1462014)', 'Alpha-defensins [extracellular region]', 'Homo sapiens', 'biological process', 'Alpha-defensins', 'Crystal structure of defensin HNP-3, an amphiphilic dimer: mechanisms of membrane permeabilization', 'R-HSA-1462014', 'https://identifiers.org/reactome:R-HSA-1462014');\n",
+            "INSERT INTO alpha_defensins (label, description, has_parts, found_in_taxon, instance_of, part_of, cites_work, reactome_id, exact_match) VALUES ('HNP1-4 are stored in primary neutrophil granules', 'An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-1462003)', 'Defensins alpha 1-4 [Golgi lumen]', 'Homo sapiens', 'biological process', 'Alpha-defensins', 'Defensins. Natural peptide antibiotics of human neutrophils', 'R-HSA-1462003', 'https://identifiers.org/reactome:R-HSA-1462003');\n"
+        ],
+        "database_name": "alpha-defensins",
+        "table_name": "alpha_defensins"
+    },
+    {
+        "query": [
+            "INSERT INTO depiction (label, description, instance_of, freebase_id, commons_category, image) VALUES ('sailing ship', 'large wind-powered water vessel', 'ship type', '/m/0hsrd', 'Sailing ships', 'Tarangini.jpg');\n",
+            "INSERT INTO depiction (label, description, instance_of, freebase_id, commons_category, image) VALUES ('Admiralty Bay', 'bight in New Zealand', 'bay', '/m/09k6td_', 'nan', 'nan');\n",
+            "INSERT INTO depiction (label, description, instance_of, freebase_id, commons_category, image) VALUES ('Coromandel Peninsula', 'peninsula in New Zealand', 'peninsula', '/m/03rsn2', 'Coromandel Peninsula', 'Coromandel Peninsula Panorama.jpg');\n"
+        ],
+        "database_name": "heaphy-sketchbook-no-2",
+        "table_name": "depiction"
+    },
+    {
+        "query": [
+            "INSERT INTO heaphy_sketchbook_no_2 (label, description, inventory_number, instance_of, creator, height, width, described_at_url, collection, image, part_of, location, country, copyright_status, depicts, inception, made_from_material) VALUES ('Lake Rotorua, Middle Island', 'artwork by Charles Heaphy (Auckland War Memorial Museum, PD-1952-2-2-7 )', 'PD-1952-2-2-7', 'drawing', 'Charles Heaphy', 255.0, 360.0, 'http://www.aucklandmuseum.com/collections-research/collections/record/am_library-paintinganddrawings-218', 'Auckland War Memorial Museum T\u0101maki Paenga Hira', 'Lake Rotorua, Middle Island.jpg', 'Heaphy sketchbook no. 2', 'Auckland War Memorial Museum T\u0101maki Paenga Hira', 'New Zealand', 'public domain', 'Lake Rotorua', '+1840-00-00T00:00:00Z', 'pencil');\n",
+            "INSERT INTO heaphy_sketchbook_no_2 (label, description, inventory_number, instance_of, creator, height, width, described_at_url, collection, image, part_of, location, country, copyright_status, depicts, inception, made_from_material) VALUES ('The Thames from Waihike [Waiheke]', 'artwork by Charles Heaphy (Auckland War Memorial Museum, PD-1952-2-2-18 )', 'PD-1952-2-2-18', 'drawing', 'Charles Heaphy', 275.0, 360.0, 'http://www.aucklandmuseum.com/collections-research/collections/record/am_library-paintinganddrawings-229', 'Auckland War Memorial Museum T\u0101maki Paenga Hira', 'The Thames from Waihike (Waiheke).jpg', 'Heaphy sketchbook no. 2', 'Auckland War Memorial Museum T\u0101maki Paenga Hira', 'New Zealand', 'public domain', 'Coromandel Peninsula', '+1850-00-00T00:00:00Z', 'pencil');\n",
+            "INSERT INTO heaphy_sketchbook_no_2 (label, description, inventory_number, instance_of, creator, height, width, described_at_url, collection, image, part_of, location, country, copyright_status, depicts, inception, made_from_material) VALUES ('Arataonga Bay of Plenty', 'artwork by Charles Heaphy (Auckland War Memorial Museum, PD-1952-2-2-17 )', 'PD-1952-2-2-17', 'drawing', 'Charles Heaphy', 255.0, 360.0, 'http://www.aucklandmuseum.com/collections-research/collections/record/am_library-paintinganddrawings-228', 'Auckland War Memorial Museum T\u0101maki Paenga Hira', 'Arataonga Bay of Plenty.jpg', 'Heaphy sketchbook no. 2', 'Auckland War Memorial Museum T\u0101maki Paenga Hira', 'New Zealand', 'public domain', 'Bay of Plenty', '+1840-00-00T00:00:00Z', 'pencil');\n"
+        ],
+        "database_name": "heaphy-sketchbook-no-2",
+        "table_name": "heaphy_sketchbook_no_2"
+    },
+    {
+        "query": [
+            "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes) VALUES (144127, 172002, 69061, '2015-09-21 00:00:00', 65, 65, 'right', 'medium', 'low', 64, 59, 52, 65, 52, 68, 70, 67, 58, 65, 71, 70, 60, 58, 75, 67, 74, 73, 57, 61, 68, 50, 69, 68, 66, 26, 33, 41, 15, 12, 12, 12, 16);\n",
+            "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes) VALUES (159101, 198386, 150296, '2012-02-22 00:00:00', 66, 72, 'left', 'medium', 'medium', 62, 51, 57, 74, 52, 72, 66, 67, 58, 70, 74, 71, 70, 58, 68, 64, 57, 70, 61, 58, 60, 47, 58, 60, 70, 39, 50, 30, 8, 10, 8, 15, 7);\n",
+            "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes) VALUES (60173, 188185, 150248, '2013-02-15 00:00:00', 64, 69, 'right', 'medium', 'medium', 60, 56, 42, 60, 47, 69, 61, 45, 61, 66, 86, 83, 76, 61, 74, 59, 33, 49, 47, 52, 54, 22, 58, 59, 56, 31, 40, 36, 11, 15, 9, 9, 6);\n"
+        ],
+        "database_name": "european_football_2",
+        "table_name": "Player_Attributes"
+    },
+    {
+        "query": [
+            "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight) VALUES (4657, 278823, 'Janek Sternberg', 204420, '1992-10-19 00:00:00', 182.8799999999999955, 170);\n",
+            "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight) VALUES (1970, 114339, 'Cristian Maidana', 187644, '1987-01-24 00:00:00', 180.3400000000000034, 163);\n",
+            "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight) VALUES (9138, 6798, 'Roel van Hemert', 178707, '1984-11-21 00:00:00', 182.8799999999999955, 179);\n"
+        ],
+        "database_name": "european_football_2",
+        "table_name": "Player"
+    },
+    {
+        "query": [
+            "INSERT INTO League (id, country_id, name) VALUES (10257, 10257, 'Italy Serie A');\n",
+            "INSERT INTO League (id, country_id, name) VALUES (21518, 21518, 'Spain LIGA BBVA');\n",
+            "INSERT INTO League (id, country_id, name) VALUES (4769, 4769, 'France Ligue 1');\n"
+        ],
+        "database_name": "european_football_2",
+        "table_name": "League"
+    },
+    {
+        "query": [
+            "INSERT INTO Country (id, name) VALUES (21518, 'Spain');\n",
+            "INSERT INTO Country (id, name) VALUES (1729, 'England');\n",
+            "INSERT INTO Country (id, name) VALUES (10257, 'Italy');\n"
+        ],
+        "database_name": "european_football_2",
+        "table_name": "Country"
+    },
+    {
+        "query": [
+            "INSERT INTO Team (id, team_api_id, team_fifa_api_id, team_long_name, team_short_name) VALUES (19917, 8262, 110502, 'SV Darmstadt 98', 'DAR');\n",
+            "INSERT INTO Team (id, team_api_id, team_fifa_api_id, team_long_name, team_short_name) VALUES (43041, 8388, 477, 'CD Numancia', 'NUM');\n",
+            "INSERT INTO Team (id, team_api_id, team_fifa_api_id, team_long_name, team_short_name) VALUES (49117, 10192, 900, 'BSC Young Boys', 'YB');\n"
+        ],
+        "database_name": "european_football_2",
+        "table_name": "Team"
+    },
+    {
+        "query": [
+            "INSERT INTO Team_Attributes (id, team_fifa_api_id, team_api_id, date, buildUpPlaySpeed, buildUpPlaySpeedClass, buildUpPlayDribbling, buildUpPlayDribblingClass, buildUpPlayPassing, buildUpPlayPassingClass, buildUpPlayPositioningClass, chanceCreationPassing, chanceCreationPassingClass, chanceCreationCrossing, chanceCreationCrossingClass, chanceCreationShooting, chanceCreationShootingClass, chanceCreationPositioningClass, defencePressure, defencePressureClass, defenceAggression, defenceAggressionClass, defenceTeamWidth, defenceTeamWidthClass, defenceDefenderLineClass) VALUES (1236, 680, 9997, '2012-02-22 00:00:00', 52, 'Balanced', NULL, 'Little', 55, 'Mixed', 'Organised', 52, 'Normal', 55, 'Normal', 47, 'Normal', 'Organised', 32, 'Deep', 40, 'Press', 41, 'Normal', 'Cover');\n",
+            "INSERT INTO Team_Attributes (id, team_fifa_api_id, team_api_id, date, buildUpPlaySpeed, buildUpPlaySpeedClass, buildUpPlayDribbling, buildUpPlayDribblingClass, buildUpPlayPassing, buildUpPlayPassingClass, buildUpPlayPositioningClass, chanceCreationPassing, chanceCreationPassingClass, chanceCreationCrossing, chanceCreationCrossingClass, chanceCreationShooting, chanceCreationShootingClass, chanceCreationPositioningClass, defencePressure, defencePressureClass, defenceAggression, defenceAggressionClass, defenceTeamWidth, defenceTeamWidthClass, defenceDefenderLineClass) VALUES (19, 47, 8564, '2013-09-20 00:00:00', 48, 'Balanced', NULL, 'Little', 54, 'Mixed', 'Organised', 51, 'Normal', 53, 'Normal', 64, 'Normal', 'Free Form', 48, 'Medium', 49, 'Press', 53, 'Normal', 'Cover');\n",
+            "INSERT INTO Team_Attributes (id, team_fifa_api_id, team_api_id, date, buildUpPlaySpeed, buildUpPlaySpeedClass, buildUpPlayDribbling, buildUpPlayDribblingClass, buildUpPlayPassing, buildUpPlayPassingClass, buildUpPlayPositioningClass, chanceCreationPassing, chanceCreationPassingClass, chanceCreationCrossing, chanceCreationCrossingClass, chanceCreationShooting, chanceCreationShootingClass, chanceCreationPositioningClass, defencePressure, defencePressureClass, defenceAggression, defenceAggressionClass, defenceTeamWidth, defenceTeamWidthClass, defenceDefenderLineClass) VALUES (1195, 237, 9768, '2012-02-22 00:00:00', 53, 'Balanced', NULL, 'Little', 56, 'Mixed', 'Organised', 67, 'Risky', 68, 'Lots', 69, 'Lots', 'Organised', 52, 'Medium', 49, 'Press', 54, 'Normal', 'Cover');\n"
+        ],
+        "database_name": "european_football_2",
+        "table_name": "Team_Attributes"
+    },
+    {
+        "query": [
+            "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA) VALUES (16804, 15722, 15722, '2012/2013', 23, '2013-04-21 00:00:00', 1219228, 2182, 8021, 3, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 15361, 71775, 189190, NULL, 13481, 13449, 69101, 274156, 7284, 179289, 34266, 114817, 98027, 182075, NULL, 163618, 43138, 239253, 69479, 10933, 182107, 25255, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);\n",
+            "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA) VALUES (18294, 17642, 17642, '2010/2011', 29, '2011-05-08 00:00:00', 859874, 9771, 9809, 1, 0, 1, 2, 4, 6, 8, 2, 4, 6, 8, 4, 6, 1, 2, 4, 6, 8, 3, 5, 7, 3, 5, 7, 1, 3, 3, 3, 3, 7, 7, 7, 7, 10, 10, 1, 3, 3, 3, 3, 7, 7, 7, 10, 10, 10, 121881, 40933, 97515, 27631, 19353, 49866, 45355, 145020, 29177, NULL, 45311, 156714, 22519, 150299, 209476, 45335, 164135, NULL, 19281, 112801, 150053, 38804, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2.700000000000000177, 3.25, 2.600000000000000088, 2.600000000000000088, 3.100000000000000088, 2.549999999999999823, NULL, NULL, NULL, 2.379999999999999894, 3.200000000000000177, 2.600000000000000088, NULL, NULL, NULL, 2.700000000000000177, 2.879999999999999894, 2.5, 2.879999999999999894, 3.0, 2.5, 2.75, 3.200000000000000177, 2.600000000000000088, 2.649999999999999912, 3.200000000000000177, 2.450000000000000177, 2.600000000000000088, 3.200000000000000177, 2.5);\n",
+            "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA) VALUES (21420, 19694, 19694, '2015/2016', 29, '2016-03-01 00:00:00', 1991015, 8597, 8649, 0, 2, 1, 2, 4, 6, 8, 2, 4, 6, 8, 4, 6, 1, 2, 4, 6, 8, 2, 4, 6, 8, 4, 6, 1, 3, 3, 3, 3, 7, 7, 7, 7, 10, 10, 1, 3, 3, 3, 3, 7, 7, 7, 7, 10, 10, 32584, 171789, 159663, 519951, 36394, 246316, 448812, 79320, 159373, 180137, 281099, 168673, 32430, 32833, 23007, 294863, 369742, 159856, 24439, 35398, 262753, 32465, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3.5, 3.399999999999999912, 2.049999999999999822, 3.5, 3.299999999999999823, 1.949999999999999956, 3.100000000000000088, 3.299999999999999823, 2.100000000000000088, 3.299999999999999823, 3.5, 2.100000000000000088, 3.540000000000000035, 3.620000000000000106, 2.140000000000000124, 3.5, 3.299999999999999823, 2.100000000000000088, NULL, NULL, NULL, 3.399999999999999912, 3.600000000000000088, 2.149999999999999912, NULL, NULL, NULL, NULL, NULL, NULL);\n"
+        ],
+        "database_name": "european_football_2",
+        "table_name": "Match"
+    },
+    {
+        "query": [
+            "INSERT INTO time_zone (label, description, instance_of, commons_category, utc_timezone_offset, image, freebase_id, said_to_be_the_same_as) VALUES ('Eastern Time Zone', 'time zone observing UTC\u221205:00 during standard time and UTC\u221204:00 during daylight saving time', 'time zone', 'Eastern Time (U.S.)', -5.0, 'Timezones2008 UTC-5 gray.png', '/m/02hcv8', 'UTC\u221205:00');\n",
+            "INSERT INTO time_zone (label, description, instance_of, commons_category, utc_timezone_offset, image, freebase_id, said_to_be_the_same_as) VALUES ('UTC\u221205:00', 'identifier for a time offset from UTC of \u22125', 'time zone named for a UTC offset', 'UTC\u221205:00', -5.0, 'Timezones2008 UTC-5 gray.png', '/m/02_37z', 'Central Daylight Time');\n",
+            "INSERT INTO time_zone (label, description, instance_of, commons_category, utc_timezone_offset, image, freebase_id, said_to_be_the_same_as) VALUES ('UTC\u221207:00', 'Identifier for a time offset from UTC of \u22127', 'time zone named for a UTC offset', 'UTC\u221207:00', -7.0, 'Timezones2008 UTC-7 gray.png', '/m/07f57s', 'Mountain Time Zone');\n"
+        ],
+        "database_name": "novelette",
+        "table_name": "time_zone"
+    },
+    {
+        "query": [
+            "INSERT INTO place_of_birth (label, description, country, located_in_the_administrative_territorial_entity, coordinate_location, topics_main_category, freebase_id, instance_of, geonames_id, musicbrainz_area_id, commons_category, locator_map_image, image, population, category_of_associated_people, area, us_national_archives_identifier, archinform_location_id, elevation_above_sea_level, library_of_congress_authority_id, whos_on_first_id, official_website, per_capita_income, number_of_households, national_library_of_israel_j9u_id, located_in_time_zone, inception, viaf_id, quora_topic_id, worldcat_identities_id) VALUES ('Massachusetts', 'state of the United States of America', 'United States of America', 'United States of America', '42.3', 'Category:Massachusetts', '/m/05k7sb', 'U.S. state', '6254926.0', '05f68b4c-10f3-49b5-b28c-260a1b707043', 'Massachusetts', 'Massachusetts in United States (zoom).svg', 'USA Cape Cod 3 MA.jpg', 7029917.0, 'Category:People from Massachusetts', 27336.0, '10045228.0', '2844.0', 150.0, 'n79007084', '85688645.0', 'https://www.mass.gov/', 45555.0, 2646980.0, '9.870075525314052e+17', 'Eastern Time Zone', '+1788-02-06T00:00:00Z', '130169058.0', 'Massachusetts-state', 'lccn-n79007084');\n",
+            "INSERT INTO place_of_birth (label, description, country, located_in_the_administrative_territorial_entity, coordinate_location, topics_main_category, freebase_id, instance_of, geonames_id, musicbrainz_area_id, commons_category, locator_map_image, image, population, category_of_associated_people, area, us_national_archives_identifier, archinform_location_id, elevation_above_sea_level, library_of_congress_authority_id, whos_on_first_id, official_website, per_capita_income, number_of_households, national_library_of_israel_j9u_id, located_in_time_zone, inception, viaf_id, quora_topic_id, worldcat_identities_id) VALUES ('Taganrog', 'port city in Rostov Oblast in southern Russia', 'Russia', 'Taganrogskiy Okrug', '47.233333333333', 'Category:Taganrog', '/m/04q9h1', 'subdivision of Russia', '484907.0', '09edef28-cda4-45c5-9dba-91eb500cfb70', 'Taganrog', 'nan', 'Port of Taganrog.jpg', 250287.0, 'Category:People from Taganrog', 95.0, 'nan', '5420.0', 30.0, 'nan', '102007289.0', 'http://www.tagancity.ru', NULL, NULL, '9.870075530808051e+17', 'UTC+03:00', '+1698-01-01T00:00:00Z', 'nan', 'Taganrog-Russia', 'nan');\n",
+            "INSERT INTO place_of_birth (label, description, country, located_in_the_administrative_territorial_entity, coordinate_location, topics_main_category, freebase_id, instance_of, geonames_id, musicbrainz_area_id, commons_category, locator_map_image, image, population, category_of_associated_people, area, us_national_archives_identifier, archinform_location_id, elevation_above_sea_level, library_of_congress_authority_id, whos_on_first_id, official_website, per_capita_income, number_of_households, national_library_of_israel_j9u_id, located_in_time_zone, inception, viaf_id, quora_topic_id, worldcat_identities_id) VALUES ('Beverly', 'city in Burlington County, New Jersey, United States', 'United States of America', 'Burlington County', '40.0648', 'Category:Beverly, New Jersey', '/m/0xl2j', 'city in New Jersey', '5095691.0', 'd3388d4e-3df4-4870-b00e-d2bebce9285b', 'Beverly, New Jersey', 'Map of Burlington County highlighting Beverly.png', 'St. Stephen''s Beverly Exterior.jpg', 2577.0, 'nan', 0.785000000000000031, 'nan', '6437.0', 23.0, 'n84201802', '85975541.0', 'http://www.thecityofbeverly.com/', 35033.0, 822.0, '9.870075597971052e+17', 'Eastern Time Zone', '+1850-03-05T00:00:00Z', '138430230.0', 'Beverly-NJ', 'lccn-n84201802');\n"
+        ],
+        "database_name": "novelette",
+        "table_name": "place_of_birth"
+    },
+    {
+        "query": [
+            "INSERT INTO author (label, description, library_of_congress_authority_id, viaf_id, isni, country_of_citizenship, instance_of, date_of_birth, freebase_id, given_name, place_of_birth, occupation, internet_speculative_fiction_database_author_id, sex_or_gender, worldcat_identities_id) VALUES ('K. M. Szpara', 'American author', 'no2018086688', '33153124230124490103', '0000 0004 9944 687X', 'nan', 'human', 'nan', 'nan', 'nan', 'nan', 'writer', '195400.0', 'trans man', 'lccn-no2018086688');\n",
+            "INSERT INTO author (label, description, library_of_congress_authority_id, viaf_id, isni, country_of_citizenship, instance_of, date_of_birth, freebase_id, given_name, place_of_birth, occupation, internet_speculative_fiction_database_author_id, sex_or_gender, worldcat_identities_id) VALUES ('James Patrick Kelly', 'American science fiction writer', 'no2012105338', '85539119', '0000 0000 8398 4156', 'United States of America', 'human', '+1951-04-11T00:00:00Z', '/m/070tj4', 'James', 'Mineola', 'science fiction writer', '236.0', 'male', 'lccn-no2012105338');\n",
+            "INSERT INTO author (label, description, library_of_congress_authority_id, viaf_id, isni, country_of_citizenship, instance_of, date_of_birth, freebase_id, given_name, place_of_birth, occupation, internet_speculative_fiction_database_author_id, sex_or_gender, worldcat_identities_id) VALUES ('K. M. Szpara', 'American author', 'no2018086688', '33153124230124490103', '0000 0004 9944 687X', 'nan', 'human', 'nan', 'nan', 'nan', 'nan', 'writer', '195400.0', 'trans man', 'lccn-no2018086688');\n"
+        ],
+        "database_name": "novelette",
+        "table_name": "author"
+    },
+    {
+        "query": [
+            "INSERT INTO novelette (label, description, author, instance_of, publication_date) VALUES ('The Ribbon of Fate', 'mystery novelette by George Allan England', 'George Allan England', 'novelette', '+1911-00-00T00:00:00Z');\n",
+            "INSERT INTO novelette (label, description, author, instance_of, publication_date) VALUES ('Fourteen All!', 'nan', 'Gilbert Patten', 'novelette', '+1922-07-15T00:00:00Z');\n",
+            "INSERT INTO novelette (label, description, author, instance_of, publication_date) VALUES ('The Matter of Seggri', 'science fiction novelette by Ursula K. Le Guin, 1993 in Crank\u01c3 3', 'Ursula K. Le Guin', 'novelette', '+1994-00-00T00:00:00Z');\n"
+        ],
+        "database_name": "novelette",
+        "table_name": "novelette"
+    },
+    {
+        "query": [
+            "INSERT INTO architect (label, description, instance_of, sex_or_gender, country_of_citizenship, date_of_birth, date_of_death, place_of_birth, place_of_death, occupation, given_name, commons_category, family_name, google_knowledge_graph_id, kanto_id, genicom_profile_id, uppslagsverket_finland_id) VALUES ('Bertel Str\u00f6mmer', 'Finnish architect', 'human', 'male', 'Finland', '+1890-07-11T00:00:00Z', '+1962-04-18T00:00:00Z', 'Ikaalinen', 'Tampere', 'architect', 'Bertel', 'Bertel Str\u00f6mmer', 'Str\u00f6mmer', '/g/122bxpg2', '100592', 'nan', 'StroemmerBertel');\n",
+            "INSERT INTO architect (label, description, instance_of, sex_or_gender, country_of_citizenship, date_of_birth, date_of_death, place_of_birth, place_of_death, occupation, given_name, commons_category, family_name, google_knowledge_graph_id, kanto_id, genicom_profile_id, uppslagsverket_finland_id) VALUES ('Frans Ludvig Calonius', 'Finnish architect', 'human', 'male', 'Grand Duchy of Finland', '+1833-11-19T00:00:00Z', '+1903-12-08T00:00:00Z', 'Helsinki', 'Tampere', 'architect', 'Frans', 'Frans Ludvig Calonius', 'Calonius', '/g/121bv_h7', '162659', '6.00000000880351e+18', 'CaloniusFransLudvig');\n",
+            "INSERT INTO architect (label, description, instance_of, sex_or_gender, country_of_citizenship, date_of_birth, date_of_death, place_of_birth, place_of_death, occupation, given_name, commons_category, family_name, google_knowledge_graph_id, kanto_id, genicom_profile_id, uppslagsverket_finland_id) VALUES ('Bertel Str\u00f6mmer', 'Finnish architect', 'human', 'male', 'Finland', '+1890-07-11T00:00:00Z', '+1962-04-18T00:00:00Z', 'Ikaalinen', 'Tampere', 'architect', 'Bertel', 'Bertel Str\u00f6mmer', 'Str\u00f6mmer', '/g/122bxpg2', '100592', 'nan', 'StroemmerBertel');\n"
+        ],
+        "database_name": "tammerkoski",
+        "table_name": "architect"
+    },
+    {
+        "query": [
+            "INSERT INTO tammerkoski (label, description, commons_category, architect, country, located_in_the_administrative_territorial_entity, instance_of, coordinate_location, image, part_of, google_knowledge_graph_id) VALUES ('Tempo Building', 'building in Tampere, Finland', 'Tempon talo', 'Bertel Str\u00f6mmer', 'Finland', 'Tampere', 'building', '61.49772222', 'Tempon talo.jpg', 'Tammerkoski', '/g/1yp37g_b9');\n",
+            "INSERT INTO tammerkoski (label, description, commons_category, architect, country, located_in_the_administrative_territorial_entity, instance_of, coordinate_location, image, part_of, google_knowledge_graph_id) VALUES ('Tuulensuu house', 'building in Tampere, Finland', 'Tuulensuun talo', 'Bertel Str\u00f6mmer', 'Finland', 'Tampere', 'building', '61.49738889', 'Tuulensuun talo.JPG', 'Tammerkoski', '/g/1yprtzknj');\n",
+            "INSERT INTO tammerkoski (label, description, commons_category, architect, country, located_in_the_administrative_territorial_entity, instance_of, coordinate_location, image, part_of, google_knowledge_graph_id) VALUES ('Tuulensuu house', 'building in Tampere, Finland', 'Tuulensuun talo', 'Bertel Str\u00f6mmer', 'Finland', 'Tampere', 'building', '61.49738889', 'Tuulensuun talo.JPG', 'Tammerkoski', '/g/1yprtzknj');\n"
+        ],
+        "database_name": "tammerkoski",
+        "table_name": "tammerkoski"
+    },
+    {
+        "query": [
+            "INSERT INTO event (event_id, event_name, event_date, type, notes, location, status) VALUES ('rec0Si5cQ4rJRVzd6', 'March Meeting', '2020-03-10T12:00:00', 'Meeting', NULL, 'MU 215', 'Open');\n",
+            "INSERT INTO event (event_id, event_name, event_date, type, notes, location, status) VALUES ('recoVo6dFSzG1ypX7', 'Kid''s Care', '2019-09-19T02:00:00', 'Community Service', 'Volunteer opportunity to pack backpacks for underprivileged youth.', '45 N. Smith St.', 'Closed');\n",
+            "INSERT INTO event (event_id, event_name, event_date, type, notes, location, status) VALUES ('recHaMmaKyfktt5fW', 'February Speaker', '2020-02-26T12:00:00', 'Guest Speaker', NULL, 'MU 215', 'Open');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "event"
+    },
+    {
+        "query": [
+            "INSERT INTO major (major_id, major_name, department, college) VALUES ('recAiT3yTABWypvHu', 'Communicative Disorders and Deaf Education', 'Communicative Disorders and Deaf Education Department', 'College of Education & Human Services');\n",
+            "INSERT INTO major (major_id, major_name, department, college) VALUES ('rec3pZhvStMoNbVgy', 'Religious Studies', 'Religious Studies Program', 'College of Humanities and Social Sciences');\n",
+            "INSERT INTO major (major_id, major_name, department, college) VALUES ('recyu9wdSJrfSgmG5', 'Family Life Studies', 'Human Development and Family Studies Department', 'College of Education & Human Services');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "major"
+    },
+    {
+        "query": [
+            "INSERT INTO zip_code (zip_code, type, city, county, state, short_state) VALUES (78262, 'Standard', 'San Antonio', 'Bexar County', 'Texas', 'TX');\n",
+            "INSERT INTO zip_code (zip_code, type, city, county, state, short_state) VALUES (57003, 'Standard', 'Baltic', 'Minnehaha County', 'South Dakota', 'SD');\n",
+            "INSERT INTO zip_code (zip_code, type, city, county, state, short_state) VALUES (68623, 'Standard', 'Belgrade', 'Nance County', 'Nebraska', 'NE');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "zip_code"
+    },
+    {
+        "query": [
+            "INSERT INTO attendance (link_to_event, link_to_member) VALUES ('recGxVCwaLW3mDIa3', 'rec28ORZgcm1dtqBZ');\n",
+            "INSERT INTO attendance (link_to_event, link_to_member) VALUES ('reciRZdAqNIKuMC96', 'rec280Sk7o31iG0Tx');\n",
+            "INSERT INTO attendance (link_to_event, link_to_member) VALUES ('recggMW2eyCYceNcy', 'reccW7q1KkhSKZsea');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "attendance"
+    },
+    {
+        "query": [
+            "INSERT INTO budget (budget_id, category, spent, remaining, amount, event_status, link_to_event) VALUES ('recUmDNVie8sfU6UR', 'Food', 0.0, 150.0, 150, 'Open', 'rec0Si5cQ4rJRVzd6');\n",
+            "INSERT INTO budget (budget_id, category, spent, remaining, amount, event_status, link_to_event) VALUES ('rec5V70sIuIgpOzDT', 'Food', 173.0600000000000022, -23.05999999999999873, 150, 'Closed', 'recI43CzsZ0Q625ma');\n",
+            "INSERT INTO budget (budget_id, category, spent, remaining, amount, event_status, link_to_event) VALUES ('recQf86wBWXvebEBO', 'Advertisement', 0.0, 55.0, 55, 'Open', 'rec0Si5cQ4rJRVzd6');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "budget"
+    },
+    {
+        "query": [
+            "INSERT INTO expense (expense_id, expense_description, expense_date, cost, approved, link_to_member, link_to_budget) VALUES ('recc708ab2lufAlNR', 'Posters', '2019-11-04', 54.25, 'true', 'recD078PnS3x2doBe', 'recKjd7dcURsmP0KY');\n",
+            "INSERT INTO expense (expense_id, expense_description, expense_date, cost, approved, link_to_member, link_to_budget) VALUES ('recILV3eykJuWc489', 'Pizza', '2019-11-19', 62.60000000000000142, 'true', 'recD078PnS3x2doBe', 'reczf4LoOK6z7oOec');\n",
+            "INSERT INTO expense (expense_id, expense_description, expense_date, cost, approved, link_to_member, link_to_budget) VALUES ('recoi6IqHyFHYxGzO', 'Parking', '2019-09-24', 6.0, 'true', 'recro8T1MPMwRadVH', 'recZdw5TjWrRTj4kp');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "expense"
+    },
+    {
+        "query": [
+            "INSERT INTO income (income_id, date_received, amount, source, notes, link_to_member) VALUES ('recenMwUQktMpDTQc', '2019-09-01', 3000, 'School Appropration', 'Annual funding from Student Government.', NULL);\n",
+            "INSERT INTO income (income_id, date_received, amount, source, notes, link_to_member) VALUES ('recenMwUQktMpDTQc', '2019-09-01', 3000, 'School Appropration', 'Annual funding from Student Government.', NULL);\n",
+            "INSERT INTO income (income_id, date_received, amount, source, notes, link_to_member) VALUES ('recMFy9sJHhuPZ4cz', '2019-09-25', 50, 'Dues', NULL, 'recjHj4BS5A541n9v');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "income"
+    },
+    {
+        "query": [
+            "INSERT INTO member (member_id, first_name, last_name, email, position, t_shirt_size, phone, zip, link_to_major) VALUES ('recZN8afUWlE5fZHG', 'Brent', 'Thomason', 'brent.thomason@lpu.edu', 'Member', 'Large', '801-344-2203', 84003, 'recT9LoDnC8ZvdPqM');\n",
+            "INSERT INTO member (member_id, first_name, last_name, email, position, t_shirt_size, phone, zip, link_to_major) VALUES ('recQaxyXBQG5BBtD0', 'Dean', 'O''Reilly', 'dean.o''reilly@lpu.edu', 'Member', 'Medium', '809-555-3360', 28092, 'recXLfKqMqRArcKNg');\n",
+            "INSERT INTO member (member_id, first_name, last_name, email, position, t_shirt_size, phone, zip, link_to_major) VALUES ('recP6DJPyi5donvXL', 'Katy', 'Balentine', 'katy.balentine@lpu.edu', 'Member', 'Large', '716-555-3845', 12203, 'rec1N0upiVLy5esTO');\n"
+        ],
+        "database_name": "student_club",
+        "table_name": "member"
+    },
+    {
+        "query": [
+            "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, genbank_assembly_accession_number, gram_staining) VALUES ('Bordetella parapertussis Bpp5', 'bacterial strain', 'Bordetella parapertussis Bpp5', 'Bordetella parapertussis', '1208660', 'strain', 'GCA_000317935.1', 'Gram-negative bacteria');\n",
+            "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, genbank_assembly_accession_number, gram_staining) VALUES ('Escherichia coli str. K-12 substr. MG1655', 'bacterial strain', 'Escherichia coli str. K-12 substr. MG1655', 'Escherichia coli', '511145', 'reference strain', 'GCA_000005845.2', 'Gram-negative bacteria');\n",
+            "INSERT INTO natural_product (label, description, taxon_name, parent_taxon, ncbi_taxonomy_id, instance_of, genbank_assembly_accession_number, gram_staining) VALUES ('Yersinia pestis CO92', 'bacterial strain', 'Yersinia pestis CO92', 'Yersinia pestis', '214092', 'strain', 'GCA_001293415.1', 'Gram-negative bacteria');\n"
+        ],
+        "database_name": "chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family",
+        "table_name": "natural_product"
+    },
+    {
+        "query": [
+            "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start) VALUES ('methyl-accepting chemotaxis protein II STM3577', 'microbial gene found in Salmonella enterica subsp. enterica serovar Typhimurium str. LT2', 'STM3577', 'gene', 'Salmonella enterica subsp. enterica serovar Typhimurium str. LT2', '1255100', 'Methyl-accepting chemotaxis protein II STM3577', 'gene', '3746496', 'forward strand', '3744846');\n",
+            "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start) VALUES ('methyl-accepting chemotaxis protein II STM1919', 'microbial gene found in Salmonella enterica subsp. enterica serovar Typhimurium str. LT2', 'STM1919', 'gene', 'Salmonella enterica subsp. enterica serovar Typhimurium str. LT2', '1253440', 'Methyl-accepting chemotaxis protein II STM1919', 'gene', '2016427', 'reverse strand', '2014752');\n",
+            "INSERT INTO encoded_by (label, description, ncbi_locus_tag, subclass_of, found_in_taxon, entrez_gene_id, encodes, instance_of, genomic_end, strand_orientation, genomic_start) VALUES ('methyl-accepting chemotaxis sensory transducer EAE_15535', 'microbial gene found in Klebsiella aerogenes KCTC 2190', 'EAE_15535', 'gene', 'Enterobacter aerogenes KCTC 2190', '10793328', 'Methyl-accepting chemotaxis sensory transducer EAE_15535', 'gene', '3359965', 'forward strand', '3358295');\n"
+        ],
+        "database_name": "chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family",
+        "table_name": "encoded_by"
+    },
+    {
+        "query": [
+            "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Methyl-accepting chemotaxis protein II ECs2596', 'microbial protein found in Escherichia coli O157:H7 str. Sakai', 'A0A0H3JFK1', 'Escherichia coli O157:H7 str. Sakai', 'methyl-accepting chemotaxis protein II ECs2596', 'Chemotaxis methyl-accepting receptor Tar-related, ligand-binding', 'nan', 'nan', 'nan', 'protein', 'NP_310623', 'Methyl-accepting chemotaxis protein');\n",
+            "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Methyl-accepting protein IV ECL_01413', 'microbial protein found in Enterobacter cloacae subsp. cloacae ATCC 13047', 'A0A0H3CK73', 'Enterobacter cloacae subsp. cloacae ATCC 13047', 'methyl-accepting protein IV ECL_01413', 'Chemotaxis methyl-accepting receptor, methyl-accepting site', 'signal transducer activity', 'membrane', 'chemotaxis', 'protein', 'YP_003611922', 'Methyl-accepting chemotaxis protein');\n",
+            "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of) VALUES ('Methyl-accepting chemotaxis protein II ECs2596', 'microbial protein found in Escherichia coli O157:H7 str. Sakai', 'A0A0H3JFK1', 'Escherichia coli O157:H7 str. Sakai', 'methyl-accepting chemotaxis protein II ECs2596', 'Chemotaxis methyl-accepting receptor Tar-related, ligand-binding', 'nan', 'nan', 'nan', 'protein', 'NP_310623', 'Methyl-accepting chemotaxis protein');\n"
+        ],
+        "database_name": "chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family",
+        "table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family"
+    },
+    {
+        "query": [
+            "INSERT INTO entrepreneur (Entrepreneur_ID, People_ID, Company, Money_Requested, Investor) VALUES (5, 6, 'Mycorrhizal Systems', 75000.0, 'Simon Woodroffe');\n",
+            "INSERT INTO entrepreneur (Entrepreneur_ID, People_ID, Company, Money_Requested, Investor) VALUES (1, 1, 'Umbrolly', 150000.0, 'Duncan Bannatyne');\n",
+            "INSERT INTO entrepreneur (Entrepreneur_ID, People_ID, Company, Money_Requested, Investor) VALUES (4, 5, 'IV Cam', 50000.0, 'Peter Jones');\n"
+        ],
+        "database_name": "entrepreneur",
+        "table_name": "entrepreneur"
+    },
+    {
+        "query": [
+            "INSERT INTO people (People_ID, Name, Height, Weight, Date_of_Birth) VALUES (1, 'Francesco Postiglione', 1.899999999999999912, 80.0, '1972-04-29');\n",
+            "INSERT INTO people (People_ID, Name, Height, Weight, Date_of_Birth) VALUES (7, 'Alberto Angelini', 1.820000000000000062, 58.0, '1974-09-28');\n",
+            "INSERT INTO people (People_ID, Name, Height, Weight, Date_of_Birth) VALUES (2, 'Leonardo Binchi', 1.860000000000000097, 57.0, '1975-08-27');\n"
+        ],
+        "database_name": "entrepreneur",
+        "table_name": "people"
+    },
+    {
+        "query": [
+            "INSERT INTO candidate (Candidate_ID, People_ID, Poll_Source, Date, Support_rate, Consider_rate, Oppose_rate, Unsure_rate) VALUES (1, 1, 'WNBC/Marist Poll', 'Feb 12\u201315, 2007', 0.25, 0.2999999999999999889, 0.4299999999999999934, 0.2000000000000000111);\n",
+            "INSERT INTO candidate (Candidate_ID, People_ID, Poll_Source, Date, Support_rate, Consider_rate, Oppose_rate, Unsure_rate) VALUES (6, 9, 'Newsweek Poll', 'Nov 9\u201310, 2006', 0.2399999999999999912, 0.2700000000000000177, 0.4299999999999999934, 0.2000000000000000111);\n",
+            "INSERT INTO candidate (Candidate_ID, People_ID, Poll_Source, Date, Support_rate, Consider_rate, Oppose_rate, Unsure_rate) VALUES (6, 9, 'Newsweek Poll', 'Nov 9\u201310, 2006', 0.2399999999999999912, 0.2700000000000000177, 0.4299999999999999934, 0.2000000000000000111);\n"
+        ],
+        "database_name": "candidate_poll",
+        "table_name": "candidate"
+    },
+    {
+        "query": [
+            "INSERT INTO people (People_ID, Sex, Name, Date_of_Birth, Height, Weight) VALUES (6, 'M', 'Vincent Montm\u00e9at', '01.09.1977', 196.0, 88.0);\n",
+            "INSERT INTO people (People_ID, Sex, Name, Date_of_Birth, Height, Weight) VALUES (1, 'M', 'Hubert Henno', '06.10.1976', 188.0, 83.0);\n",
+            "INSERT INTO people (People_ID, Sex, Name, Date_of_Birth, Height, Weight) VALUES (4, 'M', 'Laurent Capet', '05.05.1972', 202.0, 92.0);\n"
+        ],
+        "database_name": "candidate_poll",
+        "table_name": "people"
+    },
+    {
+        "query": [
+            "INSERT INTO badges (Id, UserId, Name, Date) VALUES (1219, 127, 'Nice Answer', '2010-08-05 12:51:34.0');\n",
+            "INSERT INTO badges (Id, UserId, Name, Date) VALUES (44453, 25488, 'Editor', '2013-05-10 16:55:30.0');\n",
+            "INSERT INTO badges (Id, UserId, Name, Date) VALUES (45680, 6941, 'Popular Question', '2013-05-29 04:30:29.0');\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "badges"
+    },
+    {
+        "query": [
+            "INSERT INTO comments (Id, PostId, Score, Text, CreationDate, UserId, UserDisplayName) VALUES (148586, 76111, 0, '@PeterFlom I was suddently curious about finding the best way to make a exponential curve without destroying the meaning of the correlation. Thank you!', '2013-11-10 13:04:26.0', 32247, NULL);\n",
+            "INSERT INTO comments (Id, PostId, Score, Text, CreationDate, UserId, UserDisplayName) VALUES (58087, 30104, 0, 'Thank you Peter. I will proceed accordingly to all your suggestions. Best,', '2012-06-11 21:29:39.0', 11845, NULL);\n",
+            "INSERT INTO comments (Id, PostId, Score, Text, CreationDate, UserId, UserDisplayName) VALUES (24968, 14153, 8, 'The answer will depend on your problem at hand: are both types of error equally bad, or are (e.g.) false negatives way worse than false positives. For instance if you want to test for a disease that kills, you want to strongly avoid false negatives (because those people will die when you don''t pick up the presence of the disease with your test)', '2011-08-11 13:54:56.0', 4257, NULL);\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "comments"
+    },
+    {
+        "query": [
+            "INSERT INTO postHistory (Id, PostHistoryTypeId, PostId, RevisionGUID, CreationDate, UserId, Text, Comment, UserDisplayName) VALUES (44175, 3, 15068, 'a67f7563-8add-48b4-98c6-aa3af25404e7', '2011-09-01 14:56:28.0', 6128, '<forecasting><binary>', '', '');\n",
+            "INSERT INTO postHistory (Id, PostHistoryTypeId, PostId, RevisionGUID, CreationDate, UserId, Text, Comment, UserDisplayName) VALUES (158682, 6, 49919, 'f546d764-ec42-44a1-8b5f-bb248e322715', '2013-02-13 16:59:51.0', 1352, '<distributions><forecasting><count-data>', 'retagged', '');\n",
+            "INSERT INTO postHistory (Id, PostHistoryTypeId, PostId, RevisionGUID, CreationDate, UserId, Text, Comment, UserDisplayName) VALUES (32573, 2, 11578, '9232202e-fc1f-439b-8ce5-5deaa1226907', '2011-06-04 22:39:01.0', 4624, 'I''m a bit stuck on the general concept and calculations of \u00a0iterated expectations. A simple example:\\\\n\\\\nE[E[Y|X]] = E[Y]\\\\n\\\\nI''m not sure how or why this is the case? I have a 3 line proof in my notes using densities and stuff but is there no ''quicker'' way. Especially in longer cases like (below) writing everything out is difficult. Are there tricks to spot?\u00a0\\\\n\\\\nExample 2:\\\\n\\\\nVar[Y] = E[Y^2] - (E[Y])^2 (I get this line!)\\\\n= E[E[Y^2|X]] - {E[E[Y|X]]}^2\u00a0\\\\n= E[Var[Y|X]] + (E[Y|X])^2 - {E[E[Y|X]]}^2\\\\n=\u00a0E[Var[Y|X]] + E[(E[Y|X])^2] - {E[E[Y|X]]}^2\\\\n= E[Var[Y|X]] + Var[E[Y|X]]\\\\n\\\\nI''m not at all sure how they go from line to line.\\\\n\\\\nI hope someone can help me out. Thanks.', '', '');\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "postHistory"
+    },
+    {
+        "query": [
+            "INSERT INTO postLinks (Id, CreationDate, PostId, RelatedPostId, LinkTypeId) VALUES (3164799, '2014-07-02 00:16:48.0', 105471, 74537, 1);\n",
+            "INSERT INTO postLinks (Id, CreationDate, PostId, RelatedPostId, LinkTypeId) VALUES (3254861, '2014-08-02 02:18:07.0', 110323, 57407, 1);\n",
+            "INSERT INTO postLinks (Id, CreationDate, PostId, RelatedPostId, LinkTypeId) VALUES (1409617, '2012-01-12 07:22:21.0', 20947, 1133, 1);\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "postLinks"
+    },
+    {
+        "query": [
+            "INSERT INTO posts (Id, PostTypeId, AcceptedAnswerId, CreaionDate, Score, ViewCount, Body, OwnerUserId, LasActivityDate, Title, Tags, AnswerCount, CommentCount, FavoriteCount, LastEditorUserId, LastEditDate, CommunityOwnedDate, ParentId, ClosedDate, OwnerDisplayName, LastEditorDisplayName) VALUES (28201, 2, NULL, '2012-05-10 19:42:31.0', 6, NULL, replace('<p>This does not directly answer your question, but you may learn something from looking at the <code>outliers</code> dataset in the <code>TeachingDemos</code> package for R and working through the examples on the help page.  This may give you a better understanding of some of the issues with automatic outlier detection.</p>\\n','\\n',char(10)), 4505, '2012-05-10 19:42:31.0', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 26797, NULL, NULL, NULL);\n",
+            "INSERT INTO posts (Id, PostTypeId, AcceptedAnswerId, CreaionDate, Score, ViewCount, Body, OwnerUserId, LasActivityDate, Title, Tags, AnswerCount, CommentCount, FavoriteCount, LastEditorUserId, LastEditDate, CommunityOwnedDate, ParentId, ClosedDate, OwnerDisplayName, LastEditorDisplayName) VALUES (70149, 1, NULL, '2013-09-16 15:30:04.0', 0, 424, replace('<p>I have been trying to figure out the exact formula that the R \"predict\" function uses to calculate prediction intervals for simple exponential smoothing. The prediction interval formula seems to vary according to the software used (Gretl is different from Minitab is different from SAS). I have tried to look at the \"predict\" code by simply typing it in without parentheses but R won''t display it.</p>\\n\\n<p>I spent the better part of a day trying to figure out what R''s formula. Does anyone know the exact formula that R uses? Also, I''d appreciate a link showing the derivation of the formula, as there seems to be some disagreement in the literature about what the \"right\" formula to use is.</p>\\n\\n<p>Thank you.</p>\\n','\\n',char(10)), 30353, '2013-09-16 22:32:46.0', 'Formula that R \"predict\" function uses to calculate intervals exponential smoothing', '<forecasting><prediction><smoothing><exponential>', 1, 4, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);\n",
+            "INSERT INTO posts (Id, PostTypeId, AcceptedAnswerId, CreaionDate, Score, ViewCount, Body, OwnerUserId, LasActivityDate, Title, Tags, AnswerCount, CommentCount, FavoriteCount, LastEditorUserId, LastEditDate, CommunityOwnedDate, ParentId, ClosedDate, OwnerDisplayName, LastEditorDisplayName) VALUES (89670, 2, NULL, '2014-03-11 22:39:39.0', 3, NULL, replace('<p>Negative skewness is common in flood hydrology.  Below is an example of a flood frequency curve (South Creek at Mulgoa Rd, lat -33.8783, lon 150.7683) which I''ve taken from ''Australian Rainfall and Runoff'' (ARR) the guide to flood estimation developed by Engineers, Australia.  </p>\\n\\n<p>There is a comment in ARR:</p>\\n\\n<blockquote>\\n  <p>With negative skew, which is common with logarithmic values of floods\\n  in Australia, the log Pearson III distribution has an upper bound.\\n  This gives an upper limit to floods that can be drawn from the\\n  distribution. In some cases this can cause problems in estimating\\n  floods of low AEP, but often causes no problems in practice.\\n  [Extracted from Australian Rainfall and Runoff - Volume 1, Book IV\\n  Section 2.]</p>\\n</blockquote>\\n\\n<p>Often floods, at a particular location, are considered to have an upper bound called the ''Probable Maximum Flood'' (PMF). There are standard ways of calculating a PMF.</p>\\n\\n<p><img src=\"http://i.stack.imgur.com/i68Z2.jpg\" alt=\"enter image description here\"></p>\\n','\\n',char(10)), 22403, '2014-03-11 22:39:39.0', NULL, NULL, NULL, 1, NULL, NULL, NULL, '2014-03-11 22:39:39.0', 89179, NULL, NULL, NULL);\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "posts"
+    },
+    {
+        "query": [
+            "INSERT INTO tags (Id, TagName, Count, ExcerptPostId, WikiPostId) VALUES (1064, 'google-spreadsheet', 3, NULL, NULL);\n",
+            "INSERT INTO tags (Id, TagName, Count, ExcerptPostId, WikiPostId) VALUES (1397, 'confidence', 54, NULL, NULL);\n",
+            "INSERT INTO tags (Id, TagName, Count, ExcerptPostId, WikiPostId) VALUES (541, 'large-data', 154, 55903, 55902);\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "tags"
+    },
+    {
+        "query": [
+            "INSERT INTO users (Id, Reputation, CreationDate, DisplayName, LastAccessDate, WebsiteUrl, Location, AboutMe, Views, UpVotes, DownVotes, AccountId, Age, ProfileImageUrl) VALUES (42481, 1, '2014-03-24 19:37:33.0', 'Vlad', '2014-06-27 22:44:21.0', NULL, 'Edmonton, Canada', NULL, 0, 0, 0, 4222568, NULL, 'https://www.gravatar.com/avatar/?s=128&d=identicon&r=PG&f=1');\n",
+            "INSERT INTO users (Id, Reputation, CreationDate, DisplayName, LastAccessDate, WebsiteUrl, Location, AboutMe, Views, UpVotes, DownVotes, AccountId, Age, ProfileImageUrl) VALUES (41403, 18, '2014-03-06 00:22:37.0', 'user1468089', '2014-08-25 22:56:31.0', NULL, NULL, NULL, 6, 2, 0, 1583215, NULL, 'https://www.gravatar.com/avatar/9a8ad9d90e47453ec9bcfad4b56cd693?s=128&d=identicon&r=PG');\n",
+            "INSERT INTO users (Id, Reputation, CreationDate, DisplayName, LastAccessDate, WebsiteUrl, Location, AboutMe, Views, UpVotes, DownVotes, AccountId, Age, ProfileImageUrl) VALUES (53, 138, '2010-07-19 19:15:17.0', 'kyle', '2014-07-11 21:29:16.0', 'http://1.618034.com', 'Santa Monica, CA', 'Just chilling. <a href=\"http://1.618034.com\" rel=\"nofollow\">http://1.618034.com</a>', 8, 7, 0, 16133, 30, NULL);\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "users"
+    },
+    {
+        "query": [
+            "INSERT INTO votes (Id, PostId, VoteTypeId, CreationDate, UserId, BountyAmount) VALUES (24880, 5834, 2, '2010-12-30', NULL, NULL);\n",
+            "INSERT INTO votes (Id, PostId, VoteTypeId, CreationDate, UserId, BountyAmount) VALUES (30433, 7088, 2, '2011-02-11', NULL, NULL);\n",
+            "INSERT INTO votes (Id, PostId, VoteTypeId, CreationDate, UserId, BountyAmount) VALUES (37333, 8624, 2, '2011-03-23', NULL, NULL);\n"
+        ],
+        "database_name": "codebase_community",
+        "table_name": "votes"
+    },
+    {
+        "query": [
+            "INSERT INTO college (College_ID, Name, Leader_Name, College_Location) VALUES (4, 'Edmonton School', 'Samir Chahine', 'McGill');\n",
+            "INSERT INTO college (College_ID, Name, Leader_Name, College_Location) VALUES (2, 'B.C. School', 'Ryan Thelwell', 'Minnesota');\n",
+            "INSERT INTO college (College_ID, Name, Leader_Name, College_Location) VALUES (5, 'Toronto School', 'Roger Dunbrack', 'Western Ontario');\n"
+        ],
+        "database_name": "decoration_competition",
+        "table_name": "college"
+    },
+    {
+        "query": [
+            "INSERT INTO member (Member_ID, Name, Country, College_ID) VALUES (6, 'Pat Fitzsimons', 'Canada', 5);\n",
+            "INSERT INTO member (Member_ID, Name, Country, College_ID) VALUES (1, 'Jack Nicklaus', 'United States', 1);\n",
+            "INSERT INTO member (Member_ID, Name, Country, College_ID) VALUES (4, 'Tom Watson', 'United States', 4);\n"
+        ],
+        "database_name": "decoration_competition",
+        "table_name": "member"
+    },
+    {
+        "query": [
+            "INSERT INTO round (Round_ID, Member_ID, Decoration_Theme, Rank_in_Round) VALUES (2, 9, 'Happiness', 1);\n",
+            "INSERT INTO round (Round_ID, Member_ID, Decoration_Theme, Rank_in_Round) VALUES (1, 1, 'Walk on the Moon', 1);\n",
+            "INSERT INTO round (Round_ID, Member_ID, Decoration_Theme, Rank_in_Round) VALUES (1, 2, 'Soft Dream', 2);\n"
+        ],
+        "database_name": "decoration_competition",
+        "table_name": "round"
+    },
+    {
+        "query": [
+            "INSERT INTO circuits (circuitId, circuitRef, name, location, country, lat, lng, alt, url) VALUES (51, 'charade', 'Charade Circuit', 'Clermont-Ferrand', 'France', 45.74719999999999943, 3.03888999999999987, NULL, 'http://en.wikipedia.org/wiki/Charade_Circuit');\n",
+            "INSERT INTO circuits (circuitId, circuitRef, name, location, country, lat, lng, alt, url) VALUES (23, 'osterreichring', 'A1-Ring', 'Spielburg', 'Austria', 47.21970000000000311, 14.7646999999999995, NULL, 'http://en.wikipedia.org/wiki/A1-Ring');\n",
+            "INSERT INTO circuits (circuitId, circuitRef, name, location, country, lat, lng, alt, url) VALUES (69, 'americas', 'Circuit of the Americas', 'Austin', 'USA', 30.13279999999999959, -97.6410999999999945, NULL, 'http://en.wikipedia.org/wiki/Circuit_of_the_Americas');\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "circuits"
+    },
+    {
+        "query": [
+            "INSERT INTO constructors (constructorId, constructorRef, name, nationality, url) VALUES (73, 'parnelli', 'Parnelli', 'American', 'http://en.wikipedia.org/wiki/Parnelli');\n",
+            "INSERT INTO constructors (constructorId, constructorRef, name, nationality, url) VALUES (91, 'shannon', 'Shannon', 'British', 'http://en.wikipedia.org/wiki/Shannon_(Formula_One)');\n",
+            "INSERT INTO constructors (constructorId, constructorRef, name, nationality, url) VALUES (35, 'dallara', 'Dallara', 'Italian', 'http://en.wikipedia.org/wiki/Dallara');\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "constructors"
+    },
+    {
+        "query": [
+            "INSERT INTO drivers (driverId, driverRef, number, code, forename, surname, dob, nationality, url) VALUES (229, 'ertl', NULL, NULL, 'Harald', 'Ertl', '1948-08-31', 'Austrian', 'http://en.wikipedia.org/wiki/Harald_Ertl');\n",
+            "INSERT INTO drivers (driverId, driverRef, number, code, forename, surname, dob, nationality, url) VALUES (759, 'flinterman', NULL, NULL, 'Jan', 'Flinterman', '1919-10-02', 'Dutch', 'http://en.wikipedia.org/wiki/Jan_Flinterman');\n",
+            "INSERT INTO drivers (driverId, driverRef, number, code, forename, surname, dob, nationality, url) VALUES (100, 'comas', NULL, NULL, '\u00c9rik', 'Comas', '1963-09-28', 'French', 'http://en.wikipedia.org/wiki/%C3%89rik_Comas');\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "drivers"
+    },
+    {
+        "query": [
+            "INSERT INTO seasons (year, url) VALUES (2010, 'http://en.wikipedia.org/wiki/2010_Formula_One_season');\n",
+            "INSERT INTO seasons (year, url) VALUES (1950, 'http://en.wikipedia.org/wiki/1950_Formula_One_season');\n",
+            "INSERT INTO seasons (year, url) VALUES (1978, 'http://en.wikipedia.org/wiki/1978_Formula_One_season');\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "seasons"
+    },
+    {
+        "query": [
+            "INSERT INTO races (raceId, year, round, circuitId, name, date, time, url) VALUES (192, 1998, 2, 18, 'Brazilian Grand Prix', '1998-03-29', NULL, 'http://en.wikipedia.org/wiki/1998_Brazilian_Grand_Prix');\n",
+            "INSERT INTO races (raceId, year, round, circuitId, name, date, time, url) VALUES (275, 1993, 3, 31, 'European Grand Prix', '1993-04-11', NULL, 'http://en.wikipedia.org/wiki/1993_European_Grand_Prix');\n",
+            "INSERT INTO races (raceId, year, round, circuitId, name, date, time, url) VALUES (401, 1987, 14, 32, 'Mexican Grand Prix', '1987-10-18', NULL, 'http://en.wikipedia.org/wiki/1987_Mexican_Grand_Prix');\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "races"
+    },
+    {
+        "query": [
+            "INSERT INTO constructorResults (constructorResultsId, raceId, constructorId, points, status) VALUES (1897, 197, 22, 9.0, NULL);\n",
+            "INSERT INTO constructorResults (constructorResultsId, raceId, constructorId, points, status) VALUES (4744, 398, 27, 0.0, NULL);\n",
+            "INSERT INTO constructorResults (constructorResultsId, raceId, constructorId, points, status) VALUES (1518, 162, 19, 0.0, NULL);\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "constructorResults"
+    },
+    {
+        "query": [
+            "INSERT INTO constructorStandings (constructorStandingsId, raceId, constructorId, points, position, positionText, wins) VALUES (25887, 50, 6, 170.0, 1, '1', 7);\n",
+            "INSERT INTO constructorStandings (constructorStandingsId, raceId, constructorId, points, position, positionText, wins) VALUES (21346, 662, 196, 51.0, 1, '1', 5);\n",
+            "INSERT INTO constructorStandings (constructorStandingsId, raceId, constructorId, points, position, positionText, wins) VALUES (8518, 320, 40, 0.0, 15, '15', 0);\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "constructorStandings"
+    },
+    {
+        "query": [
+            "INSERT INTO driverStandings (driverStandingsId, raceId, driverId, points, position, positionText, wins) VALUES (67735, 955, 13, 38.0, 9, '9', 0);\n",
+            "INSERT INTO driverStandings (driverStandingsId, raceId, driverId, points, position, positionText, wins) VALUES (19025, 373, 163, 0.0, 22, '22', 0);\n",
+            "INSERT INTO driverStandings (driverStandingsId, raceId, driverId, points, position, positionText, wins) VALUES (16069, 326, 149, 0.0, 37, '37', 0);\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "driverStandings"
+    },
+    {
+        "query": [
+            "INSERT INTO lapTimes (raceId, driverId, lap, position, time, milliseconds) VALUES (30, 3, 41, 12, '1:57.616', 117616);\n",
+            "INSERT INTO lapTimes (raceId, driverId, lap, position, time, milliseconds) VALUES (982, 154, 56, 9, '1:47.781', 107781);\n",
+            "INSERT INTO lapTimes (raceId, driverId, lap, position, time, milliseconds) VALUES (140, 30, 32, 1, '1:36.576', 96576);\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "lapTimes"
+    },
+    {
+        "query": [
+            "INSERT INTO pitStops (raceId, driverId, stop, lap, time, duration, milliseconds) VALUES (945, 831, 3, 44, '18:24:25', '22.086', 22086);\n",
+            "INSERT INTO pitStops (raceId, driverId, stop, lap, time, duration, milliseconds) VALUES (852, 816, 1, 13, '14:30:22', '22.939', 22939);\n",
+            "INSERT INTO pitStops (raceId, driverId, stop, lap, time, duration, milliseconds) VALUES (969, 830, 1, 25, '16:43:56', '22.208', 22208);\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "pitStops"
+    },
+    {
+        "query": [
+            "INSERT INTO qualifying (qualifyId, raceId, driverId, constructorId, number, position, q1, q2, q3) VALUES (489, 41, 11, 8, 22, 11, '1:17.490', '1:16.743', NULL);\n",
+            "INSERT INTO qualifying (qualifyId, raceId, driverId, constructorId, number, position, q1, q2, q3) VALUES (5927, 853, 1, 1, 3, 2, '1:23.976', '1:23.172', '1:22.725');\n",
+            "INSERT INTO qualifying (qualifyId, raceId, driverId, constructorId, number, position, q1, q2, q3) VALUES (7252, 974, 825, 210, 20, 13, '1:13.531', '1:13.959', NULL);\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "qualifying"
+    },
+    {
+        "query": [
+            "INSERT INTO status (statusId, status) VALUES (117, '+24 Laps');\n",
+            "INSERT INTO status (statusId, status) VALUES (65, 'Rear wing');\n",
+            "INSERT INTO status (statusId, status) VALUES (55, '+12 Laps');\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "status"
+    },
+    {
+        "query": [
+            "INSERT INTO results (resultId, raceId, driverId, constructorId, number, grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap, rank, fastestLapTime, fastestLapSpeed, statusId) VALUES (17831, 737, 356, 34, 10, 3, 4, '4', 4, 3.0, 82, '+53.8', 7737100, NULL, NULL, NULL, NULL, 1);\n",
+            "INSERT INTO results (resultId, raceId, driverId, constructorId, number, grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap, rank, fastestLapTime, fastestLapSpeed, statusId) VALUES (7014, 321, 123, 3, 5, 9, 3, '3', 3, 4.0, 72, '+54.080', 6806909, NULL, NULL, NULL, NULL, 1);\n",
+            "INSERT INTO results (resultId, raceId, driverId, constructorId, number, grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap, rank, fastestLapTime, fastestLapSpeed, statusId) VALUES (16360, 665, 346, 180, 10, 13, NULL, 'R', 16, 0.0, 3, NULL, NULL, NULL, NULL, NULL, NULL, 69);\n"
+        ],
+        "database_name": "formula_1",
+        "table_name": "results"
+    },
+    {
+        "query": [
+            "INSERT INTO Examination (ID, Examination_Date, aCL_IgG, aCL_IgM, ANA, ANA_Pattern, aCL_IgA, Diagnosis, KCT, RVVT, LAC, Symptoms, Thrombosis) VALUES (3389210, '1996-09-30', 0.0, 4.099999999999999644, 64, 'P', 0, NULL, NULL, NULL, NULL, NULL, 0);\n",
+            "INSERT INTO Examination (ID, Examination_Date, aCL_IgG, aCL_IgM, ANA, ANA_Pattern, aCL_IgA, Diagnosis, KCT, RVVT, LAC, Symptoms, Thrombosis) VALUES (5203370, '1995-10-12', 0.0, 1.600000000000000088, 0, NULL, 3, NULL, NULL, NULL, NULL, NULL, 0);\n",
+            "INSERT INTO Examination (ID, Examination_Date, aCL_IgG, aCL_IgM, ANA, ANA_Pattern, aCL_IgA, Diagnosis, KCT, RVVT, LAC, Symptoms, Thrombosis) VALUES (5624110, '1997-03-27', 0.0, 1.300000000000000044, 16, 'P', 0, NULL, NULL, NULL, NULL, NULL, 0);\n"
+        ],
+        "database_name": "thrombosis_prediction",
+        "table_name": "Examination"
+    },
+    {
+        "query": [
+            "INSERT INTO Patient (ID, SEX, Birthday, Description, First_Date, Admission, Diagnosis) VALUES (5594779, 'F', '1946-01-09', '1997-02-03', '1997-01-17', '-', 'MCTD');\n",
+            "INSERT INTO Patient (ID, SEX, Birthday, Description, First_Date, Admission, Diagnosis) VALUES (5063068, 'F', '1965-10-01', '1994-02-15', '1993-11-02', '-', 'RA');\n",
+            "INSERT INTO Patient (ID, SEX, Birthday, Description, First_Date, Admission, Diagnosis) VALUES (944797, 'F', '1975-01-31', '1997-03-28', '1993-08-05', '+', 'RA,SJS');\n"
+        ],
+        "database_name": "thrombosis_prediction",
+        "table_name": "Patient"
+    },
+    {
+        "query": [
+            "INSERT INTO Laboratory (ID, Date, GOT, GPT, LDH, ALP, TP, ALB, UA, UN, CRE, T_-_BIL, T_-_CHO, TG, CPK, GLU, WBC, RBC, HGB, HCT, PLT, PT, APTT, FG, PIC, TAT, TAT2, U_-_PRO, IGG, IGA, IGM, CRP, RA, RF, C3, C4, RNP, SM, SC170, SSA, SSB, CENTROMEA, DNA, DNA_-_II) VALUES (4790235, '1995-09-18', 19, 13, 334, 107, 6.700000000000000177, 4.099999999999999644, 3.299999999999999823, 8, 0.5, 0.4000000000000000222, 179, 58, NULL, NULL, 6.900000000000000355, 4.599999999999999644, 13.69999999999999929, 41.70000000000000285, 218, NULL, NULL, NULL, NULL, NULL, NULL, '-', NULL, NULL, NULL, '<0.2', NULL, NULL, 56, 20, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);\n",
+            "INSERT INTO Laboratory (ID, Date, GOT, GPT, LDH, ALP, TP, ALB, UA, UN, CRE, T_-_BIL, T_-_CHO, TG, CPK, GLU, WBC, RBC, HGB, HCT, PLT, PT, APTT, FG, PIC, TAT, TAT2, U_-_PRO, IGG, IGA, IGM, CRP, RA, RF, C3, C4, RNP, SM, SC170, SSA, SSB, CENTROMEA, DNA, DNA_-_II) VALUES (2933261, '1984-02-08', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5.599999999999999645, 3.899999999999999912, 10.5, 32.10000000000000142, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);\n",
+            "INSERT INTO Laboratory (ID, Date, GOT, GPT, LDH, ALP, TP, ALB, UA, UN, CRE, T_-_BIL, T_-_CHO, TG, CPK, GLU, WBC, RBC, HGB, HCT, PLT, PT, APTT, FG, PIC, TAT, TAT2, U_-_PRO, IGG, IGA, IGM, CRP, RA, RF, C3, C4, RNP, SM, SC170, SSA, SSB, CENTROMEA, DNA, DNA_-_II) VALUES (1078741, '1993-06-10', 17, 17, 416, 94, 6.799999999999999823, 3.700000000000000177, 4.400000000000000356, 20, 0.8000000000000000444, 0.5, 261, 204, 82, NULL, 12.30000000000000071, 5.599999999999999645, 15.90000000000000035, 48.0, 338, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<0.3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);\n"
+        ],
+        "database_name": "thrombosis_prediction",
+        "table_name": "Laboratory"
+    },
+    {
+        "query": [
+            "INSERT INTO artist (Artist_ID, Name, Country, Year_Join, Age) VALUES (5, 'Mark Brooks', 'United States', 1996, 48);\n",
+            "INSERT INTO artist (Artist_ID, Name, Country, Year_Join, Age) VALUES (7, 'Larry Nelson', 'United States', 1981, 50);\n",
+            "INSERT INTO artist (Artist_ID, Name, Country, Year_Join, Age) VALUES (4, 'Jeff Sluman', 'United States', 1988, 57);\n"
+        ],
+        "database_name": "theme_gallery",
+        "table_name": "artist"
+    },
+    {
+        "query": [
+            "INSERT INTO exhibition (Exhibition_ID, Year, Theme, Artist_ID, Ticket_Price) VALUES (6, 2009, 'Summer', 3, 9.94999999999999928);\n",
+            "INSERT INTO exhibition (Exhibition_ID, Year, Theme, Artist_ID, Ticket_Price) VALUES (3, 2006, 'Santa Claus and Rudolph the Red-Nosed Reindeer', 4, 14.94999999999999929);\n",
+            "INSERT INTO exhibition (Exhibition_ID, Year, Theme, Artist_ID, Ticket_Price) VALUES (2, 2005, 'Christmas stocking', 2, 19.94999999999999929);\n"
+        ],
+        "database_name": "theme_gallery",
+        "table_name": "exhibition"
+    },
+    {
+        "query": [
+            "INSERT INTO exhibition_record (Exhibition_ID, Date, Attendance) VALUES (5, 'February 28', 4231);\n",
+            "INSERT INTO exhibition_record (Exhibition_ID, Date, Attendance) VALUES (3, 'February 21', 9089);\n",
+            "INSERT INTO exhibition_record (Exhibition_ID, Date, Attendance) VALUES (2, 'December 9', 1239);\n"
+        ],
+        "database_name": "theme_gallery",
+        "table_name": "exhibition_record"
+    },
+    {
+        "query": [
+            "INSERT INTO account (account_id, district_id, frequency, date) VALUES (1784, 59, 'POPLATEK MESICNE', '1993-05-08');\n",
+            "INSERT INTO account (account_id, district_id, frequency, date) VALUES (2231, 2, 'POPLATEK MESICNE', '1997-10-14');\n",
+            "INSERT INTO account (account_id, district_id, frequency, date) VALUES (1937, 36, 'POPLATEK MESICNE', '1993-05-18');\n"
+        ],
+        "database_name": "financial",
+        "table_name": "account"
+    },
+    {
+        "query": [
+            "INSERT INTO card (card_id, disp_id, type, issued) VALUES (222, 1345, 'classic', '1997-06-19');\n",
+            "INSERT INTO card (card_id, disp_id, type, issued) VALUES (536, 3404, 'classic', '1997-12-13');\n",
+            "INSERT INTO card (card_id, disp_id, type, issued) VALUES (349, 2214, 'classic', '1997-05-26');\n"
+        ],
+        "database_name": "financial",
+        "table_name": "card"
+    },
+    {
+        "query": [
+            "INSERT INTO client (client_id, gender, birth_date, district_id) VALUES (514, 'M', '1968-11-15', 8);\n",
+            "INSERT INTO client (client_id, gender, birth_date, district_id) VALUES (4600, 'M', '1967-03-13', 70);\n",
+            "INSERT INTO client (client_id, gender, birth_date, district_id) VALUES (2941, 'M', '1951-03-12', 38);\n"
+        ],
+        "database_name": "financial",
+        "table_name": "client"
+    },
+    {
+        "query": [
+            "INSERT INTO disp (disp_id, client_id, account_id, type) VALUES (767, 767, 639, 'DISPONENT');\n",
+            "INSERT INTO disp (disp_id, client_id, account_id, type) VALUES (2962, 2962, 2453, 'OWNER');\n",
+            "INSERT INTO disp (disp_id, client_id, account_id, type) VALUES (1693, 1693, 1399, 'OWNER');\n"
+        ],
+        "database_name": "financial",
+        "table_name": "disp"
+    },
+    {
+        "query": [
+            "INSERT INTO district (district_id, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16) VALUES (5, 'Kolin', 'central Bohemia', '95616', '65', '30', '4', 1, 6, 51.39999999999999858, 9307, 3.799999999999999823, 4.429999999999999715, 118, 2616, 3040);\n",
+            "INSERT INTO district (district_id, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16) VALUES (71, 'Novy Jicin', 'north Moravia', '161227', '5', '35', '11', 4, 10, 69.70000000000000284, 8678, 5.900000000000000355, 5.570000000000000284, 102, 4980, 4595);\n",
+            "INSERT INTO district (district_id, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16) VALUES (73, 'Opava', 'north Moravia', '182027', '17', '49', '12', 2, 7, 56.39999999999999858, 8746, 3.299999999999999823, 3.740000000000000213, 90, 4355, 4433);\n"
+        ],
+        "database_name": "financial",
+        "table_name": "district"
+    },
+    {
+        "query": [
+            "INSERT INTO loan (loan_id, account_id, date, amount, duration, payments, status) VALUES (6544, 7594, '1997-12-11', 130464, 48, 2718.0, 'C');\n",
+            "INSERT INTO loan (loan_id, account_id, date, amount, duration, payments, status) VALUES (6688, 8268, '1997-09-26', 8616, 24, 359.0, 'C');\n",
+            "INSERT INTO loan (loan_id, account_id, date, amount, duration, payments, status) VALUES (6696, 8321, '1994-05-09', 89040, 60, 1484.0, 'C');\n"
+        ],
+        "database_name": "financial",
+        "table_name": "loan"
+    },
+    {
+        "query": [
+            "INSERT INTO order (order_id, account_id, bank_to, account_to, amount, k_symbol) VALUES (33684, 2893, 'GH', 98864054, 751.0, '');\n",
+            "INSERT INTO order (order_id, account_id, bank_to, account_to, amount, k_symbol) VALUES (44837, 10404, 'AB', 74571001, 1203.0, '');\n",
+            "INSERT INTO order (order_id, account_id, bank_to, account_to, amount, k_symbol) VALUES (31614, 1499, 'EF', 54662084, 3666.0, 'SIPO');\n"
+        ],
+        "database_name": "financial",
+        "table_name": "order"
+    },
+    {
+        "query": [
+            "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account) VALUES (974158, 3319, '1996-05-13', 'VYDAJ', 'PREVOD NA UCET', 2154, 29853, ' ', 'UV', 77133154);\n",
+            "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account) VALUES (3044141, 10093, '1998-01-31', 'VYDAJ', 'VYBER', 30, 22560, 'SLUZBY', NULL, NULL);\n",
+            "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account) VALUES (791054, 2697, '1994-04-06', 'VYDAJ', 'PREVOD NA UCET', 629, 23193, 'POJISTNE', 'EF', 3080630);\n"
+        ],
+        "database_name": "financial",
+        "table_name": "trans"
+    },
+    {
+        "query": [
+            "INSERT INTO part (label, description, commons_category, topics_main_category, freebase_id, viaf_id, instance_of, quora_topic_id, has_parts, worldcat_identities_id, coordinate_location, locator_map_image) VALUES ('Western Europe', 'western part of the European continent', 'Western Europe', 'Category:Western Europe', '/m/0852h', '245653394.0', 'geographic region', 'Western-Europe', 'Austria', 'viaf-245653394', '47.409273', 'Western European location.png');\n",
+            "INSERT INTO part (label, description, commons_category, topics_main_category, freebase_id, viaf_id, instance_of, quora_topic_id, has_parts, worldcat_identities_id, coordinate_location, locator_map_image) VALUES ('Kingdom of the Netherlands', 'sovereign state and constitutional monarchy', 'Kingdom of the Netherlands', 'Category:Kingdom of the Netherlands', '/m/049nq', '156652814.0', 'sovereign state', 'Kingdom-of-the-Netherlands', 'nan', 'viaf-122686887', '52.366666666667', 'Kingdom of the Netherlands in its region (special marker).svg');\n",
+            "INSERT INTO part (label, description, commons_category, topics_main_category, freebase_id, viaf_id, instance_of, quora_topic_id, has_parts, worldcat_identities_id, coordinate_location, locator_map_image) VALUES ('Central Europe', 'region of Europe', 'Central Europe', 'Category:Central Europe', '/m/01lkr', '151180158.0', 'geographic region', 'Central-Europe', 'Austria', 'viaf-151180158', '51.0', 'Central Europe (Brockhaus).svg');\n"
+        ],
+        "database_name": "burial-vault",
+        "table_name": "part"
+    },
+    {
+        "query": [],
+        "database_name": "burial-vault",
+        "table_name": "country"
+    },
+    {
+        "query": [
+            "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population) VALUES ('Siegen', 'city in the Siegen-Wittgenstein district, in North Rhine-Westphalia, Germany', 'Germany', 'Siegen', 'Siegen-Wittgenstein', 'Siegen - panoramio (9).jpg', 'UTC+01:00', 'Siegen in SI.svg', 'Wappen Siegen.svg', 'large district town', '50.875555555556', 'Category:Siegen', 'ac2b311a-3854-463c-b000-879ca527cfec', '/m/0438ty', '2832495.0', 'http://www.siegen.de', '152441949', 114.6899999999999978, 101516.0);\n",
+            "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population) VALUES ('Payerbach', 'municipality in Neunkirchen District, Lower Austria, Austria', 'Austria', 'Payerbach', 'Neunkirchen District', 'Payerbach - Ortsansicht.JPG', 'UTC+01:00', 'Payerbach im Bezirk NK.PNG', 'AUT Payerbach COA.jpg', 'market municipality', '47.691666666667', 'Category:Payerbach', 'nan', '/m/02qzljm', '7872993.0', 'http://www.payerbach.at/', '129883137', 17.66000000000000014, 2076.0);\n",
+            "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population) VALUES ('Fife', 'council area of Scotland', 'United Kingdom', 'Fife', 'Scotland', 'Fife House, Glenrothes.jpg', 'nan', 'Fife in Scotland.svg', 'Coat of Arms of the Fife Area Council.svg', 'Scottish council area', '56.25', 'Category:Fife', 'f15d310a-d884-4c43-9fb2-7219c7bb7ad8', '/m/0l1k8', '2649469.0', 'https://www.fife.gov.uk/', '152454871', 1325.02500000000009, 373550.0);\n"
+        ],
+        "database_name": "burial-vault",
+        "table_name": "administrative_territorial_entity"
+    },
+    {
+        "query": [
+            "INSERT INTO burial_vault (label, description, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of) VALUES ('church and cemetery NIedercunnersdorf', 'church building and cemetery in Niedercunnersdorf, Germany', 'Kottmar', 'Germany', '51.054633', 'church building');\n",
+            "INSERT INTO burial_vault (label, description, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of) VALUES ('Neue Stra\u00dfe 1', 'church building and cemetery in Niedercunnersdorf', 'Kottmar', 'Germany', '51.054847', 'church building');\n",
+            "INSERT INTO burial_vault (label, description, located_in_the_administrative_territorial_entity, country, coordinate_location, instance_of) VALUES ('Burial vault of Nassau-Dillenburg', 'Burial vault in the Evangelische Stadskirche in Dillenburg, Hesse, Germany', 'Dillenburg', 'Germany', 'nan', 'burial vault');\n"
+        ],
+        "database_name": "burial-vault",
+        "table_name": "burial_vault"
+    },
+    {
+        "query": [
+            "INSERT INTO alignment (id, alignment) VALUES (2, 'Bad');\n",
+            "INSERT INTO alignment (id, alignment) VALUES (1, 'Good');\n",
+            "INSERT INTO alignment (id, alignment) VALUES (2, 'Bad');\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "alignment"
+    },
+    {
+        "query": [
+            "INSERT INTO attribute (id, attribute_name) VALUES (4, 'Durability');\n",
+            "INSERT INTO attribute (id, attribute_name) VALUES (6, 'Combat');\n",
+            "INSERT INTO attribute (id, attribute_name) VALUES (5, 'Power');\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "attribute"
+    },
+    {
+        "query": [
+            "INSERT INTO colour (id, colour) VALUES (28, 'Silver');\n",
+            "INSERT INTO colour (id, colour) VALUES (31, 'White');\n",
+            "INSERT INTO colour (id, colour) VALUES (31, 'White');\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "colour"
+    },
+    {
+        "query": [
+            "INSERT INTO gender (id, gender) VALUES (2, 'Female');\n",
+            "INSERT INTO gender (id, gender) VALUES (3, 'N/A');\n",
+            "INSERT INTO gender (id, gender) VALUES (3, 'N/A');\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "gender"
+    },
+    {
+        "query": [
+            "INSERT INTO publisher (id, publisher_name) VALUES (8, 'Icon Comics');\n",
+            "INSERT INTO publisher (id, publisher_name) VALUES (17, 'Shueisha');\n",
+            "INSERT INTO publisher (id, publisher_name) VALUES (11, 'J. K. Rowling');\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "publisher"
+    },
+    {
+        "query": [
+            "INSERT INTO race (id, race) VALUES (52, 'Symbiote');\n",
+            "INSERT INTO race (id, race) VALUES (58, 'Yautja');\n",
+            "INSERT INTO race (id, race) VALUES (50, 'Spartoi');\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "race"
+    },
+    {
+        "query": [
+            "INSERT INTO superhero (id, superhero_name, full_name, gender_id, eye_colour_id, hair_colour_id, skin_colour_id, race_id, publisher_id, alignment_id, height_cm, weight_kg) VALUES (704, 'Ultragirl', 'Tsu-Zana', 2, 7, 6, 1, 1, 13, 1, 168, 105);\n",
+            "INSERT INTO superhero (id, superhero_name, full_name, gender_id, eye_colour_id, hair_colour_id, skin_colour_id, race_id, publisher_id, alignment_id, height_cm, weight_kg) VALUES (273, 'Flash IV', 'Bartholomew Allen II', 1, 33, 3, 1, 24, 4, 1, 157, 52);\n",
+            "INSERT INTO superhero (id, superhero_name, full_name, gender_id, eye_colour_id, hair_colour_id, skin_colour_id, race_id, publisher_id, alignment_id, height_cm, weight_kg) VALUES (376, 'Jim Powell', 'Jim Powell', 1, 1, 1, 1, 1, 2, 1, 0, 0);\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "superhero"
+    },
+    {
+        "query": [
+            "INSERT INTO hero_attribute (hero_id, attribute_id, attribute_value) VALUES (225, 5, 25);\n",
+            "INSERT INTO hero_attribute (hero_id, attribute_id, attribute_value) VALUES (224, 4, 60);\n",
+            "INSERT INTO hero_attribute (hero_id, attribute_id, attribute_value) VALUES (422, 4, 25);\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "hero_attribute"
+    },
+    {
+        "query": [
+            "INSERT INTO superpower (id, power_name) VALUES (7, 'Stealth');\n",
+            "INSERT INTO superpower (id, power_name) VALUES (22, 'Energy Blasts');\n",
+            "INSERT INTO superpower (id, power_name) VALUES (116, 'Biokinesis');\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "superpower"
+    },
+    {
+        "query": [
+            "INSERT INTO hero_power (hero_id, power_id) VALUES (302, 12);\n",
+            "INSERT INTO hero_power (hero_id, power_id) VALUES (331, 125);\n",
+            "INSERT INTO hero_power (hero_id, power_id) VALUES (714, 31);\n"
+        ],
+        "database_name": "superhero",
+        "table_name": "hero_power"
+    },
+    {
+        "query": [
+            "INSERT INTO swimmer (ID, name, Nationality, meter_100, meter_200, meter_300, meter_400, meter_500, meter_600, meter_700, Time) VALUES (4, 'Craig Stevens', 'Australia', 57.35000000000000142, '1:56.34', '2:55.90', '3:55.72', '4:55.08', '5:54.45', '6:52.69', '7:48.67');\n",
+            "INSERT INTO swimmer (ID, name, Nationality, meter_100, meter_200, meter_300, meter_400, meter_500, meter_600, meter_700, Time) VALUES (7, 'Przemys\u0142aw Sta\u0144czyk', 'Poland', 57.31000000000000227, '1:57.10', '2:56.02', '3:55.36', '4:54.21', '5:52.59', '6:50.91', '7:47.91');\n",
+            "INSERT INTO swimmer (ID, name, Nationality, meter_100, meter_200, meter_300, meter_400, meter_500, meter_600, meter_700, Time) VALUES (7, 'Przemys\u0142aw Sta\u0144czyk', 'Poland', 57.31000000000000227, '1:57.10', '2:56.02', '3:55.36', '4:54.21', '5:52.59', '6:50.91', '7:47.91');\n"
+        ],
+        "database_name": "swimming",
+        "table_name": "swimmer"
+    },
+    {
+        "query": [
+            "INSERT INTO stadium (ID, name, Capacity, City, Country, Opening_year) VALUES (9, 'Arena Baltika', 45015, 'Kaliningrad', 'Russia', 2007);\n",
+            "INSERT INTO stadium (ID, name, Capacity, City, Country, Opening_year) VALUES (7, 'Northumberland Development Project', 56250, 'London', 'England', 2006);\n",
+            "INSERT INTO stadium (ID, name, Capacity, City, Country, Opening_year) VALUES (4, 'Estadio La Peineta', 67500, 'Madrid', 'Spain', 2005);\n"
+        ],
+        "database_name": "swimming",
+        "table_name": "stadium"
+    },
+    {
+        "query": [
+            "INSERT INTO event (ID, Name, Stadium_ID, Year) VALUES (5, 'IPC', 4, '2014');\n",
+            "INSERT INTO event (ID, Name, Stadium_ID, Year) VALUES (5, 'IPC', 4, '2014');\n",
+            "INSERT INTO event (ID, Name, Stadium_ID, Year) VALUES (4, 'World Junior', 3, '2013');\n"
+        ],
+        "database_name": "swimming",
+        "table_name": "event"
+    },
+    {
+        "query": [
+            "INSERT INTO record (ID, Result, Swimmer_ID, Event_ID) VALUES (5, 'Loss', 1, 3);\n",
+            "INSERT INTO record (ID, Result, Swimmer_ID, Event_ID) VALUES (12, 'Win', 3, 5);\n",
+            "INSERT INTO record (ID, Result, Swimmer_ID, Event_ID) VALUES (3, 'Loss', 3, 3);\n"
+        ],
+        "database_name": "swimming",
+        "table_name": "record"
+    },
+    {
+        "query": [
+            "INSERT INTO College (cName, state, enr) VALUES ('OU', 'OK', 22000);\n",
+            "INSERT INTO College (cName, state, enr) VALUES ('ASU', 'AZ', 12000);\n",
+            "INSERT INTO College (cName, state, enr) VALUES ('ASU', 'AZ', 12000);\n"
+        ],
+        "database_name": "soccer_2",
+        "table_name": "College"
+    },
+    {
+        "query": [
+            "INSERT INTO Player (pID, pName, yCard, HS) VALUES (40002, 'Drago', 'yes', 1600);\n",
+            "INSERT INTO Player (pID, pName, yCard, HS) VALUES (40004, 'David', 'yes', 1600);\n",
+            "INSERT INTO Player (pID, pName, yCard, HS) VALUES (40002, 'Drago', 'yes', 1600);\n"
+        ],
+        "database_name": "soccer_2",
+        "table_name": "Player"
+    },
+    {
+        "query": [
+            "INSERT INTO Tryout (pID, cName, pPos, decision) VALUES (20002, 'FSU', 'striker', 'yes');\n",
+            "INSERT INTO Tryout (pID, cName, pPos, decision) VALUES (30003, 'OU', 'mid', 'no');\n",
+            "INSERT INTO Tryout (pID, cName, pPos, decision) VALUES (10001, 'LSU', 'goalie', 'no');\n"
+        ],
+        "database_name": "soccer_2",
+        "table_name": "Tryout"
+    }
+]

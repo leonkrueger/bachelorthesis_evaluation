@@ -3,90 +3,105 @@
         "query": "INSERT INTO chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family (label, description, uniprot_protein_id, found_in_taxon, encoded_by, has_parts, molecular_function, cell_component, biological_process, instance_of, refseq_protein_id, part_of)  VALUES ('Methyl-accepting chemotaxis sensory transducer EAE_15540', 'microbial protein found in Klebsiella aerogenes KCTC 2190', 'P21823', 'Enterobacter aerogenes KCTC 2190', 'methyl-accepting chemotaxis sensory transducer EAE_15540', 'Methyl-accepting chemotaxis protein (MCP) signalling domain', 'signal transducer activity', 'plasma membrane', 'chemotaxis', 'protein', 'YP_004593298', 'Methyl-accepting chemotaxis protein');\n",
         "database_state": "Table natural_product:\nlabel;description;taxon_name;parent_taxon;ncbi_taxonomy_id;instance_of;genbank_assembly_accession_number;gram_staining\n'Escherichia coli str. K-12 substr. MG1655';'bacterial strain';'Escherichia coli str. K-12 substr. MG1655';'Escherichia coli';'511145';'reference strain';'GCA_000005845.2';'Gram-negative bacteria'\n'Escherichia coli O157:H7 str. Sakai';'bacterial strain';'Escherichia coli O157:H7 str. Sakai';'Escherichia coli';'386585';'strain';'GCA_000008865.1';'Gram-negative bacteria'\n'Bordetella pertussis Tohama I';'bacterial strain';'Bordetella pertussis Tohama I';'Bordetella pertussis';'257313';'strain';'GCA_000195715.1';'Gram-negative bacteria'\nTable encoded_by:\nlabel;description;ncbi_locus_tag;subclass_of;found_in_taxon;entrez_gene_id;encodes;instance_of;genomic_end;strand_orientation;genomic_start\n'methyl-accepting protein IV ECs2595';'microbial gene found in Escherichia coli O157:H7 str. Sakai';'ECs2595';'gene';'Escherichia coli O157:H7 str. Sakai';'914196';'Methyl-accepting protein IV ECs2595';'gene';'2572913';'reverse strand';'2571312'\n'methyl-accepting chemotaxis protein I BN112_0387';'microbial gene found in Bordetella bronchiseptica 253';'BN112_0387';'gene';'Bordetella bronchiseptica 253';'13977445';'Methyl-accepting chemotaxis protein I BN112_0387';'gene';'401432';'forward strand';'399600'\n'methyl-accepting chemotaxis protein BN112_2004';'microbial gene found in Bordetella bronchiseptica 253';'BN112_2004';'gene';'Bordetella bronchiseptica 253';'13979062';'Methyl-accepting chemotaxis protein BN112_2004';'gene';'2165204';'forward strand';'2163573'\nTable Protein_Family:\nlabel;description;uniprot_protein_id;found_in_taxon;encoded_by;has_parts;molecular_function;cell_component;biological_process;instance_of;refseq_protein_id;part_of\n",
         "expected_table_name": "Protein_Family",
-        "database_file_path": "data/wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family/chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family.sql"
+        "database_file_path": "data/wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family/chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family.sql",
+        "predicted_table_name": "Protein_Family"
     },
     {
         "query": "INSERT INTO japans_top_100_waterfalls (label, description, instance_of, coordinate_location, country, image, part_of, located_in_the_administrative_territorial_entity)  VALUES ('Mariyudu Falls', 'nan', 'waterfall', '24.357194', 'Japan', 'Mariyudo iriomote 2007-04-05.jpg', 'Japan''s Top 100 Waterfalls', 'Uehara');\n",
         "database_state": "Table located_in_the_present_day_administrative_territorial_entity:\nlabel;description;image;dantai_code;commons_category;flag_image;country;located_in_the_administrative_territorial_entity;coordinate_location;official_website;instance_of;ndl_authority_id;freebase_id;population;musicbrainz_area_id;topics_main_category;geonames_id;twinned_administrative_body;viaf_id;area;corporate_number_japan;native_label;located_in_time_zone;locator_map_image;opencorporates_id;geonlp_id;japan_search_name_id;whos_on_first_id;worldcat_identities_id;shares_border_with;inception;replaces;inaturalist_place_id;name_in_kana\n'Kai';'city in Yamanashi Prefecture, Japan';'Shingen embankment and Kamanashi River.JPG';'192104';'Kai, Yamanashi';'Flag of Kai, Yamanashi.svg';'Japan';'Yamanashi Prefecture';'35.660805555555555';'https://www.city.kai.yamanashi.jp/';'city of Japan';'nan';'/m/050t7d';75337.0;'29d4bdb7-f466-4dca-a348-cd591d531544';'Category:Kai, Yamanashi';'9062326';'nan';'nan';71.93999999999999773;'3000020192104';'\u7532\u6590\u5e02';'UTC+09:00';'Kai in Yamanashi Prefecture Ja.svg';'jp/3000020192104';'66RHgq';'\u7532\u6590\u5e02';'nan';'nan';'K\u014dfu';'+2004-09-01T00:00:00Z';'Ry\u016b\u014d';'35052.0';'\u304b\u3044\u3057'\n'Matsuyama';'city in Ehime prefecture, Japan';'Matsuyama (14074874872).jpg';'382019';'Matsuyama, Ehime';'Flag of Matsuyama, Ehime.svg';'Japan';'Ehime Prefecture';'33.839166666666664';'https://www.city.matsuyama.ehime.jp/';'core city of Japan';'263620.0';'/m/0gp6sg';506743.0;'9da2ced9-99c1-44ad-b4b2-94fc8075476a';'Category:Matsuyama, Ehime';'1857456';'Freiburg im Breisgau';'159454620.0';428.8600000000000136;'3000020382019';'\u677e\u5c71\u5e02';'UTC+09:00';'Ehime-matsuyama-city.svg';'jp/3000020382019';'ImFI8Q';'\u677e\u5c71\u5e02';'102031885.0';'lccn-n81042575';'T\u014don';'+1889-12-15T00:00:00Z';'Asami';'33456.0';'\u307e\u3064\u3084\u307e\u3057'\n'Nagano';'city in Nagano Prefecture, Japan';'Downtown Nagano.jpg';'202011';'Nagano, Nagano';'Flag of Nagano, Nagano.svg';'Japan';'Nagano Prefecture';'36.64866666666666';'https://www.city.nagano.nagano.jp/';'core city of Japan';'301449.0';'/m/0gp5pr';367184.0;'23b37897-8b55-4866-8415-54d23126d898';'Category:Nagano (city)';'1856209';'Clearwater';'258110266.0';834.8500000000000227;'3000020202011';'\u9577\u91ce\u5e02';'UTC+09:00';'Nagano-Nagano.svg';'jp/3000020202011';'Pny77X';'\u9577\u91ce\u5e02';'102031509.0';'lccn-n81143976';'Suzaka';'+1966-10-16T00:00:00Z';'Shinsh\u016bshin';'34368.0';'\u306a\u304c\u306e\u3057'\nTable JapanWaterfalls:\nlabel;description;instance_of;coordinate_location;country;image;part_of;located_in_the_administrative_territorial_entity\n",
         "expected_table_name": "JapanWaterfalls",
-        "database_file_path": "data/wikidb_japans-top-100-waterfalls/japans-top-100-waterfalls.sql"
+        "database_file_path": "data/wikidb_japans-top-100-waterfalls/japans-top-100-waterfalls.sql",
+        "predicted_table_name": "japans_top_100_waterfalls"
     },
     {
         "query": "INSERT INTO submission (Submission_ID, Scores, Author, College)  VALUES (5, 82.0, 'Jeff Lloyd', 'West Texas State');\n",
         "database_state": "Table Student_Submissions:\nSubmission_ID;Scores;Author;College\n\nTable workshop:\nWorkshop_ID;Date;Venue;Name\n1;'August 18, 2007';'London UK';'ABC 2007'\n2;'August 21, 2007';'London UK';'Conference 2007'\n5;'January 14, 2008';'New York USA';'2008 qualification'",
         "expected_table_name": "Student_Submissions",
-        "database_file_path": "data/spider_workshop_paper/workshop_paper.sql"
+        "database_file_path": "data/spider_workshop_paper/workshop_paper.sql",
+        "predicted_table_name": "Student_Submissions"
     },
     {
         "query": "INSERT INTO legalities (id, format, status, uuid)  VALUES (168897, 'future', 'Legal', 'd9d2e9c0-b1dc-52df-9ae4-b4cbde877399');\n",
         "database_state": "Table foreign_data:\nid;flavorText;language;multiverseid;name;text;type;uuid\n18097;'Zeit heilt Wunden, verwandelt sie aber gleichzeitig in Runzeln.';'German';98766;'Ehrw\u00fcrdiger M\u00f6nch';'Wenn der Ehrw\u00fcrdige M\u00f6nch ins Spiel kommt, erh\u00e4ltst du 2 Lebenspunkte dazu.';'Kreatur \u2014 Mensch, M\u00f6nch, Kleriker';'9061cdac-b00e-5304-9d8b-e67c7ca8d023'\n120965;'';'Italian';155661;'Cecchino Etereo';replace('Quando il Cecchino Etereo entra in gioco, fai tornare un permanente non terra bersaglio in mano al suo proprietario.\\nApparire {1}{U}{U} (Puoi giocare questa magia pagando il suo costo di apparire. Se lo fai, viene sacrificata quando entra in gioco.)','\\n',char(10));'Creatura \u2014 Elementale';'843a8237-161b-5940-a0ef-06cc4a30f9e1'\n213166;'';'French';NULL;'Armure d''Urza';'';'';'5d4f63fe-cd95-584a-8cba-c2cdca8ca42f'\nTable set_translations:\nid;language;setCode;translation\n146;'Japanese';'BFZ';'\u300e\u6226\u4e71\u306e\u30bc\u30f3\u30c7\u30a3\u30ab\u30fc\u300f'\n354;'German';'DDD';'Garruk vs. Liliana'\n654;'German';'ICE';NULL\nTable CardLegalities:\nid;format;status;uuid\n",
         "expected_table_name": "CardLegalities",
-        "database_file_path": "data/bird_card_games/card_games.sql"
+        "database_file_path": "data/bird_card_games/card_games.sql",
+        "predicted_table_name": "legaCardLegalitieslities"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population)  VALUES ('Kottmar', 'municipality in Saxony, Germany', 'Germany', 'Kottmar (municipality)', 'G\u00f6rlitz', 'Niedercunnersdorf kirche.JPG', 'UTC+01:00', 'Kottmar in GR.svg', 'Wappen Kottmar.jpg', 'non-urban municipality of Germany', '51.0108', 'Category:Kottmar (municipality)', 'e2157a11-7d17-4e68-b48f-cde0c51d7f95', '/m/0r8nvld', '8658982.0', 'https://www.gemeinde-kottmar.de/', '294320745', 47.34000000000000341, 7173.0);\n",
         "database_state": "Table Cities:\nlabel;description;country;commons_category;located_in_the_administrative_territorial_entity;image;located_in_time_zone;locator_map_image;coat_of_arms_image;instance_of;coordinate_location;topics_main_category;musicbrainz_area_id;freebase_id;geonames_id;official_website;viaf_id;area;population\n",
         "expected_table_name": "Cities",
-        "database_file_path": "data/wikidb_burial-vault/burial-vault.sql"
+        "database_file_path": "data/wikidb_burial-vault/burial-vault.sql",
+        "predicted_table_name": "Cities"
     },
     {
         "query": "INSERT INTO Office_locations (building_id, company_id, move_in_year)  VALUES (3, 9, 2029);\n",
         "database_state": "Table buildings:\nid;name;City;Height;Stories;Status\n2;'Torre Mitikah';'Mexico City';210;60;'under construction'\n3;'Punto Chapultepec';'Mexico City';210;59;'proposed'\n4;'Torre Reforma';'Mexico City';330;57;'under construction'\nTable Office_Location_History:\nbuilding_id;company_id;move_in_year\n",
         "expected_table_name": "Office_Location_History",
-        "database_file_path": "data/spider_company_office/company_office.sql"
+        "database_file_path": "data/spider_company_office/company_office.sql",
+        "predicted_table_name": "Office_Location_History"
     },
     {
         "query": "INSERT INTO exhibition_record (Exhibition_ID, Date, Attendance)  VALUES (1, 'December 7', 2983);\n",
         "database_state": "Table ExhibitionAttendanceLog:\nExhibition_ID;Date;Attendance\n",
         "expected_table_name": "ExhibitionAttendanceLog",
-        "database_file_path": "data/spider_theme_gallery/theme_gallery.sql"
+        "database_file_path": "data/spider_theme_gallery/theme_gallery.sql",
+        "predicted_table_name": "ExhibitionAttendanceLog"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (477925, 1628, '1997-09-30', 'VYDAJ', 'VYBER', 15, 23329, 'SLUZBY', NULL, NULL);\n",
         "database_state": "Table Transactions:\ntrans_id;account_id;date;type;operation;amount;balance;k_symbol;bank;account\n\nTable order:\norder_id;account_id;bank_to;account_to;amount;k_symbol\n34702;3604;'ST';88427799;3893.0;'SIPO'\n30427;695;'CD';38325697;9516.0;'SIPO'\n30809;966;'GH';93294161;2129.0;'SIPO'\nTable account:\naccount_id;district_id;frequency;date\n3766;29;'POPLATEK PO OBRATU';'1996-10-18'\n1497;1;'POPLATEK MESICNE';'1993-07-16'\n8931;63;'POPLATEK TYDNE';'1996-01-01'\nTable disp:\ndisp_id;client_id;account_id;type\n1490;1490;1235;'OWNER'\n3588;3588;2971;'OWNER'\n4023;4023;3328;'DISPONENT'",
         "expected_table_name": "Transactions",
-        "database_file_path": "data/bird_financial/financial.sql"
+        "database_file_path": "data/bird_financial/financial.sql",
+        "predicted_table_name": "Transactions"
     },
     {
         "query": "INSERT INTO administrative_territorial_entity (label, description, country, commons_category, located_in_the_administrative_territorial_entity, image, located_in_time_zone, locator_map_image, coat_of_arms_image, instance_of, coordinate_location, topics_main_category, musicbrainz_area_id, freebase_id, geonames_id, official_website, viaf_id, area, population)  VALUES ('Buftea', 'town in Ilfov County, Romania', 'Romania', 'Buftea', 'Ilfov County', '2012.05.01 Palatul Stirbei Buftea 009 stitch3+GIMP-.jpg', 'UTC+02:00', 'Buftea ilfov.png', 'ROU IF Buftea CoA2.png', 'town in Romania', '44.57', 'Category:Buftea', 'nan', '/m/04fbhv', '683393.0', 'http://www.primariabuftea.ro/', 'nan', 54.86999999999999745, 22178.0);\n",
         "database_state": "Table Cities:\nlabel;description;country;commons_category;located_in_the_administrative_territorial_entity;image;located_in_time_zone;locator_map_image;coat_of_arms_image;instance_of;coordinate_location;topics_main_category;musicbrainz_area_id;freebase_id;geonames_id;official_website;viaf_id;area;population\n\nTable part:\nlabel;description;commons_category;topics_main_category;freebase_id;viaf_id;instance_of;quora_topic_id;has_parts;worldcat_identities_id;coordinate_location;locator_map_image\n'Commonwealth of Nations';'political association of mostly former British Empire territories';'Commonwealth of Nations';'Category:Commonwealth of Nations';'/m/0j7v_';'144390698.0';'intergovernmental organization';'Commonwealth-of-Nations';'United Kingdom';'lccn-n92054688';'51.505';'Member states of the Commonwealth of Nations.svg'\n'Europe';'continent';'Europe';'Category:Europe';'/m/02j9z';'170298814.0';'continent';'Europe';'Northern Europe';'viaf-252680782';'48.690959';'Europe orthographic Caucasus Urals boundary (with borders).svg'\n'post-Yugoslavia states';'nan';'nan';'nan';'nan';'nan';'geopolitical group';'nan';'Bosnia and Herzegovina';'nan';'nan';'nan'",
         "expected_table_name": "Cities",
-        "database_file_path": "data/wikidb_burial-vault/burial-vault.sql"
+        "database_file_path": "data/wikidb_burial-vault/burial-vault.sql",
+        "predicted_table_name": "administrative_territorial_entity"
     },
     {
         "query": "INSERT INTO buildings (id, name, City, Height, Stories, Status)  VALUES (6, 'Reforma 432', 'Mexico City', 300, 100, 'under construction');\n",
         "database_state": "Table Office_locations:\nbuilding_id;company_id;move_in_year\n8;19;2022\n3;4;2023\n2;11;2025\nTable Structures:\nid;name;City;Height;Stories;Status\n\nTable Companies:\nid;name;Headquarters;Industry;Sales_billion;Profits_billion;Assets_billion;Market_Value_billion\n2;'HSBC';'UK';'Banking';103.2999999999999972;13.30000000000000071;2467.90000000000009;'186.5'\n19;'Total';'France';'Oil and gas';188.0999999999999944;14.19999999999999929;192.8000000000000113;'138'\n11;'BNP Paribas';'France';'Banking';130.4000000000000056;10.5;2680.699999999999819;'88'",
         "expected_table_name": "Structures",
-        "database_file_path": "data/spider_company_office/company_office.sql"
+        "database_file_path": "data/spider_company_office/company_office.sql",
+        "predicted_table_name": "Structures"
     },
     {
         "query": "INSERT INTO exhibition_record (Exhibition_ID, Date, Attendance)  VALUES (1, 'December 5', 1098);\n",
         "database_state": "Table ExhibitionAttendanceLog:\nExhibition_ID;Date;Attendance\n\nTable artist:\nArtist_ID;Name;Country;Year_Join;Age\n3;'Paul Azinger';'United States';1993;47\n5;'Mark Brooks';'United States';1996;48\n7;'Larry Nelson';'United States';1981;50",
         "expected_table_name": "ExhibitionAttendanceLog",
-        "database_file_path": "data/spider_theme_gallery/theme_gallery.sql"
+        "database_file_path": "data/spider_theme_gallery/theme_gallery.sql",
+        "predicted_table_name": "ExhibitionAttendanceLog"
     },
     {
         "query": "INSERT INTO workshop (Workshop_ID, Date, Venue, Name)  VALUES (3, 'August 25, 2007', 'New Jersey USA', 'Workshop 2007');\n",
         "database_state": "Table Workshops:\nWorkshop_ID;Date;Venue;Name\n\nTable Acceptance:\nSubmission_ID;Workshop_ID;Result\n2;3;'Rejected'\n1;1;'Accepted'\n5;6;'Rejected'",
         "expected_table_name": "Workshops",
-        "database_file_path": "data/spider_workshop_paper/workshop_paper.sql"
+        "database_file_path": "data/spider_workshop_paper/workshop_paper.sql",
+        "predicted_table_name": "Workshops"
     },
     {
         "query": "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes)  VALUES (157342, 208251, 195589, '2016-04-14 00:00:00', 70, 76, 'right', 'high', 'medium', 56, 73, 68, 63, 73, 71, 63, 43, 38, 71, 75, 75, 71, 68, 70, 72, 79, 69, 69, 64, 77, 15, 70, 45, 68, 11, 14, 14, 7, 8, 13, 10, 14);\n",
         "database_state": "Table Player_Stats:\nid;player_fifa_api_id;player_api_id;date;overall_rating;potential;preferred_foot;attacking_work_rate;defensive_work_rate;crossing;finishing;heading_accuracy;short_passing;volleys;dribbling;curve;free_kick_accuracy;long_passing;ball_control;acceleration;sprint_speed;agility;reactions;balance;shot_power;jumping;stamina;strength;long_shots;aggression;interceptions;positioning;vision;penalties;marking;standing_tackle;sliding_tackle;gk_diving;gk_handling;gk_kicking;gk_positioning;gk_reflexes\n",
         "expected_table_name": "Player_Stats",
-        "database_file_path": "data/bird_european_football_2/european_football_2.sql"
+        "database_file_path": "data/bird_european_football_2/european_football_2.sql",
+        "predicted_table_name": "Player_Attributes"
     },
     {
         "query": "INSERT INTO replaced_entity (label, description, instance_of, country, replaced_by, dissolved_abolished_or_demolished_date, located_in_the_administrative_territorial_entity, inception, located_in_the_present_day_administrative_territorial_entity, coordinate_location, name_in_kana)  VALUES ('Tatebe', 'dissolved municipality in An\u014d district, Mie prefecture, Japan', 'dissolved municipality of Japan', 'Japan', 'Tsu', '+1909-04-01T00:00:00Z', 'An\u014d district', '+1889-04-01T00:00:00Z', 'Tsu', 'nan', '\u305f\u3066\u3079\u3080\u3089');\n",
         "database_state": "Table Municipalities:\nlabel;description;instance_of;country;replaced_by;dissolved_abolished_or_demolished_date;located_in_the_administrative_territorial_entity;inception;located_in_the_present_day_administrative_territorial_entity;coordinate_location;name_in_kana\n\nTable political_border:\nlabel;description;image;dantai_code;commons_category;flag_image;country;located_in_the_administrative_territorial_entity;coordinate_location;official_website;instance_of;ndl_authority_id;freebase_id;population;musicbrainz_area_id;topics_main_category;geonames_id;viaf_id;area;corporate_number_japan;native_label;located_in_time_zone;locator_map_image;opencorporates_id;geonlp_id;japan_search_name_id;whos_on_first_id;worldcat_identities_id;shares_border_with;inception;replaces;inaturalist_place_id;name_in_kana\n'Hanamaki';'city in Iwate Prefecture, Japan';'HanamakiCityOffice.jpg';'32051';'Hanamaki, Iwate';'Flag of Hanamaki, Iwate.svg';'Japan';'Iwate Prefecture';'39.38861111111111';'https://www.city.hanamaki.iwate.jp/';'city of Japan';'279728.0';'/m/01wfr4';92815.0;'0cdee627-10b3-4f6d-9ae4-aa864093495c';'Category:Hanamaki, Iwate';'2112822';'252616909.0';908.3899999999999864;'5000020032051';'\u82b1\u5dfb\u5e02';'UTC+09:00';'Hanamaki in Iwate Prefecture Ja.svg';'jp/5000020032051';'A50b6g';'\u82b1\u5dfb\u5e02';'102031987.0';'viaf-252616909';'Morioka';'+1954-04-01T00:00:00Z';'Hanamaki';'34002.0';'\u306f\u306a\u307e\u304d\u3057'\n'Kashiwazaki';'city in Niigata prefecture, Japan';'Kashiwazaki City Office.jpg';'152056';'Kashiwazaki, Niigata';'Flag of Kashiwazaki, Niigata.svg';'Japan';'Niigata Prefecture';'37.37191666666666';'https://www.city.kashiwazaki.lg.jp/';'city of Japan';'286619.0';'/m/01wjj6';81027.0;'f1631504-de13-4315-adf8-e0e435d3276a';'Category:Kashiwazaki, Niigata';'1859907';'128999585.0';442.6999999999999887;'5000020152056';'\u67cf\u5d0e\u5e02';'UTC+09:00';'Kashiwazaki in Niigata Prefecture Ja.svg';'jp/5000020152056';'NCi5pR';'\u67cf\u5d0e\u5e02';'890531789.0';'lccn-n80022943';'J\u014detsu';'+1940-07-01T00:00:00Z';'\u014csu';'34483.0';'\u304b\u3057\u308f\u3056\u304d\u3057'\n'T\u014don';'city in Ehime prefecture, Japan';'Kawauchi IC.jpg';'382159';'Toon, Ehime';'Flag of T\u014don, Ehime.svg';'Japan';'Ehime Prefecture';'33.791027777777785';'http://www.city.toon.ehime.jp/';'city of Japan';'1128073.0';'/m/0543fq';34195.0;'a8e74944-2872-43cc-848e-8e6e8da98c2a';'Category:T\u014don, Ehime';'6691620';'296436016.0';211.4499999999999887;'3000020382159';'\u6771\u6e29\u5e02';'UTC+09:00';'Toon in Ehime Prefecture Ja.svg';'jp/3000020382159';'Dsq45w';'\u6771\u6e29\u5e02';'nan';'viaf-296436016';'Matsuyama';'+2004-09-21T00:00:00Z';'Shigenobu';'100822.0';'\u3068\u3046\u304a\u3093\u3057'",
         "expected_table_name": "Municipalities",
-        "database_file_path": "data/wikidb_japans-top-100-waterfalls/japans-top-100-waterfalls.sql"
+        "database_file_path": "data/wikidb_japans-top-100-waterfalls/japans-top-100-waterfalls.sql",
+        "predicted_table_name": "Table"
     },
     {
         "query": "INSERT INTO trans (trans_id, account_id, date, type, operation, amount, balance, k_symbol, bank, account)  VALUES (1921136, 6511, '1997-05-24', 'PRIJEM', 'VKLAD', 34804, 116674, NULL, NULL, NULL);\n",
         "database_state": "Table order:\norder_id;account_id;bank_to;account_to;amount;k_symbol\n33835;2991;'IJ';62011402;107.0;''\n35098;3864;'QR';75671767;1419.0;''\n31223;1244;'AB';67696446;748.0;'UVER'\nTable Transactions:\ntrans_id;account_id;date;type;operation;amount;balance;k_symbol;bank;account\n",
         "expected_table_name": "Transactions",
-        "database_file_path": "data/bird_financial/financial.sql"
+        "database_file_path": "data/bird_financial/financial.sql",
+        "predicted_table_name": "Transactions"
     }
 ]

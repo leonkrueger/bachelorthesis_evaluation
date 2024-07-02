@@ -19,7 +19,7 @@ from util.processing_utils import get_data_from_create_table
 
 name = "missing_tables"
 generate_validation_data = False
-fine_tuning_data_points = 12000
+fine_tuning_data_points = 24000
 validation_data_points = 150
 data_sources = ["bird", "spider", "wikidb"]
 
@@ -70,6 +70,26 @@ def apply_alterations(
             del query["columns"]
 
     return query, database_state, correct_prediction
+
+
+def get_csv_string_for_table(
+    queries: list[tuple[Any, str, list[str]]],
+    table_name: str,
+    current_values: list[str],
+) -> str:
+    # Take all query from the specified table
+    queries_in_table = [query[0] for query in queries if query[1] == table_name]
+    # Randomly select a few of them
+    random_queries = random.sample(
+        queries_in_table,
+        random.randint(0, min(3, len(queries_in_table))),
+    )
+    # Parse them so that the values can be used
+    random_rows = [parse_insert_query(query)["values"][0] for query in random_queries]
+    # Check that the currently added row is not in the selected rows
+    random_rows = [row for row in random_rows if row != current_values]
+    # Return the csv string of these rows
+    return "\n".join([";".join(row) for row in random_rows])
 
 
 def get_data_for_one_data_source(
@@ -155,7 +175,8 @@ def get_data_for_one_data_source(
                 database_str = (
                     "\n".join(
                         [
-                            f"- Table: {table}, Columns: [{', '.join([column for column in columns])}]"
+                            f"Table {table}:\n{';'.join([column for column in columns])}\n"
+                            f"{get_csv_string_for_table(queries, table, parsed_query['values'])}"
                             for table, columns in database_state_for_query.items()
                         ]
                     )
@@ -169,6 +190,9 @@ def get_data_for_one_data_source(
                     f"Database State:\n{database_str}"
                 )
                 response = f"Table: {correct_prediction}"
+
+                if len(instruction) > 3000:
+                    continue
 
                 data.append({"Instruction": instruction, "Response": response})
         except Exception:
@@ -206,9 +230,9 @@ with open(
         "fine_tuning",
         "validation_datasets" if generate_validation_data else "datasets",
         (
-            f"{name}.json"
+            f"{name}_csv.json"
             if generate_validation_data
-            else f"{name}_{fine_tuning_data_points}.json"
+            else f"{name}_{fine_tuning_data_points}_csv.json"
         ),
     ),
     mode="w",

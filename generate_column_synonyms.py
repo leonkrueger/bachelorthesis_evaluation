@@ -83,6 +83,7 @@ def get_data_for_one_database(
                     "query": queries_as_str,
                     "database_name": database_name,
                     "table_name": table_name,
+                    "column_names": database_state[table_name],
                 }
             )
 
@@ -118,7 +119,7 @@ for folder in folders:
     data.extend(get_data_for_data_source(folder))
 
 with open(
-    os.path.join("data", "synonym_generation_data.json"),
+    os.path.join("data", "column_synonym_generation_data.json"),
     mode="w",
     encoding="utf-8",
 ) as data_file:

@@ -1,0 +1,20 @@
+{
+    "table_not_in_database": {
+        "existing_table_with_correct_name": 0.0,
+        "existing_table_with_wrong_name": 0.2,
+        "new_table_with_correct_name": 0.36666666666666664,
+        "new_table_with_wrong_name": 0.43333333333333335
+    },
+    "different_name_in_database": {
+        "existing_table_with_correct_name": 0.5,
+        "existing_table_with_wrong_name": 0.03333333333333333,
+        "new_table_with_correct_name": 0.0,
+        "new_table_with_wrong_name": 0.4666666666666667
+    },
+    "table_in_database": {
+        "existing_table_with_correct_name": 0.9333333333333333,
+        "existing_table_with_wrong_name": 0.03333333333333333,
+        "new_table_with_correct_name": 0.0,
+        "new_table_with_wrong_name": 0.03333333333333333
+    }
+}

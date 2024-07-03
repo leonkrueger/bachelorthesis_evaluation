@@ -1,1 +1,562 @@
-[{"Instruction": "Predict the column for this value:\nValue: '0.36428571428571427'\nTable user_reviews:\nSentiment_Polarity;App\n'Bathroom Decorating Ideas';'0.55';'0.6875'\n", "Response": "Column: Sentiment_Subjectivity"}, {"Instruction": "Predict the column for this value:\nValue: '1657'\nTable centered_hexagonal_number:\nnumeric_value;prime_factor;description\n\n", "Response": "Column: label"}, {"Instruction": "Predict the column for this value:\nValue: '977'\nTable follows:\ninstance_of;label;point_in_time;has_list;follows;part_of;topics_main_category;description\n\n", "Response": "Column: followed_by"}, {"Instruction": "Predict the column for this value:\nValue: '444-464 (21)'\nTable aircraft:\nModel;Aircraft_ID;Order_Year;Fleet_Series;Fuel_Propulsion;Manufacturer\n3;1998;'Gillig';'Phantom (High Floor)';'468-473 (6)';'Diesel'\n2;1996;'Gillig';'Phantom (High Floor)';'465-467 (3)';'Diesel'\n4;2000;'Gillig';'Advantage (Low Floor)';'474-481 (8)';'Diesel'\n", "Response": "Column: Fleet_Series"}, {"Instruction": "Predict the column for this value:\nValue: 9.55000000000000072\nTable gymnast:\nHorizontal_Bar_Points;Total_Points;Gymnast_ID;Pommel_Horse_Points;Parallel_Bars_Points\n4;9.75;9.65000000000000035;9.78700000000000082;9.72499999999999965;57.6490000000000009\n1;9.73700000000000009;9.57499999999999928;9.76200000000000045;9.75;58.06099999999999995\n", "Response": "Column: Vault_Points"}, {"Instruction": "Predict the column for this value:\nValue: 153278\nTable institution_grads:\ngrad_100_rate;grad_150_rate;race;cohort;grad_cohort;gender;year\n\n", "Response": "Column: unitid"}, {"Instruction": "Predict the column for this value:\nValue: 'human chromosome 19'\nTable frameshift_truncation:\nchromosome\n'human chromosome 17'\n'human chromosome 3'\n", "Response": "Column: chromosome"}, {"Instruction": "Predict the column for this value:\nValue: 7\nTable repair_assignment:\nrepair_ID\n\n", "Response": "Column: Machine_ID"}, {"Instruction": "Predict the column for this value:\nValue: 2349121\nTable IMG_OBJ:\nX;W;Y\n\n", "Response": "Column: IMG_ID"}, {"Instruction": "Predict the column for this value:\nValue: 32\nTable IMG_OBJ:\nOBJ_CLASS_ID;Y;IMG_ID;W;X;H;OBJ_SAMPLE_ID\n\n", "Response": "Column: W"}, {"Instruction": "Predict the column for this value:\nValue: 2182.0\nTable TransactionHistoryArchive:\nQuantity;ProductID;TransactionDate;ModifiedDate;ReferenceOrderLineID;ActualCost;ReferenceOrderID;TransactionType;TransactionID\n82058;783;51833;22;'2013-06-30 00:00:00.0';'S';2;1652.0;'2013-06-30 00:00:00.0'\n", "Response": "Column: ActualCost"}, {"Instruction": "Predict the column for this value:\nValue: '31'\nTable institution_grads:\ngrad_cohort;race;cohort;grad_100_rate;grad_100;year;grad_150;grad_150_rate;unitid;gender\n207324;2013;'F';'X';'4y other';'NULL';'NULL';'NULL';'NULL';'NULL'\n", "Response": "Column: grad_150"}, {"Instruction": "Predict the column for this value:\nValue: 'b02970cd-85a8-4a80-95c1-fb607755df44'\nTable medications:\nPATIENT;ENCOUNTER\n'b51b9b64-e3c7-4201-a83e-9994173e2e55';'bacb8a9c-9e4b-4397-a929-8fa911eb85c8'\n'ded25ed0-536b-4ad2-b5f6-f34e4956b104';'27bf66cd-cfa3-4d75-a179-09d07fc0ee2f'\n", "Response": "Column: ENCOUNTER"}, {"Instruction": "Predict the column for this value:\nValue: '978'\nTable 970s:\ninstance_of;topics_main_category;commons_category;part_of;label;followed_by;point_in_time;has_list;description\n'976';'year';'976';'year';'970s';'975';'977';'Category:976';'+0976-01-01T00:00:00Z';'list of state leaders in 976'\n", "Response": "Column: follows"}, {"Instruction": "Predict the column for this value:\nValue: 2269.0\nTable centered_hexagonal_number:\nnumeric_value;label;instance_of;description\n'7651';'number';'natural number';7651.0\n'4447';'number';'natural number';4447.0\n'7957';'number';'natural number';7957.0\n", "Response": "Column: numeric_value"}, {"Instruction": "Predict the column for this value:\nValue: '2554, rue des Pyrenees'\nTable Address:\nCity;SpatialLocation;rowguid\n'5629 Seagull Court';'Bremerton';'0x000000000101000000E68A5BB211AD5EC028B67701A7C44740';'012DB580-1DD5-4BDF-9735-EBD738246074'\n'62, rue Villedo';'Les Ulis';'0x0000000001010000004796E225914D0140375B0C3ABE554840';'E716A462-70FC-47C2-956D-7C8A195C0298'\n", "Response": "Column: AddressLine1"}, {"Instruction": "Predict the column for this value:\nValue: '977'\nTable followed_by:\ninstance_of;followed_by;point_in_time\n\n", "Response": "Column: label"}, {"Instruction": "Predict the column for this value:\nValue: 'Normal pregnancy'\nTable encounters:\nREASONCODE;DESCRIPTION;REASONDESCRIPTION;PATIENT\n'1b74791c-4223-4c9c-81ab-c8427e07484e';'Outpatient Encounter';NULL;NULL\n'88ecf281-1ea6-48f3-9003-d11544ddb342';'Patient encounter procedure';NULL;NULL\n", "Response": "Column: REASONDESCRIPTION"}, {"Instruction": "Predict the column for this value:\nValue: 'Elizabeth Qui\u00f1\u00f3nez Aroyo'\nTable people:\nName\n'Clary Sermina Delgado Cid'\n", "Response": "Column: Name"}, {"Instruction": "Predict the column for this value:\nValue: 'Caet\u00e9s (Pernambuco)'\nTable place_of_birth:\ngeonames_id;image;elevation_above_sea_level;instance_of;freebase_id;area;category_of_associated_people;country;topics_main_category;commons_category\n\n", "Response": "Column: commons_category"}, {"Instruction": "Predict the column for this value:\nValue: 'Ministerial position in Uruguay'\nTable cabinet_of_uruguay:\norganization_directed_by_the_office_or_position;part_of;description;instance_of;label;applies_to_jurisdiction\n'Director of the Office of Planning and Budget';'government position in Uruguay';'public office';'Uruguay';'Cabinet of Uruguay';'Office of Planning and Budget'\n'Minister of Economy and Finance (Uruguay)';'Ministerial position in Uruguay';'public office';'Uruguay';'Cabinet of Uruguay';'Ministry of Economy and Finance (Uruguay)'\n", "Response": "Column: description"}, {"Instruction": "Predict the column for this value:\nValue: '3169'\nTable centered_hexagonal_number:\nkit_linked_open_numbers_id;description\n'number';'7957'\n'natural number';'397'\n'number';'2977'\n", "Response": "Column: kit_linked_open_numbers_id"}, {"Instruction": "Predict the column for this value:\nValue: 6\nTable pilot_record:\nRecord_ID\n\n", "Response": "Column: Record_ID"}, {"Instruction": "Predict the column for this value:\nValue: 'geographic region'\nTable part:\nmapycz_id;has_parts;topics_main_category;coordinate_location;viaf_id;store_norske_leksikon_id;gnd_id;description;locator_map_image;quora_topic_id;freebase_id;commons_category;label;part_of;mesh_descriptor_id;page_banner;nkcr_aut_id;kbpedia_id;yso_id;topics_main_wikimedia_portal;worldcat_identities_id\n'Eastern Europe';'eastern part of Europe';'Portal:Eastern Europe';'Eastern Europe';'Category:Eastern Europe';'Eastern Europe Wikivoyage banner.jpg';'/m/09b69';'geographic region';'49.0';'Map East Europe.svg';'248539062';'Eastern-Europe';'105223.0';'D005061';'Belarus';'Europe';'viaf-248539062';'EasternEuropeanCountry';'4075739-0';'\u00d8st-Europa';'ge137881';'area&id=939135'\n", "Response": "Column: instance_of"}, {"Instruction": "Predict the column for this value:\nValue: 'nan'\nTable user_reviews:\nSentiment_Polarity;Sentiment_Subjectivity;Sentiment\n\n", "Response": "Column: Translated_Review"}, {"Instruction": "Predict the column for this value:\nValue: '2013-07-15 00:00:00.0'\nTable SalesOrderDetail:\nProductID;OrderQty;ModifiedDate;LineTotal;UnitPriceDiscount;CarrierTrackingNumber;UnitPrice\n\n", "Response": "Column: ModifiedDate"}, {"Instruction": "Predict the column for this value:\nValue: 8\nTable SalesOrderHeader:\nComment;OrderDate;ShipDate;CreditCardID;CurrencyRateID;TerritoryID;SubTotal;Freight;SalesPersonID;TotalDue;CustomerID;rowguid;TaxAmt;ShipMethodID;AccountNumber\n8;'2013-10-20 00:00:00.0';'2013-10-27 00:00:00.0';'10-4030-011519';11519;NULL;6;1;7358;9975;6.280000000000000248;0.5023999999999999578;0.1570000000000000006;6.939400000000000012;NULL;'AD2EFB7B-F790-49D4-AD63-6559CED3380A'\n8;'2014-05-21 00:00:00.0';'2014-05-28 00:00:00.0';'10-4030-021779';21779;NULL;4;1;10312;NULL;14.98000000000000042;1.19839999999999991;0.3744999999999999996;16.55290000000000105;NULL;'D12D03B7-3A15-4BBF-A22E-960B5CBCB094'\n8;'2013-11-17 00:00:00.0';'2013-11-24 00:00:00.0';'10-4030-018983';18983;NULL;4;1;NULL;NULL;94.4800000000000039;7.558399999999999786;2.362000000000000099;104.4004000000000047;NULL;'734DEB1A-F168-457B-BFA0-503D0D34FAEE'\n", "Response": "Column: RevisionNumber"}, {"Instruction": "Predict the column for this value:\nValue: 'elijah29@adventure-works.com'\nTable EmailAddress:\nModifiedDate;rowguid\n'randall23@adventure-works.com';'F23FCA1D-A7A0-4989-9945-B9048B115247';'2011-08-27 00:00:00.0'\n'joseph10@adventure-works.com';'D6092BAE-FD35-4939-AB0F-CA0E519DAE31';'2011-07-15 00:00:00.0'\n", "Response": "Column: EmailAddress"}, {"Instruction": "Predict the column for this value:\nValue: 'A'\nTable institution_grads:\ngrad_100;unitid;cohort;race;gender;grad_150;grad_100_rate\n144175;'M';'H';'2y all';'NULL';'1';'NULL'\n190770;'M';'B';'4y bach';'8';'12';'40.0'\n", "Response": "Column: race"}, {"Instruction": "Predict the column for this value:\nValue: '13 Jun 2014'\nTable repair:\nname;Notes\n\n", "Response": "Column: Launch_Date"}, {"Instruction": "Predict the column for this value:\nValue: 5\nTable repair_assignment:\ntechnician_id\n7\n3\n2\n", "Response": "Column: technician_id"}, {"Instruction": "Predict the column for this value:\nValue: 'MEN1 FRAMESHIFT TRUNCATION'\nTable frameshift_truncation:\nlabel;civic_variant_id\n'VHL P59fs (c.173_174insC)';'851'\n'VHL H191FS (c.571delC)';'1958'\n", "Response": "Column: label"}, {"Instruction": "Predict the column for this value:\nValue: 4\nTable pilot_record:\nAircraft_ID;Date;Record_ID\n\n", "Response": "Column: Pilot_ID"}, {"Instruction": "Predict the column for this value:\nValue: 'ministry'\nTable organization:\nofficial_website;instance_of;office_held_by_head_of_the_organization;headquarters_location;applies_to_jurisdiction;country\n'ministry';'Uruguay';'minister of Social Development';'Building of the Ministerio de Desarrollo Social';'https://www.gub.uy/ministerio-desarrollo-social/';'Uruguay'\n'executive branch';'Uruguay';'President of Uruguay';'Montevideo';'nan';'nan'\n", "Response": "Column: instance_of"}, {"Instruction": "Predict the column for this value:\nValue: 1877\nTable performance:\nLocation;Attendance\n'Verizon Center';1878\n", "Response": "Column: Attendance"}, {"Instruction": "Predict the column for this value:\nValue: 'natural number'\nTable centered_hexagonal_number:\nkit_linked_open_numbers_id;commons_category;description;numeric_value;prime_factor;number_of_decimal_digits\n'natural number';'397 (number)';397.0;'397';3.0;'397.0'\n", "Response": "Column: description"}, {"Instruction": "Predict the column for this value:\nValue: 1998\nTable aircraft:\nAircraft_ID;Order_Year;Powertrain;Manufacturer;Fleet_Series;Model;Fuel_Propulsion\n\n", "Response": "Column: Order_Year"}, {"Instruction": "Predict the column for this value:\nValue: 'natural number'\nTable centered_hexagonal_number:\nnumeric_value;prime_factor\n'natural number';5941.0;'13.0'\n", "Response": "Column: instance_of"}, {"Instruction": "Predict the column for this value:\nValue: 'Minister of the Interior of Uruguay'\nTable organization:\noffice_held_by_head_of_the_organization;description;label;headquarters_location;applies_to_jurisdiction;instance_of;inception;google_knowledge_graph_id;official_website;country\n'Ministry of Environment of Uruguay';'nan';'ministry';'Uruguay';'Minister of the Environment of Uruguay';'+2020-00-00T00:00:00Z';'nan';'nan';'Uruguay';'/g/11hkvrrbw7'\n", "Response": "Column: office_held_by_head_of_the_organization"}, {"Instruction": "Predict the column for this value:\nValue: 194.0\nTable machine:\nMachine_series;value_points;Class\n'125cc';'RS125';238.0\n", "Response": "Column: value_points"}, {"Instruction": "Predict the column for this value:\nValue: 'Ai'\nTable institution_grads:\nrace;grad_100\n'X';'128'\n'W';'NULL'\n'H';'NULL'\n", "Response": "Column: race"}, {"Instruction": "Predict the column for this value:\nValue: '970s'\nTable followed_by:\nfollows;description;has_list;instance_of;point_in_time;commons_category;followed_by\n\n", "Response": "Column: part_of"}, {"Instruction": "Predict the column for this value:\nValue: '2008-02-04'\nTable immunizations:\nDESCRIPTION;DATE\n'2009-04-26';'Influenza  seasonal  injectable  preservative free'\n", "Response": "Column: DATE"}, {"Instruction": "Predict the column for this value:\nValue: '0.4833333333333334'\nTable user_reviews:\nSentiment_Polarity;App;Sentiment;Translated_Review\n\n", "Response": "Column: Sentiment_Subjectivity"}, {"Instruction": "Predict the column for this value:\nValue: 'Uruguay'\nTable cabinet_of_uruguay:\nsubclass_of;applies_to_jurisdiction\n'environment minister';'Uruguay'\n'minister';'Uruguay'\n", "Response": "Column: applies_to_jurisdiction"}, {"Instruction": "Predict the column for this value:\nValue: 'foreign minister'\nTable organization_leader:\npart_of;applies_to_jurisdiction;label;instance_of;subclass_of;description\n'Director of the Office of Planning and Budget';'government position in Uruguay';'public office';'nan';'Uruguay';'Cabinet of Uruguay'\n", "Response": "Column: subclass_of"}, {"Instruction": "Predict the column for this value:\nValue: 'Positive'\nTable user_reviews:\nApp;Sentiment_Subjectivity;Translated_Review\n'HTC Sense Input-AR';'Very upset Not working htc phone ! Hope fix please';'Positive';'0.3'\n", "Response": "Column: Sentiment"}, {"Instruction": "Predict the column for this value:\nValue: 'Ministry of Labour and Social Welfare (Uruguay)'\nTable organization_leader:\ndescription;subclass_of;label;organization_directed_by_the_office_or_position\n'Minister of the Environment of Uruguay';'nan';'environment minister';'Ministry of Environment of Uruguay'\n'Minister of Industry, Energy and Mining (Uruguay)';'Ministerial position in Uruguay';'minister';'Ministry of Industry, Energy and Mining (Uruguay)'\n", "Response": "Column: organization_directed_by_the_office_or_position"}, {"Instruction": "Predict the column for this value:\nValue: 72103\nTable WorkOrderRouting:\nPlannedCost;ModifiedDate;ActualCost;ActualStartDate;ProductID;ActualEndDate;ScheduledEndDate;LocationID\n47209;748;60;'2013-10-11 00:00:00.0';'2013-10-01 00:00:00.0';'2013-10-11 00:00:00.0';49.0;49.0;'2013-10-11 00:00:00.0'\n", "Response": "Column: WorkOrderID"}, {"Instruction": "Predict the column for this value:\nValue: 'Domofond \u041d\u0435\u0434\u0432\u0438\u0436\u0438\u043c\u043e\u0441\u0442\u044c. \u041a\u0443\u043f\u0438\u0442\u044c, \u0441\u043d\u044f\u0442\u044c \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0443.'\nTable user_reviews:\nTranslated_Review;Sentiment;Sentiment_Polarity;Sentiment_Subjectivity\n\n", "Response": "Column: App"}, {"Instruction": "Predict the column for this value:\nValue: 'nan'\nTable user_reviews:\nTranslated_Review;Sentiment_Polarity;App\n'Cut the Rope FULL FREE';'I think awesome game u people like cut rope that''s ok adds come up. u want play game already means u want play game really quick put ads get heaps money make another great game';'0.12916666666666665'\n'File Manager';'PC File Transfer feature work Huawei P20 Lite.';'0.0'\n'Flow Free';'Everything awesome. I played game since I 8. This game life. If it, doing??!! If u write complaint cause love that. Nothing wrong.';'-0.05416666666666667'\n", "Response": "Column: Translated_Review"}, {"Instruction": "Predict the column for this value:\nValue: 'VHL'\nTable frameshift_truncation:\n\n\n", "Response": "Column: biological_variant_of"}, {"Instruction": "Predict the column for this value:\nValue: 2322104\nTable IMG_OBJ_ATT:\nATT_CLASS_ID;OBJ_SAMPLE_ID\n\n", "Response": "Column: IMG_ID"}, {"Instruction": "Predict the column for this value:\nValue: '10.8'\nTable institution_grads:\nrace;gender;cohort;grad_100;year;grad_100_rate;grad_cohort;unitid;grad_150\n195474;2009;'M';'X';'4y bach';'321';'204';'223';'63.6';'69.5'\n", "Response": "Column: grad_150_rate"}, {"Instruction": "Predict the column for this value:\nValue: 'United States'\nTable member:\nMember_ID;Role;Name\n'10';'Joshua Pittman';'United States';'Bass'\n'6';'Andrew Moten';'United States';'Viola'\n'3';'H\u00e9ctor Campana';'Argentina';'Violin'\n", "Response": "Column: Nationality"}, {"Instruction": "Predict the column for this value:\nValue: 'NUI Galway'\nTable head_of_state:\nmember_of_political_party;languages_spoken_written_or_signed;occupation;gnd_id\n'1190393557';'Democratic League of Kosovo';'jurist';'nan';'University of Pristina'\n", "Response": "Column: educated_at"}, {"Instruction": "Predict the column for this value:\nValue: 'nan'\nTable administrative_territorial_entity:\ncommons_category;official_website;geonames_id;freebase_id;inaturalist_place_id;country;topics_main_category;coordinate_location;instance_of;description;capital;area\n'district (bakhsh) in Mashhad County, Razavi Khorasan Province, Iran';'Iran';'district of Iran';'/m/0h3pfv3';'36.63333333333333';'nan';'nan';'nan';'nan';'nan';'nan';NULL;'nan'\n", "Response": "Column: openstreetmap_relation_id"}, {"Instruction": "Predict the column for this value:\nValue: 9.32499999999999928\nTable gymnast:\nHorizontal_Bar_Points;Rings_Points\n9.73700000000000009;9.51200000000000045;9.75\n9.75;9.75;9.72499999999999965\n9.625;9.625;9.73700000000000009\n", "Response": "Column: Pommel_Horse_Points"}, {"Instruction": "Predict the column for this value:\nValue: 265\nTable IMG_OBJ:\nW;H;X;OBJ_SAMPLE_ID;OBJ_CLASS_ID;IMG_ID\n2391595;1;293;76;25;14\n", "Response": "Column: OBJ_CLASS_ID"}, {"Instruction": "Predict the column for this value:\nValue: 2002\nTable institution_grads:\ngrad_100_rate;gender;grad_100;cohort;grad_150_rate;race;grad_150;grad_cohort\n2002;'M';'B';'4y other';'NULL';'NULL';'NULL';'NULL';'NULL'\n2002;'F';'W';'4y bach';'NULL';'NULL';'NULL';'NULL';'NULL'\n", "Response": "Column: year"}, {"Instruction": "Predict the column for this value:\nValue: 1\nTable IMG_OBJ_ATT:\nATT_CLASS_ID;IMG_ID\n2408725;698;2\n2347357;686;33\n2406482;580;3\n", "Response": "Column: OBJ_SAMPLE_ID"}, {"Instruction": "Predict the column for this value:\nValue: 6\nTable member_attendance:\n\n\n", "Response": "Column: Performance_ID"}, {"Instruction": "Predict the column for this value:\nValue: 3.0\nTable WorkOrderRouting:\nScheduledStartDate;LocationID;PlannedCost;WorkOrderID;ModifiedDate;ProductID;ScheduledEndDate;ActualCost;OperationSequence\n\n", "Response": "Column: ActualResourceHrs"}, {"Instruction": "Predict the column for this value:\nValue: 'Rb1'\nTable orthology:\nlabel\n'Runx1'\n'Atr'\n", "Response": "Column: label"}, {"Instruction": "Predict the column for this value:\nValue: 55680006\nTable encounters:\nDESCRIPTION;CODE;ID;DATE;PATIENT;REASONCODE\n'8fdfc464-eceb-48b8-921b-33f0e49dc081';'2017-03-05';'b78252ec-a5b0-46e0-bf3f-4cfbae092b10';308335008;'Patient encounter procedure';NULL\n", "Response": "Column: REASONCODE"}, {"Instruction": "Predict the column for this value:\nValue: '973'\nTable follows:\npoint_in_time;part_of;description;commons_category;followed_by;has_list;instance_of;topics_main_category\n'970';'year';'970';'year';'970s';'971';'Category:970';'+0970-01-01T00:00:00Z';'list of state leaders in 970'\n", "Response": "Column: label"}, {"Instruction": "Predict the column for this value:\nValue: 'Argentina'\nTable member:\nMember_ID;Role;Name\n'6';'Andrew Moten';'United States';'Viola'\n'9';'John Eubanks';'United States';'Cello'\n", "Response": "Column: Nationality"}, {"Instruction": "Predict the column for this value:\nValue: '2013-03-16 00:00:00.0'\nTable WorkOrder:\nStartDate;ScrappedQty;ProductID;ScrapReasonID;WorkOrderID;DueDate;ModifiedDate\n55969;813;0;'2013-12-26 00:00:00.0';'2014-01-06 00:00:00.0';NULL;'2014-01-13 00:00:00.0'\n", "Response": "Column: StartDate"}, {"Instruction": "Predict the column for this value:\nValue: 'Men1'\nTable orthology:\ngenomic_start;strand_orientation;mgi_gene_symbol;refseq_rna_id;genomic_end;description;ensembl_gene_id;encodes;found_in_taxon;ensembl_transcript_id;chromosome;expressed_in;subclass_of;label;cytogenetic_location\n'Atr';'protein-coding gene in the species Mus musculus';'protein-coding gene';'ENSMUSG00000032409';'house mouse';'NM_019864';'ENSMUST00000034980';'mouse chromosome 9';'Serine/threonine-protein kinase ATR';'Atr';'forward strand';'9|9 E3.3';'95739650';'95833834';'spermatocyte'\n'Atm';'protein-coding gene in the species Mus musculus';'protein-coding gene';'ENSMUSG00000034218';'house mouse';'NM_007499';'ENSMUST00000118282';'mouse chromosome 9';'Ataxia telangiectasia mutated';'Atm';'reverse strand';'9 A5.3|9 29.12 cM';'53350449';'53448040';'parotid gland'\n'Mlh1';'protein-coding gene in the species Mus musculus';'protein-coding gene';'ENSMUSG00000032498';'house mouse';'NM_026810';'ENSMUST00000035079';'mouse chromosome 9';'MutL homolog 1';'Mlh1';'reverse strand';'9 F3|9 60.92 cM';'111057296';'111100859';'saccule'\n", "Response": "Column: mgi_gene_symbol"}, {"Instruction": "Predict the column for this value:\nValue: 'Eau Claire High School'\nTable pilot:\nJoin_Year;Position;Team;Age;Nationality\n\n", "Response": "Column: Team"}, {"Instruction": "Predict the column for this value:\nValue: 'nan'\nTable wiki_loves_monuments_2015:\n\n'+2015-09-01T00:00:00Z'\n", "Response": "Column: start_time"}, {"Instruction": "Predict the column for this value:\nValue: 1\nTable IMG_OBJ_ATT:\nIMG_ID;ATT_CLASS_ID;OBJ_SAMPLE_ID\n2376871;697;18\n2354731;641;12\n2374496;694;3\n", "Response": "Column: OBJ_SAMPLE_ID"}, {"Instruction": "Predict the column for this value:\nValue: 1\nTable gymnast:\nRings_Points;Horizontal_Bar_Points;Parallel_Bars_Points;Total_Points\n6;9.47499999999999965;9.56199999999999939;9.55000000000000072;57.43599999999999995\n10;9.71199999999999975;9.625;9.55000000000000072;57.37400000000000233\n2;9.625;9.58699999999999975;9.73700000000000009;57.92399999999999949\n", "Response": "Column: Gymnast_ID"}, {"Instruction": "Predict the column for this value:\nValue: '2014-03-10 00:00:00.0'\nTable WorkOrder:\nModifiedDate;DueDate;WorkOrderID\n33669;'2013-04-26 00:00:00.0';'2013-04-26 00:00:00.0'\n", "Response": "Column: ModifiedDate"}, {"Instruction": "Predict the column for this value:\nValue: 'Hebei'\nTable twin_town:\ncommons_category;population;official_website;den_store_danske_id;located_in_the_administrative_territorial_entity;page_banner;category_for_maps;whos_on_first_id;local_dialing_code;twinned_administrative_body;geonames_id;online_pwn_encyclopedia_id;native_label;capital_of;gnd_id;label;factgrid_item_id\n\n", "Response": "Column: located_in_the_administrative_territorial_entity"}, {"Instruction": "Predict the column for this value:\nValue: 'ministry of health'\nTable organization:\nlabel;inception;description;official_website;applies_to_jurisdiction;country;instance_of;google_knowledge_graph_id\n\n", "Response": "Column: instance_of"}, {"Instruction": "Predict the column for this value:\nValue: 1\nTable pilot_record:\nAircraft_ID;Pilot_ID\n\n", "Response": "Column: Aircraft_ID"}, {"Instruction": "Predict the column for this value:\nValue: 'Houston'\nTable pilot:\nAge;Team;Nationality;Rank\n34;22;'United Kindom';'Virginia Union'\n34;32;'Nigeria';'Houston'\n6;40;'United States';'Eau Claire High School'\n", "Response": "Column: Team"}, {"Instruction": "Predict the column for this value:\nValue: '20'\nTable institution_grads:\nrace;grad_100;grad_100_rate;year;grad_150;grad_150_rate;grad_cohort;gender;unitid;cohort\n\n", "Response": "Column: grad_100"}, {"Instruction": "Predict the column for this value:\nValue: '1801 (number)'\nTable centered_hexagonal_number:\ndescription\n\n", "Response": "Column: commons_category"}, {"Instruction": "Predict the column for this value:\nValue: 'Uruguay'\nTable organization:\nheadquarters_location;inception;applies_to_jurisdiction\n\n", "Response": "Column: applies_to_jurisdiction"}, {"Instruction": "Predict the column for this value:\nValue: 'TSC complex subunit 1'\nTable biological_variant_of:\n\n\n", "Response": "Column: encodes"}, {"Instruction": "Predict the column for this value:\nValue: 'Santo Domingo'\nTable people:\nHeight;Hometown;Age;Name;People_ID\n2;'Lorraine S\u00faarez Carmona';21.0;1.75;'Bonao'\n10;'Endis de los Santos \u00c1lvarez';24.0;1.719999999999999974;'Los Alcarrizos'\n", "Response": "Column: Hometown"}, {"Instruction": "Predict the column for this value:\nValue: '970s'\nTable followed_by:\ninstance_of;has_list;part_of;topics_main_category;followed_by;label;follows;commons_category;description;point_in_time\n\n", "Response": "Column: part_of"}, {"Instruction": "Predict the column for this value:\nValue: 4\nTable member_attendance:\nPerformance_ID;Member_ID;Num_of_Pieces\n4;3;2\n1;4;4\n", "Response": "Column: Num_of_Pieces"}, {"Instruction": "Predict the column for this value:\nValue: '0.3611111111111111'\nTable user_reviews:\nTranslated_Review\n'nan';'nan'\n'Though works pretty efficiently, stops recording, randomly random time, I''m forced restart recording try represent cut process.';'0.5666666666666667'\n'nan';'nan'\n", "Response": "Column: Sentiment_Subjectivity"}, {"Instruction": "Predict the column for this value:\nValue: 9.67500000000000072\nTable gymnast:\nRings_Points\n9.52500000000000035;9.71199999999999975\n9.73700000000000009;9.51200000000000045\n9.67500000000000072;9.30000000000000072\n", "Response": "Column: Pommel_Horse_Points"}, {"Instruction": "Predict the column for this value:\nValue: 'Terrible support. Can''t log switching phones. Only shows Google Aerial maps. No artist imagery... Multiple unanswered emails. But sure quick take premium membership money every month. Time find new app.'\nTable user_reviews:\nTranslated_Review;Sentiment;App;Sentiment_Polarity\n\n", "Response": "Column: Translated_Review"}, {"Instruction": "Predict the column for this value:\nValue: 'natural number'\nTable centered_hexagonal_number:\nlabel;description;number_of_decimal_digits;instance_of;prime_factor;kit_linked_open_numbers_id;numeric_value\n'9577';'number';'natural number';9577.0;'9577';4.0;'61.0'\n", "Response": "Column: description"}, {"Instruction": "Predict the column for this value:\nValue: '975'\nTable follows:\ninstance_of;topics_main_category;commons_category;has_list;part_of;description\n'year';'971';'year';'970s';'972';'Category:971';'list of state leaders in 971'\n'year';'975';'year';'970s';'976';'Category:975';'list of state leaders in 975'\n", "Response": "Column: followed_by"}, {"Instruction": "Predict the column for this value:\nValue: '-0.175'\nTable user_reviews:\nApp\n'Google Photos';'-0.06666666666666665'\n", "Response": "Column: Sentiment_Polarity"}, {"Instruction": "Predict the column for this value:\nValue: 283\nTable IMG_OBJ:\nOBJ_SAMPLE_ID;X;IMG_ID;OBJ_CLASS_ID\n2381719;6;297;135\n", "Response": "Column: OBJ_CLASS_ID"}, {"Instruction": "Predict the column for this value:\nValue: 697\nTable IMG_OBJ_ATT:\n\n697\n597\n698\n", "Response": "Column: ATT_CLASS_ID"}, {"Instruction": "Predict the column for this value:\nValue: 'Endis de los Santos \u00c1lvarez'\nTable people:\nAge;Height\n'Marina Castro Medina';20.0;1.760000000000000008\n'Nadia Caba Rodr\u00edguez';22.0;1.790000000000000035\n'Ashley P\u00e9rez Cabrera';19.0;1.699999999999999956\n", "Response": "Column: Name"}, {"Instruction": "Predict the column for this value:\nValue: 'Microalbumin Creatinine Ratio'\nTable observations:\nENCOUNTER;VALUE;CODE;DESCRIPTION;UNITS\nNULL;'273724008';'Quality adjusted life years';11.0;'years'\n", "Response": "Column: DESCRIPTION"}, {"Instruction": "Predict the column for this value:\nValue: 'Eddie Collins'\nTable technician:\nName\n'Eddie Collins'\n'Joe Sewell'\n'Charlie Hollocher'\n", "Response": "Column: Name"}, {"Instruction": "Predict the column for this value:\nValue: '2003/01/04'\nTable pilot_record:\nPilot_ID;Aircraft_ID;Record_ID\n5;4;2;'2007/01/04'\n3;1;4;'2005/01/04'\n", "Response": "Column: Date"}, {"Instruction": "Predict the column for this value:\nValue: 24.0\nTable people:\nHeight;Age;Hometown\n19.0;1.699999999999999956;'Miami'\n", "Response": "Column: Age"}, {"Instruction": "Predict the column for this value:\nValue: 'VHL'\nTable frameshift_truncation:\nbiological_variant_of;genomic_start;civic_variant_id;chromosome;description\n'genetic variant';'MLH1';'756';'human chromosome 3';'37081726.0'\n", "Response": "Column: biological_variant_of"}, {"Instruction": "Predict the column for this value:\nValue: 2010\nTable institution_grads:\ngrad_cohort;grad_150;grad_100;grad_150_rate;race;gender;cohort;grad_100_rate;unitid\n217493;2006;'M';'A';'4y other';'NULL';'NULL';'NULL';'NULL';'NULL'\n118541;2003;'M';'Ai';'4y other';'0';'NULL';'0';'NULL';'NULL'\n110422;2002;'F';'B';'4y bach';'17';'1';'7';'5.9';'41.2'\n", "Response": "Column: year"}, {"Instruction": "Predict the column for this value:\nValue: '1'\nTable centered_hexagonal_number:\nkit_linked_open_numbers_id\n'9241'\n'1801'\n", "Response": "Column: kit_linked_open_numbers_id"}, {"Instruction": "Predict the column for this value:\nValue: 1\nTable SalesOrderDetail:\nrowguid;UnitPrice;SpecialOfferID\n\n", "Response": "Column: SpecialOfferID"}, {"Instruction": "Predict the column for this value:\nValue: 'RS125'\nTable machine:\nquality_rank;Making_Year;value_points;Team\n1998;'Team Givi- Honda LCR';'RS125';62.0;13\n1995;'Givi Racing- Honda';'RS125';65.0;3\n", "Response": "Column: Machine_series"}, {"Instruction": "Predict the column for this value:\nValue: 'list of state leaders in 969'\nTable follows:\ntopics_main_category;followed_by;has_list\n'972';'Category:971';'list of state leaders in 971'\n'971';'Category:970';'list of state leaders in 970'\n", "Response": "Column: has_list"}, {"Instruction": "Predict the column for this value:\nValue: '8480-6'\nTable observations:\nVALUE;DESCRIPTION;DATE;PATIENT;ENCOUNTER\n'2016-05-22';'d0afb501-b444-4146-8747-abd110dc33b4';'b9ce4f99-31e6-407f-abd0-0f0cc429b58b';'8462-4';'Diastolic Blood Pressure';84.0\n'2014-06-13';'dd30a0b1-e81e-4148-a1d6-5debd15fbc0c';'93292303-a976-4498-9cd0-9b5b02e34ac2';'8480-6';'Systolic Blood Pressure';113.0\n", "Response": "Column: CODE"}, {"Instruction": "Predict the column for this value:\nValue: 17\nTable IMG_OBJ_ATT:\nIMG_ID;ATT_CLASS_ID;OBJ_SAMPLE_ID\n2376762;661;15\n", "Response": "Column: OBJ_SAMPLE_ID"}, {"Instruction": "Predict the column for this value:\nValue: 'Nadia Caba Rodr\u00edguez'\nTable people:\nHometown;Age;Height;People_ID\n5;'Eve Tatiana Cruz Oviedo';19.0;1.719999999999999974;'Santo Domingo'\n3;'Ashley P\u00e9rez Cabrera';19.0;1.699999999999999956;'Miami'\n4;'Elizabeth Qui\u00f1\u00f3nez Aroyo';20.0;1.709999999999999965;'Santo Domingo'\n", "Response": "Column: Name"}, {"Instruction": "Predict the column for this value:\nValue: 'Diastolic Blood Pressure'\nTable observations:\nDATE;VALUE;UNITS;ENCOUNTER\n'2012-09-06';'5958316d-3ec8-4750-982e-8984b0d0999d';'Hemoglobin A1c/Hemoglobin.total in Blood';6.099999999999999645;'%'\n'2013-11-25';'3f523ba4-1e52-48e5-9ac3-f241a2d90746';'Calcium';9.109999999999999431;'mg/dL'\n", "Response": "Column: DESCRIPTION"}, {"Instruction": "Predict the column for this value:\nValue: '4050042-1'\nTable capital_city:\nimage;located_in_time_zone;gnd_id\n'Recife - In\u00edcio da Avenida Boa Viagem.jpg';'UTC\u221203:00';'4122627-6'\n", "Response": "Column: gnd_id"}, {"Instruction": "Predict the column for this value:\nValue: 'Encounter for symptom'\nTable encounters:\nCODE;REASONCODE;REASONDESCRIPTION;ID;PATIENT;DATE\n'bc563a46-7dff-4ab7-b3f2-409e1ae0c714';'2010-05-04';'4c12d1cb-e615-4e22-b247-be5b8ca68938';185349003;'Outpatient Encounter';NULL;NULL\n'cc04aa45-3415-44c9-837d-3a33d75d5c64';'2014-10-02';'855da053-4209-459c-b14b-bd9055ea8119';185349003;'Outpatient Encounter';NULL;NULL\n'8b63f742-c398-42ba-b004-4a5cff97380f';'2017-02-27';'0b81deef-90c2-458c-a5e0-4968432400ba';424619006;'Prenatal visit';72892002;'Normal pregnancy'\n", "Response": "Column: DESCRIPTION"}, {"Instruction": "Predict the column for this value:\nValue: '076fb0be-4d16-42b9-af3a-637e02703c30'\nTable observations:\nCODE;ENCOUNTER;VALUE;PATIENT;DATE;DESCRIPTION\n'2014-10-19';'b8d06309-71da-4e17-896d-4f05833dc51b';'92909d1a-fbbe-4f12-89a9-2d895c6a9986';'8462-4';'Diastolic Blood Pressure';78.0\n'2011-05-22';'c383f814-9ee4-4ca8-a0ff-ee1369f8d2ee';'a9431719-c592-44ad-a165-f1f75f9f7f6f';'2093-3';'Total Cholesterol';162.0\n'2011-07-05';'928b57ba-3408-46db-9d81-bd1460b2f35f';'a7d2e64a-d675-4ef2-8372-78766420f467';'2085-9';'High Density Lipoprotein Cholesterol';76.0\n", "Response": "Column: ENCOUNTER"}, {"Instruction": "Predict the column for this value:\nValue: '+0978-01-01T00:00:00Z'\nTable followed_by:\nhas_list\n\n", "Response": "Column: point_in_time"}, {"Instruction": "Predict the column for this value:\nValue: 3\nTable repair_assignment:\nMachine_ID\n\n", "Response": "Column: technician_id"}, {"Instruction": "Predict the column for this value:\nValue: 'RS125'\nTable machine:\nquality_rank;Machine_series;Machine_ID\n\n", "Response": "Column: Machine_series"}, {"Instruction": "Predict the column for this value:\nValue: 'nan'\nTable user_reviews:\n\n\n", "Response": "Column: Translated_Review"}, {"Instruction": "Predict the column for this value:\nValue: 1\nTable member_attendance:\nPerformance_ID\n\n", "Response": "Column: Num_of_Pieces"}, {"Instruction": "Predict the column for this value:\nValue: 2009.0\nTable technician:\nStarting_Year;Age\n2002.0;35\n2005.0;43\n2012.0;37\n", "Response": "Column: Starting_Year"}, {"Instruction": "Predict the column for this value:\nValue: 5\nTable aircraft:\nManufacturer;Fleet_Series;Powertrain;Model\n1;'Gillig';'Phantom (High Floor)';'444-464 (21)';'DD S50EGR Allison WB-400R'\n", "Response": "Column: Aircraft_ID"}, {"Instruction": "Predict the column for this value:\nValue: '974'\nTable followed_by:\nlabel;follows;part_of;point_in_time;topics_main_category;commons_category;description;instance_of;has_list\n'976';'year';'976';'year';'970s';'975';'977';'Category:976';'+0976-01-01T00:00:00Z';'list of state leaders in 976'\n'972';'year';'972';'year';'970s';'971';'973';'Category:972';'+0972-01-01T00:00:00Z';'list of state leaders in 972'\n", "Response": "Column: followed_by"}, {"Instruction": "Predict the column for this value:\nValue: 'Frameshift Truncation'\nTable frameshift_truncation:\ngenomic_start;label;genomic_end;chromosome\n\n", "Response": "Column: instance_of"}, {"Instruction": "Predict the column for this value:\nValue: 'Minister of Livestock, Agriculture, and Fisheries (Uruguay)'\nTable organization:\ninstance_of;country;google_knowledge_graph_id;description;inception;label;headquarters_location;applies_to_jurisdiction\n'Ministry of Transport and Public Works';'nan';'transport ministry';'Uruguay';'Minister of Transport and Public Works';'nan';'nan';'Uruguay';'/g/120mc0dm'\n'Ministry of Labour and Social Welfare (Uruguay)';'Uruguayan ministry';'ministry';'Uruguay';'Minister of Labour and Social Welfare (Uruguay)';'+1907-03-12T00:00:00Z';'nan';'Uruguay';'/g/11c5t1qz3_'\n'Ministry of Livestock, Agriculture, and Fisheries (Uruguay)';'ministry in the government of Uruguay';'agriculture ministry';'Uruguay';'Minister of Livestock, Agriculture, and Fisheries (Uruguay)';'+1935-03-19T00:00:00Z';'Montevideo';'Uruguay';'/g/12321bhf'\n", "Response": "Column: office_held_by_head_of_the_organization"}, {"Instruction": "Predict the column for this value:\nValue: 1.0\nTable performance:\nLocation;Host\n5.0;'Montreal Canadiens';'Bell Centre'\n4.0;'Pittsburgh Penguins';'Verizon Center'\n2.0;'New York Rangers';'Madison Square Garden'\n", "Response": "Column: Performance_ID"}, {"Instruction": "Predict the column for this value:\nValue: 37\nTable pilot:\nAge;Position\n40;'Forward-Center Team'\n", "Response": "Column: Age"}, {"Instruction": "Predict the column for this value:\nValue: 'NULL'\nTable institution_grads:\ngrad_100;gender;grad_150_rate;year;grad_100_rate;grad_150;cohort\n2012;'F';'4y other';'NULL';'NULL';'NULL';'NULL'\n2008;'B';'2y all';'NULL';'1';'NULL';'50.0'\n", "Response": "Column: grad_100"}, {"Instruction": "Predict the column for this value:\nValue: '7.0'\nTable centered_hexagonal_number:\nnumber_of_decimal_digits;label;instance_of\n'919';'natural number';3.0;'919.0'\n'631';'natural number';3.0;'631.0'\n", "Response": "Column: prime_factor"}, {"Instruction": "Predict the column for this value:\nValue: 126182\nTable institution_grads:\ngender;race;grad_cohort;year;grad_150_rate\n105899;2004;'M';'Ai';'NULL';'NULL'\n115490;2010;'F';'B';'9';'0.0'\n133997;2005;'M';'B';'NULL';'NULL'\n", "Response": "Column: unitid"}, {"Instruction": "Predict the column for this value:\nValue: 22\nTable IMG_OBJ:\nOBJ_CLASS_ID;OBJ_SAMPLE_ID;IMG_ID\n2343481;5;205\n2356071;10;56\n", "Response": "Column: OBJ_SAMPLE_ID"}, {"Instruction": "Predict the column for this value:\nValue: '547'\nTable centered_hexagonal_number:\ndescription;instance_of;kit_linked_open_numbers_id\n'number';'natural number';'3997'\n'natural number';'natural number';'2107'\n'number';'natural number';'6769'\n", "Response": "Column: kit_linked_open_numbers_id"}, {"Instruction": "Predict the column for this value:\nValue: 'Republic of Ireland'\nTable wiki_loves_monuments_2015:\n\n\n", "Response": "Column: country"}, {"Instruction": "Predict the column for this value:\nValue: 3\nTable member_attendance:\nPerformance_ID\n1\n", "Response": "Column: Performance_ID"}, {"Instruction": "Predict the column for this value:\nValue: 'Uruguay'\nTable organization:\n\n'Uruguay'\n", "Response": "Column: applies_to_jurisdiction"}, {"Instruction": "Predict the column for this value:\nValue: '10188260.0'\nTable frameshift_truncation:\ngenomic_end\n\n", "Response": "Column: genomic_end"}, {"Instruction": "Predict the column for this value:\nValue: 'mmHg'\nTable observations:\nDATE;CODE;UNITS;PATIENT;VALUE;ENCOUNTER\n'2009-08-19';'7620b7d9-1764-46a1-b509-5ef92d4f4899';'c0f1b2e2-4b9b-413b-b351-82ea2a9ad6d0';'39156-5';34.10000000000000142;'kg/m2'\n'2015-09-20';'7620b7d9-1764-46a1-b509-5ef92d4f4899';'6d288841-9de7-4a39-9724-e2c314b14b08';'20565-8';22.0;'mmol/L'\n'2011-07-07';'674ce427-5fc6-4231-b94c-ef8476da4476';'5669252a-6663-4724-9a7b-585d667cca49';'8462-4';83.0;'mmHg'\n", "Response": "Column: UNITS"}, {"Instruction": "Predict the column for this value:\nValue: 1\nTable member_attendance:\nPerformance_ID\n1\n3\n", "Response": "Column: Performance_ID"}, {"Instruction": "Predict the column for this value:\nValue: 2\nTable member_attendance:\nMember_ID\n\n", "Response": "Column: Num_of_Pieces"}, {"Instruction": "Predict the column for this value:\nValue: 'BRCA1 P968FS'\nTable frameshift_truncation:\nchromosome;biological_variant_of;hgvs_nomenclature;genomic_end;instance_of;label\n'VHL C162fs (c.483del)';'VHL';'human chromosome 3';'10191490.0';'Frameshift Truncation';'NC_000003.11:g.10191490del'\n", "Response": "Column: label"}, {"Instruction": "Predict the column for this value:\nValue: 9.41200000000000082\nTable gymnast:\nVault_Points;Pommel_Horse_Points;Floor_Exercise_Points;Rings_Points;Total_Points\n\n", "Response": "Column: Horizontal_Bar_Points"}, {"Instruction": "Predict the column for this value:\nValue: 'repair failed. Failed to achieve orbit'\nTable repair:\n\n\n", "Response": "Column: Notes"}, {"Instruction": "Predict the column for this value:\nValue: 'Ukraine'\nTable series:\ndescription;country\n\n", "Response": "Column: country"}]
+[
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: BILLABLEPERIOD\nValue: '2013-07-31'\nTable claims:\nTOTAL;PATIENT;ORGANIZATION;BILLABLEPERIOD;DIAGNOSIS;ID\n100;'20d01a18-36fc-40b2-8a1b-b69770017de7';'temp organization';'2015-12-11';NULL;'85fc54ef-d809-4584-9208-f5606e65b827'\n100;'3ec0fd23-4d17-4ead-a3c4-eac056df6b1c';'temp organization';'2016-08-14';NULL;'ea2bd1e8-c82a-41d3-bb6f-52bd9dc0807a'\n100;'62fba42d-b528-41e3-a66c-51675fb92f42';'temp organization';'2017-01-29';NULL;'1e7d8f5b-e75f-4fcc-aabf-209d8b905551'\n",
+        "Response": "Column: BILLABLEPERIOD"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: unitid\nValue: 105163\nTable institution_grads:\ngrad_100;grad_100_rate;unitid\n\n",
+        "Response": "Column: unitid"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Performance_ID\nValue: 1\nTable member_attendance:\nMember_ID;Num_of_Pieces\n7;3\n4;2\n",
+        "Response": "Column: Performance_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: NameStyle\nValue: 0\nTable Person:\nAdditionalContactInfo;Suffix;MiddleName;EmailPromotion;Title;Demographics;LastName;rowguid;PersonType;BusinessEntityID\nNULL;NULL;'P';2;NULL;'<IndividualSurvey xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey\"><TotalPurchaseYTD>-1.01</TotalPurchaseYTD><DateFirstPurchase>2003-12-24Z</DateFirstPurchase><BirthDate>1972-07-19Z</BirthDate><MaritalStatus>M</MaritalStatus><YearlyIncome>0-25000</YearlyIncome><Gender>F</Gender><TotalChildren>0</TotalChildren><NumberChildrenAtHome>0</NumberChildrenAtHome><Education>Partial High School</Education><Occupation>Manual</Occupation><HomeOwnerFlag>1</HomeOwnerFlag><NumberCarsOwned>2</NumberCarsOwned><CommuteDistance>1-2 Miles</CommuteDistance></IndividualSurvey>';'Pal';'4439A3BB-257E-4D76-AB0C-66273D81BAA2';'IN';8467\nNULL;NULL;'D';0;NULL;'<IndividualSurvey xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey\"><TotalPurchaseYTD>4647.0518</TotalPurchaseYTD><DateFirstPurchase>2002-07-16Z</DateFirstPurchase><BirthDate>1975-02-21Z</BirthDate><MaritalStatus>M</MaritalStatus><YearlyIncome>75001-100000</YearlyIncome><Gender>F</Gender><TotalChildren>0</TotalChildren><NumberChildrenAtHome>0</NumberChildrenAtHome><Education>Bachelors </Education><Occupation>Professional</Occupation><HomeOwnerFlag>0</HomeOwnerFlag><NumberCarsOwned>2</NumberCarsOwned><CommuteDistance>10+ Miles</CommuteDistance></IndividualSurvey>';'Madan';'6D2DA167-EAD1-4315-B8C2-13939A130B0D';'IN';3036\n",
+        "Response": "Column: NameStyle"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Sentiment_Polarity\nValue: '0.0'\nTable user_reviews:\nSentiment_Subjectivity;Translated_Review;App\n'0.9';'Since Android''s latest update, music messed songs. Songs wrong artist, album album art. I already deleted re-added songs.';'HTC Service \uff0d DLNA'\n",
+        "Response": "Column: Sentiment_Polarity"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: PATIENT\nValue: 'fcd78b0a-148a-4681-858f-41d78f633e75'\nTable observations:\nDATE;ENCOUNTER;Client;DESCRIPTION\n\n",
+        "Response": "Column: Client"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Class\nValue: '125cc'\nTable machine:\nClass;Making_Year;Machine_ID\n'125cc';1998;8\n'125cc';1995;5\n",
+        "Response": "Column: Class"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '972'\nTable follows:\npoint_in_time;topics_main_category;description;instance_of;has_list;part_of\n'+0975-01-01T00:00:00Z';'Category:975';'year';'year';'list of state leaders in 975';'970s'\n'+0972-01-01T00:00:00Z';'Category:972';'year';'year';'list of state leaders in 972';'970s'\n'+0970-01-01T00:00:00Z';'Category:970';'year';'year';'list of state leaders in 970';'970s'\n",
+        "Response": "Column: follows"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Role\nValue: 'Prime Violin'\nTable member:\nName;Role;Nationality;Member_ID\n'H\u00e9ctor Campana';'Violin';'Argentina';'4'\n'Luis Gonz\u00e1lez';'Violin';'Argentina';'2'\n'Corey Allen';'Cello';'United States';'8'\n",
+        "Response": "Column: Role"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: OBJ_CLASS_ID\nValue: 144\nTable IMG_OBJ:\nOBJ_CLASS_ID;W;Y\n221;140;73\n",
+        "Response": "Column: OBJ_CLASS_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 24.0\nTable people:\nName;Hometown;Height;People_ID;YearsOld\n'Marina Castro Medina';'Santo Domingo';1.760000000000000008;8;20.0\n",
+        "Response": "Column: YearsOld"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'lccn-n2017067882'\nTable head_of_state:\ndescription;isni;uid;country_of_citizenship;languages_spoken_written_or_signed;educated_at;library_of_congress_authority_id;member_of_political_party;spouse;given_name;gnd_id;commons_category;munzinger_person_id;occupation;image;label;opensanctions_id;place_of_birth;name_in_native_language;sex_or_gender;position_held;viaf_id;date_of_birth\n\n",
+        "Response": "Column: uid"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 4.0\nTable centered_hexagonal_number:\nlabel;prime_factor;kit_linked_open_numbers_id;number_of_decimal_digits;description\n\n",
+        "Response": "Column: number_of_decimal_digits"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 11\nTable member_attendance:\nPerformance_ID;Member_ID\n1;5\n6;4\n1;2\n",
+        "Response": "Column: Member_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Cabinet of Uruguay'\nTable organization_leader:\norganization_directed_by_the_office_or_position;subclass_of\n'Ministry of Public Health (Uruguay)';'minister'\n'Ministry of Environment of Uruguay';'environment minister'\n'Ministry of Economy and Finance (Uruguay)';'minister'\n",
+        "Response": "Column: part_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '4'\nTable member:\nUser_ID;Nationality\n'7';'United States'\n",
+        "Response": "Column: User_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Sentiment_Subjectivity\nValue: 'nan'\nTable user_reviews:\nSentiment_Polarity;Subjectivity_Level;Sentiment;Translated_Review;App\n\n",
+        "Response": "Column: Subjectivity_Level"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Marlboro Pileri - Honda'\nTable machine:\nClass;Machine_ID;quality_rank;Making_Year;value_points;Machine_series\n'125cc';7;8;1997;238.0;'RS125'\n'125cc';6;7;1996;126.0;'RS125'\n",
+        "Response": "Column: Team"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'year'\nTable follows:\npart_of;commons_category;has_list;point_in_time;followed_by;Type;topics_main_category;follows\n'970s';'974';'list of state leaders in 974';'+0974-01-01T00:00:00Z';'975';'year';'Category:974';'973'\n'970s';'971';'list of state leaders in 971';'+0971-01-01T00:00:00Z';'972';'year';'Category:971';'970'\n'970s';'978';'list of state leaders in 978';'+0978-01-01T00:00:00Z';'979';'year';'Category:978';'977'\n",
+        "Response": "Column: Type"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Sentiment_Polarity\nValue: 'nan'\nTable user_reviews:\n\n\n\n\n",
+        "Response": "Column: Sentiment_Polarity"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: rowguid\nValue: 'E03A95FB-96E1-4D01-AF75-13E8DC70E8F6'\nTable SalesOrderDetail:\nLineTotal\n9.0\n33.0\n",
+        "Response": "Column: rowguid"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'human chromosome 10'\nTable chromosome:\nshort_name;subclass_of;openalex_id;found_in_taxon;microsoft_academic_id;description;part_of;length;mesh_descriptor_id;follows;refseq_genome_id;label;instance_of\n\n",
+        "Response": "Column: followed_by"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: commons_category\nValue: '975'\nTable 970s:\nfollows;label;instance_of;topics_main_category;part_of\n'972';'973';'year';'Category:973';'970s'\n'973';'974';'year';'Category:974';'970s'\n",
+        "Response": "Column: commons_category"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '6'\nTable member:\nRole\n'Violin'\n'Violin'\n'Violin'\n",
+        "Response": "Column: Member_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 202\nTable IMG_OBJ:\nIMG_ID;OBJ_CLASS_ID;X;H;W;OBJ_SAMPLE_ID\n\n",
+        "Response": "Column: Y"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: category_of_associated_people\nValue: 'Category:People from Quimper'\nTable twin_town:\ngeonames_id;commons_gallery;viaf_id;capital_of;page_banner;nkcr_aut_id;label;coat_of_arms_image;whos_on_first_id;store_norske_leksikon_id;online_pwn_encyclopedia_id;gnd_id;instance_of;local_dialing_code;area\n\n",
+        "Response": "Column: category_of_associated_people"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '2014-04-16 00:00:00.0'\nTable WorkOrder:\nEndDate;StockedQty;StartDate;ScrappedQty;ModifiedDate;WorkOrderID\n\n",
+        "Response": "Column: StartDate"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Age\nValue: 32\nTable pilot:\nRank\n\n",
+        "Response": "Column: Age"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: App\nValue: 'Door Lock Screen'\nTable user_reviews:\nTranslated_Review;Sentiment_Subjectivity;Sentiment_Polarity;App;Sentiment\n'Lot people post fake images profile photo';'1.0';'-0.5';'Free Dating App & Flirt Chat - Match with Singles';'Negative'\n'Really! What I think game awesome, I play table pool time. This game real life pool. People complaining control, developers fault individual fault! If know manipulate, easy. 8 pool \u270c\u270cpeace men.';'0.5047619047619047';'0.15476190476190474';'8 Ball Pool';'Positive'\n'nan';'nan';'nan';'Daily Yoga - Yoga Fitness Plans';'nan'\n",
+        "Response": "Column: App"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Frameshift Truncation'\nTable frameshift_truncation:\n\n\n\n",
+        "Response": "Column: instance_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: genomic_end\nValue: '7579714.0'\nTable frameshift_truncation:\ndescription;label;chromosome;instance_of;genomic_start;genomic_end\n\n",
+        "Response": "Column: genomic_end"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Record_ID\nValue: 5\nTable pilot_record:\nAircraft_ID;Record_ID;Pilot_ID\n6;4;3\n",
+        "Response": "Column: Record_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 149\nTable IMG_REL:\nOBJ2_SAMPLE_ID;OBJ1_SAMPLE_ID;IMG_ID\n1;12;2372210\n15;28;2401147\n22;9;2323272\n",
+        "Response": "Column: PRED_CLASS_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 2.0\nTable performance:\nLocation;Host;Performance_ID\n'TD Garden';'Boston Bruins';1.0\n'Bell Centre';'Montreal Canadiens';5.0\n",
+        "Response": "Column: Performance_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Montevideo'\nTable organization:\napplies_to_jurisdiction;inception;office_held_by_head_of_the_organization;country;headquarters_location;description;official_website\n'Uruguay';'+1990-00-00T00:00:00Z';'Minister of Housing, Territorial Planning and Environment of Uruguay';'Uruguay';'nan';'Uruguayan ministry';'http://www.mvotma.gub.uy'\n'Uruguay';'+1935-03-19T00:00:00Z';'Minister of Livestock, Agriculture, and Fisheries (Uruguay)';'Uruguay';'Montevideo';'ministry in the government of Uruguay';'http://www.mgap.gub.uy/'\n'Uruguay';'+1967-03-01T00:00:00Z';'Director of the Office of Planning and Budget';'Uruguay';'Ciudad Vieja';'government agency in Uruguay';'https://www.opp.gub.uy/'\n",
+        "Response": "Column: headquarters_location"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'LIVING'\nTable all_prevalences:\n\n\n\n",
+        "Response": "Column: POPULATION_TYPE"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Advantage (Low Floor)'\nTable aircraft:\nAircraft_ID;Manufacturer;Fuel_Propulsion;Fleet_Series;Powertrain;Airframe\n\n",
+        "Response": "Column: Airframe"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: opensanctions_id\nValue: 'Q57336'\nTable head_of_state:\nworldcat_identities_id;educated_at;isni;munzinger_person_id;opensanctions_id;place_of_birth;sex_or_gender;commons_category;gnd_id;spouse;position_held;date_of_birth;member_of_political_party;name_in_native_language;label;library_of_congress_authority_id;instance_of;languages_spoken_written_or_signed\n'lccn-n82021520';'nan';'0000 0001 2144 7694';'21165.0';'Q37181';'Caet\u00e9s';'male';'Luiz In\u00e1cio Lula da Silva';'120309858';'Maria de Lurdes da Silva';'President of Brazil';'+1945-10-27T00:00:00Z';'Workers'' Party';'Luiz In\u00e1cio da Silva';'Luiz In\u00e1cio Lula da Silva';'n82021520';'human';'Portuguese'\n'lccn-n87904814';'University of Oslo';'0000 0000 7860 4067';'8065.0';'Q57287';'Skaugum';'male';'Harald V of Norway';'118901222';'Queen Sonja of Norway';'Monarch of Norway';'+1937-02-21T00:00:00Z';'nan';'Harald V';'Harald V of Norway';'n87904814';'human';'Norwegian'\n",
+        "Response": "Column: opensanctions_id"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Santo Domingo'\nTable people:\n\n\n\n",
+        "Response": "Column: Hometown"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Join_Year\nValue: 2008\nTable pilot:\nPilot_name;Rank\n'Hakeem Olajuwon';34\n'Patrick O''Bryant';13\n",
+        "Response": "Column: Join_Year"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Order_Year\nValue: 2000\nTable aircraft:\nManufacturer;Order_Year;Powertrain\n'Gillig';1992;'DD S50EGR Allison WB-400R'\n'Gillig';2002;'Cummins ISL Allison WB-400R'\n'Gillig';1996;'DD S50 Allison WB-400R'\n",
+        "Response": "Column: Order_Year"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: subclass_of\nValue: 'nan'\nTable cabinet_of_uruguay:\norganization_directed_by_the_office_or_position\n'Ministry of Livestock, Agriculture, and Fisheries (Uruguay)'\n'Ministry of Tourism (Uruguay)'\n",
+        "Response": "Column: subclass_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'year'\nTable followed_by:\ntype\n'year'\n'year'\n",
+        "Response": "Column: type"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Hometown\nValue: 'Santo Domingo'\nTable people:\nBirthplace;Age;People_ID;Height;Name\n'Santo Domingo';19.0;5;1.719999999999999974;'Eve Tatiana Cruz Oviedo'\n'Bonao';21.0;2;1.75;'Lorraine S\u00faarez Carmona'\n",
+        "Response": "Column: Birthplace"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: technician_id\nValue: 7\nTable repair_assignment:\nTechID;repair_ID;Machine_ID\n1;1;1\n5;5;2\n1;8;7\n",
+        "Response": "Column: TechID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '972'\nTable followed_by:\nfollowed_by;description;instance_of\n'977';'year';'year'\n'981';'year';'year'\n",
+        "Response": "Column: followed_by"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '0.0'\nTable user_reviews:\nTranslated_Review;Sentiment_Polarity;App;Sentiment\n'I hated mesedd phone mutch DO NOT GET THIS';'-0.9';'Dog Licks Screen Wallpaper';'Negative'\n'The worst! I can''t even log in! It take username I tried!! And I tried create account using 2 diff emails!';'-1.0';'AC - Tips & News for Android\u2122';'Negative'\n",
+        "Response": "Column: Sentiment_Subjectivity"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: number_of_decimal_digits\nValue: 3.0\nTable centered_hexagonal_number:\ndecimal_places\n1.0\n4.0\n",
+        "Response": "Column: decimal_places"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Syunik Province'\nTable place_of_birth:\nlocated_in_the_administrative_territorial_entity;freebase_id\n'Sibiu County';'/m/020blz'\n'Central District';'/m/024hh1'\n",
+        "Response": "Column: located_in_the_administrative_territorial_entity"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: followed_by\nValue: 'human chromosome 18'\nTable chromosome:\nopenalex_id;mesh_tree_code;description;commons_category\n'C2780907584';'A11.284.187.520.300.370.375';'human chromosome';'Human chromosome 13'\n'C165237769';'A11.284.187.520.300.370.385';'human chromosome';'Human chromosome 15'\n",
+        "Response": "Column: followed_by"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Cabinet of Uruguay'\nTable cabinet_of_uruguay:\nsubclass_of;description;part_of\n'nan';'nan';'Cabinet of Uruguay'\n",
+        "Response": "Column: part_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 928\nTable TransactionHistory:\nQuantity;TransactionType;ActualCost;TransactionDate;ModifiedDate\n1;'S';2295.0;'2014-01-19 00:00:00.0';'2014-01-19 00:00:00.0'\n3;'W';0.0;'2013-08-20 00:00:00.0';'2013-08-20 00:00:00.0'\n2;'S';195.0;'2013-07-31 00:00:00.0';'2013-07-31 00:00:00.0'\n",
+        "Response": "Column: ProductID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 5\nTable pilot_record:\nAircraft_ID\n4\n6\n",
+        "Response": "Column: Aircraft_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: instance_of\nValue: 'natural number'\nTable centered_hexagonal_number:\nprime_factor;type\n\n",
+        "Response": "Column: type"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '8269'\nTable prime_factor:\ninstance_of;prime_factor;number_of_decimal_digits\n'natural number';'3571';4.0\n'natural number';'31';2.0\n'prime number';'13';2.0\n",
+        "Response": "Column: prime_factor"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Cabinet of Uruguay'\nTable organization_leader:\npart_of;instance_of;label\n'Cabinet of Uruguay';'position';'minister of Social Development'\n",
+        "Response": "Column: part_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Fordham'\nTable pilot:\nPilot_name;Squad\n\n",
+        "Response": "Column: Squad"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 2365764\nTable IMG_OBJ:\nY;IMG_ID;OBJ_CLASS_ID;X\n0;2398023;272;5\n86;2377746;277;411\n174;2319619;253;172\n",
+        "Response": "Column: IMG_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 149\nTable IMG_REL:\nOBJ1_SAMPLE_ID;PRED_CLASS_ID;IMG_ID\n\n",
+        "Response": "Column: PRED_CLASS_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 1\nTable member_attendance:\nShow_ID\n3\n",
+        "Response": "Column: Show_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 1\nTable pilot_record:\nAircraft_ID;Pilot_ID\n4;1\n",
+        "Response": "Column: Pilot_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 2352607\nTable IMG_OBJ:\nX;OBJ_SAMPLE_ID;IMG_ID;OBJ_CLASS_ID;Y\n314;10;2335610;227;55\n300;22;2346530;14;176\n130;6;2417698;220;245\n",
+        "Response": "Column: IMG_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '576'\nTable institution_grads:\ncohort;grad_150;year;grad_150_rate;grad_100_rate\n\n",
+        "Response": "Column: grad_cohort"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Rings_Points\nValue: 9.625\nTable gymnast:\nPommel_Horse_Points;Floor_Exercise_Points;Rings_Points;Horizontal_Bar_Points;Parallel_Bars_Points;Gymnast_ID\n9.71199999999999975;9.65000000000000035;9.48700000000000009;9.41200000000000082;9.5;8\n9.73700000000000009;9.72499999999999965;9.51200000000000045;9.75;9.76200000000000045;1\n",
+        "Response": "Column: Rings_Points"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: label\nValue: 'Ministry of Social Development (Uruguay)'\nTable organization:\nlabel;official_website;instance_of;country;applies_to_jurisdiction;description;headquarters_location;office_held_by_head_of_the_organization\n'Ministry of Labour and Social Welfare (Uruguay)';'https://www.mtss.gub.uy/web/mtss/';'ministry';'Uruguay';'Uruguay';'Uruguayan ministry';'nan';'Minister of Labour and Social Welfare (Uruguay)'\n",
+        "Response": "Column: label"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: NULL\nTable Person:\nPostNominal\nNULL\nNULL\n",
+        "Response": "Column: PostNominal"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: IMG_ID\nValue: 2407552\nTable IMG_OBJ_ATT:\nATT_CLASS_ID\n690\n",
+        "Response": "Column: IMG_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Ashley P\u00e9rez Cabrera'\nTable people:\nHometown;Height;Name;People_ID;Age\n'Santo Domingo';1.709999999999999965;'Paul Hamm';1;24.0\n'Santo Domingo';1.709999999999999965;'Elizabeth Qui\u00f1\u00f3nez Aroyo';4;20.0\n'Santo Domingo';1.719999999999999974;'Eve Tatiana Cruz Oviedo';5;19.0\n",
+        "Response": "Column: Name"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: X\nValue: 452\nTable IMG_OBJ:\nX;IMG_ID;W;H;OBJ_CLASS_ID\n\n",
+        "Response": "Column: X"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '4c0bdf93-44d8-4811-8d1d-7a7452751d39'\nTable conditions:\nDESCRIPTION;ENCOUNTER\n'Sprain of ankle';'a7f3064d-612a-4fed-9724-941bb81e54c2'\n'Prediabetes';'e1084143-2b01-4308-aa51-c805cbc696f8'\n",
+        "Response": "Column: PATIENT"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: grad_cohort\nValue: '8'\nTable institution_grads:\n\n\n",
+        "Response": "Column: grad_cohort"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '976'\nTable followed_by:\ntopics_main_category;instance_of;has_list;followed_by;part_of;next_year;label\n'Category:978';'year';'list of state leaders in 978';'979';'970s';'977';'978'\n'Category:972';'year';'list of state leaders in 972';'973';'970s';'971';'972'\n",
+        "Response": "Column: next_year"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: description\nValue: 'year'\nTable 970s:\nhas_list;label;commons_category;summary\n'list of state leaders in 970';'970';'970';'year'\n'list of state leaders in 974';'974';'974';'year'\n",
+        "Response": "Column: summary"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '0'\nTable institution_grads:\ngrad_100;grad_cohort;grad_150_rate;grad_100_rate;race;completion_rate;year;unitid;cohort;gender\n'55';'1046';'32.4';'5.3';'X';'339';2006;228796;'4y bach';'F'\n'NULL';'0';'NULL';'NULL';'A';'0';2006;153427;'4y other';'M'\n'NULL';'47';'21.3';'NULL';'W';'10';2003;237525;'4y other';'M'\n",
+        "Response": "Column: completion_rate"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Oral temperature'\nTable observations:\nDESCRIPTION;ENCOUNTER;CODE;DATE;VALUE\n\n",
+        "Response": "Column: DESCRIPTION"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: ID\nValue: '8e0071bf-dd36-449e-aea2-435c48fa1f9f'\nTable claims:\nORGANIZATION;ClaimID;ENCOUNTER;DIAGNOSIS\n'temp organization';'77a25079-0753-4ddf-a896-61dbb8ed56a4';'44e4a771-6f44-4ab4-98a9-03936e514b45';NULL\n'temp organization';'5fd53ee0-63df-4c89-ba5d-262ad22d00bd';'767338b8-cbde-4684-971d-254ac43cee0b';NULL\n'temp organization';'56a17787-621c-4321-a81c-b50d16b1017c';'63b2d7b3-c597-4ede-b477-9b0515799cc8';NULL\n",
+        "Response": "Column: ClaimID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Horizontal_Bar_Points\nValue: 9.72499999999999965\nTable gymnast:\nGymnast_ID;Vault_Points\n10;9.55000000000000072\n",
+        "Response": "Column: Horizontal_Bar_Points"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 169479\nTable institution_grads:\ngrad_cohort;StudentID;cohort;gender;year;grad_150;grad_100;race\n'15';153737;'2y all';'F';2007;'4';'NULL';'A'\n'183';118277;'2y all';'F';2003;'114';'NULL';'H'\n",
+        "Response": "Column: StudentID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Frameshift Truncation'\nTable frameshift_truncation:\ninstance_of\n'Frameshift Truncation'\n",
+        "Response": "Column: instance_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: description\nValue: 'county in Ireland'\nTable administrative_territorial_entity:\ninaturalist_place_id;located_in_the_administrative_territorial_entity;description;locator_map_image;openstreetmap_relation_id;population;label;coordinate_location;capital;topics_main_category;instance_of;freebase_id;country;commons_category;geonames_id\n'40010.0';'Akershus';'former municipality in Akershus, Norway';'NO 0220 Asker.svg';'406137.0';61523.0;'Asker';'59.833056000000006';'Asker';'Category:Asker';'former municipality of Norway';'/m/018590';'Norway';'Asker (former municipality)';'3162656.0'\n'7293.0';'Brazil';'federated state of Brazil';'Pernambuco in Brazil.svg';'303702.0';9473266.0;'Pernambuco';'-8.34';'Recife';'Category:Pernambuco';'federative unit of Brazil';'/m/01hdpp';'Brazil';'Pernambuco';'3392268.0'\n",
+        "Response": "Column: description"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: instance_of\nValue: 'year'\nTable followed_by:\ntopics_main_category;point_in_time;part_of;follows;Class;commons_category;followed_by\n\n",
+        "Response": "Column: Class"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: H\nValue: 19\nTable IMG_OBJ:\nX;OBJ_CLASS_ID;IMG_ID;H;Y;W;OBJ_SAMPLE_ID\n\n",
+        "Response": "Column: H"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: grad_150\nValue: '0'\nTable institution_grads:\ngender;grad_100;grad_100_rate;race;unitid;year;grad_150_rate;cohort\n'B';'292';'91.3';'A';147767;2009;'96.3';'4y bach'\n'B';'NULL';'NULL';'W';149310;2009;'40.0';'2y all'\n",
+        "Response": "Column: grad_150"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '10183697.0'\nTable frameshift_truncation:\ncivic_variant_id\n'1964'\n",
+        "Response": "Column: genomic_end"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Team\nValue: 'Honda'\nTable machine:\nClass;Team\n'125cc';'Givi Racing- Honda'\n",
+        "Response": "Column: Team"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 2.0\nTable prime_factor:\n\n\n\n",
+        "Response": "Column: number_of_decimal_digits"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: People_ID\nValue: 9\nTable people:\nAge;People_ID\n21.0;2\n",
+        "Response": "Column: People_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: numeric_value\nValue: 6211.0\nTable centered_hexagonal_number:\nnumber_of_decimal_digits;label;description;decimal_value\n\n",
+        "Response": "Column: decimal_value"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 1998\nTable aircraft:\nManufacturer\n\n",
+        "Response": "Column: Order_Year"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: commons_category\nValue: '1519 (number)'\nTable centered_hexagonal_number:\ninstance_of;description;number_of_decimal_digits;commons_category\n'natural number';'number';4.0;'9919 (number)'\n'natural number';'number';4.0;'8587 (number)'\n",
+        "Response": "Column: commons_category"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 2\nTable repair:\nname;Launch_Date;Notes\n\n",
+        "Response": "Column: repair_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Using last 3 years.. really good app. But last 2 days see permanent notification \" touch open app\". I checked setting \" behaviour-&gt; shortcut status bar\" confirm nothing selected there.. still notification going away..'\nTable user_reviews:\nTranslated_Review\n'nan'\n'I madly love game. I mean anime girls + monsters = kawaii overload. The graphics top gameplay although bit repetitive. Girls really cute looks. Especially Mei. This game definitely otakus. Would love see anime based game. Waiting eagerly upcoming games.'\n",
+        "Response": "Column: Translated_Review"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Host\nValue: 'Pittsburgh Penguins'\nTable performance:\nDate;Attendance\n'February 5';1878\n'February 10';2173\n",
+        "Response": "Column: Host"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'G Cloud Backup'\nTable user_reviews:\nSentiment\n'Negative'\n'nan'\n",
+        "Response": "Column: App"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: located_in_the_administrative_territorial_entity\nValue: 'Armenia'\nTable administrative_territorial_entity:\ntopics_main_category;instance_of;commons_category;description;freebase_id;capital;area;geonames_id;coordinate_location\n'Category:Haskovo Province';'oblast of Bulgaria';'Haskovo Province';'oblast of Bulgaria';'/m/02syp3';'Haskovo';5543.0;'730436.0';'41.833333333333'\n'nan';'subdistrict of Israel';'Sub-district Haifa';'subdistrict in Haifa, Israel';'nan';'nan';294.0;'294798.0';'32.8'\n",
+        "Response": "Column: located_in_the_administrative_territorial_entity"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'lccn-n82021520'\nTable head_of_state:\nspouse;description;member_of_political_party;occupation;position_held;place_of_birth;library_of_congress_authority_id;educated_at;image;sex_or_gender;commons_category;isni;opensanctions_id;date_of_birth;viaf_id;gnd_id;munzinger_person_id;name_in_native_language;given_name;languages_spoken_written_or_signed;label;instance_of;country_of_citizenship\n'Queen Sonja of Norway';'King of Norway';'nan';'monarch';'Monarch of Norway';'Skaugum';'n87904814';'University of Oslo';'King Harald V of Norway Trondheim2010- 1.jpg';'male';'Harald V of Norway';'0000 0000 7860 4067';'Q57287';'+1937-02-21T00:00:00Z';'51672816';'118901222';'8065.0';'Harald V';'Harald';'Norwegian';'Harald V of Norway';'human';'Norway'\n'nan';'Latvian judge, jurist and politician';'Latvian Way';'judge';'President of Latvia';'Riga';'n90671309';'Riga State Gymnasium No.2';'\u0417\u0443\u0441\u0442\u0440\u0456\u0447 \u0413\u043b\u0430\u0432\u0438 \u0434\u0435\u0440\u0436\u0430\u0432\u0438 \u0437 \u041f\u0440\u0435\u0437\u0438\u0434\u0435\u043d\u0442\u043e\u043c \u041b\u0430\u0442\u0432\u0456\u0457 \u0442\u0430 \u041f\u0440\u0435\u043c\u2019\u0454\u0440-\u043c\u0456\u043d\u0456\u0441\u0442\u0440\u043e\u043c \u041f\u043e\u043b\u044c\u0449\u0456 05 (cropped).jpg';'male';'Egils Levits';'0000 0001 1642 8237';'Q348043';'+1955-06-30T00:00:00Z';'52318903';'134119169';'31779.0';'Egils Levits';'Egils';'Latvian';'Egils Levits';'human';'Soviet Union'\n'Queen Silvia of Sweden';'current king of Sweden (1973\u2013)';'nan';'naval officer';'Monarch of Sweden';'Haga Palace';'n79043923';'Uppsala University';'Crafoord Prize D81 9141 (42282165922) (cropped).jpg';'male';'Carl XVI Gustaf';'0000 0000 7860 7524';'Q45068';'+1946-04-30T00:00:00Z';'66442200';'119168014';'671.0';'Carl XVI Gustaf';'Carl';'Swedish';'Carl XVI Gustaf of Sweden';'human';'Sweden'\n",
+        "Response": "Column: worldcat_identities_id"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 7\nTable gymnast:\nTotal_Points;Floor_Exercise_Points;Pommel_Horse_Points;Horizontal_Bar_Points;Rings_Points;Gymnast_ID;Vault_Points;Parallel_Bars_Points\n57.6490000000000009;8.987000000000000099;9.75;9.72499999999999965;9.75;4;9.65000000000000035;9.78700000000000082\n",
+        "Response": "Column: Gymnast_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: NULL\nTable administrative_territorial_entity:\nofficial_website;topics_main_category;openstreetmap_relation_id;capital;Territory;inaturalist_place_id\n\n",
+        "Response": "Column: Territory"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 11779\nTable EmailAddress:\nBusinessEntityID;EmailAddressID;EmailAddress;ModifiedDate;rowguid\n5916;5111;'elijah25@adventure-works.com';'2014-06-30 00:00:00.0';'B6F94C3A-7F24-4FD5-85C2-764267BAA6F7'\n16487;15682;'gloria12@adventure-works.com';'2012-03-01 00:00:00.0';'6C9D4313-7FE0-4A8F-A8E5-0646E81DC693'\n",
+        "Response": "Column: BusinessEntityID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: LineTotal\nValue: 144.0\nTable SalesOrderDetail:\nUnitPrice;SubTotal;SalesOrderID\n35.0;35.0;67908\n38.0;695.0;69476\n",
+        "Response": "Column: SubTotal"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'MLH1 E13fs'\nTable frameshift_truncation:\nlabel;instance_of\n'VHL E160FS (c.479_480delAG)';'Frameshift Truncation'\n",
+        "Response": "Column: label"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: gender\nValue: 'F'\nTable institution_grads:\ncohort;year;gender;unitid;grad_150_rate;grad_cohort;grad_150;race;grad_100\n\n",
+        "Response": "Column: gender"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '2004/01/04'\nTable pilot_record:\nAircraft_ID\n4\n5\n",
+        "Response": "Column: Date"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'nan'\nTable user_reviews:\nSentiment_Subjectivity;Sentiment_Polarity;Sentiment\n'0.4142857142857143';'0.14285714285714288';'Positive'\n'0.5';'0.17045454545454544';'Positive'\n",
+        "Response": "Column: Sentiment_Polarity"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Israel'\nTable administrative_territorial_entity:\nfreebase_id;inaturalist_place_id;located_in_the_administrative_territorial_entity;topics_main_category;description;official_website;commons_category;openstreetmap_relation_id;capital;label;population;country;coordinate_location;geonames_id;locator_map_image;instance_of;area\n'/m/0nh2mgj';'19869.0';'Haskovo Province';'Category:Dimitrovgrad Municipality';'municipality of Bulgaria';'http://www.dimitrovgrad.bg/';'nan';'1947811.0';'Dimitrovgrad';'Dimitrovgrad Municipality';53557.0;'Bulgaria';'42.05';'732262.0';'Map of Dimitrovgrad municipality (Haskovo Province).png';'municipality of Bulgaria';567.6030000000001792\n'nan';'nan';'Kryvyi Rih Raion';'nan';'hromada in Dnipropetrovsk Oblast, Ukraine';'nan';'Kryvyi Rih municipality';'12578206.0';'Kryvyi Rih';'Kryvyi Rih urban hromada';622012.0;'Ukraine';'47.91963682969507';'nan';'nan';'hromada';444.3999999999999773\n",
+        "Response": "Column: label"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'M'\nTable institution_grads:\n\n\n\n\n",
+        "Response": "Column: gender"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: label\nValue: '1027'\nTable centered_hexagonal_number:\ndescription;numeric_value;instance_of;number_of_decimal_digits;commons_category\n\n",
+        "Response": "Column: label"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: chromosome\nValue: 'human chromosome 3'\nTable frameshift_truncation:\nchromosome;label;biological_variant_of;genomic_end;civic_variant_id;hgvs_nomenclature\n'human chromosome 3';'VHL E55FS (c.163_164delGA)';'VHL';'10183695.0';'764';'NP_000542.1:p.Glu55fs'\n'human chromosome 9';'TSC1 FRAMESHIFT TRUNCATION';'TSC1';'135820008.0';'124';'nan'\n",
+        "Response": "Column: chromosome"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: short_name\nValue: '15'\nTable chromosome:\npart_of;short_name;follows;subclass_of;freebase_id;label;instance_of;microsoft_academic_id;found_in_taxon;openalex_id;mesh_descriptor_id;topics_main_category;mesh_tree_code;followed_by;description;length;commons_category;refseq_genome_id\n'human genome';'21';'human chromosome 20';'autosome';'/m/08qwvm';'human chromosome 21';'chromosome';'137555145.0';'Homo sapiens';'C137555145';'D002891';'nan';'A11.284.187.520.300.505.510';'human chromosome 22';'human chromosome';46709983.0;'Human chromosome 21';'NC_000021.9'\n",
+        "Response": "Column: short_name"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 4\nTable member_attendance:\nNum_of_Pieces;Performance_ID;Member_ID\n4;4;1\n",
+        "Response": "Column: Member_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: follows\nValue: '973'\nTable follows:\ninstance_of;commons_category;followed;part_of;description;has_list;label\n'year';'977';'976';'970s';'year';'list of state leaders in 977';'977'\n",
+        "Response": "Column: followed"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: technician_id\nValue: 9.0\nTable technician:\nTeam\n'CLE'\n'PHA'\n'CHC'\n",
+        "Response": "Column: technician_id"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: People_ID\nValue: 10\nTable people:\nHometown;Height\n'Miami';1.699999999999999956\n",
+        "Response": "Column: People_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: IMG_ID\nValue: 2369670\nTable IMG_OBJ_ATT:\n\n\n\n",
+        "Response": "Column: IMG_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: ModifiedDate\nValue: '2013-09-11 00:00:00.0'\nTable EmailAddress:\n\n\n",
+        "Response": "Column: ModifiedDate"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'February 11'\nTable performance:\nShowDate\n'February 10'\n'February 7'\n'February 5'\n",
+        "Response": "Column: ShowDate"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: grad_150_rate\nValue: '0.0'\nTable institution_grads:\ngrad_100_rate;grad_100;unitid;grad_150_rate;grad_cohort;year;cohort;gender;grad_150;race\n'NULL';'NULL';218690;'8.2';'61';2005;'2y all';'F';'5';'W'\n'NULL';'0';132842;'NULL';'0';2007;'4y bach';'B';'0';'Ai'\n",
+        "Response": "Column: grad_150_rate"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: ENCOUNTER\nValue: '40f103ea-c2c7-4b71-a814-13924390fded'\nTable observations:\nPATIENT;Session;DATE\n'ca74c5b7-8401-42e6-b70e-0369c4041860';NULL;'2017-10-31'\n'459a154f-c001-4f1c-a37d-6bf557540e2c';'355b6e59-b6cd-4fdf-a200-9eda032f11c4';'2008-09-04'\n",
+        "Response": "Column: Session"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: description\nValue: 'Ministerial position in Uruguay'\nTable cabinet_of_uruguay:\npart_of;ministry_summary\n\n",
+        "Response": "Column: ministry_summary"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Potassium'\nTable observations:\nPATIENT;CODE;UNITS;DATE;Note\n'c8483126-6497-4896-a793-b37903c8a530';'18262-6';'mg/dL';'2011-05-23';'Low Density Lipoprotein Cholesterol'\n",
+        "Response": "Column: Note"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '2437'\nTable prime_factor:\nprime_factor;numeric_value;label;number_of_decimal_digits\n'8269';8269.0;'8269';4.0\n",
+        "Response": "Column: label"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '4y bach'\nTable institution_grads:\ngender\n'M'\n'M'\n",
+        "Response": "Column: cohort"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'nan'\nTable organization:\ncountry;office_held_by_head_of_the_organization\n'Uruguay';'Minister of Public Health (Uruguay)'\n'Uruguay';'Minister of Economy and Finance (Uruguay)'\n'Uruguay';'Minister of Labour and Social Welfare (Uruguay)'\n",
+        "Response": "Column: description"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'position'\nTable organization_leader:\norganization_directed_by_the_office_or_position\n'Uruguay Presidency'\n'Ministry of Public Health (Uruguay)'\n'Ministry of Labour and Social Welfare (Uruguay)'\n",
+        "Response": "Column: instance_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Making_Year\nValue: 1997\nTable machine:\nTeam;Making_Year\n'Givi Racing- Honda';1995\n",
+        "Response": "Column: Making_Year"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 2013.0\nTable technician:\nAge;Name;technician_id;Team\n43;'Tony Sewell';3.0;'CLE'\n",
+        "Response": "Column: Starting_Year"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'repair failed. Failed to achieve orbit'\nTable repair:\nname;Launch_Date;repair_ID;Notes\n'Discoverer';'21 Jan 2009';1;'repair Failed. Failed to achieve orbit'\n'OPS 3754';'19 Jun 2014';6;'Out-of-focus area on some film.'\n'OPS 3360';'18 Nov 2014';9;'Cameras operated successfully.'\n",
+        "Response": "Column: Notes"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '867ff303-0cbc-472b-ac70-0c7529fb72e9'\nTable observations:\nDESCRIPTION;PATIENT;VALUE\n'Calcium';'ad7d3821-8829-4f0e-abb1-6e7322c6ecb6';9.160000000000000142\n'Diastolic Blood Pressure';'595cf0d6-88a3-4b36-8beb-719d4fdeed32';114.0\n",
+        "Response": "Column: PATIENT"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: part_of\nValue: '970s'\nTable 970s:\ntopics_main_category;decade_of;point_in_time;followed_by;has_list;label;description;commons_category;follows\n'Category:975';'970s';'+0975-01-01T00:00:00Z';'976';'list of state leaders in 975';'975';'year';'975';'974'\n",
+        "Response": "Column: decade_of"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 500.0\nTable place_of_birth:\ntopics_main_category;coordinate_location;country;label;image;description;freebase_id;commons_category;geonames_id;official_website;located_in_the_administrative_territorial_entity;whos_on_first_id;population;instance_of;category_of_associated_people;area\n'Category:Limerick (city)';'52.6653';'Republic of Ireland';'Limerick';'Limerick1.JPG';'city in Ireland in the province of Munster';'/m/0fp5z';'Limerick';'2962943.0';'http://www.limerickcity.ie/';'County Limerick';'101751733.0';58319.0;'city';'Category:People from Limerick (city)';20.78999999999999915\n'Category:Kryvyi Rih';'47.90861111111112';'Ukraine';'Kryvyi Rih';'Kryvyi Rih Old Town.jpg';'city of regional significance in Dnipropetrovsk Oblast in central Ukraine';'/m/02xz4r';'Kryvyi Rih';'703845.0';'https://kr.gov.ua/';'Kryvyi Rih urban hromada';'101752837.0';603237.0;'big city';'Category:People from Kryvyi Rih';410.0\n",
+        "Response": "Column: elevation_above_sea_level"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '0.43090909090909096'\nTable user_reviews:\nSentiment_Polarity;Sentiment\n'nan';'nan'\n",
+        "Response": "Column: Sentiment_Subjectivity"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Sentiment_Polarity\nValue: 'nan'\nTable user_reviews:\nTranslated_Review;Sentiment;Polarity_Score;App;Sentiment_Subjectivity\n\n",
+        "Response": "Column: Polarity_Score"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'natural number'\nTable centered_hexagonal_number:\nkit_linked_open_numbers_id\n'3571'\n'1261'\n",
+        "Response": "Column: description"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: BusinessEntityID\nValue: 19381\nTable PersonCreditCard:\n\n\n\n",
+        "Response": "Column: BusinessEntityID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: office_held_by_head_of_the_organization\nValue: 'Minister of Tourism (Uruguay)'\nTable organization:\ninception;label;official_website;description;applies_to_jurisdiction;google_knowledge_graph_id;instance_of;country;headquarters_location\n'nan';'Ministry of National Defense (Uruguay)';'https://www.mdn.gub.uy/';'nan';'Uruguay';'/g/1226sjpz';'defence ministry';'Uruguay';'Montevideo'\n",
+        "Response": "Column: office_held_by_head_of_the_organization"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: Name\nValue: 'Elizabeth Qui\u00f1\u00f3nez Aroyo'\nTable people:\nHeight;People_ID;Name\n1.719999999999999974;10;'Endis de los Santos \u00c1lvarez'\n1.790000000000000035;6;'Nadia Caba Rodr\u00edguez'\n",
+        "Response": "Column: Name"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 1\nTable repair_assignment:\nrepair_ID;technician_id;Machine_ID\n2;1;3\n2;7;4\n",
+        "Response": "Column: repair_ID"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: biological_variant_of\nValue: 'VHL'\nTable frameshift_truncation:\nbiological_origin\n'CEBPA'\n'VHL'\n'MLH1'\n",
+        "Response": "Column: biological_origin"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: '2012-04-19 00:00:00.0'\nTable Address:\nStateProvinceID;PostalCode;City;rowguid;SpatialLocation;AddressID\n\n",
+        "Response": "Column: ModifiedDate"
+    },
+    {
+        "Instruction": "Predict the column for this value:\nSpecified column: No column specified\nValue: 'Systolic Blood Pressure'\nTable observations:\nSummary;UNITS;DATE\n\n",
+        "Response": "Column: Summary"
+    }
+]

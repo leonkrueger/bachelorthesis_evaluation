@@ -1,0 +1,20 @@
+{
+    "column_not_in_database": {
+        "existing_column_with_correct_name": 0.0,
+        "existing_column_with_wrong_name": 0.7824817518248175,
+        "new_column_with_correct_name": 0.016058394160583942,
+        "new_column_with_wrong_name": 0.20145985401459854
+    },
+    "different_name_in_database": {
+        "existing_column_with_correct_name": 0.618208516886931,
+        "existing_column_with_wrong_name": 0.35976505139500736,
+        "new_column_with_correct_name": 0.0,
+        "new_column_with_wrong_name": 0.022026431718061675
+    },
+    "column_in_database": {
+        "existing_column_with_correct_name": 0.5967976710334789,
+        "existing_column_with_wrong_name": 0.37117903930131,
+        "new_column_with_correct_name": 0.0,
+        "new_column_with_wrong_name": 0.03202328966521106
+    }
+}

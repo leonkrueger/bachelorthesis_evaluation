@@ -8,17 +8,21 @@ from numpy import average
 from util.adjustments import EXPERIMENTS
 from util.evaluation.accuracy import AccuracyEvaluation
 from util.evaluation.evaluation import Evaluation
-from util.evaluation.number_of_tables import NumberOfTablesEvaluation
+from util.evaluation.group_proportion_score import GroupProportionScore
+from util.evaluation.group_score import GroupScore
 from util.evaluation.null_values import NullValuesEvaluation
+from util.evaluation.number_of_tables import NumberOfTablesEvaluation
+from util.evaluation.split_proportion_score import SplitProportionScore
+from util.evaluation.split_score import SplitScore
 
 folder = "data"
 
 create_evaluation_plots = False
+create_evaluation_jsons = True
+print_result_dict = False
 create_individual_plots = False
-create_evaluation_jsons = False
-print_result_dict = True
 
-evaluation = AccuracyEvaluation()
+evaluation = GroupProportionScore()
 
 
 def plot_results(
@@ -154,7 +158,9 @@ def evaluate_experiment(
         with open(
             os.path.join(folder, path, "gold_standard_results.json"), encoding="utf-8"
         ) as gold_standard_file:
-            gold_standard = json.load(gold_standard_file)
+            if (file_content := gold_standard_file.read()) == "":
+                continue
+            gold_standard = json.loads(file_content)
 
         db_accuracies = evaluate_experiment_on_one_database(
             evaluation,

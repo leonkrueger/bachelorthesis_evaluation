@@ -9,25 +9,24 @@ from typing import Any
 
 from tqdm import tqdm
 
-from util.adjustments import EXPERIMENTS, Adjustments
+from util.adjustments import Adjustments
 from util.insert_query_parser import parse_insert_query
 from util.processing_utils import get_data_from_create_table
 
-db_folder = "data"
+db_folder = os.path.join("fine_tuning", "validation_databases")
 num_data_points_per_db = 100
-query_alterations = [(Adjustments.DELETE_COLUMN, 1.0)]
-experiment = EXPERIMENTS["finetuning_missing_tables"]
+query_alterations = [(Adjustments.DELETE_COLUMN, 0.0)]
 
 # Dump fine tuning data
 dataset_folder = os.path.join(
     "further_evaluation",
-    "error_cases_missing_columns_combined_columns",
+    "v_error_cases_missing_columns",
 )
 
 random = Random()
 
 with open(
-    os.path.join(db_folder, "column_synonyms.json"), encoding="utf-8"
+    os.path.join("fine_tuning", "column_synonyms.json"), encoding="utf-8"
 ) as synonyms_file:
     synonyms = json.load(synonyms_file)
 
@@ -141,8 +140,8 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
                 *list(
                     filter(
                         lambda pair: pair[1] is not None
-                        and pair[1].lower() != "nan"
-                        and pair[1].lower() != "'null'",
+                        and pair[1].lower() != "'nan'"
+                        and pair[1].lower() != "null",
                         zip(columns, values),
                     )
                 )
@@ -218,17 +217,17 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
 
 def generate_data():
     data = []
-    for path in tqdm(os.listdir(db_folder)):
+    for path in os.listdir(db_folder):
         subfolder = os.path.join(db_folder, path)
-        if (
-            not os.path.isdir(subfolder)
-            or path == "evaluation"
-            or ("databases" in experiment and not path in experiment["databases"])
-        ):
+        if not os.path.isdir(subfolder):
             continue
 
-        database_file = path[path.find("_") + 1 :] + ".sql"
-        data.extend(get_data_for_one_database(os.path.join(subfolder, database_file)))
+        for database in tqdm(os.listdir(subfolder)):
+            database_file = os.path.join(subfolder, database)
+            if not os.path.isfile(database_file) or not database_file.endswith(".sql"):
+                continue
+
+            data.extend(get_data_for_one_database(database_file))
 
     random.shuffle(data)
 
@@ -239,22 +238,12 @@ def generate_data():
     with open(
         os.path.join(
             dataset_folder,
-            "evaluation_data_columns_deleted" + ".json",
+            "evaluation_data_columns_not_deleted" + ".json",
         ),
         mode="w",
         encoding="utf-8",
     ) as fine_tuning_data_file:
         json.dump(data, fine_tuning_data_file)
-
-    # for strategy in experiment["strategies"]:
-    #     os.makedirs(os.path.join(dataset_folder, strategy), exist_ok=True)
-    #     open(
-    #         os.path.join(
-    #             dataset_folder, strategy, "results_" + experiment_input_file + ".json"
-    #         ),
-    #         mode="w",
-    #         encoding="utf-8",
-    #     ).close()
 
 
 generate_data()

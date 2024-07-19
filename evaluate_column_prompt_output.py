@@ -10,7 +10,7 @@ from util.insert_query_parser import parse_insert_query
 results_folder = os.path.join(
     "further_evaluation",
     "error_cases_missing_columns_combined_columns",
-    "missing_columns_12000_combined_columns",
+    "missing_columns_12000_csv_predicted_removed_from_table_state",
 )
 
 prediction_key = "predicted_column_names"
@@ -59,7 +59,7 @@ def evaluate_column_prediction_single_column(
         parsed_query = parse_insert_query(result["query"])
         prediction_pairs = list(
             zip(
-                result[prediction_key].split(";"),
+                result[prediction_key],
                 result["expected_column_names"],
                 (
                     parsed_query["columns"]
@@ -89,6 +89,28 @@ def evaluate_column_prediction_single_column(
     return correct_predictions / column_predictions
 
 
+def get_predictions(predicted_column_names, query_data):
+    # value_column_pairs = [
+    #     (prediction.split("->")[0].strip(), prediction.split("->")[1].strip())
+    #     for prediction in predicted_column_names.split("\n")
+    # ]
+
+    # predictions = []
+    # for value in query_data["values"][0]:
+    #     index, predicted = [
+    #         (i, pair[1])
+    #         for i, pair in enumerate(value_column_pairs)
+    #         if pair[0] == value
+    #     ][0]
+    #     value_column_pairs.pop(index)
+    #     predictions.append(predicted)
+    return (
+        predicted_column_names.split("\n")[0].split(";")
+        if isinstance(predicted_column_names, str)
+        else predicted_column_names
+    )
+
+
 results = {}
 
 for path in os.listdir(results_folder):
@@ -103,10 +125,16 @@ for path in os.listdir(results_folder):
     with open(results_file_path) as results_file:
         experiment_results = json.load(results_file)
 
+    for result in experiment_results:
+        result[prediction_key] = get_predictions(
+            result[prediction_key],
+            parse_insert_query(result["query"]),
+        )
+
     experiment_name = path[8:-5]
 
     wrong_number_of_columns_condition = lambda result, prediction_key: len(
-        result[prediction_key].split(";")
+        result[prediction_key]
     ) != len(result["expected_column_names"])
 
     aggregated_results = {}
@@ -116,20 +144,17 @@ for path in os.listdir(results_folder):
         prediction_key,
     )
 
-    def same_prediction_for_multiple_columns_condition(result, prediction_key) -> bool:
-        predicted_column_names = result[prediction_key].split(";")
-        return any(
-            [
-                any(
-                    [
-                        i != j
-                        and predicted_column_names[i] == predicted_column_names[j]
-                        for j in range(len(predicted_column_names))
-                    ]
-                )
-                for i in range(len(predicted_column_names))
-            ]
-        )
+    same_prediction_for_multiple_columns_condition = lambda result, prediction_key: any(
+        [
+            any(
+                [
+                    i != j and result[prediction_key][i] == result[prediction_key][j]
+                    for j in range(len(result[prediction_key]))
+                ]
+            )
+            for i in range(len(result[prediction_key]))
+        ]
+    )
 
     aggregated_results["same_prediction_for_multiple_columns"] = (
         evaluate_column_prediction(

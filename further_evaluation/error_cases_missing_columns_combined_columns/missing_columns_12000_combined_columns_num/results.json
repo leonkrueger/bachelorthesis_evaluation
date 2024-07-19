@@ -1,0 +1,46 @@
+{
+    "evaluation_data_columns_deleted": {
+        "wrong_number_of_columns": 0.5036927621861153,
+        "same_prediction_for_multiple_columns": 0.2688330871491876,
+        "column_in_database": {
+            "existing_column_with_correct_name": 0.36242884250474383,
+            "existing_column_with_wrong_name": 0.3674889310562935,
+            "new_column_with_correct_name": 0.0,
+            "new_column_with_wrong_name": 0.2700822264389627
+        },
+        "column_not_in_database": {
+            "existing_column_with_correct_name": 0.0,
+            "existing_column_with_wrong_name": 0.3992673992673993,
+            "new_column_with_correct_name": 0.1684981684981685,
+            "new_column_with_wrong_name": 0.43223443223443225
+        },
+        "different_name_in_database": {
+            "existing_column_with_correct_name": 0.36242884250474383,
+            "existing_column_with_wrong_name": 0.3674889310562935,
+            "new_column_with_correct_name": 0.0,
+            "new_column_with_wrong_name": 0.2700822264389627
+        }
+    },
+    "evaluation_data": {
+        "wrong_number_of_columns": 0.36257309941520466,
+        "same_prediction_for_multiple_columns": 0.17251461988304093,
+        "column_in_database": {
+            "existing_column_with_correct_name": 0.8534031413612565,
+            "existing_column_with_wrong_name": 0.08965968586387435,
+            "new_column_with_correct_name": 0.0,
+            "new_column_with_wrong_name": 0.05693717277486911
+        },
+        "column_not_in_database": {
+            "existing_column_with_correct_name": 0.0,
+            "existing_column_with_wrong_name": 0.11947513812154696,
+            "new_column_with_correct_name": 0.8238950276243094,
+            "new_column_with_wrong_name": 0.05662983425414365
+        },
+        "different_name_in_database": {
+            "existing_column_with_correct_name": 0.39283387622149835,
+            "existing_column_with_wrong_name": 0.10749185667752444,
+            "new_column_with_correct_name": 0.0,
+            "new_column_with_wrong_name": 0.4996742671009772
+        }
+    }
+}

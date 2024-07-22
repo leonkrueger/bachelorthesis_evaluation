@@ -1,5 +1,10 @@
 import io
 import tokenize
+from typing import Any
+
+
+def is_usable_value(value: str | Any) -> bool:
+    return value is not None and value.lower() != "'nan'" and value.lower() != "null"
 
 
 def remove_quotes(attribute: str, use_mysql_quotes: bool = True) -> str:

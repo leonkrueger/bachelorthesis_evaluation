@@ -14,11 +14,12 @@ from tqdm import tqdm
 
 from util.adjustments import FINE_TUNING, Adjustments
 from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table
+from util.processing_utils import get_data_from_create_table, is_usable_value
 
 # !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
 name = "missing_columns"
+file_suffix = "_own"
 generate_validation_data = False
 fine_tuning_data_points = 12000
 validation_data_points = 150
@@ -60,7 +61,7 @@ def apply_alterations_to_state(
             new_column_names.append(
                 (
                     random.choice(synonyms[column])
-                    if len(synonyms[column]) > 0
+                    if column in synonyms.keys() and len(synonyms[column]) > 0
                     else column
                 )
             )
@@ -69,10 +70,11 @@ def apply_alterations_to_state(
     return new_column_names, old_column_names
 
 
-def get_csv_string_for_table(
+def get_table_string(
     queries: list[tuple[Any, str, list[str]]],
     table_name: str,
     all_columns: list[str],
+    table_columns_new_names: list[str],
     table_columns_old_names: list[str],
     current_values: list[str],
 ) -> str:
@@ -94,7 +96,15 @@ def get_csv_string_for_table(
         for row_index, row in enumerate(parsed_rows):
             rows_with_filtered_columns[row_index].append(row["values"][0][column_index])
     # Return the csv string of these rows
-    return "\n".join([";".join(row) for row in rows_with_filtered_columns])
+    # return f"Table {table_name}:\n{';'.join(table_columns_new_names)}\n" + "\n".join(
+    #     [";".join(row) for row in rows_with_filtered_columns]
+    # )
+    return f"Table {table_name}:\n" + "\n".join(
+        [
+            f"Column {column_name}, Example values: [{', '.join([row[column_index] for row in rows_with_filtered_columns if is_usable_value(row[column_index])])}]"
+            for column_index, column_name in enumerate(table_columns_new_names)
+        ]
+    )
 
 
 def get_data_for_one_data_source(
@@ -143,7 +153,7 @@ def get_data_for_one_data_source(
                         queries.append((query, table_name, columns))
 
             # Sample data points from all queries and create fine tuning data
-            for query, table_name, columns in random.sample(
+            for query, table_name, all_table_columns in random.sample(
                 queries, min(data_points_per_database, len(queries))
             ):
                 parsed_query = parse_insert_query(query)
@@ -153,10 +163,8 @@ def get_data_for_one_data_source(
                 query_columns, query_values = zip(
                     *list(
                         filter(
-                            lambda pair: pair[1] is not None
-                            and pair[1].lower() != "nan"
-                            and pair[1].lower() != "'null'",
-                            zip(columns, values),
+                            lambda pair: is_usable_value(pair[1]),
+                            zip(all_table_columns, values),
                         )
                     )
                 )
@@ -180,7 +188,7 @@ def get_data_for_one_data_source(
                 query_str = f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(parsed_query['values'])});\n"
 
                 table_columns, old_column_names = apply_alterations_to_state(
-                    columns,
+                    all_table_columns,
                     (
                         synonyms[path[:-4]][table_name]
                         if table_name in synonyms[path[:-4]]
@@ -188,41 +196,52 @@ def get_data_for_one_data_source(
                     ),
                 )
 
-                table_str = (
-                    f"Table {table_name}:\n{';'.join(table_columns)}\n"
-                    + get_csv_string_for_table(
-                        queries,
-                        table_name,
-                        columns,
-                        old_column_names,
-                        values,
+                table_str = get_table_string(
+                    queries,
+                    table_name,
+                    all_table_columns,
+                    table_columns,
+                    old_column_names,
+                    values,
+                )
+
+                correct_predictions = [
+                    (
+                        table_columns[old_column_names.index(column)]
+                        if column in old_column_names
+                        else column
                     )
-                )
+                    for column in query_columns
+                ]
 
-                correct_prediction = ";".join(
-                    [
-                        (
-                            table_columns[old_column_names.index(column)]
-                            if column in old_column_names
-                            else column
-                        )
-                        for column in query_columns
-                    ]
+                # Predict one column with each prompt
+                column_index_to_predict = int(
+                    math.floor(len(correct_predictions) * random.random())
                 )
-
-                # instruction = (
-                #     "Predict the column for this value:\n"
-                #     f"Specified column: {old_column_name if 'columns' in parsed_query.keys() else 'No column specified'}\n"
-                #     f"Value: {value}\n"
-                #     f"{table_str}\n"
-                # )
-                # response = f"Column: {correct_prediction}"
                 instruction = (
-                    "Predict the columns for this query:\n"
+                    "Predict the column for this value:\n"
                     f"Query: {query_str}\n"
+                    # f"{table_str}\n"
+                    # f"Already predicted columns: {', '.join(correct_predictions[:column_index_to_predict])}\n"
+                    f"Specified column: {query_columns[column_index_to_predict] if 'columns' in parsed_query.keys() else 'No column specified'}\n"
+                    f"Value: {query_values[column_index_to_predict]}\n"
                     f"{table_str}\n"
                 )
-                response = f"Columns: {correct_prediction}"
+                response = f"Column: {correct_predictions[column_index_to_predict]}"
+
+                # Predict all columns with one prompt
+                # instruction = (
+                #     "Predict the columns for this query:\n"
+                #     f"Query: {query_str}\n"
+                #     f"{table_str}\n"
+                # )
+                # response = ";".join(correct_predictions)
+                # response = ";".join(
+                #     [
+                #         f"{value}={column}"
+                #         for column, value in zip(correct_predictions, query_values)
+                #     ]
+                # )
 
                 if len(instruction) > 3000:
                     continue
@@ -263,9 +282,9 @@ with open(
         "fine_tuning",
         "validation_datasets" if generate_validation_data else "datasets",
         (
-            f"{name}_combined_columns.json"
+            f"{name}{file_suffix}.json"
             if generate_validation_data
-            else f"{name}_{fine_tuning_data_points}_combined_columns.json"
+            else f"{name}_{fine_tuning_data_points}{file_suffix}.json"
         ),
     ),
     mode="w",

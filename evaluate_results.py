@@ -10,8 +10,8 @@ from util.evaluation.accuracy import AccuracyEvaluation
 from util.evaluation.evaluation import Evaluation
 from util.evaluation.group_proportion_score import GroupProportionScore
 from util.evaluation.group_score import GroupScore
-from util.evaluation.null_values import NullValuesEvaluation
 from util.evaluation.number_of_tables import NumberOfTablesEvaluation
+from util.evaluation.sparsity import SparsityEvaluation
 from util.evaluation.split_proportion_score import SplitProportionScore
 from util.evaluation.split_score import SplitScore
 

@@ -1,7 +1,8 @@
 {
     "evaluation_data_columns_deleted": {
         "wrong_number_of_columns": 0.4977843426883309,
-        "same_prediction_for_multiple_columns": 0.2998522895125554,
+        "query_with_any_duplicate_prediction": 0.2998522895125554,
+        "duplicate_predictions": 0.024706358849736737,
         "column_in_database": {
             "existing_column_with_correct_name": 0.47842401500938087,
             "existing_column_with_wrong_name": 0.28205128205128205,
@@ -23,7 +24,8 @@
     },
     "evaluation_data": {
         "wrong_number_of_columns": 0.2631578947368421,
-        "same_prediction_for_multiple_columns": 0.12134502923976608,
+        "query_with_any_duplicate_prediction": 0.12134502923976608,
+        "duplicate_predictions": 0.0035639073384092015,
         "column_in_database": {
             "existing_column_with_correct_name": 0.9445771619684663,
             "existing_column_with_wrong_name": 0.036311514572384136,

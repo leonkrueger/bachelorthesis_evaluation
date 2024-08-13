@@ -1,0 +1,430 @@
+{
+    "evaluation_data_columns_deleted": {
+        "wrong_number_of_columns": 0.0,
+        "query_with_any_duplicate_prediction": 0.4948875255623722,
+        "0": {
+            "duplicate_predictions": 0.15018820577164366,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.18098859315589352,
+                "existing_column_with_wrong_name": 0.5188212927756654,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.30019011406844104
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6284132841328414,
+                "new_column_with_correct_name": 0.007011070110701107,
+                "new_column_with_wrong_name": 0.36457564575645757
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.18098859315589352,
+                "existing_column_with_wrong_name": 0.5188212927756654,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.30019011406844104
+            }
+        },
+        "1": {
+            "duplicate_predictions": 0.15082431736218443,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.17732160312805473,
+                "existing_column_with_wrong_name": 0.5206256109481916,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3020527859237537
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6243865609664024,
+                "new_column_with_correct_name": 0.006417516043790109,
+                "new_column_with_wrong_name": 0.36919592298980747
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.17732160312805473,
+                "existing_column_with_wrong_name": 0.5206256109481916,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3020527859237537
+            }
+        },
+        "2": {
+            "duplicate_predictions": 0.15397877984084882,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.18065034122842233,
+                "existing_column_with_wrong_name": 0.5198715375351265,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29947812123645123
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6254886630179828,
+                "new_column_with_correct_name": 0.007036747458952306,
+                "new_column_with_wrong_name": 0.3674745895230649
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.18065034122842233,
+                "existing_column_with_wrong_name": 0.5198715375351265,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29947812123645123
+            }
+        },
+        "3": {
+            "duplicate_predictions": 0.15126607450616467,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.18212445501387237,
+                "existing_column_with_wrong_name": 0.5241775663892192,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29369797859690844
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6343612334801763,
+                "new_column_with_correct_name": 0.006407689227072487,
+                "new_column_with_wrong_name": 0.3592310772927513
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.18212445501387237,
+                "existing_column_with_wrong_name": 0.5241775663892192,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29369797859690844
+            }
+        },
+        "4": {
+            "duplicate_predictions": 0.14813833311249502,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.18369371156516565,
+                "existing_column_with_wrong_name": 0.5248958539972228,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.2914104344376116
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6288906624102155,
+                "new_column_with_correct_name": 0.005985634477254589,
+                "new_column_with_wrong_name": 0.36512370311252995
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.18369371156516565,
+                "existing_column_with_wrong_name": 0.5248958539972228,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.2914104344376116
+            }
+        },
+        "5": {
+            "duplicate_predictions": 0.1430791143338081,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.18562066306861988,
+                "existing_column_with_wrong_name": 0.5256360832690825,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.2887432536622976
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6315581854043393,
+                "new_column_with_correct_name": 0.00631163708086785,
+                "new_column_with_wrong_name": 0.3621301775147929
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.18562066306861988,
+                "existing_column_with_wrong_name": 0.5256360832690825,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.2887432536622976
+            }
+        },
+        "6": {
+            "duplicate_predictions": 0.14893340270551508,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.187207488299532,
+                "existing_column_with_wrong_name": 0.5206708268330733,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.2921216848673947
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.630859375,
+                "new_column_with_correct_name": 0.006640625,
+                "new_column_with_wrong_name": 0.3625
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.187207488299532,
+                "existing_column_with_wrong_name": 0.5206708268330733,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.2921216848673947
+            }
+        },
+        "7": {
+            "duplicate_predictions": 0.14938712972420837,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.18958893584325778,
+                "existing_column_with_wrong_name": 0.5167114867460623,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29369957741068
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.627951256664128,
+                "new_column_with_correct_name": 0.006854531607006854,
+                "new_column_with_wrong_name": 0.3651942117288652
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.18958893584325778,
+                "existing_column_with_wrong_name": 0.5167114867460623,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29369957741068
+            }
+        },
+        "8": {
+            "duplicate_predictions": 0.1530346444386559,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.19318181818181818,
+                "existing_column_with_wrong_name": 0.5146943573667712,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29212382445141066
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6258741258741258,
+                "new_column_with_correct_name": 0.006993006993006993,
+                "new_column_with_wrong_name": 0.36713286713286714
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.19318181818181818,
+                "existing_column_with_wrong_name": 0.5146943573667712,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29212382445141066
+            }
+        },
+        "9": {
+            "duplicate_predictions": 0.15135630978901848,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.1903257650542942,
+                "existing_column_with_wrong_name": 0.5153010858835143,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29437314906219153
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.6278254091971941,
+                "new_column_with_correct_name": 0.006625097427903352,
+                "new_column_with_wrong_name": 0.36554949337490256
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.1903257650542942,
+                "existing_column_with_wrong_name": 0.5153010858835143,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.29437314906219153
+            }
+        }
+    },
+    "evaluation_data": {
+        "wrong_number_of_columns": 0.0,
+        "query_with_any_duplicate_prediction": 0.5343811394891945,
+        "0": {
+            "duplicate_predictions": 0.1545935309310048,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8598513011152417,
+                "existing_column_with_wrong_name": 0.1275092936802974,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.012639405204460967
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.4550766983199416,
+                "new_column_with_correct_name": 0.5135135135135135,
+                "new_column_with_wrong_name": 0.031409788166544925
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3448020717721051,
+                "existing_column_with_wrong_name": 0.2981871994080651,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3570107288198298
+            }
+        },
+        "1": {
+            "duplicate_predictions": 0.15617417954284254,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8557617942768755,
+                "existing_column_with_wrong_name": 0.131477184841454,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.012761020881670533
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.45492111194590534,
+                "new_column_with_correct_name": 0.5138993238166792,
+                "new_column_with_wrong_name": 0.031179564237415476
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3341076267905536,
+                "existing_column_with_wrong_name": 0.30391018195896247,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3619821912504839
+            }
+        },
+        "2": {
+            "duplicate_predictions": 0.15583563082578442,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8556741795175958,
+                "existing_column_with_wrong_name": 0.1312771846579676,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.013048635824436536
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.4603921568627451,
+                "new_column_with_correct_name": 0.5070588235294118,
+                "new_column_with_wrong_name": 0.032549019607843135
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3384554767533491,
+                "existing_column_with_wrong_name": 0.3037825059101655,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.35776201733648544
+            }
+        },
+        "3": {
+            "duplicate_predictions": 0.15568004168837937,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8592964824120602,
+                "existing_column_with_wrong_name": 0.12872052570545034,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.01198299188248937
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.4573243350535927,
+                "new_column_with_correct_name": 0.5113140134974196,
+                "new_column_with_wrong_name": 0.03136165144898769
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3463035019455253,
+                "existing_column_with_wrong_name": 0.3035019455252918,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.35019455252918286
+            }
+        },
+        "4": {
+            "duplicate_predictions": 0.15424853278897677,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8608695652173913,
+                "existing_column_with_wrong_name": 0.1266540642722117,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.012476370510396975
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.46072270227808326,
+                "new_column_with_correct_name": 0.507069913589945,
+                "new_column_with_wrong_name": 0.03220738413197172
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3475632791839819,
+                "existing_column_with_wrong_name": 0.3041178692859841,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.348318851530034
+            }
+        },
+        "5": {
+            "duplicate_predictions": 0.15354725495111557,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8594213649851632,
+                "existing_column_with_wrong_name": 0.1279673590504451,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.012611275964391691
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.457164809834806,
+                "new_column_with_correct_name": 0.5113330772185939,
+                "new_column_with_wrong_name": 0.031502112946600075
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3523702874206794,
+                "existing_column_with_wrong_name": 0.30011198208286677,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3475177304964539
+            }
+        },
+        "6": {
+            "duplicate_predictions": 0.15308796007485964,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8606983655274889,
+                "existing_column_with_wrong_name": 0.12741456166419018,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.01188707280832095
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.4552352048558422,
+                "new_column_with_correct_name": 0.5132776934749621,
+                "new_column_with_wrong_name": 0.03148710166919575
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.35206550055824337,
+                "existing_column_with_wrong_name": 0.29959062151097876,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3483438779307778
+            }
+        },
+        "7": {
+            "duplicate_predictions": 0.1534352093427755,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8602749907097733,
+                "existing_column_with_wrong_name": 0.12746191007060573,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.012263099219620958
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.45697106350995864,
+                "new_column_with_correct_name": 0.5122134535888764,
+                "new_column_with_wrong_name": 0.030815482901164974
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3511308861698183,
+                "existing_column_with_wrong_name": 0.29588431590656283,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3529847979236188
+            }
+        },
+        "8": {
+            "duplicate_predictions": 0.15304700367414165,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8588190764572293,
+                "existing_column_with_wrong_name": 0.12906888720666163,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.012112036336109008
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.45618754803996925,
+                "new_column_with_correct_name": 0.5115295926210607,
+                "new_column_with_wrong_name": 0.03228285933897002
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.3510758776896942,
+                "existing_column_with_wrong_name": 0.29784824462061155,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3510758776896942
+            }
+        },
+        "9": {
+            "duplicate_predictions": 0.1517130884890313,
+            "column_in_database": {
+                "existing_column_with_correct_name": 0.8609783008458992,
+                "existing_column_with_wrong_name": 0.1265171018756896,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.01250459727841118
+            },
+            "column_not_in_database": {
+                "existing_column_with_correct_name": 0.0,
+                "existing_column_with_wrong_name": 0.4553638409602401,
+                "new_column_with_correct_name": 0.5131282820705176,
+                "new_column_with_wrong_name": 0.03150787696924231
+            },
+            "different_name_in_database": {
+                "existing_column_with_correct_name": 0.35544155368266767,
+                "existing_column_with_wrong_name": 0.292781238548919,
+                "new_column_with_correct_name": 0.0,
+                "new_column_with_wrong_name": 0.3517772077684133
+            }
+        }
+    }
+}

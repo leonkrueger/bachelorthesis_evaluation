@@ -1,3 +1,4 @@
+import json
 import os
 from random import Random
 from typing import Any
@@ -5,14 +6,24 @@ from typing import Any
 from util.adjustments import EXPERIMENTS
 from util.insert_query_parser import parse_insert_query
 from util.make_adjustment import make_adjustment
+from util.processing_utils import is_usable_value
 
 folder = "data"
 
 random = Random(2572)
 
+with open(os.path.join("data", "synonyms.json"), encoding="utf-8") as synonyms_file:
+    table_synonyms = json.load(synonyms_file)
+
+with open(
+    os.path.join("data", "column_synonyms.json"), encoding="utf-8"
+) as synonyms_file:
+    column_synonyms = json.load(synonyms_file)
+
 
 def create_experiment(
     experiment_folder: str,
+    database_name: str,
     experiment: list[tuple[Any]],
     strategies: list[str],
     queries: list[dict[str, Any]],
@@ -21,7 +32,12 @@ def create_experiment(
 
     # Create all combinations of params of the adjustments
     for adjustment in experiment:
-        adjustment_combinations = make_adjustment(adjustment, adjustment_combinations)
+        adjustment_combinations = make_adjustment(
+            adjustment,
+            adjustment_combinations,
+            table_synonyms[database_name],
+            column_synonyms[database_name],
+        )
 
     for name, queries in adjustment_combinations.items():
         # Generate the files with the inputs
@@ -79,14 +95,17 @@ for path in os.listdir(folder):
     for query in queries:
         # SQLite produces a separate statement for each row
         query["values"] = query["values"][0]
-    #     query["columns"] = [
-    #         column
-    #         for column, value in zip(query["columns"], query["values"])
-    #         if value.lower() != "null"
-    #     ]
-    #     query["values"] = [
-    #         value for value in query["values"] if value.lower() != "null"
-    #     ]
+        query["columns"], query["values"] = [
+            list(x)
+            for x in zip(
+                *list(
+                    filter(
+                        lambda pair: is_usable_value(pair[1]),
+                        zip(query["columns"], query["values"]),
+                    )
+                )
+            )
+        ]
 
     # Create all experiments
     for experiment_name, experiment in EXPERIMENTS.items():
@@ -103,6 +122,7 @@ for path in os.listdir(folder):
 
         create_experiment(
             experiment_folder,
+            path.split("_", 1)[1],
             experiment["adjustments"],
             experiment["strategies"],
             queries,

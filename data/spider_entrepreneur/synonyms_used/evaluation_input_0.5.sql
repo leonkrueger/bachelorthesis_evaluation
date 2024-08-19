@@ -1,0 +1,14 @@
+INSERT INTO `Personal_Info` (`PersonID`, `Title`, `Height`, `Mass`, `Birthdate`) VALUES (6, 'Goran Fiorentini', 1.780000000000000026, 89.0, '1981-11-21');
+INSERT INTO `people` (`People_ID`, `Name`, `Stature`, `Mass`, `Birthdate`) VALUES (4, 'Marco Gerini', 1.719999999999999974, 75.0, '1971-08-05');
+INSERT INTO `people` (`People_ID`, `Fullname`, `Stature`, `Mass`, `Birthdate`) VALUES (2, 'Leonardo Binchi', 1.860000000000000097, 57.0, '1975-08-27');
+INSERT INTO `entrepreneur` (`Eid`, `PersonID`, `Business`, `Money_Requested`, `Backer`) VALUES (5, 6, 'Mycorrhizal Systems', 75000.0, 'Simon Woodroffe');
+INSERT INTO `Startups_Funding` (`EID`, `PersonID`, `Company`, `FundingAmount`, `Backer`) VALUES (3, 3, 'Le Beanock', 54000.0, 'Rachel Elnaugh');
+INSERT INTO `Startups` (`Eid`, `People_ID`, `Company`, `Money_Requested`, `Backer`) VALUES (2, 2, 'Grails Ltd', 120000.0, 'Doug Richard');
+INSERT INTO `Individuals` (`People_ID`, `Name`, `Stature`, `Weight`, `Date_of_Birth`) VALUES (3, 'Fabrizio Buonocore', 1.830000000000000071, 45.0, '1977-04-28');
+INSERT INTO `Startups` (`EID`, `PersonID`, `Enterprise`, `Money_Requested`, `Investor`) VALUES (6, 8, 'Elizabeth Galton Ltd', 110000.0, 'Duncan Bannatyne');
+INSERT INTO `people` (`People_ID`, `Name`, `Stature`, `Mass`, `Date_of_Birth`) VALUES (8, 'Maurizio Felugo', 1.949999999999999956, 76.0, '1981-03-04');
+INSERT INTO `Startups_Funding` (`Eid`, `People_ID`, `Corporation`, `Money_Requested`, `Backer`) VALUES (1, 1, 'Umbrolly', 150000.0, 'Duncan Bannatyne');
+INSERT INTO `Individuals` (`PersonID`, `Name`, `Stature`, `Weight`, `Birthdate`) VALUES (5, 'Roberto Calcaterra', 1.75, 67.0, '1972-02-06');
+INSERT INTO `people` (`User_ID`, `Fullname`, `Height`, `Weight`, `Birthdate`) VALUES (7, 'Alberto Angelini', 1.820000000000000062, 58.0, '1974-09-28');
+INSERT INTO `Individuals` (`PersonID`, `Name`, `Height`, `Mass`, `Birthdate`) VALUES (1, 'Francesco Postiglione', 1.899999999999999912, 80.0, '1972-04-29');
+INSERT INTO `Startups_Funding` (`Entrepreneur_ID`, `People_ID`, `Company`, `FundingAmount`, `Backer`) VALUES (4, 5, 'IV Cam', 50000.0, 'Peter Jones');

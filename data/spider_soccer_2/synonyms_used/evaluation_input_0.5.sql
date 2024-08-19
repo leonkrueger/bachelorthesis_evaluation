@@ -1,0 +1,16 @@
+INSERT INTO `PlayerStats` (`pID`, `PlayerName`, `yCard`, `Height`) VALUES (40004, 'David', 'yes', 1600);
+INSERT INTO `Player` (`PlayerID`, `PlayerName`, `YellowCard`, `HS`) VALUES (30003, 'Charles', 'no', 300);
+INSERT INTO `Players_Tryout` (`pID`, `cName`, `pPos`, `decision`) VALUES (40004, 'ASU', 'goalie', 'no');
+INSERT INTO `PlayerTryouts` (`pID`, `cName`, `pPos`, `decision`) VALUES (10001, 'LSU', 'goalie', 'no');
+INSERT INTO `Player` (`pID`, `PlayerName`, `YellowCard`, `HeightScore`) VALUES (50005, 'Eddie', 'yes', 600);
+INSERT INTO `Tryout` (`pID`, `cName`, `pPos`, `Result`) VALUES (50005, 'LSU', 'mid', 'no');
+INSERT INTO `Universities` (`college_name`, `state`, `enrollments`) VALUES ('OU', 'OK', 22000);
+INSERT INTO `Universities` (`cName`, `Region`, `enr`) VALUES ('FSU', 'FL', 19000);
+INSERT INTO `Player` (`player_id`, `pName`, `yCard`, `HS`) VALUES (40002, 'Drago', 'yes', 1600);
+INSERT INTO `Players` (`player_id`, `PlayerName`, `yCard`, `HS`) VALUES (10001, 'Andrew', 'no', 1200);
+INSERT INTO `Players_Tryout` (`pID`, `TeamName`, `Position`, `Outcome`) VALUES (30003, 'OU', 'mid', 'no');
+INSERT INTO `College` (`cName`, `state`, `enrollment`) VALUES ('ASU', 'AZ', 12000);
+INSERT INTO `Tryout` (`PlayerID`, `cName`, `Position`, `result`) VALUES (10001, 'ASU', 'goalie', 'yes');
+INSERT INTO `Players_Tryout` (`pID`, `cName`, `pPos`, `result`) VALUES (20002, 'FSU', 'striker', 'yes');
+INSERT INTO `Players` (`player_id`, `PlayerName`, `yCard`, `HeightScore`) VALUES (20002, 'Blake', 'no', 1600);
+INSERT INTO `Universities` (`college_name`, `state`, `enrollments`) VALUES ('LSU', 'LA', 18000);

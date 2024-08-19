@@ -2,53 +2,27 @@ CREATE TABLE `Album`
 (`AlbumId` BIGINT,
 `Title` VARCHAR(1023),
 `ArtistId` BIGINT);
-INSERT INTO `Album` VALUES(299,'Scheherazade',233);
-INSERT INTO `Album` VALUES(289,'Tchaikovsky: The Nutcracker',223);
+INSERT INTO `Album` VALUES(32,'Carnaval 2001',21);
+INSERT INTO `Album` VALUES(300,'Bach: The Brandenburg Concertos',234);
+INSERT INTO `Album` VALUES(239,'War',150);
+INSERT INTO `Album` VALUES(309,'Palestrina: Missa Papae Marcelli & Allegri: Miserere',244);
+INSERT INTO `Album` VALUES(126,'Unplugged [Live]',52);
+INSERT INTO `Album` VALUES(118,'The Return Of The Space Cowboy',92);
+INSERT INTO `Album` VALUES(55,'Chronicle, Vol. 2',76);
+INSERT INTO `Album` VALUES(195,'Californication',127);
 INSERT INTO `Album` VALUES(44,'Physical Graffiti [Disc 1]',22);
-INSERT INTO `Album` VALUES(8,'Warner 25 Anos',6);
-INSERT INTO `Album` VALUES(141,'Greatest Hits',100);
-INSERT INTO `Album` VALUES(130,'In Through The Out Door',22);
-INSERT INTO `Album` VALUES(235,'How To Dismantle An Atomic Bomb',150);
-INSERT INTO `Album` VALUES(215,'The Police Greatest Hits',141);
-INSERT INTO `Album` VALUES(111,'Somewhere in Time',90);
-INSERT INTO `Album` VALUES(193,'Blood Sugar Sex Magik',127);
-INSERT INTO `Album` VALUES(321,'Back to Black',252);
-INSERT INTO `Album` VALUES(347,'Koyaanisqatsi (Soundtrack from the Motion Picture)',275);
-INSERT INTO `Album` VALUES(113,'The X Factor',90);
-INSERT INTO `Album` VALUES(85,'As Canções de Eu Tu Eles',27);
-INSERT INTO `Album` VALUES(317,'Mozart Gala: Famous Arias',249);
-INSERT INTO `Album` VALUES(345,'Monteverdi: L''Orfeo',273);
-INSERT INTO `Album` VALUES(341,'Great Recordings of the Century - Shubert: Schwanengesang, 4 Lieder',270);
-INSERT INTO `Album` VALUES(108,'Rock In Rio [CD1]',90);
-INSERT INTO `Album` VALUES(16,'Black Sabbath',12);
-INSERT INTO `Album` VALUES(171,'Blizzard of Ozz',114);
-INSERT INTO `Album` VALUES(185,'Greatest Hits I',51);
-INSERT INTO `Album` VALUES(198,'Santana Live',59);
 CREATE TABLE `Artist`
 (`ArtistId` BIGINT,
 `Name` VARCHAR(1023));
-INSERT INTO `Artist` VALUES(200,'The Posies');
-INSERT INTO `Artist` VALUES(27,'Gilberto Gil');
-INSERT INTO `Artist` VALUES(52,'Kiss');
-INSERT INTO `Artist` VALUES(160,'Christina Aguilera featuring BigElf');
-INSERT INTO `Artist` VALUES(159,'Aquaman');
-INSERT INTO `Artist` VALUES(113,'Os Paralamas Do Sucesso');
-INSERT INTO `Artist` VALUES(239,'Academy of St. Martin in the Fields, Sir Neville Marriner & William Bennett');
-INSERT INTO `Artist` VALUES(133,'Stevie Ray Vaughan & Double Trouble');
-INSERT INTO `Artist` VALUES(120,'Pink Floyd');
 INSERT INTO `Artist` VALUES(238,'Maurizio Pollini');
-INSERT INTO `Artist` VALUES(214,'Academy of St. Martin in the Fields & Sir Neville Marriner');
-INSERT INTO `Artist` VALUES(80,'Djavan');
-INSERT INTO `Artist` VALUES(179,'Scorpions');
-INSERT INTO `Artist` VALUES(181,'Xis');
-INSERT INTO `Artist` VALUES(144,'The Who');
-INSERT INTO `Artist` VALUES(272,'Emerson String Quartet');
-INSERT INTO `Artist` VALUES(25,'Milton Nascimento & Bebeto');
-INSERT INTO `Artist` VALUES(97,'João Suplicy');
-INSERT INTO `Artist` VALUES(82,'Faith No More');
-INSERT INTO `Artist` VALUES(156,'The Office');
-INSERT INTO `Artist` VALUES(23,'Frank Zappa & Captain Beefheart');
-INSERT INTO `Artist` VALUES(121,'Planet Hemp');
+INSERT INTO `Artist` VALUES(34,'Nando Reis');
+INSERT INTO `Artist` VALUES(6,'Antônio Carlos Jobim');
+INSERT INTO `Artist` VALUES(244,'Choir Of Westminster Abbey & Simon Preston');
+INSERT INTO `Artist` VALUES(103,'Marisa Monte');
+INSERT INTO `Artist` VALUES(72,'Vinícius De Moraes');
+INSERT INTO `Artist` VALUES(173,'Matisyahu');
+INSERT INTO `Artist` VALUES(158,'Battlestar Galactica (Classic)');
+INSERT INTO `Artist` VALUES(71,'Vinícius De Moraes & Baden Powell');
 CREATE TABLE `Customer`
 (`CustomerId` BIGINT,
 `FirstName` VARCHAR(1023),
@@ -63,27 +37,14 @@ CREATE TABLE `Customer`
 `Fax` VARCHAR(1023),
 `Email` VARCHAR(1023),
 `SupportRepId` BIGINT);
-INSERT INTO `Customer` VALUES(42,'Wyatt','Girard',NULL,'9, Place Louis Barthou','Bordeaux',NULL,'France','33000','+33 05 56 96 96 96',NULL,'wyatt.girard@yahoo.fr',3);
-INSERT INTO `Customer` VALUES(15,'Jennifer','Peterson','Rogers Canada','700 W Pender Street','Vancouver','BC','Canada','V6C 1G8','+1 (604) 688-2255','+1 (604) 688-8756','jenniferp@rogers.ca',3);
-INSERT INTO `Customer` VALUES(52,'Emma','Jones',NULL,'202 Hoxton Street','London',NULL,'United Kingdom','N1 5LH','+44 020 7707 0707',NULL,'emma_jones@hotmail.com',3);
-INSERT INTO `Customer` VALUES(37,'Fynn','Zimmermann',NULL,'Berger Straße 10','Frankfurt',NULL,'Germany','60316','+49 069 40598889',NULL,'fzimmermann@yahoo.de',3);
-INSERT INTO `Customer` VALUES(55,'Mark','Taylor',NULL,'421 Bourke Street','Sidney','NSW','Australia','2010','+61 (02) 9332 3633',NULL,'mark.taylor@yahoo.au',4);
-INSERT INTO `Customer` VALUES(40,'Dominique','Lefebvre',NULL,'8, Rue Hanovre','Paris',NULL,'France','75002','+33 01 47 42 71 71',NULL,'dominiquelefebvre@gmail.com',4);
-INSERT INTO `Customer` VALUES(50,'Enrique','Muñoz',NULL,'C/ San Bernardo 85','Madrid',NULL,'Spain','28015','+34 914 454 454',NULL,'enrique_munoz@yahoo.es',5);
-INSERT INTO `Customer` VALUES(43,'Isabelle','Mercier',NULL,'68, Rue Jouvence','Dijon',NULL,'France','21000','+33 03 80 73 66 99',NULL,'isabelle_mercier@apple.fr',3);
-INSERT INTO `Customer` VALUES(58,'Manoj','Pareek',NULL,'12,Community Centre','Delhi',NULL,'India','110017','+91 0124 39883988',NULL,'manoj.pareek@rediff.com',3);
-INSERT INTO `Customer` VALUES(51,'Joakim','Johansson',NULL,'Celsiusg. 9','Stockholm',NULL,'Sweden','11230','+46 08-651 52 52',NULL,'joakim.johansson@yahoo.se',5);
-INSERT INTO `Customer` VALUES(22,'Heather','Leacock',NULL,'120 S Orange Ave','Orlando','FL','USA','32801','+1 (407) 999-7788',NULL,'hleacock@gmail.com',4);
-INSERT INTO `Customer` VALUES(28,'Julia','Barnett',NULL,'302 S 700 E','Salt Lake City','UT','USA','84102','+1 (801) 531-7272',NULL,'jubarnett@gmail.com',5);
-INSERT INTO `Customer` VALUES(33,'Ellie','Sullivan',NULL,'5112 48 Street','Yellowknife','NT','Canada','X1A 1N6','+1 (867) 920-2233',NULL,'ellie.sullivan@shaw.ca',3);
-INSERT INTO `Customer` VALUES(48,'Johannes','Van der Berg',NULL,'Lijnbaansgracht 120bg','Amsterdam','VV','Netherlands','1016','+31 020 6223130',NULL,'johavanderberg@yahoo.nl',5);
-INSERT INTO `Customer` VALUES(13,'Fernanda','Ramos',NULL,'Qe 7 Bloco G','Brasília','DF','Brazil','71020-677','+55 (61) 3363-5547','+55 (61) 3363-7855','fernadaramos4@uol.com.br',4);
-INSERT INTO `Customer` VALUES(2,'Leonie','Köhler',NULL,'Theodor-Heuss-Straße 34','Stuttgart',NULL,'Germany','70174','+49 0711 2842222',NULL,'leonekohler@surfeu.de',5);
-INSERT INTO `Customer` VALUES(5,'František','Wichterlová','JetBrains s.r.o.','Klanova 9/506','Prague',NULL,'Czech Republic','14700','+420 2 4172 5555','+420 2 4172 5555','frantisekw@jetbrains.com',4);
-INSERT INTO `Customer` VALUES(19,'Tim','Goyer','Apple Inc.','1 Infinite Loop','Cupertino','CA','USA','95014','+1 (408) 996-1010','+1 (408) 996-1011','tgoyer@apple.com',3);
-INSERT INTO `Customer` VALUES(30,'Edward','Francis',NULL,'230 Elgin Street','Ottawa','ON','Canada','K2P 1L7','+1 (613) 234-3322',NULL,'edfrancis@yachoo.ca',3);
+INSERT INTO `Customer` VALUES(25,'Victor','Stevens',NULL,'319 N. Frances Street','Madison','WI','USA','53703','+1 (608) 257-0597',NULL,'vstevens@yahoo.com',5);
+INSERT INTO `Customer` VALUES(29,'Robert','Brown',NULL,'796 Dundas Street West','Toronto','ON','Canada','M6J 1V1','+1 (416) 363-8888',NULL,'robbrown@shaw.ca',3);
+INSERT INTO `Customer` VALUES(41,'Marc','Dubois',NULL,'11, Place Bellecour','Lyon',NULL,'France','69002','+33 04 78 30 30 30',NULL,'marc.dubois@hotmail.com',5);
+INSERT INTO `Customer` VALUES(44,'Terhi','Hämäläinen',NULL,'Porthaninkatu 9','Helsinki',NULL,'Finland','00530','+358 09 870 2000',NULL,'terhi.hamalainen@apple.fi',3);
 INSERT INTO `Customer` VALUES(46,'Hugh','O''Reilly',NULL,'3 Chatham Street','Dublin','Dublin','Ireland',NULL,'+353 01 6792424',NULL,'hughoreilly@apple.ie',3);
-INSERT INTO `Customer` VALUES(18,'Michelle','Brooks',NULL,'627 Broadway','New York','NY','USA','10012-2612','+1 (212) 221-3546','+1 (212) 221-4679','michelleb@aol.com',3);
+INSERT INTO `Customer` VALUES(51,'Joakim','Johansson',NULL,'Celsiusg. 9','Stockholm',NULL,'Sweden','11230','+46 08-651 52 52',NULL,'joakim.johansson@yahoo.se',5);
+INSERT INTO `Customer` VALUES(36,'Hannah','Schneider',NULL,'Tauentzienstraße 8','Berlin',NULL,'Germany','10789','+49 030 26550280',NULL,'hannah.schneider@yahoo.de',5);
+INSERT INTO `Customer` VALUES(28,'Julia','Barnett',NULL,'302 S 700 E','Salt Lake City','UT','USA','84102','+1 (801) 531-7272',NULL,'jubarnett@gmail.com',5);
 INSERT INTO `Customer` VALUES(6,'Helena','Holý',NULL,'Rilská 3174/6','Prague',NULL,'Czech Republic','14300','+420 2 4177 0449',NULL,'hholy@gmail.com',5);
 CREATE TABLE `Employee`
 (`EmployeeId` BIGINT,
@@ -101,39 +62,26 @@ CREATE TABLE `Employee`
 `Phone` VARCHAR(1023),
 `Fax` VARCHAR(1023),
 `Email` VARCHAR(1023));
-INSERT INTO `Employee` VALUES(3,'Peacock','Jane','Sales Support Agent',2,'1973-08-29 00:00:00','2002-04-01 00:00:00','1111 6 Ave SW','Calgary','AB','Canada','T2P 5M5','+1 (403) 262-3443','+1 (403) 262-6712','jane@chinookcorp.com');
-INSERT INTO `Employee` VALUES(8,'Callahan','Laura','IT Staff',6,'1968-01-09 00:00:00','2004-03-04 00:00:00','923 7 ST NW','Lethbridge','AB','Canada','T1H 1Y8','+1 (403) 467-3351','+1 (403) 467-8772','laura@chinookcorp.com');
-INSERT INTO `Employee` VALUES(6,'Mitchell','Michael','IT Manager',1,'1973-07-01 00:00:00','2003-10-17 00:00:00','5827 Bowness Road NW','Calgary','AB','Canada','T3B 0C5','+1 (403) 246-9887','+1 (403) 246-9899','michael@chinookcorp.com');
-INSERT INTO `Employee` VALUES(4,'Park','Margaret','Sales Support Agent',2,'1947-09-19 00:00:00','2003-05-03 00:00:00','683 10 Street SW','Calgary','AB','Canada','T2P 5G3','+1 (403) 263-4423','+1 (403) 263-4289','margaret@chinookcorp.com');
-INSERT INTO `Employee` VALUES(2,'Edwards','Nancy','Sales Manager',1,'1958-12-08 00:00:00','2002-05-01 00:00:00','825 8 Ave SW','Calgary','AB','Canada','T2P 2T3','+1 (403) 262-3443','+1 (403) 262-3322','nancy@chinookcorp.com');
 INSERT INTO `Employee` VALUES(1,'Adams','Andrew','General Manager',NULL,'1962-02-18 00:00:00','2002-08-14 00:00:00','11120 Jasper Ave NW','Edmonton','AB','Canada','T5K 2N1','+1 (780) 428-9482','+1 (780) 428-3457','andrew@chinookcorp.com');
+INSERT INTO `Employee` VALUES(6,'Mitchell','Michael','IT Manager',1,'1973-07-01 00:00:00','2003-10-17 00:00:00','5827 Bowness Road NW','Calgary','AB','Canada','T3B 0C5','+1 (403) 246-9887','+1 (403) 246-9899','michael@chinookcorp.com');
+INSERT INTO `Employee` VALUES(3,'Peacock','Jane','Sales Support Agent',2,'1973-08-29 00:00:00','2002-04-01 00:00:00','1111 6 Ave SW','Calgary','AB','Canada','T2P 5M5','+1 (403) 262-3443','+1 (403) 262-6712','jane@chinookcorp.com');
 INSERT INTO `Employee` VALUES(5,'Johnson','Steve','Sales Support Agent',2,'1965-03-03 00:00:00','2003-10-17 00:00:00','7727B 41 Ave','Calgary','AB','Canada','T3B 1Y7','1 (780) 836-9987','1 (780) 836-9543','steve@chinookcorp.com');
+INSERT INTO `Employee` VALUES(2,'Edwards','Nancy','Sales Manager',1,'1958-12-08 00:00:00','2002-05-01 00:00:00','825 8 Ave SW','Calgary','AB','Canada','T2P 2T3','+1 (403) 262-3443','+1 (403) 262-3322','nancy@chinookcorp.com');
 INSERT INTO `Employee` VALUES(7,'King','Robert','IT Staff',6,'1970-05-29 00:00:00','2004-01-02 00:00:00','590 Columbia Boulevard West','Lethbridge','AB','Canada','T1K 5N8','+1 (403) 456-9986','+1 (403) 456-8485','robert@chinookcorp.com');
+INSERT INTO `Employee` VALUES(8,'Callahan','Laura','IT Staff',6,'1968-01-09 00:00:00','2004-03-04 00:00:00','923 7 ST NW','Lethbridge','AB','Canada','T1H 1Y8','+1 (403) 467-3351','+1 (403) 467-8772','laura@chinookcorp.com');
+INSERT INTO `Employee` VALUES(4,'Park','Margaret','Sales Support Agent',2,'1947-09-19 00:00:00','2003-05-03 00:00:00','683 10 Street SW','Calgary','AB','Canada','T2P 5G3','+1 (403) 263-4423','+1 (403) 263-4289','margaret@chinookcorp.com');
 CREATE TABLE `Genre`
 (`GenreId` BIGINT,
 `Name` VARCHAR(1023));
-INSERT INTO `Genre` VALUES(14,'R&B/Soul');
-INSERT INTO `Genre` VALUES(2,'Jazz');
-INSERT INTO `Genre` VALUES(9,'Pop');
-INSERT INTO `Genre` VALUES(3,'Metal');
-INSERT INTO `Genre` VALUES(19,'TV Shows');
-INSERT INTO `Genre` VALUES(12,'Easy Listening');
-INSERT INTO `Genre` VALUES(25,'Opera');
-INSERT INTO `Genre` VALUES(10,'Soundtrack');
-INSERT INTO `Genre` VALUES(11,'Bossa Nova');
-INSERT INTO `Genre` VALUES(21,'Drama');
-INSERT INTO `Genre` VALUES(4,'Alternative & Punk');
-INSERT INTO `Genre` VALUES(13,'Heavy Metal');
-INSERT INTO `Genre` VALUES(17,'Hip Hop/Rap');
-INSERT INTO `Genre` VALUES(7,'Latin');
-INSERT INTO `Genre` VALUES(24,'Classical');
-INSERT INTO `Genre` VALUES(16,'World');
-INSERT INTO `Genre` VALUES(6,'Blues');
+INSERT INTO `Genre` VALUES(15,'Electronica/Dance');
 INSERT INTO `Genre` VALUES(5,'Rock And Roll');
-INSERT INTO `Genre` VALUES(18,'Science Fiction');
-INSERT INTO `Genre` VALUES(22,'Comedy');
-INSERT INTO `Genre` VALUES(20,'Sci Fi & Fantasy');
-INSERT INTO `Genre` VALUES(8,'Reggae');
+INSERT INTO `Genre` VALUES(11,'Bossa Nova');
+INSERT INTO `Genre` VALUES(16,'World');
+INSERT INTO `Genre` VALUES(23,'Alternative');
+INSERT INTO `Genre` VALUES(2,'Jazz');
+INSERT INTO `Genre` VALUES(12,'Easy Listening');
+INSERT INTO `Genre` VALUES(9,'Pop');
+INSERT INTO `Genre` VALUES(13,'Heavy Metal');
 CREATE TABLE `Invoice`
 (`InvoiceId` BIGINT,
 `CustomerId` BIGINT,
@@ -144,110 +92,62 @@ CREATE TABLE `Invoice`
 `BillingCountry` VARCHAR(1023),
 `BillingPostalCode` VARCHAR(1023),
 `Total` DOUBLE);
-INSERT INTO `Invoice` VALUES(209,18,'2011-07-07 00:00:00','627 Broadway','New York','NY','USA','10012-2612',0.989999999999999992);
-INSERT INTO `Invoice` VALUES(384,24,'2013-08-20 00:00:00','162 E Superior Street','Chicago','IL','USA','60611',0.989999999999999992);
-INSERT INTO `Invoice` VALUES(227,44,'2011-09-22 00:00:00','Porthaninkatu 9','Helsinki',NULL,'Finland','00530',5.94000000000000039);
-INSERT INTO `Invoice` VALUES(253,13,'2012-01-22 00:00:00','Qe 7 Bloco G','Brasília','DF','Brazil','71020-677',1.979999999999999983);
-INSERT INTO `Invoice` VALUES(83,42,'2009-12-26 00:00:00','9, Place Louis Barthou','Bordeaux',NULL,'France','33000',0.989999999999999992);
-INSERT INTO `Invoice` VALUES(28,34,'2009-05-05 00:00:00','Rua da Assunção 53','Lisbon',NULL,'Portugal',NULL,1.979999999999999983);
-INSERT INTO `Invoice` VALUES(243,17,'2011-12-01 00:00:00','1 Microsoft Way','Redmond','WA','USA','98052-8300',13.85999999999999944);
-INSERT INTO `Invoice` VALUES(274,9,'2012-04-24 00:00:00','Sønder Boulevard 51','Copenhagen',NULL,'Denmark','1720',1.979999999999999983);
-INSERT INTO `Invoice` VALUES(346,41,'2013-03-02 00:00:00','11, Place Bellecour','Lyon',NULL,'France','69002',5.94000000000000039);
-INSERT INTO `Invoice` VALUES(176,8,'2011-02-15 00:00:00','Grétrystraat 63','Brussels',NULL,'Belgium','1000',1.979999999999999983);
-INSERT INTO `Invoice` VALUES(39,27,'2009-06-10 00:00:00','1033 N Park Ave','Tucson','AZ','USA','85719',8.910000000000000142);
-INSERT INTO `Invoice` VALUES(179,20,'2011-02-20 00:00:00','541 Del Medio Avenue','Mountain View','CA','USA','94040-111',8.910000000000000142);
-INSERT INTO `Invoice` VALUES(153,9,'2010-11-01 00:00:00','Sønder Boulevard 51','Copenhagen',NULL,'Denmark','1720',0.989999999999999992);
-INSERT INTO `Invoice` VALUES(158,24,'2010-11-19 00:00:00','162 E Superior Street','Chicago','IL','USA','60611',8.910000000000000142);
-INSERT INTO `Invoice` VALUES(340,9,'2013-02-02 00:00:00','Sønder Boulevard 51','Copenhagen',NULL,'Denmark','1720',8.910000000000000142);
-INSERT INTO `Invoice` VALUES(54,53,'2009-08-16 00:00:00','113 Lupus St','London',NULL,'United Kingdom','SW1V 3EN',13.85999999999999944);
-INSERT INTO `Invoice` VALUES(49,30,'2009-08-06 00:00:00','230 Elgin Street','Ottawa','ON','Canada','K2P 1L7',1.979999999999999983);
-INSERT INTO `Invoice` VALUES(321,36,'2012-11-14 00:00:00','Tauentzienstraße 8','Berlin',NULL,'Germany','10789',0.989999999999999992);
-INSERT INTO `Invoice` VALUES(143,1,'2010-09-15 00:00:00','Av. Brigadeiro Faria Lima, 2170','São José dos Campos','SP','Brazil','12227-000',5.94000000000000039);
-INSERT INTO `Invoice` VALUES(223,35,'2011-09-07 00:00:00','Rua dos Campeões Europeus de Viena, 4350','Porto',NULL,'Portugal',NULL,0.989999999999999992);
-INSERT INTO `Invoice` VALUES(8,40,'2009-02-01 00:00:00','8, Rue Hanovre','Paris',NULL,'France','75002',1.979999999999999983);
-INSERT INTO `Invoice` VALUES(304,49,'2012-08-28 00:00:00','Ordynacka 10','Warsaw',NULL,'Poland','00-358',5.94000000000000039);
+INSERT INTO `Invoice` VALUES(142,56,'2010-09-14 00:00:00','307 Macacha Güemes','Buenos Aires',NULL,'Argentina','1106',3.959999999999999965);
+INSERT INTO `Invoice` VALUES(201,25,'2011-05-29 00:00:00','319 N. Frances Street','Madison','WI','USA','53703',18.85999999999999944);
+INSERT INTO `Invoice` VALUES(202,39,'2011-06-06 00:00:00','4, Rue Milton','Paris',NULL,'France','75009',1.989999999999999992);
+INSERT INTO `Invoice` VALUES(370,7,'2013-06-19 00:00:00','Rotenturmstraße 4, 1010 Innere Stadt','Vienne',NULL,'Austria','1010',0.989999999999999992);
+INSERT INTO `Invoice` VALUES(116,32,'2010-05-17 00:00:00','696 Osborne Street','Winnipeg','MB','Canada','R3L 2B9',8.910000000000000142);
+INSERT INTO `Invoice` VALUES(12,2,'2009-02-11 00:00:00','Theodor-Heuss-Straße 34','Stuttgart',NULL,'Germany','70174',13.85999999999999944);
+INSERT INTO `Invoice` VALUES(235,29,'2011-10-26 00:00:00','796 Dundas Street West','Toronto','ON','Canada','M6J 1V1',8.910000000000000142);
+INSERT INTO `Invoice` VALUES(46,6,'2009-07-11 00:00:00','Rilská 3174/6','Prague',NULL,'Czech Republic','14300',8.910000000000000142);
+INSERT INTO `Invoice` VALUES(239,55,'2011-11-21 00:00:00','421 Bourke Street','Sidney','NSW','Australia','2010',1.979999999999999983);
 CREATE TABLE `InvoiceLine`
 (`InvoiceLineId` BIGINT,
 `InvoiceId` BIGINT,
 `TrackId` BIGINT,
 `UnitPrice` DOUBLE,
 `Quantity` BIGINT);
-INSERT INTO `InvoiceLine` VALUES(180,33,1081,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1357,250,1258,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1447,268,1816,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(998,185,2557,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(687,128,679,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1798,332,431,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1661,306,3114,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1177,217,185,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1096,201,3182,1.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1375,255,1362,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1806,333,479,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1132,208,3396,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1285,236,830,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1756,325,183,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(651,121,451,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(218,40,1313,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(465,87,2808,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(275,52,1648,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(2031,375,1853,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1869,346,875,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(1717,318,3450,0.989999999999999992,1);
-INSERT INTO `InvoiceLine` VALUES(2219,410,3001,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(1791,331,405,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(855,158,1679,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(1083,200,3071,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(212,40,1259,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(791,145,1317,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(70,12,421,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(1274,235,734,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(1295,240,888,0.989999999999999992,1);
+INSERT INTO `InvoiceLine` VALUES(1978,365,1559,0.989999999999999992,1);
 CREATE TABLE `MediaType`
 (`MediaTypeId` BIGINT,
 `Name` VARCHAR(1023));
-INSERT INTO `MediaType` VALUES(1,'MPEG audio file');
-INSERT INTO `MediaType` VALUES(4,'Purchased AAC audio file');
-INSERT INTO `MediaType` VALUES(2,'Protected AAC audio file');
-INSERT INTO `MediaType` VALUES(5,'AAC audio file');
 INSERT INTO `MediaType` VALUES(3,'Protected MPEG-4 video file');
+INSERT INTO `MediaType` VALUES(1,'MPEG audio file');
+INSERT INTO `MediaType` VALUES(5,'AAC audio file');
+INSERT INTO `MediaType` VALUES(2,'Protected AAC audio file');
+INSERT INTO `MediaType` VALUES(4,'Purchased AAC audio file');
 CREATE TABLE `Playlist`
 (`PlaylistId` BIGINT,
 `Name` VARCHAR(1023));
-INSERT INTO `Playlist` VALUES(4,'Audiobooks');
+INSERT INTO `Playlist` VALUES(9,'Music Videos');
 INSERT INTO `Playlist` VALUES(1,'Music');
-INSERT INTO `Playlist` VALUES(14,'Classical 101 - Next Steps');
-INSERT INTO `Playlist` VALUES(13,'Classical 101 - Deep Cuts');
-INSERT INTO `Playlist` VALUES(10,'TV Shows');
-INSERT INTO `Playlist` VALUES(18,'On-The-Go 1');
+INSERT INTO `Playlist` VALUES(5,'90’s Music');
 INSERT INTO `Playlist` VALUES(8,'Music');
 INSERT INTO `Playlist` VALUES(2,'Movies');
-INSERT INTO `Playlist` VALUES(15,'Classical 101 - The Basics');
-INSERT INTO `Playlist` VALUES(6,'Audiobooks');
 INSERT INTO `Playlist` VALUES(7,'Movies');
-INSERT INTO `Playlist` VALUES(16,'Grunge');
 INSERT INTO `Playlist` VALUES(12,'Classical');
 INSERT INTO `Playlist` VALUES(17,'Heavy Metal Classic');
-INSERT INTO `Playlist` VALUES(11,'Brazilian Music');
-INSERT INTO `Playlist` VALUES(9,'Music Videos');
-INSERT INTO `Playlist` VALUES(5,'90’s Music');
-INSERT INTO `Playlist` VALUES(3,'TV Shows');
+INSERT INTO `Playlist` VALUES(18,'On-The-Go 1');
 CREATE TABLE `PlaylistTrack`
 (`PlaylistId` BIGINT,
 `TrackId` BIGINT);
-INSERT INTO `PlaylistTrack` VALUES(17,1380);
-INSERT INTO `PlaylistTrack` VALUES(8,879);
-INSERT INTO `PlaylistTrack` VALUES(1,1850);
-INSERT INTO `PlaylistTrack` VALUES(12,3419);
-INSERT INTO `PlaylistTrack` VALUES(5,3041);
-INSERT INTO `PlaylistTrack` VALUES(8,3075);
-INSERT INTO `PlaylistTrack` VALUES(8,2270);
-INSERT INTO `PlaylistTrack` VALUES(1,2482);
-INSERT INTO `PlaylistTrack` VALUES(11,1105);
-INSERT INTO `PlaylistTrack` VALUES(1,3477);
-INSERT INTO `PlaylistTrack` VALUES(1,123);
-INSERT INTO `PlaylistTrack` VALUES(1,1528);
-INSERT INTO `PlaylistTrack` VALUES(8,2203);
-INSERT INTO `PlaylistTrack` VALUES(1,2267);
-INSERT INTO `PlaylistTrack` VALUES(1,1300);
-INSERT INTO `PlaylistTrack` VALUES(8,676);
-INSERT INTO `PlaylistTrack` VALUES(8,435);
-INSERT INTO `PlaylistTrack` VALUES(8,1293);
-INSERT INTO `PlaylistTrack` VALUES(1,554);
-INSERT INTO `PlaylistTrack` VALUES(8,1294);
-INSERT INTO `PlaylistTrack` VALUES(8,184);
-INSERT INTO `PlaylistTrack` VALUES(8,129);
+INSERT INTO `PlaylistTrack` VALUES(1,1742);
+INSERT INTO `PlaylistTrack` VALUES(8,1309);
+INSERT INTO `PlaylistTrack` VALUES(1,546);
+INSERT INTO `PlaylistTrack` VALUES(8,2322);
+INSERT INTO `PlaylistTrack` VALUES(1,1883);
+INSERT INTO `PlaylistTrack` VALUES(5,28);
+INSERT INTO `PlaylistTrack` VALUES(8,2439);
+INSERT INTO `PlaylistTrack` VALUES(8,2450);
+INSERT INTO `PlaylistTrack` VALUES(8,1040);
 CREATE TABLE `Track`
 (`TrackId` BIGINT,
 `Name` VARCHAR(1023),
@@ -258,25 +158,12 @@ CREATE TABLE `Track`
 `Milliseconds` BIGINT,
 `Bytes` BIGINT,
 `UnitPrice` DOUBLE);
-INSERT INTO `Track` VALUES(1834,'Whiplash',150,1,3,'James Hetfield, Lars Ulrich',249208,8102839,0.989999999999999992);
-INSERT INTO `Track` VALUES(1647,'Bron-Yr-Aur',135,1,1,'Jimmy Page',126641,4150746,0.989999999999999992);
-INSERT INTO `Track` VALUES(2474,'Because You Are',201,1,4,'Billy Corgan',226403,7405137,0.989999999999999992);
-INSERT INTO `Track` VALUES(22,'Whole Lotta Rosie',4,1,1,'AC/DC',323761,10547154,0.989999999999999992);
-INSERT INTO `Track` VALUES(899,'Cocaine',72,1,6,'Cale/Clapton',215928,7138399,0.989999999999999992);
-INSERT INTO `Track` VALUES(1557,'Metal Meltdown',125,1,3,NULL,290664,9390646,0.989999999999999992);
-INSERT INTO `Track` VALUES(620,'Space Truckin''',50,1,1,'Blackmore/Gillan/Glover/Lord/Paice',1196094,39267613,0.989999999999999992);
-INSERT INTO `Track` VALUES(1435,'Too Young To Die',116,1,1,'Smith, Toby',365818,12391660,0.989999999999999992);
-INSERT INTO `Track` VALUES(897,'White Room',72,1,6,'Bruce/Clapton',301583,9872606,0.989999999999999992);
-INSERT INTO `Track` VALUES(306,'Realidade Virtual',27,1,8,'Bino/Da Gamma/Lazao/Toni Garrido',240300,8069934,0.989999999999999992);
-INSERT INTO `Track` VALUES(423,'I Want To Break Free',36,1,1,'John Deacon',259108,8552861,0.989999999999999992);
-INSERT INTO `Track` VALUES(1337,'Flight Of The Icarus',106,1,3,'Adrian Smith/Bruce Dickinson',230269,3686400,0.989999999999999992);
-INSERT INTO `Track` VALUES(834,'When Love & Hate Collide',67,1,1,NULL,257280,8364633,0.989999999999999992);
-INSERT INTO `Track` VALUES(1582,'Stairway To Heaven',127,1,1,'Robert Plant',529658,17050485,0.989999999999999992);
-INSERT INTO `Track` VALUES(1533,'Choramingando',124,1,16,'João Suplicy',190484,6400532,0.989999999999999992);
-INSERT INTO `Track` VALUES(2038,'Cartao Postal',166,1,7,NULL,211565,7082301,0.989999999999999992);
-INSERT INTO `Track` VALUES(636,'Coronation Drop',51,1,2,NULL,176222,5899898,0.989999999999999992);
-INSERT INTO `Track` VALUES(937,'Midlife Crisis',75,1,4,NULL,263235,8628841,0.989999999999999992);
-INSERT INTO `Track` VALUES(3041,'Homely Girl',241,1,8,NULL,203833,6790788,0.989999999999999992);
-INSERT INTO `Track` VALUES(1250,'Gates Of Tomorrow',98,1,13,'Bruce Dickinson/Janick Gers/Steve Harris',312032,12482688,0.989999999999999992);
-INSERT INTO `Track` VALUES(2526,'Song For Lorraine',204,1,2,'Jay Beckenstein',240091,8101723,0.989999999999999992);
-INSERT INTO `Track` VALUES(2510,'Get On The Snake',203,1,1,'Chris Cornell/Kim Thayil',225123,7313744,0.989999999999999992);
+INSERT INTO `Track` VALUES(1339,'The Trooper',106,1,3,'Steve Harris',251454,4024320,0.989999999999999992);
+INSERT INTO `Track` VALUES(3194,'Dwight''s Speech',250,3,19,NULL,1278041,255001728,1.989999999999999992);
+INSERT INTO `Track` VALUES(591,'Baixo Rio',47,1,7,NULL,198008,6521676,0.989999999999999992);
+INSERT INTO `Track` VALUES(622,'Mistreated (Alternate Version)',50,1,1,'Blackmore/Coverdale',854700,27775442,0.989999999999999992);
+INSERT INTO `Track` VALUES(1717,'Assim Caminha A Humanidade',142,1,7,NULL,210755,6993763,0.989999999999999992);
+INSERT INTO `Track` VALUES(3244,'Greetings from Earth, Pt. 1',253,3,20,NULL,2960293,536824558,1.989999999999999992);
+INSERT INTO `Track` VALUES(1429,'It''s Too Funky In Here',115,1,14,'Brad Shapiro/George Jackson/Robert Miller/Walter Shaw',239072,7973979,0.989999999999999992);
+INSERT INTO `Track` VALUES(100,'Out Of Exile',11,1,4,'Cornell, Commerford, Morello, Wilk',291291,9506571,0.989999999999999992);
+INSERT INTO `Track` VALUES(1329,'Fates Warning',105,1,3,'David Murray/Steve Harris',250853,4018088,0.989999999999999992);

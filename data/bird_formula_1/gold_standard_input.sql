@@ -8,50 +8,26 @@ CREATE TABLE `circuits`
 `lng` DOUBLE,
 `alt` BIGINT,
 `url` VARCHAR(1023));
-INSERT INTO `circuits` VALUES(70,'red_bull_ring','Red Bull Ring','Spielburg','Austria',47.21970000000000311,14.7646999999999995,NULL,'http://en.wikipedia.org/wiki/Red_Bull_Ring');
-INSERT INTO `circuits` VALUES(73,'BAK','Baku City Circuit','Baku','Azerbaijan',40.37250000000000227,49.85329999999999729,NULL,'http://en.wikipedia.org/wiki/Baku_City_Circuit');
+INSERT INTO `circuits` VALUES(21,'imola','Autodromo Enzo e Dino Ferrari','Imola','Italy',44.34389999999999788,11.71669999999999945,NULL,'http://en.wikipedia.org/wiki/Autodromo_Enzo_e_Dino_Ferrari');
 INSERT INTO `circuits` VALUES(10,'hockenheimring','Hockenheimring','Hockenheim','Germany',49.32780000000000342,8.565830000000000055,NULL,'http://en.wikipedia.org/wiki/Hockenheimring');
-INSERT INTO `circuits` VALUES(16,'fuji','Fuji Speedway','Oyama','Japan',35.37169999999999703,138.9269999999999925,NULL,'http://en.wikipedia.org/wiki/Fuji_Speedway');
-INSERT INTO `circuits` VALUES(59,'boavista','Circuito da Boavista','Oporto','Portugal',41.17049999999999698,-8.673249999999999459,NULL,'http://en.wikipedia.org/wiki/Circuito_da_Boavista');
-INSERT INTO `circuits` VALUES(56,'george','Prince George Circuit','Eastern Cape Province','South Africa',-33.04860000000000042,27.87359999999999972,NULL,'http://en.wikipedia.org/wiki/Prince_George_Circuit');
-INSERT INTO `circuits` VALUES(48,'mosport','Mosport International Raceway','Ontario','Canada',44.04809999999999804,-78.67560000000000286,NULL,'http://en.wikipedia.org/wiki/Mosport');
-INSERT INTO `circuits` VALUES(58,'aintree','Aintree','Liverpool','UK',53.47690000000000054,-2.940560000000000062,NULL,'http://en.wikipedia.org/wiki/Aintree_Motor_Racing_Circuit');
-INSERT INTO `circuits` VALUES(52,'tremblant','Circuit Mont-Tremblant','Quebec','Canada',46.18769999999999954,-74.60989999999999612,NULL,'http://en.wikipedia.org/wiki/Circuit_Mont-Tremblant');
-INSERT INTO `circuits` VALUES(67,'pedralbes','Circuit de Pedralbes','Barcelona','Spain',41.39030000000000343,2.116670000000000051,NULL,'http://en.wikipedia.org/wiki/Pedralbes_Circuit');
-INSERT INTO `circuits` VALUES(69,'americas','Circuit of the Americas','Austin','USA',30.13279999999999959,-97.6410999999999945,NULL,'http://en.wikipedia.org/wiki/Circuit_of_the_Americas');
-INSERT INTO `circuits` VALUES(32,'rodriguez','Autódromo Hermanos Rodríguez','Mexico City','Mexico',19.40419999999999945,-99.0906999999999983,NULL,'http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez');
-INSERT INTO `circuits` VALUES(40,'zolder','Zolder','Heusden-Zolder','Belgium',50.98940000000000338,5.256940000000000168,NULL,'http://en.wikipedia.org/wiki/Zolder');
-INSERT INTO `circuits` VALUES(13,'spa','Circuit de Spa-Francorchamps','Spa','Belgium',50.43719999999999715,5.971390000000000419,NULL,'http://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps');
+INSERT INTO `circuits` VALUES(57,'zeltweg','Zeltweg','Styria','Austria',47.20389999999999731,14.7477999999999998,NULL,'http://en.wikipedia.org/wiki/Zeltweg_Airfield');
 INSERT INTO `circuits` VALUES(45,'jarama','Jarama','Madrid','Spain',40.61710000000000064,-3.585580000000000211,NULL,'http://en.wikipedia.org/wiki/Circuito_Permanente_Del_Jarama');
-INSERT INTO `circuits` VALUES(60,'riverside','Riverside International Raceway','California','USA',33.93699999999999762,-117.2729999999999962,NULL,'http://en.wikipedia.org/wiki/Riverside_International_Raceway');
-INSERT INTO `circuits` VALUES(9,'silverstone','Silverstone Circuit','Silverstone','UK',52.07860000000000155,-1.016939999999999956,NULL,'http://en.wikipedia.org/wiki/Silverstone_Circuit');
-INSERT INTO `circuits` VALUES(36,'jacarepagua','Autódromo Internacional Nelson Piquet','Rio de Janeiro','Brazil',-22.97560000000000002,-43.39500000000000313,NULL,'http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Internacional_Nelson_Piquet');
-INSERT INTO `circuits` VALUES(37,'detroit','Detroit Street Circuit','Detroit','USA',42.32979999999999877,-83.04009999999999537,NULL,'http://en.wikipedia.org/wiki/Detroit_street_circuit');
+INSERT INTO `circuits` VALUES(72,'port_imperial','Port Imperial Street Circuit','New Jersey','USA',40.77689999999999771,-74.011099999999999,NULL,'http://en.wikipedia.org/wiki/Port_Imperial_Street_Circuit');
+INSERT INTO `circuits` VALUES(42,'dallas','Fair Park','Dallas','USA',32.77740000000000009,-96.7587000000000045,NULL,'http://en.wikipedia.org/wiki/Fair_Park');
+INSERT INTO `circuits` VALUES(44,'las_vegas','Las Vegas Street Circuit','Nevada','USA',36.1161999999999992,-115.1740000000000066,NULL,'http://en.wikipedia.org/wiki/Las_Vegas,_Nevada');
 CREATE TABLE `constructors`
 (`constructorId` BIGINT,
 `constructorRef` VARCHAR(1023),
 `name` VARCHAR(1023),
 `nationality` VARCHAR(1023),
 `url` VARCHAR(1023));
-INSERT INTO `constructors` VALUES(91,'shannon','Shannon','British','http://en.wikipedia.org/wiki/Shannon_(Formula_One)');
-INSERT INTO `constructors` VALUES(179,'de_tomaso-ferrari','De Tomaso-Ferrari','Italian','http://en.wikipedia.org/wiki/De_Tomaso');
-INSERT INTO `constructors` VALUES(12,'spyker','Spyker','Dutch','http://en.wikipedia.org/wiki/Spyker_F1');
-INSERT INTO `constructors` VALUES(119,'moore','Moore','American','http://en.wikipedia.org/wiki/Moore_(constructor)');
-INSERT INTO `constructors` VALUES(185,'lds-alfa_romeo','LDS-Alfa Romeo','South African','http://en.wikipedia.org/wiki/LDS_(automobile)');
-INSERT INTO `constructors` VALUES(58,'shadow','Shadow','British','http://en.wikipedia.org/wiki/Shadow_Racing_Cars');
-INSERT INTO `constructors` VALUES(144,'veritas','Veritas','German','http://en.wikipedia.org/wiki/Veritas_(constructor)');
-INSERT INTO `constructors` VALUES(17,'jordan','Jordan','Irish','http://en.wikipedia.org/wiki/Jordan_Grand_Prix');
-INSERT INTO `constructors` VALUES(25,'tyrrell','Tyrrell','British','http://en.wikipedia.org/wiki/Tyrrell_Racing');
-INSERT INTO `constructors` VALUES(67,'penske','Penske','American','http://en.wikipedia.org/wiki/Penske_Racing');
-INSERT INTO `constructors` VALUES(20,'prost','Prost','French','http://en.wikipedia.org/wiki/Prost_Grand_Prix');
-INSERT INTO `constructors` VALUES(37,'march','March','British','http://en.wikipedia.org/wiki/March_Engineering');
-INSERT INTO `constructors` VALUES(199,'march-alfa_romeo','March-Alfa Romeo','British','http://en.wikipedia.org/wiki/March_Engineering');
-INSERT INTO `constructors` VALUES(103,'mbm','MBM','Swiss','http://en.wikipedia.org/wiki/Monteverdi_Basel_Motors');
-INSERT INTO `constructors` VALUES(196,'matra-ford','Matra-Ford','French','http://en.wikipedia.org/wiki/Matra');
-INSERT INTO `constructors` VALUES(130,'bugatti','Bugatti','French','http://en.wikipedia.org/wiki/Bugatti');
-INSERT INTO `constructors` VALUES(70,'boro','Boro','Dutch','http://en.wikipedia.org/wiki/Boro_(Formula_One)');
-INSERT INTO `constructors` VALUES(174,'de_tomaso-osca','De Tomaso-Osca','Italian','http://en.wikipedia.org/wiki/De_Tomaso');
-INSERT INTO `constructors` VALUES(177,'lotus-borgward','Lotus-Borgward','British','http://en.wikipedia.org/wiki/Team_Lotus');
+INSERT INTO `constructors` VALUES(85,'bellasi','Bellasi','Swiss','http://en.wikipedia.org/wiki/Bellasi');
+INSERT INTO `constructors` VALUES(74,'maki','Maki','Japanese','http://en.wikipedia.org/wiki/Maki_(cars)');
+INSERT INTO `constructors` VALUES(163,'milano','Milano','Italian','http://en.wikipedia.org/wiki/Scuderia_Milano');
+INSERT INTO `constructors` VALUES(115,'vhristensen','Christensen','American','http://en.wikipedia.org/wiki/Christensen_(constructor)');
+INSERT INTO `constructors` VALUES(111,'trevis','Trevis','American','http://en.wikipedia.org/wiki/Trevis');
+INSERT INTO `constructors` VALUES(210,'haas','Haas F1 Team','American','http://en.wikipedia.org/wiki/Haas_F1_Team');
+INSERT INTO `constructors` VALUES(83,'politoys','Politoys','British','http://en.wikipedia.org/wiki/Frank_Williams_Racing_Cars');
 CREATE TABLE `drivers`
 (`driverId` BIGINT,
 `driverRef` VARCHAR(1023),
@@ -62,47 +38,23 @@ CREATE TABLE `drivers`
 `dob` DATE,
 `nationality` VARCHAR(1023),
 `url` VARCHAR(1023));
-INSERT INTO `drivers` VALUES(13,'massa',19,'MAS','Felipe','Massa','1981-04-25','Brazilian','http://en.wikipedia.org/wiki/Felipe_Massa');
-INSERT INTO `drivers` VALUES(810,'grassi',NULL,'DIG','Lucas','di Grassi','1984-08-11','Brazilian','http://en.wikipedia.org/wiki/Lucas_di_Grassi');
-INSERT INTO `drivers` VALUES(220,'francia',NULL,NULL,'Giorgio','Francia','1947-11-08','Italian','http://en.wikipedia.org/wiki/Giorgio_Francia');
-INSERT INTO `drivers` VALUES(107,'ratzenberger',NULL,NULL,'Roland','Ratzenberger','1960-07-04','Austrian','http://en.wikipedia.org/wiki/Roland_Ratzenberger');
-INSERT INTO `drivers` VALUES(424,'bussinello',NULL,NULL,'Roberto','Bussinello','1927-10-04','Italian','http://en.wikipedia.org/wiki/Roberto_Bussinello');
-INSERT INTO `drivers` VALUES(782,'jover',NULL,NULL,'Juan','Jover','1903-11-23','Spanish','http://en.wikipedia.org/wiki/Juan_Jover');
-INSERT INTO `drivers` VALUES(775,'gordini',NULL,NULL,'Aldo','Gordini','1921-05-20','French','http://en.wikipedia.org/wiki/Aldo_Gordini');
-INSERT INTO `drivers` VALUES(536,'sutton',NULL,NULL,'Len','Sutton','1925-08-09','American','http://en.wikipedia.org/wiki/Len_Sutton');
-INSERT INTO `drivers` VALUES(836,'wehrlein',94,'WEH','Pascal','Wehrlein','1994-10-18','German','http://en.wikipedia.org/wiki/Pascal_Wehrlein');
-INSERT INTO `drivers` VALUES(336,'mcrae',NULL,NULL,'Graham','McRae','1940-03-05','New Zealander','http://en.wikipedia.org/wiki/Graham_McRae');
-INSERT INTO `drivers` VALUES(338,'walker',NULL,NULL,'David','Walker','1941-06-10','Australian','http://en.wikipedia.org/wiki/David_Walker_(racing_driver)');
-INSERT INTO `drivers` VALUES(208,'villota',NULL,NULL,'Emilio','de Villota','1946-07-26','Spanish','http://en.wikipedia.org/wiki/Emilio_de_Villota');
-INSERT INTO `drivers` VALUES(73,'rosset',NULL,NULL,'Ricardo','Rosset','1968-07-27','Brazilian','http://en.wikipedia.org/wiki/Ricardo_Rosset');
-INSERT INTO `drivers` VALUES(554,'behra',NULL,NULL,'Jean','Behra','1921-02-16','French','http://en.wikipedia.org/wiki/Jean_Behra');
-INSERT INTO `drivers` VALUES(192,'serra',NULL,NULL,'Chico','Serra','1957-02-03','Brazilian','http://en.wikipedia.org/wiki/Chico_Serra');
-INSERT INTO `drivers` VALUES(446,'abate',NULL,NULL,'Carlo','Abate','1932-07-10','Italian','http://en.wikipedia.org/wiki/Carlo_Mario_Abate');
-INSERT INTO `drivers` VALUES(183,'hesnault',NULL,NULL,'François','Hesnault','1956-12-30','French','http://en.wikipedia.org/wiki/Fran%C3%A7ois_Hesnault');
-INSERT INTO `drivers` VALUES(286,'brown',NULL,NULL,'Warwick','Brown','1949-12-24','Australian','http://en.wikipedia.org/wiki/Warwick_Brown');
-INSERT INTO `drivers` VALUES(381,'unser',NULL,NULL,'Bobby','Unser','1934-02-20','American','http://en.wikipedia.org/wiki/Bobby_Unser');
+INSERT INTO `drivers` VALUES(825,'kevin_magnussen',20,'MAG','Kevin','Magnussen','1992-10-05','Danish','http://en.wikipedia.org/wiki/Kevin_Magnussen');
+INSERT INTO `drivers` VALUES(365,'hahne',NULL,NULL,'Hubert','Hahne','1935-03-28','German','http://en.wikipedia.org/wiki/Hubert_Hahne');
+INSERT INTO `drivers` VALUES(620,'maglioli',NULL,NULL,'Umberto','Maglioli','1928-06-05','Italian','http://en.wikipedia.org/wiki/Umberto_Maglioli');
+INSERT INTO `drivers` VALUES(503,'chimeri',NULL,NULL,'Ettore','Chimeri','1921-06-04','Venezuelan','http://en.wikipedia.org/wiki/Ettore_Chimeri');
+INSERT INTO `drivers` VALUES(163,'arnoux',NULL,NULL,'René','Arnoux','1948-07-04','French','http://en.wikipedia.org/wiki/Ren%C3%A9_Arnoux');
+INSERT INTO `drivers` VALUES(599,'bisch',NULL,NULL,'Art','Bisch','1926-11-10','American','http://en.wikipedia.org/wiki/Art_Bisch');
+INSERT INTO `drivers` VALUES(32,'klien',NULL,'KLI','Christian','Klien','1983-02-07','Austrian','http://en.wikipedia.org/wiki/Christian_Klien');
 CREATE TABLE `seasons`
 (`year` BIGINT,
 `url` VARCHAR(1023));
-INSERT INTO `seasons` VALUES(2016,'https://en.wikipedia.org/wiki/2016_Formula_One_season');
-INSERT INTO `seasons` VALUES(1977,'http://en.wikipedia.org/wiki/1977_Formula_One_season');
-INSERT INTO `seasons` VALUES(1963,'http://en.wikipedia.org/wiki/1963_Formula_One_season');
-INSERT INTO `seasons` VALUES(1988,'http://en.wikipedia.org/wiki/1988_Formula_One_season');
-INSERT INTO `seasons` VALUES(1980,'http://en.wikipedia.org/wiki/1980_Formula_One_season');
-INSERT INTO `seasons` VALUES(2017,'https://en.wikipedia.org/wiki/2017_Formula_One_season');
-INSERT INTO `seasons` VALUES(1954,'http://en.wikipedia.org/wiki/1954_Formula_One_season');
-INSERT INTO `seasons` VALUES(1985,'http://en.wikipedia.org/wiki/1985_Formula_One_season');
-INSERT INTO `seasons` VALUES(1992,'http://en.wikipedia.org/wiki/1992_Formula_One_season');
-INSERT INTO `seasons` VALUES(1970,'http://en.wikipedia.org/wiki/1970_Formula_One_season');
-INSERT INTO `seasons` VALUES(1994,'http://en.wikipedia.org/wiki/1994_Formula_One_season');
-INSERT INTO `seasons` VALUES(1986,'http://en.wikipedia.org/wiki/1986_Formula_One_season');
-INSERT INTO `seasons` VALUES(2006,'http://en.wikipedia.org/wiki/2006_Formula_One_season');
-INSERT INTO `seasons` VALUES(2000,'http://en.wikipedia.org/wiki/2000_Formula_One_season');
-INSERT INTO `seasons` VALUES(1953,'http://en.wikipedia.org/wiki/1953_Formula_One_season');
-INSERT INTO `seasons` VALUES(2011,'http://en.wikipedia.org/wiki/2011_Formula_One_season');
-INSERT INTO `seasons` VALUES(2007,'http://en.wikipedia.org/wiki/2007_Formula_One_season');
-INSERT INTO `seasons` VALUES(1978,'http://en.wikipedia.org/wiki/1978_Formula_One_season');
-INSERT INTO `seasons` VALUES(2015,'http://en.wikipedia.org/wiki/2015_Formula_One_season');
+INSERT INTO `seasons` VALUES(2013,'http://en.wikipedia.org/wiki/2013_Formula_One_season');
+INSERT INTO `seasons` VALUES(1952,'http://en.wikipedia.org/wiki/1952_Formula_One_season');
+INSERT INTO `seasons` VALUES(1965,'http://en.wikipedia.org/wiki/1965_Formula_One_season');
+INSERT INTO `seasons` VALUES(1966,'http://en.wikipedia.org/wiki/1966_Formula_One_season');
+INSERT INTO `seasons` VALUES(1993,'http://en.wikipedia.org/wiki/1993_Formula_One_season');
+INSERT INTO `seasons` VALUES(1973,'http://en.wikipedia.org/wiki/1973_Formula_One_season');
+INSERT INTO `seasons` VALUES(1990,'http://en.wikipedia.org/wiki/1990_Formula_One_season');
 CREATE TABLE `races`
 (`raceId` BIGINT,
 `year` BIGINT,
@@ -112,50 +64,26 @@ CREATE TABLE `races`
 `date` DATE,
 `time` VARCHAR(1023),
 `url` VARCHAR(1023));
-INSERT INTO `races` VALUES(659,1969,4,39,'Dutch Grand Prix','1969-06-21',NULL,'http://en.wikipedia.org/wiki/1969_Dutch_Grand_Prix');
-INSERT INTO `races` VALUES(544,1977,2,18,'Brazilian Grand Prix','1977-01-23',NULL,'http://en.wikipedia.org/wiki/1977_Brazilian_Grand_Prix');
-INSERT INTO `races` VALUES(802,1954,4,55,'French Grand Prix','1954-07-04',NULL,'http://en.wikipedia.org/wiki/1954_French_Grand_Prix');
-INSERT INTO `races` VALUES(800,1954,2,19,'Indianapolis 500','1954-05-31',NULL,'http://en.wikipedia.org/wiki/1954_Indianapolis_500');
-INSERT INTO `races` VALUES(589,1975,14,46,'United States Grand Prix','1975-10-05',NULL,'http://en.wikipedia.org/wiki/1975_United_States_Grand_Prix');
-INSERT INTO `races` VALUES(790,1956,7,20,'German Grand Prix','1956-08-05',NULL,'http://en.wikipedia.org/wiki/1956_German_Grand_Prix');
-INSERT INTO `races` VALUES(623,1972,4,6,'Monaco Grand Prix','1972-05-14',NULL,'http://en.wikipedia.org/wiki/1972_Monaco_Grand_Prix');
-INSERT INTO `races` VALUES(125,2002,2,2,'Malaysian Grand Prix','2002-03-17',NULL,'http://en.wikipedia.org/wiki/2002_Malaysian_Grand_Prix');
-INSERT INTO `races` VALUES(778,1957,3,19,'Indianapolis 500','1957-05-30',NULL,'http://en.wikipedia.org/wiki/1957_Indianapolis_500');
-INSERT INTO `races` VALUES(417,1986,14,27,'Portuguese Grand Prix','1986-09-21',NULL,'http://en.wikipedia.org/wiki/1986_Portuguese_Grand_Prix');
-INSERT INTO `races` VALUES(599,1974,10,38,'British Grand Prix','1974-07-20',NULL,'http://en.wikipedia.org/wiki/1974_British_Grand_Prix');
-INSERT INTO `races` VALUES(57,2006,5,20,'European Grand Prix','2006-05-07','14:00:00','http://en.wikipedia.org/wiki/2006_European_Grand_Prix');
-INSERT INTO `races` VALUES(981,2017,13,14,'Italian Grand Prix','2017-09-03','12:00:00','https://en.wikipedia.org/wiki/2017_Italian_Grand_Prix');
-INSERT INTO `races` VALUES(551,1977,9,41,'French Grand Prix','1977-07-03',NULL,'http://en.wikipedia.org/wiki/1977_French_Grand_Prix');
-INSERT INTO `races` VALUES(685,1967,7,20,'German Grand Prix','1967-08-06',NULL,'http://en.wikipedia.org/wiki/1967_German_Grand_Prix');
-INSERT INTO `races` VALUES(116,2003,9,20,'European Grand Prix','2003-06-29',NULL,'http://en.wikipedia.org/wiki/2003_European_Grand_Prix');
-INSERT INTO `races` VALUES(565,1976,6,6,'Monaco Grand Prix','1976-05-30',NULL,'http://en.wikipedia.org/wiki/1976_Monaco_Grand_Prix');
-INSERT INTO `races` VALUES(138,2002,15,14,'Italian Grand Prix','2002-09-15',NULL,'http://en.wikipedia.org/wiki/2002_Italian_Grand_Prix');
-INSERT INTO `races` VALUES(616,1973,12,23,'Austrian Grand Prix','1973-08-19',NULL,'http://en.wikipedia.org/wiki/1973_Austrian_Grand_Prix');
+INSERT INTO `races` VALUES(230,1996,7,4,'Spanish Grand Prix','1996-06-02',NULL,'http://en.wikipedia.org/wiki/1996_Spanish_Grand_Prix');
+INSERT INTO `races` VALUES(409,1986,6,7,'Canadian Grand Prix','1986-06-15',NULL,'http://en.wikipedia.org/wiki/1986_Canadian_Grand_Prix');
+INSERT INTO `races` VALUES(516,1979,5,45,'Spanish Grand Prix','1979-04-29',NULL,'http://en.wikipedia.org/wiki/1979_Spanish_Grand_Prix');
+INSERT INTO `races` VALUES(526,1979,15,46,'United States Grand Prix','1979-10-07',NULL,'http://en.wikipedia.org/wiki/1979_United_States_Grand_Prix');
+INSERT INTO `races` VALUES(555,1977,13,39,'Dutch Grand Prix','1977-08-28',NULL,'http://en.wikipedia.org/wiki/1977_Dutch_Grand_Prix');
+INSERT INTO `races` VALUES(967,2016,20,18,'Brazilian Grand Prix','2016-11-13','16:00:00','https://en.wikipedia.org/wiki/2016_Brazilian_Grand_Prix');
+INSERT INTO `races` VALUES(475,1982,9,39,'Dutch Grand Prix','1982-07-03',NULL,'http://en.wikipedia.org/wiki/1982_Dutch_Grand_Prix');
 CREATE TABLE `constructorResults`
 (`constructorResultsId` BIGINT,
 `raceId` BIGINT,
 `constructorId` BIGINT,
 `points` DOUBLE,
 `status` VARCHAR(1023));
-INSERT INTO `constructorResults` VALUES(13338,556,34,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(3558,322,34,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(2050,210,24,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(12960,564,63,2.0,NULL);
-INSERT INTO `constructorResults` VALUES(3842,2,10,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(5563,455,25,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(1623,172,16,4.0,NULL);
-INSERT INTO `constructorResults` VALUES(5426,446,52,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(1655,175,17,6.0,NULL);
-INSERT INTO `constructorResults` VALUES(3956,14,9,5.0,NULL);
-INSERT INTO `constructorResults` VALUES(13469,531,57,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(5930,479,27,4.0,NULL);
-INSERT INTO `constructorResults` VALUES(4812,402,49,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(2072,212,21,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(13831,521,60,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(5889,476,34,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(2666,263,33,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(13619,540,56,0.0,NULL);
-INSERT INTO `constructorResults` VALUES(1499,160,20,0.0,NULL);
+INSERT INTO `constructorResults` VALUES(6380,507,4,9.0,NULL);
+INSERT INTO `constructorResults` VALUES(13506,533,25,0.0,NULL);
+INSERT INTO `constructorResults` VALUES(5680,463,52,0.0,NULL);
+INSERT INTO `constructorResults` VALUES(2509,251,18,0.0,NULL);
+INSERT INTO `constructorResults` VALUES(13799,520,204,0.0,NULL);
+INSERT INTO `constructorResults` VALUES(4748,398,18,0.0,NULL);
+INSERT INTO `constructorResults` VALUES(10047,752,117,0.0,NULL);
 CREATE TABLE `constructorStandings`
 (`constructorStandingsId` BIGINT,
 `raceId` BIGINT,
@@ -164,25 +92,13 @@ CREATE TABLE `constructorStandings`
 `position` BIGINT,
 `positionText` VARCHAR(1023),
 `wins` BIGINT);
-INSERT INTO `constructorStandings` VALUES(10021,425,27,5.0,7,'7',0);
-INSERT INTO `constructorStandings` VALUES(568,71,6,8.0,2,'2',0);
-INSERT INTO `constructorStandings` VALUES(23699,541,6,49.0,3,'3',4);
-INSERT INTO `constructorStandings` VALUES(21702,635,6,28.0,1,'1',2);
-INSERT INTO `constructorStandings` VALUES(9256,377,37,2.0,8,'8',0);
-INSERT INTO `constructorStandings` VALUES(19129,755,170,48.0,1,'1',6);
-INSERT INTO `constructorStandings` VALUES(3310,292,22,17.0,2,'2',0);
-INSERT INTO `constructorStandings` VALUES(24484,354,6,389.0,3,'3',5);
-INSERT INTO `constructorStandings` VALUES(2188,203,18,0.0,10,'10',0);
-INSERT INTO `constructorStandings` VALUES(8718,12,10,8.0,9,'9',0);
-INSERT INTO `constructorStandings` VALUES(25160,882,131,52.0,4,'4',0);
-INSERT INTO `constructorStandings` VALUES(10023,425,50,0.0,12,'12',0);
-INSERT INTO `constructorStandings` VALUES(26581,959,9,256.0,2,'2',1);
-INSERT INTO `constructorStandings` VALUES(25834,45,2,61.0,2,'2',0);
-INSERT INTO `constructorStandings` VALUES(6217,98,6,142.0,1,'1',8);
-INSERT INTO `constructorStandings` VALUES(9135,371,22,39.0,4,'4',1);
-INSERT INTO `constructorStandings` VALUES(22225,591,34,0.0,7,'7',0);
-INSERT INTO `constructorStandings` VALUES(9320,381,48,3.0,9,'9',0);
-INSERT INTO `constructorStandings` VALUES(26201,932,3,104.0,3,'3',0);
+INSERT INTO `constructorStandings` VALUES(5188,252,1,21.0,4,'4',0);
+INSERT INTO `constructorStandings` VALUES(1635,34,3,26.0,8,'8',0);
+INSERT INTO `constructorStandings` VALUES(3433,300,35,2.0,10,'10',0);
+INSERT INTO `constructorStandings` VALUES(8945,364,34,5.0,9,'9',0);
+INSERT INTO `constructorStandings` VALUES(743,89,9,34.0,7,'7',0);
+INSERT INTO `constructorStandings` VALUES(23297,553,37,0.0,13,'13',0);
+INSERT INTO `constructorStandings` VALUES(22720,583,67,2.0,9,'9',0);
 CREATE TABLE `driverStandings`
 (`driverStandingsId` BIGINT,
 `raceId` BIGINT,
@@ -191,25 +107,13 @@ CREATE TABLE `driverStandings`
 `position` BIGINT,
 `positionText` VARCHAR(1023),
 `wins` BIGINT);
-INSERT INTO `driverStandings` VALUES(3325,170,23,20.0,5,'5',0);
-INSERT INTO `driverStandings` VALUES(54484,648,358,27.0,1,'1',3);
-INSERT INTO `driverStandings` VALUES(64572,849,30,28.0,10,'10',0);
-INSERT INTO `driverStandings` VALUES(44646,824,726,0.0,40,'40',0);
-INSERT INTO `driverStandings` VALUES(22581,481,173,23.0,8,'8',1);
-INSERT INTO `driverStandings` VALUES(3823,74,27,0.0,21,'21',0);
-INSERT INTO `driverStandings` VALUES(48090,738,482,0.0,21,'21',0);
-INSERT INTO `driverStandings` VALUES(66826,909,813,0.0,19,'19',0);
-INSERT INTO `driverStandings` VALUES(46948,791,562,0.0,76,'76',0);
-INSERT INTO `driverStandings` VALUES(53660,671,312,4.0,13,'13',0);
-INSERT INTO `driverStandings` VALUES(12081,139,14,41.0,5,'5',1);
-INSERT INTO `driverStandings` VALUES(63468,723,373,36.0,1,'1',4);
-INSERT INTO `driverStandings` VALUES(43341,836,589,4.0,9,'9',0);
-INSERT INTO `driverStandings` VALUES(4553,203,64,3.0,14,'14',0);
-INSERT INTO `driverStandings` VALUES(67080,928,3,51.0,3,'3',0);
-INSERT INTO `driverStandings` VALUES(51476,799,627,0.0,14,'14',0);
-INSERT INTO `driverStandings` VALUES(53883,677,322,0.0,28,'28',0);
-INSERT INTO `driverStandings` VALUES(54262,630,307,4.0,12,'12',0);
-INSERT INTO `driverStandings` VALUES(48177,741,485,0.0,34,'34',0);
+INSERT INTO `driverStandings` VALUES(63996,346,10,0.0,24,'24',0);
+INSERT INTO `driverStandings` VALUES(17281,311,55,8.0,8,'8',0);
+INSERT INTO `driverStandings` VALUES(56309,586,232,0.0,40,'40',0);
+INSERT INTO `driverStandings` VALUES(16423,335,112,0.0,23,'23',0);
+INSERT INTO `driverStandings` VALUES(21855,461,105,9.0,10,'10',1);
+INSERT INTO `driverStandings` VALUES(9542,282,87,10.0,6,'6',0);
+INSERT INTO `driverStandings` VALUES(51432,708,412,0.0,47,'47',0);
 CREATE TABLE `lapTimes`
 (`raceId` BIGINT,
 `driverId` BIGINT,
@@ -217,25 +121,13 @@ CREATE TABLE `lapTimes`
 `position` BIGINT,
 `time` VARCHAR(1023),
 `milliseconds` BIGINT);
-INSERT INTO `lapTimes` VALUES(178,25,38,8,'1:26.761',86761);
-INSERT INTO `lapTimes` VALUES(191,56,41,4,'1:35.764',95764);
-INSERT INTO `lapTimes` VALUES(898,813,29,17,'1:43.747',103747);
-INSERT INTO `lapTimes` VALUES(88,32,13,8,'1:35.183',95183);
-INSERT INTO `lapTimes` VALUES(890,817,5,9,'1:29.841',89841);
-INSERT INTO `lapTimes` VALUES(71,31,31,5,'1:27.773',87773);
-INSERT INTO `lapTimes` VALUES(19,20,15,14,'1:38.733',98733);
-INSERT INTO `lapTimes` VALUES(81,35,52,14,'1:25.025',85025);
-INSERT INTO `lapTimes` VALUES(348,4,40,2,'1:25.288',85288);
-INSERT INTO `lapTimes` VALUES(185,22,39,3,'1:21.984',81984);
-INSERT INTO `lapTimes` VALUES(918,829,31,18,'1:50.409',110409);
-INSERT INTO `lapTimes` VALUES(224,63,11,8,'1:35.804',95804);
-INSERT INTO `lapTimes` VALUES(852,814,6,9,'1:57.289',117289);
-INSERT INTO `lapTimes` VALUES(879,4,62,2,'1:28.230',88230);
-INSERT INTO `lapTimes` VALUES(21,8,1,1,'1:37.226',97226);
-INSERT INTO `lapTimes` VALUES(157,31,31,2,'1:38.691',98691);
-INSERT INTO `lapTimes` VALUES(78,30,34,5,'1:33.030',93030);
-INSERT INTO `lapTimes` VALUES(111,43,19,12,'1:25.588',85588);
-INSERT INTO `lapTimes` VALUES(129,35,63,8,'1:11.963',71963);
+INSERT INTO `lapTimes` VALUES(94,15,38,3,'1:18.424',78424);
+INSERT INTO `lapTimes` VALUES(913,826,51,15,'1:53.477',113477);
+INSERT INTO `lapTimes` VALUES(31,3,9,4,'1:36.759',96759);
+INSERT INTO `lapTimes` VALUES(862,808,4,19,'1:45.805',105805);
+INSERT INTO `lapTimes` VALUES(906,826,33,16,'1:20.138',80138);
+INSERT INTO `lapTimes` VALUES(215,30,7,2,'1:26.062',86062);
+INSERT INTO `lapTimes` VALUES(936,13,63,12,'1:27.543',87543);
 CREATE TABLE `pitStops`
 (`raceId` BIGINT,
 `driverId` BIGINT,
@@ -244,25 +136,13 @@ CREATE TABLE `pitStops`
 `time` VARCHAR(1023),
 `duration` VARCHAR(1023),
 `milliseconds` BIGINT);
-INSERT INTO `pitStops` VALUES(845,816,1,17,'14:30:41','23.176',23176);
-INSERT INTO `pitStops` VALUES(866,818,3,47,'15:06:41','14.641',14641);
-INSERT INTO `pitStops` VALUES(943,807,1,9,'13:16:16','23.277',23277);
-INSERT INTO `pitStops` VALUES(942,826,2,38,'15:20:45','25.205',25205);
-INSERT INTO `pitStops` VALUES(872,816,1,27,'14:45:12','21.962',21962);
-INSERT INTO `pitStops` VALUES(909,815,1,14,'14:24:04','21.802',21802);
-INSERT INTO `pitStops` VALUES(931,833,1,35,'14:52:53','27.554',27554);
-INSERT INTO `pitStops` VALUES(978,830,2,49,'14:25:07','28.056',28056);
-INSERT INTO `pitStops` VALUES(875,815,1,18,'15:35:58','24.408',24408);
-INSERT INTO `pitStops` VALUES(960,821,2,9,'14:24:48','16:38.622',998622);
-INSERT INTO `pitStops` VALUES(870,37,2,41,'15:10:00','21.877',21877);
-INSERT INTO `pitStops` VALUES(849,816,1,11,'13:25:14','28.742',28742);
-INSERT INTO `pitStops` VALUES(912,18,1,22,'14:37:04','24.669',24669);
-INSERT INTO `pitStops` VALUES(926,828,1,1,'16:05:59','22.681',22681);
-INSERT INTO `pitStops` VALUES(862,808,1,10,'15:21:40','21.851',21851);
-INSERT INTO `pitStops` VALUES(896,824,2,33,'15:56:05','25.383',25383);
-INSERT INTO `pitStops` VALUES(945,822,2,9,'17:20:31','28.622',28622);
-INSERT INTO `pitStops` VALUES(915,826,2,37,'16:09:35','30.321',30321);
-INSERT INTO `pitStops` VALUES(844,1,1,9,'15:17:38','20.833',20833);
+INSERT INTO `pitStops` VALUES(884,20,1,10,'14:18:51','18.606',18606);
+INSERT INTO `pitStops` VALUES(870,813,3,52,'15:23:48','13.206',13206);
+INSERT INTO `pitStops` VALUES(873,808,3,30,'21:04:39','30.405',30405);
+INSERT INTO `pitStops` VALUES(916,13,1,14,'14:30:44','24.488',24488);
+INSERT INTO `pitStops` VALUES(857,30,2,50,'16:19:55','21.482',21482);
+INSERT INTO `pitStops` VALUES(888,8,2,24,'14:43:25','20.528',20528);
+INSERT INTO `pitStops` VALUES(945,807,2,24,'17:47:36','22.174',22174);
 CREATE TABLE `qualifying`
 (`qualifyId` BIGINT,
 `raceId` BIGINT,
@@ -273,47 +153,23 @@ CREATE TABLE `qualifying`
 `q1` VARCHAR(1023),
 `q2` VARCHAR(1023),
 `q3` VARCHAR(1023));
-INSERT INTO `qualifying` VALUES(5075,864,807,10,12,14,'1:23.720','1:23.177',NULL);
-INSERT INTO `qualifying` VALUES(5784,896,16,10,15,13,'1:26.164','1:25.740',NULL);
-INSERT INTO `qualifying` VALUES(6251,916,20,9,1,17,'1:39.621',NULL,NULL);
-INSERT INTO `qualifying` VALUES(6456,933,832,5,55,13,'1:11.158','1:10.465',NULL);
-INSERT INTO `qualifying` VALUES(1584,173,2,20,15,16,'1:38.141',NULL,NULL);
-INSERT INTO `qualifying` VALUES(334,34,17,9,10,6,'1:36.238','1:35.686','1:37.083');
-INSERT INTO `qualifying` VALUES(338,34,7,5,14,10,'1:36.239','1:35.478','1:38.885');
-INSERT INTO `qualifying` VALUES(6844,955,830,9,33,9,'1:44.939','1:44.387','1:45.570');
-INSERT INTO `qualifying` VALUES(792,55,23,7,7,6,'1:28.007','1:26.596','1:26.612');
-INSERT INTO `qualifying` VALUES(5851,899,815,1,6,14,'1:26.741','1:28.269',NULL);
-INSERT INTO `qualifying` VALUES(3892,114,35,16,16,11,'1:16.755','','');
-INSERT INTO `qualifying` VALUES(4436,71,40,18,20,16,'1:50.864','1:37.499',NULL);
-INSERT INTO `qualifying` VALUES(4148,93,17,19,14,8,'1:20.921',NULL,NULL);
-INSERT INTO `qualifying` VALUES(1652,177,63,16,23,19,'1:29.451',NULL,NULL);
-INSERT INTO `qualifying` VALUES(6054,907,16,15,99,17,'1:10.825',NULL,NULL);
-INSERT INTO `qualifying` VALUES(6455,933,828,15,9,12,'1:12.388','1:10.426',NULL);
-INSERT INTO `qualifying` VALUES(6743,950,825,4,20,17,'1:38.673',NULL,NULL);
-INSERT INTO `qualifying` VALUES(1265,83,22,6,2,7,'1:21.158',NULL,NULL);
-INSERT INTO `qualifying` VALUES(4694,847,67,5,18,15,'1:15.901','1:15.334',NULL);
+INSERT INTO `qualifying` VALUES(7313,977,826,5,26,14,'1:05.990','1:05.884',NULL);
+INSERT INTO `qualifying` VALUES(6857,955,835,4,30,22,'1:46.394',NULL,NULL);
+INSERT INTO `qualifying` VALUES(7140,969,1,131,44,1,'1:24.191','1:23.251','1:22.188');
+INSERT INTO `qualifying` VALUES(7139,968,828,15,9,22,'1:42.637',NULL,NULL);
+INSERT INTO `qualifying` VALUES(5255,872,814,10,11,4,'1:24.875','1:24.345','1:24.304');
+INSERT INTO `qualifying` VALUES(5914,902,20,9,1,11,'1:35.549','1:34.985',NULL);
+INSERT INTO `qualifying` VALUES(3393,339,1,1,2,20,'1:53.050',NULL,NULL);
 CREATE TABLE `status`
 (`statusId` BIGINT,
 `status` VARCHAR(1023));
-INSERT INTO `status` VALUES(48,'Fuel pump');
-INSERT INTO `status` VALUES(54,'Withdrew');
-INSERT INTO `status` VALUES(98,'Injection');
-INSERT INTO `status` VALUES(53,'+13 Laps');
-INSERT INTO `status` VALUES(132,'ERS');
-INSERT INTO `status` VALUES(128,'+42 Laps');
-INSERT INTO `status` VALUES(1,'Finished');
-INSERT INTO `status` VALUES(110,'Water pipe');
-INSERT INTO `status` VALUES(114,'+18 Laps');
-INSERT INTO `status` VALUES(38,'Steering');
-INSERT INTO `status` VALUES(76,'Vibrations');
-INSERT INTO `status` VALUES(11,'+1 Lap');
-INSERT INTO `status` VALUES(20,'Spun off');
-INSERT INTO `status` VALUES(18,'+8 Laps');
-INSERT INTO `status` VALUES(3,'Accident');
-INSERT INTO `status` VALUES(118,'+29 Laps');
-INSERT INTO `status` VALUES(131,'Power Unit');
-INSERT INTO `status` VALUES(35,'Refuelling');
+INSERT INTO `status` VALUES(96,'Excluded');
+INSERT INTO `status` VALUES(61,'Wheel nut');
+INSERT INTO `status` VALUES(70,'Oil line');
+INSERT INTO `status` VALUES(94,'Oil pump');
 INSERT INTO `status` VALUES(55,'+12 Laps');
+INSERT INTO `status` VALUES(53,'+13 Laps');
+INSERT INTO `status` VALUES(47,'Water leak');
 CREATE TABLE `results`
 (`resultId` BIGINT,
 `raceId` BIGINT,
@@ -333,22 +189,10 @@ CREATE TABLE `results`
 `fastestLapTime` VARCHAR(1023),
 `fastestLapSpeed` VARCHAR(1023),
 `statusId` BIGINT);
-INSERT INTO `results` VALUES(12487,516,203,6,12,3,7,'7',7,0.0,75,'+52.31',6004150,NULL,NULL,NULL,NULL,1);
-INSERT INTO `results` VALUES(15027,608,332,58,20,14,3,'3',3,4.0,75,'+1:13.1',6571800,NULL,NULL,NULL,NULL,1);
-INSERT INTO `results` VALUES(14963,605,328,25,6,4,3,'3',3,4.0,96,'+33.19',7011410,NULL,NULL,NULL,NULL,1);
-INSERT INTO `results` VALUES(5475,269,50,22,6,10,5,'5',5,2.0,71,'+29.385',6339485,NULL,NULL,NULL,NULL,1);
-INSERT INTO `results` VALUES(23441,972,8,6,7,2,3,'3',3,15.0,52,'+11.000',5299743,49,1,'1:36.844','217.388',1);
-INSERT INTO `results` VALUES(10662,452,118,53,35,5,8,'8',7,0.0,62,NULL,NULL,NULL,NULL,NULL,NULL,11);
-INSERT INTO `results` VALUES(8202,364,156,25,3,19,NULL,'R',19,0.0,16,NULL,NULL,NULL,NULL,NULL,NULL,5);
-INSERT INTO `results` VALUES(4946,248,97,29,9,15,NULL,'R',24,0.0,0,NULL,NULL,NULL,NULL,NULL,NULL,6);
-INSERT INTO `results` VALUES(16418,669,370,66,15,6,2,'2',2,6.0,80,'+2.2',7234500,NULL,NULL,NULL,NULL,1);
-INSERT INTO `results` VALUES(13755,561,207,73,27,13,6,'6',6,1.0,77,NULL,NULL,NULL,NULL,NULL,NULL,11);
-INSERT INTO `results` VALUES(2979,160,35,16,22,9,5,'5',5,2.0,61,NULL,NULL,NULL,NULL,NULL,NULL,11);
-INSERT INTO `results` VALUES(5196,259,78,6,27,6,2,'2',2,6.0,58,'+54.942',5363584,NULL,NULL,NULL,NULL,1);
-INSERT INTO `results` VALUES(10498,446,95,32,12,16,4,'4',4,3.0,44,'+51.663',5134873,NULL,NULL,NULL,NULL,1);
-INSERT INTO `results` VALUES(11506,481,172,27,26,21,NULL,'R',22,0.0,5,NULL,NULL,NULL,NULL,NULL,NULL,6);
-INSERT INTO `results` VALUES(11088,467,194,54,10,12,9,'9',9,0.0,75,NULL,NULL,NULL,NULL,NULL,NULL,12);
-INSERT INTO `results` VALUES(2989,160,15,17,6,8,15,'15',15,0.0,58,NULL,NULL,NULL,NULL,NULL,NULL,6);
-INSERT INTO `results` VALUES(12719,524,212,62,31,0,NULL,'F',28,0.0,0,NULL,NULL,NULL,NULL,NULL,NULL,81);
-INSERT INTO `results` VALUES(23004,951,837,209,88,21,NULL,'R',22,0.0,0,NULL,NULL,NULL,0,NULL,NULL,4);
-INSERT INTO `results` VALUES(6868,316,138,25,3,15,NULL,'R',22,0.0,24,NULL,NULL,NULL,NULL,NULL,NULL,37);
+INSERT INTO `results` VALUES(7095,323,129,45,14,22,NULL,'R',14,0.0,52,NULL,NULL,NULL,NULL,NULL,NULL,36);
+INSERT INTO `results` VALUES(22532,918,821,15,21,14,15,'15',15,0.0,54,NULL,NULL,43,15,'1:47.698','185.652',11);
+INSERT INTO `results` VALUES(3311,175,30,6,3,3,8,'8',8,0.0,56,NULL,NULL,NULL,NULL,NULL,NULL,11);
+INSERT INTO `results` VALUES(8539,373,127,37,15,20,15,'15',15,0.0,58,NULL,NULL,NULL,NULL,NULL,NULL,12);
+INSERT INTO `results` VALUES(14167,576,182,6,12,4,6,'6',6,1.0,53,'+1:19.65',6045940,NULL,NULL,NULL,NULL,1);
+INSERT INTO `results` VALUES(1497,89,23,7,17,9,3,'3',3,6.0,56,'+25.3',6018918,44,5,'1:34.035','208.684',1);
+INSERT INTO `results` VALUES(11252,473,202,6,28,4,3,'3',3,4.0,62,'+28.077',7149120,NULL,NULL,NULL,NULL,1);

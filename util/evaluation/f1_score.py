@@ -97,10 +97,10 @@ class F1Score(Evaluation):
         """Checks whether a value of the gold standard database is in a specific column of a result table"""
         return any(
             [
-                # Is this the correct row to search for the value?
-                all([gs_value is None or gs_value in r_row for gs_value in gs_row])
                 # Is the value in the specified columns equal?
-                and gs_row[gs_column_index] == r_row[r_column_index]
+                gs_row[gs_column_index] == r_row[r_column_index]
+                # Is this the correct row to search for the value?
+                and all([gs_value is None or gs_value in r_row for gs_value in gs_row])
                 for r_row in r_table
             ]
         )

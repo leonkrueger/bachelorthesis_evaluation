@@ -4,25 +4,23 @@ from typing import Any
 
 import matplotlib.pyplot as plt
 from numpy import average
+from tqdm import tqdm
 
 from util.adjustments import EXPERIMENTS
 from util.evaluation.accuracy import AccuracyEvaluation
 from util.evaluation.evaluation import Evaluation
-from util.evaluation.group_proportion_score import GroupProportionScore
-from util.evaluation.group_score import GroupScore
+from util.evaluation.f1_score import F1Score
 from util.evaluation.number_of_tables import NumberOfTablesEvaluation
 from util.evaluation.sparsity import SparsityEvaluation
-from util.evaluation.split_proportion_score import SplitProportionScore
-from util.evaluation.split_score import SplitScore
 
 folder = "data"
 
 create_evaluation_plots = False
 create_evaluation_jsons = True
-print_result_dict = False
+print_result_dict = True
 create_individual_plots = False
 
-evaluation = GroupProportionScore()
+evaluation = F1Score(average)
 
 
 def plot_results(
@@ -126,7 +124,7 @@ def evaluate_experiment_on_one_database(
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
     results = {}
 
-    for path in os.listdir(folder):
+    for path in tqdm(os.listdir(folder)):
         strategy_results_path = os.path.join(folder, path)
         if not os.path.isdir(strategy_results_path):
             continue
@@ -150,7 +148,7 @@ def evaluate_experiment(
     # Lists that contain dicts that map the strategy and paramaters to its accuracy and null values
     results = {}
 
-    for path in os.listdir(folder):
+    for path in tqdm(os.listdir(folder)):
         subfolder = os.path.join(folder, path, experiment_name)
         if not os.path.isdir(subfolder):
             continue

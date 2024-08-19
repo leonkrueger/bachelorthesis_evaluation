@@ -11,9 +11,9 @@ from util.processing_utils import get_data_from_create_table
 
 
 folder = "data"
-max_inserts = 250
+max_inserts = 100
 
-random = Random(8463)
+random = Random()
 
 
 def dump_inserts(

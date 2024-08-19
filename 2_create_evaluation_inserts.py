@@ -10,7 +10,7 @@ from util.processing_utils import is_usable_value
 
 folder = "data"
 
-random = Random(2572)
+random = Random()
 
 with open(os.path.join("data", "synonyms.json"), encoding="utf-8") as synonyms_file:
     table_synonyms = json.load(synonyms_file)

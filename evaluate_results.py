@@ -1,5 +1,7 @@
 import json
 import os
+from functools import partial
+from multiprocessing import Pool
 from typing import Any
 
 import matplotlib.pyplot as plt
@@ -21,6 +23,7 @@ print_result_dict = True
 create_individual_plots = False
 
 evaluation = F1Score(average)
+# evaluation = SparsityEvaluation()
 
 
 def plot_results(
@@ -78,8 +81,8 @@ def create_evaluation_plots(
 
 
 def evaluate_experiment_on_one_database_for_one_strategy(
-    evaluation: Evaluation,
     folder: str,
+    evaluation: Evaluation,
     gold_standard: dict[str, list[list[str]]],
     y_label: str,
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -112,7 +115,7 @@ def evaluate_experiment_on_one_database_for_one_strategy(
             results,
         )
 
-    return results
+    return (folder, results)
 
 
 def evaluate_experiment_on_one_database(
@@ -122,21 +125,23 @@ def evaluate_experiment_on_one_database(
     y_label: str,
 ) -> dict[str, dict[str, float]]:
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
-    results = {}
+    strategy_results_paths = [os.path.join(folder, path) for path in os.listdir(folder)]
+    strategy_results_paths = [
+        path for path in strategy_results_paths if os.path.isdir(path)
+    ]
 
-    for path in tqdm(os.listdir(folder)):
-        strategy_results_path = os.path.join(folder, path)
-        if not os.path.isdir(strategy_results_path):
-            continue
-
-        results[path] = evaluate_experiment_on_one_database_for_one_strategy(
-            evaluation,
-            strategy_results_path,
-            gold_standard,
-            y_label,
+    with Pool(4) as pool:
+        results = pool.map(
+            partial(
+                evaluate_experiment_on_one_database_for_one_strategy,
+                evaluation=evaluation,
+                gold_standard=gold_standard,
+                y_label=y_label,
+            ),
+            strategy_results_paths,
         )
 
-    return results
+    return dict(results)
 
 
 def evaluate_experiment(

@@ -17,12 +17,12 @@ from util.evaluation.sparsity import SparsityEvaluation
 
 folder = "data"
 
-create_evaluation_plots = False
+should_create_evaluation_plots = False
 create_evaluation_jsons = True
 print_result_dict = True
 create_individual_plots = False
 
-evaluation = F1Score(average)
+evaluation = F1Score()
 # evaluation = SparsityEvaluation()
 
 
@@ -47,6 +47,9 @@ def create_evaluation_plots(
     """Creates the plots for evaluating an experiment"""
     # Strategies are the same for accuracies and null values and for each database
     for strategy in list(results.values())[0].keys():
+        if strategy == "gold_standard":
+            continue
+
         averages = {
             parameters: average(
                 [result[strategy][parameters] for result in results.values()]
@@ -57,7 +60,7 @@ def create_evaluation_plots(
         strategy_evaluation_folder = os.path.join(folder, "evaluation", strategy)
         os.makedirs(strategy_evaluation_folder, exist_ok=True)
 
-        if create_evaluation_plots:
+        if should_create_evaluation_plots:
             plot_results(
                 os.path.join(
                     strategy_evaluation_folder,
@@ -125,7 +128,8 @@ def evaluate_experiment_on_one_database(
     y_label: str,
 ) -> dict[str, dict[str, float]]:
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
-    strategy_results_paths = [os.path.join(folder, path) for path in os.listdir(folder)]
+    paths = os.listdir(folder)
+    strategy_results_paths = [os.path.join(folder, path) for path in paths]
     strategy_results_paths = [
         path for path in strategy_results_paths if os.path.isdir(path)
     ]
@@ -141,7 +145,13 @@ def evaluate_experiment_on_one_database(
             strategy_results_paths,
         )
 
-    return dict(results)
+    results = {
+        [path for path in paths if path in folder][0]: result
+        for folder, result in results
+    }
+    results["gold_standard"] = evaluation.calculate(gold_standard, gold_standard)
+
+    return results
 
 
 def evaluate_experiment(

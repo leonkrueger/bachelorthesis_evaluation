@@ -32,12 +32,12 @@ class F1Score(Evaluation):
         return average([score for score in table_scores if not isnan(score)])
 
     def _consider_value(self, value: str) -> bool:
-        return value is not None and value != "None"
+        return value is not None and value != "None" and value != "nan"
 
     def _consider_data_type(self, value: str) -> bool:
-        # return True
-        return not isinstance(value, str)
-        # return not isinstance(value, int) and not isinstance(value, float)
+        return True
+        # return isinstance(value, str)
+        # return isinstance(value, int) or isinstance(value, float)
 
     def _calculate_gs_table_f1_score(
         self, gs_table: list[list[str]], results: dict[str, list[list[str]]]

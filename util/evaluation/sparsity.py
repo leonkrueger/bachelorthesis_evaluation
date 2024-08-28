@@ -19,7 +19,7 @@ class SparsityEvaluation(Evaluation):
                 for query, table in results.items()
                 for row in table
                 for value in row
-                if value is None or value == "None"
+                if value is None or value == "None" or value == "nan"
             ]
         ) / len(
             [

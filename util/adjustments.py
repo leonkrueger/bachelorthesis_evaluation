@@ -47,14 +47,16 @@ EXPERIMENTS = {
     },
     "table_and_columns_deleted": {
         "adjustments": [
-            (Adjustments.DELETE_TABLE, [1.0]),
-            (Adjustments.DELETE_COLUMN, [1.0]),
+            (Adjustments.DELETE_TABLE, [0.5, 1.0]),
+            (Adjustments.DELETE_COLUMN, [0.5, 1.0]),
         ],
         "y_label": "Tables and columns deleted",
         "strategies": [
             "Llama3_finetuned",
             "Llama3_not_finetuned",
             "GPT3_5",
+            "GPT4o",
+            "GPT4o_mini",
         ],
     },
 }

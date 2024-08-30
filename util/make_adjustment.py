@@ -69,20 +69,36 @@ def use_synonyms(
                 if "columns" in query:
                     for column_index in range(len(query["columns"])):
                         if random.random() < synonym_ratio:
-                            modified_query["columns"][column_index] = (
-                                random.choice(
-                                    column_synonyms[query["table"]][
+                            possible_synonyms = (
+                                [
+                                    synonym
+                                    for synonym in column_synonyms[query["table"]][
                                         query["columns"][column_index]
                                     ]
-                                )
-                                if query["columns"][column_index]
+                                    if synonym not in modified_query["columns"]
+                                ]
+                                if query["table"] in column_synonyms
+                                and query["columns"][column_index]
                                 in column_synonyms[query["table"]]
-                                and len(
-                                    column_synonyms[query["table"]][
-                                        query["columns"][column_index]
-                                    ]
+                                else []
+                            )
+
+                            if len(possible_synonyms) == 0 and query["columns"][
+                                column_index
+                            ] in [
+                                column
+                                for index, column in enumerate(
+                                    modified_query["columns"]
                                 )
-                                > 0
+                                if index != column_index
+                            ]:
+                                print(
+                                    f"Error when generating synonym for {query['columns'][column_index]}"
+                                )
+
+                            modified_query["columns"][column_index] = (
+                                random.choice(possible_synonyms)
+                                if len(possible_synonyms) > 0
                                 else query["columns"][column_index]
                             )
 

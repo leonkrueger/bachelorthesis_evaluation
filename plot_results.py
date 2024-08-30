@@ -14,7 +14,7 @@ x_label = (
     "Altered names (%)"
     if "synonyms_used" in experiment
     else (
-        ""
+        "Removed tables (%)\nRemoved columns (%)"
         if "table_and_columns_deleted" in experiment
         else (
             "Removed columns (%)"
@@ -105,7 +105,12 @@ def boxplot_parameters_all_strategies():
         parameters_values = (
             dict(sorted(result_collector[strategy].items(), key=lambda x: float(x[0])))
             if "table_and_columns_deleted" not in experiment
-            else result_collector[strategy]
+            else dict(
+                sorted(
+                    result_collector[strategy].items(),
+                    key=lambda x: tuple([float(p) for p in x[0].split("_")]),
+                )
+            )
         )
         values.append(list(parameters_values.values()))
         labels.append(
@@ -113,7 +118,9 @@ def boxplot_parameters_all_strategies():
                 (
                     int(100 * float(parameter))
                     if "table_and_columns_deleted" not in experiment
-                    else ""
+                    else "\n".join(
+                        [str(int(100 * float(p))) for p in parameter.split("_")]
+                    )
                 )
                 for parameter in parameters_values.keys()
             ]

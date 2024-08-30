@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 from util.adjustments import Adjustments
 from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table
+from util.processing_utils import get_data_from_create_table, is_usable_value
 
 db_folder = os.path.join("fine_tuning", "validation_databases")
 num_data_points_per_db = 100
@@ -139,9 +139,7 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
             query_columns, query_values = zip(
                 *list(
                     filter(
-                        lambda pair: pair[1] is not None
-                        and pair[1].lower() != "'nan'"
-                        and pair[1].lower() != "null",
+                        lambda pair: is_usable_value(pair[1]),
                         zip(columns, values),
                     )
                 )

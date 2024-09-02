@@ -13,4 +13,4 @@ class NumberOfTablesEvaluation(Evaluation):
         results: dict[str, list[list[str]]],
         gold_standard: dict[str, list[list[str]]],
     ) -> int:
-        return len(results.keys())
+        return len(results) / len(gold_standard)

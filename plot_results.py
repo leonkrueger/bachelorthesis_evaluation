@@ -1,6 +1,7 @@
 import json
 import os
 from collections import defaultdict
+from math import isnan
 
 import numpy as np
 from matplotlib import cm
@@ -8,13 +9,18 @@ from matplotlib import pyplot as plt
 
 aggregate_funtion = np.average
 
-experiment = "table_deleted_f1_score"
+experiment = "columns_deleted_f1_score"
+strategies_to_consider = None  # ["Llama3_finetuned", "GPT4o"]
+
+# evaluation_call = lambda: boxplot_parameters_all_strategies()
+evaluation_call = lambda: barplot_all_strategies("0.0")
+
 y_label = "Sparsity" if "sparsity" in experiment else "Database F1 Score"
 x_label = (
     "Altered names (%)"
     if "synonyms_used" in experiment
     else (
-        "Removed tables (%)\nRemoved columns (%)"
+        "Removed tables (%),\nRemoved columns (%)"
         if "table_and_columns_deleted" in experiment
         else (
             "Removed columns (%)"
@@ -34,11 +40,39 @@ result_collector = defaultdict(lambda: defaultdict(lambda: []))
 gold_standard_collector = []
 
 for database, results_per_db in sorted(results.items(), key=lambda x: x[0]):
-    for strategy, results_per_strategy in results_per_db.items():
+    strategies = (
+        strategies_to_consider if strategies_to_consider else results_per_db.keys()
+    )
+
+    if any(
+        [
+            len(results_per_db[s]) == 0
+            for s in strategies
+            if isinstance(results_per_db[s], dict)
+        ]
+    ):
+        continue
+
+    for strategy in strategies:
         if strategy == "gold_standard":
-            gold_standard_collector.append(results_per_strategy)
+            if isnan(results_per_db[strategy]):
+                continue
+
+            gold_standard_collector.append(results_per_db[strategy])
         else:
-            for parameters, result_per_parameters in results_per_strategy.items():
+            for parameters, result_per_parameters in results_per_db[strategy].items():
+                if isnan(result_per_parameters):
+                    continue
+
+                if any(
+                    [
+                        parameters not in results_per_db[s]
+                        for s in strategies
+                        if isinstance(results_per_db[s], dict)
+                    ]
+                ):
+                    continue
+
                 result_collector[strategy][parameters].append(result_per_parameters)
 
 aggregated_results = defaultdict(lambda: defaultdict(lambda: 0.0))
@@ -50,11 +84,14 @@ for strategy, results_per_strategy in result_collector.items():
 
 strategy_labels = {
     "gold_standard": "Gold Standard",
-    "Llama3_finetuned": "Fine-tuned Llama3",
-    "Llama3_not_finetuned": "Not fine-tuned Llama3",
+    "Llama3_finetuned": "Fine-tuned Llama 3",
+    "Llama3_not_finetuned": "Not fine-tuned Llama 3",
     "Heuristic_exact": "Heuristic (exact)",
     "Heuristic_fuzzy": "Heuristic (fuzzy)",
     "Heuristic_synonyms": "Heuristic (synonyms)",
+    "GPT3_5": "GPT-3.5",
+    "GPT4o_mini": "GPT-4o mini",
+    "GPT4o": "GPT-4o",
 }
 
 strategy_colors = {
@@ -64,6 +101,9 @@ strategy_colors = {
     "Heuristic_exact": "#CCBB44",
     "Heuristic_fuzzy": "#EE6677",
     "Heuristic_synonyms": "#AA3377",
+    "GPT3_5": "#CCBB44",
+    "GPT4o_mini": "#EE6677",
+    "GPT4o": "#AA3377",
 }
 
 
@@ -118,7 +158,7 @@ def boxplot_parameters_all_strategies():
                 (
                     int(100 * float(parameter))
                     if "table_and_columns_deleted" not in experiment
-                    else "\n".join(
+                    else ",\n".join(
                         [str(int(100 * float(p))) for p in parameter.split("_")]
                     )
                 )
@@ -141,10 +181,17 @@ def boxplot_parameters_all_strategies():
             values[index],
             tick_labels=labels[index],
             showmeans=True,
+            # widths=0.25,
         )
 
     fig.tight_layout()
-    plt.savefig(os.path.join("data", "evaluation", f"{experiment}_all_strategies.png"))
+    plt.savefig(
+        os.path.join(
+            "data",
+            "evaluation",
+            f"{experiment}{'_selected_strategies' if strategies_to_consider else '_all_strategies'}.png",
+        ),
+    )
     plt.close()
 
 
@@ -197,14 +244,17 @@ def barplot_all_strategies(parameter: str):
     axs.set_ylim(0, 1)
     axs.set_ylabel(y_label)
     lgd = fig.legend(loc="outside lower center", ncols=plotted_strategies)
-    # fig.tight_layout()
+
     plt.savefig(
-        os.path.join("data", "evaluation", f"{experiment}_{parameter}_bar.png"),
+        os.path.join(
+            "data",
+            "evaluation",
+            f"{experiment}_{parameter}_bar{'_selected_strategies' if strategies_to_consider else ''}.png",
+        ),
         bbox_extra_artists=(lgd,),
         bbox_inches="tight",
     )
     plt.close()
 
 
-boxplot_parameters_all_strategies()
-# barplot_all_strategies("1.0")
+evaluation_call()

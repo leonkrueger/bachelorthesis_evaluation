@@ -42,7 +42,6 @@ def create_evaluation_plots(
     results: dict[str, dict[str, dict[str, float]]],
     folder: str,
     experiment_name: str,
-    y_label: str,
 ) -> None:
     """Creates the plots for evaluating an experiment"""
     # Strategies are the same for accuracies and null values and for each database
@@ -52,9 +51,15 @@ def create_evaluation_plots(
 
         averages = {
             parameters: average(
-                [result[strategy][parameters] for result in results.values()]
+                [
+                    result[strategy][parameters]
+                    for result in results.values()
+                    if parameters in result[strategy]
+                ]
             )
-            for parameters in list(results.values())[0][strategy].keys()
+            for parameters in list(
+                sorted(results.values(), key=lambda x: len(x[strategy]))
+            )[-1][strategy].keys()
         }
 
         strategy_evaluation_folder = os.path.join(folder, "evaluation", strategy)
@@ -66,7 +71,7 @@ def create_evaluation_plots(
                     strategy_evaluation_folder,
                     f"{experiment_name}_{evaluation.get_filename()}.png",
                 ),
-                y_label,
+                EXPERIMENTS[experiment_name]["y_label"],
                 evaluation.get_y_label(),
                 averages,
             )
@@ -87,7 +92,7 @@ def evaluate_experiment_on_one_database_for_one_strategy(
     folder: str,
     evaluation: Evaluation,
     gold_standard: dict[str, list[list[str]]],
-    y_label: str,
+    experiment_name: str,
 ) -> tuple[dict[str, float], dict[str, float]]:
     """Returns two dict that map the parameters of the experiment to its accuracy and its relative null values"""
     results = {}
@@ -113,7 +118,7 @@ def evaluate_experiment_on_one_database_for_one_strategy(
     if create_individual_plots:
         plot_results(
             os.path.join(folder, evaluation.get_filename() + ".png"),
-            y_label,
+            EXPERIMENTS[experiment_name]["y_label"],
             evaluation.get_y_label(),
             results,
         )
@@ -125,7 +130,7 @@ def evaluate_experiment_on_one_database(
     evaluation: Evaluation,
     folder: str,
     gold_standard: dict[str, list[list[str]]],
-    y_label: str,
+    experiment_name: str,
 ) -> dict[str, dict[str, float]]:
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
     paths = os.listdir(folder)
@@ -140,13 +145,15 @@ def evaluate_experiment_on_one_database(
                 evaluate_experiment_on_one_database_for_one_strategy,
                 evaluation=evaluation,
                 gold_standard=gold_standard,
-                y_label=y_label,
+                experiment_name=experiment_name,
             ),
             strategy_results_paths,
         )
 
     results = {
-        [path for path in paths if path in folder][0]: result
+        [path.split("/")[-1] for path in strategy_results_paths if path == folder][
+            0
+        ]: result
         for folder, result in results
     }
     results["gold_standard"] = evaluation.calculate(gold_standard, gold_standard)
@@ -158,7 +165,6 @@ def evaluate_experiment(
     evaluation: Evaluation,
     folder: str,
     experiment_name: str,
-    y_label: str,
 ) -> None:
     # Lists that contain dicts that map the strategy and paramaters to its accuracy and null values
     results = {}
@@ -176,10 +182,7 @@ def evaluate_experiment(
             gold_standard = json.loads(file_content)
 
         db_accuracies = evaluate_experiment_on_one_database(
-            evaluation,
-            subfolder,
-            gold_standard,
-            y_label,
+            evaluation, subfolder, gold_standard, experiment_name
         )
         results[path] = db_accuracies
 
@@ -195,8 +198,8 @@ def evaluate_experiment(
         ) as json_file:
             json.dump(results, json_file)
 
-    create_evaluation_plots(evaluation, results, folder, experiment_name, y_label)
+    create_evaluation_plots(evaluation, results, folder, experiment_name)
 
 
-for experiment_name, experiment in EXPERIMENTS.items():
-    evaluate_experiment(evaluation, folder, experiment_name, experiment["y_label"])
+for experiment_name in EXPERIMENTS.keys():
+    evaluate_experiment(evaluation, folder, experiment_name)

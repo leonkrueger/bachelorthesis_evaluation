@@ -21,7 +21,6 @@ EXPERIMENTS = {
             "Heuristic_exact",
             "Heuristic_fuzzy",
             "Heuristic_synonyms",
-            "GPT3_5",
         ],
     },
     "columns_deleted": {
@@ -30,7 +29,6 @@ EXPERIMENTS = {
         "strategies": [
             "Llama3_finetuned",
             "Llama3_not_finetuned",
-            "GPT3_5",
         ],
     },
     "synonyms_used": {
@@ -42,7 +40,6 @@ EXPERIMENTS = {
             "Heuristic_exact",
             "Heuristic_fuzzy",
             "Heuristic_synonyms",
-            "GPT3_5",
         ],
     },
     "table_and_columns_deleted": {

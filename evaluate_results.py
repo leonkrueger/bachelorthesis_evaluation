@@ -1,7 +1,5 @@
 import json
 import os
-from functools import partial
-from multiprocessing import Pool
 from typing import Any
 
 import matplotlib.pyplot as plt
@@ -44,7 +42,6 @@ def create_evaluation_plots(
     experiment_name: str,
 ) -> None:
     """Creates the plots for evaluating an experiment"""
-    # Strategies are the same for accuracies and null values and for each database
     for strategy in list(results.values())[0].keys():
         if strategy == "gold_standard":
             continue
@@ -93,7 +90,7 @@ def evaluate_experiment_on_one_database_for_one_strategy(
     evaluation: Evaluation,
     gold_standard: dict[str, list[list[str]]],
     experiment_name: str,
-) -> tuple[dict[str, float], dict[str, float]]:
+) -> dict[str, float]:
     """Returns two dict that map the parameters of the experiment to its accuracy and its relative null values"""
     results = {}
 
@@ -123,7 +120,7 @@ def evaluate_experiment_on_one_database_for_one_strategy(
             results,
         )
 
-    return (folder, results)
+    return results
 
 
 def evaluate_experiment_on_one_database(
@@ -133,31 +130,20 @@ def evaluate_experiment_on_one_database(
     experiment_name: str,
 ) -> dict[str, dict[str, float]]:
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
-    paths = os.listdir(folder)
-    strategy_results_paths = [os.path.join(folder, path) for path in paths]
-    strategy_results_paths = [
-        path for path in strategy_results_paths if os.path.isdir(path)
-    ]
+    results = {}
 
-    with Pool(4) as pool:
-        results = pool.map(
-            partial(
-                evaluate_experiment_on_one_database_for_one_strategy,
-                evaluation=evaluation,
-                gold_standard=gold_standard,
-                experiment_name=experiment_name,
-            ),
-            strategy_results_paths,
+    for path in tqdm(os.listdir(folder)):
+        strategy_results_path = os.path.join(folder, path)
+        if not os.path.isdir(strategy_results_path):
+            continue
+
+        results[path] = evaluate_experiment_on_one_database_for_one_strategy(
+            strategy_results_path,
+            evaluation,
+            gold_standard,
+            experiment_name,
         )
-
-    results = {
-        [path.split("/")[-1] for path in strategy_results_paths if path == folder][
-            0
-        ]: result
-        for folder, result in results
-    }
     results["gold_standard"] = evaluation.calculate(gold_standard, gold_standard)
-
     return results
 
 

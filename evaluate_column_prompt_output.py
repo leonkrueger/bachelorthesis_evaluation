@@ -10,7 +10,7 @@ from util.insert_query_parser import parse_insert_query
 results_folder = os.path.join(
     "further_evaluation",
     "error_cases_missing_columns_combined_columns",
-    "missing_columns_not_finetuned",
+    "missing_columns_12000_own_data_collator_predicted_removed_from_table_state",
 )
 
 prediction_key = "predicted_column_names"
@@ -264,11 +264,3 @@ with open(
     encoding="utf-8",
 ) as results_file:
     json.dump(results, results_file, indent=4)
-
-# print(
-#     tabulate(
-#         [zip(result.keys(), result.values()) for result in results.values()],
-#         headers=results.keys(),
-#         tablefmt="latex",
-#     )
-# )

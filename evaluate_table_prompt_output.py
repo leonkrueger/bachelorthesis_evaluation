@@ -7,8 +7,8 @@ from tabulate import tabulate
 
 results_folder = os.path.join(
     "further_evaluation",
-    "performance_gpt_llama_incorrect",
-    "gpt-3.5-turbo-0125",
+    "error_cases_missing_tables_csv_tables_deleted",
+    "missing_tables_12000_csv_data_collator",
 )
 
 prediction_key = "predicted_table_name"

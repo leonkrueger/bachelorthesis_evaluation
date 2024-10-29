@@ -1,4 +1,9 @@
-import copy
+"""
+Creates the data used for the generation of synonyms.
+``data_source`` attribute specifies for which databases synonyms should be created and can be either "fine_tuning" or "evaluation".
+``table_or_column`` attribute specified if the synonyms should be created for the tables or columns and can be either "table" or "column".
+"""
+
 import json
 import os
 import traceback
@@ -8,17 +13,9 @@ from random import Random
 from util.insert_query_parser import parse_insert_query
 from util.processing_utils import get_data_from_create_table
 
-# folders = [
-#     os.path.join("fine_tuning", "databases"),
-#     os.path.join("fine_tuning", "validation_databases"),
-# ]
-folders = [
-    os.path.join("data", folder)
-    for folder in os.listdir("data")
-    if folder != "evaluation" and os.path.isdir(os.path.join("data", folder))
-]
+data_source = "fine_tuning"
+table_or_column = "table"
 
-data_sources = ["bird", "spider", "wikidb"]
 random = Random()
 
 
@@ -83,6 +80,12 @@ def get_data_for_one_database(
                     "query": queries_as_str,
                     "database_name": database_name,
                     "table_name": table_name,
+                }
+                if table_or_column == "table"
+                else {
+                    "query": queries_as_str,
+                    "database_name": database_name,
+                    "table_name": table_name,
                     "column_names": database_state[table_name],
                 }
             )
@@ -111,16 +114,37 @@ def get_data_for_data_source(folder: str) -> list[dict[str, str]]:
     return data
 
 
-data = []
-for folder in folders:
-    # for data_source in data_sources:
-    #     subfolder = os.path.join(folder, data_source)
-    #     data.extend(get_data_for_data_source(subfolder))
-    data.extend(get_data_for_data_source(folder))
+if __name__ == "__main__":
+    if data_source != "fine_tuning" and data_source != "evaluation":
+        raise AttributeError()
+    if table_or_column != "table" and table_or_column != "column":
+        raise AttributeError()
 
-with open(
-    os.path.join("data", "column_synonym_generation_data.json"),
-    mode="w",
-    encoding="utf-8",
-) as data_file:
-    json.dump(data, data_file)
+    if data_source == "fine_tuning":
+        folders = [
+            os.path.join("fine_tuning", "databases"),
+            os.path.join("fine_tuning", "validation_databases"),
+        ]
+    elif data_source == "evaluation":
+        folders = [
+            os.path.join("data", folder)
+            for folder in os.listdir("data")
+            if folder != "evaluation" and os.path.isdir(os.path.join("data", folder))
+        ]
+
+    data_sources = ["bird", "spider", "wikidb"]
+    data = []
+    for folder in folders:
+        if data_source == "fine_tuning":
+            for data_source in data_sources:
+                subfolder = os.path.join(folder, data_source)
+                data.extend(get_data_for_data_source(subfolder))
+        elif data_source == "evaluation":
+            data.extend(get_data_for_data_source(folder))
+
+    with open(
+        os.path.join("data", f"{table_or_column}_synonym_generation_data.json"),
+        mode="w",
+        encoding="utf-8",
+    ) as data_file:
+        json.dump(data, data_file)

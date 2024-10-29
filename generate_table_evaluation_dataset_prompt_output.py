@@ -30,7 +30,9 @@ dataset_folder = os.path.join(
 
 random = Random()
 
-with open(os.path.join(db_folder, "synonyms.json"), encoding="utf-8") as synonyms_file:
+with open(
+    os.path.join(db_folder, "table_synonyms.json"), encoding="utf-8"
+) as synonyms_file:
     synonyms = json.load(synonyms_file)
 
 

@@ -203,7 +203,7 @@ def get_data_for_one_data_source(
 
 
 with open(
-    os.path.join("fine_tuning", "synonyms.json"), encoding="utf-8"
+    os.path.join("fine_tuning", "table_synonyms.json"), encoding="utf-8"
 ) as synonyms_file:
     synonyms = json.load(synonyms_file)
 

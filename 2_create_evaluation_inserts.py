@@ -1,3 +1,9 @@
+"""
+``folder`` should contain the subfolders that were created by the script 1_prepare_inserts.py!
+
+Creates the datasets for the experiments defined in util.adjustments. Does not overwrite existing datasets.
+"""
+
 import json
 import os
 from random import Random
@@ -12,7 +18,9 @@ folder = "data"
 
 random = Random()
 
-with open(os.path.join("data", "synonyms.json"), encoding="utf-8") as synonyms_file:
+with open(
+    os.path.join("data", "table_synonyms.json"), encoding="utf-8"
+) as synonyms_file:
     table_synonyms = json.load(synonyms_file)
 
 with open(

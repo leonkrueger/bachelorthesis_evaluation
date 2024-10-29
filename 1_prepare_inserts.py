@@ -1,14 +1,22 @@
-import io
-import json
+"""
+!!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
+
+Prepares the inserts of all databases in the folder specified in attribute ``folder`` by
+- selecting ``max_inserts`` random inserts from each database while distributing them evenly across all tables
+- inserting the column names into each insert
+- adjusting the syntax of each insert (e.g. data types and quotation marks)
+
+After doing this, it creates three new files in a new subfolder:
+- gold_standard_input.sql: Includes 'CREATE TABLE' statements, so that correct database is generated.
+- gold_standard_results.json: Can be used to better evaluate the resulting databases.
+- inserts_only: Only contains selected inserts and is used for creating the evaluation datasets.
+"""
+
 import os
 import shutil
-import tokenize
 from random import Random
 
 from util.processing_utils import get_data_from_create_table
-
-# !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
-
 
 folder = "data"
 max_inserts = 100
@@ -99,11 +107,6 @@ for path in os.listdir(folder):
             inserts_only_file,
             gold_standard_file,
         )
-
-    # with open(
-    #     os.path.join(subfolder, "primary_keys.json"), "w", encoding="utf-8"
-    # ) as primary_keys_file:
-    #     json.dump(primary_keys, primary_keys_file)
 
     open(
         os.path.join(subfolder, "gold_standard_results.json"), "w", encoding="utf-8"

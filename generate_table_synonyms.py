@@ -1,4 +1,8 @@
-import copy
+"""
+Creates the data used for the generation of synonyms.
+``data_source`` attribute can be either "fine_tuning" or "evaluation".
+"""
+
 import json
 import os
 import traceback
@@ -8,15 +12,21 @@ from random import Random
 from util.insert_query_parser import parse_insert_query
 from util.processing_utils import get_data_from_create_table
 
-# folders = [
-#     os.path.join("fine_tuning", "databases"),
-#     os.path.join("fine_tuning", "validation_databases"),
-# ]
-folders = [
-    os.path.join("data", folder)
-    for folder in os.listdir("data")
-    if folder != "evaluation" and os.path.isdir(os.path.join("data", folder))
-]
+data_source = "fine_tuning"
+
+if data_source == "fine_tuning":
+    folders = [
+        os.path.join("fine_tuning", "databases"),
+        os.path.join("fine_tuning", "validation_databases"),
+    ]
+elif data_source == "evaluation":
+    folders = [
+        os.path.join("data", folder)
+        for folder in os.listdir("data")
+        if folder != "evaluation" and os.path.isdir(os.path.join("data", folder))
+    ]
+else:
+    raise AttributeError()
 
 data_sources = ["bird", "spider", "wikidb"]
 random = Random()
@@ -112,13 +122,15 @@ def get_data_for_data_source(folder: str) -> list[dict[str, str]]:
 
 data = []
 for folder in folders:
-    # for data_source in data_sources:
-    #     subfolder = os.path.join(folder, data_source)
-    #     data.extend(get_data_for_data_source(subfolder))
-    data.extend(get_data_for_data_source(folder))
+    if data_source == "fine_tuning":
+        for data_source in data_sources:
+            subfolder = os.path.join(folder, data_source)
+            data.extend(get_data_for_data_source(subfolder))
+    elif data_source == "evaluation":
+        data.extend(get_data_for_data_source(folder))
 
 with open(
-    os.path.join("data", "synonym_generation_data.json"),
+    os.path.join("data", "table_synonym_generation_data.json"),
     mode="w",
     encoding="utf-8",
 ) as data_file:

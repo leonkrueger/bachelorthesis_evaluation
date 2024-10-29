@@ -4,16 +4,29 @@ from collections import defaultdict
 from math import isnan
 
 import numpy as np
-from matplotlib import cm
 from matplotlib import pyplot as plt
 
 aggregate_funtion = np.average
 
-experiment = "columns_deleted_f1_score"
-strategies_to_consider = None  # ["Llama3_finetuned", "GPT4o"]
+experiment = "table_and_columns_deleted_sparsity"
+strategies_to_consider = None
+strategies_to_consider = [
+    "GPT4o",
+    "Llama3_finetuned_dc",
+    "Llama3_not_finetuned",
+]
+require_same_results = True
 
-# evaluation_call = lambda: boxplot_parameters_all_strategies()
-evaluation_call = lambda: barplot_all_strategies("0.0")
+evaluation_call = lambda gs_results, results: boxplot_parameters_all_strategies(
+    gs_results, results
+)
+# evaluation_call = lambda gs_results, results: barplot_all_strategies(results, "1.0")
+# evaluation_call = lambda gs_results, results: barplot_ratio_averages(
+#     results, "Llama3_finetuned_dc", "0.0"
+# )
+# evaluation_call = lambda x_results, y_results: scatter_all_strategies(
+#     x_results, y_results
+# )
 
 y_label = "Sparsity" if "sparsity" in experiment else "Database F1 Score"
 x_label = (
@@ -30,61 +43,10 @@ x_label = (
     )
 )
 
-with open(
-    os.path.join("data", "evaluation", f"{experiment}.json"),
-    encoding="utf-8",
-) as results_file:
-    results: dict[str, dict[str, dict[str, float] | float]] = json.load(results_file)
-
-result_collector = defaultdict(lambda: defaultdict(lambda: []))
-gold_standard_collector = []
-
-for database, results_per_db in sorted(results.items(), key=lambda x: x[0]):
-    strategies = (
-        strategies_to_consider if strategies_to_consider else results_per_db.keys()
-    )
-
-    if any(
-        [
-            len(results_per_db[s]) == 0
-            for s in strategies
-            if isinstance(results_per_db[s], dict)
-        ]
-    ):
-        continue
-
-    for strategy in strategies:
-        if strategy == "gold_standard":
-            if isnan(results_per_db[strategy]):
-                continue
-
-            gold_standard_collector.append(results_per_db[strategy])
-        else:
-            for parameters, result_per_parameters in results_per_db[strategy].items():
-                if isnan(result_per_parameters):
-                    continue
-
-                if any(
-                    [
-                        parameters not in results_per_db[s]
-                        for s in strategies
-                        if isinstance(results_per_db[s], dict)
-                    ]
-                ):
-                    continue
-
-                result_collector[strategy][parameters].append(result_per_parameters)
-
-aggregated_results = defaultdict(lambda: defaultdict(lambda: 0.0))
-for strategy, results_per_strategy in result_collector.items():
-    for parameters, result_per_parameters in results_per_strategy.items():
-        aggregated_results[strategy][parameters] = aggregate_funtion(
-            result_per_parameters
-        )
-
 strategy_labels = {
     "gold_standard": "Gold Standard",
-    "Llama3_finetuned": "Fine-tuned Llama 3",
+    # "Llama3_finetuned": "Fine-tuned Llama 3 (old)",
+    "Llama3_finetuned_dc": "Fine-tuned Llama 3",
     "Llama3_not_finetuned": "Not fine-tuned Llama 3",
     "Heuristic_exact": "Heuristic (exact)",
     "Heuristic_fuzzy": "Heuristic (fuzzy)",
@@ -96,7 +58,8 @@ strategy_labels = {
 
 strategy_colors = {
     "gold_standard": "#BBBBBB",
-    "Llama3_finetuned": "#4477AA",
+    "Llama3_finetuned": "#FFFFFF",
+    "Llama3_finetuned_dc": "#4477AA",
     "Llama3_not_finetuned": "#66CCEE",
     "Heuristic_exact": "#CCBB44",
     "Heuristic_fuzzy": "#EE6677",
@@ -106,52 +69,129 @@ strategy_colors = {
     "GPT4o": "#AA3377",
 }
 
+ratio_labels = {
+    "0.1": r"$r_s \leq 10\%$",
+    "0.3": r"$10\% < r_s \leq 30\%$",
+    "0.7": r"$30\% < r_s < 70\%$",
+    "0.9": r"$70\% \leq r_s < 90\%$",
+    "1.0": r"$90\% \leq r_s$",
+}
 
-def scatter_parameters(strategy: str):
-    fig, ax = plt.subplots()
-    ax.set_xlabel(y_label)
-    ax.set_ylabel(x_label)
+ratio_colors = {
+    "0.1": "#4477AA",
+    "0.3": "#66CCEE",
+    "0.7": "#CCBB44",
+    "0.9": "#EE6677",
+    "1.0": "#AA3377",
+}
 
-    parameters_values = dict(
-        sorted(result_collector[strategy].items(), key=lambda x: float(x[0]))
+data_type_evaluation_identifier = "_only_"
+
+
+def load_results(
+    file_path: str,
+    strategies_to_consider: list[str] = None,
+    require_same_results: bool = True,
+) -> tuple[list[float], dict[str, dict[str, list[float]]]]:
+    with open(file_path, encoding="utf-8") as results_file:
+        results = json.load(results_file)
+
+    result_collector = (
+        defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: [])))
+        if data_type_evaluation_identifier in experiment
+        else defaultdict(lambda: defaultdict(lambda: []))
     )
+    gold_standard_collector = []
 
-    for parameter, values in parameters_values.items():
-        ax.scatter(
-            values,
-            [int(100 * float(parameter))] * len(values),
-            c=cm.rainbow(np.linspace(0, 1, len(values))),
+    for database, results_per_db in sorted(results.items(), key=lambda x: x[0]):
+        strategies = (
+            strategies_to_consider if strategies_to_consider else results_per_db.keys()
         )
-    plt.savefig(
-        os.path.join("data", "evaluation", strategy, f"{experiment}_scatter.png")
-    )
-    plt.close()
+        if "gold_standard" not in strategies:
+            strategies.append("gold_standard")
+
+        if require_same_results and any(
+            [
+                len(results_per_db[s]) == 0
+                for s in strategies
+                if isinstance(results_per_db[s], dict)
+            ]
+        ):
+            continue
+
+        for strategy in strategies:
+            if strategy == "gold_standard":
+                # Is only required in sparsity where no data type evaluation is done
+                if data_type_evaluation_identifier in experiment:
+                    continue
+
+                if isnan(results_per_db[strategy]):
+                    continue
+
+                gold_standard_collector.append(results_per_db[strategy])
+            else:
+                for parameters, result_per_parameters in results_per_db[
+                    strategy
+                ].items():
+                    if require_same_results and any(
+                        [
+                            parameters not in results_per_db[s]
+                            for s in strategies
+                            if s != "gold_standard"
+                        ]
+                    ):
+                        continue
+
+                    if data_type_evaluation_identifier in experiment:
+                        for (
+                            data_type_ratio,
+                            results_per_ratio,
+                        ) in result_per_parameters.items():
+                            if isnan(results_per_ratio):
+                                continue
+
+                            result_collector[strategy][parameters][
+                                data_type_ratio
+                            ].append(results_per_ratio)
+                    else:
+                        if isnan(result_per_parameters):
+                            continue
+
+                        result_collector[strategy][parameters].append(
+                            result_per_parameters
+                        )
+
+    return gold_standard_collector, result_collector
 
 
-def boxplot_parameters_all_strategies():
+def boxplot_parameters_all_strategies(
+    gs_results: list[float], results: dict[str, dict[str, list[float]]]
+):
     values = []
     labels = []
     titles = []
 
     if "sparsity" in experiment:
-        values.append([gold_standard_collector])
+        values.append([gs_results])
         labels.append([""])
         titles.append(strategy_labels["gold_standard"])
 
     for strategy, label in strategy_labels.items():
-        if strategy not in result_collector:
+        if strategy not in results:
             continue
 
         parameters_values = (
-            dict(sorted(result_collector[strategy].items(), key=lambda x: float(x[0])))
+            dict(sorted(results[strategy].items(), key=lambda x: float(x[0])))
             if "table_and_columns_deleted" not in experiment
             else dict(
                 sorted(
-                    result_collector[strategy].items(),
+                    results[strategy].items(),
                     key=lambda x: tuple([float(p) for p in x[0].split("_")]),
                 )
             )
         )
+        for p, v in parameters_values.items():
+            print(strategy, p, np.average(v))
         values.append(list(parameters_values.values()))
         labels.append(
             [
@@ -177,11 +217,11 @@ def boxplot_parameters_all_strategies():
         if titles[index] != strategy_labels["gold_standard"]:
             axs[index].set_xlabel(x_label)
         axs[index].set_ylim(-0.02, 1.02)
+        axs[index].grid(True, axis="y", color="0.9", linestyle="--")
         axs[index].boxplot(
             values[index],
             tick_labels=labels[index],
             showmeans=True,
-            # widths=0.25,
         )
 
     fig.tight_layout()
@@ -195,9 +235,9 @@ def boxplot_parameters_all_strategies():
     plt.close()
 
 
-def barplot_all_strategies(parameter: str):
+def barplot_all_strategies(results: dict[str, dict[str, list[float]]], parameter: str):
     parameter_results = {
-        strategy: results[parameter] for strategy, results in result_collector.items()
+        strategy: results[parameter] for strategy, results in results.items()
     }
     number_of_strategies = len(parameter_results)
 
@@ -209,10 +249,10 @@ def barplot_all_strategies(parameter: str):
         axs.bar(
             [
                 (number_of_strategies + 5) * result_index + plotted_strategies * 1.5
-                for result_index in range(len(gold_standard_collector))
+                for result_index in range(len(gs_results))
             ],
-            height=gold_standard_collector,
-            width=[1] * len(gold_standard_collector),
+            height=gs_results,
+            width=[1] * len(gs_results),
             color=strategy_colors["gold_standard"],
             label=strategy_labels["gold_standard"],
         )
@@ -234,15 +274,20 @@ def barplot_all_strategies(parameter: str):
         )
         plotted_strategies += 1
 
+    axs.set_axisbelow(True)
+    axs.grid(True, axis="y", color="0.9", linestyle="--")
+
+    axs.tick_params(axis="x", which="both", bottom=False, top=False, labelbottom=False)
     axs.set_xlim(
         -1,
         (number_of_strategies + 5) * (len(list(parameter_results.values())[0]) - 1)
         + (plotted_strategies - 1) * 1.5
         + 1,
     )
-    axs.tick_params(axis="x", which="both", bottom=False, top=False, labelbottom=False)
+
     axs.set_ylim(0, 1)
     axs.set_ylabel(y_label)
+
     lgd = fig.legend(loc="outside lower center", ncols=plotted_strategies)
 
     plt.savefig(
@@ -257,4 +302,130 @@ def barplot_all_strategies(parameter: str):
     plt.close()
 
 
-evaluation_call()
+def barplot_ratio_averages(
+    results: dict[str, dict[str, dict[str, list[float]]]],
+    strategy: str,
+    parameters: str,
+):
+    results = {
+        ratio: np.average(results[strategy][parameters][ratio])
+        for ratio in ratio_labels.keys()
+    }
+
+    fig, axs = plt.subplots(figsize=(6, 4))
+
+    plt.bar(
+        [index * 1.5 for index in range(len(results))],
+        height=results.values(),
+        width=[1] * len(results),
+        color=[ratio_colors[ratio] for ratio in results.keys()],
+    )
+
+    axs.set_axisbelow(True)
+    axs.grid(True, axis="y", color="0.9", linestyle="--")
+
+    axs.tick_params(axis="x", which="both", bottom=False, top=False)
+    axs.set_xlim(
+        -1,
+        (len(results) - 1) * 1.5 + 1,
+    )
+    axs.set_xticks(
+        [index * 1.5 for index in range(len(results))],
+        [ratio_labels[ratio] for ratio in results.keys()],
+        rotation=25,
+    )
+
+    axs.set_ylim(0, 1)
+    axs.set_ylabel(y_label)
+
+    plt.savefig(
+        os.path.join(
+            "data",
+            "evaluation",
+            f"{experiment}_{strategy}_{parameters}_bar.png",
+        ),
+        bbox_inches="tight",
+    )
+    plt.close()
+
+
+def scatter_all_strategies(
+    results_x: dict[str, dict[str, list[float]]],
+    results_y: dict[str, dict[str, list[float]]],
+):
+    # parameter_results = {
+    #     strategy: results[parameter] for strategy, results in results.items()
+    # }
+    # number_of_strategies = len(parameter_results)
+
+    fig, axs = plt.subplots(figsize=(6, 6))
+    max_parameters = 0
+
+    for strategy, label in strategy_labels.items():
+        if strategy not in results_y:
+            continue
+
+        max_parameters = max(max_parameters, len(results_y[strategy]))
+        parameters_values = (
+            sorted(results_y[strategy].keys(), key=lambda x: float(x))
+            if "table_and_columns_deleted" not in experiment
+            else sorted(
+                results_y[strategy].keys(),
+                key=lambda x: tuple([float(p) for p in x.split("_")]),
+            )
+        )
+
+        for parameter in parameters_values:
+            if parameter != "1.0_1.0":
+                continue
+            axs.scatter(
+                *zip(
+                    *list(
+                        zip(
+                            results_x,
+                            results_y[strategy][parameter],
+                        )
+                    )
+                ),
+                c=strategy_colors[strategy],
+                label=label,
+                s=20,
+            )
+
+    # axs.set_axisbelow(True)
+    # axs.grid(True, axis="y", color="0.9", linestyle="--")
+
+    axs.set_xscale("log")
+    axs.set_xlabel("Number of columns in gold standard database")
+
+    axs.set_ylim(0, 1)
+    axs.set_ylabel(y_label)
+    axs.legend()
+
+    # lgd = fig.legend(loc="upper center", ncols=max_parameters)
+
+    plt.savefig(
+        os.path.join(
+            "data",
+            "evaluation",
+            f"{experiment}_scatter{'_selected_strategies' if strategies_to_consider else ''}.png",
+        ),
+        # bbox_extra_artists=(lgd,),
+        bbox_inches="tight",
+    )
+    plt.close()
+
+
+gs_results, results = load_results(
+    os.path.join("data", "evaluation", f"{experiment}.json"),
+    strategies_to_consider,
+    require_same_results,
+)
+evaluation_call(gs_results, results)
+
+# x_gs, x_results = load_results(
+#     os.path.join("data", "evaluation", f"{experiment[:-9]}_number_of_columns.json"),
+#     strategies_to_consider,
+#     require_same_results,
+# )
+# evaluation_call(x_gs, results)

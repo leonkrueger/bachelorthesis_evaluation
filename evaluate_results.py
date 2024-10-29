@@ -1,5 +1,6 @@
 import json
 import os
+from math import isnan
 from typing import Any
 
 import matplotlib.pyplot as plt
@@ -15,24 +16,13 @@ from util.evaluation.sparsity import SparsityEvaluation
 
 folder = "data"
 
-should_create_evaluation_plots = False
 create_evaluation_jsons = True
 print_result_dict = True
-create_individual_plots = False
 
-evaluation = F1Score()
+split_by_datatype = "string"  # "number"
+evaluation = F1Score(split_by_datatype=split_by_datatype)
 # evaluation = SparsityEvaluation()
-
-
-def plot_results(
-    path: str, x_label: str, y_label: str, results: dict[str, Any]
-) -> None:
-    results = dict(sorted(results.items(), key=lambda result: result[0]))
-    plt.bar(results.keys(), results.values())
-    plt.xlabel(x_label)
-    plt.ylabel(y_label)
-    plt.savefig(path)
-    plt.close()
+# evaluation = NumberOfTablesEvaluation()
 
 
 def create_evaluation_plots(
@@ -46,32 +36,39 @@ def create_evaluation_plots(
         if strategy == "gold_standard":
             continue
 
-        averages = {
-            parameters: average(
-                [
-                    result[strategy][parameters]
-                    for result in results.values()
-                    if parameters in result[strategy]
-                ]
-            )
-            for parameters in list(
-                sorted(results.values(), key=lambda x: len(x[strategy]))
-            )[-1][strategy].keys()
-        }
+        if not isinstance(evaluation, F1Score) or not split_by_datatype:
+            averages = {
+                parameters: average(
+                    [
+                        result[strategy][parameters]
+                        for result in results.values()
+                        if parameters in result[strategy]
+                    ]
+                )
+                for parameters in list(
+                    sorted(results.values(), key=lambda x: len(x[strategy]))
+                )[-1][strategy].keys()
+            }
+        else:
+            averages = {
+                parameters: {
+                    ratio: average(
+                        [
+                            db_result[strategy][parameters][ratio]
+                            for db_result in results.values()
+                            if parameters in db_result[strategy]
+                            and not isnan(db_result[strategy][parameters][ratio])
+                        ]
+                    )
+                    for ratio in list(results.values())[0][strategy][parameters].keys()
+                }
+                for parameters in list(
+                    sorted(results.values(), key=lambda x: len(x[strategy]))
+                )[-1][strategy].keys()
+            }
 
         strategy_evaluation_folder = os.path.join(folder, "evaluation", strategy)
         os.makedirs(strategy_evaluation_folder, exist_ok=True)
-
-        if should_create_evaluation_plots:
-            plot_results(
-                os.path.join(
-                    strategy_evaluation_folder,
-                    f"{experiment_name}_{evaluation.get_filename()}.png",
-                ),
-                EXPERIMENTS[experiment_name]["y_label"],
-                evaluation.get_y_label(),
-                averages,
-            )
 
         if create_evaluation_jsons:
             with open(
@@ -111,14 +108,6 @@ def evaluate_experiment_on_one_database_for_one_strategy(
             results[parameters] = evaluation.calculate(
                 experiment_results, gold_standard
             )
-
-    if create_individual_plots:
-        plot_results(
-            os.path.join(folder, evaluation.get_filename() + ".png"),
-            EXPERIMENTS[experiment_name]["y_label"],
-            evaluation.get_y_label(),
-            results,
-        )
 
     return results
 

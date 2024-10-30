@@ -1,9 +1,14 @@
+"""
+Evaluates the results of the column mapping task.
+Stores the results in a new file 'results.json' in the same subfolder as the resulting dictionaries.
+
+``results_folder`` specifies the folder in which the results saved
+``prediction_key`` specifies the key that holds the prediction in the resulting dictionaries
+"""
+
 import json
 import os
-import re
 from typing import Any, Callable
-
-from tabulate import tabulate
 
 from util.insert_query_parser import parse_insert_query
 
@@ -124,143 +129,137 @@ def evaluate_column_prediction_single_column(
 
 
 def get_predictions(predicted_column_names, query_data):
-    # value_column_pairs = [
-    #     (prediction.split("->")[0].strip(), prediction.split("->")[1].strip())
-    #     for prediction in predicted_column_names.split("\n")
-    # ]
-
-    # predictions = []
-    # for value in query_data["values"][0]:
-    #     index, predicted = [
-    #         (i, pair[1])
-    #         for i, pair in enumerate(value_column_pairs)
-    #         if pair[0] == value
-    #     ][0]
-    #     value_column_pairs.pop(index)
-    #     predictions.append(predicted)
     return (
-        predicted_column_names.split("\n")[0].split(";")
+        predicted_column_names.split("\n")[0].split(
+            ";"
+        )  # Only used to support first experiments
         if isinstance(predicted_column_names, str)
         else predicted_column_names
     )
 
 
-results = {}
+if __name__ == "__main__":
+    results = {}
 
-for path in os.listdir(results_folder):
-    results_file_path = os.path.join(results_folder, path)
-    if not os.path.isfile(results_file_path) or not results_file_path.endswith(".json"):
-        continue
+    for path in os.listdir(results_folder):
+        results_file_path = os.path.join(results_folder, path)
+        if not os.path.isfile(results_file_path) or not results_file_path.endswith(
+            ".json"
+        ):
+            continue
 
-    with open(results_file_path) as results_file:
-        experiment_results = json.load(results_file)
+        with open(results_file_path) as results_file:
+            experiment_results = json.load(results_file)
 
-    # No file with prompt results but analysis
-    if not isinstance(experiment_results, list):
-        continue
+        # No file with prompt results but analysis
+        if not isinstance(experiment_results, list):
+            continue
 
-    for result in experiment_results:
-        result[prediction_key] = get_predictions(
-            result[prediction_key],
-            parse_insert_query(result["query"]),
-        )
-
-    wrong_number_of_columns_condition = lambda result, prediction_key: len(
-        result[prediction_key]
-    ) != len(result["expected_column_names"])
-
-    aggregated_results = {}
-    aggregated_results["wrong_number_of_columns"] = evaluate_column_prediction(
-        experiment_results,
-        wrong_number_of_columns_condition,
-        prediction_key,
-    )
-
-    same_prediction_for_multiple_columns_condition = lambda result, prediction_key: any(
-        [
-            any(
-                [
-                    i != j and result[prediction_key][i] == result[prediction_key][j]
-                    for j in range(len(result[prediction_key]))
-                ]
+        for result in experiment_results:
+            result[prediction_key] = get_predictions(
+                result[prediction_key],
+                parse_insert_query(result["query"]),
             )
-            for i in range(len(result[prediction_key]))
-        ]
-    )
 
-    aggregated_results["query_with_any_duplicate_prediction"] = (
-        evaluate_column_prediction(
-            experiment_results,
-            same_prediction_for_multiple_columns_condition,
-            prediction_key,
-        )
-    )
+        wrong_number_of_columns_condition = lambda result, prediction_key: len(
+            result[prediction_key]
+        ) != len(result["expected_column_names"])
 
-    aggregated_results["duplicate_predictions"] = (
-        evaluate_column_prediction_single_column(
+        aggregated_results = {}
+        aggregated_results["wrong_number_of_columns"] = evaluate_column_prediction(
             experiment_results,
-            lambda query_column, expected, table_state: True,
-            lambda predicted, expected, table_state, prediction_pairs: any(
-                [
-                    pair[1] != expected and pair[0] == predicted
-                    for pair in prediction_pairs
-                ]
-            ),
-            prediction_key,
             wrong_number_of_columns_condition,
-            True,
+            prediction_key,
         )
-    )
 
-    for scenario_name, scenario_condition in scenarios.items():
-        scenario_results = {}
-        scenario_results["existing_column_with_correct_name"] = (
-            evaluate_column_prediction_single_column(
-                experiment_results,
-                scenario_condition,
-                lambda predicted, expected, table_state: predicted == expected
-                and predicted in table_state.split("\n")[1].split(";"),
-                prediction_key,
-                wrong_number_of_columns_condition,
+        same_prediction_for_multiple_columns_condition = (
+            lambda result, prediction_key: any(
+                [
+                    any(
+                        [
+                            i != j
+                            and result[prediction_key][i] == result[prediction_key][j]
+                            for j in range(len(result[prediction_key]))
+                        ]
+                    )
+                    for i in range(len(result[prediction_key]))
+                ]
             )
         )
-        scenario_results["existing_column_with_wrong_name"] = (
-            evaluate_column_prediction_single_column(
-                experiment_results,
-                scenario_condition,
-                lambda predicted, expected, table_state: predicted != expected
-                and predicted in table_state.split("\n")[1].split(";"),
-                prediction_key,
-                wrong_number_of_columns_condition,
-            )
-        )
-        scenario_results["new_column_with_correct_name"] = (
-            evaluate_column_prediction_single_column(
-                experiment_results,
-                scenario_condition,
-                lambda predicted, expected, table_state: predicted == expected
-                and predicted not in table_state.split("\n")[1].split(";"),
-                prediction_key,
-                wrong_number_of_columns_condition,
-            )
-        )
-        scenario_results["new_column_with_wrong_name"] = (
-            evaluate_column_prediction_single_column(
-                experiment_results,
-                scenario_condition,
-                lambda predicted, expected, table_state: predicted != expected
-                and predicted not in table_state.split("\n")[1].split(";"),
-                prediction_key,
-                wrong_number_of_columns_condition,
-            )
-        )
-        aggregated_results[scenario_name] = scenario_results
 
-    results[path[8:-5]] = aggregated_results
+        aggregated_results["query_with_any_duplicate_prediction"] = (
+            evaluate_column_prediction(
+                experiment_results,
+                same_prediction_for_multiple_columns_condition,
+                prediction_key,
+            )
+        )
 
-with open(
-    os.path.join(results_folder, "results.json"),
-    mode="w",
-    encoding="utf-8",
-) as results_file:
-    json.dump(results, results_file, indent=4)
+        aggregated_results["duplicate_predictions"] = (
+            evaluate_column_prediction_single_column(
+                experiment_results,
+                lambda query_column, expected, table_state: True,
+                lambda predicted, expected, table_state, prediction_pairs: any(
+                    [
+                        pair[1] != expected and pair[0] == predicted
+                        for pair in prediction_pairs
+                    ]
+                ),
+                prediction_key,
+                wrong_number_of_columns_condition,
+                True,
+            )
+        )
+
+        for scenario_name, scenario_condition in scenarios.items():
+            scenario_results = {}
+            scenario_results["existing_column_with_correct_name"] = (
+                evaluate_column_prediction_single_column(
+                    experiment_results,
+                    scenario_condition,
+                    lambda predicted, expected, table_state: predicted == expected
+                    and predicted in table_state.split("\n")[1].split(";"),
+                    prediction_key,
+                    wrong_number_of_columns_condition,
+                )
+            )
+            scenario_results["existing_column_with_wrong_name"] = (
+                evaluate_column_prediction_single_column(
+                    experiment_results,
+                    scenario_condition,
+                    lambda predicted, expected, table_state: predicted != expected
+                    and predicted in table_state.split("\n")[1].split(";"),
+                    prediction_key,
+                    wrong_number_of_columns_condition,
+                )
+            )
+            scenario_results["new_column_with_correct_name"] = (
+                evaluate_column_prediction_single_column(
+                    experiment_results,
+                    scenario_condition,
+                    lambda predicted, expected, table_state: predicted == expected
+                    and predicted not in table_state.split("\n")[1].split(";"),
+                    prediction_key,
+                    wrong_number_of_columns_condition,
+                )
+            )
+            scenario_results["new_column_with_wrong_name"] = (
+                evaluate_column_prediction_single_column(
+                    experiment_results,
+                    scenario_condition,
+                    lambda predicted, expected, table_state: predicted != expected
+                    and predicted not in table_state.split("\n")[1].split(";"),
+                    prediction_key,
+                    wrong_number_of_columns_condition,
+                )
+            )
+            aggregated_results[scenario_name] = scenario_results
+
+        results[path[8:-5]] = aggregated_results
+
+    with open(
+        os.path.join(results_folder, "results.json"),
+        mode="w",
+        encoding="utf-8",
+    ) as results_file:
+        json.dump(results, results_file, indent=4)

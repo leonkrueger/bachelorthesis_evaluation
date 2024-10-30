@@ -11,7 +11,7 @@ from collections import defaultdict
 from random import Random
 
 from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table
+from util.processing_utils import get_data_from_create_table, insertion_to_string
 
 data_source = "fine_tuning"
 table_or_column = "table"
@@ -60,20 +60,7 @@ def get_data_for_one_database(
                 # Every insert statement contains only one row
                 parsed_query["values"] = parsed_query["values"][0]
 
-                # Create insert statement as string
-                table_str = (
-                    ""
-                    if "table" not in parsed_query.keys()
-                    else parsed_query["table"] + " "
-                )
-                columns_str = (
-                    ""
-                    if "columns" not in parsed_query.keys()
-                    else f"({', '.join(parsed_query['columns'])}) "
-                )
-                queries_as_str.append(
-                    f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(parsed_query['values'])});\n"
-                )
+                queries_as_str.append(insertion_to_string(parsed_query))
 
             data.append(
                 {

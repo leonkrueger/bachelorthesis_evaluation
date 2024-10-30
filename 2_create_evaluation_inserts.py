@@ -12,7 +12,7 @@ from typing import Any
 from util.adjustments import EXPERIMENTS
 from util.insert_query_parser import parse_insert_query
 from util.make_adjustment import make_adjustment
-from util.processing_utils import is_usable_value
+from util.processing_utils import insertion_to_string, is_usable_value
 
 folder = "data"
 
@@ -55,20 +55,7 @@ def create_experiment(
             encoding="utf-8",
         ) as output_file:
             for query in queries:
-                table_string = (
-                    (f"`{query['table']}` ") if "table" in query.keys() else ""
-                )
-                columns_string = (
-                    "("
-                    + ", ".join([f"`{column}`" for column in query["columns"]])
-                    + ") "
-                    if "columns" in query.keys()
-                    else ""
-                )
-                row_values_strings = ", ".join(query["values"])
-                modified_query = f"INSERT INTO {table_string}{columns_string}VALUES ({row_values_strings});\n"
-
-                output_file.write(modified_query)
+                output_file.write(insertion_to_string(query, True))
 
         # Generate empty files for each strategy for the results
         for strategy in strategies:

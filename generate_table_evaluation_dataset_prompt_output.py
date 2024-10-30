@@ -10,10 +10,10 @@ from tqdm import tqdm
 
 from util.adjustments import EXPERIMENTS, Adjustments
 from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table
+from util.processing_utils import get_data_from_create_table, insertion_to_string
 
 db_folder = "data"
-num_data_points_per_db = 2  # 100
+num_data_points_per_db = 100
 experiment_input_files = [
     "table_not_in_database",
     "table_in_database",
@@ -107,19 +107,7 @@ def get_data_for_one_database(
             # Every insert statement contains only one row
             parsed_query["values"] = parsed_query["values"][0]
             apply_alterations(parsed_query)
-
-            # Create insert statement as string
-            table_str = (
-                ""
-                if "table" not in parsed_query.keys()
-                else parsed_query["table"] + " "
-            )
-            columns_str = (
-                ""
-                if "columns" not in parsed_query.keys()
-                else f"({', '.join(parsed_query['columns'])}) "
-            )
-            query_str = f"INSERT INTO {table_str}{columns_str} VALUES ({', '.join(parsed_query['values'])});\n"
+            query_str = insertion_to_string(parsed_query)
 
             # Create database state
             database_state_for_query = copy.deepcopy(database_state)

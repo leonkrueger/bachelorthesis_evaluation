@@ -3,6 +3,26 @@ import tokenize
 from typing import Any
 
 
+def insertion_to_string(
+    insertion: dict[str, str | list[str] | list[list[str]]],
+    use_mysql_quotes: bool = False,
+) -> str:
+    quote_str = "`" if use_mysql_quotes else ""
+    table_str = (
+        ""
+        if "table" not in insertion.keys()
+        else quote_str + insertion["table"] + quote_str + " "
+    )
+    columns_str = (
+        ""
+        if "columns" not in insertion.keys()
+        else "("
+        + ", ".join([quote_str + column + quote_str for column in insertion["columns"]])
+        + ") "
+    )
+    return f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(insertion['values'])});\n"
+
+
 def is_usable_value(value: str | Any) -> bool:
     return value is not None and value.lower() != "'nan'" and value.lower() != "null"
 

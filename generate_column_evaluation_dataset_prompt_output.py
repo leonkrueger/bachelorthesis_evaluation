@@ -1,38 +1,45 @@
+"""
+Creates the data to evaluate the performance of the three database scenarios.
+``num_data_points_per_db`` specifies how many insertions from each db should be included in the dataset
+``query_alterations`` specifies how the insertions should be altered (only the ratio of alterations should be changed)
+``dataset_file`` specifies the file in which the dataset should be dumped
+"""
+
 import copy
 import json
 import math
 import os
 import traceback
 from collections import defaultdict
+from pathlib import Path
 from random import Random
 from typing import Any
 
-from tqdm import tqdm
-
 from util.adjustments import Adjustments
 from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table, is_usable_value
+from util.processing_utils import (
+    get_data_from_create_table,
+    insertion_to_string,
+    is_usable_value,
+)
 
-db_folder = os.path.join("fine_tuning", "validation_databases")
+db_folder = "data"
 num_data_points_per_db = 100
 query_alterations = [(Adjustments.DELETE_COLUMN, 0.0)]
-
-# Dump fine tuning data
-dataset_folder = os.path.join(
-    "further_evaluation",
-    "v_error_cases_missing_columns",
+dataset_file = Path(
+    "further_evaluation/error_cases_missing_columns/evaluation_data_columns_not_deleted.json"
 )
 
 random = Random()
 
 with open(
-    os.path.join("fine_tuning", "column_synonyms.json"), encoding="utf-8"
+    os.path.join(db_folder, "column_synonyms.json"), encoding="utf-8"
 ) as synonyms_file:
     synonyms = json.load(synonyms_file)
 
 
 def apply_alterations_to_query(query: dict[str, Any]) -> None:
-    """Applies the alterations specified in the dict query_alterations"""
+    """Applies the alterations specified in query_alterations"""
     for alteration, probability in query_alterations:
         if random.random() > probability:
             continue
@@ -47,7 +54,7 @@ def apply_alterations_to_state(
     columns: list[str],
     synonyms: list[str],
 ) -> tuple[list[str], list[str]]:
-    """Applies the alterations specified in the dict FINE_TUNING"""
+    """Applies a random scenario to each column"""
     new_column_names = []
     old_column_names = []
 
@@ -114,7 +121,7 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
             table_name = ""
             columns = []
 
-            # Preprocess all
+            # Read all insertions
             for query in queries_file_content.split(";\n"):
                 query = query.strip()
 
@@ -128,13 +135,14 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
                 if query.startswith("INSERT"):
                     queries.append((query, table_name, columns))
 
-        # Sample data points from all queries and create fine tuning data
+        # Sample data points from all queries and create evaluation data
         for query, table_name, columns in random.sample(
             queries, min(num_data_points_per_db, len(queries))
         ):
             parsed_query = parse_insert_query(query)
             parsed_query["table"] = table_name
 
+            # Every insert statement contains only one row
             values = parsed_query["values"][0]
             query_columns, query_values = zip(
                 *list(
@@ -145,23 +153,10 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
                 )
             )
             parsed_query["columns"] = list(query_columns)
-            # Every insert statement contains only one row
             parsed_query["values"] = list(query_values)
 
             apply_alterations_to_query(parsed_query)
-
-            # Create insert statement as string
-            table_str = (
-                ""
-                if "table" not in parsed_query.keys()
-                else parsed_query["table"] + " "
-            )
-            columns_str = (
-                ""
-                if "columns" not in parsed_query.keys()
-                else f"({', '.join(parsed_query['columns'])}) "
-            )
-            query_str = f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(parsed_query['values'])});\n"
+            query_str = insertion_to_string(parsed_query)
 
             database_name = os.path.normpath(database_file_path).split(os.path.sep)[-1][
                 :-4
@@ -186,6 +181,7 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
                 )
             )
 
+            # Prompts over this length often lead to Out Of Memory Errors
             if len(table_str) > 3000:
                 continue
 
@@ -217,31 +213,25 @@ def generate_data():
     data = []
     for path in os.listdir(db_folder):
         subfolder = os.path.join(db_folder, path)
-        if not os.path.isdir(subfolder):
+        if not os.path.isdir(subfolder) or path == "evaluation":
             continue
 
-        for database in tqdm(os.listdir(subfolder)):
-            database_file = os.path.join(subfolder, database)
-            if not os.path.isfile(database_file) or not database_file.endswith(".sql"):
-                continue
-
-            data.extend(get_data_for_one_database(database_file))
+        database_file = os.path.join(subfolder, path[path.find("_") + 1 :] + ".sql")
+        data.extend(get_data_for_one_database(database_file))
 
     random.shuffle(data)
 
-    os.makedirs(dataset_folder, exist_ok=True)
+    os.makedirs(dataset_file.parent, exist_ok=True)
 
     print(f"Number of data points created: {len(data)}")
 
     with open(
-        os.path.join(
-            dataset_folder,
-            "evaluation_data_columns_not_deleted" + ".json",
-        ),
+        dataset_file,
         mode="w",
         encoding="utf-8",
     ) as fine_tuning_data_file:
         json.dump(data, fine_tuning_data_file)
 
 
-generate_data()
+if __name__ == "__main__":
+    generate_data()

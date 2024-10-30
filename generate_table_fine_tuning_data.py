@@ -13,7 +13,7 @@ from tqdm import tqdm
 
 from util.adjustments import FINE_TUNING, Adjustments
 from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table
+from util.processing_utils import get_data_from_create_table, insertion_to_string
 
 # !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
@@ -159,18 +159,7 @@ def get_data_for_one_data_source(
                     )
                 )
 
-                # Create insert statement as string
-                table_str = (
-                    ""
-                    if "table" not in parsed_query.keys()
-                    else parsed_query["table"] + " "
-                )
-                columns_str = (
-                    ""
-                    if "columns" not in parsed_query.keys()
-                    else f"({', '.join(parsed_query['columns'])}) "
-                )
-                query_str = f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(parsed_query['values'])});\n"
+                query_str = insertion_to_string(parsed_query)
 
                 database_str = (
                     "\n".join(

@@ -1,5 +1,8 @@
 """
-Creates the data to evaluate the performance of the three database scenarios.
+Creates the data to evaluate the performance of the 3 database scenarios for the column mapping task.
+This script creates 1 dataset containing a mix of the 3 database scenarios. The distinction is done in the evaluation script.
+
+``db_folder`` specifies where the processed evaluation databases are (should not be changed)
 ``num_data_points_per_db`` specifies how many insertions from each db should be included in the dataset
 ``query_alterations`` specifies how the insertions should be altered (only the ratio of alterations should be changed)
 ``dataset_file`` specifies the file in which the dataset should be dumped

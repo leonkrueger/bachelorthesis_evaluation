@@ -9,16 +9,20 @@ If you want to evaluate different query_alterations, you should use different su
 ``dataset_folder`` specifies the folder in which the datasets should be dumped
 """
 
-import copy
 import json
 import os
 import traceback
 from random import Random
-from typing import Any
 
 from util.adjustments import Adjustments
 from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table, insertion_to_string
+from util.processing_utils import insertion_to_string
+from util.table_prediction_utils import (
+    apply_alterations_to_query,
+    apply_alterations_to_state,
+    get_database_str,
+    read_all_insertions,
+)
 
 db_folder = "data"
 num_data_points_per_db = 100
@@ -42,105 +46,13 @@ with open(
     synonyms = json.load(synonyms_file)
 
 
-def apply_alterations_to_query(query: dict[str, Any]) -> None:
-    """Applies the alterations specified in query_alterations"""
-    for alteration, probability in query_alterations:
-        if random.random() > probability:
-            continue
-
-        if alteration == Adjustments.DELETE_TABLE:
-            del query["table"]
-        elif alteration == Adjustments.DELETE_COLUMN:
-            del query["columns"]
-
-
-def apply_alterations_to_state(
-    table_name: str,
-    database_state: dict[str, list[str]],
-    synonyms: list[str],
-) -> tuple[dict[str, list[str]], str]:
-    """Applies a random scenario to each table"""
-    # Create database state
-    database_state_for_query = copy.deepcopy(database_state)
-
-    # Change database state
-    if (
-        experiment_input_file == "table_in_database"
-        or experiment_input_file == "different_name_in_database"
-    ):
-        correct_table = database_state_for_query[table_name]
-
-    del database_state_for_query[table_name]
-    database_state_for_query = dict(
-        random.sample(
-            list(database_state_for_query.items()),
-            random.randint(0, len(database_state_for_query.items())),
-        )
-    )
-
-    if experiment_input_file == "table_in_database":
-        expected_table_name = table_name
-        database_state_for_query[expected_table_name] = correct_table
-    elif experiment_input_file == "different_name_in_database":
-        synonym_used = random.choice(synonyms) if len(synonyms) > 0 else table_name
-        expected_table_name = synonym_used
-        database_state_for_query[expected_table_name] = correct_table
-    else:
-        expected_table_name = table_name
-
-    # Shuffle entries so that the correct table is not always at the end
-    database_state_items = list(database_state_for_query.items())
-    random.shuffle(database_state_items)
-
-    return dict(database_state_items), expected_table_name
-
-
-def get_csv_string_for_table(
-    queries: list[tuple[Any, str, list[str]]],
-    table_name: str,
-    current_values: list[str],
-) -> str:
-    # Take all query from the specified table
-    queries_in_table = [query[0] for query in queries if query[1] == table_name]
-    # Randomly select a few of them
-    random_queries = random.sample(
-        queries_in_table,
-        random.randint(0, min(3, len(queries_in_table))),
-    )
-    # Parse them so that the values can be used
-    parsed_rows = [parse_insert_query(query) for query in random_queries]
-    # Check that the currently added row is not in the selected rows
-    parsed_rows = [row for row in parsed_rows if row["values"][0] != current_values]
-    # Return the csv string of these rows
-    return "\n".join([";".join(row["values"][0]) for row in parsed_rows])
-
-
-def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
+def get_data_for_one_database(
+    database_file_path: str, experiment_input_file: str
+) -> list[dict[str, str]]:
     data = []
 
     try:
-        queries = []
-        database_state = {}
-
-        with open(database_file_path, encoding="utf-8") as queries_file:
-            queries_file_content = queries_file.read()
-
-            table_name = ""
-            columns = []
-
-            # Read all insertions
-            for query in queries_file_content.split(";\n"):
-                query = query.strip()
-
-                if query.startswith("CREATE TABLE"):
-                    _, table_name, _, column_data = get_data_from_create_table(
-                        query, use_mysql_quotes=False
-                    )
-                    columns = [column[0] for column in column_data]
-                    database_state[table_name] = columns
-
-                if query.startswith("INSERT"):
-                    queries.append((query, table_name, columns))
+        queries, database_state = read_all_insertions(database_file_path)
 
         # Sample data points from all queries and create evaluation data
         for query, table_name, columns in random.sample(
@@ -151,28 +63,25 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
             parsed_query["columns"] = columns
             # Every insert statement contains only one row
             parsed_query["values"] = parsed_query["values"][0]
-            apply_alterations_to_query(parsed_query)
+            apply_alterations_to_query(parsed_query, query_alterations)
             query_str = insertion_to_string(parsed_query)
 
             database_state_for_insertion, expected_table_name = (
                 apply_alterations_to_state(
                     table_name,
                     database_state,
+                    (
+                        0
+                        if experiment_input_file == "table_not_in_database"
+                        else (1 if experiment_input_file == "table_in_database" else 2)
+                    ),
                     synonyms[
                         os.path.normpath(database_file_path).split(os.path.sep)[-1][:-4]
                     ][table_name],
                 )
             )
-            database_str = (
-                "\n".join(
-                    [
-                        f"Table {table}:\n{';'.join([column for column in columns])}\n"
-                        f"{get_csv_string_for_table(queries, table, parsed_query['values'])}"
-                        for table, columns in database_state_for_insertion.items()
-                    ]
-                )
-                if len(database_state_for_insertion) > 0
-                else "No table exists yet."
+            database_str = get_database_str(
+                database_state_for_insertion, queries, parsed_query["values"]
             )
 
             if len(database_str) > 3000:

@@ -59,6 +59,9 @@ EXPERIMENTS = {
 }
 
 FINE_TUNING = {
-    "missing_tables": [(Adjustments.DELETE_TABLE, 0.5)],
+    "missing_tables": [
+        (Adjustments.DELETE_TABLE, 0.5),
+        (Adjustments.DELETE_COLUMN, 0.5),
+    ],
     "missing_columns": [(Adjustments.DELETE_COLUMN, 0.5)],
 }

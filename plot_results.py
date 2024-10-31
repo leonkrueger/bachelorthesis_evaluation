@@ -1,3 +1,7 @@
+"""
+This script can produce the plots from my thesis. To display the labels for datatype ratios correctly, LaTeX needs to be installed.
+"""
+
 import json
 import os
 from collections import defaultdict
@@ -9,7 +13,7 @@ from matplotlib import pyplot as plt
 aggregate_funtion = np.average
 
 experiment = "table_and_columns_deleted_sparsity"
-strategies_to_consider = None
+# strategies_to_consider = None
 strategies_to_consider = [
     "GPT4o",
     "Llama3_finetuned_dc",
@@ -416,16 +420,17 @@ def scatter_all_strategies(
     plt.close()
 
 
-gs_results, results = load_results(
-    os.path.join("data", "evaluation", f"{experiment}.json"),
-    strategies_to_consider,
-    require_same_results,
-)
-evaluation_call(gs_results, results)
+if __name__ == "__main__":
+    gs_results, results = load_results(
+        os.path.join("data", "evaluation", f"{experiment}.json"),
+        strategies_to_consider,
+        require_same_results,
+    )
+    evaluation_call(gs_results, results)
 
-# x_gs, x_results = load_results(
-#     os.path.join("data", "evaluation", f"{experiment[:-9]}_number_of_columns.json"),
-#     strategies_to_consider,
-#     require_same_results,
-# )
-# evaluation_call(x_gs, results)
+    # x_gs, x_results = load_results(
+    #     os.path.join("data", "evaluation", f"{experiment[:-9]}_number_of_columns.json"),
+    #     strategies_to_consider,
+    #     require_same_results,
+    # )
+    # evaluation_call(x_gs, results)

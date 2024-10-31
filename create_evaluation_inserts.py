@@ -1,5 +1,5 @@
 """
-``folder`` should contain the subfolders that were created by the script 1_prepare_inserts.py!
+``folder`` should contain the subfolders that were created by the script prepare_inserts.py!
 
 Creates the datasets for the experiments defined in util.adjustments. Does not overwrite existing datasets.
 """
@@ -69,56 +69,57 @@ def create_experiment(
             ).close()
 
 
-# Create all experiments for all databases
-for path in os.listdir(folder):
-    subfolder = os.path.join(folder, path)
-    if not os.path.isdir(subfolder) or path == "evaluation":
-        continue
+if __name__ == "__main__":
+    # Create all experiments for all databases
+    for path in os.listdir(folder):
+        subfolder = os.path.join(folder, path)
+        if not os.path.isdir(subfolder) or path == "evaluation":
+            continue
 
-    # Read all queries
-    with open(
-        os.path.join(subfolder, "inserts_only.sql"), encoding="utf-8"
-    ) as queries_file:
-        queries = [
-            parse_insert_query(query)
-            for query in queries_file.readlines()
-            if query.strip() != ""
-        ]
-    random.shuffle(queries)
+        # Read all queries
+        with open(
+            os.path.join(subfolder, "inserts_only.sql"), encoding="utf-8"
+        ) as queries_file:
+            queries = [
+                parse_insert_query(query)
+                for query in queries_file.readlines()
+                if query.strip() != ""
+            ]
+        random.shuffle(queries)
 
-    # Remove all NULL-values from queries
-    for query in queries:
-        # SQLite produces a separate statement for each row
-        query["values"] = query["values"][0]
-        query["columns"], query["values"] = [
-            list(x)
-            for x in zip(
-                *list(
-                    filter(
-                        lambda pair: is_usable_value(pair[1]),
-                        zip(query["columns"], query["values"]),
+        # Remove all NULL-values from queries
+        for query in queries:
+            # SQLite produces a separate statement for each row
+            query["values"] = query["values"][0]
+            query["columns"], query["values"] = [
+                list(x)
+                for x in zip(
+                    *list(
+                        filter(
+                            lambda pair: is_usable_value(pair[1]),
+                            zip(query["columns"], query["values"]),
+                        )
                     )
                 )
+            ]
+
+        # Create all experiments
+        for experiment_name, experiment in EXPERIMENTS.items():
+            if "databases" in experiment and not path in experiment["databases"]:
+                continue
+
+            experiment_folder = os.path.join(subfolder, experiment_name)
+
+            # Do not overwrite existing experiments
+            if os.path.exists(experiment_folder):
+                continue
+
+            os.makedirs(experiment_folder, exist_ok=True)
+
+            create_experiment(
+                experiment_folder,
+                path.split("_", 1)[1],
+                experiment["adjustments"],
+                experiment["strategies"],
+                queries,
             )
-        ]
-
-    # Create all experiments
-    for experiment_name, experiment in EXPERIMENTS.items():
-        if "databases" in experiment and not path in experiment["databases"]:
-            continue
-
-        experiment_folder = os.path.join(subfolder, experiment_name)
-
-        # Do not overwrite existing experiments
-        if os.path.exists(experiment_folder):
-            continue
-
-        os.makedirs(experiment_folder, exist_ok=True)
-
-        create_experiment(
-            experiment_folder,
-            path.split("_", 1)[1],
-            experiment["adjustments"],
-            experiment["strategies"],
-            queries,
-        )

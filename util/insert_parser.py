@@ -9,19 +9,19 @@ class UnexpectedTokenException(Exception):
         self.actual_token = actual_token
 
 
-def parse_insert_query(query: str) -> dict[str, str | list[str] | list[list[str]]]:
-    # Parses INSERT-queries and extracts the table, columns, values and column types if present
-    # Parameter query needs to be lowercase
+def parse_insert(insert: str) -> dict[str, str | list[str] | list[list[str]]]:
+    # Parses INSERT-statement and extracts the table, columns, values and column types if present
+    # Parameter insert needs to be lowercase
     # TODO: '$' in table/column name doesn't work
     # INSERT INTO Cities (Name, Country) VALUES ("Paris", "France");
     # INSERT INTO Cities VALUES ("Paris", "France"), ("Berlin", "Germany");
     # INSERT INTO (Name, Country) VALUES ("Paris", "France");
     # INSERT INTO VALUES ("Paris", "France");
-    query_data = {}
+    insert_data = {}
 
     tokens = [
         token.string
-        for token in tokenize.generate_tokens(io.StringIO(query).readline)
+        for token in tokenize.generate_tokens(io.StringIO(insert).readline)
         if token.string.strip() != ""
     ]
     if tokens[0].upper() != "INSERT":
@@ -31,12 +31,12 @@ def parse_insert_query(query: str) -> dict[str, str | list[str] | list[list[str]
 
     index = 2
     if tokens[index].upper() != "VALUES" and tokens[index] != "(":
-        query_data["table"], index = parse_table(tokens, index)
+        insert_data["table"], index = parse_table(tokens, index)
     if tokens[index] == "(":
-        query_data["columns"], index = parse_columns(tokens, index)
+        insert_data["columns"], index = parse_columns(tokens, index)
     if tokens[index].upper() != "VALUES":
         raise UnexpectedTokenException("VALUES", tokens[index])
-    query_data["values"], query_data["column_types"], index = parse_values(
+    insert_data["values"], insert_data["column_types"], index = parse_values(
         tokens, index + 1
     )
 
@@ -45,7 +45,7 @@ def parse_insert_query(query: str) -> dict[str, str | list[str] | list[list[str]
 
     # All tokens after the ';' are ignored
 
-    return query_data
+    return insert_data
 
 
 def parse_table(tokens: list[str], index: int) -> tuple[str, int]:

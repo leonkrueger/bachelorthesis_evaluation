@@ -3,24 +3,26 @@ import tokenize
 from typing import Any
 
 
-def insertion_to_string(
-    insertion: dict[str, str | list[str] | list[list[str]]],
+def insert_to_string(
+    insert: dict[str, str | list[str] | list[list[str]]],
     use_mysql_quotes: bool = False,
 ) -> str:
     quote_str = "`" if use_mysql_quotes else ""
     table_str = (
         ""
-        if "table" not in insertion.keys()
-        else quote_str + insertion["table"] + quote_str + " "
+        if "table" not in insert.keys()
+        else quote_str + insert["table"] + quote_str + " "
     )
     columns_str = (
         ""
-        if "columns" not in insertion.keys()
+        if "columns" not in insert.keys()
         else "("
-        + ", ".join([quote_str + column + quote_str for column in insertion["columns"]])
+        + ", ".join([quote_str + column + quote_str for column in insert["columns"]])
         + ") "
     )
-    return f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(insertion['values'])});\n"
+    return (
+        f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(insert['values'])});\n"
+    )
 
 
 def is_usable_value(value: str | Any) -> bool:
@@ -76,35 +78,35 @@ def map_type(type: str) -> str:
 
 
 def get_data_from_create_table(
-    query: str, use_mysql_quotes: bool = True
+    statement: str, use_mysql_quotes: bool = True
 ) -> tuple[str, str, list[str], list[list[str]]]:
     """Get all information needed to create the SQL statements that can be run on a MYSQL database"""
     # Get the column information needed
-    attribute_start_index = query.find("(")
+    attribute_start_index = statement.find("(")
     attribute_data = [
         [
             token.string
             for token in tokenize.generate_tokens(io.StringIO(attribute).readline)
             if token.string.strip() != ""
         ]
-        for attribute in query[attribute_start_index + 1 : len(query) - 1].split(",\n")
+        for attribute in statement[
+            attribute_start_index + 1 : len(statement) - 1
+        ].split(",\n")
     ]
 
     # Get table name
-    query_table_name_data = [
+    table_name_data = [
         token.string
         for token in tokenize.generate_tokens(
-            io.StringIO(query[:attribute_start_index]).readline
+            io.StringIO(statement[:attribute_start_index]).readline
         )
         if token.string.strip() != ""
     ]
-    table_name_offset = (
-        1 if any([token == "`" for token in query_table_name_data]) else 0
-    )
+    table_name_offset = 1 if any([token == "`" for token in table_name_data]) else 0
     table_name = (
-        query_table_name_data[2 + table_name_offset]
-        if "if" != query_table_name_data[2].lower()
-        else query_table_name_data[5 + table_name_offset]
+        table_name_data[2 + table_name_offset]
+        if "if" != table_name_data[2].lower()
+        else table_name_data[5 + table_name_offset]
     )
     table_old_name = table_name
     table_new_name = remove_quotes(table_name, use_mysql_quotes)

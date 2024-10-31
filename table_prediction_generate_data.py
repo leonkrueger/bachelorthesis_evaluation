@@ -1,11 +1,11 @@
 """
 Creates the data to evaluate the performance of the 3 database scenarios for the table prediction task.
 This scripts creates 3 datasets, 1 for each database scenario.
-If you want to evaluate different query_alterations, you should use different subfolders.
+If you want to evaluate different insert_alterations, you should use different subfolders.
 
 ``db_folder`` specifies where the processed evaluation databases are (should not be changed)
-``num_data_points_per_db`` specifies how many insertions from each db should be included in the dataset
-``query_alterations`` specifies how the insertions should be altered (only the ratio of alterations should be changed)
+``num_data_points_per_db`` specifies how many inserts from each db should be included in the dataset
+``insert_alterations`` specifies how the inserts should be altered (only the ratio of alterations should be changed)
 ``dataset_folder`` specifies the folder in which the datasets should be dumped
 """
 
@@ -16,17 +16,17 @@ from random import Random
 
 from util.adjustments import Adjustments
 from util.generate_utils import (
-    apply_alterations_to_query,
+    apply_alterations_to_insert,
     apply_alterations_to_state_table_prediction,
     get_database_str,
-    read_all_insertions,
+    read_all_inserts,
 )
-from util.insert_query_parser import parse_insert_query
-from util.processing_utils import insertion_to_string
+from util.insert_parser import parse_insert
+from util.processing_utils import insert_to_string
 
 db_folder = "data"
 num_data_points_per_db = 100
-query_alterations = [(Adjustments.DELETE_TABLE, 1.0)]
+insert_alterations = [(Adjustments.DELETE_TABLE, 1.0)]
 dataset_folder = os.path.join(
     "further_evaluation",
     "error_cases_missing_tables",
@@ -52,21 +52,21 @@ def get_data_for_one_database(
     data = []
 
     try:
-        queries, database_state = read_all_insertions(database_file_path)
+        inserts, database_state = read_all_inserts(database_file_path)
 
-        # Sample data points from all queries and create evaluation data
-        for query, table_name, columns in random.sample(
-            queries, min(num_data_points_per_db, len(queries))
+        # Sample data points from all inserts and create evaluation data
+        for insert, table_name, columns in random.sample(
+            inserts, min(num_data_points_per_db, len(inserts))
         ):
-            parsed_query = parse_insert_query(query)
-            parsed_query["table"] = table_name
-            parsed_query["columns"] = columns
+            parsed_insert = parse_insert(insert)
+            parsed_insert["table"] = table_name
+            parsed_insert["columns"] = columns
             # Every insert statement contains only one row
-            parsed_query["values"] = parsed_query["values"][0]
-            apply_alterations_to_query(parsed_query, query_alterations)
-            query_str = insertion_to_string(parsed_query)
+            parsed_insert["values"] = parsed_insert["values"][0]
+            apply_alterations_to_insert(parsed_insert, insert_alterations)
+            insert_str = insert_to_string(parsed_insert)
 
-            database_state_for_insertion, expected_table_name = (
+            database_state_for_insert, expected_table_name = (
                 apply_alterations_to_state_table_prediction(
                     table_name,
                     database_state,
@@ -81,7 +81,7 @@ def get_data_for_one_database(
                 )
             )
             database_str = get_database_str(
-                database_state_for_insertion, queries, parsed_query["values"]
+                database_state_for_insert, inserts, parsed_insert["values"]
             )
 
             if len(database_str) > 3000:
@@ -89,7 +89,7 @@ def get_data_for_one_database(
 
             data.append(
                 {
-                    "query": query_str,
+                    "query": insert_str,
                     "database_state": database_str,
                     "expected_table_name": expected_table_name,
                     "database_file_path": database_file_path,

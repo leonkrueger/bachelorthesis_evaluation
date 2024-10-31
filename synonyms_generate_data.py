@@ -10,8 +10,8 @@ import traceback
 from collections import defaultdict
 from random import Random
 
-from util.insert_query_parser import parse_insert_query
-from util.processing_utils import get_data_from_create_table, insertion_to_string
+from util.insert_parser import parse_insert
+from util.processing_utils import get_data_from_create_table, insert_to_string
 
 data_source = "fine_tuning"
 table_or_column = "table"
@@ -25,52 +25,52 @@ def get_data_for_one_database(
     data = []
 
     try:
-        queries = defaultdict(lambda: [])
+        inserts = defaultdict(lambda: [])
         database_state = {}
 
-        with open(database_file_path, encoding="utf-8") as queries_file:
-            queries_file_content = queries_file.read()
+        with open(database_file_path, encoding="utf-8") as inserts_file:
+            inserts_file_content = inserts_file.read()
 
             table_name = ""
             columns = []
 
             # Preprocess all
-            for query in queries_file_content.split(";\n"):
-                query = query.strip()
+            for insert in inserts_file_content.split(";\n"):
+                insert = insert.strip()
 
-                if query.startswith("CREATE TABLE"):
+                if insert.startswith("CREATE TABLE"):
                     _, table_name, _, column_data = get_data_from_create_table(
-                        query, use_mysql_quotes=False
+                        insert, use_mysql_quotes=False
                     )
                     columns = [column[0] for column in column_data]
                     database_state[table_name] = columns
 
-                if query.startswith("INSERT"):
-                    queries[table_name].append(query)
+                if insert.startswith("INSERT"):
+                    inserts[table_name].append(insert)
 
-        for table_name, table_queries in queries.items():
-            # Sample data point from all queries
-            table_queries = [query for query in table_queries if len(query) < 2000]
-            queries = random.choices(table_queries, k=min(3, len(table_queries)))
-            queries_as_str = []
-            for query in queries:
-                parsed_query = parse_insert_query(query)
-                parsed_query["table"] = table_name
-                parsed_query["columns"] = database_state[table_name]
+        for table_name, table_inserts in inserts.items():
+            # Sample data point from all inserts
+            table_inserts = [insert for insert in table_inserts if len(insert) < 2000]
+            inserts = random.choices(table_inserts, k=min(3, len(table_inserts)))
+            inserts_as_str = []
+            for insert in inserts:
+                parsed_insert = parse_insert(insert)
+                parsed_insert["table"] = table_name
+                parsed_insert["columns"] = database_state[table_name]
                 # Every insert statement contains only one row
-                parsed_query["values"] = parsed_query["values"][0]
+                parsed_insert["values"] = parsed_insert["values"][0]
 
-                queries_as_str.append(insertion_to_string(parsed_query))
+                inserts_as_str.append(insert_to_string(parsed_insert))
 
             data.append(
                 {
-                    "query": queries_as_str,
+                    "query": inserts_as_str,
                     "database_name": database_name,
                     "table_name": table_name,
                 }
                 if table_or_column == "table"
                 else {
-                    "query": queries_as_str,
+                    "query": inserts_as_str,
                     "database_name": database_name,
                     "table_name": table_name,
                     "column_names": database_state[table_name],

@@ -32,14 +32,14 @@ def delete_attribute(
 ) -> dict[str, list[dict[str, Any]]]:
     new_combinations = {}
     for delete_ratio in params[0]:
-        for name, queries in combinations.items():
-            modified_queries = []
-            for query in queries:
-                modified_query = copy.deepcopy(query)
+        for name, inserts in combinations.items():
+            modified_inserts = []
+            for insert in inserts:
+                modified_insert = copy.deepcopy(insert)
                 if random.random() < delete_ratio:
-                    del modified_query[attribute]
-                modified_queries.append(modified_query)
-            new_combinations[name + "_" + str(delete_ratio)] = modified_queries
+                    del modified_insert[attribute]
+                modified_inserts.append(modified_insert)
+            new_combinations[name + "_" + str(delete_ratio)] = modified_inserts
     return new_combinations
 
 
@@ -51,57 +51,57 @@ def use_synonyms(
 ) -> dict[str, list[dict[str, Any]]]:
     new_combinations = {}
     for synonym_ratio in params[0]:
-        for name, queries in combinations.items():
-            modified_queries = []
-            for query in queries:
-                modified_query = copy.deepcopy(query)
+        for name, inserts in combinations.items():
+            modified_inserts = []
+            for insert in inserts:
+                modified_insert = copy.deepcopy(insert)
 
-                # Use synonym for table if table was not deleted and query is randomly selected
-                if "table" in query and random.random() < synonym_ratio:
-                    modified_query["table"] = (
-                        random.choice(table_synonyms[query["table"]])
-                        if query["table"] in table_synonyms
-                        and len(table_synonyms[query["table"]]) > 0
-                        else query["table"]
+                # Use synonym for table if table was not deleted and insert is randomly selected
+                if "table" in insert and random.random() < synonym_ratio:
+                    modified_insert["table"] = (
+                        random.choice(table_synonyms[insert["table"]])
+                        if insert["table"] in table_synonyms
+                        and len(table_synonyms[insert["table"]]) > 0
+                        else insert["table"]
                     )
 
                 # Use synonyms for columns if columns were not deleted and column is randomly selected
-                if "columns" in query:
-                    for column_index in range(len(query["columns"])):
+                if "columns" in insert:
+                    for column_index in range(len(insert["columns"])):
                         if random.random() < synonym_ratio:
                             possible_synonyms = (
                                 [
                                     synonym
-                                    for synonym in column_synonyms[query["table"]][
-                                        query["columns"][column_index]
+                                    for synonym in column_synonyms[insert["table"]][
+                                        insert["columns"][column_index]
                                     ]
-                                    if synonym not in modified_query["columns"]
+                                    if synonym not in modified_insert["columns"]
                                 ]
-                                if query["table"] in column_synonyms
-                                and query["columns"][column_index]
-                                in column_synonyms[query["table"]]
+                                if insert["table"] in column_synonyms
+                                and insert["columns"][column_index]
+                                in column_synonyms[insert["table"]]
                                 else []
                             )
 
-                            if len(possible_synonyms) == 0 and query["columns"][
+                            if len(possible_synonyms) == 0 and insert["columns"][
                                 column_index
                             ] in [
                                 column
                                 for index, column in enumerate(
-                                    modified_query["columns"]
+                                    modified_insert["columns"]
                                 )
                                 if index != column_index
                             ]:
                                 print(
-                                    f"Error when generating synonym for {query['columns'][column_index]}"
+                                    f"Error when generating synonym for {insert['columns'][column_index]}"
                                 )
 
-                            modified_query["columns"][column_index] = (
+                            modified_insert["columns"][column_index] = (
                                 random.choice(possible_synonyms)
                                 if len(possible_synonyms) > 0
-                                else query["columns"][column_index]
+                                else insert["columns"][column_index]
                             )
 
-                modified_queries.append(modified_query)
-            new_combinations[name + "_" + str(synonym_ratio)] = modified_queries
+                modified_inserts.append(modified_insert)
+            new_combinations[name + "_" + str(synonym_ratio)] = modified_inserts
     return new_combinations

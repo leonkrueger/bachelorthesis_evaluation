@@ -10,7 +10,7 @@ import json
 import os
 from typing import Any, Callable
 
-from util.insert_query_parser import parse_insert_query
+from util.insert_parser import parse_insert
 
 results_folder = os.path.join(
     "further_evaluation",
@@ -22,16 +22,16 @@ prediction_key = "predicted_column_names"
 
 
 scenarios = {
-    "column_in_database": lambda query_column, expected, table_state: (
-        query_column is None or query_column == expected
+    "column_in_database": lambda insert_column, expected, table_state: (
+        insert_column is None or insert_column == expected
     )
     and expected in table_state.split("\n")[1].split(";"),
-    "column_not_in_database": lambda query_column, expected, table_state: (
-        query_column is None or query_column == expected
+    "column_not_in_database": lambda insert_column, expected, table_state: (
+        insert_column is None or insert_column == expected
     )
     and expected not in table_state.split("\n")[1].split(";"),
-    "different_name_in_database": lambda query_column, expected, table_state: (
-        query_column is None or query_column != expected
+    "different_name_in_database": lambda insert_column, expected, table_state: (
+        insert_column is None or insert_column != expected
     )
     and expected in table_state.split("\n")[1].split(";"),
 }
@@ -62,15 +62,15 @@ def evaluate_column_prediction_single_column(
         if skip_result_condition(result, prediction_key):
             continue
 
-        parsed_query = parse_insert_query(result["query"])
-        # Predicted, Expected, Column in query (None possible)
+        parsed_insert = parse_insert(result["query"])
+        # Predicted, Expected, Column in insert (None possible)
         prediction_pairs = list(
             zip(
                 result[prediction_key],
                 result["expected_column_names"],
                 (
-                    parsed_query["columns"]
-                    if "columns" in parsed_query.keys()
+                    parsed_insert["columns"]
+                    if "columns" in parsed_insert.keys()
                     else [None for i in range(len(result["expected_column_names"]))]
                 ),
             )
@@ -78,8 +78,8 @@ def evaluate_column_prediction_single_column(
         column_predictions += len(
             [
                 predicted
-                for predicted, expected, query_column in prediction_pairs
-                if scenario_condition(query_column, expected, result["table_state"])
+                for predicted, expected, insert_column in prediction_pairs
+                if scenario_condition(insert_column, expected, result["table_state"])
             ]
         )
         # Only if you want to count results with a different number of predictions that expected
@@ -87,11 +87,11 @@ def evaluate_column_prediction_single_column(
         #     column_predictions += len(
         #         [
         #             expected
-        #             for expected, query_column in zip(
+        #             for expected, insert_column in zip(
         #                 result["expected_column_names"][len(result[prediction_key]) :],
         #                 (
-        #                     parsed_query["columns"][len(result[prediction_key]) :]
-        #                     if "columns" in parsed_query.keys()
+        #                     parsed_insert["columns"][len(result[prediction_key]) :]
+        #                     if "columns" in parsed_insert.keys()
         #                     else [
         #                         None
         #                         for i in range(
@@ -104,14 +104,14 @@ def evaluate_column_prediction_single_column(
         #                     ]
         #                 ),
         #             )
-        #             if scenario_condition(query_column, expected, result["table_state"])
+        #             if scenario_condition(insert_column, expected, result["table_state"])
         #         ]
         #     )
         correct_predictions += len(
             [
                 predicted
-                for predicted, expected, query_column in prediction_pairs
-                if scenario_condition(query_column, expected, result["table_state"])
+                for predicted, expected, insert_column in prediction_pairs
+                if scenario_condition(insert_column, expected, result["table_state"])
                 and (
                     columns_prediction_condition_requires_other_predictions
                     and column_prediction_condition(
@@ -128,7 +128,7 @@ def evaluate_column_prediction_single_column(
     return correct_predictions / column_predictions
 
 
-def get_predictions(predicted_column_names, query_data):
+def get_predictions(predicted_column_names, insert_data):
     return (
         predicted_column_names.split("\n")[0].split(
             ";"
@@ -158,7 +158,7 @@ if __name__ == "__main__":
         for result in experiment_results:
             result[prediction_key] = get_predictions(
                 result[prediction_key],
-                parse_insert_query(result["query"]),
+                parse_insert(result["query"]),
             )
 
         wrong_number_of_columns_condition = lambda result, prediction_key: len(
@@ -198,7 +198,7 @@ if __name__ == "__main__":
         aggregated_results["duplicate_predictions"] = (
             evaluate_column_prediction_single_column(
                 experiment_results,
-                lambda query_column, expected, table_state: True,
+                lambda insert_column, expected, table_state: True,
                 lambda predicted, expected, table_state, prediction_pairs: any(
                     [
                         pair[1] != expected and pair[0] == predicted

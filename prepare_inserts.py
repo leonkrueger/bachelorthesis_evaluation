@@ -31,7 +31,7 @@ def dump_inserts(
         inserts,
         min(max_inserts, len(inserts)),
     ):
-        # Write query for inserts only
+        # Write only for inserts
         values_index = insert.find("VALUES")
         insert_with_attributes = (
             insert[:values_index] + attributes + insert[values_index:]
@@ -51,26 +51,26 @@ if __name__ == "__main__":
         os.makedirs(subfolder, exist_ok=True)
         primary_keys = {}
 
-        with open(full_path, encoding="utf-8") as queries_file, open(
+        with open(full_path, encoding="utf-8") as inserts_file, open(
             os.path.join(subfolder, "inserts_only.sql"), "w", encoding="utf-8"
         ) as inserts_only_file, open(
             os.path.join(subfolder, "gold_standard_input.sql"), "w", encoding="utf-8"
         ) as gold_standard_file:
             # Replace call because sometimes sql-files contain commas in weird position
-            queries_file_content = queries_file.read().replace("\n,", ",\n")
+            inserts_file_content = inserts_file.read().replace("\n,", ",\n")
 
             # Calculate max number of inserts per table
-            number_tables = queries_file_content.count("CREATE TABLE")
+            number_tables = inserts_file_content.count("CREATE TABLE")
             max_inserts_per_table = int(max_inserts / number_tables)
 
             table_old_name = ""
             table_new_name = ""
             attributes = "()"
             inserts_into_current_table = []
-            for query in queries_file_content.split(";\n"):
-                query = query.strip()
+            for insert in inserts_file_content.split(";\n"):
+                insert = insert.strip()
 
-                if query.startswith("CREATE TABLE"):
+                if insert.startswith("CREATE TABLE"):
                     # Dump the insert statements of the last table
                     dump_inserts(
                         inserts_into_current_table,
@@ -81,7 +81,7 @@ if __name__ == "__main__":
                     inserts_into_current_table = []
 
                     table_old_name, table_new_name, table_keys, attribute_data = (
-                        get_data_from_create_table(query)
+                        get_data_from_create_table(insert)
                     )
                     primary_keys[table_new_name] = table_keys
 
@@ -95,11 +95,11 @@ if __name__ == "__main__":
                     )
                     gold_standard_file.write(fixed_create_statement + ";\n")
 
-                if query.startswith("INSERT"):
+                if insert.startswith("INSERT"):
                     # Create correct insert statement
 
                     inserts_into_current_table.append(
-                        f"INSERT INTO {table_new_name} {query[query.find('VALUES') :]}"
+                        f"INSERT INTO {table_new_name} {insert[insert.find('VALUES') :]}"
                     )
 
             dump_inserts(

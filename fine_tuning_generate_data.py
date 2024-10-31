@@ -6,8 +6,8 @@ Creates the fine-tuning data.
 ``name`` needs to be the correct key in the FINE_TUNING dictionary (currently 'missing_tables' or 'missing_columns')
 ``file_suffix`` is added to the end of the path (useful if datasets are generated for the same model)
 ``generate_validation_data`` specifies if validation (True) or fine-tuning (False) data should be generated
-``fine_tuning_data_points`` specifies the number of insertions used for fine-tuning
-``validation_data_points`` specifies the number of insertions used for validation
+``fine_tuning_data_points`` specifies the number of inserts used for fine-tuning
+``validation_data_points`` specifies the number of inserts used for validation
 ``data_sources`` should contain all subfolders of fine_tuning/databases that are used to generate the data
 """
 
@@ -22,15 +22,15 @@ from tqdm import tqdm
 
 from util.adjustments import FINE_TUNING
 from util.generate_utils import (
-    apply_alterations_to_query,
+    apply_alterations_to_insert,
     apply_alterations_to_state_column_mapping,
     apply_alterations_to_state_table_prediction,
     get_database_str,
     get_table_string,
-    read_all_insertions,
+    read_all_inserts,
 )
-from util.insert_query_parser import parse_insert_query
-from util.processing_utils import insertion_to_string, is_usable_value
+from util.insert_parser import parse_insert
+from util.processing_utils import insert_to_string, is_usable_value
 
 name = "missing_columns"
 file_suffix = ""
@@ -43,24 +43,24 @@ random = Random()
 
 
 def generate_table_prediction_prompt(
-    query: str,
+    insert: str,
     table_name: str,
     table_columns: str,
-    queries: list,
+    inserts: list,
     database_state: dict[str, list[str]],
     synonyms: dict[str, dict[str, list[str]]],
     path: str,
 ) -> tuple[str, str]:
-    parsed_query = parse_insert_query(query)
-    parsed_query["table"] = table_name
-    parsed_query["columns"] = table_columns
+    parsed_insert = parse_insert(insert)
+    parsed_insert["table"] = table_name
+    parsed_insert["columns"] = table_columns
     # Every insert statement contains only one row
-    parsed_query["values"] = parsed_query["values"][0]
+    parsed_insert["values"] = parsed_insert["values"][0]
 
-    apply_alterations_to_query(parsed_query, FINE_TUNING[name])
-    query_str = insertion_to_string(parsed_query)
+    apply_alterations_to_insert(parsed_insert, FINE_TUNING[name])
+    insert_str = insert_to_string(parsed_insert)
 
-    database_state_for_insertion, expected_table_name = (
+    database_state_for_insert, expected_table_name = (
         apply_alterations_to_state_table_prediction(
             table_name,
             database_state,
@@ -73,12 +73,12 @@ def generate_table_prediction_prompt(
         )
     )
     database_str = get_database_str(
-        database_state_for_insertion, queries, parsed_query["values"]
+        database_state_for_insert, inserts, parsed_insert["values"]
     )
 
     instruction = (
         "Predict the table for this example:\n"
-        f"Query: {query_str}"
+        f"Query: {insert_str}"
         f"Database State:\n{database_str}"
     )
     response = f"Table: {expected_table_name}"
@@ -87,18 +87,18 @@ def generate_table_prediction_prompt(
 
 
 def generate_column_mapping_prompt(
-    query: str,
+    insert: str,
     table_name: str,
     table_columns: str,
-    queries: list,
+    inserts: list,
     synonyms: dict[str, dict[str, dict[str, list[str]]]],
     path: str,
 ) -> tuple[str, str]:
-    parsed_query = parse_insert_query(query)
-    parsed_query["table"] = table_name
+    parsed_insert = parse_insert(insert)
+    parsed_insert["table"] = table_name
 
-    values = parsed_query["values"][0]
-    query_columns, query_values = zip(
+    values = parsed_insert["values"][0]
+    insert_columns, insert_values = zip(
         *list(
             filter(
                 lambda pair: is_usable_value(pair[1]),
@@ -106,12 +106,12 @@ def generate_column_mapping_prompt(
             )
         )
     )
-    parsed_query["columns"] = list(query_columns)
+    parsed_insert["columns"] = list(insert_columns)
     # Every insert statement contains only one row
-    parsed_query["values"] = list(query_values)
+    parsed_insert["values"] = list(insert_values)
 
-    apply_alterations_to_query(parsed_query, FINE_TUNING[name])
-    query_str = insertion_to_string(parsed_query)
+    apply_alterations_to_insert(parsed_insert, FINE_TUNING[name])
+    insert_str = insert_to_string(parsed_insert)
 
     altered_table_columns, old_column_names_in_altered_order = (
         apply_alterations_to_state_column_mapping(
@@ -125,12 +125,12 @@ def generate_column_mapping_prompt(
     )
 
     table_str = get_table_string(
-        queries,
+        inserts,
         table_name,
         table_columns,
         altered_table_columns,
         old_column_names_in_altered_order,
-        parsed_query["values"],
+        parsed_insert["values"],
     )
 
     correct_predictions = [
@@ -139,7 +139,7 @@ def generate_column_mapping_prompt(
             if column in old_column_names_in_altered_order
             else column
         )
-        for column in query_columns
+        for column in insert_columns
     ]
 
     # Predict one column with each prompt
@@ -148,11 +148,11 @@ def generate_column_mapping_prompt(
     )
     instruction = (
         "Predict the column for this value:\n"
-        f"Query: {query_str}\n"
+        f"Query: {insert_str}\n"
         # f"{table_str}\n"
         # f"Already predicted columns: {', '.join(correct_predictions[:column_index_to_predict])}\n"
-        f"Specified column: {query_columns[column_index_to_predict] if 'columns' in parsed_query.keys() else 'No column specified'}\n"
-        f"Value: {query_values[column_index_to_predict]}\n"
+        f"Specified column: {insert_columns[column_index_to_predict] if 'columns' in parsed_insert.keys() else 'No column specified'}\n"
+        f"Value: {insert_values[column_index_to_predict]}\n"
         f"{table_str}\n"
     )
     response = f"Column: {correct_predictions[column_index_to_predict]}"
@@ -160,14 +160,14 @@ def generate_column_mapping_prompt(
     # Predict all columns with one prompt
     # instruction = (
     #     "Predict the columns for this query:\n"
-    #     f"Query: {query_str}\n"
+    #     f"Query: {insert_str}\n"
     #     f"{table_str}\n"
     # )
     # response = ";".join(correct_predictions)
     # response = ";".join(
     #     [
     #         f"{value}={column}"
-    #         for column, value in zip(correct_predictions, query_values)
+    #         for column, value in zip(correct_predictions, insert_values)
     #     ]
     # )
 
@@ -195,29 +195,29 @@ def get_data_for_one_data_source(
         if not os.path.isfile(full_path) or not full_path.endswith(".sql"):
             continue
 
-        queries, database_state = read_all_insertions(full_path)
+        inserts, database_state = read_all_inserts(full_path)
 
-        # Sample data points from all queries and create fine tuning data
-        for query, table_name, table_columns in random.sample(
-            queries, min(data_points_per_database, len(queries))
+        # Sample data points from all inserts and create fine tuning data
+        for insert, table_name, table_columns in random.sample(
+            inserts, min(data_points_per_database, len(inserts))
         ):
             try:
                 if name == "missing_tables":
                     instruction, response = generate_table_prediction_prompt(
-                        query,
+                        insert,
                         table_name,
                         table_columns,
-                        queries,
+                        inserts,
                         database_state,
                         synonyms,
                         path,
                     )
                 elif name == "missing_columns":
                     instruction, response = generate_column_mapping_prompt(
-                        query,
+                        insert,
                         table_name,
                         table_columns,
-                        queries,
+                        inserts,
                         synonyms,
                         path,
                     )

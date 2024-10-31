@@ -10,9 +10,9 @@ from random import Random
 from typing import Any
 
 from util.adjustments import EXPERIMENTS
-from util.insert_query_parser import parse_insert_query
+from util.insert_parser import parse_insert
 from util.make_adjustment import make_adjustment
-from util.processing_utils import insertion_to_string, is_usable_value
+from util.processing_utils import insert_to_string, is_usable_value
 
 folder = "data"
 
@@ -34,9 +34,9 @@ def create_experiment(
     database_name: str,
     experiment: list[tuple[Any]],
     strategies: list[str],
-    queries: list[dict[str, Any]],
+    inserts: list[dict[str, Any]],
 ) -> None:
-    adjustment_combinations = {"": queries}
+    adjustment_combinations = {"": inserts}
 
     # Create all combinations of params of the adjustments
     for adjustment in experiment:
@@ -47,15 +47,15 @@ def create_experiment(
             column_synonyms[database_name],
         )
 
-    for name, queries in adjustment_combinations.items():
+    for name, inserts in adjustment_combinations.items():
         # Generate the files with the inputs
         with open(
             os.path.join(experiment_folder, f"evaluation_input{name}.sql"),
             "w",
             encoding="utf-8",
         ) as output_file:
-            for query in queries:
-                output_file.write(insertion_to_string(query, True))
+            for insert in inserts:
+                output_file.write(insert_to_string(insert, True))
 
         # Generate empty files for each strategy for the results
         for strategy in strategies:
@@ -76,28 +76,28 @@ if __name__ == "__main__":
         if not os.path.isdir(subfolder) or path == "evaluation":
             continue
 
-        # Read all queries
+        # Read all inserts
         with open(
             os.path.join(subfolder, "inserts_only.sql"), encoding="utf-8"
-        ) as queries_file:
-            queries = [
-                parse_insert_query(query)
-                for query in queries_file.readlines()
-                if query.strip() != ""
+        ) as inserts_file:
+            inserts = [
+                parse_insert(insert)
+                for insert in inserts_file.readlines()
+                if insert.strip() != ""
             ]
-        random.shuffle(queries)
+        random.shuffle(inserts)
 
-        # Remove all NULL-values from queries
-        for query in queries:
+        # Remove all NULL-values from inserts
+        for insert in inserts:
             # SQLite produces a separate statement for each row
-            query["values"] = query["values"][0]
-            query["columns"], query["values"] = [
+            insert["values"] = insert["values"][0]
+            insert["columns"], insert["values"] = [
                 list(x)
                 for x in zip(
                     *list(
                         filter(
                             lambda pair: is_usable_value(pair[1]),
-                            zip(query["columns"], query["values"]),
+                            zip(insert["columns"], insert["values"]),
                         )
                     )
                 )
@@ -121,5 +121,5 @@ if __name__ == "__main__":
                 path.split("_", 1)[1],
                 experiment["adjustments"],
                 experiment["strategies"],
-                queries,
+                inserts,
             )

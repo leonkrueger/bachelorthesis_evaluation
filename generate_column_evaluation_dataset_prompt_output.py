@@ -19,12 +19,14 @@ from random import Random
 from typing import Any
 
 from util.adjustments import Adjustments
-from util.insert_query_parser import parse_insert_query
-from util.processing_utils import (
-    get_data_from_create_table,
-    insertion_to_string,
-    is_usable_value,
+from util.column_mapping_utils import (
+    apply_alterations_to_query,
+    apply_alterations_to_state,
+    get_table_string,
+    read_all_insertions,
 )
+from util.insert_query_parser import parse_insert_query
+from util.processing_utils import insertion_to_string, is_usable_value
 
 db_folder = "data"
 num_data_points_per_db = 100
@@ -39,48 +41,6 @@ with open(
     os.path.join(db_folder, "column_synonyms.json"), encoding="utf-8"
 ) as synonyms_file:
     synonyms = json.load(synonyms_file)
-
-
-def apply_alterations_to_query(query: dict[str, Any]) -> None:
-    """Applies the alterations specified in query_alterations"""
-    for alteration, probability in query_alterations:
-        if random.random() > probability:
-            continue
-
-        if alteration == Adjustments.DELETE_TABLE:
-            del query["table"]
-        elif alteration == Adjustments.DELETE_COLUMN:
-            del query["columns"]
-
-
-def apply_alterations_to_state(
-    columns: list[str],
-    synonyms: list[str],
-) -> tuple[list[str], list[str]]:
-    """Applies a random scenario to each column"""
-    new_column_names = []
-    old_column_names = []
-
-    columns = copy.deepcopy(columns)
-    random.shuffle(columns)
-
-    for column in columns:
-        scenario = int(math.floor(3 * random.random()))
-        # Column not in db -> Do nothing
-        if scenario == 1:  # Column with correct name in db
-            new_column_names.append(column)
-            old_column_names.append(column)
-        elif scenario == 2:  # Column with different name in db
-            new_column_names.append(
-                (
-                    random.choice(synonyms[column])
-                    if column in synonyms.keys() and len(synonyms[column]) > 0
-                    else column
-                )
-            )
-            old_column_names.append(column)
-
-    return new_column_names, old_column_names
 
 
 def get_csv_string_for_table(
@@ -115,31 +75,10 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
     data = []
 
     try:
-        queries = []
-        database_state = {}
-
-        with open(database_file_path, encoding="utf-8") as queries_file:
-            queries_file_content = queries_file.read()
-
-            table_name = ""
-            columns = []
-
-            # Read all insertions
-            for query in queries_file_content.split(";\n"):
-                query = query.strip()
-
-                if query.startswith("CREATE TABLE"):
-                    _, table_name, _, column_data = get_data_from_create_table(
-                        query, use_mysql_quotes=False
-                    )
-                    columns = [column[0] for column in column_data]
-                    database_state[table_name] = columns
-
-                if query.startswith("INSERT"):
-                    queries.append((query, table_name, columns))
+        queries, database_state = read_all_insertions(database_file_path)
 
         # Sample data points from all queries and create evaluation data
-        for query, table_name, columns in random.sample(
+        for query, table_name, all_table_columns in random.sample(
             queries, min(num_data_points_per_db, len(queries))
         ):
             parsed_query = parse_insert_query(query)
@@ -151,21 +90,21 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
                 *list(
                     filter(
                         lambda pair: is_usable_value(pair[1]),
-                        zip(columns, values),
+                        zip(all_table_columns, values),
                     )
                 )
             )
             parsed_query["columns"] = list(query_columns)
             parsed_query["values"] = list(query_values)
 
-            apply_alterations_to_query(parsed_query)
+            apply_alterations_to_query(parsed_query, query_alterations)
             query_str = insertion_to_string(parsed_query)
 
             database_name = os.path.normpath(database_file_path).split(os.path.sep)[-1][
                 :-4
             ]
             table_columns, old_column_names = apply_alterations_to_state(
-                columns,
+                all_table_columns,
                 (
                     synonyms[database_name][table_name]
                     if table_name in synonyms[database_name]
@@ -173,15 +112,13 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
                 ),
             )
 
-            table_str = (
-                f"Table {table_name}:\n{';'.join([column for column in table_columns])}\n"
-                + get_csv_string_for_table(
-                    queries,
-                    table_name,
-                    columns,
-                    old_column_names,
-                    parsed_query["values"],
-                )
+            table_str = get_table_string(
+                queries,
+                table_name,
+                all_table_columns,
+                table_columns,
+                old_column_names,
+                parsed_query["values"],
             )
 
             # Prompts over this length often lead to Out Of Memory Errors

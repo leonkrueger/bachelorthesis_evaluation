@@ -1,26 +1,34 @@
-import copy
-import io
+"""
+!!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
+
+Creates the fine-tuning data for the column mapping model.
+
+``name`` needs to be the correct key in the FINE_TUNING dictionary
+``file_suffix`` is added to the end of the path (useful if datasets are generated for the same model)
+``generate_validation_data`` specifies if validation (True) or fine-tuning (False) data should be generated
+``fine_tuning_data_points`` specifies the number of insertions used for fine-tuning
+``validation_data_points`` specifies the number of insertions used for validation
+``data_sources`` should contain all subfolders of fine_tuning/databases that are used to generate the data
+"""
+
 import json
 import math
 import os
-import re
-import tokenize
 import traceback
 from collections import defaultdict
 from random import Random
-from typing import Any
 
 from tqdm import tqdm
 
-from util.adjustments import FINE_TUNING, Adjustments
-from util.insert_query_parser import parse_insert_query
-from util.processing_utils import (
-    get_data_from_create_table,
-    insertion_to_string,
-    is_usable_value,
+from util.adjustments import FINE_TUNING
+from util.column_mapping_utils import (
+    apply_alterations_to_query,
+    apply_alterations_to_state,
+    get_table_string,
+    read_all_insertions,
 )
-
-# !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
+from util.insert_query_parser import parse_insert_query
+from util.processing_utils import insertion_to_string, is_usable_value
 
 name = "missing_columns"
 file_suffix = "_own"
@@ -30,85 +38,6 @@ validation_data_points = 150
 data_sources = ["bird", "spider", "wikidb"]
 
 random = Random()
-
-
-def apply_alterations_to_query(query: dict[str, Any]) -> dict[str, Any]:
-    for alteration, probability in FINE_TUNING[name]:
-        if random.random() > probability:
-            continue
-
-        if alteration == Adjustments.DELETE_TABLE:
-            del query["table"]
-        elif alteration == Adjustments.DELETE_COLUMN:
-            del query["columns"]
-    return query
-
-
-def apply_alterations_to_state(
-    columns: list[str],
-    synonyms: list[str],
-) -> tuple[list[str], list[str]]:
-    """Applies the alterations specified in the dict FINE_TUNING"""
-    new_column_names = []
-    old_column_names = []
-
-    columns = copy.deepcopy(columns)
-    random.shuffle(columns)
-
-    for column in columns:
-        scenario = int(math.floor(3 * random.random()))
-        # Column not in db -> Do nothing
-        if scenario == 1:  # Column with correct name in db
-            new_column_names.append(column)
-            old_column_names.append(column)
-        elif scenario == 2:  # Column with different name in db
-            new_column_names.append(
-                (
-                    random.choice(synonyms[column])
-                    if column in synonyms.keys() and len(synonyms[column]) > 0
-                    else column
-                )
-            )
-            old_column_names.append(column)
-
-    return new_column_names, old_column_names
-
-
-def get_table_string(
-    queries: list[tuple[Any, str, list[str]]],
-    table_name: str,
-    all_columns: list[str],
-    table_columns_new_names: list[str],
-    table_columns_old_names: list[str],
-    current_values: list[str],
-) -> str:
-    # Take all query from the specified table
-    queries_in_table = [query[0] for query in queries if query[1] == table_name]
-    # Randomly select a few of them
-    random_queries = random.sample(
-        queries_in_table,
-        random.randint(0, min(3, len(queries_in_table))),
-    )
-    # Parse them so that the values can be used
-    parsed_rows = [parse_insert_query(query) for query in random_queries]
-    # Check that the currently added row is not in the selected rows
-    parsed_rows = [row for row in parsed_rows if row["values"][0] != current_values]
-    # Select columns that should be in the database table
-    rows_with_filtered_columns = [[] for i in range(len(parsed_rows))]
-    for table_column in table_columns_old_names:
-        column_index = all_columns.index(table_column)
-        for row_index, row in enumerate(parsed_rows):
-            rows_with_filtered_columns[row_index].append(row["values"][0][column_index])
-    # Return the csv string of these rows
-    # return f"Table {table_name}:\n{';'.join(table_columns_new_names)}\n" + "\n".join(
-    #     [";".join(row) for row in rows_with_filtered_columns]
-    # )
-    return f"Table {table_name}:\n" + "\n".join(
-        [
-            f"Column {column_name}, Example values: [{', '.join([row[column_index] for row in rows_with_filtered_columns if is_usable_value(row[column_index])])}]"
-            for column_index, column_name in enumerate(table_columns_new_names)
-        ]
-    )
 
 
 def get_data_for_one_data_source(
@@ -133,28 +62,7 @@ def get_data_for_one_data_source(
             if not os.path.isfile(full_path) or not full_path.endswith(".sql"):
                 continue
 
-            queries = []
-            database_state = {}
-
-            with open(full_path, encoding="utf-8") as queries_file:
-                queries_file_content = queries_file.read()
-
-                table_name = ""
-                columns = []
-
-                # Preprocess all
-                for query in queries_file_content.split(";\n"):
-                    query = query.strip()
-
-                    if query.startswith("CREATE TABLE"):
-                        _, table_name, _, column_data = get_data_from_create_table(
-                            query, use_mysql_quotes=False
-                        )
-                        columns = [column[0] for column in column_data]
-                        database_state[table_name] = columns
-
-                    if query.startswith("INSERT"):
-                        queries.append((query, table_name, columns))
+            queries, database_state = read_all_insertions(full_path)
 
             # Sample data points from all queries and create fine tuning data
             for query, table_name, all_table_columns in random.sample(
@@ -176,7 +84,9 @@ def get_data_for_one_data_source(
                 # Every insert statement contains only one row
                 parsed_query["values"] = list(query_values)
 
-                parsed_query = apply_alterations_to_query(parsed_query)
+                parsed_query = apply_alterations_to_query(
+                    parsed_query, FINE_TUNING[name]
+                )
                 query_str = insertion_to_string(parsed_query)
 
                 table_columns, old_column_names = apply_alterations_to_state(
@@ -194,7 +104,7 @@ def get_data_for_one_data_source(
                     all_table_columns,
                     table_columns,
                     old_column_names,
-                    values,
+                    parsed_query["values"],
                 )
 
                 correct_predictions = [
@@ -235,6 +145,7 @@ def get_data_for_one_data_source(
                 #     ]
                 # )
 
+                # Prompts over this length often lead to Out Of Memory Errors
                 if len(instruction) > 3000:
                     continue
 
@@ -246,40 +157,45 @@ def get_data_for_one_data_source(
     return random.sample(data, min(fine_tuning_data_points, len(data)))
 
 
-with open(
-    os.path.join("fine_tuning", "column_synonyms.json"), encoding="utf-8"
-) as synonyms_file:
-    synonyms = json.load(synonyms_file)
+if __name__ == "__main__":
+    with open(
+        os.path.join("fine_tuning", "column_synonyms.json"), encoding="utf-8"
+    ) as synonyms_file:
+        synonyms = json.load(synonyms_file)
 
-data = []
-data_points_per_source = math.ceil(
-    (validation_data_points if generate_validation_data else fine_tuning_data_points)
-    / len(data_sources)
-)
-for data_source in tqdm(data_sources):
-    data.extend(
-        get_data_for_one_data_source(
-            data_source,
-            data_points_per_source,
-            synonyms,
-            validation=generate_validation_data,
-        )
-    )
-
-random.shuffle(data)
-
-# Dump fine tuning data
-with open(
-    os.path.join(
-        "fine_tuning",
-        "validation_datasets" if generate_validation_data else "datasets",
+    data = []
+    data_points_per_source = math.ceil(
         (
-            f"{name}{file_suffix}.json"
+            validation_data_points
             if generate_validation_data
-            else f"{name}_{fine_tuning_data_points}{file_suffix}.json"
+            else fine_tuning_data_points
+        )
+        / len(data_sources)
+    )
+    for data_source in tqdm(data_sources):
+        data.extend(
+            get_data_for_one_data_source(
+                data_source,
+                data_points_per_source,
+                synonyms,
+                validation=generate_validation_data,
+            )
+        )
+
+    random.shuffle(data)
+
+    # Dump fine tuning data
+    with open(
+        os.path.join(
+            "fine_tuning",
+            "validation_datasets" if generate_validation_data else "datasets",
+            (
+                f"{name}{file_suffix}.json"
+                if generate_validation_data
+                else f"{name}_{fine_tuning_data_points}{file_suffix}.json"
+            ),
         ),
-    ),
-    mode="w",
-    encoding="utf-8",
-) as dataset_file:
-    json.dump(data, dataset_file)
+        mode="w",
+        encoding="utf-8",
+    ) as dataset_file:
+        json.dump(data, dataset_file)

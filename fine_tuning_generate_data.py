@@ -1,9 +1,9 @@
 """
 !!! WORKS ONLY WITH DUMP FILES FROM SQLITE3 !!!
 
-Creates the fine-tuning data for the column mapping model.
+Creates the fine-tuning data.
 
-``name`` needs to be the correct key in the FINE_TUNING dictionary
+``name`` needs to be the correct key in the FINE_TUNING dictionary (currently 'missing_tables' or 'missing_columns')
 ``file_suffix`` is added to the end of the path (useful if datasets are generated for the same model)
 ``generate_validation_data`` specifies if validation (True) or fine-tuning (False) data should be generated
 ``fine_tuning_data_points`` specifies the number of insertions used for fine-tuning
@@ -33,9 +33,9 @@ from util.insert_query_parser import parse_insert_query
 from util.processing_utils import insertion_to_string, is_usable_value
 
 name = "missing_columns"
-file_suffix = "_test"
+file_suffix = ""
 generate_validation_data = False
-fine_tuning_data_points = 10
+fine_tuning_data_points = 12000
 validation_data_points = 150
 data_sources = ["bird", "spider", "wikidb"]
 

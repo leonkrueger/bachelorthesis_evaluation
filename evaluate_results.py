@@ -1,9 +1,17 @@
+"""
+Evaluates the resulting evaluation databases in comparison to the gold standard. The results can be found in {folder}/evaluation.
+
+``folder`` should contain the subfolders that were created by the scripts prepare_inserts.py and create_evaluation_inserts.py!
+``write_averages_per_strategy`` specifies if the averages per strategy should be written
+``write_all_results`` specifies if the entire results should be written
+``split_by_datatype`` specifies the datatype by which the results should be split (only works for F1Score). If the results should not be split set it to None.
+``evaluation`` should contain an instance of the evaluation class that should be used
+"""
+
 import json
 import os
 from math import isnan
-from typing import Any
 
-import matplotlib.pyplot as plt
 from numpy import average
 from tqdm import tqdm
 
@@ -16,8 +24,8 @@ from util.evaluation.sparsity import SparsityEvaluation
 
 folder = "data"
 
-create_evaluation_jsons = True
-print_result_dict = True
+write_averages_per_strategy = True
+write_all_results = True
 
 split_by_datatype = "string"  # "number"
 evaluation = F1Score(split_by_datatype=split_by_datatype)
@@ -25,7 +33,7 @@ evaluation = F1Score(split_by_datatype=split_by_datatype)
 # evaluation = NumberOfTablesEvaluation()
 
 
-def create_evaluation_plots(
+def write_averages(
     evaluation: Evaluation,
     results: dict[str, dict[str, dict[str, float]]],
     folder: str,
@@ -70,16 +78,15 @@ def create_evaluation_plots(
         strategy_evaluation_folder = os.path.join(folder, "evaluation", strategy)
         os.makedirs(strategy_evaluation_folder, exist_ok=True)
 
-        if create_evaluation_jsons:
-            with open(
-                os.path.join(
-                    strategy_evaluation_folder,
-                    f"{experiment_name}_{evaluation.get_filename()}.json",
-                ),
-                "w",
-                encoding="utf-8",
-            ) as json_file:
-                json.dump(averages, json_file)
+        with open(
+            os.path.join(
+                strategy_evaluation_folder,
+                f"{experiment_name}_{evaluation.get_filename()}.json",
+            ),
+            "w",
+            encoding="utf-8",
+        ) as json_file:
+            json.dump(averages, json_file)
 
 
 def evaluate_experiment_on_one_database_for_one_strategy(
@@ -161,7 +168,7 @@ def evaluate_experiment(
         )
         results[path] = db_accuracies
 
-    if print_result_dict:
+    if write_all_results:
         with open(
             os.path.join(
                 folder,
@@ -173,8 +180,10 @@ def evaluate_experiment(
         ) as json_file:
             json.dump(results, json_file)
 
-    create_evaluation_plots(evaluation, results, folder, experiment_name)
+    if write_averages_per_strategy:
+        write_averages(evaluation, results, folder, experiment_name)
 
 
-for experiment_name in EXPERIMENTS.keys():
-    evaluate_experiment(evaluation, folder, experiment_name)
+if __name__ == "__main__":
+    for experiment_name in EXPERIMENTS.keys():
+        evaluate_experiment(evaluation, folder, experiment_name)

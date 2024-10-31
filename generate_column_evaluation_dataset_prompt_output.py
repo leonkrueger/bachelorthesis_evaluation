@@ -19,9 +19,9 @@ from random import Random
 from typing import Any
 
 from util.adjustments import Adjustments
-from util.column_mapping_utils import (
+from util.generate_utils import (
     apply_alterations_to_query,
-    apply_alterations_to_state,
+    apply_alterations_to_state_column_mapping,
     get_table_string,
     read_all_insertions,
 )
@@ -103,7 +103,7 @@ def get_data_for_one_database(database_file_path: str) -> list[dict[str, str]]:
             database_name = os.path.normpath(database_file_path).split(os.path.sep)[-1][
                 :-4
             ]
-            table_columns, old_column_names = apply_alterations_to_state(
+            table_columns, old_column_names = apply_alterations_to_state_column_mapping(
                 all_table_columns,
                 (
                     synonyms[database_name][table_name]

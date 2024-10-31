@@ -15,14 +15,14 @@ import traceback
 from random import Random
 
 from util.adjustments import Adjustments
-from util.insert_query_parser import parse_insert_query
-from util.processing_utils import insertion_to_string
-from util.table_prediction_utils import (
+from util.generate_utils import (
     apply_alterations_to_query,
-    apply_alterations_to_state,
+    apply_alterations_to_state_table_prediction,
     get_database_str,
     read_all_insertions,
 )
+from util.insert_query_parser import parse_insert_query
+from util.processing_utils import insertion_to_string
 
 db_folder = "data"
 num_data_points_per_db = 100
@@ -67,7 +67,7 @@ def get_data_for_one_database(
             query_str = insertion_to_string(parsed_query)
 
             database_state_for_insertion, expected_table_name = (
-                apply_alterations_to_state(
+                apply_alterations_to_state_table_prediction(
                     table_name,
                     database_state,
                     (

@@ -32,9 +32,9 @@ from util.generate_utils import (
 from util.insert_parser import parse_insert
 from util.processing_utils import insert_to_string, is_usable_value
 
-name = "missing_columns"
-file_suffix = ""
-generate_validation_data = False
+name = "missing_tables"
+file_suffix = "_csv_columns_deleted"
+generate_validation_data = True
 fine_tuning_data_points = 12000
 validation_data_points = 150
 data_sources = ["bird", "spider", "wikidb"]

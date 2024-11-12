@@ -12,10 +12,10 @@ from matplotlib import pyplot as plt
 
 aggregate_funtion = np.average
 
-experiment = "table_and_columns_deleted_sparsity"
+experiment = "table_and_columns_deleted_f1_score"
 # strategies_to_consider = None
 strategies_to_consider = [
-    "GPT4o",
+    "Llama3_finetuned_all_scenarios",
     "Llama3_finetuned_dc",
     "Llama3_not_finetuned",
 ]
@@ -50,6 +50,7 @@ x_label = (
 strategy_labels = {
     "gold_standard": "Gold Standard",
     # "Llama3_finetuned": "Fine-tuned Llama 3 (old)",
+    "Llama3_finetuned_all_scenarios": "Fine-tuned Llama 3 (new)",
     "Llama3_finetuned_dc": "Fine-tuned Llama 3",
     "Llama3_not_finetuned": "Not fine-tuned Llama 3",
     "Heuristic_exact": "Heuristic (exact)",
@@ -63,6 +64,7 @@ strategy_labels = {
 strategy_colors = {
     "gold_standard": "#BBBBBB",
     "Llama3_finetuned": "#FFFFFF",
+    "Llama3_finetuned_all_scenarios": "FFFFFF",
     "Llama3_finetuned_dc": "#4477AA",
     "Llama3_not_finetuned": "#66CCEE",
     "Heuristic_exact": "#CCBB44",

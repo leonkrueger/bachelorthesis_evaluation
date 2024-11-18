@@ -56,6 +56,17 @@ EXPERIMENTS = {
             "GPT4o_mini",
         ],
     },
+    "existing_database_schema": {
+        "adjustments": [
+            (Adjustments.DELETE_TABLE, [0.0, 1.0]),
+            (Adjustments.DELETE_COLUMN, [0.0, 1.0]),
+        ],
+        "predefined_database_schema": True,
+        "strategies": [
+            "Llama3_finetuned_dc",
+            "Llama3_not_finetuned",
+        ],
+    },
 }
 
 FINE_TUNING = {

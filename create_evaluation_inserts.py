@@ -35,6 +35,7 @@ def create_experiment(
     experiment: list[tuple[Any]],
     strategies: list[str],
     inserts: list[dict[str, Any]],
+    predefined_database_schema: bool,
 ) -> None:
     adjustment_combinations = {"": inserts}
 
@@ -54,6 +55,9 @@ def create_experiment(
             "w",
             encoding="utf-8",
         ) as output_file:
+            if predefined_database_schema:
+                output_file.write("!PREDEFINED_DATABASE_SCHEMA;\n")
+
             for insert in inserts:
                 output_file.write(insert_to_string(insert, True))
 
@@ -122,4 +126,5 @@ if __name__ == "__main__":
                 experiment["adjustments"],
                 experiment["strategies"],
                 inserts,
+                experiment.get("predefined_database_schema", False),
             )

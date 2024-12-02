@@ -1,7 +1,7 @@
 """
-``folder`` should contain the subfolders that were created by the script prepare_inserts.py!
-
 Creates the datasets for the experiments defined in util.adjustments. Does not overwrite existing datasets.
+
+``folder`` should contain the subfolders that were created by the script prepare_inserts.py!
 """
 
 import json

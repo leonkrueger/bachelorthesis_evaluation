@@ -166,12 +166,6 @@ cython_debug/
 fine_tuning/databases/
 fine_tuning/validation_databases/
 
-# Too large databases
-data/bird_financial/financial.sql
-data/bird_card_games/card_games.sql
-data/bird_codebase_community/codebase_community.sql
-data/bird_european_football_2/european_football_2.sql
-
 # Plots
 *.png
 

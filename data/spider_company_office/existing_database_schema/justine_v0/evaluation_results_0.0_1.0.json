@@ -1,0 +1,1 @@
+{"SELECT * FROM buildings;": [], "SELECT * FROM Companies;": [], "SELECT * FROM Office_locations;": [], "SELECT * FROM hotels;": [[12, "Ritz-Carlton Mexico City", "Mexico City", 100, 34, "on-hold"], [11, "Reforma 90", "Mexico City", 200, 42, "on-hold"]]}

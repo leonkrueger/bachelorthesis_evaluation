@@ -1,0 +1,1 @@
+{"SELECT * FROM event;": [], "SELECT * FROM major;": [], "SELECT * FROM zip_code;": [], "SELECT * FROM attendance;": [], "SELECT * FROM budget;": [], "SELECT * FROM expense;": [], "SELECT * FROM income;": [], "SELECT * FROM member;": []}

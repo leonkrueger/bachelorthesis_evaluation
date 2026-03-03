@@ -1,0 +1,1 @@
+{"SELECT * FROM cards;": [], "SELECT * FROM foreign_data;": [], "SELECT * FROM legalities;": [], "SELECT * FROM rulings;": [], "SELECT * FROM sets;": [], "SELECT * FROM set_translations;": [], "SELECT * FROM rulings_dg_tmp;": []}

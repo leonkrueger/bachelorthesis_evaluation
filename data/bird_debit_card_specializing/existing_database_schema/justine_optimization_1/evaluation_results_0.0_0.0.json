@@ -1,0 +1,1 @@
+{"SELECT * FROM customers;": [], "SELECT * FROM gasstations;": [], "SELECT * FROM products;": [], "SELECT * FROM transactions_1k;": [], "SELECT * FROM yearmonth;": []}

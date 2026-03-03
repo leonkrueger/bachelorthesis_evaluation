@@ -1,0 +1,1 @@
+{"SELECT * FROM examination;": [], "SELECT * FROM patient;": [], "SELECT * FROM laboratory;": [], "SELECT * FROM laboratory_result;": [[57266, "1996-06-28", 163, "<0.2"]]}

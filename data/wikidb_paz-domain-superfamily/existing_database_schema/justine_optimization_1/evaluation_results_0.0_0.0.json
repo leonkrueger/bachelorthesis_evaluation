@@ -1,0 +1,1 @@
+{"SELECT * FROM expressed_in;": [], "SELECT * FROM molecular_function;": [], "SELECT * FROM biological_process;": [], "SELECT * FROM encodes;": [], "SELECT * FROM chromosome;": [], "SELECT * FROM encoded_by;": [], "SELECT * FROM paz_domain_superfamily;": []}

@@ -1,0 +1,1 @@
+{"SELECT * FROM swimmer;": [], "SELECT * FROM stadium;": [], "SELECT * FROM event;": [], "SELECT * FROM record;": [], "SELECT * FROM game_stats;": [[3, "Loss", 3, 3]], "SELECT * FROM swimmer_times;": [[1, "Sergiy Fesenko", "Ukraine", 57.34, "1:57.26", "2:57.10", "3:57.12", "4:57.03", "5:56.31", "6:55.07", "7:53.43"]], "SELECT * FROM athletes_result;": [[2, "Win", 1, 2]]}

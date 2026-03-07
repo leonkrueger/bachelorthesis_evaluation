@@ -1,0 +1,1 @@
+{"SELECT * FROM encodes;": [], "SELECT * FROM taxon;": [], "SELECT * FROM natural_product;": [], "SELECT * FROM encoded_by;": [], "SELECT * FROM peptidase_u32_collagenase_family;": []}

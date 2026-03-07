@@ -5,6 +5,8 @@ class Adjustments(Enum):
     DELETE_TABLE = 1
     DELETE_COLUMN = 2
     USE_SYNONYMS = 3
+    USE_TABLE_SYNONYMS = 4
+    USE_COLUMN_SYNONYMS = 5
 
 
 # Dictionary defines the different experiments
@@ -65,6 +67,20 @@ EXPERIMENTS = {
         "strategies": [
             "Llama3_finetuned_dc",
             "Llama3_not_finetuned",
+        ],
+    },
+    "paper_evaluation": {
+        "adjustments": [
+            (Adjustments.DELETE_COLUMN, [0.2]),
+            (Adjustments.USE_COLUMN_SYNONYMS, [0.375]),
+            (Adjustments.DELETE_TABLE, [0.5]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
+        ],
+        "strategies": [
+            "Llama3_finetuned_dc",
+            "Llama3_3_not_finetuned",
+            "justine_v0",
+            "justine_optimization_1",
         ],
     },
 }

@@ -23,6 +23,10 @@ def make_adjustment(
             return use_synonyms(
                 adjustment[1:], combinations, table_synonyms, column_synonyms
             )
+        case Adjustments.USE_TABLE_SYNONYMS:
+            return use_table_synonyms(adjustment[1:], combinations, table_synonyms)
+        case Adjustments.USE_COLUMN_SYNONYMS:
+            return use_column_synonyms(adjustment[1:], combinations, column_synonyms)
         case _:
             return combinations
 
@@ -64,6 +68,85 @@ def use_synonyms(
                         and len(table_synonyms[insert["table"]]) > 0
                         else insert["table"]
                     )
+
+                # Use synonyms for columns if columns were not deleted and column is randomly selected
+                if "columns" in insert:
+                    for column_index in range(len(insert["columns"])):
+                        if random.random() < synonym_ratio:
+                            possible_synonyms = (
+                                [
+                                    synonym
+                                    for synonym in column_synonyms[insert["table"]][
+                                        insert["columns"][column_index]
+                                    ]
+                                    if synonym not in modified_insert["columns"]
+                                ]
+                                if insert["table"] in column_synonyms
+                                and insert["columns"][column_index]
+                                in column_synonyms[insert["table"]]
+                                else []
+                            )
+
+                            if len(possible_synonyms) == 0 and insert["columns"][
+                                column_index
+                            ] in [
+                                column
+                                for index, column in enumerate(
+                                    modified_insert["columns"]
+                                )
+                                if index != column_index
+                            ]:
+                                print(
+                                    f"Error when generating synonym for {insert['columns'][column_index]}"
+                                )
+
+                            modified_insert["columns"][column_index] = (
+                                random.choice(possible_synonyms)
+                                if len(possible_synonyms) > 0
+                                else insert["columns"][column_index]
+                            )
+
+                modified_inserts.append(modified_insert)
+            new_combinations[name + "_" + str(synonym_ratio)] = modified_inserts
+    return new_combinations
+
+
+def use_table_synonyms(
+    params: tuple[Any],
+    combinations: dict[str, list[dict[str, Any]]],
+    table_synonyms: dict[str, list[str]],
+) -> dict[str, list[dict[str, Any]]]:
+    new_combinations = {}
+    for synonym_ratio in params[0]:
+        for name, inserts in combinations.items():
+            modified_inserts = []
+            for insert in inserts:
+                modified_insert = copy.deepcopy(insert)
+
+                # Use synonym for table if table was not deleted and insert is randomly selected
+                if "table" in insert and random.random() < synonym_ratio:
+                    modified_insert["table"] = (
+                        random.choice(table_synonyms[insert["table"]])
+                        if insert["table"] in table_synonyms
+                        and len(table_synonyms[insert["table"]]) > 0
+                        else insert["table"]
+                    )
+                modified_inserts.append(modified_insert)
+            new_combinations[name + "_" + str(synonym_ratio)] = modified_inserts
+    return new_combinations
+
+
+def use_column_synonyms(
+    params: tuple[Any],
+    combinations: dict[str, list[dict[str, Any]]],
+    column_synonyms: dict[str, dict[str, list[str]]],
+) -> dict[str, list[dict[str, Any]]]:
+    new_combinations = {}
+    for synonym_ratio in params[0]:
+        for name, inserts in combinations.items():
+            modified_inserts = []
+            for insert in inserts:
+                modified_insert = copy.deepcopy(insert)
 
                 # Use synonyms for columns if columns were not deleted and column is randomly selected
                 if "columns" in insert:

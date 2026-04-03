@@ -110,18 +110,15 @@ class F1Score(Evaluation):
     ) -> float:
         """Calculates the maximum of F1-Scores for the combinations of this gold standard column
         with all columns in the result database"""
-        return max(
-            [
-                self._calculate_gs_r_column_f1_score(
-                    gs_column_index, gs_table, r_column_index, r_table
-                )
-                for r_table in results.values()
-                for r_column_index in range(len(r_table[0]) if len(r_table) > 0 else 0)
-                if any(
-                    [self._consider_value(r_row[r_column_index]) for r_row in r_table]
-                )
-            ]
-        )
+        f1_scores = [
+            self._calculate_gs_r_column_f1_score(
+                gs_column_index, gs_table, r_column_index, r_table
+            )
+            for r_table in results.values()
+            for r_column_index in range(len(r_table[0]) if len(r_table) > 0 else 0)
+            if any([self._consider_value(r_row[r_column_index]) for r_row in r_table])
+        ]
+        return max(f1_scores) if len(f1_scores) > 0 else 0.0
 
     def _calculate_gs_r_column_f1_score(
         self,

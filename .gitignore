@@ -171,3 +171,4 @@ fine_tuning/validation_databases/
 
 # Test file
 test.py
+*.sqlite

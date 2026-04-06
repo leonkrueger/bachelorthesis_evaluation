@@ -12,19 +12,27 @@ from matplotlib import pyplot as plt
 
 aggregate_funtion = np.average
 
-experiment = "table_and_columns_deleted_f1_score"
+experiment = "paper_evaluation_f1_score"
 # strategies_to_consider = None
+# TODO: Change to include specific strategies (Not finetuned Llama3 is handled in main  if needed)
 strategies_to_consider = [
-    "Llama3_finetuned_all_scenarios",
+    # "Llama3_not_finetuned",
     "Llama3_finetuned_dc",
-    "Llama3_not_finetuned",
+    "Llama3_3_not_finetuned",
+    "justine_v0",
+    "justine_optimization_1",
 ]
-require_same_results = True
+require_same_results = False
 
-evaluation_call = lambda gs_results, results: boxplot_parameters_all_strategies(
-    gs_results, results
+evaluation_call = lambda gs_results, results: boxplot_one_parameter_all_strategies(
+    gs_results, results, "0.2_0.375_0.5_0.5"
 )
-# evaluation_call = lambda gs_results, results: barplot_all_strategies(results, "1.0")
+# evaluation_call = lambda gs_results, results: boxplot_parameters_all_strategies(
+#     gs_results, results
+# )
+# evaluation_call = lambda gs_results, results: barplot_all_strategies(
+#     results, "0.2_0.375_0.5_0.5"
+# )
 # evaluation_call = lambda gs_results, results: barplot_ratio_averages(
 #     results, "Llama3_finetuned_dc", "0.0"
 # )
@@ -47,18 +55,22 @@ x_label = (
     )
 )
 
+# TODO: Change x-label if needed
 strategy_labels = {
     "gold_standard": "Gold Standard",
     # "Llama3_finetuned": "Fine-tuned Llama 3 (old)",
+    "Llama3_not_finetuned": "Not fine-tuned\nLlama 3",
     "Llama3_finetuned_all_scenarios": "Fine-tuned Llama 3 (new)",
-    "Llama3_finetuned_dc": "Fine-tuned Llama 3",
-    "Llama3_not_finetuned": "Not fine-tuned Llama 3",
+    "Llama3_finetuned_dc": "Fine-tuned\nLlama 3",
+    "Llama3_3_not_finetuned": "Not fine-tuned\nLlama 3.3",
     "Heuristic_exact": "Heuristic (exact)",
     "Heuristic_fuzzy": "Heuristic (fuzzy)",
     "Heuristic_synonyms": "Heuristic (synonyms)",
     "GPT3_5": "GPT-3.5",
     "GPT4o_mini": "GPT-4o mini",
     "GPT4o": "GPT-4o",
+    "justine_v0": "Our Approach",
+    "justine_optimization_1": "Our approach\nwith Optimization",
 }
 
 strategy_colors = {
@@ -67,12 +79,15 @@ strategy_colors = {
     "Llama3_finetuned_all_scenarios": "FFFFFF",
     "Llama3_finetuned_dc": "#4477AA",
     "Llama3_not_finetuned": "#66CCEE",
+    "Llama3_3_not_finetuned": "#66CCEE",
     "Heuristic_exact": "#CCBB44",
     "Heuristic_fuzzy": "#EE6677",
     "Heuristic_synonyms": "#AA3377",
     "GPT3_5": "#CCBB44",
     "GPT4o_mini": "#EE6677",
     "GPT4o": "#AA3377",
+    "justine_v0": "#AA3377",
+    "justine_optimization_1": "#AA3377",
 }
 
 ratio_labels = {
@@ -170,6 +185,69 @@ def load_results(
     return gold_standard_collector, result_collector
 
 
+def boxplot_one_parameter_all_strategies(
+    gs_results: list[float], results: dict[str, dict[str, list[float]]], parameter: str
+):
+    values = []
+    labels = []
+    titles = []
+
+    if "sparsity" in experiment:
+        values.append([gs_results])
+        labels.append([""])
+        titles.append(strategy_labels["gold_standard"])
+
+    for strategy, label in strategy_labels.items():
+        if strategy not in results:
+            continue
+
+        parameters_values = (
+            dict(sorted(results[strategy].items(), key=lambda x: float(x[0])))
+            if (
+                "table_and_columns_deleted" not in experiment
+                and "existing_database_schema" not in experiment
+                and "paper_evaluation" not in experiment
+            )
+            else dict(
+                sorted(
+                    results[strategy].items(),
+                    key=lambda x: tuple([float(p) for p in x[0].split("_")]),
+                )
+            )
+        )
+
+        print(
+            strategy,
+            "Average: ",
+            np.average(parameters_values[parameter]),
+            ", Std: ",
+            np.std(parameters_values[parameter]),
+        )
+        values.append(parameters_values[parameter])
+        labels.append(label)
+
+    fig, axs = plt.subplots(figsize=(6, 4))
+    axs.set_ylabel(y_label)
+
+    axs.set_ylim(-0.02, 1.02)
+    axs.grid(True, axis="y", color="0.9", linestyle="--")
+    axs.boxplot(
+        values,
+        tick_labels=labels,
+        showmeans=True,
+    )
+
+    fig.tight_layout()
+    plt.savefig(
+        os.path.join(
+            "data",
+            "evaluation",
+            f"{experiment}{'_selected_strategies' if strategies_to_consider else '_all_strategies'}_{parameter}.png",
+        ),
+    )
+    plt.close()
+
+
 def boxplot_parameters_all_strategies(
     gs_results: list[float], results: dict[str, dict[str, list[float]]]
 ):
@@ -188,7 +266,11 @@ def boxplot_parameters_all_strategies(
 
         parameters_values = (
             dict(sorted(results[strategy].items(), key=lambda x: float(x[0])))
-            if "table_and_columns_deleted" not in experiment
+            if (
+                "table_and_columns_deleted" not in experiment
+                and "existing_database_schema" not in experiment
+                and "paper_evaluation" not in experiment
+            )
             else dict(
                 sorted(
                     results[strategy].items(),
@@ -203,7 +285,11 @@ def boxplot_parameters_all_strategies(
             [
                 (
                     int(100 * float(parameter))
-                    if "table_and_columns_deleted" not in experiment
+                    if (
+                        "table_and_columns_deleted" not in experiment
+                        and "existing_database_schema" not in experiment
+                        and "paper_evaluation" not in experiment
+                    )
                     else ",\n".join(
                         [str(int(100 * float(p))) for p in parameter.split("_")]
                     )
@@ -428,6 +514,17 @@ if __name__ == "__main__":
         strategies_to_consider,
         require_same_results,
     )
+
+    # TODO: Workaraound for not-finetuned Llama3
+    _, not_finetuned = load_results(
+        os.path.join("data", "evaluation", "table_and_columns_deleted_f1_score.json"),
+        ["Llama3_not_finetuned"],
+        require_same_results,
+    )
+    results["Llama3_not_finetuned"]["0.2_0.375_0.5_0.5"] = not_finetuned[
+        "Llama3_not_finetuned"
+    ]["1.0_1.0"]
+
     evaluation_call(gs_results, results)
 
     # x_gs, x_results = load_results(

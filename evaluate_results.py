@@ -27,10 +27,20 @@ folder = "data"
 write_averages_per_strategy = True
 write_all_results = True
 
-split_by_datatype = "string"  # "number"
+split_by_datatype = None  # "string"  # "number"
 evaluation = F1Score(split_by_datatype=split_by_datatype)
 # evaluation = SparsityEvaluation()
 # evaluation = NumberOfTablesEvaluation()
+
+# Use this to select needed strategies for better runtime
+# Additionally, comment out not needed experiments in adjustments.py
+only_evaluate_specific_strategies = [
+    "Llama3_not_finetuned",
+    "Llama3_finetuned_dc",
+    "justine_v0",
+    "justine_optimization_1",
+    "Llama3_3_not_finetuned",
+]
 
 
 def write_averages(
@@ -131,6 +141,12 @@ def evaluate_experiment_on_one_database(
     for path in tqdm(os.listdir(folder)):
         strategy_results_path = os.path.join(folder, path)
         if not os.path.isdir(strategy_results_path):
+            continue
+
+        if (
+            only_evaluate_specific_strategies is not None
+            and path not in only_evaluate_specific_strategies
+        ):
             continue
 
         results[path] = evaluate_experiment_on_one_database_for_one_strategy(

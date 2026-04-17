@@ -9,17 +9,18 @@ from util.evaluation.evaluation import Evaluation
 class F1Score(Evaluation):
     def __init__(
         self,
-        table_aggregation_function=average,
+        strict_score: bool = False,
         split_by_datatype: str = None,
     ):
-        self.table_aggregation_function = table_aggregation_function
+        self.strict_score = strict_score
         self.split_by_datatype = split_by_datatype
 
     def get_filename(self) -> str:
+        strict_string = "_strict" if self.strict_score else ""
         if not self.split_by_datatype:
-            return "f1_score"
+            return "f1_score" + strict_string
         else:
-            return f"f1_score_only_{self.split_by_datatype}_number"
+            return f"f1_score{strict_string}_only_{self.split_by_datatype}_number"
 
     def get_y_label(self) -> str:
         return "F1 Score"
@@ -83,24 +84,50 @@ class F1Score(Evaluation):
         return number_of_datatype / len(row)
 
     def _calculate_gs_table_f1_score(
-        self, gs_table: list[list[str]], results: dict[str, list[list[str]]]
+        self,
+        gs_table: list[list[str]],
+        results: dict[str, list[list[str]]],
     ) -> float:
-        """Calculates the aggregated result over F1-Scores for all columns of a gold standard table.
-        Aggregation function can be set in the constructor and is min by default."""
-        return self.table_aggregation_function(
-            [
-                self._calculate_gs_column_f1_score(gs_column_index, gs_table, results)
-                for gs_column_index in range(
-                    len(gs_table[0]) if len(gs_table) > 0 else 0
-                )
-                if any(
-                    [
-                        self._consider_value(gs_row[gs_column_index])
-                        for gs_row in gs_table
-                    ]
-                )
-            ]
-        )
+        """Calculates the aggregated result over F1-Scores for all columns of a gold standard table"""
+        if self.strict_score:
+            return max(
+                [
+                    average(
+                        [
+                            self._calculate_strict_gs_column_r_table_f1_score(
+                                gs_column_index, gs_table, r_table
+                            )
+                            for gs_column_index in range(
+                                len(gs_table[0]) if len(gs_table) > 0 else 0
+                            )
+                            if any(
+                                [
+                                    self._consider_value(gs_row[gs_column_index])
+                                    for gs_row in gs_table
+                                ]
+                            )
+                        ]
+                    )
+                    for r_table in results.values()
+                ]
+            )
+        else:
+            return average(
+                [
+                    self._calculate_gs_column_f1_score(
+                        gs_column_index, gs_table, results
+                    )
+                    for gs_column_index in range(
+                        len(gs_table[0]) if len(gs_table) > 0 else 0
+                    )
+                    if any(
+                        [
+                            self._consider_value(gs_row[gs_column_index])
+                            for gs_row in gs_table
+                        ]
+                    )
+                ]
+            )
 
     def _calculate_gs_column_f1_score(
         self,
@@ -115,6 +142,22 @@ class F1Score(Evaluation):
                 gs_column_index, gs_table, r_column_index, r_table
             )
             for r_table in results.values()
+            for r_column_index in range(len(r_table[0]) if len(r_table) > 0 else 0)
+            if any([self._consider_value(r_row[r_column_index]) for r_row in r_table])
+        ]
+        return max(f1_scores) if len(f1_scores) > 0 else 0.0
+
+    def _calculate_strict_gs_column_r_table_f1_score(
+        self,
+        gs_column_index: int,
+        gs_table: list[list[str]],
+        r_table: list[list[str]],
+    ) -> float:
+        """Calculates the maximum F1-Score for the combination of a gold average column and result table"""
+        f1_scores = [
+            self._calculate_gs_r_column_f1_score(
+                gs_column_index, gs_table, r_column_index, r_table
+            )
             for r_column_index in range(len(r_table[0]) if len(r_table) > 0 else 0)
             if any([self._consider_value(r_row[r_column_index]) for r_row in r_table])
         ]

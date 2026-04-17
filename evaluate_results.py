@@ -28,7 +28,7 @@ write_averages_per_strategy = True
 write_all_results = True
 
 split_by_datatype = None  # "string"  # "number"
-evaluation = F1Score(split_by_datatype=split_by_datatype)
+evaluation = F1Score(strict_score=True, split_by_datatype=split_by_datatype)
 # evaluation = SparsityEvaluation()
 # evaluation = NumberOfTablesEvaluation()
 

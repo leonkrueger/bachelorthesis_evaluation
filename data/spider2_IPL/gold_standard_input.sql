@@ -1,0 +1,156 @@
+CREATE TABLE `player`
+(`player_id` BIGINT,
+`player_name` VARCHAR(1023),
+`dob` DATE,
+`batting_hand` VARCHAR(1023),
+`bowling_skill` VARCHAR(1023),
+`country_name` VARCHAR(1023));
+INSERT INTO `player` VALUES(195,'Mashrafe Mortaza','1983-10-05','Right-hand bat','Right-arm fast-medium','Bangladesh');
+INSERT INTO `player` VALUES(11,'MV Boucher','1976-12-03','Right-hand bat','Right-arm medium','South Africa');
+INSERT INTO `player` VALUES(466,'P Dharmani','1974-09-27','Right-hand bat','Right-arm medium','India');
+INSERT INTO `player` VALUES(53,'AC Gilchrist','1971-11-14','Left-hand bat','Right-arm offbreak','Australia');
+INSERT INTO `player` VALUES(310,'JP Faulkner','1990-04-29','Right-hand bat','Left-arm fast-medium','Australia');
+INSERT INTO `player` VALUES(164,'R Bishnoi','1987-10-08','Right-hand bat','Right-arm medium-fast','India');
+INSERT INTO `player` VALUES(322,'P Negi','1993-01-06','Left-hand bat','Slow left-arm orthodox','India');
+INSERT INTO `player` VALUES(175,'DL Vettori','1979-01-27','Left-hand bat','Slow left-arm orthodox','New Zealand');
+INSERT INTO `player` VALUES(289,'AC Blizzard','1984-06-27','Left-hand bat','Left-arm medium','Australia');
+INSERT INTO `player` VALUES(436,'B Geeves','1982-06-13','Right-hand bat','Right-arm fast-medium','Australia');
+INSERT INTO `player` VALUES(3,'RT Ponting','1974-12-19','Right-hand bat','Right-arm medium','Australia');
+INSERT INTO `player` VALUES(130,'J Arunkumar','1975-01-18','Right-hand bat','Right-arm offbreak','India');
+CREATE TABLE `team`
+(`team_id` BIGINT,
+`name` VARCHAR(1023));
+INSERT INTO `team` VALUES(11,'Sunrisers Hyderabad');
+INSERT INTO `team` VALUES(10,'Pune Warriors');
+INSERT INTO `team` VALUES(5,'Rajasthan Royals');
+INSERT INTO `team` VALUES(7,'Mumbai Indians');
+INSERT INTO `team` VALUES(13,'Gujarat Lions');
+INSERT INTO `team` VALUES(9,'Kochi Tuskers Kerala');
+INSERT INTO `team` VALUES(2,'Royal Challengers Bangalore');
+INSERT INTO `team` VALUES(8,'Deccan Chargers');
+INSERT INTO `team` VALUES(6,'Delhi Daredevils');
+INSERT INTO `team` VALUES(4,'Kings XI Punjab');
+INSERT INTO `team` VALUES(3,'Chennai Super Kings');
+INSERT INTO `team` VALUES(12,'Rising Pune Supergiants');
+CREATE TABLE `match`
+(`match_id` BIGINT,
+`team_1` BIGINT,
+`team_2` BIGINT,
+`match_date` DATE,
+`season_id` BIGINT,
+`venue` VARCHAR(1023),
+`toss_winner` BIGINT,
+`toss_decision` VARCHAR(1023),
+`win_type` VARCHAR(1023),
+`win_margin` BIGINT,
+`outcome_type` VARCHAR(1023),
+`match_winner` BIGINT,
+`man_of_the_match` BIGINT);
+INSERT INTO `match` VALUES(598036,1,4,'2013-04-26',6,'Eden Gardens',4,'bat','wickets',6,'Result',1,9);
+INSERT INTO `match` VALUES(548371,4,8,'2012-05-13',5,'Punjab Cricket Association Stadium Mohali',8,'bat','wickets',4,'Result',4,4);
+INSERT INTO `match` VALUES(501247,9,1,'2011-05-05',4,'Nehru Stadium',1,'field','runs',17,'Result',9,104);
+INSERT INTO `match` VALUES(336030,1,3,'2008-05-18',1,'Eden Gardens',1,'bat','runs',3,'Result',3,122);
+INSERT INTO `match` VALUES(335993,8,6,'2008-04-22',1,'Rajiv Gandhi International Stadium Uppal',8,'bat','wickets',9,'Result',6,41);
+INSERT INTO `match` VALUES(733988,7,2,'2014-05-06',7,'Wankhede Stadium',2,'field','runs',19,'Result',7,57);
+INSERT INTO `match` VALUES(598026,11,4,'2013-04-19',6,'Rajiv Gandhi International Stadium Uppal',4,'bat','wickets',5,'Result',11,340);
+INSERT INTO `match` VALUES(829722,7,4,'2015-04-12',8,'Wankhede Stadium',7,'field','runs',18,'Result',4,197);
+INSERT INTO `match` VALUES(501266,3,9,'2011-05-18',4,'MA Chidambaram Stadium Chepauk',3,'bat','runs',11,'Result',3,62);
+INSERT INTO `match` VALUES(729310,5,2,'2014-04-26',7,'Sheikh Zayed Stadium',5,'field','wickets',6,'Result',5,370);
+INSERT INTO `match` VALUES(392222,3,5,'2009-05-09',2,'De Beers Diamond Oval',5,'bat','wickets',7,'Result',3,23);
+INSERT INTO `match` VALUES(336005,5,1,'2008-05-01',1,'Sawai Mansingh Stadium',5,'bat','runs',45,'Result',5,101);
+CREATE TABLE `player_match`
+(`match_id` BIGINT,
+`player_id` BIGINT,
+`role` VARCHAR(1023),
+`team_id` BIGINT);
+INSERT INTO `player_match` VALUES(419124,133,'Captain',7);
+INSERT INTO `player_match` VALUES(419125,199,'Player',6);
+INSERT INTO `player_match` VALUES(419141,214,'Player',4);
+INSERT INTO `player_match` VALUES(501233,248,'Player',3);
+INSERT INTO `player_match` VALUES(729310,114,'Player',2);
+INSERT INTO `player_match` VALUES(980906,57,'Captain',7);
+INSERT INTO `player_match` VALUES(729296,83,'Player',4);
+INSERT INTO `player_match` VALUES(733990,88,'Keeper',6);
+INSERT INTO `player_match` VALUES(501211,20,'CaptainKeeper',3);
+INSERT INTO `player_match` VALUES(392227,80,'Player',7);
+INSERT INTO `player_match` VALUES(419163,162,'Player',1);
+INSERT INTO `player_match` VALUES(829790,270,'Player',2);
+CREATE TABLE `ball_by_ball`
+(`match_id` BIGINT,
+`over_id` BIGINT,
+`ball_id` BIGINT,
+`innings_no` BIGINT,
+`team_batting` BIGINT,
+`team_bowling` BIGINT,
+`striker_batting_position` BIGINT,
+`striker` BIGINT,
+`non_striker` BIGINT,
+`bowler` BIGINT);
+INSERT INTO `ball_by_ball` VALUES(501228,5,1,1,6,4,2,41,187,14);
+INSERT INTO `ball_by_ball` VALUES(734002,6,5,2,1,4,1,46,40,374);
+INSERT INTO `ball_by_ball` VALUES(392205,16,5,2,7,4,4,154,48,29);
+INSERT INTO `ball_by_ball` VALUES(392221,11,2,2,4,8,6,29,64,61);
+INSERT INTO `ball_by_ball` VALUES(734014,16,7,1,7,1,5,372,57,190);
+INSERT INTO `ball_by_ball` VALUES(598017,1,6,2,3,2,1,19,185,349);
+INSERT INTO `ball_by_ball` VALUES(392238,2,1,2,1,5,1,2,104,196);
+INSERT INTO `ball_by_ball` VALUES(548325,13,1,1,5,1,4,132,204,315);
+INSERT INTO `ball_by_ball` VALUES(336008,2,5,1,4,1,2,25,100,82);
+INSERT INTO `ball_by_ball` VALUES(734022,17,3,1,7,5,4,57,221,309);
+INSERT INTO `ball_by_ball` VALUES(419165,14,5,1,8,6,6,253,56,223);
+INSERT INTO `ball_by_ball` VALUES(548367,7,6,1,2,10,1,162,135,191);
+CREATE TABLE `batsman_scored`
+(`match_id` BIGINT,
+`over_id` BIGINT,
+`ball_id` BIGINT,
+`runs_scored` BIGINT,
+`innings_no` BIGINT);
+INSERT INTO `batsman_scored` VALUES(598016,20,3,1,1);
+INSERT INTO `batsman_scored` VALUES(729296,9,3,0,2);
+INSERT INTO `batsman_scored` VALUES(829780,12,4,0,1);
+INSERT INTO `batsman_scored` VALUES(335992,8,5,4,1);
+INSERT INTO `batsman_scored` VALUES(598060,6,1,0,1);
+INSERT INTO `batsman_scored` VALUES(419147,8,1,4,2);
+INSERT INTO `batsman_scored` VALUES(548330,8,6,0,1);
+INSERT INTO `batsman_scored` VALUES(548353,15,6,2,2);
+INSERT INTO `batsman_scored` VALUES(392243,10,6,0,2);
+INSERT INTO `batsman_scored` VALUES(598031,2,2,1,1);
+INSERT INTO `batsman_scored` VALUES(392231,15,2,1,2);
+INSERT INTO `batsman_scored` VALUES(729314,6,4,0,2);
+CREATE TABLE `wicket_taken`
+(`match_id` BIGINT,
+`over_id` BIGINT,
+`ball_id` BIGINT,
+`player_out` BIGINT,
+`kind_out` VARCHAR(1023),
+`innings_no` BIGINT);
+INSERT INTO `wicket_taken` VALUES(548356,12,6,133,'caught',1);
+INSERT INTO `wicket_taken` VALUES(501249,11,6,67,'bowled',2);
+INSERT INTO `wicket_taken` VALUES(734036,17,3,207,'caught',1);
+INSERT INTO `wicket_taken` VALUES(501229,8,4,10,'run out',2);
+INSERT INTO `wicket_taken` VALUES(548313,2,1,208,'caught',2);
+INSERT INTO `wicket_taken` VALUES(336018,13,5,100,'caught',2);
+INSERT INTO `wicket_taken` VALUES(419162,17,1,210,'lbw',1);
+INSERT INTO `wicket_taken` VALUES(335993,8,6,54,'caught',1);
+INSERT INTO `wicket_taken` VALUES(548337,20,6,204,'caught',1);
+INSERT INTO `wicket_taken` VALUES(419136,5,2,87,'bowled',2);
+INSERT INTO `wicket_taken` VALUES(419158,1,4,18,'bowled',2);
+INSERT INTO `wicket_taken` VALUES(501253,8,4,167,'caught',1);
+CREATE TABLE `extra_runs`
+(`match_id` BIGINT,
+`over_id` BIGINT,
+`ball_id` BIGINT,
+`extra_type` VARCHAR(1023),
+`extra_runs` BIGINT,
+`innings_no` BIGINT);
+INSERT INTO `extra_runs` VALUES(598052,1,6,'wides',1,2);
+INSERT INTO `extra_runs` VALUES(729294,20,1,'wides',1,1);
+INSERT INTO `extra_runs` VALUES(419113,3,4,'legbyes',1,1);
+INSERT INTO `extra_runs` VALUES(548316,11,1,'wides',1,1);
+INSERT INTO `extra_runs` VALUES(548362,14,4,'legbyes',1,2);
+INSERT INTO `extra_runs` VALUES(829798,12,3,'legbyes',1,1);
+INSERT INTO `extra_runs` VALUES(501256,10,6,'wides',5,1);
+INSERT INTO `extra_runs` VALUES(392223,3,3,'wides',1,1);
+INSERT INTO `extra_runs` VALUES(419144,12,2,'legbyes',1,1);
+INSERT INTO `extra_runs` VALUES(419159,8,2,'noballs',1,1);
+INSERT INTO `extra_runs` VALUES(419132,5,3,'wides',1,1);
+INSERT INTO `extra_runs` VALUES(419167,7,2,'wides',1,2);

@@ -616,5 +616,386 @@
             "PlayerTryouts",
             "Players_Tryout"
         ]
+    },
+    "Airlines": {
+        "aircrafts_data": [
+            "Aircraft",
+            "Aircraft_Models",
+            "Aircraft_Info"
+        ],
+        "airports_data": [
+            "airports",
+            "Airports"
+        ],
+        "boarding_passes": [
+            "Passenger_Boarding",
+            "FlightBoardingDetails"
+        ],
+        "bookings": [
+            "Reservations",
+            "Bookings"
+        ],
+        "flights": [
+            "Airlines_Flights",
+            "Flight_Schedule",
+            "Flights"
+        ],
+        "seats": [
+            "Flights_Seats",
+            "Flight_Seats",
+            "Airlines_Seats"
+        ],
+        "ticket_flights": [
+            "Ticket_Flight_Reservations",
+            "Flight_Tickets"
+        ],
+        "tickets": [
+            "FlightBookings",
+            "Ticket_Bookings"
+        ]
+    },
+    "California_Traffic_Collision": {
+        "victims": [
+            "Accidents",
+            "Crash_Victims"
+        ],
+        "collisions": [
+            "Crashes",
+            "Accidents"
+        ],
+        "case_ids": [
+            "Case_Records"
+        ],
+        "parties": [
+            "Accident_Victims",
+            "Accidents"
+        ]
+    },
+    "Db-IMDB": {
+        "Movie": [
+            "Films"
+        ],
+        "Genre": [
+            "Genre_Movies",
+            "Movie_Genres"
+        ],
+        "Language": [
+            "Languages"
+        ],
+        "Country": [
+            "Countries"
+        ],
+        "Location": [
+            "Locations"
+        ],
+        "M_Location": [
+            "Location_Info",
+            "Locations"
+        ],
+        "M_Country": [
+            "Movie_Country"
+        ],
+        "M_Language": [
+            "Movie_Language"
+        ],
+        "M_Genre": [
+            "Movie_Genres"
+        ],
+        "Person": [
+            "Users",
+            "Individuals",
+            "Customers"
+        ],
+        "M_Producer": [
+            "Movie_Producers",
+            "Producers",
+            "Producer_Info"
+        ],
+        "M_Director": [
+            "Movie_Directors"
+        ],
+        "M_Cast": [
+            "Movie_Cast"
+        ]
+    },
+    "EntertainmentAgency": {
+        "Agents": [
+            "AgentsInformation"
+        ],
+        "Customers": [
+            "CustomersData",
+            "CustomerInformation"
+        ],
+        "Entertainer_Members": [
+            "Entertainer_Roster",
+            "Entertainer_Member_Relationships"
+        ],
+        "Entertainer_Styles": [
+            "Entertainer_Style_Ratings",
+            "Entertainer_Skills"
+        ],
+        "Entertainers": [
+            "Performers"
+        ],
+        "Members": [
+            "Subscribers",
+            "Customers"
+        ],
+        "Musical_Preferences": [
+            "Customer_Music_Preferences",
+            "Customer_Musical_Preferences"
+        ],
+        "Musical_Styles": [
+            "Music_Genres",
+            "MusicalStyles"
+        ],
+        "ztblDays": [
+            "DateHistory",
+            "Date_Log",
+            "Dates"
+        ],
+        "ztblMonths": [
+            "MonthlyCalendar",
+            "MonthDetails",
+            "CalendarData"
+        ],
+        "ztblSkipLabels": [
+            "LabelCounts",
+            "SkipLabelCounts"
+        ],
+        "ztblWeeks": [
+            "CalendarWeeks",
+            "WeeklyDates"
+        ]
+    },
+    "EU_soccer": {
+        "Player_Attributes": [
+            "Players",
+            "Player_Stats",
+            "Player_Statistics"
+        ],
+        "Player": [
+            "Players"
+        ],
+        "Match": [
+            "MatchDetails",
+            "Match Details"
+        ],
+        "League": [
+            "Leagues",
+            "FootballLeagues"
+        ],
+        "Country": [
+            "Countries"
+        ],
+        "Team": [
+            "Teams"
+        ],
+        "Team_Attributes": [
+            "Team_Stats",
+            "TeamStatistics"
+        ]
+    },
+    "imdb_movies": {
+        "ERD": [
+            "Movie_Directors",
+            "Directors",
+            "Directors_Movies"
+        ],
+        "movies": [
+            "Films",
+            "FilmDatabase",
+            "Filmography"
+        ],
+        "genre": [
+            "Movie_Genres"
+        ],
+        "director_mapping": [
+            "Movie_Directors",
+            "movie_directors"
+        ],
+        "role_mapping": [
+            "Movie_Cast"
+        ],
+        "names": [
+            "people"
+        ],
+        "ratings": [
+            "MovieRatings",
+            "Movie_Ratings"
+        ]
+    },
+    "IPL": {
+        "player": [
+            "Cricketers",
+            "cricketers"
+        ],
+        "team": [
+            "ipl_teams"
+        ],
+        "match": [
+            "cricket_matches",
+            "Cricket Matches",
+            "Cricketscores"
+        ],
+        "player_match": [
+            "Match_Players"
+        ],
+        "ball_by_ball": [
+            "Crickinfo",
+            "MatchBallDetails",
+            "Cricket_Ball_By_Ball"
+        ],
+        "batsman_scored": [
+            "Match_Batting_Record",
+            "BatsmanStats",
+            "Match_Batting_Statistics"
+        ],
+        "wicket_taken": [
+            "Wickets"
+        ],
+        "extra_runs": [
+            "MatchExtras",
+            "CricketExtras"
+        ]
+    },
+    "Pagila": {
+        "actor": [
+            "Actors"
+        ],
+        "country": [
+            "Countries",
+            "GeoLocations",
+            "countries"
+        ],
+        "city": [
+            "Locations"
+        ],
+        "address": [
+            "Locations",
+            "addresses"
+        ],
+        "language": [
+            "Languages"
+        ],
+        "category": [
+            "Categories"
+        ],
+        "customer": [
+            "Customers",
+            "customers"
+        ],
+        "film": [
+            "Movies",
+            "Films"
+        ],
+        "film_actor": [
+            "Film_Actor_Connections",
+            "Film_Actor_Link",
+            "Film_Actor_Join"
+        ],
+        "film_category": [
+            "Film_Category_Mappings",
+            "Film_Categories"
+        ],
+        "inventory": [
+            "FilmInventory",
+            "FilmStock"
+        ],
+        "staff": [
+            "StaffMembers",
+            "staff_members"
+        ],
+        "store": [
+            "Stores"
+        ],
+        "payment": [
+            "Rentals_Payments",
+            "RentalsPayments"
+        ],
+        "rental": [
+            "Rental_History",
+            "Rentals"
+        ]
+    },
+    "school_scheduling": {
+        "Buildings": [
+            "CampusBuildings",
+            "CampusStructures"
+        ],
+        "Categories": [
+            "Departments_Categories"
+        ],
+        "Class_Rooms": [
+            "Classrooms",
+            "Classroom_Info"
+        ],
+        "Classes": [
+            "CourseSchedule",
+            "Schedules"
+        ],
+        "Faculty": [
+            "AcademicStaff"
+        ],
+        "Faculty_Categories": [
+            "Staff_Faculty_Categories",
+            "Faculty_Assignments"
+        ],
+        "Faculty_Classes": [
+            "Faculty_Staff_Classification",
+            "Staff_Classifications",
+            "FacultyAssignments"
+        ],
+        "Faculty_Subjects": [
+            "Faculty_Expertise",
+            "Staff_Course_Assessment"
+        ],
+        "Majors": [
+            "Departments"
+        ],
+        "Staff": [
+            "Employees"
+        ],
+        "Student_Schedules": [
+            "Student_Class_Grades",
+            "Student_Grades"
+        ],
+        "Students": [
+            "Student_Information",
+            "StudentInformation"
+        ],
+        "Subjects": [
+            "Courses"
+        ]
+    },
+    "stacking": {
+        "problem": [
+            "ChemicalProperties",
+            "Chemistry_Data"
+        ],
+        "eda": [
+            "Features"
+        ],
+        "feature_importance": [
+            "Feature_Importance_Ranking",
+            "Model_Evaluation",
+            "MachineLearningFeatures"
+        ],
+        "solution": [
+            "Predictions",
+            "ModelPerformanceMetrics"
+        ],
+        "model_score": [
+            "model_performance",
+            "model_scores"
+        ],
+        "model_importance": [
+            "Model_Importance"
+        ],
+        "model": [
+            "Models",
+            "models",
+            "MachineLearningModels"
+        ]
     }
 }

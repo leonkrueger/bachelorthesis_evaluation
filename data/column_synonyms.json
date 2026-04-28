@@ -6367,5 +6367,3355 @@
                 "Outcome"
             ]
         }
+    },
+    "Airlines": {
+        "aircrafts_data": {
+            "aircraft_code": [
+                "aircraft_id",
+                "aircraft_type"
+            ],
+            "model": [
+                "aircraft_model"
+            ],
+            "range": [
+                "FlightDistance",
+                "Range_Length",
+                "distance"
+            ]
+        },
+        "airports_data": {
+            "airport_code": [
+                "airport_identification",
+                "IATA",
+                "iata_code"
+            ],
+            "airport_name": [
+                "aeroport_name",
+                "airports_info",
+                "airports"
+            ],
+            "city": [
+                "metropolis",
+                "Location",
+                "location"
+            ],
+            "coordinates": [
+                "geolocation"
+            ],
+            "timezone": [
+                "time_zone",
+                "UTC_Offset"
+            ]
+        },
+        "boarding_passes": {
+            "ticket_no": [
+                "travel_id",
+                "PassengerID",
+                "flight_id"
+            ],
+            "flight_id": [
+                "flight_key",
+                "flight_number",
+                "airline_id"
+            ],
+            "boarding_no": [
+                "boarding_sequence"
+            ],
+            "seat_no": [
+                "SeatPosition",
+                "seat_position"
+            ]
+        },
+        "bookings": {
+            "book_ref": [
+                "booking_id"
+            ],
+            "book_date": [
+                "date_of_booking",
+                "reservation_date"
+            ],
+            "total_amount": [
+                "amount_total",
+                "total_cost",
+                "grand_total"
+            ]
+        },
+        "flights": {
+            "flight_id": [
+                "flight_key"
+            ],
+            "flight_no": [
+                "FlightNumber",
+                "aircraft_identifier"
+            ],
+            "scheduled_departure": [
+                "Departure_Time"
+            ],
+            "scheduled_arrival": [
+                "Estimated_Arrival_Time",
+                "ETA",
+                "estimated_arrival"
+            ],
+            "departure_airport": [
+                "Origin"
+            ],
+            "arrival_airport": [
+                "destination_airport"
+            ],
+            "status": [
+                "FlightCondition"
+            ],
+            "aircraft_code": [
+                "airplane_id",
+                "aircraft_type"
+            ],
+            "actual_departure": [
+                "actual_departure_time",
+                "departure_time",
+                "actual_takeoff"
+            ],
+            "actual_arrival": [
+                "actual_landing",
+                "arrival_time"
+            ]
+        },
+        "seats": {
+            "aircraft_code": [
+                "aircraft_id",
+                "aircraft_identifier"
+            ],
+            "seat_no": [
+                "seat_id",
+                "seat_position",
+                "seat_identifier"
+            ],
+            "fare_conditions": [
+                "Class",
+                "class"
+            ]
+        },
+        "ticket_flights": {
+            "ticket_no": [
+                "flight_id",
+                "ticket_identifier",
+                "flight_key"
+            ],
+            "flight_id": [
+                "flight_number",
+                "flight_key"
+            ],
+            "fare_conditions": [
+                "TravelClass",
+                "travel_class",
+                "class"
+            ],
+            "amount": [
+                "price"
+            ]
+        },
+        "tickets": {
+            "ticket_no": [
+                "ticket_id"
+            ],
+            "book_ref": [
+                "booking_id",
+                "reference_id",
+                "ticket_code"
+            ],
+            "passenger_id": [
+                "traveler_id"
+            ]
+        }
+    },
+    "California_Traffic_Collision": {
+        "victims": {
+            "id": [
+                "victim_key",
+                "victims_id",
+                "victim_id"
+            ],
+            "case_id": [
+                "Accident_Reference",
+                "incident_number",
+                "accident_number"
+            ],
+            "party_number": [
+                "PartyID",
+                "party_id"
+            ],
+            "victim_role": [
+                "Passenger_Type"
+            ],
+            "victim_sex": [
+                "gender",
+                "Gender"
+            ],
+            "victim_age": [
+                "Age"
+            ],
+            "victim_degree_of_injury": [
+                "Injury_Level",
+                "injury_level"
+            ],
+            "victim_seating_position": [
+                "seat_location",
+                "seating_location"
+            ],
+            "victim_safety_equipment_1": [
+                "safety_restraints",
+                "restraint_system"
+            ],
+            "victim_safety_equipment_2": [
+                "safety_equipment_two",
+                "seatbelt",
+                "safety_equipment"
+            ],
+            "victim_ejected": [
+                "ejection_status"
+            ]
+        },
+        "collisions": {
+            "case_id": [
+                "incident_id",
+                "CaseNumber"
+            ],
+            "jurisdiction": [
+                "Area",
+                "GeographicRegion"
+            ],
+            "officer_id": [
+                "officer_identifier"
+            ],
+            "reporting_district": [
+                "district",
+                "Area",
+                "Reporting_Jurisdiction"
+            ],
+            "chp_shift": [
+                "offduty_shift",
+                "Shift",
+                "offduty"
+            ],
+            "population": [
+                "demographics",
+                "Demographics",
+                "Community"
+            ],
+            "county_city_location": [
+                "Location",
+                "location"
+            ],
+            "county_location": [
+                "Area",
+                "jurisdiction_location"
+            ],
+            "special_condition": [
+                "circumstances",
+                "situation"
+            ],
+            "beat_type": [
+                "beat",
+                "police_sector"
+            ],
+            "chp_beat_type": [
+                "BeatNumber",
+                "beat_subtype",
+                "Beat_Unit"
+            ],
+            "city_division_lapd": [
+                "Area",
+                "lapd_division"
+            ],
+            "chp_beat_class": [
+                "Beat_Classification",
+                "Area",
+                "Beat"
+            ],
+            "beat_number": [
+                "Sector",
+                "SectorNumber"
+            ],
+            "primary_road": [
+                "Main_Street",
+                "Highway"
+            ],
+            "secondary_road": [
+                "AuxiliaryRoad",
+                "AltRoad"
+            ],
+            "distance": [
+                "Distance_From"
+            ],
+            "direction": [
+                "heading"
+            ],
+            "intersection": [
+                "Crossing",
+                "CROSSING"
+            ],
+            "weather_1": [
+                "weather"
+            ],
+            "weather_2": [
+                "weather"
+            ],
+            "state_highway_indicator": [
+                "highway_indicator",
+                "roadway_type"
+            ],
+            "caltrans_county": [
+                "Region",
+                "County",
+                "County_Name"
+            ],
+            "caltrans_district": [
+                "Regional_District",
+                "Area"
+            ],
+            "state_route": [
+                "Highway"
+            ],
+            "route_suffix": [
+                "HighwaySuffix",
+                "HighwaySegment"
+            ],
+            "postmile_prefix": [
+                "km",
+                "route_id",
+                "Milepost"
+            ],
+            "postmile": [
+                "kilometer",
+                "Mileage"
+            ],
+            "location_type": [
+                "Address",
+                "location_area",
+                "location_site"
+            ],
+            "ramp_intersection": [
+                "intersection_point",
+                "ramp_exit",
+                "exit_ramp"
+            ],
+            "side_of_highway": [
+                "roadway",
+                "Lane"
+            ],
+            "tow_away": [
+                "removal",
+                "recovery"
+            ],
+            "collision_severity": [
+                "Severity",
+                "Impact",
+                "incident_severity"
+            ],
+            "killed_victims": [
+                "Fatalities",
+                "casualties",
+                "fatalities"
+            ],
+            "injured_victims": [
+                "Hurt",
+                "casualties",
+                "hurt"
+            ],
+            "party_count": [
+                "party_counts",
+                "party_size"
+            ],
+            "primary_collision_factor": [
+                "collision_cause",
+                "Crash_Factor"
+            ],
+            "pcf_violation_code": [
+                "offense_code"
+            ],
+            "pcf_violation_category": [
+                "offense_category",
+                "offense_type",
+                "Offense"
+            ],
+            "pcf_violation": [
+                "Traffic_Infraction",
+                "offense_code",
+                "violation_code"
+            ],
+            "pcf_violation_subsection": [
+                "offense",
+                "violation_subcategory"
+            ],
+            "hit_and_run": [
+                "hit_and_run_involvement",
+                "Fleeing"
+            ],
+            "type_of_collision": [
+                "incident_type",
+                "Impact",
+                "crash_type"
+            ],
+            "motor_vehicle_involved_with": [
+                "involved_with",
+                "Involved_Vehicles",
+                "involved_vehicle"
+            ],
+            "pedestrian_action": [
+                "pedestrian_activities",
+                "pedestrian_activity"
+            ],
+            "road_surface": [
+                "surface_type",
+                "pavement",
+                "Surfacing"
+            ],
+            "road_condition_1": [
+                "surfacetype",
+                "surface_condition"
+            ],
+            "road_condition_2": [
+                "road_surface_condition",
+                "surface_state",
+                "surfacetype"
+            ],
+            "lighting": [
+                "illuminance",
+                "illumination"
+            ],
+            "control_device": [
+                "steering_device",
+                "Braking",
+                "brake_system"
+            ],
+            "chp_road_type": [
+                "roadway_type",
+                "road_type",
+                "highway_type"
+            ],
+            "pedestrian_collision": [
+                "pedestrian_impact",
+                "pedestrian_victim"
+            ],
+            "bicycle_collision": [
+                "Accident",
+                "bike_crash",
+                "Crash"
+            ],
+            "motorcycle_collision": [
+                "Crash",
+                "crash",
+                "motor_vehicle_involved"
+            ],
+            "truck_collision": [
+                "accident",
+                "Accident"
+            ],
+            "not_private_property": [
+                "property_damage",
+                "Private_Property_Status",
+                "ownership"
+            ],
+            "alcohol_involved": [
+                "drunk_involved",
+                "BeverageInvolved"
+            ],
+            "statewide_vehicle_type_at_fault": [
+                "vehicle_at_fault"
+            ],
+            "chp_vehicle_type_at_fault": [
+                "involved_vehicle_type_at_fault",
+                "VehicleTypeAtFault",
+                "Vehicle_Type_Involved"
+            ],
+            "severe_injury_count": [
+                "hurt_count",
+                "injury_severity_count",
+                "casualty_count"
+            ],
+            "other_visible_injury_count": [
+                "Injury_Count",
+                "injury_count",
+                "other_injuries"
+            ],
+            "complaint_of_pain_injury_count": [
+                "pain_injuries",
+                "injuries_reported",
+                "pain_injury_count"
+            ],
+            "pedestrian_killed_count": [
+                "Fatalities",
+                "victims_killed",
+                "pedestrian_fatalities"
+            ],
+            "pedestrian_injured_count": [
+                "pedestrian_hurt_count",
+                "pedestrian_injuries"
+            ],
+            "bicyclist_killed_count": [
+                "cyclist_fatalities",
+                "biker_fatality_count",
+                "bicycle_fatalities"
+            ],
+            "bicyclist_injured_count": [
+                "bicyclist_injuries",
+                "bicyclist_hurt_count",
+                "injuries"
+            ],
+            "motorcyclist_killed_count": [
+                "motorcyclist_fatalities",
+                "motorist_fatalities"
+            ],
+            "motorcyclist_injured_count": [
+                "motorcyclist_hurt",
+                "motorcyclist_hurt_count",
+                "motorist_injured_count"
+            ],
+            "primary_ramp": [
+                "Exit",
+                "exit_ramp"
+            ],
+            "secondary_ramp": [
+                "exit_ramp",
+                "ramp_exit"
+            ],
+            "latitude": [
+                "geographic_position",
+                "Geolocation",
+                "GeoCoordinate"
+            ],
+            "longitude": [
+                "geographic_position",
+                "Easting",
+                "GeoCoordinate"
+            ],
+            "collision_date": [
+                "IncidentDate",
+                "incident_timestamp"
+            ],
+            "collision_time": [
+                "incident_timestamp",
+                "incident_time"
+            ],
+            "process_date": [
+                "incident_date",
+                "incident_timestamp"
+            ]
+        },
+        "case_ids": {
+            "case_id": [
+                "case_number"
+            ],
+            "db_year": [
+                "calendar_year",
+                "year_of_occurrence"
+            ]
+        },
+        "parties": {
+            "id": [
+                "party_id",
+                "PartyID"
+            ],
+            "case_id": [
+                "party_key",
+                "party_identifier"
+            ],
+            "party_number": [
+                "Party_ID",
+                "PartyID"
+            ],
+            "party_type": [
+                "PartyRole",
+                "party_role"
+            ],
+            "at_fault": [
+                "Guilty",
+                "Faulty"
+            ],
+            "party_sex": [
+                "Gender",
+                "Sex"
+            ],
+            "party_age": [
+                "Age"
+            ],
+            "party_sobriety": [
+                "BAC",
+                "alleged_sobriety",
+                "BloodAlcLevel"
+            ],
+            "party_drug_physical": [
+                "injury_status",
+                "physical_condition"
+            ],
+            "direction_of_travel": [
+                "travel_direction",
+                "Direction",
+                "heading"
+            ],
+            "party_safety_equipment_1": [
+                "seatbelt",
+                "safety_equipment"
+            ],
+            "party_safety_equipment_2": [
+                "safety_equipment"
+            ],
+            "financial_responsibility": [
+                "financial_liability",
+                "Financial_Obligation"
+            ],
+            "hazardous_materials": [
+                "hazmat",
+                "toxic_substances"
+            ],
+            "cellphone_in_use": [
+                "Phone_In_Use",
+                "mobile_device_in_use"
+            ],
+            "cellphone_use_type": [
+                "mobile_device_usage"
+            ],
+            "school_bus_related": [
+                "School_Vehicle_Related",
+                "school_bus_involved"
+            ],
+            "oaf_violation_code": [
+                "violation_code",
+                "offense_code"
+            ],
+            "oaf_violation_category": [
+                "Faulty_Violation_Type",
+                "violation_type",
+                "Party_Violation_Type"
+            ],
+            "oaf_violation_section": [
+                "Offense",
+                "penalty_section",
+                "offense"
+            ],
+            "oaf_violation_suffix": [
+                "penalty_suffix",
+                "violation_description",
+                "violationsuffix"
+            ],
+            "other_associate_factor_1": [
+                "Associate_Factor_1",
+                "Additional_Circumstances",
+                "Associate_Factor"
+            ],
+            "other_associate_factor_2": [
+                "associated_factor",
+                "associated_factor_2"
+            ],
+            "party_number_killed": [
+                "party_fatalities",
+                "Fatalities"
+            ],
+            "party_number_injured": [
+                "injured_count",
+                "party_injured_count",
+                "Injured"
+            ],
+            "movement_preceding_collision": [
+                "preceding_movement"
+            ],
+            "vehicle_year": [
+                "Year_of_Vehicle",
+                "model_year",
+                "AgeOfVehicle"
+            ],
+            "vehicle_make": [
+                "Manufacturer"
+            ],
+            "statewide_vehicle_type": [
+                "vehicle_class",
+                "veh_type"
+            ],
+            "chp_vehicle_type_towing": [
+                "vessel_type",
+                "vtype",
+                "Vehicle_Type"
+            ],
+            "chp_vehicle_type_towed": [
+                "VehicleType",
+                "VehType"
+            ],
+            "party_race": [
+                "Ethnicity"
+            ]
+        }
+    },
+    "Db-IMDB": {
+        "Movie": {
+            "index": [
+                "movie_id",
+                "id"
+            ],
+            "MID": [
+                "movie_id",
+                "MovieID"
+            ],
+            "title": [
+                "MovieTitle",
+                "MovieName"
+            ],
+            "year": [
+                "ReleaseYear"
+            ],
+            "rating": [
+                "score"
+            ],
+            "num_votes": [
+                "popularity"
+            ]
+        },
+        "Genre": {
+            "index": [
+                "ID"
+            ],
+            "Name": [
+                "Label",
+                "GenreID"
+            ],
+            "GID": [
+                "GenreID",
+                "GenreId"
+            ]
+        },
+        "Language": {
+            "index": [
+                "LanguageID",
+                "ID"
+            ],
+            "Name": [
+                "LanguageName",
+                "LanguageID"
+            ],
+            "LAID": [
+                "LanguageID"
+            ]
+        },
+        "Country": {
+            "index": [
+                "ID",
+                "id"
+            ],
+            "Name": [
+                "Nation",
+                "CountryName",
+                "CountryID"
+            ],
+            "CID": [
+                "Country_ID",
+                "CountryID"
+            ]
+        },
+        "Location": {
+            "index": [
+                "location_id",
+                "LocationID"
+            ],
+            "Name": [
+                "LocationID",
+                "Location"
+            ],
+            "LID": [
+                "LocationID"
+            ]
+        },
+        "M_Location": {
+            "index": [
+                "Loc_ID",
+                "location_id",
+                "Loc_Key"
+            ],
+            "MID": [
+                "LocationID",
+                "location_id"
+            ],
+            "LID": [
+                "LocationID",
+                "LocationId"
+            ],
+            "ID": [
+                "Location_Key",
+                "LocationID",
+                "location_key"
+            ]
+        },
+        "M_Country": {
+            "index": [
+                "country_id",
+                "Country_ID",
+                "CountryID"
+            ],
+            "MID": [
+                "CountryID",
+                "Country_ID"
+            ],
+            "CID": [
+                "CountryID"
+            ],
+            "ID": [
+                "CountryID",
+                "Country_ReferenceID"
+            ]
+        },
+        "M_Language": {
+            "index": [
+                "LanguageID",
+                "lang_id"
+            ],
+            "MID": [
+                "MovieID"
+            ],
+            "LAID": [
+                "LanguageID"
+            ],
+            "ID": [
+                "Language_ID"
+            ]
+        },
+        "M_Genre": {
+            "index": [
+                "genre_id"
+            ],
+            "MID": [
+                "movie_id",
+                "MovieID"
+            ],
+            "GID": [
+                "GenreID",
+                "GenreId",
+                "genre_id"
+            ],
+            "ID": [
+                "GenreID",
+                "genre_id"
+            ]
+        },
+        "Person": {
+            "index": [
+                "PersonID",
+                "ID"
+            ],
+            "PID": [
+                "person_id",
+                "PersonID"
+            ],
+            "Name": [
+                "Fullname"
+            ],
+            "Gender": [
+                "SexualIdentity",
+                "Sex",
+                "SexualOrientation"
+            ]
+        },
+        "M_Producer": {
+            "index": [
+                "prod_id",
+                "producer_id",
+                "ProducerID"
+            ],
+            "MID": [
+                "MovieID"
+            ],
+            "PID": [
+                "ProducerID"
+            ],
+            "ID": [
+                "ProducerID",
+                "ProducerKey"
+            ]
+        },
+        "M_Director": {
+            "index": [
+                "director_id",
+                "Director_ID"
+            ],
+            "MID": [
+                "MovieID",
+                "MovieId",
+                "movie_id"
+            ],
+            "PID": [
+                "Director_ID",
+                "PersonID"
+            ],
+            "ID": [
+                "director_id",
+                "DirectorID"
+            ]
+        },
+        "M_Cast": {
+            "index": [
+                "CastID",
+                "cast_id"
+            ],
+            "MID": [
+                "movie_id",
+                "MovieID"
+            ],
+            "PID": [
+                "PersonID"
+            ],
+            "ID": [
+                "CastID",
+                "cast_id"
+            ]
+        }
+    },
+    "EntertainmentAgency": {
+        "Agents": {
+            "AgentID": [
+                "AgentCode",
+                "AgentKey"
+            ],
+            "AgtFirstName": [
+                "FirstName"
+            ],
+            "AgtLastName": [
+                "Lastname",
+                "LastName"
+            ],
+            "AgtStreetAddress": [
+                "Address",
+                "AddressLine"
+            ],
+            "AgtCity": [
+                "Location",
+                "City"
+            ],
+            "AgtState": [
+                "Region",
+                "State"
+            ],
+            "AgtZipCode": [
+                "ZipCode",
+                "PostalCode"
+            ],
+            "AgtPhoneNumber": [
+                "PhoneNo",
+                "PhoneNumber"
+            ],
+            "DateHired": [
+                "EmploymentDate",
+                "HireDate"
+            ],
+            "Salary": [
+                "Income",
+                "Compensation"
+            ],
+            "CommissionRate": [
+                "CommissionPercentage"
+            ]
+        },
+        "Customers": {
+            "CustomerID": [
+                "Customer_ReferenceID",
+                "CustomerKey"
+            ],
+            "CustFirstName": [
+                "FirstName"
+            ],
+            "CustLastName": [
+                "Surname"
+            ],
+            "CustStreetAddress": [
+                "Street_Address",
+                "AddressLine",
+                "AddressLine1"
+            ],
+            "CustCity": [
+                "Location",
+                "Residence",
+                "Metropolis"
+            ],
+            "CustState": [
+                "Region"
+            ],
+            "CustZipCode": [
+                "PostalCode",
+                "Postcode"
+            ],
+            "CustPhoneNumber": [
+                "PhoneNumber",
+                "PhoneNo",
+                "Phone"
+            ]
+        },
+        "Engagements": {
+            "EngagementNumber": [
+                "EngagementID"
+            ],
+            "StartDate": [
+                "EngagementBeginning",
+                "EffectiveDate",
+                "EngagementBegin"
+            ],
+            "EndDate": [
+                "TerminationDate",
+                "FinishDate"
+            ],
+            "StartTime": [
+                "ScheduledTime",
+                "BeginTime",
+                "EventStart"
+            ],
+            "StopTime": [
+                "EndTime"
+            ],
+            "ContractPrice": [
+                "AgreedPrice",
+                "Cost"
+            ],
+            "CustomerID": [
+                "Customer_Reference",
+                "CustomerReference"
+            ],
+            "AgentID": [
+                "RepresentativeID",
+                "Sales_Representative_ID"
+            ],
+            "EntertainerID": [
+                "PerformerID",
+                "EntertainerCode"
+            ]
+        },
+        "Entertainer_Members": {
+            "EntertainerID": [
+                "ArtistID",
+                "PerformerID",
+                "Entertainer_ReferenceID"
+            ],
+            "MemberID": [
+                "EntertainerID",
+                "Entertainer_ReferenceID"
+            ],
+            "Status": [
+                "Role"
+            ]
+        },
+        "Entertainer_Styles": {
+            "EntertainerID": [
+                "ArtistID",
+                "PerformerID",
+                "EntertainerKey"
+            ],
+            "StyleID": [
+                "EntertainerStyleID",
+                "EntertainerType"
+            ],
+            "StyleStrength": [
+                "InfluenceLevel",
+                "PopularityRating",
+                "PopularityLevel"
+            ]
+        },
+        "Entertainers": {
+            "EntertainerID": [
+                "ArtistID",
+                "EntertainerCode"
+            ],
+            "EntStageName": [
+                "PerformerName",
+                "ArtistName"
+            ],
+            "EntSSN": [
+                "SocialSecurityNumber"
+            ],
+            "EntStreetAddress": [
+                "ResidentialAddress",
+                "EntAddress"
+            ],
+            "EntCity": [
+                "Location",
+                "EntLocation",
+                "EntMetropolis"
+            ],
+            "EntState": [
+                "Region"
+            ],
+            "EntZipCode": [
+                "EntPostCode",
+                "PostalCode",
+                "PostCode"
+            ],
+            "EntPhoneNumber": [
+                "Phone",
+                "EntContactNumber"
+            ],
+            "EntWebPage": [
+                "WebSite",
+                "WebLink",
+                "EntertainmentURL"
+            ],
+            "EntEMailAddress": [
+                "EmailAddress",
+                "Email"
+            ],
+            "DateEntered": [
+                "CreationDate"
+            ]
+        },
+        "Members": {
+            "MemberID": [
+                "UserID",
+                "MemberKey",
+                "UID"
+            ],
+            "MbrFirstName": [
+                "FirstName"
+            ],
+            "MbrLastName": [
+                "Lastname",
+                "Surname"
+            ],
+            "MbrPhoneNumber": [
+                "Phone"
+            ],
+            "Gender": [
+                "Sex",
+                "SexType"
+            ]
+        },
+        "Musical_Preferences": {
+            "CustomerID": [
+                "UID",
+                "User_ID",
+                "Customer_Reference"
+            ],
+            "StyleID": [
+                "MusicGenre",
+                "GenreID",
+                "MusicGenreID"
+            ],
+            "PreferenceSeq": [
+                "Priority",
+                "Rank"
+            ]
+        },
+        "Musical_Styles": {
+            "StyleID": [
+                "MusicType",
+                "StyleCode"
+            ],
+            "StyleName": [
+                "Genre"
+            ]
+        },
+        "ztblDays": {
+            "DateField": [
+                "Datestamp",
+                "DateStamp",
+                "DateCreated"
+            ]
+        },
+        "ztblMonths": {
+            "MonthYear": [
+                "MonthDate",
+                "DateRange",
+                "Date"
+            ],
+            "YearNumber": [
+                "YearID",
+                "Year_ID",
+                "Year"
+            ],
+            "MonthNumber": [
+                "MonthID"
+            ],
+            "MonthStart": [
+                "StartDate"
+            ],
+            "MonthEnd": [
+                "EndDate"
+            ],
+            "January": [
+                "MonthCount"
+            ],
+            "February": [
+                "FEBDATA",
+                "FEB"
+            ],
+            "March": [
+                "Quarter1",
+                "Spring"
+            ],
+            "April": [
+                "Month",
+                "MonthlyCount",
+                "MonthOfTheYear"
+            ],
+            "May": [
+                "April",
+                "June"
+            ],
+            "June": [
+                "MonthOfJune",
+                "Summer",
+                "Solstice"
+            ],
+            "July": [
+                "Solstice"
+            ],
+            "August": [
+                "Auguest",
+                "September",
+                "Festus"
+            ],
+            "September": [
+                "Autumn"
+            ],
+            "October": [
+                "Oct",
+                "MonthName"
+            ],
+            "November": [
+                "Novdat",
+                "Novm"
+            ],
+            "December": [
+                "MonthName",
+                "Wintertime"
+            ]
+        },
+        "ztblSkipLabels": {
+            "LabelCount": [
+                "LabelCountID",
+                "LabelID",
+                "LabelQuantity"
+            ]
+        },
+        "ztblWeeks": {
+            "WeekStart": [
+                "StartDate"
+            ],
+            "WeekEnd": [
+                "EndDate"
+            ]
+        }
+    },
+    "EU_soccer": {
+        "Player_Attributes": {
+            "id": [
+                "PlayerID",
+                "Player_ID"
+            ],
+            "player_fifa_api_id": [
+                "Player_Data",
+                "player_api_id",
+                "player_id"
+            ],
+            "player_api_id": [
+                "Player_ID",
+                "player_id",
+                "PlayerID"
+            ],
+            "date": [
+                "birth_date",
+                "Birthdate"
+            ],
+            "overall_rating": [
+                "Ratings"
+            ],
+            "potential": [
+                "Development",
+                "Prospects"
+            ],
+            "preferred_foot": [
+                "footing",
+                "FootPreference"
+            ],
+            "attacking_work_rate": [
+                "Effort"
+            ],
+            "defensive_work_rate": [
+                "efficiency",
+                "Effort"
+            ],
+            "crossing": [
+                "Aerials",
+                "Crossing"
+            ],
+            "finishing": [
+                "Goal",
+                "Goalkeeping"
+            ],
+            "heading_accuracy": [
+                "Header",
+                "AerialAbility"
+            ],
+            "short_passing": [
+                "pass_accuracy",
+                "Passing_Accuracy",
+                "Passe_Completion"
+            ],
+            "volleys": [
+                "Aerials"
+            ],
+            "dribbling": [
+                "Agility"
+            ],
+            "curve": [
+                "Bend"
+            ],
+            "free_kick_accuracy": [
+                "free_kick_effectiveness",
+                "free_kick_skill",
+                "FK_Accuracy"
+            ],
+            "long_passing": [
+                "Long_distribution",
+                "PassingAbility",
+                "Passing"
+            ],
+            "ball_control": [
+                "Tackling",
+                "Touch",
+                "Dribble"
+            ],
+            "acceleration": [
+                "Speed"
+            ],
+            "sprint_speed": [
+                "Velocity",
+                "speed",
+                "Speed"
+            ],
+            "agility": [
+                "Agilite",
+                "Agilitas"
+            ],
+            "reactions": [
+                "Responsiveness",
+                "Response"
+            ],
+            "balance": [
+                "Poise",
+                "Stability"
+            ],
+            "shot_power": [
+                "Powers",
+                "Power"
+            ],
+            "jumping": [
+                "Height",
+                "VerticalJump"
+            ],
+            "stamina": [
+                "Endurance"
+            ],
+            "strength": [
+                "Power"
+            ],
+            "long_shots": [
+                "power_shots",
+                "Power_Shots"
+            ],
+            "aggression": [
+                "Hostility",
+                "Tenacity"
+            ],
+            "interceptions": [
+                "block_clearances",
+                "Tackles"
+            ],
+            "positioning": [
+                "Position",
+                "pos",
+                "position"
+            ],
+            "vision": [
+                "insight",
+                "intuition"
+            ],
+            "penalties": [
+                "PK_Shots",
+                "PK",
+                "penalty_kick"
+            ],
+            "marking": [
+                "Defending",
+                "Tackling"
+            ],
+            "standing_tackle": [
+                "standing_defending"
+            ],
+            "sliding_tackle": [
+                "block_tackle",
+                "Tackle_Footwork"
+            ],
+            "gk_diving": [
+                "DivingAbility",
+                "goalkeeper_diving"
+            ],
+            "gk_handling": [
+                "goalkeeping_handling"
+            ],
+            "gk_kicking": [
+                "Kickability",
+                "Kick",
+                "goalkeeper_kicking"
+            ],
+            "gk_positioning": [
+                "goalkeeper_positioning",
+                "Goalkeeper_Positioning"
+            ],
+            "gk_reflexes": [
+                "Reflexes",
+                "reflexiveness",
+                "Handling"
+            ]
+        },
+        "Player": {
+            "id": [
+                "player_key"
+            ],
+            "player_api_id": [
+                "player_unique_id",
+                "player_key"
+            ],
+            "player_name": [
+                "player_username",
+                "player_nickname",
+                "player_identifier"
+            ],
+            "player_fifa_api_id": [
+                "fifa_id"
+            ],
+            "birthday": [
+                "date_of_birth"
+            ],
+            "height": [
+                "Stature",
+                "stature"
+            ],
+            "weight": [
+                "Bodymass",
+                "mass"
+            ]
+        },
+        "Match": {
+            "id": [
+                "match"
+            ],
+            "country_id": [
+                "country_name",
+                "Nation"
+            ],
+            "league_id": [
+                "division_id",
+                "competition"
+            ],
+            "season": [
+                "campaign"
+            ],
+            "stage": [
+                "round"
+            ],
+            "date": [
+                "match",
+                "Match"
+            ],
+            "home_team_api_id": [
+                "home_team_key",
+                "team_id",
+                "home_team_name"
+            ],
+            "away_team_api_id": [
+                "opponent_team_api_id",
+                "visiting_team_api_id"
+            ],
+            "home_team_goal": [
+                "Goals"
+            ],
+            "away_team_goal": [
+                "Goals",
+                "OpponentGoals",
+                "opponent_goal"
+            ],
+            "home_player_X1": [
+                "striker",
+                "player_starter",
+                "attacker"
+            ],
+            "home_player_X2": [
+                "home_player_Z2",
+                "home_midfielder_2",
+                "home_player_X3"
+            ],
+            "home_player_X3": [
+                "home_player_Z3",
+                "home_player_X4"
+            ],
+            "home_player_X4": [
+                "player_position",
+                "player_goalkeeper",
+                "striker"
+            ],
+            "home_player_X5": [
+                "home_player_X6",
+                "player_position"
+            ],
+            "home_player_X6": [
+                "player7",
+                "home_player_Z6",
+                "player_position"
+            ],
+            "home_player_X7": [
+                "player_position",
+                "home_player_Z7",
+                "player8"
+            ],
+            "home_player_X8": [
+                "player_position",
+                "home_player_X9",
+                "player_goal"
+            ],
+            "home_player_X9": [
+                "player",
+                "player_goal",
+                "home_player_10"
+            ],
+            "home_player_X10": [
+                "player_position",
+                "player_goal",
+                "player_X11"
+            ],
+            "home_player_X11": [
+                "player_starter",
+                "player_12"
+            ],
+            "away_player_X1": [
+                "away_player_Defender1",
+                "Away_player_X1",
+                "Striker"
+            ],
+            "away_player_X2": [
+                "player_position",
+                "player_Defender"
+            ],
+            "away_player_X3": [
+                "player_stats",
+                "player_defender"
+            ],
+            "away_player_X4": [
+                "player_position",
+                "away_player_goalkeeper"
+            ],
+            "away_player_X5": [
+                "away_player_X6",
+                "opponent",
+                "away_player_goalkeeper"
+            ],
+            "away_player_X6": [
+                "away_player_7",
+                "player_position"
+            ],
+            "away_player_X7": [
+                "away_player_X8",
+                "player_position",
+                "player_defender"
+            ],
+            "away_player_X8": [
+                "away_player_9",
+                "player_name"
+            ],
+            "away_player_X9": [
+                "player_goal",
+                "player_position",
+                "player_defender"
+            ],
+            "away_player_X10": [
+                "away_player_goalkeeper",
+                "player_defender",
+                "player_position"
+            ],
+            "away_player_X11": [
+                "player_goal",
+                "player_outcome"
+            ],
+            "home_player_Y1": [
+                "striker",
+                "goalkeeper"
+            ],
+            "home_player_Y2": [
+                "player_position",
+                "home_player_Z2",
+                "striker"
+            ],
+            "home_player_Y3": [
+                "player_position",
+                "striker"
+            ],
+            "home_player_Y4": [
+                "striker"
+            ],
+            "home_player_Y5": [
+                "player_position",
+                "home_player_Z5"
+            ],
+            "home_player_Y6": [
+                "home_player_Z6",
+                "player_position"
+            ],
+            "home_player_Y7": [
+                "striker",
+                "midfielder"
+            ],
+            "home_player_Y8": [
+                "player_position",
+                "Player",
+                "player_Defender"
+            ],
+            "home_player_Y9": [
+                "striker",
+                "home_keeper"
+            ],
+            "home_player_Y10": [
+                "striker",
+                "home_player_Z10",
+                "player_position"
+            ],
+            "home_player_Y11": [
+                "striker",
+                "player_position"
+            ],
+            "away_player_Y1": [
+                "striker",
+                "player_substitutes",
+                "away_player_goalkeeper"
+            ],
+            "away_player_Y2": [
+                "player_position",
+                "player_name",
+                "player_goal"
+            ],
+            "away_player_Y3": [
+                "player_position",
+                "away_player_Z3"
+            ],
+            "away_player_Y4": [
+                "away_player_Z4",
+                "player_position"
+            ],
+            "away_player_Y5": [
+                "away_player_Z5",
+                "home_player_Z5"
+            ],
+            "away_player_Y6": [
+                "player_defender",
+                "player_position",
+                "player_goalkeeper"
+            ],
+            "away_player_Y7": [
+                "away_player_Z7",
+                "player_goal"
+            ],
+            "away_player_Y8": [
+                "away_player_Z8",
+                "player_position"
+            ],
+            "away_player_Y9": [
+                "away_player_Z9",
+                "player_minutes"
+            ],
+            "away_player_Y10": [
+                "away_player_Z10",
+                "player_goalkeeper"
+            ],
+            "away_player_Y11": [
+                "player_position",
+                "away_player_Z11"
+            ],
+            "home_player_1": [
+                "striker",
+                "player_starter",
+                "player"
+            ],
+            "home_player_2": [
+                "player",
+                "striker"
+            ],
+            "home_player_3": [
+                "Striker",
+                "home_player_4"
+            ],
+            "home_player_4": [
+                "home_striker",
+                "midfielder",
+                "striker"
+            ],
+            "home_player_5": [
+                "striker"
+            ],
+            "home_player_6": [
+                "player7",
+                "player_7"
+            ],
+            "home_player_7": [
+                "striker_7",
+                "home_midfielder_3",
+                "player_7"
+            ],
+            "home_player_8": [
+                "player_9",
+                "player9"
+            ],
+            "home_player_9": [
+                "home_striker_9",
+                "player"
+            ],
+            "home_player_10": [
+                "player",
+                "player_12",
+                "home_player_striker"
+            ],
+            "home_player_11": [
+                "player",
+                "startline"
+            ],
+            "away_player_1": [
+                "away_striker_1",
+                "visitor",
+                "visitor_striker_1"
+            ],
+            "away_player_2": [
+                "player",
+                "away_player_3",
+                "player_away"
+            ],
+            "away_player_3": [
+                "away_player_defender_3",
+                "player_4",
+                "Away_player_23"
+            ],
+            "away_player_4": [
+                "away_striker_4",
+                "Striker",
+                "away_player_5"
+            ],
+            "away_player_5": [
+                "AwayForward",
+                "player_goal",
+                "player5"
+            ],
+            "away_player_6": [
+                "striker",
+                "striker6",
+                "Striker6"
+            ],
+            "away_player_7": [
+                "away_player_eight",
+                "player_away_7"
+            ],
+            "away_player_8": [
+                "away_player_9"
+            ],
+            "away_player_9": [
+                "player_away_9",
+                "away_player_10",
+                "defender_9"
+            ],
+            "away_player_10": [
+                "player_goal",
+                "player_away_10",
+                "away_striker_10"
+            ],
+            "away_player_11": [
+                "away_starter_11",
+                "player11",
+                "visitor_player_11"
+            ],
+            "goal": [
+                "Score",
+                "score"
+            ],
+            "shoton": [
+                "shotattempt",
+                "Fouls",
+                "Kick"
+            ],
+            "shotoff": [
+                "shot_attempts",
+                "shotattempt",
+                "Shotaway"
+            ],
+            "foulcommit": [
+                "offences",
+                "fouls"
+            ],
+            "card": [
+                "player",
+                "Yellow"
+            ],
+            "cross": [
+                "Kick",
+                "stats",
+                "strike"
+            ],
+            "corner": [
+                "kick"
+            ],
+            "possession": [],
+            "B365H": [
+                "HomeWinProbability",
+                "HomeWinOdds",
+                "Odds"
+            ],
+            "B365D": [
+                "FTOTR",
+                "FTOT",
+                "booked"
+            ],
+            "B365A": [
+                "B365O",
+                "FT",
+                "bookmaker_a"
+            ],
+            "BWH": [
+                "BTTS",
+                "Oddings"
+            ],
+            "BWD": [
+                "Bookmaker_Win_Draw",
+                "Bookmaker",
+                "BWH"
+            ],
+            "BWA": [
+                "Odds",
+                "Bookmakers"
+            ],
+            "IWH": [
+                "Odd",
+                "FTB"
+            ],
+            "IWD": [
+                "Bookmaker_Draw_Odds",
+                "IntraWidth",
+                "InPlayDraw"
+            ],
+            "LBH": [
+                "LB",
+                "OddH"
+            ],
+            "LBD": [
+                "Lineup",
+                "LBH"
+            ],
+            "LBA": [
+                "Line_Bet_Away",
+                "Ladder"
+            ],
+            "PSH": [
+                "PPS",
+                "PSM",
+                "PSF"
+            ],
+            "PSD": [
+                "PSF",
+                "PSG"
+            ],
+            "PSA": [
+                "PSF"
+            ],
+            "WHH": [
+                "HHW",
+                "Form",
+                "Wahrscheinlichkeit"
+            ],
+            "WHD": [
+                "HomeWinDraw",
+                "Win_Home_Draw",
+                "Team"
+            ],
+            "WHA": [
+                "Willingness",
+                "AwayTeamAverage",
+                "WinningHalf"
+            ],
+            "SJH": [
+                "ST",
+                "Odds_Home",
+                "FTH"
+            ],
+            "SJD": [
+                "ShotDistance",
+                "FTH",
+                "StrikeRate"
+            ],
+            "SJA": [
+                "Strike_Rate_Average",
+                "SJT"
+            ],
+            "VCH": [
+                "VISCH",
+                "Visiting_Chance_Home",
+                "FTS"
+            ],
+            "VCD": [
+                "Voucher"
+            ],
+            "VCA": [
+                "VCF",
+                "VCM",
+                "VCT"
+            ],
+            "GBH": [
+                "GoalBook",
+                "GBT",
+                "GoalBooked"
+            ],
+            "GBD": [
+                "GoalBookData",
+                "Goals",
+                "GBT"
+            ],
+            "GBA": [
+                "Goals",
+                "GBS",
+                "GBT"
+            ],
+            "BSH": [
+                "ODDS",
+                "Odds",
+                "HomeBookmakerHandicap"
+            ],
+            "BSD": [
+                "Bookmaker_Spread",
+                "Goals",
+                "FTR"
+            ],
+            "BSA": [
+                "Bookings",
+                "BettingSpread"
+            ]
+        },
+        "League": {
+            "id": [
+                "league_id"
+            ],
+            "country_id": [
+                "nation_id",
+                "league_code",
+                "national_code"
+            ],
+            "name": [
+                "league_name"
+            ]
+        },
+        "Country": {
+            "id": [
+                "country_id",
+                "country_code"
+            ],
+            "name": [
+                "country_name"
+            ]
+        },
+        "Team": {
+            "id": [
+                "team_key"
+            ],
+            "team_api_id": [
+                "club_id",
+                "team_id",
+                "team_code"
+            ],
+            "team_fifa_api_id": [
+                "fifa_id"
+            ],
+            "team_long_name": [
+                "full_name",
+                "team_description",
+                "team_name"
+            ],
+            "team_short_name": [
+                "abbreviation",
+                "Nickname"
+            ]
+        },
+        "Team_Attributes": {
+            "id": [
+                "team_id",
+                "Team_ID"
+            ],
+            "team_fifa_api_id": [
+                "team_id",
+                "FifaId"
+            ],
+            "team_api_id": [
+                "team_identifier",
+                "team_id"
+            ],
+            "date": [
+                "MatchDate",
+                "Match_Date",
+                "match_date"
+            ],
+            "buildUpPlaySpeed": [
+                "Pace",
+                "buildUpPlayVelocity",
+                "BuildUpSpeedFactor"
+            ],
+            "buildUpPlaySpeedClass": [
+                "buildUpPlayVelocityClass",
+                "buildUpPlayPace",
+                "buildUpPlaySpeedCategory"
+            ],
+            "buildUpPlayDribbling": [
+                "DribblingAbility"
+            ],
+            "buildUpPlayDribblingClass": [
+                "DribblingSkill",
+                "BallControlClass",
+                "DribblingAbility"
+            ],
+            "buildUpPlayPassing": [
+                "buildUpPlayAccuracy",
+                "PassingAbility"
+            ],
+            "buildUpPlayPassingClass": [
+                "BuildUpPlayPassingAbility",
+                "buildUpPlayAttackClass",
+                "BuildUpPlayAbility"
+            ],
+            "buildUpPlayPositioningClass": [
+                "BuildUpPlayFormationClass",
+                "TacticalPositioning",
+                "buildUpPlayFormationClass"
+            ],
+            "chanceCreationPassing": [
+                "CreationChance",
+                "CreationChancePassing",
+                "Creation_Chance"
+            ],
+            "chanceCreationPassingClass": [
+                "PassingAbility",
+                "passing_chance_creation",
+                "PassingChanceCreation"
+            ],
+            "chanceCreationCrossing": [
+                "CrossingChance"
+            ],
+            "chanceCreationCrossingClass": [
+                "CrossingChance",
+                "CrossingAbility"
+            ],
+            "chanceCreationShooting": [
+                "ShootingChances",
+                "Shooting_Chance",
+                "ShootingProbability"
+            ],
+            "chanceCreationShootingClass": [
+                "ShootingAbility"
+            ],
+            "chanceCreationPositioningClass": [
+                "ChanceCreationPositioning",
+                "TacticalPositioningClass",
+                "chanceCreationAttackPositioningClass"
+            ],
+            "defencePressure": [
+                "PressingIntensity",
+                "defendingIntensity"
+            ],
+            "defencePressureClass": [
+                "PressureIntensity"
+            ],
+            "defenceAggression": [
+                "PressingIntensity",
+                "TacklingIntensity"
+            ],
+            "defenceAggressionClass": [
+                "TacklingIntensity",
+                "AttackAggressionClass",
+                "AggressiveIntensity"
+            ],
+            "defenceTeamWidth": [
+                "DefensiveWidth",
+                "Width"
+            ],
+            "defenceTeamWidthClass": [
+                "Width",
+                "defenceTeamWidthZone",
+                "width"
+            ],
+            "defenceDefenderLineClass": [
+                "backlineDepth",
+                "backline",
+                "BackLine"
+            ]
+        }
+    },
+    "imdb_movies": {
+        "ERD": {
+            "table": [
+                "Entity",
+                "entity"
+            ],
+            "column": [
+                "Name"
+            ],
+            "Unnamed:_2": [
+                "gross"
+            ],
+            "Unnamed:_3": [
+                "gross",
+                "Movie_Gross"
+            ],
+            "Unnamed:_4": [
+                "Gross",
+                "revenue",
+                "gross"
+            ],
+            "Unnamed:_5": [
+                "gross"
+            ],
+            "Unnamed:_6": [
+                "world_gross",
+                "gross"
+            ],
+            "Unnamed:_7": [
+                "Gross",
+                "gross",
+                "world_gross"
+            ],
+            "Unnamed:_8": [
+                "gross",
+                "grossing"
+            ],
+            "Unnamed:_9": [
+                "production_company_name",
+                "Name"
+            ],
+            "Unnamed:_10": [
+                "production_company",
+                "production_company_name"
+            ],
+            "Unnamed:_11": [
+                "worldwide_gross",
+                "gross",
+                "known_movies"
+            ],
+            "Unnamed:_12": [
+                "gross",
+                "gross_income"
+            ]
+        },
+        "movies": {
+            "id": [
+                "movie_id"
+            ],
+            "title": [
+                "MovieTitle",
+                "FilmTitle",
+                "MovieName"
+            ],
+            "year": [
+                "Release_Year",
+                "ReleaseYear"
+            ],
+            "date_published": [
+                "ReleaseDate",
+                "release_date"
+            ],
+            "duration": [
+                "runtime",
+                "length"
+            ],
+            "country": [
+                "Nation",
+                "land"
+            ],
+            "worlwide_gross_income": [
+                "total_gross_revenue",
+                "gross_revenue"
+            ],
+            "languages": [
+                "linguas",
+                "linguages"
+            ],
+            "production_company": [
+                "studio",
+                "FilmProduction",
+                "Studio"
+            ]
+        },
+        "genre": {
+            "movie_id": [
+                "film_id"
+            ],
+            "genre": [
+                "Category",
+                "Classification",
+                "style"
+            ]
+        },
+        "director_mapping": {
+            "movie_id": [
+                "fid",
+                "film_id"
+            ],
+            "name_id": [
+                "director_key",
+                "director_id"
+            ]
+        },
+        "role_mapping": {
+            "movie_id": [
+                "film_id",
+                "fid"
+            ],
+            "name_id": [
+                "actor_id"
+            ],
+            "category": [
+                "role_type",
+                "RoleType"
+            ]
+        },
+        "names": {
+            "id": [
+                "user_id",
+                "uid"
+            ],
+            "name": [
+                "Person",
+                "Full_Name",
+                "Fullname"
+            ],
+            "height": [
+                "stature",
+                "Stature"
+            ],
+            "date_of_birth": [
+                "birth_date"
+            ],
+            "known_for_movies": [
+                "Filmography",
+                "movie_titles",
+                "movies_list"
+            ]
+        },
+        "ratings": {
+            "movie_id": [
+                "film_id"
+            ],
+            "avg_rating": [
+                "average_score",
+                "score"
+            ],
+            "total_votes": [
+                "vote_count",
+                "popularity"
+            ],
+            "median_rating": [
+                "rating_value",
+                "mid_rating"
+            ]
+        }
+    },
+    "IPL": {
+        "player": {
+            "player_id": [
+                "player_key"
+            ],
+            "player_name": [
+                "player_details",
+                "Nickname"
+            ],
+            "dob": [
+                "birth_date"
+            ],
+            "batting_hand": [
+                "handedness"
+            ],
+            "bowling_skill": [
+                "bowling_style",
+                "bowling_ability"
+            ],
+            "country_name": [
+                "nation"
+            ]
+        },
+        "team": {
+            "team_id": [
+                "team_code",
+                "ClubID",
+                "team_key"
+            ],
+            "name": [
+                "team_name",
+                "franchise"
+            ]
+        },
+        "match": {
+            "match_id": [
+                "match_key"
+            ],
+            "team_1": [
+                "home_team"
+            ],
+            "team_2": [
+                "opponent"
+            ],
+            "match_date": [
+                "match_datetime",
+                "FixtureDate",
+                "date_of_match"
+            ],
+            "season_id": [
+                "match_year",
+                "campaign_id"
+            ],
+            "venue": [
+                "Stadium",
+                "Ground"
+            ],
+            "toss_winner": [
+                "TossOutcome",
+                "Winner",
+                "TossResult"
+            ],
+            "toss_decision": [
+                "flip",
+                "TossOutcome",
+                "Flip"
+            ],
+            "win_type": [
+                "result_type",
+                "Outcome",
+                "victory_method"
+            ],
+            "win_margin": [
+                "score_difference",
+                "difference",
+                "Difference"
+            ],
+            "outcome_type": [
+                "match_winner",
+                "result_type",
+                "match_result"
+            ],
+            "match_winner": [
+                "Winner",
+                "Champion"
+            ],
+            "man_of_the_match": [
+                "Best_Player",
+                "Player_of_the_Match",
+                "Best_Performer"
+            ]
+        },
+        "player_match": {
+            "match_id": [
+                "match_key",
+                "game_id"
+            ],
+            "player_id": [
+                "player_key",
+                "user_id",
+                "PlayerKey"
+            ],
+            "role": [
+                "Position"
+            ],
+            "team_id": [
+                "squad_number"
+            ]
+        },
+        "ball_by_ball": {
+            "match_id": [
+                "MatchKey",
+                "match_key"
+            ],
+            "over_id": [
+                "match_number",
+                "over_sequence"
+            ],
+            "ball_id": [
+                "ball_sequence",
+                "BallNumber"
+            ],
+            "innings_no": [
+                "inning"
+            ],
+            "team_batting": [
+                "batting_team"
+            ],
+            "team_bowling": [
+                "bowling_team"
+            ],
+            "striker_batting_position": [
+                "batting_position",
+                "batsman_position"
+            ],
+            "striker": [
+                "batsman"
+            ],
+            "non_striker": [
+                "batsman"
+            ],
+            "bowler": [
+                "pacer",
+                "pitcher"
+            ]
+        },
+        "batsman_scored": {
+            "match_id": [
+                "match_key"
+            ],
+            "over_id": [
+                "over_sequence",
+                "MatchNumber"
+            ],
+            "ball_id": [
+                "shot_id",
+                "ball_number"
+            ],
+            "runs_scored": [
+                "Runs",
+                "runs_total"
+            ],
+            "innings_no": [
+                "inning"
+            ]
+        },
+        "wicket_taken": {
+            "match_id": [
+                "MatchKey",
+                "match_key"
+            ],
+            "over_id": [
+                "over_sequence",
+                "match_over"
+            ],
+            "ball_id": [
+                "wicket_no",
+                "wicket_number"
+            ],
+            "player_out": [
+                "Batsman",
+                "batsman"
+            ],
+            "kind_out": [
+                "wicket_type",
+                "type",
+                "dismissal_type"
+            ],
+            "innings_no": [
+                "innings_sequence",
+                "inning"
+            ]
+        },
+        "extra_runs": {
+            "match_id": [
+                "match_key",
+                "run_id"
+            ],
+            "over_id": [
+                "over_sequence",
+                "over_number"
+            ],
+            "ball_id": [
+                "run_number",
+                "ball_number"
+            ],
+            "extra_type": [
+                "ExtraType",
+                "extra_event"
+            ],
+            "extra_runs": [
+                "Extras",
+                "Extra_Balls",
+                "ExtraRunsCount"
+            ],
+            "innings_no": [
+                "inning",
+                "innings_sequence"
+            ]
+        }
+    },
+    "Pagila": {
+        "actor": {
+            "actor_id": [
+                "actor_key",
+                "actor_code"
+            ],
+            "first_name": [
+                "Name",
+                "Forename"
+            ],
+            "last_name": [
+                "surname",
+                "Surname"
+            ],
+            "last_update": [
+                "timestamp",
+                "Modified",
+                "modified_date"
+            ]
+        },
+        "country": {
+            "country_id": [
+                "cid",
+                "region_code"
+            ],
+            "country": [
+                "Nation",
+                "nation"
+            ],
+            "last_update": [
+                "updated_at",
+                "update_date",
+                "timestamp"
+            ]
+        },
+        "city": {
+            "city_id": [
+                "city_key",
+                "cid",
+                "city_code"
+            ],
+            "city": [
+                "Metropolis",
+                "metropolis"
+            ],
+            "country_id": [
+                "region_id"
+            ],
+            "last_update": [
+                "update_time"
+            ]
+        },
+        "address": {
+            "address_id": [
+                "customer_id",
+                "address_key"
+            ],
+            "address": [
+                "location",
+                "street_address"
+            ],
+            "address2": [
+                "street",
+                "apartment"
+            ],
+            "district": [
+                "Locality",
+                "Neighborhood",
+                "Region"
+            ],
+            "city_id": [
+                "urbancode",
+                "urban_center",
+                "location"
+            ],
+            "postal_code": [
+                "zip_code"
+            ],
+            "phone": [
+                "contact_number"
+            ],
+            "last_update": [
+                "update_date",
+                "update_time",
+                "modified_date"
+            ]
+        },
+        "language": {
+            "language_id": [
+                "locale_id",
+                "lang_id"
+            ],
+            "name": [
+                "lingua",
+                "linguagem"
+            ],
+            "last_update": [
+                "modified_date",
+                "updated_at",
+                "update_date"
+            ]
+        },
+        "category": {
+            "category_id": [
+                "category_code",
+                "genre_id"
+            ],
+            "name": [
+                "genre"
+            ],
+            "last_update": [
+                "timestamp",
+                "updated_at"
+            ]
+        },
+        "customer": {
+            "customer_id": [
+                "customer_key"
+            ],
+            "store_id": [
+                "customer_id",
+                "shop_id"
+            ],
+            "first_name": [
+                "Name"
+            ],
+            "last_name": [
+                "surname"
+            ],
+            "email": [
+                "contact",
+                "contact_email",
+                "customer_contact"
+            ],
+            "address_id": [
+                "customer_key",
+                "customer_id"
+            ],
+            "active": [
+                "status"
+            ],
+            "create_date": [
+                "datetime",
+                "timestamp"
+            ],
+            "last_update": [
+                "modified_date",
+                "timestamp"
+            ]
+        },
+        "film": {
+            "film_id": [
+                "fid",
+                "movie_key",
+                "movie_id"
+            ],
+            "title": [
+                "heading",
+                "movie_title",
+                "MovieName"
+            ],
+            "description": [
+                "storyline",
+                "story",
+                "synopsis"
+            ],
+            "release_year": [
+                "publication_date",
+                "release_date",
+                "year_of_release"
+            ],
+            "language_id": [
+                "linguage_id",
+                "lingua_id",
+                "lang_id"
+            ],
+            "original_language_id": [
+                "original_language_code"
+            ],
+            "rental_duration": [
+                "lease_term",
+                "lease_period",
+                "lease_days"
+            ],
+            "rental_rate": [
+                "rental_fee",
+                "rental_price",
+                "rental_cost"
+            ],
+            "length": [
+                "duration"
+            ],
+            "replacement_cost": [
+                "cost_of_replacement",
+                "replenishment_cost",
+                "price_to_replace"
+            ],
+            "rating": [
+                "score",
+                "critic_rating",
+                "grade"
+            ],
+            "special_features": [
+                "bonus_features",
+                "Features"
+            ],
+            "last_update": [
+                "update_date",
+                "UpdateDate"
+            ]
+        },
+        "film_actor": {
+            "actor_id": [
+                "actor_key",
+                "actor_ref",
+                "actor_code"
+            ],
+            "film_id": [
+                "movie_id",
+                "film_reference"
+            ],
+            "last_update": [
+                "timestamp"
+            ]
+        },
+        "film_category": {
+            "film_id": [
+                "movie_id",
+                "film_key"
+            ],
+            "category_id": [
+                "genre_id",
+                "genreID"
+            ],
+            "last_update": [
+                "updated_at",
+                "update_date",
+                "modified_date"
+            ]
+        },
+        "inventory": {
+            "inventory_id": [
+                "inventory_key",
+                "item_id"
+            ],
+            "film_id": [
+                "movie_id"
+            ],
+            "store_id": [
+                "retailer_id",
+                "location_id"
+            ],
+            "last_update": [
+                "date_modified",
+                "modified_timestamp",
+                "timestamp"
+            ]
+        },
+        "staff": {
+            "staff_id": [
+                "employee_id"
+            ],
+            "first_name": [
+                "Forename"
+            ],
+            "last_name": [
+                "surname"
+            ],
+            "address_id": [
+                "employee_id",
+                "staff_key",
+                "residence_id"
+            ],
+            "picture": [
+                "image",
+                "profile_image",
+                "profile_picture"
+            ],
+            "email": [
+                "employee_email",
+                "email_address",
+                "electronic_address"
+            ],
+            "store_id": [
+                "employee_id",
+                "retailer_id",
+                "branch_id"
+            ],
+            "active": [
+                "status"
+            ],
+            "username": [
+                "employee_id",
+                "staff_member"
+            ],
+            "password": [
+                "security_pin",
+                "password_hash",
+                "passcode"
+            ],
+            "last_update": [
+                "modified_date",
+                "timestamp",
+                "update_date"
+            ]
+        },
+        "store": {
+            "store_id": [
+                "shop_id",
+                "store_key"
+            ],
+            "manager_staff_id": [
+                "managerID",
+                "staff_id",
+                "staff_manager_id"
+            ],
+            "address_id": [
+                "store_location_id",
+                "store_key",
+                "location_id"
+            ],
+            "last_update": [
+                "timestamp",
+                "update_date"
+            ]
+        },
+        "payment": {
+            "payment_id": [
+                "payment_key"
+            ],
+            "customer_id": [
+                "customer_key"
+            ],
+            "staff_id": [
+                "employee_id"
+            ],
+            "rental_id": [
+                "rental_key",
+                "lease_id"
+            ],
+            "amount": [
+                "total",
+                "price",
+                "Total"
+            ],
+            "payment_date": [
+                "payment_timestamp"
+            ],
+            "last_update": [
+                "updated_at",
+                "update_time"
+            ]
+        },
+        "rental": {
+            "rental_id": [
+                "rental_key"
+            ],
+            "rental_date": [
+                "lease_date"
+            ],
+            "inventory_id": [
+                "item_id"
+            ],
+            "customer_id": [
+                "rental_key",
+                "customer_key"
+            ],
+            "return_date": [
+                "due_date",
+                "end_date",
+                "Due_date"
+            ],
+            "staff_id": [
+                "employee_id",
+                "EmployeeID"
+            ],
+            "last_update": [
+                "timestamp",
+                "update_timestamp",
+                "update_date"
+            ]
+        }
+    },
+    "school_scheduling": {
+        "Buildings": {
+            "BuildingCode": [
+                "Building_ID",
+                "BuildingIdentification"
+            ],
+            "BuildingName": [
+                "BuildingDesignation",
+                "StructureName",
+                "Name"
+            ],
+            "NumberOfFloors": [
+                "FloorCount"
+            ],
+            "ElevatorAccess": [
+                "ElevatorAvailability",
+                "ElevatorFacility"
+            ],
+            "SiteParkingAvailable": [
+                "ParkingCapacity"
+            ]
+        },
+        "Categories": {
+            "CategoryID": [
+                "CategoryCode"
+            ],
+            "CategoryDescription": [
+                "CategoryName",
+                "category_name",
+                "DescriptionText"
+            ],
+            "DepartmentID": [
+                "dept_id",
+                "DepartmentName"
+            ]
+        },
+        "Class_Rooms": {
+            "ClassRoomID": [
+                "RoomID",
+                "RoomNumber"
+            ],
+            "BuildingCode": [
+                "BuildingName",
+                "BuildingID",
+                "Building_Reference"
+            ],
+            "PhoneAvailable": [
+                "AvailabilityStatus",
+                "IsAvailable"
+            ]
+        },
+        "Classes": {
+            "ClassID": [
+                "CourseID",
+                "ClassCode"
+            ],
+            "SubjectID": [
+                "CourseCode",
+                "CourseID"
+            ],
+            "ClassRoomID": [
+                "RoomNumber"
+            ],
+            "Credits": [
+                "CreditHours"
+            ],
+            "StartDate": [
+                "EnrollDate",
+                "LaunchDate"
+            ],
+            "StartTime": [
+                "ClassTime",
+                "ScheduleTime"
+            ],
+            "Duration": [
+                "SessionLength"
+            ],
+            "MondaySchedule": [
+                "Timetable"
+            ],
+            "TuesdaySchedule": [
+                "Timetable",
+                "TuesdayTimetable"
+            ],
+            "WednesdaySchedule": [
+                "WednesdayTiming",
+                "WeekdaySchedule",
+                "MidweekSchedule"
+            ],
+            "ThursdaySchedule": [
+                "ThursdayTimetable",
+                "ThursdayTimings"
+            ],
+            "FridaySchedule": [
+                "WeekendSchedule",
+                "FridayTiming"
+            ],
+            "SaturdaySchedule": [
+                "WeekendSchedule"
+            ]
+        },
+        "Departments": {
+            "DepartmentID": [
+                "dept_code",
+                "DepartmentKey",
+                "dept_key"
+            ],
+            "DeptName": [
+                "Department_Title"
+            ],
+            "DeptChair": [
+                "Supervisor",
+                "HeadOfDepartment"
+            ]
+        },
+        "Faculty": {
+            "StaffID": [
+                "EmployeeID"
+            ],
+            "Title": [
+                "Role",
+                "Rank"
+            ],
+            "Status": [
+                "EmploymentType",
+                "Role"
+            ],
+            "Tenured": [
+                "Employed",
+                "IsTenured"
+            ]
+        },
+        "Faculty_Categories": {
+            "StaffID": [
+                "EmployeeID"
+            ],
+            "CategoryID": [
+                "Faculty_TypeID",
+                "Faculty_Type"
+            ]
+        },
+        "Faculty_Classes": {
+            "ClassID": [
+                "ClassCode",
+                "CourseID"
+            ],
+            "StaffID": [
+                "EmployeeID",
+                "TeacherID"
+            ]
+        },
+        "Faculty_Subjects": {
+            "StaffID": [
+                "EmployeeID"
+            ],
+            "SubjectID": [
+                "CourseCode"
+            ],
+            "ProficiencyRating": [
+                "ExpertiseLevel",
+                "SkillLevel"
+            ]
+        },
+        "Majors": {
+            "MajorID": [
+                "DepartmentID",
+                "MajorCode"
+            ],
+            "Major": [
+                "Department"
+            ]
+        },
+        "Staff": {
+            "StaffID": [
+                "EmployeeID"
+            ],
+            "StfFirstName": [
+                "Firstname",
+                "FirstName"
+            ],
+            "StfLastname": [
+                "Surname"
+            ],
+            "StfStreetAddress": [
+                "Address"
+            ],
+            "StfCity": [
+                "City"
+            ],
+            "StfState": [
+                "State"
+            ],
+            "StfZipCode": [
+                "ZipCode"
+            ],
+            "StfAreaCode": [
+                "AreaCode"
+            ],
+            "StfPhoneNumber": [
+                "Phone",
+                "PhoneNo"
+            ],
+            "Salary": [
+                "Compensation"
+            ],
+            "DateHired": [
+                "EmploymentDate",
+                "HireDate"
+            ],
+            "Position": [
+                "Role"
+            ]
+        },
+        "Student_Class_Status": {
+            "ClassStatus": [
+                "Status",
+                "ClassStatusCode",
+                "EnrollmentStatus"
+            ],
+            "ClassStatusDescription": [
+                "Reason",
+                "StatusDescription"
+            ]
+        },
+        "Student_Schedules": {
+            "StudentID": [
+                "Student_Reference",
+                "Student_ReferenceID"
+            ],
+            "ClassID": [
+                "CourseID"
+            ],
+            "ClassStatus": [
+                "EnrollmentStatus"
+            ],
+            "Grade": [
+                "Marks",
+                "Mark",
+                "AcademicScore"
+            ]
+        },
+        "Students": {
+            "StudentID": [
+                "StudentNumber"
+            ],
+            "StudFirstName": [
+                "FirstName"
+            ],
+            "StudLastName": [
+                "Surname"
+            ],
+            "StudStreetAddress": [
+                "AddressLine1",
+                "AddressLine"
+            ],
+            "StudCity": [
+                "Residence"
+            ],
+            "StudState": [
+                "Residency",
+                "Region"
+            ],
+            "StudZipCode": [
+                "PostalCode",
+                "Postcode",
+                "PostCode"
+            ],
+            "StudAreaCode": [
+                "RegionCode",
+                "AreaCode"
+            ],
+            "StudPhoneNumber": [
+                "ContactNumber",
+                "PhoneNo",
+                "PhoneNum"
+            ],
+            "StudGPA": [
+                "AcademicPerformance"
+            ],
+            "StudMajor": [
+                "MajorField",
+                "Department",
+                "Program"
+            ]
+        },
+        "Subjects": {
+            "SubjectID": [
+                "CourseID",
+                "SubjectCode"
+            ],
+            "CategoryID": [
+                "Category_Type",
+                "CategoryCode",
+                "CourseID"
+            ],
+            "SubjectCode": [
+                "CourseCode"
+            ],
+            "SubjectName": [
+                "TopicName",
+                "CourseTitle",
+                "CourseName"
+            ],
+            "SubjectPreReq": [
+                "Prerequisites"
+            ],
+            "SubjectDescription": [
+                "CourseSynopsis",
+                "CourseSummary"
+            ]
+        }
+    },
+    "stacking": {
+        "problem": {
+            "name": [
+                "problem_title",
+                "title",
+                "Title"
+            ],
+            "path": [
+                "url"
+            ],
+            "type": [
+                "category",
+                "problem_type",
+                "ProblemType"
+            ],
+            "target": [
+                "outcome_id",
+                "outcome_variable",
+                "goal"
+            ]
+        },
+        "eda": {
+            "name": [
+                "Label",
+                "FeatureName"
+            ],
+            "version": [
+                "revision",
+                "version_id",
+                "iteration"
+            ],
+            "feature": [
+                "Attribute",
+                "attribute"
+            ],
+            "type": [
+                "category"
+            ],
+            "range": [
+                "scale",
+                "bounds",
+                "bound"
+            ],
+            "drop_user": [
+                "UserDrop",
+                "Account",
+                "removal_date"
+            ],
+            "drop_correlation": [
+                "correlation_coefficient",
+                "correlation_factor"
+            ],
+            "target": [
+                "goal",
+                "objective"
+            ]
+        },
+        "feature_importance": {
+            "name": [
+                "Label",
+                "Designation"
+            ],
+            "version": [
+                "edition",
+                "Build",
+                "Revision"
+            ],
+            "step": [
+                "Stage",
+                "Phase"
+            ],
+            "feature": [
+                "parameter",
+                "Parameter",
+                "Characteristic"
+            ],
+            "importance": [
+                "Weightage",
+                "relevance",
+                "priority"
+            ]
+        },
+        "solution": {
+            "name": [
+                "Name",
+                "solution_title",
+                "SolutionName"
+            ],
+            "version": [
+                "build",
+                "version_number"
+            ],
+            "correlation": [
+                "similarity",
+                "coefficient"
+            ],
+            "nb_model": [
+                "model_id",
+                "model_number"
+            ],
+            "nb_feature": [
+                "feature_count",
+                "features"
+            ],
+            "score": [
+                "efficiency",
+                "accuracy"
+            ],
+            "test_size": [
+                "test_data_size",
+                "test_data"
+            ],
+            "resampling": [
+                "repsample",
+                "sample_rate",
+                "repetition"
+            ]
+        },
+        "model_score": {
+            "name": [
+                "project_name",
+                "model_label",
+                "ModelName"
+            ],
+            "version": [
+                "revision",
+                "build",
+                "version_number"
+            ],
+            "step": [
+                "iteration"
+            ],
+            "model": [
+                "algorithm"
+            ],
+            "train_score": [
+                "accuracy"
+            ],
+            "test_score": [
+                "accuracy",
+                "evaluation_score"
+            ]
+        },
+        "model_importance": {
+            "name": [
+                "Designation",
+                "Label"
+            ],
+            "version": [
+                "Release",
+                "Edition",
+                "build_version"
+            ],
+            "step": [
+                "Stage",
+                "stage"
+            ],
+            "model": [
+                "algorithm"
+            ],
+            "importance": [
+                "weightage",
+                "priority",
+                "weight"
+            ]
+        },
+        "model": {
+            "name": [
+                "identifier",
+                "model_description",
+                "ModelName"
+            ],
+            "version": [
+                "build_version",
+                "Build",
+                "BuildNumber"
+            ],
+            "step": [
+                "iteration",
+                "stage"
+            ],
+            "L1_model": [
+                "algorithm"
+            ]
+        }
     }
 }

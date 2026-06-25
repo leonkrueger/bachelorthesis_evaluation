@@ -25,22 +25,11 @@ from util.evaluation.sparsity import SparsityEvaluation
 folder = "data"
 
 write_averages_per_strategy = True
-write_all_results = True
 
 split_by_datatype = None  # "string"  # "number"
-evaluation = F1Score(strict_score=True, split_by_datatype=split_by_datatype)
+evaluation = F1Score(strict_score=False, split_by_datatype=split_by_datatype)
 # evaluation = SparsityEvaluation()
 # evaluation = NumberOfTablesEvaluation()
-
-# Use this to select needed strategies for better runtime
-# Additionally, comment out not needed experiments in adjustments.py
-only_evaluate_specific_strategies = [
-    "Llama3_not_finetuned",
-    "Llama3_finetuned_dc",
-    "justine_v0",
-    "justine_optimization_1",
-    "Llama3_3_not_finetuned",
-]
 
 
 def write_averages(
@@ -99,63 +88,58 @@ def write_averages(
             json.dump(averages, json_file)
 
 
-def evaluate_experiment_on_one_database_for_one_strategy(
-    folder: str,
-    evaluation: Evaluation,
-    gold_standard: dict[str, list[list[str]]],
-    experiment_name: str,
-) -> dict[str, float]:
-    """Returns two dict that map the parameters of the experiment to its accuracy and its relative null values"""
-    results = {}
-
-    for path in os.listdir(folder):
-        results_file_path = os.path.join(folder, path)
-        if not results_file_path.endswith(".json"):
-            continue
-
-        parameters = path[19:-5]  # Remove "evaluation_results" and ".json"
-
-        with open(results_file_path, encoding="utf-8") as results_file:
-            results_file_content = results_file.read()
-
-        if results_file_content.strip() == "":
-            continue
-        else:
-            experiment_results = json.loads(results_file_content)
-            results[parameters] = evaluation.calculate(
-                experiment_results, gold_standard
-            )
-
-    return results
-
-
 def evaluate_experiment_on_one_database(
     evaluation: Evaluation,
     folder: str,
     gold_standard: dict[str, list[list[str]]],
-    experiment_name: str,
+    existing_results: dict[str, any],
 ) -> dict[str, dict[str, float]]:
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
     results = {}
+
+    # If results for this database already exist, use them as a basis
+    db_name = os.path.basename(os.path.dirname(folder))
+    if db_name in existing_results:
+        results = existing_results[db_name]
 
     for path in tqdm(os.listdir(folder)):
         strategy_results_path = os.path.join(folder, path)
         if not os.path.isdir(strategy_results_path):
             continue
 
-        if (
-            only_evaluate_specific_strategies is not None
-            and path not in only_evaluate_specific_strategies
-        ):
+        # Skip if results for this strategy already exist and are complete
+        if path in results and results[path]:
+            # A simple check if some results are there. More complex checks could be added.
             continue
 
-        results[path] = evaluate_experiment_on_one_database_for_one_strategy(
-            strategy_results_path,
-            evaluation,
-            gold_standard,
-            experiment_name,
-        )
-    results["gold_standard"] = evaluation.calculate(gold_standard, gold_standard)
+        results[path] = {}
+        for result_file_name in os.listdir(strategy_results_path):
+            results_file_path = os.path.join(strategy_results_path, result_file_name)
+            if not results_file_path.endswith(".json"):
+                continue
+
+            parameters = result_file_name[
+                19:-5
+            ]  # Remove "evaluation_results" and ".json"
+
+            # Skip if this specific parameter set has been evaluated
+            if parameters in results[path]:
+                continue
+
+            with open(results_file_path, encoding="utf-8") as results_file:
+                results_file_content = results_file.read()
+
+            if results_file_content.strip() == "":
+                continue
+
+            experiment_results = json.loads(results_file_content)
+            results[path][parameters] = evaluation.calculate(
+                experiment_results, gold_standard
+            )
+
+    if "gold_standard" not in results:
+        results["gold_standard"] = evaluation.calculate(gold_standard, gold_standard)
+
     return results
 
 
@@ -164,10 +148,26 @@ def evaluate_experiment(
     folder: str,
     experiment_name: str,
 ) -> None:
-    # Lists that contain dicts that map the strategy and paramaters to its accuracy and null values
-    results = {}
+    output_file_path = os.path.join(
+        folder, "evaluation", f"{experiment_name}_{evaluation.get_filename()}.json"
+    )
+    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
 
-    for path in tqdm(os.listdir(folder)):
+    # Load existing results if file exists
+    all_results = {}
+    if os.path.exists(output_file_path):
+        try:
+            with open(output_file_path, "r", encoding="utf-8") as json_file:
+                content = json_file.read()
+                if content:
+                    all_results = json.loads(content)
+        except (json.JSONDecodeError, FileNotFoundError):
+            print(
+                f"Could not read existing results from {output_file_path}. Starting fresh."
+            )
+            all_results = {}
+
+    for path in tqdm(os.listdir(folder), desc=f"Evaluating {experiment_name}"):
         subfolder = os.path.join(folder, path, experiment_name)
         if not os.path.isdir(subfolder):
             continue
@@ -179,25 +179,18 @@ def evaluate_experiment(
                 continue
             gold_standard = json.loads(file_content)
 
-        db_accuracies = evaluate_experiment_on_one_database(
-            evaluation, subfolder, gold_standard, experiment_name
+        # Pass existing results to avoid re-calculation
+        db_results = evaluate_experiment_on_one_database(
+            evaluation, subfolder, gold_standard, all_results
         )
-        results[path] = db_accuracies
+        if db_results:  # Only add if there are any results
+            all_results[path] = db_results
 
-    if write_all_results:
-        with open(
-            os.path.join(
-                folder,
-                "evaluation",
-                f"{experiment_name}_{evaluation.get_filename()}.json",
-            ),
-            "w",
-            encoding="utf-8",
-        ) as json_file:
-            json.dump(results, json_file)
+    with open(output_file_path, "w", encoding="utf-8") as json_file:
+        json.dump(all_results, json_file, indent=4)
 
     if write_averages_per_strategy:
-        write_averages(evaluation, results, folder, experiment_name)
+        write_averages(evaluation, all_results, folder, experiment_name)
 
 
 if __name__ == "__main__":

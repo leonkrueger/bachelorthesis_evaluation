@@ -180,6 +180,8 @@ def get_column_type(value: str) -> str:
         return "DATETIME"
     elif re.match(r"[\"\'][0-9]{4}-[0-9]{2}-[0-9]{2}[\"\']", value):
         return "DATE"
+    elif re.match(r"[\"\'][0-9]{2}:[0-9]{2}:[0-9]{2}[\"\']", value):
+        return "TIME"
     elif value.startswith('"') or value.startswith("'"):
         return "VARCHAR(1023)"
     elif "." in value:

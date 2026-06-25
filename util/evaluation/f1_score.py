@@ -90,27 +90,26 @@ class F1Score(Evaluation):
     ) -> float:
         """Calculates the aggregated result over F1-Scores for all columns of a gold standard table"""
         if self.strict_score:
-            return max(
-                [
-                    average(
-                        [
-                            self._calculate_strict_gs_column_r_table_f1_score(
-                                gs_column_index, gs_table, r_table
-                            )
-                            for gs_column_index in range(
-                                len(gs_table[0]) if len(gs_table) > 0 else 0
-                            )
-                            if any(
-                                [
-                                    self._consider_value(gs_row[gs_column_index])
-                                    for gs_row in gs_table
-                                ]
-                            )
-                        ]
-                    )
-                    for r_table in results.values()
-                ]
-            )
+            table_averages = [
+                average(
+                    [
+                        self._calculate_strict_gs_column_r_table_f1_score(
+                            gs_column_index, gs_table, r_table
+                        )
+                        for gs_column_index in range(
+                            len(gs_table[0]) if len(gs_table) > 0 else 0
+                        )
+                        if any(
+                            [
+                                self._consider_value(gs_row[gs_column_index])
+                                for gs_row in gs_table
+                            ]
+                        )
+                    ]
+                )
+                for r_table in results.values()
+            ]
+            return max(table_averages) if len(table_averages) > 0 else 0.0
         else:
             return average(
                 [

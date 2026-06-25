@@ -77,10 +77,26 @@ EXPERIMENTS = {
             (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
         ],
         "strategies": [
+            "Llama3_not_finetuned",
             "Llama3_finetuned_dc",
             "Llama3_3_not_finetuned",
             "justine_v0",
             "justine_optimization_1",
+            "justine_optimization_2",
+            "justine_optimization_3",
+            "justine_optimization_4",
+        ],
+    },
+    "paper_evaluation_w_schema": {
+        "adjustments": [
+            (Adjustments.DELETE_COLUMN, [0.2]),
+            (Adjustments.USE_COLUMN_SYNONYMS, [0.375]),
+            (Adjustments.DELETE_TABLE, [0.5]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
+        ],
+        "strategies": [
+            "justine_v0",
+            "justine_optimization_2",
         ],
     },
 }

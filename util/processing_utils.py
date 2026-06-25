@@ -68,6 +68,7 @@ def map_type(type: str) -> str:
         "DATE": "DATE",
         "DATETIME": "DATETIME",
         "TIMESTAMP": "DATETIME",
+        "TIME": "TIME",
         "BLOB": "BLOB",
         "DEFAULT": "VARCHAR(1023)",
     }

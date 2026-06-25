@@ -166,6 +166,8 @@ cython_debug/
 fine_tuning/databases/
 fine_tuning/validation_databases/
 
+databases/
+
 # Plots
 *.png
 

@@ -18,6 +18,12 @@ The best working models for both tasks were:
 
 These were also the models I used in the evaluation of my thesis.
 
+# Optimizations
+1: Remap Rows
+2: Table Matching
+3: Remap Rows -> Table Matching
+4: Table Matching -> Remap Rows
+
 # Contents of this repository
 
 ```

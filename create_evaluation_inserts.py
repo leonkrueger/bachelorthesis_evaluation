@@ -77,7 +77,7 @@ if __name__ == "__main__":
     # Create all experiments for all databases
     for path in os.listdir(folder):
         subfolder = os.path.join(folder, path)
-        if not os.path.isdir(subfolder) or path == "evaluation":
+        if not os.path.isdir(subfolder):
             continue
 
         # Read all inserts

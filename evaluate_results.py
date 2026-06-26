@@ -74,7 +74,7 @@ def write_averages(
                 )[-1][strategy].keys()
             }
 
-        strategy_evaluation_folder = os.path.join(folder, "evaluation", strategy)
+        strategy_evaluation_folder = os.path.join(folder, "results", strategy)
         os.makedirs(strategy_evaluation_folder, exist_ok=True)
 
         with open(
@@ -149,7 +149,7 @@ def evaluate_experiment(
     experiment_name: str,
 ) -> None:
     output_file_path = os.path.join(
-        folder, "evaluation", f"{experiment_name}_{evaluation.get_filename()}.json"
+        folder, "results", f"{experiment_name}_{evaluation.get_filename()}.json"
     )
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
 

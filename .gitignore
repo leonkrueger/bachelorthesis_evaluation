@@ -169,7 +169,7 @@ fine_tuning/validation_databases/
 databases/
 
 # Plots
-*.png
+plots/
 
 # Test file
 test.py

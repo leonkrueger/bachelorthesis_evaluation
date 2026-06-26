@@ -1,0 +1,92 @@
+{
+    "spider2_Airlines": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.7845146081531642
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.7944378609567397
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_California_Traffic_Collision": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.6472172225825297
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.4715507418311913
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_Db-IMDB": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.597207397094275
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.6194884489567749
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_EntertainmentAgency": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.7963081187669834
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.7415436205018681
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_EU_soccer": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.5633516786476045
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.5057624877632652
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_imdb_movies": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.649533390270196
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.5735131328488763
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_IPL": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.6241221646351248
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.6366997905774996
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_Pagila": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.7280610482991434
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.7052712719379386
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_school_scheduling": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.7119953671468823
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.6320698684032017
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_stacking": {
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 0.5302748411484799
+        },
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 0.5055244640213296
+        },
+        "gold_standard": 1.0
+    }
+}

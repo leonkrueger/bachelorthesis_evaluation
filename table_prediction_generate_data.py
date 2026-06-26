@@ -106,7 +106,7 @@ def generate_data_for_input_file(experiment_input_file: str):
     data = []
     for path in os.listdir(db_folder):
         subfolder = os.path.join(db_folder, path)
-        if not os.path.isdir(subfolder) or path == "evaluation":
+        if not os.path.isdir(subfolder):
             continue
 
         database_file = path[path.find("_") + 1 :] + ".sql"

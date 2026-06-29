@@ -35,7 +35,6 @@ evaluation = F1Score(strict_score=False, split_by_datatype=split_by_datatype)
 def write_averages(
     evaluation: Evaluation,
     results: dict[str, dict[str, dict[str, float]]],
-    folder: str,
     experiment_name: str,
 ) -> None:
     """Creates the plots for evaluating an experiment"""
@@ -74,7 +73,7 @@ def write_averages(
                 )[-1][strategy].keys()
             }
 
-        strategy_evaluation_folder = os.path.join(folder, "results", strategy)
+        strategy_evaluation_folder = os.path.join("results", strategy)
         os.makedirs(strategy_evaluation_folder, exist_ok=True)
 
         with open(
@@ -149,7 +148,7 @@ def evaluate_experiment(
     experiment_name: str,
 ) -> None:
     output_file_path = os.path.join(
-        folder, "results", f"{experiment_name}_{evaluation.get_filename()}.json"
+        "results", f"{experiment_name}_{evaluation.get_filename()}.json"
     )
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
 
@@ -190,7 +189,7 @@ def evaluate_experiment(
         json.dump(all_results, json_file, indent=4)
 
     if write_averages_per_strategy:
-        write_averages(evaluation, all_results, folder, experiment_name)
+        write_averages(evaluation, all_results, experiment_name)
 
 
 if __name__ == "__main__":

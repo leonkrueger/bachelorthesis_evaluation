@@ -4,7 +4,6 @@ Evaluates the resulting evaluation databases in comparison to the gold standard.
 ``folder`` should contain the subfolders that were created by the scripts prepare_inserts.py and create_evaluation_inserts.py!
 ``write_averages_per_strategy`` specifies if the averages per strategy should be written
 ``write_all_results`` specifies if the entire results should be written
-``split_by_datatype`` specifies the datatype by which the results should be split (only works for F1Score). If the results should not be split set it to None.
 ``evaluation`` should contain an instance of the evaluation class that should be used
 """
 
@@ -18,18 +17,18 @@ from tqdm import tqdm
 from util.adjustments import EXPERIMENTS
 from util.evaluation.accuracy import AccuracyEvaluation
 from util.evaluation.evaluation import Evaluation
-from util.evaluation.f1_score import F1Score
-from util.evaluation.number_of_tables import NumberOfTablesEvaluation
+from util.evaluation.f1_score import F1Score, EvaluationType
+from util.evaluation.number_of_entities import NumberOfTablesEvaluation, NumberOfColumnsEvaluation
 from util.evaluation.sparsity import SparsityEvaluation
 
 folder = "data"
 
 write_averages_per_strategy = True
 
-split_by_datatype = None  # "string"  # "number"
-evaluation = F1Score(strict_score=False, split_by_datatype=split_by_datatype)
+evaluation = F1Score(strict_score=False, evaluation_type=EvaluationType.F1_SCORE)
 # evaluation = SparsityEvaluation()
 # evaluation = NumberOfTablesEvaluation()
+# evaluation = NumberOfColumnsEvaluation()
 
 
 def write_averages(
@@ -39,10 +38,10 @@ def write_averages(
 ) -> None:
     """Creates the plots for evaluating an experiment"""
     for strategy in list(results.values())[0].keys():
-        if strategy == "gold_standard":
-            continue
+        try:
+            if strategy == "gold_standard":
+                continue
 
-        if not isinstance(evaluation, F1Score) or not split_by_datatype:
             averages = {
                 parameters: average(
                     [
@@ -52,39 +51,24 @@ def write_averages(
                     ]
                 )
                 for parameters in list(
-                    sorted(results.values(), key=lambda x: len(x[strategy]))
-                )[-1][strategy].keys()
-            }
-        else:
-            averages = {
-                parameters: {
-                    ratio: average(
-                        [
-                            db_result[strategy][parameters][ratio]
-                            for db_result in results.values()
-                            if parameters in db_result[strategy]
-                            and not isnan(db_result[strategy][parameters][ratio])
-                        ]
-                    )
-                    for ratio in list(results.values())[0][strategy][parameters].keys()
-                }
-                for parameters in list(
-                    sorted(results.values(), key=lambda x: len(x[strategy]))
+                    sorted(results.values(), key=lambda x: len(x.get[strategy]))
                 )[-1][strategy].keys()
             }
 
-        strategy_evaluation_folder = os.path.join("results", strategy)
-        os.makedirs(strategy_evaluation_folder, exist_ok=True)
+            strategy_evaluation_folder = os.path.join("results", strategy)
+            os.makedirs(strategy_evaluation_folder, exist_ok=True)
 
-        with open(
-            os.path.join(
-                strategy_evaluation_folder,
-                f"{experiment_name}_{evaluation.get_filename()}.json",
-            ),
-            "w",
-            encoding="utf-8",
-        ) as json_file:
-            json.dump(averages, json_file)
+            with open(
+                os.path.join(
+                    strategy_evaluation_folder,
+                    f"{experiment_name}_{evaluation.get_filename()}.json",
+                ),
+                "w",
+                encoding="utf-8",
+            ) as json_file:
+                json.dump(averages, json_file)
+        except:
+            pass
 
 
 def evaluate_experiment_on_one_database(
@@ -92,6 +76,7 @@ def evaluate_experiment_on_one_database(
     folder: str,
     gold_standard: dict[str, list[list[str]]],
     existing_results: dict[str, any],
+    ignore_existing_results: bool = False,
 ) -> dict[str, dict[str, float]]:
     """Returns two dict that map the strategy and the parameters to its accuracy and its null values"""
     results = {}
@@ -106,8 +91,13 @@ def evaluate_experiment_on_one_database(
         if not os.path.isdir(strategy_results_path):
             continue
 
+        if not path.startswith("justine_3_3"):
+            continue
+
+        ignore_existing_results = ignore_existing_results or False # path == "justine_3_3_retry_with_feedback_old_db_prompt"
+
         # Skip if results for this strategy already exist and are complete
-        if path in results and results[path]:
+        if not ignore_existing_results and path in results and results[path]:
             # A simple check if some results are there. More complex checks could be added.
             continue
 
@@ -178,9 +168,11 @@ def evaluate_experiment(
                 continue
             gold_standard = json.loads(file_content)
 
+        ignore_existing_results = experiment_name == "paper_evaluation"
+
         # Pass existing results to avoid re-calculation
         db_results = evaluate_experiment_on_one_database(
-            evaluation, subfolder, gold_standard, all_results
+            evaluation, subfolder, gold_standard, all_results, ignore_existing_results
         )
         if db_results:  # Only add if there are any results
             all_results[path] = db_results

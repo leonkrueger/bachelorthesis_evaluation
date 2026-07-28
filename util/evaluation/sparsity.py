@@ -13,7 +13,7 @@ class SparsityEvaluation(Evaluation):
         results: dict[str, list[list[str]]],
         gold_standard: dict[str, list[list[str]]],
     ) -> int:
-        return len(
+        none_values = len(
             [
                 value
                 for query, table in results.items()
@@ -21,7 +21,8 @@ class SparsityEvaluation(Evaluation):
                 for value in row
                 if value is None or value == "None" or value == "nan"
             ]
-        ) / len(
+        )
+        all_values = len(
             [
                 value
                 for query, table in results.items()
@@ -29,3 +30,5 @@ class SparsityEvaluation(Evaluation):
                 for value in row
             ]
         )
+        return none_values / all_values if all_values > 0 else 0.0
+

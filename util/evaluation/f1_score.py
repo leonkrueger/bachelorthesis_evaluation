@@ -1,99 +1,93 @@
+from enum import Enum
 from math import isnan
 from typing import Any, Callable
+from collections import Counter
 
 from numpy import average
 
 from util.evaluation.evaluation import Evaluation
 
 
+class EvaluationType(Enum):
+    F1_SCORE = ("f1_score", "F1 Score")
+    PRECISION = ("precision", "Precision")
+    RECALL = ("recall", "Recall")
+
 class F1Score(Evaluation):
-    def __init__(
-        self,
-        strict_score: bool = False,
-        split_by_datatype: str = None,
-    ):
+    def __init__(self, strict_score: bool = False, evaluation_type: EvaluationType = EvaluationType.F1_SCORE):
         self.strict_score = strict_score
-        self.split_by_datatype = split_by_datatype
+        self.evaluation_type = evaluation_type
 
     def get_filename(self) -> str:
         strict_string = "_strict" if self.strict_score else ""
-        if not self.split_by_datatype:
-            return "f1_score" + strict_string
-        else:
-            return f"f1_score{strict_string}_only_{self.split_by_datatype}_number"
+        return self.evaluation_type.value[0] + strict_string
 
     def get_y_label(self) -> str:
-        return "F1 Score"
+        return self.evaluation_type.value[1]
 
     def calculate(
         self,
         results: dict[str, list[list[str]]],
         gold_standard: dict[str, list[list[str]]],
     ) -> Any:
-        """Calculates the average over F1-Scores for all gold standard tables"""
-        if not self.split_by_datatype:
-            table_scores = [
-                self._calculate_gs_table_f1_score(gs_table, results)
-                for gs_table in gold_standard.values()
-            ]
+        """Calculates the average over scores for all gold standard tables"""
+        results = {table_name: [[self._normalize(value) for value in row] for row in table] for table_name, table in results.items()}
+        gold_standard = {table_name: [[self._normalize(value) for value in row] for row in table] for table_name, table in gold_standard.items()}
 
-            # We ignore tables with no relevant data
-            # This only happens when we evaluate the score for specific data types and no such value is in a table
-            return average([score for score in table_scores if not isnan(score)])
-        else:
-            collector = {"0.1": [], "0.3": [], "0.7": [], "0.9": [], "1.0": []}
-            for gs_table in gold_standard.values():
-                table_score = self._calculate_gs_table_f1_score(gs_table, results)
+        table_scores = [
+            self._calculate_gs_table_score(gs_table, results)
+            for gs_table in gold_standard.values()
+        ]
 
-                ratio = (
-                    self._ratio_of_datatype(gs_table[0]) if len(gs_table) > 0 else 1.0
-                )
-                if ratio <= 0.1:
-                    collector["0.1"].append(table_score)
-                elif ratio <= 0.3:
-                    collector["0.3"].append(table_score)
-                elif ratio < 0.7:
-                    collector["0.7"].append(table_score)
-                elif ratio < 0.9:
-                    collector["0.9"].append(table_score)
-                else:
-                    collector["1.0"].append(table_score)
+        # We ignore tables with no relevant data
+        return average([score for score in table_scores if not isnan(score)])
 
-            return {
-                ratio: average([score for score in scores if not isnan(score)])
-                for ratio, scores in collector.items()
-            }
+    def _normalize(self, value):
+        """Reduces a value to its base SQLite affinity equivalent (Integer if possible, else Float, else String)."""
+        if isinstance(value, str):
+            val_str = value.strip()
+                
+            # 1. Try exact integer first. 
+            # (We do this before float to prevent precision loss on massive numbers)
+            try:
+                return int(val_str)
+            except ValueError:
+                pass
+                
+            # 2. Try float. (This catches decimals and cases like '5.0')
+            try:
+                val_float = float(val_str)
+                # If the float has no fractional part (e.g., 5.0), reduce it down to an int (5)
+                if val_float.is_integer():
+                    return int(val_float)
+                return val_float
+            except ValueError:
+                # 3. Not a number. Return the stripped string.
+                return val_str
+
+        elif isinstance(value, float):
+            # If the database gave us a float like 5.0, reduce it to int 5
+            if value.is_integer():
+                return int(value)
+            return value
+            
+        # Integers, None (NULL), and booleans remain exactly as they are
+        return value
 
     def _consider_value(self, value: str) -> bool:
         return value is not None and value != "None" and value != "nan"
 
-    def _ratio_of_datatype(self, row: list[str]) -> float:
-        if self.split_by_datatype == "string":
-            number_of_datatype = len([value for value in row if isinstance(value, str)])
-        elif self.split_by_datatype == "number":
-            number_of_datatype = len(
-                [
-                    value
-                    for value in row
-                    if isinstance(value, int) or isinstance(value, float)
-                ]
-            )
-        else:
-            number_of_datatype = len(row)
-
-        return number_of_datatype / len(row)
-
-    def _calculate_gs_table_f1_score(
+    def _calculate_gs_table_score(
         self,
         gs_table: list[list[str]],
         results: dict[str, list[list[str]]],
     ) -> float:
-        """Calculates the aggregated result over F1-Scores for all columns of a gold standard table"""
+        """Calculates the aggregated result over scores for all columns of a gold standard table"""
         if self.strict_score:
             table_averages = [
                 average(
                     [
-                        self._calculate_strict_gs_column_r_table_f1_score(
+                        self._calculate_strict_gs_column_r_table_score(
                             gs_column_index, gs_table, r_table
                         )
                         for gs_column_index in range(
@@ -113,7 +107,7 @@ class F1Score(Evaluation):
         else:
             return average(
                 [
-                    self._calculate_gs_column_f1_score(
+                    self._calculate_gs_column_score(
                         gs_column_index, gs_table, results
                     )
                     for gs_column_index in range(
@@ -128,33 +122,33 @@ class F1Score(Evaluation):
                 ]
             )
 
-    def _calculate_gs_column_f1_score(
+    def _calculate_gs_column_score(
         self,
         gs_column_index: int,
         gs_table: list[list[str]],
         results: dict[str, list[list[str]]],
     ) -> float:
-        """Calculates the maximum of F1-Scores for the combinations of this gold standard column
+        """Calculates the maximum of scores for the combinations of this gold standard column
         with all columns in the result database"""
-        f1_scores = [
-            self._calculate_gs_r_column_f1_score(
+        scores = [
+            self._calculate_gs_r_column_score(
                 gs_column_index, gs_table, r_column_index, r_table
             )
             for r_table in results.values()
             for r_column_index in range(len(r_table[0]) if len(r_table) > 0 else 0)
             if any([self._consider_value(r_row[r_column_index]) for r_row in r_table])
         ]
-        return max(f1_scores) if len(f1_scores) > 0 else 0.0
+        return max(scores) if len(scores) > 0 else 0.0
 
-    def _calculate_strict_gs_column_r_table_f1_score(
+    def _calculate_strict_gs_column_r_table_score(
         self,
         gs_column_index: int,
         gs_table: list[list[str]],
         r_table: list[list[str]],
     ) -> float:
-        """Calculates the maximum F1-Score for the combination of a gold average column and result table"""
+        """Calculates the maximum score for the combination of a gold average column and result table"""
         f1_scores = [
-            self._calculate_gs_r_column_f1_score(
+            self._calculate_gs_r_column_score(
                 gs_column_index, gs_table, r_column_index, r_table
             )
             for r_column_index in range(len(r_table[0]) if len(r_table) > 0 else 0)
@@ -162,14 +156,14 @@ class F1Score(Evaluation):
         ]
         return max(f1_scores) if len(f1_scores) > 0 else 0.0
 
-    def _calculate_gs_r_column_f1_score(
+    def _calculate_gs_r_column_score(
         self,
         gs_column_index: int,
         gs_table: list[list[str]],
         r_column_index: int,
         r_table: list[list[str]],
     ) -> float:
-        """Calculates the F1-Score for a specific combination of gold average and result column"""
+        """Calculates the score for a specific combination of gold average and result column"""
         tp, fn = 0, 0
         for gs_row in gs_table:
             if not self._consider_value(gs_row[gs_column_index]):
@@ -181,19 +175,26 @@ class F1Score(Evaluation):
                 tp += 1
             else:
                 fn += 1
+
+        recall = tp / (tp + fn)
+        if self.evaluation_type == EvaluationType.RECALL:
+            return recall
+       
         fp = (
             len(
                 [
                     r_row
                     for r_row in r_table
-                    if self._consider_value(r_row[r_column_index])
+                    # if self._consider_value(r_row[r_column_index])
                 ]
             )
             - tp
         )
 
         precision = tp / (tp + fp)
-        recall = tp / (tp + fn)
+        if self.evaluation_type == EvaluationType.PRECISION:
+            return precision
+        
         if precision == 0 and recall == 0:
             return 0
         return 2 * precision * recall / (precision + recall)
@@ -211,12 +212,18 @@ class F1Score(Evaluation):
                 # Is the value in the specified columns equal?
                 gs_row[gs_column_index] == r_row[r_column_index]
                 # Is this the correct row to search for the value?
-                and all(
-                    [
-                        not self._consider_value(gs_value) or gs_value in r_row
-                        for gs_value in gs_row
-                    ]
-                )
+                and self._is_correct_row(gs_row, r_row)
                 for r_row in r_table
             ]
         )
+
+    def _is_correct_row(
+        self,
+        gs_row: list[str],
+        r_row: list[str],
+    ) -> bool:
+        """Checks if both rows contain the same values"""
+        c1 = Counter([gs_value for gs_value in gs_row if self._consider_value(gs_value)])
+        c2 = Counter([r_value for r_value in r_row if self._consider_value(r_value)])
+        return c1 == c2
+

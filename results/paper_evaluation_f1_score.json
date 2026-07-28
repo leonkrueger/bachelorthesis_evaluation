@@ -22,7 +22,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.2860231768455486
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.3465688408289176
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_card_games": {
         "Llama3_finetuned_dc": {
@@ -49,7 +58,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.3752085762534678
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.49220258943721323
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_codebase_community": {
         "Llama3_finetuned_dc": {
@@ -76,7 +94,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.4843042528459195
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.585422877387163
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_debit_card_specializing": {
         "Llama3_finetuned_dc": {
@@ -103,7 +130,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6247879334136759
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.942125662994696
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_european_football_2": {
         "Llama3_finetuned_dc": {
@@ -128,7 +164,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5096682020505916
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6035889257014055
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_financial": {
         "Llama3_finetuned_dc": {
@@ -153,7 +198,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.4995252843883843
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6062472513093706
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_formula_1": {
         "Llama3_finetuned_dc": {
@@ -180,7 +234,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5504747270772913
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7664413946806277
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_student_club": {
         "Llama3_finetuned_dc": {
@@ -207,7 +270,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.705915064109417
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8731270365820054
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_superhero": {
         "Llama3_finetuned_dc": {
@@ -234,7 +306,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.7463398306200164
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7592557037809877
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_thrombosis_prediction": {
         "Llama3_finetuned_dc": {
@@ -261,7 +342,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.4392211276879551
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.44701637897959134
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "bird_toxicology": {
         "Llama3_finetuned_dc": {
@@ -288,7 +378,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.8522486800943442
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.713507625272331
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_candidate_poll": {
         "Llama3_finetuned_dc": {
@@ -315,7 +414,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6898802178213943
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 1.0
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_chinook_1": {
         "Llama3_finetuned_dc": {
@@ -342,7 +450,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.603167851344744
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8345175609973605
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_company_office": {
         "Llama3_finetuned_dc": {
@@ -369,7 +486,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5307547900886158
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8663030439346229
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_decoration_competition": {
         "Llama3_finetuned_dc": {
@@ -396,7 +522,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5740430865430864
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9666666666666667
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_entrepreneur": {
         "Llama3_finetuned_dc": {
@@ -423,7 +558,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.4764502164502164
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.95
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_soccer_2": {
         "Llama3_finetuned_dc": {
@@ -450,7 +594,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.7240130240130239
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7592592592592592
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_swimming": {
         "Llama3_finetuned_dc": {
@@ -477,7 +630,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5260340301774018
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.868831168831169
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_theme_gallery": {
         "Llama3_finetuned_dc": {
@@ -504,7 +666,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6161391694725028
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.980952380952381
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider_workshop_paper": {
         "Llama3_finetuned_dc": {
@@ -529,7 +700,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6209465940873263
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8863636363636364
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_alpha-defensins": {
         "Llama3_finetuned_dc": {
@@ -554,7 +734,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.8050055726169605
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6414529914529914
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_burial-vault": {
         "Llama3_finetuned_dc": {
@@ -579,7 +768,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.4420638547554241
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.2558833953570796
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
         "Llama3_finetuned_dc": {
@@ -604,7 +802,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6409814567308046
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.593910115649246
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_heaphy-sketchbook-no-2": {
         "Llama3_finetuned_dc": {
@@ -631,7 +838,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.38204014430676836
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5907993966817495
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_japans-top-100-waterfalls": {
         "Llama3_finetuned_dc": {
@@ -658,7 +874,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.3032428889147835
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.23949402435431158
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_novelette": {
         "Llama3_finetuned_dc": {
@@ -683,7 +908,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5510482268370915
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.47709722222222223
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_paz-domain-superfamily": {
         "Llama3_finetuned_dc": {
@@ -710,7 +944,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5830634767614418
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5959101228005196
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_peptidase-u32-collagenase-family": {
         "Llama3_finetuned_dc": {
@@ -737,7 +980,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6839207212443221
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.46254471019176896
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_rsga-gtpase-domain-protein-family": {
         "Llama3_finetuned_dc": {
@@ -764,7 +1016,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.742106077354504
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7444786905014178
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "wikidb_tammerkoski": {
         "Llama3_finetuned_dc": {
@@ -791,7 +1052,16 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6251006067816514
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5460561497326203
+        },
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {},
+        "justine_3_3_retry_with_feedback_old_db_prompt": {},
+        "justine_3_3_retry_with_feedback_two_shot": {}
     },
     "spider2_Airlines": {
         "Llama3_not_finetuned": {
@@ -816,7 +1086,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.7447959109846645
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.849537037037037
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6867372881355932
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.6525991809767386
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.6649521221532091
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.4738745993719447
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7248770304278197
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.8749476127736997
+        }
     },
     "spider2_California_Traffic_Collision": {
         "Llama3_not_finetuned": {
@@ -841,7 +1132,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.470934287401871
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.48678359810887345
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.281397809505561
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.27689852787565655
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.3948431062864995
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.5960537310574098
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5931558693673256
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.6659941868641982
+        }
     },
     "spider2_Db-IMDB": {
         "Llama3_not_finetuned": {
@@ -866,7 +1178,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.4723920540662621
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5261142554860722
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.1946407393775815
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.20147856019949037
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.27565780170613086
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.2622508382944393
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.3553619625988047
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.5883654743948862
+        }
     },
     "spider2_EntertainmentAgency": {
         "Llama3_not_finetuned": {
@@ -891,7 +1224,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6938274219876441
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.901272910857444
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6217253334900394
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.5726863893771411
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.7948872645705227
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7411816895043608
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7380534356549453
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.8877678322865491
+        }
     },
     "spider2_EU_soccer": {
         "Llama3_not_finetuned": {
@@ -916,7 +1270,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.46143024338604544
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6134110201725944
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5758132433846719
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.6909455682365309
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.6791260802032763
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.636888534645742
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6875220292059255
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.7782574900919486
+        }
     },
     "spider2_imdb_movies": {
         "Llama3_not_finetuned": {
@@ -941,7 +1316,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.599747057966103
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7324695507789255
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6605316655842167
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.5487589848020348
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.5821656844917682
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.4846037540810775
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7196176633613472
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.883243757864549
+        }
     },
     "spider2_IPL": {
         "Llama3_not_finetuned": {
@@ -966,7 +1362,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6599393723931852
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8227776487788098
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6658350473056356
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.6383771929824561
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.7348599664224664
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.8449622745675377
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5325097934472935
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.88612274056353
+        }
     },
     "spider2_Pagila": {
         "Llama3_not_finetuned": {
@@ -991,7 +1408,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.658056573056573
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8742080142080142
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.513413943777216
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.765858610525277
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.8395247961914627
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.6894017045651032
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7421078921078921
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.8920888987555654
+        }
     },
     "spider2_school_scheduling": {
         "Llama3_not_finetuned": {
@@ -1016,7 +1454,28 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.6299321419321419
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7837605272220657
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.4350691219545502
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.5361871759704576
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.6157828963159597
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.4225684211424249
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6123289754430103
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.7674730824730827
+        }
     },
     "spider2_stacking": {
         "Llama3_not_finetuned": {
@@ -1041,6 +1500,27 @@
         "justine_optimization_4": {
             "0.2_0.375_0.5_0.5": 0.5130425541497466
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5019813973020039
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.21307633478942797
+        },
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.38297781258834224
+        },
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.5004673543908956
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.20579351046640768
+        },
+        "justine_3_3_retry_with_feedback_old_db_prompt": {
+            "0.2_0.375_0.5_0.5": 0.30721761009347154
+        },
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.2_0.375_0.5_0.5": 0.671893462708688
+        }
     }
 }

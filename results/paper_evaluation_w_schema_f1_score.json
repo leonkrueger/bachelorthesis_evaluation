@@ -88,5 +88,155 @@
             "0.2_0.375_0.5_0.5": 0.5055244640213296
         },
         "gold_standard": 1.0
+    },
+    "wikidb_japans-top-100-waterfalls": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_heaphy-sketchbook-no-2": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_student_club": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_toxicology": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_paz-domain-superfamily": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_rsga-gtpase-domain-protein-family": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_chinook_1": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_swimming": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_company_office": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_theme_gallery": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_thrombosis_prediction": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_debit_card_specializing": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_card_games": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_codebase_community": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_formula_1": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_candidate_poll": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_decoration_competition": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_peptidase-u32-collagenase-family": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_entrepreneur": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_soccer_2": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_tammerkoski": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_superhero": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_novelette": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_california_schools": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_alpha-defensins": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "wikidb_burial-vault": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_financial": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "bird_european_football_2": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
+    },
+    "spider_workshop_paper": {
+        "justine_v0": {},
+        "justine_optimization_2": {},
+        "gold_standard": 1.0
     }
 }

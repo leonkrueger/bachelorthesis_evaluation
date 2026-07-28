@@ -1,1 +1,1432 @@
-{"bird_california_schools": {"Llama3_finetuned_dc": {"0.0": 99, "0.5": 99, "1.0": 99}, "justine_v0": {"0.0": 64, "0.5": 81, "1.0": 98}, "justine_optimization_1": {}, "gold_standard": 99}, "bird_card_games": {"Llama3_finetuned_dc": {"0.0": 98, "0.5": 98, "1.0": 98}, "justine_v0": {"0.0": 98, "0.5": 90, "1.0": 88}, "justine_optimization_1": {"0.0": 98, "0.5": 91, "1.0": 91}, "gold_standard": 98}, "bird_codebase_community": {"Llama3_finetuned_dc": {"0.0": 56, "0.5": 55, "1.0": 56}, "justine_v0": {"0.0": 56, "0.5": 55, "1.0": 55}, "justine_optimization_1": {"0.0": 56, "0.5": 55, "1.0": 55}, "gold_standard": 56}, "bird_debit_card_specializing": {"Llama3_finetuned_dc": {"0.0": 100, "0.5": 100, "1.0": 100}, "justine_v0": {"0.0": 100, "0.5": 100, "1.0": 100}, "justine_optimization_1": {"0.0": 100, "0.5": 100, "1.0": 100}, "gold_standard": 100}, "bird_european_football_2": {"Llama3_finetuned_dc": {"0.0": 88, "0.5": 88, "1.0": 84}, "justine_v0": {"0.0": 92, "0.5": 64, "1.0": 78}, "justine_optimization_1": {}, "gold_standard": 92}, "bird_financial": {"Llama3_finetuned_dc": {"0.0": 96, "0.5": 96, "1.0": 96}, "justine_v0": {"0.0": 84, "0.5": 85, "1.0": 84}, "justine_optimization_1": {}, "gold_standard": 96}, "bird_formula_1": {"Llama3_finetuned_dc": {"0.0": 91, "0.5": 91, "1.0": 91}, "justine_v0": {"0.0": 91, "0.5": 91, "1.0": 90}, "justine_optimization_1": {"0.0": 91, "0.5": 91, "1.0": 91}, "gold_standard": 91}, "bird_student_club": {"Llama3_finetuned_dc": {"0.0": 96, "0.5": 96, "1.0": 96}, "justine_v0": {"0.0": 96, "0.5": 96, "1.0": 96}, "justine_optimization_1": {"0.0": 96, "0.5": 96, "1.0": 96}, "gold_standard": 96}, "bird_superhero": {"Llama3_finetuned_dc": {"0.0": 83, "0.5": 83, "1.0": 83}, "justine_v0": {"0.0": 83, "0.5": 83, "1.0": 82}, "justine_optimization_1": {}, "gold_standard": 83}, "bird_thrombosis_prediction": {"Llama3_finetuned_dc": {"0.0": 99, "0.5": 99, "1.0": 99}, "justine_v0": {"0.0": 97, "0.5": 97, "1.0": 99}, "justine_optimization_1": {"0.0": 93, "0.5": 94, "1.0": 98}, "gold_standard": 99}, "bird_toxicology": {"Llama3_finetuned_dc": {"0.0": 100, "0.5": 100, "1.0": 100}, "justine_v0": {"0.0": 100, "0.5": 100, "1.0": 100}, "justine_optimization_1": {"0.0": 100, "0.5": 100, "1.0": 100}, "gold_standard": 100}, "spider_candidate_poll": {"Llama3_finetuned_dc": {"0.0": 15, "0.5": 15, "1.0": 15}, "justine_v0": {"0.0": 15, "0.5": 15, "1.0": 15}, "justine_optimization_1": {"0.0": 15, "0.5": 15, "1.0": 15}, "gold_standard": 15}, "spider_chinook_1": {"Llama3_finetuned_dc": {"0.0": 94, "0.5": 92, "1.0": 94}, "justine_v0": {"0.0": 94, "0.5": 94, "1.0": 94}, "justine_optimization_1": {"0.0": 94, "0.5": 93, "1.0": 94}, "gold_standard": 94}, "spider_company_office": {"Llama3_finetuned_dc": {"0.0": 47, "0.5": 47, "1.0": 47}, "justine_v0": {"0.5": 47, "1.0": 47, "0.0": 47}, "justine_optimization_1": {"0.0": 47, "0.5": 47, "1.0": 47}, "gold_standard": 47}, "spider_decoration_competition": {"Llama3_finetuned_dc": {"0.0": 21, "0.5": 21, "1.0": 21}, "justine_v0": {"0.0": 21, "0.5": 20, "1.0": 21}, "justine_optimization_1": {"0.0": 21, "0.5": 21, "1.0": 21}, "gold_standard": 21}, "spider_entrepreneur": {"Llama3_finetuned_dc": {"0.0": 14, "0.5": 14, "1.0": 14}, "justine_v0": {"0.0": 14, "0.5": 14, "1.0": 14}, "justine_optimization_1": {}, "gold_standard": 14}, "spider_soccer_2": {"Llama3_finetuned_dc": {"0.0": 16, "0.5": 16, "1.0": 16}, "justine_v0": {"0.0": 16, "0.5": 16, "1.0": 16}, "justine_optimization_1": {}, "gold_standard": 16}, "spider_swimming": {"Llama3_finetuned_dc": {"0.0": 37, "0.5": 37, "1.0": 37}, "justine_v0": {"0.0": 37, "0.5": 37, "1.0": 35}, "justine_optimization_1": {"0.0": 37, "0.5": 37, "1.0": 37}, "gold_standard": 37}, "spider_theme_gallery": {"Llama3_finetuned_dc": {"0.0": 26, "0.5": 26, "1.0": 26}, "justine_v0": {"0.0": 26, "0.5": 26, "1.0": 26}, "justine_optimization_1": {"0.0": 26, "0.5": 26, "1.0": 26}, "gold_standard": 26}, "spider_workshop_paper": {"Llama3_finetuned_dc": {"0.0": 22, "0.5": 22, "1.0": 22}, "justine_v0": {"0.0": 22, "0.5": 22, "1.0": 22}, "justine_optimization_1": {}, "gold_standard": 22}, "wikidb_alpha-defensins": {"Llama3_finetuned_dc": {"0.0": 23, "0.5": 23, "1.0": 23}, "justine_v0": {"0.0": 23, "0.5": 23, "1.0": 23}, "justine_optimization_1": {}, "gold_standard": 23}, "wikidb_burial-vault": {"Llama3_finetuned_dc": {"0.0": 72, "0.5": 68, "1.0": 66}, "justine_v0": {"0.0": 61, "0.5": 61, "1.0": 61}, "justine_optimization_1": {}, "gold_standard": 74}, "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {"Llama3_finetuned_dc": {"0.0": 88, "0.5": 88, "1.0": 88}, "justine_v0": {"0.0": 88, "0.5": 87, "1.0": 85}, "justine_optimization_1": {}, "gold_standard": 88}, "wikidb_heaphy-sketchbook-no-2": {"Llama3_finetuned_dc": {"0.0": 37, "0.5": 37, "1.0": 37}, "justine_v0": {"0.0": 37, "0.5": 37, "1.0": 37}, "justine_optimization_1": {"0.0": 37, "0.5": 37, "1.0": 37}, "gold_standard": 37}, "wikidb_japans-top-100-waterfalls": {"Llama3_finetuned_dc": {"0.0": 95, "0.5": 95, "1.0": 95}, "justine_v0": {"0.5": 88, "0.0": 95, "1.0": 91}, "justine_optimization_1": {"0.0": 90, "0.5": 89, "1.0": 84}, "gold_standard": 95}, "wikidb_novelette": {"Llama3_finetuned_dc": {"0.0": 86, "0.5": 87, "1.0": 87}, "justine_v0": {"0.0": 87, "0.5": 78, "1.0": 81}, "justine_optimization_1": {}, "gold_standard": 87}, "wikidb_paz-domain-superfamily": {"Llama3_finetuned_dc": {"0.0": 98, "0.5": 98, "1.0": 98}, "justine_v0": {"0.0": 98, "0.5": 98, "1.0": 98}, "justine_optimization_1": {"0.0": 98, "0.5": 96, "1.0": 96}, "gold_standard": 98}, "wikidb_peptidase-u32-collagenase-family": {"Llama3_finetuned_dc": {"0.0": 100, "0.5": 100, "1.0": 100}, "justine_v0": {"0.0": 100, "0.5": 100, "1.0": 100}, "justine_optimization_1": {"0.5": 100}, "gold_standard": 100}, "wikidb_rsga-gtpase-domain-protein-family": {"Llama3_finetuned_dc": {"0.0": 99, "0.5": 99, "1.0": 99}, "justine_v0": {"0.0": 99, "0.5": 97, "1.0": 99}, "justine_optimization_1": {"0.0": 99, "0.5": 98, "1.0": 99}, "gold_standard": 99}, "wikidb_tammerkoski": {"Llama3_finetuned_dc": {"0.0": 26, "0.5": 26, "1.0": 26}, "justine_v0": {"0.0": 26, "0.5": 26, "1.0": 26}, "justine_optimization_1": {}, "gold_standard": 26}}
+{
+    "bird_california_schools": {
+        "Llama3_finetuned_dc": {
+            "0.0": 99,
+            "0.5": 99,
+            "1.0": 99
+        },
+        "justine_v0": {
+            "0.0": 64,
+            "0.5": 81,
+            "1.0": 98
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 99,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 221,
+            "0.5": 203,
+            "0.0": 248
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 247,
+            "0.5": 413,
+            "0.0": 245
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 121,
+            "0.5": 163,
+            "0.0": 120
+        },
+        "Llama3_finetuned": {
+            "1.0": 171,
+            "0.5": 265,
+            "0.0": 212
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 830,
+            "0.5": 928,
+            "0.0": 633
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 333,
+            "0.5": 409,
+            "0.0": 498
+        }
+    },
+    "bird_card_games": {
+        "Llama3_finetuned_dc": {
+            "0.0": 98,
+            "0.5": 98,
+            "1.0": 98
+        },
+        "justine_v0": {
+            "0.0": 98,
+            "0.5": 90,
+            "1.0": 88
+        },
+        "justine_optimization_1": {
+            "0.0": 98,
+            "0.5": 91,
+            "1.0": 91
+        },
+        "gold_standard": 98,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 677,
+            "0.5": 637,
+            "0.0": 195
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 290,
+            "0.5": 412,
+            "0.0": 237
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 181,
+            "0.5": 244,
+            "0.0": 165
+        },
+        "Llama3_finetuned": {
+            "1.0": 226,
+            "0.5": 239,
+            "0.0": 317
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 785,
+            "0.5": 858,
+            "0.0": 430
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 496,
+            "0.5": 477,
+            "0.0": 439
+        },
+        "Llama3_3_not_finetuned": {
+            "1.0": 295,
+            "0.5": 505,
+            "0.0": 261
+        }
+    },
+    "bird_codebase_community": {
+        "Llama3_finetuned_dc": {
+            "0.0": 56,
+            "0.5": 55,
+            "1.0": 56
+        },
+        "justine_v0": {
+            "0.0": 56,
+            "0.5": 55,
+            "1.0": 55
+        },
+        "justine_optimization_1": {
+            "0.0": 56,
+            "0.5": 55,
+            "1.0": 55
+        },
+        "gold_standard": 56,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 124,
+            "0.5": 149,
+            "0.0": 98
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 87,
+            "0.5": 111,
+            "0.0": 96
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 77,
+            "0.5": 121,
+            "0.0": 106
+        },
+        "Llama3_finetuned": {
+            "1.0": 138,
+            "0.5": 185,
+            "0.0": 123
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 149,
+            "0.5": 151,
+            "0.0": 141
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 247,
+            "0.5": 233,
+            "0.0": 238
+        }
+    },
+    "bird_debit_card_specializing": {
+        "Llama3_finetuned_dc": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "justine_v0": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "justine_optimization_1": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "gold_standard": 100,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 74,
+            "0.5": 89,
+            "0.0": 52
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 33,
+            "0.5": 52,
+            "0.0": 38
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 31,
+            "0.5": 32,
+            "0.0": 27
+        },
+        "Llama3_finetuned": {
+            "1.0": 29,
+            "0.5": 30,
+            "0.0": 33
+        },
+        "justine_llama3_3": {},
+        "Llama3_2_not_finetuned": {
+            "1.0": 87,
+            "0.5": 83,
+            "0.0": 58
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 169,
+            "0.5": 144,
+            "0.0": 99
+        },
+        "Llama3_3_not_finetuned": {
+            "1.0": 58,
+            "0.5": 62,
+            "0.0": 44
+        }
+    },
+    "bird_european_football_2": {
+        "Llama3_finetuned_dc": {
+            "0.0": 88,
+            "0.5": 88,
+            "1.0": 84
+        },
+        "justine_v0": {
+            "0.0": 92,
+            "0.5": 64,
+            "1.0": 78
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 92,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 1469,
+            "0.5": 1760,
+            "0.0": 271
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 1148,
+            "0.5": 1370,
+            "0.0": 1174
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 1485,
+            "0.5": 629,
+            "0.0": 1832
+        },
+        "Llama3_finetuned": {
+            "1.0": 1176,
+            "0.5": 1514,
+            "0.0": 306
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 878,
+            "0.5": 986,
+            "0.0": 684
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 1365,
+            "0.5": 1544,
+            "0.0": 1360
+        }
+    },
+    "bird_financial": {
+        "Llama3_finetuned_dc": {
+            "0.0": 96,
+            "0.5": 96,
+            "1.0": 96
+        },
+        "justine_v0": {
+            "0.0": 84,
+            "0.5": 85,
+            "1.0": 84
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 96,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 195,
+            "0.5": 131,
+            "0.0": 135
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 111,
+            "0.5": 109,
+            "0.0": 100
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 67,
+            "0.5": 84,
+            "0.0": 69
+        },
+        "Llama3_finetuned": {
+            "1.0": 140,
+            "0.5": 85,
+            "0.0": 77
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 189,
+            "0.5": 244,
+            "0.0": 162
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 273,
+            "0.5": 279,
+            "0.0": 219
+        },
+        "Llama3_3_not_finetuned": {}
+    },
+    "bird_formula_1": {
+        "Llama3_finetuned_dc": {
+            "0.0": 91,
+            "0.5": 91,
+            "1.0": 91
+        },
+        "justine_v0": {
+            "0.0": 91,
+            "0.5": 91,
+            "1.0": 90
+        },
+        "justine_optimization_1": {
+            "0.0": 91,
+            "0.5": 91,
+            "1.0": 91
+        },
+        "gold_standard": 91,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 149,
+            "0.5": 140,
+            "0.0": 97
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 139,
+            "0.5": 163,
+            "0.0": 160
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 107,
+            "0.5": 139,
+            "0.0": 96
+        },
+        "Llama3_finetuned": {
+            "1.0": 150,
+            "0.5": 223,
+            "0.0": 158
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 206,
+            "0.5": 227,
+            "0.0": 190
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 277,
+            "0.5": 291,
+            "0.0": 238
+        }
+    },
+    "bird_student_club": {
+        "Llama3_finetuned_dc": {
+            "0.0": 96,
+            "0.5": 96,
+            "1.0": 96
+        },
+        "justine_v0": {
+            "0.0": 96,
+            "0.5": 96,
+            "1.0": 96
+        },
+        "justine_optimization_1": {
+            "0.0": 96,
+            "0.5": 96,
+            "1.0": 96
+        },
+        "gold_standard": 96,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 91,
+            "0.5": 95,
+            "0.0": 93
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 89,
+            "0.5": 99,
+            "0.0": 79
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 61,
+            "0.5": 99,
+            "0.0": 88
+        },
+        "Llama3_finetuned": {
+            "1.0": 64,
+            "0.5": 90,
+            "0.0": 83
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 190,
+            "0.5": 219,
+            "0.0": 195
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 285,
+            "0.5": 289,
+            "0.0": 249
+        }
+    },
+    "bird_superhero": {
+        "Llama3_finetuned_dc": {
+            "0.0": 83,
+            "0.5": 83,
+            "1.0": 83
+        },
+        "justine_v0": {
+            "0.0": 83,
+            "0.5": 83,
+            "1.0": 82
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 83,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 64,
+            "0.5": 72,
+            "0.0": 42
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 32,
+            "0.5": 51,
+            "0.0": 65
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 32,
+            "0.5": 42,
+            "0.0": 44
+        },
+        "Llama3_finetuned": {
+            "1.0": 67,
+            "0.5": 59,
+            "0.0": 34
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 60,
+            "0.5": 84,
+            "0.0": 74
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 158,
+            "0.5": 155,
+            "0.0": 116
+        }
+    },
+    "bird_thrombosis_prediction": {
+        "Llama3_finetuned_dc": {
+            "0.0": 99,
+            "0.5": 99,
+            "1.0": 99
+        },
+        "justine_v0": {
+            "0.0": 97,
+            "0.5": 97,
+            "1.0": 99
+        },
+        "justine_optimization_1": {
+            "0.0": 93,
+            "0.5": 94,
+            "1.0": 98
+        },
+        "gold_standard": 99,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 54,
+            "0.5": 139,
+            "0.0": 187
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 98,
+            "0.5": 122,
+            "0.0": 119
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 57,
+            "0.5": 64,
+            "0.0": 56
+        },
+        "Llama3_finetuned": {
+            "1.0": 77,
+            "0.5": 131,
+            "0.0": 81
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 188,
+            "0.5": 323,
+            "0.0": 266
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 232,
+            "0.5": 347,
+            "0.0": 337
+        }
+    },
+    "bird_toxicology": {
+        "Llama3_finetuned_dc": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "justine_v0": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "justine_optimization_1": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "gold_standard": 100,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 87,
+            "0.5": 92,
+            "0.0": 79
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 25,
+            "0.5": 27,
+            "0.0": 25
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 18,
+            "0.5": 17,
+            "0.0": 20
+        },
+        "Llama3_finetuned": {
+            "1.0": 27,
+            "0.5": 59,
+            "0.0": 48
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 71,
+            "0.5": 32,
+            "0.0": 20
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 177,
+            "0.5": 148,
+            "0.0": 78
+        }
+    },
+    "spider_candidate_poll": {
+        "Llama3_finetuned_dc": {
+            "0.0": 15,
+            "0.5": 15,
+            "1.0": 15
+        },
+        "justine_v0": {
+            "0.0": 15,
+            "0.5": 15,
+            "1.0": 15
+        },
+        "justine_optimization_1": {
+            "0.0": 15,
+            "0.5": 15,
+            "1.0": 15
+        },
+        "gold_standard": 15,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 54,
+            "0.5": 56,
+            "0.0": 54
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 42,
+            "0.5": 38,
+            "0.0": 22
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 34,
+            "0.5": 20,
+            "0.0": 30
+        },
+        "Llama3_finetuned": {
+            "1.0": 24,
+            "0.5": 36,
+            "0.0": 22
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 38,
+            "0.5": 45,
+            "0.0": 30
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 56,
+            "0.5": 52,
+            "0.0": 44
+        }
+    },
+    "spider_chinook_1": {
+        "Llama3_finetuned_dc": {
+            "0.0": 94,
+            "0.5": 92,
+            "1.0": 94
+        },
+        "justine_v0": {
+            "0.0": 94,
+            "0.5": 94,
+            "1.0": 94
+        },
+        "justine_optimization_1": {
+            "0.0": 94,
+            "0.5": 93,
+            "1.0": 94
+        },
+        "gold_standard": 94,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 86,
+            "0.5": 88,
+            "0.0": 68
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 90,
+            "0.5": 101,
+            "0.0": 93
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 85,
+            "0.5": 84,
+            "0.0": 66
+        },
+        "Llama3_finetuned": {
+            "1.0": 161,
+            "0.5": 183,
+            "0.0": 72
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 139,
+            "0.5": 178,
+            "0.0": 191
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 264,
+            "0.5": 246,
+            "0.0": 231
+        }
+    },
+    "spider_company_office": {
+        "Llama3_finetuned_dc": {
+            "0.0": 47,
+            "0.5": 47,
+            "1.0": 47
+        },
+        "justine_v0": {
+            "0.5": 47,
+            "1.0": 47,
+            "0.0": 47
+        },
+        "justine_optimization_1": {
+            "0.0": 47,
+            "0.5": 47,
+            "1.0": 47
+        },
+        "gold_standard": 47,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 19,
+            "0.5": 25,
+            "0.0": 17
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 31,
+            "0.5": 41,
+            "0.0": 31
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 19,
+            "0.5": 26,
+            "0.0": 17
+        },
+        "Llama3_finetuned": {
+            "1.0": 23,
+            "0.5": 26,
+            "0.0": 25
+        },
+        "justine_llama3_3": {
+            "1.0": 26,
+            "0.5": 31,
+            "0.0": 18
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 60,
+            "0.5": 53,
+            "0.0": 76
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 123,
+            "0.5": 103,
+            "0.0": 73
+        },
+        "Llama3_3_not_finetuned": {
+            "1.0": 30,
+            "0.5": 28,
+            "0.0": 43
+        }
+    },
+    "spider_decoration_competition": {
+        "Llama3_finetuned_dc": {
+            "0.0": 21,
+            "0.5": 21,
+            "1.0": 21
+        },
+        "justine_v0": {
+            "0.0": 21,
+            "0.5": 20,
+            "1.0": 21
+        },
+        "justine_optimization_1": {
+            "0.0": 21,
+            "0.5": 21,
+            "1.0": 21
+        },
+        "gold_standard": 21,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 45,
+            "0.5": 33,
+            "0.0": 16
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 24,
+            "0.5": 22,
+            "0.0": 32
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 16,
+            "0.5": 15,
+            "0.0": 12
+        },
+        "Llama3_finetuned": {
+            "1.0": 16,
+            "0.5": 16,
+            "0.0": 16
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 16,
+            "0.5": 31,
+            "0.0": 20
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 46,
+            "0.5": 49,
+            "0.0": 33
+        },
+        "Llama3_3_not_finetuned": {
+            "1.0": 23,
+            "0.5": 31,
+            "0.0": 21
+        }
+    },
+    "spider_entrepreneur": {
+        "Llama3_finetuned_dc": {
+            "0.0": 14,
+            "0.5": 14,
+            "1.0": 14
+        },
+        "justine_v0": {
+            "0.0": 14,
+            "0.5": 14,
+            "1.0": 14
+        },
+        "justine_optimization_1": {
+            "1.0": 11,
+            "0.5": 12,
+            "0.0": 10
+        },
+        "gold_standard": 14,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 35,
+            "0.5": 37,
+            "0.0": 35
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 7,
+            "0.5": 10,
+            "0.0": 10
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 15,
+            "0.5": 9,
+            "0.0": 10
+        },
+        "Llama3_finetuned": {
+            "1.0": 14,
+            "0.5": 12,
+            "0.0": 9
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 20,
+            "0.5": 21,
+            "0.0": 31
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 44,
+            "0.5": 38,
+            "0.0": 23
+        }
+    },
+    "spider_soccer_2": {
+        "Llama3_finetuned_dc": {
+            "0.0": 16,
+            "0.5": 16,
+            "1.0": 16
+        },
+        "justine_v0": {
+            "0.0": 16,
+            "0.5": 16,
+            "1.0": 16
+        },
+        "justine_optimization_1": {
+            "1.0": 14,
+            "0.5": 13,
+            "0.0": 11
+        },
+        "gold_standard": 16,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 40,
+            "0.5": 22,
+            "0.0": 15
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 11,
+            "0.5": 12,
+            "0.0": 9
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 9,
+            "0.5": 16,
+            "0.0": 13
+        },
+        "Llama3_finetuned": {
+            "1.0": 17,
+            "0.5": 18,
+            "0.0": 15
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 28,
+            "0.5": 16,
+            "0.0": 16
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 31,
+            "0.5": 45,
+            "0.0": 31
+        }
+    },
+    "spider_swimming": {
+        "Llama3_finetuned_dc": {
+            "0.0": 37,
+            "0.5": 37,
+            "1.0": 37
+        },
+        "justine_v0": {
+            "0.0": 37,
+            "0.5": 37,
+            "1.0": 35
+        },
+        "justine_optimization_1": {
+            "0.0": 37,
+            "0.5": 37,
+            "1.0": 37
+        },
+        "gold_standard": 37,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 115,
+            "0.5": 105,
+            "0.0": 97
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 22,
+            "0.5": 44,
+            "0.0": 49
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 29,
+            "0.5": 48,
+            "0.0": 26
+        },
+        "Llama3_finetuned": {
+            "1.0": 45,
+            "0.5": 58,
+            "0.0": 46
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 49,
+            "0.5": 57,
+            "0.0": 69
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 121,
+            "0.5": 90,
+            "0.0": 101
+        }
+    },
+    "spider_theme_gallery": {
+        "Llama3_finetuned_dc": {
+            "0.0": 26,
+            "0.5": 26,
+            "1.0": 26
+        },
+        "justine_v0": {
+            "0.0": 26,
+            "0.5": 26,
+            "1.0": 26
+        },
+        "justine_optimization_1": {
+            "0.0": 26,
+            "0.5": 26,
+            "1.0": 26
+        },
+        "gold_standard": 26,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 25,
+            "0.5": 18,
+            "0.0": 13
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 17,
+            "0.5": 28,
+            "0.0": 30
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 16,
+            "0.5": 20,
+            "0.0": 13
+        },
+        "Llama3_finetuned": {
+            "1.0": 17,
+            "0.5": 17,
+            "0.0": 13
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 32,
+            "0.5": 37,
+            "0.0": 31
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 51,
+            "0.5": 53,
+            "0.0": 52
+        }
+    },
+    "spider_workshop_paper": {
+        "Llama3_finetuned_dc": {
+            "0.0": 22,
+            "0.5": 22,
+            "1.0": 22
+        },
+        "justine_v0": {
+            "0.0": 22,
+            "0.5": 22,
+            "1.0": 22
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 22,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 27,
+            "0.5": 42,
+            "0.0": 21
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 22,
+            "0.5": 23,
+            "0.0": 23
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 15,
+            "0.5": 19,
+            "0.0": 11
+        },
+        "Llama3_finetuned": {
+            "1.0": 15,
+            "0.5": 20,
+            "0.0": 17
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 22,
+            "0.5": 29,
+            "0.0": 31
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 42,
+            "0.5": 44,
+            "0.0": 38
+        }
+    },
+    "wikidb_alpha-defensins": {
+        "Llama3_finetuned_dc": {
+            "0.0": 23,
+            "0.5": 23,
+            "1.0": 23
+        },
+        "justine_v0": {
+            "0.0": 23,
+            "0.5": 23,
+            "1.0": 23
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 23,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 55,
+            "0.5": 52,
+            "0.0": 25
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 55,
+            "0.5": 87,
+            "0.0": 64
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 60,
+            "0.5": 31,
+            "0.0": 26
+        },
+        "Llama3_finetuned": {
+            "1.0": 41,
+            "0.5": 56,
+            "0.0": 25
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 60,
+            "0.5": 97,
+            "0.0": 94
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 132,
+            "0.5": 127,
+            "0.0": 155
+        }
+    },
+    "wikidb_burial-vault": {
+        "Llama3_finetuned_dc": {
+            "0.0": 72,
+            "0.5": 68,
+            "1.0": 66
+        },
+        "justine_v0": {
+            "0.0": 61,
+            "0.5": 61,
+            "1.0": 61
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 74,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 3123,
+            "0.5": 2209,
+            "0.0": 3130
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 2499,
+            "0.5": 2058,
+            "0.0": 2032
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 1980,
+            "0.5": 2039,
+            "0.0": 2287
+        },
+        "Llama3_finetuned": {
+            "1.0": 2581,
+            "0.5": 2145,
+            "0.0": 2951
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 1806,
+            "0.5": 2814,
+            "0.0": 2472
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 3009,
+            "0.5": 2956,
+            "0.0": 2981
+        }
+    },
+    "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
+        "Llama3_finetuned_dc": {
+            "0.0": 88,
+            "0.5": 88,
+            "1.0": 88
+        },
+        "justine_v0": {
+            "0.0": 88,
+            "0.5": 87,
+            "1.0": 85
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 88,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 74,
+            "0.5": 79,
+            "0.0": 69
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 115,
+            "0.5": 67,
+            "0.0": 95
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 50,
+            "0.5": 68,
+            "0.0": 79
+        },
+        "Llama3_finetuned": {
+            "1.0": 84,
+            "0.5": 98,
+            "0.0": 47
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 175,
+            "0.5": 132,
+            "0.0": 90
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 423,
+            "0.5": 259,
+            "0.0": 267
+        }
+    },
+    "wikidb_heaphy-sketchbook-no-2": {
+        "Llama3_finetuned_dc": {
+            "0.0": 37,
+            "0.5": 37,
+            "1.0": 37
+        },
+        "justine_v0": {
+            "0.0": 37,
+            "0.5": 37,
+            "1.0": 37
+        },
+        "justine_optimization_1": {
+            "0.0": 37,
+            "0.5": 37,
+            "1.0": 37
+        },
+        "gold_standard": 37,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 116,
+            "0.5": 117,
+            "0.0": 205
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 181,
+            "0.5": 63,
+            "0.0": 81
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 44,
+            "0.5": 28,
+            "0.0": 25
+        },
+        "Llama3_finetuned": {
+            "1.0": 116,
+            "0.5": 40,
+            "0.0": 72
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 137,
+            "0.5": 157,
+            "0.0": 170
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 115,
+            "0.5": 160,
+            "0.0": 195
+        }
+    },
+    "wikidb_japans-top-100-waterfalls": {
+        "Llama3_finetuned_dc": {
+            "0.0": 95,
+            "0.5": 95,
+            "1.0": 95
+        },
+        "justine_v0": {
+            "0.5": 88,
+            "0.0": 95,
+            "1.0": 91
+        },
+        "justine_optimization_1": {
+            "0.0": 90,
+            "0.5": 89,
+            "1.0": 84
+        },
+        "gold_standard": 95,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 538,
+            "0.5": 1270,
+            "0.0": 710
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 253,
+            "0.5": 442,
+            "0.0": 608
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 255,
+            "0.5": 738,
+            "0.0": 241
+        },
+        "Llama3_finetuned": {
+            "1.0": 350,
+            "0.5": 718,
+            "0.0": 348
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 1286,
+            "0.5": 1377,
+            "0.0": 1477
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 358,
+            "0.5": 318,
+            "0.0": 630
+        }
+    },
+    "wikidb_novelette": {
+        "Llama3_finetuned_dc": {
+            "0.0": 86,
+            "0.5": 87,
+            "1.0": 87
+        },
+        "justine_v0": {
+            "0.0": 87,
+            "0.5": 78,
+            "1.0": 81
+        },
+        "justine_optimization_1": {},
+        "gold_standard": 87,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 378,
+            "0.5": 347,
+            "0.0": 129
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 173,
+            "0.5": 246,
+            "0.0": 272
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 95,
+            "0.5": 107,
+            "0.0": 104
+        },
+        "Llama3_finetuned": {
+            "1.0": 147,
+            "0.5": 204,
+            "0.0": 132
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 420,
+            "0.5": 494,
+            "0.0": 570
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 387,
+            "0.5": 352,
+            "0.0": 373
+        },
+        "Llama3_3_not_finetuned": {}
+    },
+    "wikidb_paz-domain-superfamily": {
+        "Llama3_finetuned_dc": {
+            "0.0": 98,
+            "0.5": 98,
+            "1.0": 98
+        },
+        "justine_v0": {
+            "0.0": 98,
+            "0.5": 98,
+            "1.0": 98
+        },
+        "justine_optimization_1": {
+            "0.0": 98,
+            "0.5": 96,
+            "1.0": 96
+        },
+        "gold_standard": 98,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 187,
+            "0.5": 208,
+            "0.0": 123
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 162,
+            "0.5": 157,
+            "0.0": 147
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 128,
+            "0.5": 113,
+            "0.0": 92
+        },
+        "Llama3_finetuned": {
+            "1.0": 104,
+            "0.5": 112,
+            "0.0": 101
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 338,
+            "0.5": 473,
+            "0.0": 389
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 273,
+            "0.5": 320,
+            "0.0": 375
+        }
+    },
+    "wikidb_peptidase-u32-collagenase-family": {
+        "Llama3_finetuned_dc": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "justine_v0": {
+            "0.0": 100,
+            "0.5": 100,
+            "1.0": 100
+        },
+        "justine_optimization_1": {
+            "0.5": 100
+        },
+        "gold_standard": 100,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 263,
+            "0.5": 173,
+            "0.0": 149
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 121,
+            "0.5": 140,
+            "0.0": 131
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 70,
+            "0.5": 68,
+            "0.0": 68
+        },
+        "Llama3_finetuned": {
+            "1.0": 82,
+            "0.5": 102,
+            "0.0": 59
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 435,
+            "0.5": 371,
+            "0.0": 479
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 397,
+            "0.5": 558,
+            "0.0": 452
+        }
+    },
+    "wikidb_rsga-gtpase-domain-protein-family": {
+        "Llama3_finetuned_dc": {
+            "0.0": 99,
+            "0.5": 99,
+            "1.0": 99
+        },
+        "justine_v0": {
+            "0.0": 99,
+            "0.5": 97,
+            "1.0": 99
+        },
+        "justine_optimization_1": {
+            "0.0": 99,
+            "0.5": 98,
+            "1.0": 99
+        },
+        "gold_standard": 99,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 51,
+            "0.5": 72,
+            "0.0": 84
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 166,
+            "0.5": 108,
+            "0.0": 93
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 43,
+            "0.5": 43,
+            "0.0": 38
+        },
+        "Llama3_finetuned": {
+            "1.0": 47,
+            "0.5": 59,
+            "0.0": 73
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 268,
+            "0.5": 203,
+            "0.0": 165
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 276,
+            "0.5": 322,
+            "0.0": 313
+        }
+    },
+    "wikidb_tammerkoski": {
+        "Llama3_finetuned_dc": {
+            "0.0": 26,
+            "0.5": 26,
+            "1.0": 26
+        },
+        "justine_v0": {
+            "0.0": 26,
+            "0.5": 26,
+            "1.0": 26
+        },
+        "justine_optimization_1": {
+            "1.0": 40,
+            "0.5": 41,
+            "0.0": 29
+        },
+        "gold_standard": 26,
+        "Llama3_finetuned_all_scenarios_3": {
+            "1.0": 172,
+            "0.5": 76,
+            "0.0": 142
+        },
+        "Llama3_not_finetuned": {
+            "1.0": 70,
+            "0.5": 84,
+            "0.0": 74
+        },
+        "Llama3_finetuned_all_scenarios": {
+            "1.0": 47,
+            "0.5": 62,
+            "0.0": 62
+        },
+        "Llama3_finetuned": {
+            "1.0": 89,
+            "0.5": 61,
+            "0.0": 34
+        },
+        "Llama3_2_not_finetuned": {
+            "1.0": 108,
+            "0.5": 107,
+            "0.0": 179
+        },
+        "Llama3_not_finetuned_explanation": {
+            "1.0": 111,
+            "0.5": 99,
+            "0.0": 97
+        }
+    }
+}

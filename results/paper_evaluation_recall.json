@@ -1,0 +1,482 @@
+{
+    "wikidb_japans-top-100-waterfalls": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5552957155643685
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider2_EU_soccer": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.742775471398364
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6296706286910368
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6042116300341677
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.693105206732536
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7442782464503849
+        }
+    },
+    "wikidb_heaphy-sketchbook-no-2": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6957447263391081
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_student_club": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8710102727959871
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_toxicology": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.83
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "wikidb_paz-domain-superfamily": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7714983429269144
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "wikidb_rsga-gtpase-domain-protein-family": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8241046628773047
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider2_Airlines": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.9149305555555556
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9644097222222222
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9259259259259259
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.9288194444444444
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7883680555555556
+        }
+    },
+    "spider_chinook_1": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8272574227119681
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider_swimming": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8701923076923077
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider_company_office": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8552631578947368
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider_theme_gallery": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.980952380952381
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_thrombosis_prediction": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.554042084818874
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_debit_card_specializing": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9366666666666668
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_card_games": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.45364817721960576
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_codebase_community": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6053665910808768
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_formula_1": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7425213675213675
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider_candidate_poll": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider_decoration_competition": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9666666666666667
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "wikidb_peptidase-u32-collagenase-family": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6969631041270998
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider_entrepreneur": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.95
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider_soccer_2": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9722222222222222
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "wikidb_tammerkoski": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9034409218232747
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider2_EntertainmentAgency": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.7858337740690682
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.9014580191050781
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8802948685301626
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.8702467467173349
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.8827985739750446
+        }
+    },
+    "bird_superhero": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7497222222222222
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "wikidb_novelette": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6602129607008881
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_california_schools": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.25753747334631
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider2_Pagila": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.8201234567901233
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.749426807760141
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.864373897707231
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.8456790123456791
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7730599647266314
+        }
+    },
+    "spider2_IPL": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.8675347222222222
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.870713141025641
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7775240384615385
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.9133680555555556
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.8596821581196581
+        }
+    },
+    "spider2_Db-IMDB": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.8122710622710623
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5818223443223444
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6557692307692307
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.8598901098901099
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7782051282051282
+        }
+    },
+    "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6935032139577594
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "wikidb_alpha-defensins": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8185897435897436
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "wikidb_burial-vault": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5024218213545246
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "bird_financial": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5650562545093796
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider2_school_scheduling": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.6817534317534317
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7465099715099714
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.7740740740740741
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.6826793576793578
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7298005698005698
+        }
+    },
+    "spider2_stacking": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.7348639455782313
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.810204081632653
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5333333333333333
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.7889455782312925
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.33239795918367354
+        }
+    },
+    "bird_european_football_2": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.682811028072785
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    },
+    "spider2_imdb_movies": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.8517480931766646
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8138682745825603
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.6770655534941249
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.8453988868274582
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7677922077922077
+        }
+    },
+    "spider2_California_Traffic_Collision": {
+        "justine_3_3_retry_with_feedback": {
+            "0.2_0.375_0.5_0.5": 0.6454534104028866
+        },
+        "justine_3_3_retry_with_same_prompt": {
+            "0.2_0.375_0.5_0.5": 0.5881344637099291
+        },
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.41898557858775587
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {
+            "0.2_0.375_0.5_0.5": 0.4917624625631319
+        },
+        "justine_3_3_retry_with_feedback_one_shot": {
+            "0.2_0.375_0.5_0.5": 0.7061141178402026
+        }
+    },
+    "spider_workshop_paper": {
+        "justine_3_3_retry_with_feedback": {},
+        "justine_3_3_retry_with_same_prompt": {},
+        "justine_3_3_one_prompt": {
+            "0.2_0.375_0.5_0.5": 0.8111111111111112
+        },
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_optimization_1": {},
+        "justine_3_3_retry_with_feedback_one_shot": {}
+    }
+}

@@ -1,242 +1,242 @@
 {
-    "spider2_Airlines": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 9
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 20
-        },
-        "gold_standard": 8
-    },
-    "spider2_California_Traffic_Collision": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 5
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 15
-        },
-        "gold_standard": 4
-    },
-    "spider2_Db-IMDB": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 19
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 24
-        },
-        "gold_standard": 13
-    },
-    "spider2_EntertainmentAgency": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 19
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 25
-        },
-        "gold_standard": 13
-    },
-    "spider2_EU_soccer": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 15
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 25
-        },
-        "gold_standard": 7
-    },
-    "spider2_imdb_movies": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 12
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 20
-        },
-        "gold_standard": 7
-    },
-    "spider2_IPL": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 8
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 21
-        },
-        "gold_standard": 8
-    },
-    "spider2_Pagila": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 17
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 29
-        },
-        "gold_standard": 16
-    },
-    "spider2_school_scheduling": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 20
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 35
-        },
-        "gold_standard": 15
-    },
-    "spider2_stacking": {
-        "justine_optimization_2": {
-            "0.2_0.375_0.5_0.5": 21
-        },
-        "justine_v0": {
-            "0.2_0.375_0.5_0.5": 27
-        },
-        "gold_standard": 7
-    },
     "wikidb_japans-top-100-waterfalls": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 7
+        "gold_standard": 154
+    },
+    "spider2_EU_soccer": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 1192
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 860
+        },
+        "gold_standard": 199
     },
     "wikidb_heaphy-sketchbook-no-2": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 2
+        "gold_standard": 23
     },
     "bird_student_club": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 8
+        "gold_standard": 48
     },
     "bird_toxicology": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 4
+        "gold_standard": 11
     },
     "wikidb_paz-domain-superfamily": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 7
+        "gold_standard": 63
     },
     "wikidb_rsga-gtpase-domain-protein-family": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 32
+    },
+    "spider2_Airlines": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 116
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 78
+        },
+        "gold_standard": 35
     },
     "spider_chinook_1": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 11
+        "gold_standard": 64
     },
     "spider_swimming": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 4
+        "gold_standard": 25
     },
     "spider_company_office": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 17
     },
     "spider_theme_gallery": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 13
     },
     "bird_thrombosis_prediction": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 64
     },
     "bird_debit_card_specializing": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 5
+        "gold_standard": 21
     },
     "bird_card_games": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 7
+        "gold_standard": 119
     },
     "bird_codebase_community": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 8
+        "gold_standard": 71
     },
     "bird_formula_1": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 13
+        "gold_standard": 94
     },
     "spider_candidate_poll": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 2
+        "gold_standard": 14
     },
     "spider_decoration_competition": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 12
     },
     "wikidb_peptidase-u32-collagenase-family": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 5
+        "gold_standard": 60
     },
     "spider_entrepreneur": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 2
+        "gold_standard": 10
     },
     "spider_soccer_2": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 11
     },
     "wikidb_tammerkoski": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 2
+        "gold_standard": 28
+    },
+    "spider2_EntertainmentAgency": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 232
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 189
+        },
+        "gold_standard": 76
     },
     "bird_superhero": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 10
+        "gold_standard": 31
     },
     "wikidb_novelette": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 4
+        "gold_standard": 58
     },
     "bird_california_schools": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 89
+    },
+    "spider2_Pagila": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 216
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 152
+        },
+        "gold_standard": 86
+    },
+    "spider2_IPL": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 208
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 140
+        },
+        "gold_standard": 52
+    },
+    "spider2_Db-IMDB": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 131
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 115
+        },
+        "gold_standard": 50
     },
     "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 31
     },
     "wikidb_alpha-defensins": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 2
+        "gold_standard": 22
     },
     "wikidb_burial-vault": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 4
+        "gold_standard": 258
     },
     "bird_financial": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 8
+        "gold_standard": 55
+    },
+    "spider2_school_scheduling": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 226
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 149
+        },
+        "gold_standard": 75
+    },
+    "spider2_stacking": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 226
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 193
+        },
+        "gold_standard": 40
     },
     "bird_european_football_2": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 7
+        "gold_standard": 199
+    },
+    "spider2_imdb_movies": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 147
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 111
+        },
+        "gold_standard": 38
+    },
+    "spider2_California_Traffic_Collision": {
+        "justine_v0": {
+            "0.2_0.375_0.5_0.5": 784
+        },
+        "justine_optimization_2": {
+            "0.2_0.375_0.5_0.5": 556
+        },
+        "gold_standard": 120
     },
     "spider_workshop_paper": {
         "justine_v0": {},
         "justine_optimization_2": {},
-        "gold_standard": 3
+        "gold_standard": 11
     }
 }

@@ -1,0 +1,14 @@
+INSERT INTO `Individuals` (`Weight`, `People_ID`, `Height`, `Date_of_Birth`, `Name`) VALUES (80.0, 1, 1.899999999999999912, '1972-04-29', 'Francesco Postiglione');
+INSERT INTO `Startups` (`People_ID`, `Money_Requested`, `Entrepreneur_ID`, `Company`, `Investor`) VALUES (8, 110000.0, 6, 'Elizabeth Galton Ltd', 'Duncan Bannatyne');
+INSERT INTO `entrepreneur` (`Investor`, `Entrepreneur_ID`, `Money_Requested`, `Company`, `People_ID`) VALUES ('Doug Richard', 2, 120000.0, 'Grails Ltd', 2);
+INSERT INTO (`Company`, `Investor`, `Money_Requested`, `People_ID`, `Entrepreneur_ID`) VALUES ('IV Cam', 'Peter Jones', 50000.0, 5, 4);
+INSERT INTO (`Weight`, `Height`, `Name`, `Date_of_Birth`, `People_ID`) VALUES (75.0, 1.719999999999999974, 'Marco Gerini', '1971-08-05', 4);
+INSERT INTO `Startups_Funding` (`Entrepreneur_ID`, `People_ID`, `Investor`, `Company`, `Money_Requested`) VALUES (5, 6, 'Simon Woodroffe', 'Mycorrhizal Systems', 75000.0);
+INSERT INTO `Startups` (`People_ID`, `Investor`, `Company`, `Entrepreneur_ID`, `Money_Requested`) VALUES (3, 'Rachel Elnaugh', 'Le Beanock', 3, 54000.0);
+INSERT INTO (`Name`, `Weight`, `Date_of_Birth`, `People_ID`, `Height`) VALUES ('Fabrizio Buonocore', 45.0, '1977-04-28', 3, 1.830000000000000071);
+INSERT INTO VALUES (1, 'Duncan Bannatyne', 1, 150000.0, 'Umbrolly');
+INSERT INTO `people` (`Weight`, `Height`, `People_ID`, `Date_of_Birth`, `Name`) VALUES (57.0, 1.860000000000000097, 2, '1975-08-27', 'Leonardo Binchi');
+INSERT INTO `people` (`People_ID`, `Height`, `Weight`, `Name`, `Date_of_Birth`) VALUES (8, 1.949999999999999956, 76.0, 'Maurizio Felugo', '1981-03-04');
+INSERT INTO VALUES ('Goran Fiorentini', 89.0, 6, '1981-11-21', 1.780000000000000026);
+INSERT INTO (`Weight`, `People_ID`, `Name`, `Height`, `Date_of_Birth`) VALUES (67.0, 5, 'Roberto Calcaterra', 1.75, '1972-02-06');
+INSERT INTO `people` (`Date_of_Birth`, `Weight`, `People_ID`, `Name`, `Height`) VALUES ('1974-09-28', 58.0, 7, 'Alberto Angelini', 1.820000000000000062);

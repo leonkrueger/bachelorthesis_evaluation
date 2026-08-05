@@ -1,0 +1,15 @@
+INSERT INTO `Polls` VALUES ('WNBC/Marist Poll', 2, 0.1700000000000000122, 0.9000000000000000222, 3, 0.4199999999999999845, 'Feb 12–15, 2007', 0.3200000000000000066);
+INSERT INTO `people` (`Height`, `Weight`, `People_ID`, `Sex`, `Name`, `Date_of_Birth`) VALUES (200.0, 94.0, 3, 'F', 'Stéphane Antiga', '03.02.1976');
+INSERT INTO `Individuals` VALUES ('06.10.1976', 188.0, 'M', 83.0, 1, 'Hubert Henno');
+INSERT INTO `Polls` (`Poll_Source`, `Support_rate`, `Unsure_rate`, `Oppose_rate`, `People_ID`, `Candidate_ID`, `Date`, `Consider_rate`) VALUES ('Newsweek Poll', 0.2399999999999999912, 0.2000000000000000111, 0.4299999999999999934, 9, 6, 'Nov 9–10, 2006', 0.2700000000000000177);
+INSERT INTO `candidate` VALUES (0.4000000000000000222, 'Nov 9–10, 2006', 0.3200000000000000066, 0.2999999999999999889, 0.2399999999999999912, 5, 'Newsweek Poll', 7);
+INSERT INTO `Individuals` VALUES ('Philippe Barça-Cysique', '22.04.1977', 88.0, 'M', 194.0, 8);
+INSERT INTO `PollResults` VALUES ('Feb 13–14, 2007', 0.1799999999999999934, 3, 0.2999999999999999889, 0.4400000000000000022, 0.3400000000000000244, 'FOX News/Opinion Dynamics Poll', 4);
+INSERT INTO (`Date`, `Support_rate`, `Candidate_ID`, `Oppose_rate`, `Consider_rate`, `People_ID`, `Unsure_rate`, `Poll_Source`) VALUES ('Feb 12–15, 2007', 0.25, 1, 0.4299999999999999934, 0.2999999999999999889, 1, 0.2000000000000000111, 'WNBC/Marist Poll');
+INSERT INTO (`Sex`, `People_ID`, `Name`, `Weight`, `Height`, `Date_of_Birth`) VALUES ('M', 4, 'Laurent Capet', 92.0, 202.0, '05.05.1972');
+INSERT INTO `people` (`Sex`, `Name`, `Height`, `Weight`, `People_ID`, `Date_of_Birth`) VALUES ('M', 'Dominique Daquin', 197.0, 85.0, 2, '10.11.1972');
+INSERT INTO `Individuals` (`Weight`, `Sex`, `People_ID`, `Name`, `Height`, `Date_of_Birth`) VALUES (90.0, 'F', 5, 'Frantz Granvorka', 195.0, '10.03.1976');
+INSERT INTO `people` VALUES ('M', 82.0, 'Guillaume Samica', 196.0, '28.09.1981', 9);
+INSERT INTO `people` (`Weight`, `Date_of_Birth`, `Sex`, `People_ID`, `Name`, `Height`) VALUES (89.0, '20.08.1970', 'M', 7, 'Loïc De Kergret', 193.0);
+INSERT INTO `Individuals` VALUES ('Vincent Montméat', '01.09.1977', 196.0, 'M', 6, 88.0);
+INSERT INTO (`People_ID`, `Consider_rate`, `Candidate_ID`, `Unsure_rate`, `Poll_Source`, `Oppose_rate`, `Support_rate`, `Date`) VALUES (6, 0.2000000000000000111, 4, 0.2000000000000000111, 'Newsweek Poll', 0.4500000000000000111, 0.3300000000000000155, 'Nov 9–10, 2006');

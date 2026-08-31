@@ -1335,5 +1335,876 @@
         ],
         "database_name": "soccer_2",
         "table_name": "Tryout"
+    },
+    {
+        "query": [
+            "INSERT INTO aircrafts_data (aircraft_code, model, range) VALUES ('CN1', '{\"en\": \"Cessna 208 Caravan\", \"ru\": \"\u0421\u0435\u0441\u0441\u043d\u0430 208 \u041a\u0430\u0440\u0430\u0432\u0430\u043d\"}', 1200);\n",
+            "INSERT INTO aircrafts_data (aircraft_code, model, range) VALUES ('733', '{\"en\": \"Boeing 737-300\", \"ru\": \"\u0411\u043e\u0438\u043d\u0433 737-300\"}', 4200);\n",
+            "INSERT INTO aircrafts_data (aircraft_code, model, range) VALUES ('321', '{\"en\": \"Airbus A321-200\", \"ru\": \"\u0410\u044d\u0440\u043e\u0431\u0443\u0441 A321-200\"}', 5600);\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "aircrafts_data"
+    },
+    {
+        "query": [
+            "INSERT INTO airports_data (airport_code, airport_name, city, coordinates, timezone) VALUES ('DME', '{\"en\": \"Domodedovo International Airport\", \"ru\": \"\u0414\u043e\u043c\u043e\u0434\u0435\u0434\u043e\u0432\u043e\"}', '{\"en\": \"Moscow\", \"ru\": \"\u041c\u043e\u0441\u043a\u0432\u0430\"}', '(37.9062995910644531,55.4087982177734375)', 'Europe/Moscow');\n",
+            "INSERT INTO airports_data (airport_code, airport_name, city, coordinates, timezone) VALUES ('NNM', '{\"en\": \"Naryan Mar Airport\", \"ru\": \"\u041d\u0430\u0440\u044c\u044f\u043d-\u041c\u0430\u0440\"}', '{\"en\": \"Naryan-Mar\", \"ru\": \"\u041d\u0430\u0440\u044c\u044f\u043d-\u041c\u0430\u0440\"}', '(53.1218986511230469,67.6399993896484375)', 'Europe/Moscow');\n",
+            "INSERT INTO airports_data (airport_code, airport_name, city, coordinates, timezone) VALUES ('UUD', '{\"en\": \"Ulan-Ude Airport (Mukhino)\", \"ru\": \"\u0411\u0430\u0439\u043a\u0430\u043b\"}', '{\"en\": \"Ulan-ude\", \"ru\": \"\u0423\u043b\u0430\u043d-\u0423\u0434\u044d\"}', '(107.438003540039062,51.80780029296875)', 'Asia/Irkutsk');\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "airports_data"
+    },
+    {
+        "query": [
+            "INSERT INTO boarding_passes (ticket_no, flight_id, boarding_no, seat_no) VALUES ('0005434325736', 3627, 22, '21C');\n",
+            "INSERT INTO boarding_passes (ticket_no, flight_id, boarding_no, seat_no) VALUES ('0005435126808', 11520, 31, '16A');\n",
+            "INSERT INTO boarding_passes (ticket_no, flight_id, boarding_no, seat_no) VALUES ('0005435132890', 33061, 16, '22C');\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "boarding_passes"
+    },
+    {
+        "query": [
+            "INSERT INTO bookings (book_ref, book_date, total_amount) VALUES ('2D83B5', '2017-08-15 08:26:00+03', 54000);\n",
+            "INSERT INTO bookings (book_ref, book_date, total_amount) VALUES ('DF8C3B', '2017-08-09 18:52:00+03', 52000);\n",
+            "INSERT INTO bookings (book_ref, book_date, total_amount) VALUES ('463686', '2017-08-10 10:00:00+03', 72200);\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "bookings"
+    },
+    {
+        "query": [
+            "INSERT INTO flights (flight_id, flight_no, scheduled_departure, scheduled_arrival, departure_airport, arrival_airport, status, aircraft_code, actual_departure, actual_arrival) VALUES (26975, 'PG0151', '2017-07-26 14:00:00+03', '2017-07-26 14:30:00+03', 'MCX', 'MRV', 'Arrived', 'SU9', '2017-07-26 14:01:00+03', '2017-07-26 14:31:00+03');\n",
+            "INSERT INTO flights (flight_id, flight_no, scheduled_departure, scheduled_arrival, departure_airport, arrival_airport, status, aircraft_code, actual_departure, actual_arrival) VALUES (32933, 'PG0147', '2017-08-06 16:55:00+03', '2017-08-06 18:55:00+03', 'OGZ', 'VKO', 'Arrived', 'SU9', '2017-08-06 16:58:00+03', '2017-08-06 19:00:00+03');\n",
+            "INSERT INTO flights (flight_id, flight_no, scheduled_departure, scheduled_arrival, departure_airport, arrival_airport, status, aircraft_code, actual_departure, actual_arrival) VALUES (11766, 'PG0610', '2017-08-14 12:45:00+03', '2017-08-14 16:25:00+03', 'KZN', 'ROV', 'Arrived', 'CN1', '2017-08-14 16:07:00+03', '2017-08-14 19:49:00+03');\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "flights"
+    },
+    {
+        "query": [
+            "INSERT INTO seats (aircraft_code, seat_no, fare_conditions) VALUES ('CN1', '1B', 'Economy');\n",
+            "INSERT INTO seats (aircraft_code, seat_no, fare_conditions) VALUES ('773', '33E', 'Economy');\n",
+            "INSERT INTO seats (aircraft_code, seat_no, fare_conditions) VALUES ('320', '1D', 'Business');\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "seats"
+    },
+    {
+        "query": [
+            "INSERT INTO ticket_flights (ticket_no, flight_id, fare_conditions, amount) VALUES ('0005433345570', 17105, 'Economy', 7900);\n",
+            "INSERT INTO ticket_flights (ticket_no, flight_id, fare_conditions, amount) VALUES ('0005435929600', 4927, 'Economy', 5300);\n",
+            "INSERT INTO ticket_flights (ticket_no, flight_id, fare_conditions, amount) VALUES ('0005432783563', 15384, 'Economy', 9300);\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "ticket_flights"
+    },
+    {
+        "query": [
+            "INSERT INTO tickets (ticket_no, book_ref, passenger_id) VALUES ('0005434550857', '3A9E0F', '9857 849356');\n",
+            "INSERT INTO tickets (ticket_no, book_ref, passenger_id) VALUES ('0005435615925', '345E98', '9436 977857');\n",
+            "INSERT INTO tickets (ticket_no, book_ref, passenger_id) VALUES ('0005433235774', '1FAB00', '9186 971483');\n"
+        ],
+        "database_name": "Airlines",
+        "table_name": "tickets"
+    },
+    {
+        "query": [
+            "INSERT INTO victims (id, case_id, party_number, victim_role, victim_sex, victim_age, victim_degree_of_injury, victim_seating_position, victim_safety_equipment_1, victim_safety_equipment_2, victim_ejected) VALUES (2910305, 7045779.0, 1, 'driver', 'male', 40.0, 'complaint of pain', 'driver', 'air bag deployed', 'lap/shoulder harness used', 'not ejected');\n",
+            "INSERT INTO victims (id, case_id, party_number, victim_role, victim_sex, victim_age, victim_degree_of_injury, victim_seating_position, victim_safety_equipment_1, victim_safety_equipment_2, victim_ejected) VALUES (991390, 5131178.0, 1, 'bicyclist', NULL, 34.0, 'other visible injury', 'position unknown', NULL, NULL, 'unknown');\n",
+            "INSERT INTO victims (id, case_id, party_number, victim_role, victim_sex, victim_age, victim_degree_of_injury, victim_seating_position, victim_safety_equipment_1, victim_safety_equipment_2, victim_ejected) VALUES (1618801, 1582439.0, 2, 'passenger', 'female', 17.0, 'no injury', 'passenger seat 3', 'lap/shoulder harness used', NULL, 'unknown');\n"
+        ],
+        "database_name": "California_Traffic_Collision",
+        "table_name": "victims"
+    },
+    {
+        "query": [
+            "INSERT INTO collisions (case_id, jurisdiction, officer_id, reporting_district, chp_shift, population, county_city_location, county_location, special_condition, beat_type, chp_beat_type, city_division_lapd, chp_beat_class, beat_number, primary_road, secondary_road, distance, direction, intersection, weather_1, weather_2, state_highway_indicator, caltrans_county, caltrans_district, state_route, route_suffix, postmile_prefix, postmile, location_type, ramp_intersection, side_of_highway, tow_away, collision_severity, killed_victims, injured_victims, party_count, primary_collision_factor, pcf_violation_code, pcf_violation_category, pcf_violation, pcf_violation_subsection, hit_and_run, type_of_collision, motor_vehicle_involved_with, pedestrian_action, road_surface, road_condition_1, road_condition_2, lighting, control_device, chp_road_type, pedestrian_collision, bicycle_collision, motorcycle_collision, truck_collision, not_private_property, alcohol_involved, statewide_vehicle_type_at_fault, chp_vehicle_type_at_fault, severe_injury_count, other_visible_injury_count, complaint_of_pain_injury_count, pedestrian_killed_count, pedestrian_injured_count, bicyclist_killed_count, bicyclist_injured_count, motorcyclist_killed_count, motorcyclist_injured_count, primary_ramp, secondary_ramp, latitude, longitude, collision_date, collision_time, process_date) VALUES (901957.0, 1956.0, '1218', '20', 'not chp', '50000 to 100000', 1956, 'los angeles', 0.0, 'not chp', 'not chp', NULL, 'not chp', '002', 'DIAMOND ST', 'N CATALINA AV', 54.0, 'east', 0.0, 'clear', NULL, 0.0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.0, 'property damage only', 0.0, 0.0, 2.0, 'unknown', NULL, 'unknown', NULL, NULL, 'misdemeanor', 'sideswipe', 'parked motor vehicle', 'no pedestrian involved', 'dry', 'normal', NULL, 'dark with street lights', 'functioning', '0', 0, 0, 0, 0, 1.0, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0.0, NULL, NULL, NULL, NULL, '2003-07-12', NULL, '2003-09-05');\n",
+            "INSERT INTO collisions (case_id, jurisdiction, officer_id, reporting_district, chp_shift, population, county_city_location, county_location, special_condition, beat_type, chp_beat_type, city_division_lapd, chp_beat_class, beat_number, primary_road, secondary_road, distance, direction, intersection, weather_1, weather_2, state_highway_indicator, caltrans_county, caltrans_district, state_route, route_suffix, postmile_prefix, postmile, location_type, ramp_intersection, side_of_highway, tow_away, collision_severity, killed_victims, injured_victims, party_count, primary_collision_factor, pcf_violation_code, pcf_violation_category, pcf_violation, pcf_violation_subsection, hit_and_run, type_of_collision, motor_vehicle_involved_with, pedestrian_action, road_surface, road_condition_1, road_condition_2, lighting, control_device, chp_road_type, pedestrian_collision, bicycle_collision, motorcycle_collision, truck_collision, not_private_property, alcohol_involved, statewide_vehicle_type_at_fault, chp_vehicle_type_at_fault, severe_injury_count, other_visible_injury_count, complaint_of_pain_injury_count, pedestrian_killed_count, pedestrian_injured_count, bicyclist_killed_count, bicyclist_injured_count, motorcyclist_killed_count, motorcyclist_injured_count, primary_ramp, secondary_ramp, latitude, longitude, collision_date, collision_time, process_date) VALUES (5909797.0, 3313.0, '1488', 'N', 'not chp', '>250000', 3313, 'riverside', 0.0, 'not chp', 'not chp', NULL, 'not chp', 'T43', 'PALM AV', 'BANDINI AV', 0.0, NULL, 1.0, 'clear', NULL, 0.0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1.0, 'pain', 0.0, 2.0, 2.0, 'vehicle code violation', NULL, 'traffic signals and signs', 21453.0, 'A', 'not hit and run', NULL, 'other motor vehicle', 'no pedestrian involved', 'dry', 'normal', NULL, 'daylight', 'functioning', '0', 0, 0, 0, 0, 1.0, NULL, 'pickup or panel truck', 'pickups & panels', 0, 0, 2, 0, 0, 0, 0, 0, 0.0, NULL, NULL, NULL, NULL, '2013-01-08', '10:01:00', '2014-01-21');\n",
+            "INSERT INTO collisions (case_id, jurisdiction, officer_id, reporting_district, chp_shift, population, county_city_location, county_location, special_condition, beat_type, chp_beat_type, city_division_lapd, chp_beat_class, beat_number, primary_road, secondary_road, distance, direction, intersection, weather_1, weather_2, state_highway_indicator, caltrans_county, caltrans_district, state_route, route_suffix, postmile_prefix, postmile, location_type, ramp_intersection, side_of_highway, tow_away, collision_severity, killed_victims, injured_victims, party_count, primary_collision_factor, pcf_violation_code, pcf_violation_category, pcf_violation, pcf_violation_subsection, hit_and_run, type_of_collision, motor_vehicle_involved_with, pedestrian_action, road_surface, road_condition_1, road_condition_2, lighting, control_device, chp_road_type, pedestrian_collision, bicycle_collision, motorcycle_collision, truck_collision, not_private_property, alcohol_involved, statewide_vehicle_type_at_fault, chp_vehicle_type_at_fault, severe_injury_count, other_visible_injury_count, complaint_of_pain_injury_count, pedestrian_killed_count, pedestrian_injured_count, bicyclist_killed_count, bicyclist_injured_count, motorcyclist_killed_count, motorcyclist_injured_count, primary_ramp, secondary_ramp, latitude, longitude, collision_date, collision_time, process_date) VALUES (8043406.0, 3607.0, '80248', '231', 'not chp', '100000 to 250000', 3607, 'san bernardino', 0.0, 'not chp', 'not chp', NULL, 'not chp', '062', 'CEDAR ST', 'SULTANA AV', 0.0, NULL, 1.0, 'clear', NULL, 0.0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1.0, 'property damage only', 0.0, 0.0, 2.0, 'vehicle code violation', NULL, 'automobile right of way', 21802.0, 'A', 'not hit and run', 'broadside', 'other motor vehicle', 'no pedestrian involved', 'dry', 'normal', NULL, 'daylight', 'functioning', '0', 0, 0, 0, 0, 1.0, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0.0, NULL, NULL, NULL, NULL, '2016-04-07', '14:08:00', '2016-05-20');\n"
+        ],
+        "database_name": "California_Traffic_Collision",
+        "table_name": "collisions"
+    },
+    {
+        "query": [
+            "INSERT INTO case_ids (case_id, db_year) VALUES (5343477.0, 2021);\n",
+            "INSERT INTO case_ids (case_id, db_year) VALUES (3536702.0, 2018);\n",
+            "INSERT INTO case_ids (case_id, db_year) VALUES (7117979.0, 2021);\n"
+        ],
+        "database_name": "California_Traffic_Collision",
+        "table_name": "case_ids"
+    },
+    {
+        "query": [
+            "INSERT INTO parties (id, case_id, party_number, party_type, at_fault, party_sex, party_age, party_sobriety, party_drug_physical, direction_of_travel, party_safety_equipment_1, party_safety_equipment_2, financial_responsibility, hazardous_materials, cellphone_in_use, cellphone_use_type, school_bus_related, oaf_violation_code, oaf_violation_category, oaf_violation_section, oaf_violation_suffix, other_associate_factor_1, other_associate_factor_2, party_number_killed, party_number_injured, movement_preceding_collision, vehicle_year, vehicle_make, statewide_vehicle_type, chp_vehicle_type_towing, chp_vehicle_type_towed, party_race) VALUES (612544, 4435270.0, 1, 'driver', 1, 'male', 25.0, 'had not been drinking', NULL, 'east', 'air bag not deployed', 'lap/shoulder harness used', 'proof of insurance obtained', NULL, 0.0, 'cellphone not in use', NULL, NULL, NULL, NULL, NULL, 'inattention', NULL, 0, 0, 'proceeding straight', 1998.0, 'subaru', 'passenger car', 'passenger car, station', '00', 'white');\n",
+            "INSERT INTO parties (id, case_id, party_number, party_type, at_fault, party_sex, party_age, party_sobriety, party_drug_physical, direction_of_travel, party_safety_equipment_1, party_safety_equipment_2, financial_responsibility, hazardous_materials, cellphone_in_use, cellphone_use_type, school_bus_related, oaf_violation_code, oaf_violation_category, oaf_violation_section, oaf_violation_suffix, other_associate_factor_1, other_associate_factor_2, party_number_killed, party_number_injured, movement_preceding_collision, vehicle_year, vehicle_make, statewide_vehicle_type, chp_vehicle_type_towing, chp_vehicle_type_towed, party_race) VALUES (729163, 4506907.0, 3, 'parked vehicle', 0, NULL, NULL, 'not applicable', 'not applicable', 'south', NULL, NULL, 'not applicable', NULL, 0.0, 'cellphone not in use', NULL, NULL, NULL, NULL, NULL, 'none apparent', NULL, 0, 0, 'parked', 2008.0, 'dodge', 'passenger car', 'passenger car, station', '00', NULL);\n",
+            "INSERT INTO parties (id, case_id, party_number, party_type, at_fault, party_sex, party_age, party_sobriety, party_drug_physical, direction_of_travel, party_safety_equipment_1, party_safety_equipment_2, financial_responsibility, hazardous_materials, cellphone_in_use, cellphone_use_type, school_bus_related, oaf_violation_code, oaf_violation_category, oaf_violation_section, oaf_violation_suffix, other_associate_factor_1, other_associate_factor_2, party_number_killed, party_number_injured, movement_preceding_collision, vehicle_year, vehicle_make, statewide_vehicle_type, chp_vehicle_type_towing, chp_vehicle_type_towed, party_race) VALUES (7461637, 90023609.0, 1, 'driver', 1, 'male', NULL, 'impairment unknown', 'G', 'west', 'unknown', 'unknown', 'proof of insurance obtained', NULL, 0.0, 'cellphone not in use', NULL, NULL, NULL, NULL, NULL, 'none apparent', NULL, 0, 0, 'entering traffic', 1999.0, 'acura', 'passenger car', 'passenger car, station', NULL, 'hispanic');\n"
+        ],
+        "database_name": "California_Traffic_Collision",
+        "table_name": "parties"
+    },
+    {
+        "query": [
+            "INSERT INTO Movie (index, MID, title, year, rating, num_votes) VALUES (529, 'tt0053126', 'North West Frontier', '1959', 7.200000000000000177, 1867);\n",
+            "INSERT INTO Movie (index, MID, title, year, rating, num_votes) VALUES (3164, 'tt0057332', 'Mujhe Jeene Do', '1963', 7.900000000000000355, 55);\n",
+            "INSERT INTO Movie (index, MID, title, year, rating, num_votes) VALUES (1427, 'tt0285958', 'Pyaar Ishq Aur Mohabbat', '2001', 4.099999999999999644, 507);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "Movie"
+    },
+    {
+        "query": [
+            "INSERT INTO Genre (index, Name, GID) VALUES (33, 'Biography, Comedy, Drama            ', 33);\n",
+            "INSERT INTO Genre (index, Name, GID) VALUES (170, 'Drama, Romance, War            ', 170);\n",
+            "INSERT INTO Genre (index, Name, GID) VALUES (80, 'Action, Adventure, Crime            ', 80);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "Genre"
+    },
+    {
+        "query": [
+            "INSERT INTO Language (index, Name, LAID) VALUES (25, 'Zulu', 25);\n",
+            "INSERT INTO Language (index, Name, LAID) VALUES (29, 'Bhojpuri', 29);\n",
+            "INSERT INTO Language (index, Name, LAID) VALUES (20, 'French', 20);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "Language"
+    },
+    {
+        "query": [
+            "INSERT INTO Country (index, Name, CID) VALUES (26, 'Hungary', 26);\n",
+            "INSERT INTO Country (index, Name, CID) VALUES (24, 'South Africa', 24);\n",
+            "INSERT INTO Country (index, Name, CID) VALUES (25, 'Egypt', 25);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "Country"
+    },
+    {
+        "query": [
+            "INSERT INTO Location (index, Name, LID) VALUES (317, 'Hotel Sea Princess Ark Bar Resstaurant, Mumbai, India', 317);\n",
+            "INSERT INTO Location (index, Name, LID) VALUES (34, 'Film City, Goregaon, Mumbai, Maharashtra, India', 34);\n",
+            "INSERT INTO Location (index, Name, LID) VALUES (372, 'Chiplun Railway Station, Chiplun, Maharashtra, India', 372);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "Location"
+    },
+    {
+        "query": [
+            "INSERT INTO M_Location (index, MID, LID, ID) VALUES (2203, 'tt1579748', 462.0, 2203);\n",
+            "INSERT INTO M_Location (index, MID, LID, ID) VALUES (372, 'tt0346457', NULL, 372);\n",
+            "INSERT INTO M_Location (index, MID, LID, ID) VALUES (386, 'tt0100095', 170.0, 386);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "M_Location"
+    },
+    {
+        "query": [
+            "INSERT INTO M_Country (index, MID, CID, ID) VALUES (2492, 'tt0371558', 2.0, 2492);\n",
+            "INSERT INTO M_Country (index, MID, CID, ID) VALUES (2846, 'tt0061366', 2.0, 2846);\n",
+            "INSERT INTO M_Country (index, MID, CID, ID) VALUES (1689, 'tt0173080', 2.0, 1689);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "M_Country"
+    },
+    {
+        "query": [
+            "INSERT INTO M_Language (index, MID, LAID, ID) VALUES (1840, 'tt2063745', 2, 1840);\n",
+            "INSERT INTO M_Language (index, MID, LAID, ID) VALUES (2312, 'tt0089959', 2, 2312);\n",
+            "INSERT INTO M_Language (index, MID, LAID, ID) VALUES (2490, 'tt0028217', 1, 2490);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "M_Language"
+    },
+    {
+        "query": [
+            "INSERT INTO M_Genre (index, MID, GID, ID) VALUES (2165, 'tt2033947', 35, 2165);\n",
+            "INSERT INTO M_Genre (index, MID, GID, ID) VALUES (1408, 'tt0076527', 54, 1408);\n",
+            "INSERT INTO M_Genre (index, MID, GID, ID) VALUES (3252, 'tt1183944', 5, 3252);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "M_Genre"
+    },
+    {
+        "query": [
+            "INSERT INTO Person (index, PID, Name, Gender) VALUES (21872, 'nm1522464', ' Master Bobby', 'Male');\n",
+            "INSERT INTO Person (index, PID, Name, Gender) VALUES (2746, 'nm4470559', ' Subhrajyoti Barat', 'Male');\n",
+            "INSERT INTO Person (index, PID, Name, Gender) VALUES (29352, 'nm4563110', ' Megha Suresh', 'Female');\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "Person"
+    },
+    {
+        "query": [
+            "INSERT INTO M_Producer (index, MID, PID, ID) VALUES (9936, 'tt0045529', ' nm6334631', 9936);\n",
+            "INSERT INTO M_Producer (index, MID, PID, ID) VALUES (7063, 'tt0297241', ' nm0438506', 7063);\n",
+            "INSERT INTO M_Producer (index, MID, PID, ID) VALUES (11385, 'tt1821385', ' nm9749644', 11385);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "M_Producer"
+    },
+    {
+        "query": [
+            "INSERT INTO M_Director (index, MID, PID, ID) VALUES (2890, 'tt0113455', 'nm0997778', 2890);\n",
+            "INSERT INTO M_Director (index, MID, PID, ID) VALUES (2319, 'tt0186871', 'nm0695162', 2319);\n",
+            "INSERT INTO M_Director (index, MID, PID, ID) VALUES (1702, 'tt0071811', 'nm0004433', 1702);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "M_Director"
+    },
+    {
+        "query": [
+            "INSERT INTO M_Cast (index, MID, PID, ID) VALUES (50660, 'tt1228726', ' nm7931138', 50660);\n",
+            "INSERT INTO M_Cast (index, MID, PID, ID) VALUES (70779, 'tt0220597', ' nm1241570', 70779);\n",
+            "INSERT INTO M_Cast (index, MID, PID, ID) VALUES (26288, 'tt0383975', ' nm1911618', 26288);\n"
+        ],
+        "database_name": "Db-IMDB",
+        "table_name": "M_Cast"
+    },
+    {
+        "query": [
+            "INSERT INTO Agents (AgentID, AgtFirstName, AgtLastName, AgtStreetAddress, AgtCity, AgtState, AgtZipCode, AgtPhoneNumber, DateHired, Salary, CommissionRate) VALUES (4, 'Karen', 'Smith', '30301 - 166th Ave. N.E.', 'Seattle', 'WA', '98125', '555-2551', '1998-03-05', 22000, 0.05500000000000000027);\n",
+            "INSERT INTO Agents (AgentID, AgtFirstName, AgtLastName, AgtStreetAddress, AgtCity, AgtState, AgtZipCode, AgtPhoneNumber, DateHired, Salary, CommissionRate) VALUES (8, 'Maria', 'Patterson', '3445 Cheyenne Road', 'Bellevue', 'WA', '98006', '555-2291', '1997-09-03', 30000, 0.04000000000000000083);\n",
+            "INSERT INTO Agents (AgentID, AgtFirstName, AgtLastName, AgtStreetAddress, AgtCity, AgtState, AgtZipCode, AgtPhoneNumber, DateHired, Salary, CommissionRate) VALUES (5, 'Marianne', 'Wier', '908 W. Capital Way', 'Tacoma', 'WA', '98413', '555-2606', '1998-02-02', 24500, 0.04499999999999999834);\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Agents"
+    },
+    {
+        "query": [
+            "INSERT INTO Customers (CustomerID, CustFirstName, CustLastName, CustStreetAddress, CustCity, CustState, CustZipCode, CustPhoneNumber) VALUES (10008, 'Darren', 'Gehring', '2601 Seaview Lane', 'Kirkland', 'WA', '98033', '555-2616');\n",
+            "INSERT INTO Customers (CustomerID, CustFirstName, CustLastName, CustStreetAddress, CustCity, CustState, CustZipCode, CustPhoneNumber) VALUES (10008, 'Darren', 'Gehring', '2601 Seaview Lane', 'Kirkland', 'WA', '98033', '555-2616');\n",
+            "INSERT INTO Customers (CustomerID, CustFirstName, CustLastName, CustStreetAddress, CustCity, CustState, CustZipCode, CustPhoneNumber) VALUES (10001, 'Doris', 'Hartwig', '4726 - 11th Ave. N.E.', 'Seattle', 'WA', '98105', '555-2671');\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Customers"
+    },
+    {
+        "query": [
+            "INSERT INTO Engagements (EngagementNumber, StartDate, EndDate, StartTime, StopTime, ContractPrice, CustomerID, AgentID, EntertainerID) VALUES (95, '2018-01-16', '2018-01-19', '20:00:00', '01:00:00', 1550, 10010, 6, 1007);\n",
+            "INSERT INTO Engagements (EngagementNumber, StartDate, EndDate, StartTime, StopTime, ContractPrice, CustomerID, AgentID, EntertainerID) VALUES (2, '2017-09-02', '2017-09-06', '13:00:00', '15:00:00', 200, 10006, 4, 1004);\n",
+            "INSERT INTO Engagements (EngagementNumber, StartDate, EndDate, StartTime, StopTime, ContractPrice, CustomerID, AgentID, EntertainerID) VALUES (127, '2018-02-25', '2018-03-01', '20:00:00', '22:00:00', 500, 10010, 4, 1005);\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Engagements"
+    },
+    {
+        "query": [
+            "INSERT INTO Entertainer_Members (EntertainerID, MemberID, Status) VALUES (1012, 123, 2);\n",
+            "INSERT INTO Entertainer_Members (EntertainerID, MemberID, Status) VALUES (1007, 110, 1);\n",
+            "INSERT INTO Entertainer_Members (EntertainerID, MemberID, Status) VALUES (1006, 113, 1);\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Entertainer_Members"
+    },
+    {
+        "query": [
+            "INSERT INTO Entertainer_Styles (EntertainerID, StyleID, StyleStrength) VALUES (1006, 24, 2);\n",
+            "INSERT INTO Entertainer_Styles (EntertainerID, StyleID, StyleStrength) VALUES (1001, 21, 3);\n",
+            "INSERT INTO Entertainer_Styles (EntertainerID, StyleID, StyleStrength) VALUES (1013, 15, 1);\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Entertainer_Styles"
+    },
+    {
+        "query": [
+            "INSERT INTO Entertainers (EntertainerID, EntStageName, EntSSN, EntStreetAddress, EntCity, EntState, EntZipCode, EntPhoneNumber, EntWebPage, EntEMailAddress, DateEntered) VALUES (1011, 'Julia Schnebly', '888-65-1111', '2343 Harmony Lane', 'Seattle', 'WA', '99837', '555-9936', NULL, NULL, '1996-04-12');\n",
+            "INSERT INTO Entertainers (EntertainerID, EntStageName, EntSSN, EntStreetAddress, EntCity, EntState, EntZipCode, EntPhoneNumber, EntWebPage, EntEMailAddress, DateEntered) VALUES (1012, 'Susan McLain', '888-70-1121', '511 Lenora Ave', 'Bellevue', 'WA', '98006', '555-2301', 'www.greensleeves.com', 'susan@gs.com', '1998-10-12');\n",
+            "INSERT INTO Entertainers (EntertainerID, EntStageName, EntSSN, EntStreetAddress, EntCity, EntState, EntZipCode, EntPhoneNumber, EntWebPage, EntEMailAddress, DateEntered) VALUES (1009, 'Katherine Ehrlich', '888-61-1103', '777 Fenexet Blvd', 'Woodinville', 'WA', '98072', '555-0399', NULL, 'ke@mzo.com', '1998-09-13');\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Entertainers"
+    },
+    {
+        "query": [
+            "INSERT INTO Members (MemberID, MbrFirstName, MbrLastName, MbrPhoneNumber, Gender) VALUES (106, 'Mariya', 'Sergienko', '555-2526', 'F');\n",
+            "INSERT INTO Members (MemberID, MbrFirstName, MbrLastName, MbrPhoneNumber, Gender) VALUES (124, 'Caroline', 'Coie', '555-2306', 'F');\n",
+            "INSERT INTO Members (MemberID, MbrFirstName, MbrLastName, MbrPhoneNumber, Gender) VALUES (117, 'Luke', 'Patterson', '555-2316', 'M');\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Members"
+    },
+    {
+        "query": [
+            "INSERT INTO Musical_Preferences (CustomerID, StyleID, PreferenceSeq) VALUES (10004, 15, 1);\n",
+            "INSERT INTO Musical_Preferences (CustomerID, StyleID, PreferenceSeq) VALUES (10015, 1, 3);\n",
+            "INSERT INTO Musical_Preferences (CustomerID, StyleID, PreferenceSeq) VALUES (10007, 8, 1);\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Musical_Preferences"
+    },
+    {
+        "query": [
+            "INSERT INTO Musical_Styles (StyleID, StyleName) VALUES (5, '80''s Music');\n",
+            "INSERT INTO Musical_Styles (StyleID, StyleName) VALUES (24, 'Salsa');\n",
+            "INSERT INTO Musical_Styles (StyleID, StyleName) VALUES (15, 'Jazz');\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "Musical_Styles"
+    },
+    {
+        "query": [
+            "INSERT INTO ztblDays (DateField) VALUES ('2018-12-11');\n",
+            "INSERT INTO ztblDays (DateField) VALUES ('2017-03-22');\n",
+            "INSERT INTO ztblDays (DateField) VALUES ('2017-11-28');\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "ztblDays"
+    },
+    {
+        "query": [
+            "INSERT INTO ztblMonths (MonthYear, YearNumber, MonthNumber, MonthStart, MonthEnd, January, February, March, April, May, June, July, August, September, October, November, December) VALUES ('November 2017', 2017, 11, '2017-11-01', '2017-11-30', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0);\n",
+            "INSERT INTO ztblMonths (MonthYear, YearNumber, MonthNumber, MonthStart, MonthEnd, January, February, March, April, May, June, July, August, September, October, November, December) VALUES ('June 2019', 2019, 6, '2019-06-01', '2019-06-30', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0);\n",
+            "INSERT INTO ztblMonths (MonthYear, YearNumber, MonthNumber, MonthStart, MonthEnd, January, February, March, April, May, June, July, August, September, October, November, December) VALUES ('September 2018', 2018, 9, '2018-09-01', '2018-09-30', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0);\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "ztblMonths"
+    },
+    {
+        "query": [
+            "INSERT INTO ztblSkipLabels (LabelCount) VALUES (41);\n",
+            "INSERT INTO ztblSkipLabels (LabelCount) VALUES (44);\n",
+            "INSERT INTO ztblSkipLabels (LabelCount) VALUES (58);\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "ztblSkipLabels"
+    },
+    {
+        "query": [
+            "INSERT INTO ztblWeeks (WeekStart, WeekEnd) VALUES ('2019-09-15', '2019-09-21');\n",
+            "INSERT INTO ztblWeeks (WeekStart, WeekEnd) VALUES ('2019-07-28', '2019-08-03');\n",
+            "INSERT INTO ztblWeeks (WeekStart, WeekEnd) VALUES ('2019-12-01', '2019-12-07');\n"
+        ],
+        "database_name": "EntertainmentAgency",
+        "table_name": "ztblWeeks"
+    },
+    {
+        "query": [
+            "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes) VALUES (13070, 162471, 23866, '2008-08-30 00:00:00', 69, 78, 'right', 'high', 'medium', 53, 75, 74, 55, 70, 60, 73, 42, 29, 65, 75, 78, 75, 73, 73, 68, 79, 80, 69, 53, 55, 56, 66, 68, 68, 21, 21, 39, 8, 21, 29, 21, 21);\n",
+            "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes) VALUES (114399, 45162, 32658, '2012-08-31 00:00:00', 61, 62, 'right', 'medium', 'medium', 11, 14, 12, 23, 12, 11, 12, 11, 18, 31, 34, 29, 63, 53, 41, 27, 64, 52, 59, 13, 23, 22, 14, 34, 16, 12, 12, 11, 61, 64, 52, 61, 61);\n",
+            "INSERT INTO Player_Attributes (id, player_fifa_api_id, player_api_id, date, overall_rating, potential, preferred_foot, attacking_work_rate, defensive_work_rate, crossing, finishing, heading_accuracy, short_passing, volleys, dribbling, curve, free_kick_accuracy, long_passing, ball_control, acceleration, sprint_speed, agility, reactions, balance, shot_power, jumping, stamina, strength, long_shots, aggression, interceptions, positioning, vision, penalties, marking, standing_tackle, sliding_tackle, gk_diving, gk_handling, gk_kicking, gk_positioning, gk_reflexes) VALUES (85963, 199764, 215307, '2014-10-17 00:00:00', 69, 74, 'right', 'medium', 'medium', 25, 25, 25, 35, 25, 25, 25, 25, 33, 25, 46, 42, 37, 61, 42, 24, 68, 50, 54, 25, 25, 25, 25, 25, 25, 25, 25, 25, 72, 68, 62, 67, 72);\n"
+        ],
+        "database_name": "EU_soccer",
+        "table_name": "Player_Attributes"
+    },
+    {
+        "query": [
+            "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight) VALUES (9408, 78505, 'Sam Hutchinson', 169708, '1989-08-03 00:00:00', 182.8799999999999955, 161);\n",
+            "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight) VALUES (3440, 131991, 'Floyd Ayite', 188271, '1988-12-15 00:00:00', 175.259999999999991, 150);\n",
+            "INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight) VALUES (5456, 75199, 'Juan Ramon Cabrero Juanra', 158216, '1980-04-24 00:00:00', 182.8799999999999955, 172);\n"
+        ],
+        "database_name": "EU_soccer",
+        "table_name": "Player"
+    },
+    {
+        "query": [
+            "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA) VALUES (17404, 15722, 15722, '2015/2016', 1, '2015-07-19 00:00:00', 1994617, 8025, 8673, 1, 4, 1, 2, 4, 6, 8, 5, 2, 4, 6, 8, 5, 1, 2, 4, 6, 8, 4, 6, 3, 5, 7, 5, 1, 3, 3, 3, 3, 6, 8, 8, 8, 8, 11, 1, 3, 3, 3, 3, 6, 6, 8, 8, 8, 11, 43313, 522276, 13437, 13554, 77778, 43317, 179818, 172896, 22831, 69428, 69256, 17869, 198099, 114816, 13376, 13551, 206795, 69244, 309348, 189111, 115739, 124144, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);\n",
+            "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA) VALUES (16407, 15722, 15722, '2010/2011', 5, '2010-09-11 00:00:00', 838428, 2186, 8020, 2, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 116874, 30880, NULL, NULL, 69599, 159342, 45473, NULL, NULL, 34266, NULL, NULL, 68840, NULL, 69533, 69238, 115143, 68839, NULL, 116756, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);\n",
+            "INSERT INTO Match (id, country_id, league_id, season, stage, date, match_api_id, home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, home_player_X1, home_player_X2, home_player_X3, home_player_X4, home_player_X5, home_player_X6, home_player_X7, home_player_X8, home_player_X9, home_player_X10, home_player_X11, away_player_X1, away_player_X2, away_player_X3, away_player_X4, away_player_X5, away_player_X6, away_player_X7, away_player_X8, away_player_X9, away_player_X10, away_player_X11, home_player_Y1, home_player_Y2, home_player_Y3, home_player_Y4, home_player_Y5, home_player_Y6, home_player_Y7, home_player_Y8, home_player_Y9, home_player_Y10, home_player_Y11, away_player_Y1, away_player_Y2, away_player_Y3, away_player_Y4, away_player_Y5, away_player_Y6, away_player_Y7, away_player_Y8, away_player_Y9, away_player_Y10, away_player_Y11, home_player_1, home_player_2, home_player_3, home_player_4, home_player_5, home_player_6, home_player_7, home_player_8, home_player_9, home_player_10, home_player_11, away_player_1, away_player_2, away_player_3, away_player_4, away_player_5, away_player_6, away_player_7, away_player_8, away_player_9, away_player_10, away_player_11, goal, shoton, shotoff, foulcommit, card, cross, corner, possession, B365H, B365D, B365A, BWH, BWD, BWA, IWH, IWD, IWA, LBH, LBD, LBA, PSH, PSD, PSA, WHH, WHD, WHA, SJH, SJD, SJA, VCH, VCD, VCA, GBH, GBD, GBA, BSH, BSD, BSA) VALUES (4941, 4769, 4769, '2008/2009', 25, '2009-02-22 00:00:00', 483371, 8639, 9829, 2, 1, 1, 2, 4, 6, 8, 3, 5, 7, 3, 5, 7, 1, 2, 4, 6, 8, 2, 4, 6, 8, 4, 6, 1, 3, 3, 3, 3, 7, 7, 7, 10, 10, 10, 1, 3, 3, 3, 3, 7, 7, 7, 7, 10, 10, 26150, 51409, 26107, 77741, 40544, 26291, 20401, 26195, 56916, 32575, 35407, 41097, 26216, 39982, 39199, 30730, 26120, 32566, 33435, 157859, 31092, 51371, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1.649999999999999912, 3.399999999999999912, 6.5, 1.699999999999999956, 3.200000000000000177, 5, 1.75, 3.299999999999999823, 5, 1.659999999999999921, 3.200000000000000177, 5, NULL, NULL, NULL, 1.669999999999999929, 3.100000000000000088, 5, 1.729999999999999983, 3.200000000000000177, 6, 1.699999999999999956, 3.399999999999999912, 4.349999999999999644, 1.699999999999999956, 3.299999999999999823, 5, 1.669999999999999929, 3.299999999999999823, 5);\n"
+        ],
+        "database_name": "EU_soccer",
+        "table_name": "Match"
+    },
+    {
+        "query": [
+            "INSERT INTO League (id, country_id, name) VALUES (10257, 10257, 'Italy Serie A');\n",
+            "INSERT INTO League (id, country_id, name) VALUES (17642, 17642, 'Portugal Liga ZON Sagres');\n",
+            "INSERT INTO League (id, country_id, name) VALUES (10257, 10257, 'Italy Serie A');\n"
+        ],
+        "database_name": "EU_soccer",
+        "table_name": "League"
+    },
+    {
+        "query": [
+            "INSERT INTO Country (id, name) VALUES (15722, 'Poland');\n",
+            "INSERT INTO Country (id, name) VALUES (21518, 'Spain');\n",
+            "INSERT INTO Country (id, name) VALUES (4769, 'France');\n"
+        ],
+        "database_name": "EU_soccer",
+        "table_name": "Country"
+    },
+    {
+        "query": [
+            "INSERT INTO Team (id, team_api_id, team_fifa_api_id, team_long_name, team_short_name) VALUES (4996, 8483, 1926, 'Blackpool', 'BLA');\n",
+            "INSERT INTO Team (id, team_api_id, team_fifa_api_id, team_long_name, team_short_name) VALUES (15622, 9904, 485, 'Hannover 96', 'HAN');\n",
+            "INSERT INTO Team (id, team_api_id, team_fifa_api_id, team_long_name, team_short_name) VALUES (35769, 9771, 1895, 'Uni\u00e3o de Leiria, SAD', 'ULE');\n"
+        ],
+        "database_name": "EU_soccer",
+        "table_name": "Team"
+    },
+    {
+        "query": [
+            "INSERT INTO Team_Attributes (id, team_fifa_api_id, team_api_id, date, buildUpPlaySpeed, buildUpPlaySpeedClass, buildUpPlayDribbling, buildUpPlayDribblingClass, buildUpPlayPassing, buildUpPlayPassingClass, buildUpPlayPositioningClass, chanceCreationPassing, chanceCreationPassingClass, chanceCreationCrossing, chanceCreationCrossingClass, chanceCreationShooting, chanceCreationShootingClass, chanceCreationPositioningClass, defencePressure, defencePressureClass, defenceAggression, defenceAggressionClass, defenceTeamWidth, defenceTeamWidthClass, defenceDefenderLineClass) VALUES (431, 1915, 8674, '2014-09-19 00:00:00', 48, 'Balanced', 42, 'Normal', 38, 'Mixed', 'Organised', 57, 'Normal', 59, 'Normal', 45, 'Normal', 'Organised', 49, 'Medium', 47, 'Press', 53, 'Normal', 'Cover');\n",
+            "INSERT INTO Team_Attributes (id, team_fifa_api_id, team_api_id, date, buildUpPlaySpeed, buildUpPlaySpeedClass, buildUpPlayDribbling, buildUpPlayDribblingClass, buildUpPlayPassing, buildUpPlayPassingClass, buildUpPlayPositioningClass, chanceCreationPassing, chanceCreationPassingClass, chanceCreationCrossing, chanceCreationCrossingClass, chanceCreationShooting, chanceCreationShootingClass, chanceCreationPositioningClass, defencePressure, defencePressureClass, defenceAggression, defenceAggressionClass, defenceTeamWidth, defenceTeamWidthClass, defenceDefenderLineClass) VALUES (5, 77, 8485, '2011-02-22 00:00:00', 47, 'Balanced', NULL, 'Little', 52, 'Mixed', 'Organised', 53, 'Normal', 48, 'Normal', 52, 'Normal', 'Organised', 47, 'Medium', 47, 'Press', 52, 'Normal', 'Cover');\n",
+            "INSERT INTO Team_Attributes (id, team_fifa_api_id, team_api_id, date, buildUpPlaySpeed, buildUpPlaySpeedClass, buildUpPlayDribbling, buildUpPlayDribblingClass, buildUpPlayPassing, buildUpPlayPassingClass, buildUpPlayPositioningClass, chanceCreationPassing, chanceCreationPassingClass, chanceCreationCrossing, chanceCreationCrossingClass, chanceCreationShooting, chanceCreationShootingClass, chanceCreationPositioningClass, defencePressure, defencePressureClass, defenceAggression, defenceAggressionClass, defenceTeamWidth, defenceTeamWidthClass, defenceDefenderLineClass) VALUES (993, 110746, 8023, '2013-09-20 00:00:00', 67, 'Fast', NULL, 'Little', 54, 'Mixed', 'Organised', 56, 'Normal', 62, 'Normal', 67, 'Lots', 'Organised', 47, 'Medium', 47, 'Press', 63, 'Normal', 'Cover');\n"
+        ],
+        "database_name": "EU_soccer",
+        "table_name": "Team_Attributes"
+    },
+    {
+        "query": [
+            "INSERT INTO ERD (table, column, Unnamed:_2, Unnamed:_3, Unnamed:_4, Unnamed:_5, Unnamed:_6, Unnamed:_7, Unnamed:_8, Unnamed:_9, Unnamed:_10, Unnamed:_11, Unnamed:_12) VALUES ('director_mapping', 'movie_id', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'date_published', NULL, NULL, NULL);\n",
+            "INSERT INTO ERD (table, column, Unnamed:_2, Unnamed:_3, Unnamed:_4, Unnamed:_5, Unnamed:_6, Unnamed:_7, Unnamed:_8, Unnamed:_9, Unnamed:_10, Unnamed:_11, Unnamed:_12) VALUES ('movie', 'title', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '* movie_id', NULL, NULL, '* movie_id');\n",
+            "INSERT INTO ERD (table, column, Unnamed:_2, Unnamed:_3, Unnamed:_4, Unnamed:_5, Unnamed:_6, Unnamed:_7, Unnamed:_8, Unnamed:_9, Unnamed:_10, Unnamed:_11, Unnamed:_12) VALUES ('names', 'date_of_birth', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '* id', NULL, NULL, NULL);\n"
+        ],
+        "database_name": "imdb_movies",
+        "table_name": "ERD"
+    },
+    {
+        "query": [
+            "INSERT INTO movies (id, title, year, date_published, duration, country, worlwide_gross_income, languages, production_company) VALUES ('tt7692824', 'Billy', 2018, '2018-01-04 00:00:00', 90, 'Netherlands', NULL, 'Dutch', 'Pupkin Film');\n",
+            "INSERT INTO movies (id, title, year, date_published, duration, country, worlwide_gross_income, languages, production_company) VALUES ('tt6118340', 'The Basement', 2018, '2018-09-14 00:00:00', 90, 'USA', '$ 4286', 'English', 'The Conley Company');\n",
+            "INSERT INTO movies (id, title, year, date_published, duration, country, worlwide_gross_income, languages, production_company) VALUES ('tt5239558', 'Muskarci ne placu', 2018, '2018-10-03 00:00:00', 98, 'Bosnia and Herzegovina, Slovenia, Germany, Croatia', '$ 10774', 'Bosnian', 'Deblokada Produkcija');\n"
+        ],
+        "database_name": "imdb_movies",
+        "table_name": "movies"
+    },
+    {
+        "query": [
+            "INSERT INTO genre (movie_id, genre) VALUES ('tt4379536', 'Comedy');\n",
+            "INSERT INTO genre (movie_id, genre) VALUES ('tt6871634', 'Action');\n",
+            "INSERT INTO genre (movie_id, genre) VALUES ('tt5894656', 'Drama');\n"
+        ],
+        "database_name": "imdb_movies",
+        "table_name": "genre"
+    },
+    {
+        "query": [
+            "INSERT INTO director_mapping (movie_id, name_id) VALUES ('tt9139412', 'nm9603806');\n",
+            "INSERT INTO director_mapping (movie_id, name_id) VALUES ('tt5592878', 'nm4807465');\n",
+            "INSERT INTO director_mapping (movie_id, name_id) VALUES ('tt5078886', 'nm1226504');\n"
+        ],
+        "database_name": "imdb_movies",
+        "table_name": "director_mapping"
+    },
+    {
+        "query": [
+            "INSERT INTO role_mapping (movie_id, name_id, category) VALUES ('tt10183616', 'nm1193736', 'actress');\n",
+            "INSERT INTO role_mapping (movie_id, name_id, category) VALUES ('tt5122092', 'nm3258869', 'actor');\n",
+            "INSERT INTO role_mapping (movie_id, name_id, category) VALUES ('tt5538568', 'nm0005403', 'actor');\n"
+        ],
+        "database_name": "imdb_movies",
+        "table_name": "role_mapping"
+    },
+    {
+        "query": [
+            "INSERT INTO names (id, name, height, date_of_birth, known_for_movies) VALUES ('nm0488465', 'Martin Larocque', NULL, '1969-07-16', NULL);\n",
+            "INSERT INTO names (id, name, height, date_of_birth, known_for_movies) VALUES ('nm0652443', 'Arsen A. Ostojic', NULL, '1965-07-29', NULL);\n",
+            "INSERT INTO names (id, name, height, date_of_birth, known_for_movies) VALUES ('nm0531468', 'Matthew MacCaull', 200.0, '1978-04-04', NULL);\n"
+        ],
+        "database_name": "imdb_movies",
+        "table_name": "names"
+    },
+    {
+        "query": [
+            "INSERT INTO ratings (movie_id, avg_rating, total_votes, median_rating) VALUES ('tt5678732', 2.700000000000000177, 116, 3.5);\n",
+            "INSERT INTO ratings (movie_id, avg_rating, total_votes, median_rating) VALUES ('tt6297258', 6.099999999999999645, 298, 6.0);\n",
+            "INSERT INTO ratings (movie_id, avg_rating, total_votes, median_rating) VALUES ('tt5825380', 6.200000000000000177, 21320, 6.0);\n"
+        ],
+        "database_name": "imdb_movies",
+        "table_name": "ratings"
+    },
+    {
+        "query": [
+            "INSERT INTO player (player_id, player_name, dob, batting_hand, bowling_skill, country_name) VALUES (384, 'VH Zol', '1994-11-23', 'Left-hand bat', 'Right-arm offbreak', 'India');\n",
+            "INSERT INTO player (player_id, player_name, dob, batting_hand, bowling_skill, country_name) VALUES (111, 'LPC Silva', '1979-12-14', 'Right-hand bat', 'Legbreak', 'Sri Lanka');\n",
+            "INSERT INTO player (player_id, player_name, dob, batting_hand, bowling_skill, country_name) VALUES (120, 'MS Gony', '1984-01-04', 'Right-hand bat', 'Right-arm medium', 'India');\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "player"
+    },
+    {
+        "query": [
+            "INSERT INTO team (team_id, name) VALUES (11, 'Sunrisers Hyderabad');\n",
+            "INSERT INTO team (team_id, name) VALUES (9, 'Kochi Tuskers Kerala');\n",
+            "INSERT INTO team (team_id, name) VALUES (4, 'Kings XI Punjab');\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "team"
+    },
+    {
+        "query": [
+            "INSERT INTO match (match_id, team_1, team_2, match_date, season_id, venue, toss_winner, toss_decision, win_type, win_margin, outcome_type, match_winner, man_of_the_match) VALUES (501273, 2, 3, '2011-05-24', 4, 'Wankhede Stadium', 3, 'field', 'wickets', 6, 'Result', 3, 21);\n",
+            "INSERT INTO match (match_id, team_1, team_2, match_date, season_id, venue, toss_winner, toss_decision, win_type, win_margin, outcome_type, match_winner, man_of_the_match) VALUES (336000, 4, 6, '2008-04-27', 1, 'Punjab Cricket Association Stadium Mohali', 6, 'bat', 'wickets', 4, 'Result', 4, 28);\n",
+            "INSERT INTO match (match_id, team_1, team_2, match_date, season_id, venue, toss_winner, toss_decision, win_type, win_margin, outcome_type, match_winner, man_of_the_match) VALUES (733998, 6, 11, '2014-05-10', 7, 'Feroz Shah Kotla', 11, 'field', 'wickets', 8, 'Result', 11, 94);\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "match"
+    },
+    {
+        "query": [
+            "INSERT INTO player_match (match_id, player_id, role, team_id) VALUES (392242, 135, 'Player', 6);\n",
+            "INSERT INTO player_match (match_id, player_id, role, team_id) VALUES (419137, 243, 'Player', 4);\n",
+            "INSERT INTO player_match (match_id, player_id, role, team_id) VALUES (336024, 39, 'Player', 5);\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "player_match"
+    },
+    {
+        "query": [
+            "INSERT INTO ball_by_ball (match_id, over_id, ball_id, innings_no, team_batting, team_bowling, striker_batting_position, striker, non_striker, bowler) VALUES (729308, 5, 6, 1, 7, 3, 4, 57, 372, 364);\n",
+            "INSERT INTO ball_by_ball (match_id, over_id, ball_id, innings_no, team_batting, team_bowling, striker_batting_position, striker, non_striker, bowler) VALUES (598005, 5, 5, 2, 10, 11, 1, 46, 96, 280);\n",
+            "INSERT INTO ball_by_ball (match_id, over_id, ball_id, innings_no, team_batting, team_bowling, striker_batting_position, striker, non_striker, bowler) VALUES (501260, 9, 1, 1, 1, 2, 4, 87, 31, 244);\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "ball_by_ball"
+    },
+    {
+        "query": [
+            "INSERT INTO batsman_scored (match_id, over_id, ball_id, runs_scored, innings_no) VALUES (392213, 20, 1, 4, 1);\n",
+            "INSERT INTO batsman_scored (match_id, over_id, ball_id, runs_scored, innings_no) VALUES (734004, 15, 2, 0, 1);\n",
+            "INSERT INTO batsman_scored (match_id, over_id, ball_id, runs_scored, innings_no) VALUES (548339, 3, 5, 1, 1);\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "batsman_scored"
+    },
+    {
+        "query": [
+            "INSERT INTO wicket_taken (match_id, over_id, ball_id, player_out, kind_out, innings_no) VALUES (501253, 4, 6, 53, 'caught', 1);\n",
+            "INSERT INTO wicket_taken (match_id, over_id, ball_id, player_out, kind_out, innings_no) VALUES (598023, 11, 4, 280, 'caught', 1);\n",
+            "INSERT INTO wicket_taken (match_id, over_id, ball_id, player_out, kind_out, innings_no) VALUES (981024, 11, 3, 162, 'caught', 2);\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "wicket_taken"
+    },
+    {
+        "query": [
+            "INSERT INTO extra_runs (match_id, over_id, ball_id, extra_type, extra_runs, innings_no) VALUES (734044, 12, 6, 'wides', 1, 2);\n",
+            "INSERT INTO extra_runs (match_id, over_id, ball_id, extra_type, extra_runs, innings_no) VALUES (501215, 16, 6, 'wides', 1, 1);\n",
+            "INSERT INTO extra_runs (match_id, over_id, ball_id, extra_type, extra_runs, innings_no) VALUES (734042, 12, 4, 'legbyes', 1, 1);\n"
+        ],
+        "database_name": "IPL",
+        "table_name": "extra_runs"
+    },
+    {
+        "query": [
+            "INSERT INTO actor (actor_id, first_name, last_name, last_update) VALUES (47, 'JULIA', 'BARRYMORE', '2021-03-06 15:51:59');\n",
+            "INSERT INTO actor (actor_id, first_name, last_name, last_update) VALUES (28, 'WOODY', 'HOFFMAN', '2021-03-06 15:51:59');\n",
+            "INSERT INTO actor (actor_id, first_name, last_name, last_update) VALUES (156, 'FAY', 'WOOD', '2021-03-06 15:52:00');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "actor"
+    },
+    {
+        "query": [
+            "INSERT INTO country (country_id, country, last_update) VALUES (75, 'Philippines', '2021-03-06 15:51:49');\n",
+            "INSERT INTO country (country_id, country, last_update) VALUES (80, 'Russian Federation', '2021-03-06 15:51:49');\n",
+            "INSERT INTO country (country_id, country, last_update) VALUES (95, 'Tonga', '2021-03-06 15:51:49');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "country"
+    },
+    {
+        "query": [
+            "INSERT INTO city (city_id, city, country_id, last_update) VALUES (392, 'Paarl', 85, '2021-03-06 15:51:52');\n",
+            "INSERT INTO city (city_id, city, country_id, last_update) VALUES (144, 'Dhule (Dhulia)', 44, '2021-03-06 15:51:50');\n",
+            "INSERT INTO city (city_id, city, country_id, last_update) VALUES (305, 'Lima', 74, '2021-03-06 15:51:52');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "city"
+    },
+    {
+        "query": [
+            "INSERT INTO address (address_id, address, address2, district, city_id, postal_code, phone, last_update) VALUES (110, '1867 San Juan Bautista Tuxtepec Avenue', NULL, ' ', 225, '78311', ' ', '2021-03-06 15:51:55');\n",
+            "INSERT INTO address (address_id, address, address2, district, city_id, postal_code, phone, last_update) VALUES (138, '765 Southampton Drive', NULL, ' ', 421, '4285', ' ', '2021-03-06 15:51:55');\n",
+            "INSERT INTO address (address_id, address, address2, district, city_id, postal_code, phone, last_update) VALUES (100, '1308 Arecibo Way', NULL, ' ', 41, '30695', ' ', '2021-03-06 15:51:55');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "address"
+    },
+    {
+        "query": [
+            "INSERT INTO language (language_id, name, last_update) VALUES (3, 'Japanese', '2021-03-06 15:51:48');\n",
+            "INSERT INTO language (language_id, name, last_update) VALUES (1, 'English', '2021-03-06 15:51:48');\n",
+            "INSERT INTO language (language_id, name, last_update) VALUES (3, 'Japanese', '2021-03-06 15:51:48');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "language"
+    },
+    {
+        "query": [
+            "INSERT INTO category (category_id, name, last_update) VALUES (10, 'Games', '2021-03-06 15:52:00');\n",
+            "INSERT INTO category (category_id, name, last_update) VALUES (16, 'Travel', '2021-03-06 15:52:00');\n",
+            "INSERT INTO category (category_id, name, last_update) VALUES (14, 'Sci-Fi', '2021-03-06 15:52:00');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "category"
+    },
+    {
+        "query": [
+            "INSERT INTO customer (customer_id, store_id, first_name, last_name, email, address_id, active, create_date, last_update) VALUES (76, 2, 'IRENE', 'PRICE', 'IRENE.PRICE@sakilacustomer.org', 80, '1', '2006-02-14 22:04:36.000', '2021-03-06 15:53:36');\n",
+            "INSERT INTO customer (customer_id, store_id, first_name, last_name, email, address_id, active, create_date, last_update) VALUES (306, 1, 'CHARLES', 'KOWALSKI', 'CHARLES.KOWALSKI@sakilacustomer.org', 311, '1', '2006-02-14 22:04:37.000', '2021-03-06 15:53:38');\n",
+            "INSERT INTO customer (customer_id, store_id, first_name, last_name, email, address_id, active, create_date, last_update) VALUES (452, 1, 'TOM', 'MILNER', 'TOM.MILNER@sakilacustomer.org', 457, '1', '2006-02-14 22:04:37.000', '2021-03-06 15:53:39');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "customer"
+    },
+    {
+        "query": [
+            "INSERT INTO film (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features, last_update) VALUES (108, 'BUTCH PANTHER', 'A Lacklusture Yarn of a Feminist And a Database Administrator who must Face a Hunter in New Orleans', '2006', 1, NULL, 6, 0.989999999999999992, 67, 19.98999999999999843, 'PG-13', 'Trailers,Commentaries,Deleted Scenes', '2021-03-06 15:52:01');\n",
+            "INSERT INTO film (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features, last_update) VALUES (787, 'SHINING ROSES', 'A Awe-Inspiring Character Study of a Astronaut And a Forensic Psychologist who must Challenge a Madman in Ancient India', '2006', 1, NULL, 4, 0.989999999999999992, 125, 12.99000000000000021, 'G', 'Trailers,Commentaries,Deleted Scenes,Behind the Scenes', '2021-03-06 15:52:07');\n",
+            "INSERT INTO film (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features, last_update) VALUES (899, 'TOWERS HURRICANE', 'A Fateful Display of a Monkey And a Car who must Sink a Husband in A MySQL Convention', '2006', 1, NULL, 7, 0.989999999999999992, 144, 14.99000000000000021, 'NC-17', 'Commentaries,Behind the Scenes', '2021-03-06 15:52:08');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "film"
+    },
+    {
+        "query": [
+            "INSERT INTO film_actor (actor_id, film_id, last_update) VALUES (185, 265, '2021-03-06 15:53:24');\n",
+            "INSERT INTO film_actor (actor_id, film_id, last_update) VALUES (84, 312, '2021-03-06 15:53:02');\n",
+            "INSERT INTO film_actor (actor_id, film_id, last_update) VALUES (114, 210, '2021-03-06 15:53:09');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "film_actor"
+    },
+    {
+        "query": [
+            "INSERT INTO film_category (film_id, category_id, last_update) VALUES (230, 7, '2021-03-06 15:53:29');\n",
+            "INSERT INTO film_category (film_id, category_id, last_update) VALUES (597, 10, '2021-03-06 15:53:32');\n",
+            "INSERT INTO film_category (film_id, category_id, last_update) VALUES (283, 13, '2021-03-06 15:53:30');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "film_category"
+    },
+    {
+        "query": [
+            "INSERT INTO inventory (inventory_id, film_id, store_id, last_update) VALUES (4537, 990, 2, '2021-03-06 15:52:44');\n",
+            "INSERT INTO inventory (inventory_id, film_id, store_id, last_update) VALUES (52, 10, 2, '2021-03-06 15:52:09');\n",
+            "INSERT INTO inventory (inventory_id, film_id, store_id, last_update) VALUES (1407, 308, 1, '2021-03-06 15:52:19');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "inventory"
+    },
+    {
+        "query": [
+            "INSERT INTO staff (staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, password, last_update) VALUES (1, 'Mike', 'Hillyer', 3, NULL, 'Mike.Hillyer@sakilastaff.com', 1, 1, 'Mike', '8cb2237d0679ca88db6464eac60da96345513964', '2021-03-06 15:52:00');\n",
+            "INSERT INTO staff (staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, password, last_update) VALUES (1, 'Mike', 'Hillyer', 3, NULL, 'Mike.Hillyer@sakilastaff.com', 1, 1, 'Mike', '8cb2237d0679ca88db6464eac60da96345513964', '2021-03-06 15:52:00');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "staff"
+    },
+    {
+        "query": [
+            "INSERT INTO store (store_id, manager_staff_id, address_id, last_update) VALUES (1, 1, 1, '2021-03-06 15:52:00');\n",
+            "INSERT INTO store (store_id, manager_staff_id, address_id, last_update) VALUES (1, 1, 1, '2021-03-06 15:52:00');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "store"
+    },
+    {
+        "query": [
+            "INSERT INTO payment (payment_id, customer_id, staff_id, rental_id, amount, payment_date, last_update) VALUES (14306, 531, 2, 15360, 0.989999999999999992, '2005-08-22 21:36:51.000', '2021-03-06 15:57:55');\n",
+            "INSERT INTO payment (payment_id, customer_id, staff_id, rental_id, amount, payment_date, last_update) VALUES (3084, 114, 2, 14158, 5.990000000000000213, '2005-08-21 02:43:20.000', '2021-03-06 15:56:23');\n",
+            "INSERT INTO payment (payment_id, customer_id, staff_id, rental_id, amount, payment_date, last_update) VALUES (6176, 229, 2, 7640, 7.990000000000000213, '2005-07-28 01:14:49.000', '2021-03-06 15:56:49');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "payment"
+    },
+    {
+        "query": [
+            "INSERT INTO rental (rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update) VALUES (11032, '2005-08-02 05:53:35.000', 1119, 359, '2005-08-05 02:58:35.000', 2, '2021-03-06 15:55:11');\n",
+            "INSERT INTO rental (rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update) VALUES (9077, '2005-07-30 08:00:19.000', 4324, 471, '2005-08-08 11:21:19.000', 1, '2021-03-06 15:54:55');\n",
+            "INSERT INTO rental (rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update) VALUES (748, '2005-05-29 09:27:00.000', 2803, 7, '2005-06-03 04:25:00.000', 1, '2021-03-06 15:53:47');\n"
+        ],
+        "database_name": "Pagila",
+        "table_name": "rental"
+    },
+    {
+        "query": [
+            "INSERT INTO Buildings (BuildingCode, BuildingName, NumberOfFloors, ElevatorAccess, SiteParkingAvailable) VALUES ('GYM', 'PE and Wellness', 1, 0, 1);\n",
+            "INSERT INTO Buildings (BuildingCode, BuildingName, NumberOfFloors, ElevatorAccess, SiteParkingAvailable) VALUES ('CC', 'College Center', 3, 1, 0);\n",
+            "INSERT INTO Buildings (BuildingCode, BuildingName, NumberOfFloors, ElevatorAccess, SiteParkingAvailable) VALUES ('IB', 'Instructional Building', 3, 1, 1);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Buildings"
+    },
+    {
+        "query": [
+            "INSERT INTO Categories (CategoryID, CategoryDescription, DepartmentID) VALUES ('CIS', 'Computer Information Systems', 5);\n",
+            "INSERT INTO Categories (CategoryID, CategoryDescription, DepartmentID) VALUES ('GER', 'German', 3);\n",
+            "INSERT INTO Categories (CategoryID, CategoryDescription, DepartmentID) VALUES ('CIS', 'Computer Information Systems', 5);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Categories"
+    },
+    {
+        "query": [
+            "INSERT INTO Class_Rooms (ClassRoomID, BuildingCode, PhoneAvailable) VALUES (1519, 'AS', 0);\n",
+            "INSERT INTO Class_Rooms (ClassRoomID, BuildingCode, PhoneAvailable) VALUES (1619, 'AS', 0);\n",
+            "INSERT INTO Class_Rooms (ClassRoomID, BuildingCode, PhoneAvailable) VALUES (1530, 'AS', 1);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Class_Rooms"
+    },
+    {
+        "query": [
+            "INSERT INTO Classes (ClassID, SubjectID, ClassRoomID, Credits, StartDate, StartTime, Duration, MondaySchedule, TuesdaySchedule, WednesdaySchedule, ThursdaySchedule, FridaySchedule, SaturdaySchedule) VALUES (4012, 14, 1627, 4, '2018-01-16', '13:00:00', 110, 0, 1, 0, 1, 0, 0);\n",
+            "INSERT INTO Classes (ClassID, SubjectID, ClassRoomID, Credits, StartDate, StartTime, Duration, MondaySchedule, TuesdaySchedule, WednesdaySchedule, ThursdaySchedule, FridaySchedule, SaturdaySchedule) VALUES (1502, 34, 1142, 5, '2017-09-11', '09:00:00', 50, 1, 1, 1, 1, 1, 0);\n",
+            "INSERT INTO Classes (ClassID, SubjectID, ClassRoomID, Credits, StartDate, StartTime, Duration, MondaySchedule, TuesdaySchedule, WednesdaySchedule, ThursdaySchedule, FridaySchedule, SaturdaySchedule) VALUES (4813, 24, 3406, 3, '2018-01-15', '10:00:00', 50, 1, 0, 1, 0, 1, 0);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Classes"
+    },
+    {
+        "query": [
+            "INSERT INTO Departments (DepartmentID, DeptName, DeptChair) VALUES (2, 'Sciences', 98010);\n",
+            "INSERT INTO Departments (DepartmentID, DeptName, DeptChair) VALUES (5, 'Information Technology', 98007);\n",
+            "INSERT INTO Departments (DepartmentID, DeptName, DeptChair) VALUES (5, 'Information Technology', 98007);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Departments"
+    },
+    {
+        "query": [
+            "INSERT INTO Faculty (StaffID, Title, Status, Tenured) VALUES (98042, 'Associate Professor', 'Full Time', 1);\n",
+            "INSERT INTO Faculty (StaffID, Title, Status, Tenured) VALUES (98059, 'Professor', 'Full Time', 1);\n",
+            "INSERT INTO Faculty (StaffID, Title, Status, Tenured) VALUES (98012, 'Professor', 'Full Time', 1);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Faculty"
+    },
+    {
+        "query": [
+            "INSERT INTO Faculty_Categories (StaffID, CategoryID) VALUES (98045, 'ART');\n",
+            "INSERT INTO Faculty_Categories (StaffID, CategoryID) VALUES (98042, 'POL');\n",
+            "INSERT INTO Faculty_Categories (StaffID, CategoryID) VALUES (98063, 'PHY');\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Faculty_Categories"
+    },
+    {
+        "query": [
+            "INSERT INTO Faculty_Classes (ClassID, StaffID) VALUES (2907, 98013);\n",
+            "INSERT INTO Faculty_Classes (ClassID, StaffID) VALUES (6090, 98014);\n",
+            "INSERT INTO Faculty_Classes (ClassID, StaffID) VALUES (2430, 98040);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Faculty_Classes"
+    },
+    {
+        "query": [
+            "INSERT INTO Faculty_Subjects (StaffID, SubjectID, ProficiencyRating) VALUES (98052, 52, 9.0);\n",
+            "INSERT INTO Faculty_Subjects (StaffID, SubjectID, ProficiencyRating) VALUES (98028, 35, 8.0);\n",
+            "INSERT INTO Faculty_Subjects (StaffID, SubjectID, ProficiencyRating) VALUES (98012, 32, 9.0);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Faculty_Subjects"
+    },
+    {
+        "query": [
+            "INSERT INTO Majors (MajorID, Major) VALUES (5, 'Accounting');\n",
+            "INSERT INTO Majors (MajorID, Major) VALUES (2, 'English');\n",
+            "INSERT INTO Majors (MajorID, Major) VALUES (6, 'Art');\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Majors"
+    },
+    {
+        "query": [
+            "INSERT INTO Staff (StaffID, StfFirstName, StfLastname, StfStreetAddress, StfCity, StfState, StfZipCode, StfAreaCode, StfPhoneNumber, Salary, DateHired, Position) VALUES (98036, 'Sam', 'Abolrous', '611 Alpine Drive', 'Palm Springs', 'CA', '92263', '760', '555-2611', 60000.0, '1982-11-20', 'Faculty');\n",
+            "INSERT INTO Staff (StaffID, StfFirstName, StfLastname, StfStreetAddress, StfCity, StfState, StfZipCode, StfAreaCode, StfPhoneNumber, Salary, DateHired, Position) VALUES (98042, 'David', 'Smith', '311 20th Ave. N.E.', 'Fremont', 'CA', '94538', '510', '555-2646', 52000.0, '1991-12-17', 'Faculty');\n",
+            "INSERT INTO Staff (StaffID, StfFirstName, StfLastname, StfStreetAddress, StfCity, StfState, StfZipCode, StfAreaCode, StfPhoneNumber, Salary, DateHired, Position) VALUES (98048, 'Joyce', 'Bonnicksen', '2424 Thames Drive', 'Bellevue', 'WA', '98006', '425', '555-2726', 60000.0, '1986-03-02', 'Faculty');\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Staff"
+    },
+    {
+        "query": [
+            "INSERT INTO Student_Class_Status (ClassStatus, ClassStatusDescription) VALUES (1, 'Enrolled');\n",
+            "INSERT INTO Student_Class_Status (ClassStatus, ClassStatusDescription) VALUES (2, 'Completed');\n",
+            "INSERT INTO Student_Class_Status (ClassStatus, ClassStatusDescription) VALUES (2, 'Completed');\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Student_Class_Status"
+    },
+    {
+        "query": [
+            "INSERT INTO Student_Schedules (StudentID, ClassID, ClassStatus, Grade) VALUES (1018, 4196, 1, 0.0);\n",
+            "INSERT INTO Student_Schedules (StudentID, ClassID, ClassStatus, Grade) VALUES (1018, 2907, 2, 93.3199999999999931);\n",
+            "INSERT INTO Student_Schedules (StudentID, ClassID, ClassStatus, Grade) VALUES (1001, 1168, 2, 70.0);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Student_Schedules"
+    },
+    {
+        "query": [
+            "INSERT INTO Students (StudentID, StudFirstName, StudLastName, StudStreetAddress, StudCity, StudState, StudZipCode, StudAreaCode, StudPhoneNumber, StudGPA, StudMajor) VALUES (1001, 'Kerry', 'Patterson', '9877 Hacienda Drive', 'San Antonio', 'TX', '78284', '210', '555-2706', 74.46500000000000341, 1);\n",
+            "INSERT INTO Students (StudentID, StudFirstName, StudLastName, StudStreetAddress, StudCity, StudState, StudZipCode, StudAreaCode, StudPhoneNumber, StudGPA, StudMajor) VALUES (1004, 'Janice', 'Galvin', '4110 Old Redmond Rd.', 'Redmond', 'WA', '98052', '425', '555-2691', 81.0, 4);\n",
+            "INSERT INTO Students (StudentID, StudFirstName, StudLastName, StudStreetAddress, StudCity, StudState, StudZipCode, StudAreaCode, StudPhoneNumber, StudGPA, StudMajor) VALUES (1015, 'Brannon', 'Jones', '777 Fenexet Blvd', 'Long Beach', 'CA', '90809', '562', '555-0399', 86.0, 2);\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Students"
+    },
+    {
+        "query": [
+            "INSERT INTO Subjects (SubjectID, CategoryID, SubjectCode, SubjectName, SubjectPreReq, SubjectDescription) VALUES (53, 'PHY', 'PHY 203', 'Engineering Physics II', 'PHY 201', 'Waves and oscillations. Mechanical waves and sound are studied as well as geometric and physical optics. The wave aspect of an electron is introduced as it applies to the stationary states of the hydrogen atom. Prereq: PHY 201.');\n",
+            "INSERT INTO Subjects (SubjectID, CategoryID, SubjectCode, SubjectName, SubjectPreReq, SubjectDescription) VALUES (3, 'ACC', 'ACC 230', 'Fundamentals of Managerial Accounting', 'ACC 220', 'Analysis of accounting data as part of the managerial process of planning, decision making and control. Concentrates on economic decision making in enterprises. Includes computerized element. Prereq: ACC 220 or instructor permission.');\n",
+            "INSERT INTO Subjects (SubjectID, CategoryID, SubjectCode, SubjectName, SubjectPreReq, SubjectDescription) VALUES (56, 'POL', 'POL 213', 'Women and Politics', NULL, 'Introduction to concepts of power and policy issues as they relate to women. Theoretical, historical and empirical studies of women''s participation in social and political movements nationally and internationally. Study of women''s diverse roles in relations to family, economics, labor, government, and law.');\n"
+        ],
+        "database_name": "school_scheduling",
+        "table_name": "Subjects"
+    },
+    {
+        "query": [
+            "INSERT INTO problem (name, path, type, target) VALUES ('Delaney solubility', 'https://www.kaggle.com/datasets/prashanthbairu/delaney-solubility-with-descriptors', 'regression', 'logS');\n",
+            "INSERT INTO problem (name, path, type, target) VALUES ('Critical Heat Flux', 'https://www.kaggle.com/datasets/saurabhshahane/predicting-heat-flux', 'regression', 'chf_exp [MW/m2]');\n",
+            "INSERT INTO problem (name, path, type, target) VALUES ('Franck-Hertz', 'https://www.kaggle.com/datasets/raktim711/franckhertz-experiment', 'regression', 'I');\n"
+        ],
+        "database_name": "stacking",
+        "table_name": "problem"
+    },
+    {
+        "query": [
+            "INSERT INTO eda (name, version, feature, type, range, drop_user, drop_correlation, target) VALUES ('oil spill', 2, 'f_7', 'num', '[21.24, 82.64]', 0, 0, 0);\n",
+            "INSERT INTO eda (name, version, feature, type, range, drop_user, drop_correlation, target) VALUES ('Hospital Mortality Prediction', 1, 'Blood calcium', 'num', '[6.7, 10.95]', 0, 0, 0);\n",
+            "INSERT INTO eda (name, version, feature, type, range, drop_user, drop_correlation, target) VALUES ('Critical Heat Flux', 5, 'geometry', 'cat', '[''tube'', ''annulus'', ''plate'']', 0, 0, 0);\n"
+        ],
+        "database_name": "stacking",
+        "table_name": "eda"
+    },
+    {
+        "query": [
+            "INSERT INTO feature_importance (name, version, step, feature, importance) VALUES ('survey lung cancer', 4, 1, 'YELLOW_FINGERS', 0.04183757178014771427);\n",
+            "INSERT INTO feature_importance (name, version, step, feature, importance) VALUES ('iris', 1, 2, 'petal_length', 0);\n",
+            "INSERT INTO feature_importance (name, version, step, feature, importance) VALUES ('oil spill', 2, 1, 'f_26', 0.0147710487444608924);\n"
+        ],
+        "database_name": "stacking",
+        "table_name": "feature_importance"
+    },
+    {
+        "query": [
+            "INSERT INTO solution (name, version, correlation, nb_model, nb_feature, score, test_size, resampling) VALUES ('concrete', 7, 0.75, 6, 4, 0.8000000000000000444, 0.3300000000000000155, 0);\n",
+            "INSERT INTO solution (name, version, correlation, nb_model, nb_feature, score, test_size, resampling) VALUES ('Hospital Mortality Prediction', 6, 0.75, 5, 5, 0.8000000000000000444, 0.3300000000000000155, 0);\n",
+            "INSERT INTO solution (name, version, correlation, nb_model, nb_feature, score, test_size, resampling) VALUES ('water quality', 2, 0.75, 5, 8, 0.6999999999999999556, 0.3300000000000000155, 0);\n"
+        ],
+        "database_name": "stacking",
+        "table_name": "solution"
+    },
+    {
+        "query": [
+            "INSERT INTO model_score (name, version, step, model, train_score, test_score) VALUES ('survey lung cancer', 4, 2, 'GPCR', 0.9971830985915493, 0.951724137931034497);\n",
+            "INSERT INTO model_score (name, version, step, model, train_score, test_score) VALUES ('Solar Power Generation', 7, 2, 'RFRS', 0.987671403412041294, 0.9080406263527851518);\n",
+            "INSERT INTO model_score (name, version, step, model, train_score, test_score) VALUES ('Solar Power Generation', 7, 1, 'RFRA', 0.9872524789465984, 0.9083111684932237973);\n"
+        ],
+        "database_name": "stacking",
+        "table_name": "model_score"
+    },
+    {
+        "query": [
+            "INSERT INTO model_importance (name, version, step, model, importance) VALUES ('Tunnel diode', 3, 2, 'ABR', 0.01908050064857804567);\n",
+            "INSERT INTO model_importance (name, version, step, model, importance) VALUES ('Hospital Mortality Prediction', 6, 1, 'ABC', 0.03809936281728070612);\n",
+            "INSERT INTO model_importance (name, version, step, model, importance) VALUES ('Hospital Mortality Prediction', 6, 1, 'KNCU', 0);\n"
+        ],
+        "database_name": "stacking",
+        "table_name": "model_importance"
+    },
+    {
+        "query": [
+            "INSERT INTO model (name, version, step, L1_model) VALUES ('iris', 4, 1, 'tree');\n",
+            "INSERT INTO model (name, version, step, L1_model) VALUES ('water quality', 2, 1, 'regression');\n",
+            "INSERT INTO model (name, version, step, L1_model) VALUES ('kindey stone urine analysis', 1, 2, 'regression');\n"
+        ],
+        "database_name": "stacking",
+        "table_name": "model"
     }
 ]

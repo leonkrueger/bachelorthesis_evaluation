@@ -4,258 +4,279 @@
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.4877975752283102
+            "0.2_0.375_0.5_0.5": 0.45481767642149584
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.42033353637341786
+            "0.2_0.375_0.5_0.5": 0.3835485780534314
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider2_EU_soccer": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8169476783142076
+            "0.2_0.375_0.5_0.5": 0.695793592855464
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.7886498476603642
+            "0.2_0.375_0.5_0.5": 0.6945150668736984
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.7802694277079338
+            "0.2_0.375_0.5_0.5": 0.6453368262168071
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8100926692175356
+            "0.2_0.375_0.5_0.5": 0.7915627257793153
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6427729076286807
+            "0.2_0.375_0.5_0.5": 0.5781350416692032
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.750378973479772
+            "0.2_0.375_0.5_0.5": 0.6809115744827421
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6376695681137374
+            "0.2_0.375_0.5_0.5": 0.6138851967896282
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.7286660081769741
+        }
     },
     "wikidb_heaphy-sketchbook-no-2": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.7321282582903765
+            "0.2_0.375_0.5_0.5": 0.7314362167678852
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7539744506042452
+            "0.2_0.375_0.5_0.5": 0.7449382230285895
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_student_club": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.922709065721488
+            "0.2_0.375_0.5_0.5": 0.9220906365316303
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8925998989508306
+            "0.2_0.375_0.5_0.5": 0.8768232844048061
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_toxicology": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8804455595686576
+            "0.2_0.375_0.5_0.5": 0.8575860347662673
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8258170296238154
+            "0.2_0.375_0.5_0.5": 0.713507625272331
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "wikidb_paz-domain-superfamily": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8019809702729821
+            "0.2_0.375_0.5_0.5": 0.7808889977000198
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7467393472881731
+            "0.2_0.375_0.5_0.5": 0.7232126099745867
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "wikidb_rsga-gtpase-domain-protein-family": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9356494654021023
+            "0.2_0.375_0.5_0.5": 0.9261969991455268
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8458328342839222
+            "0.2_0.375_0.5_0.5": 0.8240423381162508
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider2_Airlines": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8299801548251782
+            "0.2_0.375_0.5_0.5": 0.7248770304278197
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.8106138342875875
+            "0.2_0.375_0.5_0.5": 0.6525991809767386
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.6928196484746514
+            "0.2_0.375_0.5_0.5": 0.4738745993719447
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8937546180319433
+            "0.2_0.375_0.5_0.5": 0.8749476127736997
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8606709713448844
+            "0.2_0.375_0.5_0.5": 0.6867372881355932
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.818466775464058
+            "0.2_0.375_0.5_0.5": 0.6649521221532091
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9178616929661401
+            "0.2_0.375_0.5_0.5": 0.849537037037037
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.9121184906711223
+        }
     },
     "spider_chinook_1": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9126299821557352
+            "0.2_0.375_0.5_0.5": 0.9057106149211414
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8626303680717791
+            "0.2_0.375_0.5_0.5": 0.8421008904262494
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider_swimming": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9216605133996438
+            "0.2_0.375_0.5_0.5": 0.9085714285714286
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9063311688311688
+            "0.2_0.375_0.5_0.5": 0.868831168831169
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider_company_office": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.991372053872054
+            "0.2_0.375_0.5_0.5": 0.9846491228070176
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9061158794001932
+            "0.2_0.375_0.5_0.5": 0.8663030439346229
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider_theme_gallery": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9726495726495727
+            "0.2_0.375_0.5_0.5": 0.9682539682539684
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9888888888888889
+            "0.2_0.375_0.5_0.5": 0.980952380952381
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_thrombosis_prediction": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.7414442926161641
+            "0.2_0.375_0.5_0.5": 0.721505478774641
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.591788069903247
+            "0.2_0.375_0.5_0.5": 0.47013913480702785
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_debit_card_specializing": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.869770809074714
+            "0.2_0.375_0.5_0.5": 0.8631050745142426
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9606146803322672
+            "0.2_0.375_0.5_0.5": 0.942125662994696
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_card_games": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.5810873505461991
+            "0.2_0.375_0.5_0.5": 0.578305371087749
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.5063852111205874
+            "0.2_0.375_0.5_0.5": 0.4897431490452085
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_codebase_community": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.5915837832802119
+            "0.2_0.375_0.5_0.5": 0.5534364940614941
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6373361096575383
+            "0.2_0.375_0.5_0.5": 0.6251922350136635
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_formula_1": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8867869729253959
+            "0.2_0.375_0.5_0.5": 0.8520693581422327
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8081380632662685
+            "0.2_0.375_0.5_0.5": 0.783884998692527
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider_candidate_poll": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
@@ -269,7 +290,8 @@
         "justine_3_3_one_prompt": {
             "0.2_0.375_0.5_0.5": 1.0
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider_decoration_competition": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
@@ -281,369 +303,406 @@
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9791666666666666
+            "0.2_0.375_0.5_0.5": 0.9666666666666667
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "wikidb_peptidase-u32-collagenase-family": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8134928004935091
+            "0.2_0.375_0.5_0.5": 0.7958789823858992
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.5682460308439776
+            "0.2_0.375_0.5_0.5": 0.5335921437781966
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider_entrepreneur": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9427807486631016
+            "0.2_0.375_0.5_0.5": 0.9251336898395721
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9666666666666667
+            "0.2_0.375_0.5_0.5": 0.95
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider_soccer_2": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9848484848484849
+            "0.2_0.375_0.5_0.5": 0.9722222222222223
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8722222222222221
+            "0.2_0.375_0.5_0.5": 0.7592592592592592
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "wikidb_tammerkoski": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.981645368015375
+            "0.2_0.375_0.5_0.5": 0.9786981776068844
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.877341072153151
+            "0.2_0.375_0.5_0.5": 0.8594887434907665
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider2_EntertainmentAgency": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8117659527319583
+            "0.2_0.375_0.5_0.5": 0.7380534356549453
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.6878442410669463
+            "0.2_0.375_0.5_0.5": 0.5729180417827066
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.7944869623431701
+            "0.2_0.375_0.5_0.5": 0.7418296748945904
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8977947167478225
+            "0.2_0.375_0.5_0.5": 0.8833222778409946
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7484840403874439
+            "0.2_0.375_0.5_0.5": 0.6221764493257707
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.8399346483009756
+            "0.2_0.375_0.5_0.5": 0.7951741571651075
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.9239978891562602
+            "0.2_0.375_0.5_0.5": 0.9033354947382097
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.9064574759761926
+        }
     },
     "bird_superhero": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8922409373105967
+            "0.2_0.375_0.5_0.5": 0.8866772015823873
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7925243060937076
+            "0.2_0.375_0.5_0.5": 0.75395642281504
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "wikidb_novelette": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8725919603079081
+            "0.2_0.375_0.5_0.5": 0.8611422093177417
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6865948839906113
+            "0.2_0.375_0.5_0.5": 0.6669674201349484
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_california_schools": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8215895498084741
+            "0.2_0.375_0.5_0.5": 0.8211516039159829
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.38786577024684776
+            "0.2_0.375_0.5_0.5": 0.35935433391812427
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider2_Pagila": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7943614718614718
+            "0.2_0.375_0.5_0.5": 0.7430480630480629
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.8058698955365622
+            "0.2_0.375_0.5_0.5": 0.7683243793243792
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.7540177003461316
+            "0.2_0.375_0.5_0.5": 0.6911570733792956
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9071189057855725
+            "0.2_0.375_0.5_0.5": 0.8920888987555654
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6512254218733642
+            "0.2_0.375_0.5_0.5": 0.5139710729834135
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.8477948594615261
+            "0.2_0.375_0.5_0.5": 0.8423362440029106
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8872089022089023
+            "0.2_0.375_0.5_0.5": 0.8760478410478411
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.9431265647932315
+        }
     },
     "spider2_IPL": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6702632628525884
+            "0.2_0.375_0.5_0.5": 0.5325097934472935
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.701905325468019
+            "0.2_0.375_0.5_0.5": 0.6362329434697855
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.8863171005360118
+            "0.2_0.375_0.5_0.5": 0.8449622745675377
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8901440199545597
+            "0.2_0.375_0.5_0.5": 0.88612274056353
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7814987236914575
+            "0.2_0.375_0.5_0.5": 0.6658350473056356
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.7920539408139142
+            "0.2_0.375_0.5_0.5": 0.7348599664224664
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8361829127745469
+            "0.2_0.375_0.5_0.5": 0.8227776487788098
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.8353572729132193
+        }
     },
     "spider2_Db-IMDB": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.5102490563414389
+            "0.2_0.375_0.5_0.5": 0.3550008689327575
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.2828211288250625
+            "0.2_0.375_0.5_0.5": 0.20159801938855018
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.39957255110480916
+            "0.2_0.375_0.5_0.5": 0.262559205500382
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.6987190403688379
+            "0.2_0.375_0.5_0.5": 0.5913537851037851
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.3243852407080305
+            "0.2_0.375_0.5_0.5": 0.19472292215207196
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.33815143333846126
+            "0.2_0.375_0.5_0.5": 0.2757999250809709
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.592234458379214
+            "0.2_0.375_0.5_0.5": 0.5310078998534007
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.6149478726401804
+        }
     },
     "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9174193161576354
+            "0.2_0.375_0.5_0.5": 0.9148193326865645
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6691145583484904
+            "0.2_0.375_0.5_0.5": 0.6111983829375133
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "wikidb_alpha-defensins": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9759074912016089
+            "0.2_0.375_0.5_0.5": 0.9618758434547908
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7508207421520114
+            "0.2_0.375_0.5_0.5": 0.7247076023391812
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "wikidb_burial-vault": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.504899100042451
+            "0.2_0.375_0.5_0.5": 0.4337226604685176
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.4936342888940597
+            "0.2_0.375_0.5_0.5": 0.47176903109458984
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "bird_financial": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.7600846892935976
+            "0.2_0.375_0.5_0.5": 0.713641925520208
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6595722726309985
+            "0.2_0.375_0.5_0.5": 0.6085368692601538
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider2_school_scheduling": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7540315727157832
+            "0.2_0.375_0.5_0.5": 0.6134416752837806
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.6456883115078067
+            "0.2_0.375_0.5_0.5": 0.5360108091274242
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.6409287715105966
+            "0.2_0.375_0.5_0.5": 0.4233590194330231
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.8001882292791384
+            "0.2_0.375_0.5_0.5": 0.761917526917527
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6276546522997237
+            "0.2_0.375_0.5_0.5": 0.4402013970868254
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.674172968032617
+            "0.2_0.375_0.5_0.5": 0.6109258462834711
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.8228411422817016
+            "0.2_0.375_0.5_0.5": 0.7809827494442879
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.7441647241647242
+        }
     },
     "spider2_stacking": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.44385528556788995
+            "0.2_0.375_0.5_0.5": 0.30671031962516987
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.47069191423358486
+            "0.2_0.375_0.5_0.5": 0.3841552066228791
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.4750459689164262
+            "0.2_0.375_0.5_0.5": 0.20615341144200144
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.7364108360853512
+            "0.2_0.375_0.5_0.5": 0.6733554510127815
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.4036080790092188
+            "0.2_0.375_0.5_0.5": 0.21328437917222962
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.5578344816374112
+            "0.2_0.375_0.5_0.5": 0.5029736200550561
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.5859844032266537
+            "0.2_0.375_0.5_0.5": 0.49752574394989246
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.7291848872783195
+        }
     },
     "bird_european_football_2": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
         "justine_3_3_retry_with_feedback": {},
         "justine_3_3_retry_with_feedback_one_shot": {},
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.7034801185339407
+            "0.2_0.375_0.5_0.5": 0.6722267063884229
         },
         "justine_3_3_retry_with_same_prompt": {},
         "justine_3_3_retry_with_feedback_optimization_1": {},
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.672277223101062
+            "0.2_0.375_0.5_0.5": 0.6036735682540788
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     },
     "spider2_imdb_movies": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7934297468969127
+            "0.2_0.375_0.5_0.5": 0.7188403346804746
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.7663449841019483
+            "0.2_0.375_0.5_0.5": 0.5667341307730707
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.6989169291359268
+            "0.2_0.375_0.5_0.5": 0.4979063609498392
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.9324328426009098
+            "0.2_0.375_0.5_0.5": 0.9290654956621343
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.805191967072882
+            "0.2_0.375_0.5_0.5": 0.6705092407333304
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.7725767578836943
+            "0.2_0.375_0.5_0.5": 0.5937649018085402
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.7726363090665183
+            "0.2_0.375_0.5_0.5": 0.7585900316052886
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.7003953465444148
+        }
     },
     "spider2_California_Traffic_Collision": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {
-            "0.2_0.375_0.5_0.5": 0.6602785296918747
+            "0.2_0.375_0.5_0.5": 0.6008556695171263
         },
         "justine_3_3_retry_with_feedback": {
-            "0.2_0.375_0.5_0.5": 0.5936400942363178
+            "0.2_0.375_0.5_0.5": 0.28146074543140354
         },
         "justine_3_3_retry_with_feedback_one_shot": {
-            "0.2_0.375_0.5_0.5": 0.7174539254435601
+            "0.2_0.375_0.5_0.5": 0.6140179277278682
         },
         "justine_3_3_retry_with_feedback_two_shot": {
-            "0.2_0.375_0.5_0.5": 0.7680336380736419
+            "0.2_0.375_0.5_0.5": 0.6864066517966823
         },
         "justine_3_3_retry_with_same_prompt": {
-            "0.2_0.375_0.5_0.5": 0.5406179005358209
+            "0.2_0.375_0.5_0.5": 0.2866329545593091
         },
         "justine_3_3_retry_with_feedback_optimization_1": {
-            "0.2_0.375_0.5_0.5": 0.6131932584591329
+            "0.2_0.375_0.5_0.5": 0.40651341433811605
         },
         "justine_3_3_one_prompt": {
-            "0.2_0.375_0.5_0.5": 0.5296639570093973
+            "0.2_0.375_0.5_0.5": 0.4957861049799222
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {
+            "0.2_0.375_0.5_0.5": 0.5674469112160638
+        }
     },
     "spider_workshop_paper": {
         "justine_3_3_retry_with_feedback_old_db_prompt": {},
@@ -657,6 +716,7 @@
         "justine_3_3_one_prompt": {
             "0.2_0.375_0.5_0.5": 0.8863636363636364
         },
-        "gold_standard": 1.0
+        "gold_standard": 1.0,
+        "justine_3_3_retry_with_feedback_certainty": {}
     }
 }

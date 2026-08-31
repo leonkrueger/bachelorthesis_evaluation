@@ -1,0 +1,95 @@
+{
+    "wikidb_japans-top-100-waterfalls": {
+        "gold_standard": 0.5331932655949219
+    },
+    "spider2_EU_soccer": {
+        "gold_standard": 0.9873959129157617
+    },
+    "wikidb_heaphy-sketchbook-no-2": {
+        "gold_standard": 0.7529239766081872
+    },
+    "bird_student_club": {
+        "gold_standard": 0.9939204896298718
+    },
+    "bird_toxicology": {
+        "gold_standard": 1.0
+    },
+    "wikidb_paz-domain-superfamily": {
+        "gold_standard": 0.7551020408163265
+    },
+    "wikidb_rsga-gtpase-domain-protein-family": {
+        "gold_standard": 0.8989898989898989
+    },
+    "spider_chinook_1": {
+        "gold_standard": 0.9891601684115052
+    },
+    "spider_swimming": {
+        "gold_standard": 1.0
+    },
+    "spider_company_office": {
+        "gold_standard": 1.0
+    },
+    "spider_theme_gallery": {
+        "gold_standard": 1.0
+    },
+    "bird_thrombosis_prediction": {
+        "gold_standard": 0.8208472319165735
+    },
+    "bird_debit_card_specializing": {
+        "gold_standard": 1.0
+    },
+    "bird_card_games": {
+        "gold_standard": 0.9533867348790589
+    },
+    "bird_codebase_community": {
+        "gold_standard": 0.9013435782967033
+    },
+    "bird_formula_1": {
+        "gold_standard": 0.9613063159537518
+    },
+    "spider_candidate_poll": {
+        "gold_standard": 1.0
+    },
+    "spider_decoration_competition": {
+        "gold_standard": 1.0
+    },
+    "wikidb_peptidase-u32-collagenase-family": {
+        "gold_standard": 0.77
+    },
+    "spider_entrepreneur": {
+        "gold_standard": 1.0
+    },
+    "spider_soccer_2": {
+        "gold_standard": 1.0
+    },
+    "wikidb_tammerkoski": {
+        "gold_standard": 0.63125
+    },
+    "bird_superhero": {
+        "gold_standard": 0.9995614035087719
+    },
+    "wikidb_novelette": {
+        "gold_standard": 0.6775992922421494
+    },
+    "bird_california_schools": {
+        "gold_standard": 0.912457611381341
+    },
+    "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
+        "gold_standard": 0.9545454545454545
+    },
+    "wikidb_alpha-defensins": {
+        "gold_standard": 0.8615384615384617
+    },
+    "wikidb_burial-vault": {
+        "gold_standard": 0.4192627673078801
+    },
+    "bird_financial": {
+        "gold_standard": 0.9738627767160376
+    },
+    "bird_european_football_2": {
+        "gold_standard": 0.9817630953119958
+    },
+    "spider_workshop_paper": {
+        "gold_standard": 1.0
+    }
+}

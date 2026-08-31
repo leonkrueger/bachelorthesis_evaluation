@@ -1,0 +1,242 @@
+{
+    "wikidb_japans-top-100-waterfalls": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.476459046243939
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_EU_soccer": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9466332011673627
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_heaphy-sketchbook-no-2": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.7866847261370589
+        },
+        "gold_standard": 1.0
+    },
+    "bird_student_club": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.8712728847239717
+        },
+        "gold_standard": 1.0
+    },
+    "bird_toxicology": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_paz-domain-superfamily": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.7568092125476538
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_rsga-gtpase-domain-protein-family": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_Airlines": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.871296819122906
+        },
+        "gold_standard": 1.0
+    },
+    "spider_chinook_1": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9017595611913403
+        },
+        "gold_standard": 1.0
+    },
+    "spider_swimming": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9625668449197862
+        },
+        "gold_standard": 1.0
+    },
+    "spider_company_office": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.989247311827957
+        },
+        "gold_standard": 1.0
+    },
+    "spider_theme_gallery": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "bird_thrombosis_prediction": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.884287215844536
+        },
+        "gold_standard": 1.0
+    },
+    "bird_debit_card_specializing": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9899937460913071
+        },
+        "gold_standard": 1.0
+    },
+    "bird_card_games": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.5755002168056356
+        },
+        "gold_standard": 1.0
+    },
+    "bird_codebase_community": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.607260741903599
+        },
+        "gold_standard": 1.0
+    },
+    "bird_formula_1": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.938245515168592
+        },
+        "gold_standard": 1.0
+    },
+    "spider_candidate_poll": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "spider_decoration_competition": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_peptidase-u32-collagenase-family": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.7887378945929197
+        },
+        "gold_standard": 1.0
+    },
+    "spider_entrepreneur": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9875
+        },
+        "gold_standard": 1.0
+    },
+    "spider_soccer_2": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9333333333333332
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_tammerkoski": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_EntertainmentAgency": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9458078372105521
+        },
+        "gold_standard": 1.0
+    },
+    "bird_superhero": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.8571021303258146
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_novelette": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9375881240851699
+        },
+        "gold_standard": 1.0
+    },
+    "bird_california_schools": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.6536215671696058
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_Pagila": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_IPL": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9092857142857143
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_Db-IMDB": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.5807027505408071
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_chemotaxis-methyl-accepting-receptor-tar-related-ligand-binding-domain-protein-family": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_alpha-defensins": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 1.0
+        },
+        "gold_standard": 1.0
+    },
+    "wikidb_burial-vault": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.40554315799391577
+        },
+        "gold_standard": 1.0
+    },
+    "bird_financial": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.8989259142392134
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_school_scheduling": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.8846535998496781
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_stacking": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9467846967846968
+        },
+        "gold_standard": 1.0
+    },
+    "bird_european_football_2": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.9630155297823568
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_imdb_movies": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.835530390254269
+        },
+        "gold_standard": 1.0
+    },
+    "spider2_California_Traffic_Collision": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.7517964524758016
+        },
+        "gold_standard": 1.0
+    },
+    "spider_workshop_paper": {
+        "justine_3_3_retry_with_feedback_two_shot": {
+            "0.8_0.2_0.375_0.5_0.5": 0.7587301587301587
+        },
+        "gold_standard": 1.0
+    }
+}

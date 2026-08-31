@@ -7,6 +7,8 @@ class Adjustments(Enum):
     USE_SYNONYMS = 3
     USE_TABLE_SYNONYMS = 4
     USE_COLUMN_SYNONYMS = 5
+    COMBINE_INSERTS = 6
+    SHUFFLE_COLUMNS = 7
 
 
 # Dictionary defines the different experiments
@@ -14,61 +16,61 @@ class Adjustments(Enum):
 # Tuples define the adjustment and parameters
 # If both synonyms should be used and tables deleted, it must happen in this order.
 EXPERIMENTS = {
-    "table_deleted": {
-        "adjustments": [(Adjustments.DELETE_TABLE, [0.0, 0.5, 1.0])],
-        "y_label": "Ratio of removed table names",
-        "strategies": [
-            "Llama3_finetuned",
-            "Llama3_not_finetuned",
-            "Heuristic_exact",
-            "Heuristic_fuzzy",
-            "Heuristic_synonyms",
-        ],
-    },
-    "columns_deleted": {
-        "adjustments": [(Adjustments.DELETE_COLUMN, [0.0, 0.5, 1.0])],
-        "y_label": "Ratio of removed column names",
-        "strategies": [
-            "Llama3_finetuned",
-            "Llama3_not_finetuned",
-        ],
-    },
-    "synonyms_used": {
-        "adjustments": [(Adjustments.USE_SYNONYMS, [0.0, 0.5, 1.0])],
-        "y_label": "Ratio of synonymous names used",
-        "strategies": [
-            "Llama3_finetuned",
-            "Llama3_not_finetuned",
-            "Heuristic_exact",
-            "Heuristic_fuzzy",
-            "Heuristic_synonyms",
-        ],
-    },
-    "table_and_columns_deleted": {
-        "adjustments": [
-            (Adjustments.DELETE_TABLE, [0.5, 1.0]),
-            (Adjustments.DELETE_COLUMN, [0.5, 1.0]),
-        ],
-        "y_label": "Tables and columns deleted",
-        "strategies": [
-            "Llama3_finetuned",
-            "Llama3_not_finetuned",
-            "GPT3_5",
-            "GPT4o",
-            "GPT4o_mini",
-        ],
-    },
-    "existing_database_schema": {
-        "adjustments": [
-            (Adjustments.DELETE_TABLE, [0.0, 1.0]),
-            (Adjustments.DELETE_COLUMN, [0.0, 1.0]),
-        ],
-        "predefined_database_schema": True,
-        "strategies": [
-            "Llama3_finetuned_dc",
-            "Llama3_not_finetuned",
-        ],
-    },
+    # "table_deleted": {
+    #     "adjustments": [(Adjustments.DELETE_TABLE, [0.0, 0.5, 1.0])],
+    #     "y_label": "Ratio of removed table names",
+    #     "strategies": [
+    #         "Llama3_finetuned",
+    #         "Llama3_not_finetuned",
+    #         "Heuristic_exact",
+    #         "Heuristic_fuzzy",
+    #         "Heuristic_synonyms",
+    #     ],
+    # },
+    # "columns_deleted": {
+    #     "adjustments": [(Adjustments.DELETE_COLUMN, [0.0, 0.5, 1.0])],
+    #     "y_label": "Ratio of removed column names",
+    #     "strategies": [
+    #         "Llama3_finetuned",
+    #         "Llama3_not_finetuned",
+    #     ],
+    # },
+    # "synonyms_used": {
+    #     "adjustments": [(Adjustments.USE_SYNONYMS, [0.0, 0.5, 1.0])],
+    #     "y_label": "Ratio of synonymous names used",
+    #     "strategies": [
+    #         "Llama3_finetuned",
+    #         "Llama3_not_finetuned",
+    #         "Heuristic_exact",
+    #         "Heuristic_fuzzy",
+    #         "Heuristic_synonyms",
+    #     ],
+    # },
+    # "table_and_columns_deleted": {
+    #     "adjustments": [
+    #         (Adjustments.DELETE_TABLE, [0.5, 1.0]),
+    #         (Adjustments.DELETE_COLUMN, [0.5, 1.0]),
+    #     ],
+    #     "y_label": "Tables and columns deleted",
+    #     "strategies": [
+    #         "Llama3_finetuned",
+    #         "Llama3_not_finetuned",
+    #         "GPT3_5",
+    #         "GPT4o",
+    #         "GPT4o_mini",
+    #     ],
+    # },
+    # "existing_database_schema": {
+    #     "adjustments": [
+    #         (Adjustments.DELETE_TABLE, [0.0, 1.0]),
+    #         (Adjustments.DELETE_COLUMN, [0.0, 1.0]),
+    #     ],
+    #     "predefined_database_schema": True,
+    #     "strategies": [
+    #         "Llama3_finetuned_dc",
+    #         "Llama3_not_finetuned",
+    #     ],
+    # },
     "paper_evaluation": {
         "adjustments": [
             (Adjustments.DELETE_COLUMN, [0.2]),
@@ -97,6 +99,43 @@ EXPERIMENTS = {
         "strategies": [
             "justine_v0",
             "justine_optimization_2",
+        ],
+    },
+    "batch_insertion": {
+        "adjustments": [
+            (Adjustments.COMBINE_INSERTS, [0.8], (5, 10)),
+            (Adjustments.DELETE_COLUMN, [0.2]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.375]),
+            (Adjustments.DELETE_TABLE, [0.5]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
+        ],
+        "strategies": [
+            "justine_3_3_retry_with_feedback_two_shot",
+        ],
+    },
+    "shuffled_columns": {
+        "adjustments": [
+            (Adjustments.SHUFFLE_COLUMNS, []),
+            (Adjustments.DELETE_COLUMN, [0.2]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.375]),
+            (Adjustments.DELETE_TABLE, [0.5]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
+        ],
+        "strategies": [
+            "justine_3_3_retry_with_feedback_two_shot",
+        ],
+    },
+    "batch_shuffled_columns": {
+        "adjustments": [
+            (Adjustments.COMBINE_INSERTS, [0.8], (5, 10)),
+            (Adjustments.SHUFFLE_COLUMNS, []),
+            (Adjustments.DELETE_COLUMN, [0.2]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.375]),
+            (Adjustments.DELETE_TABLE, [0.5]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
+        ],
+        "strategies": [
+            "justine_3_3_retry_with_feedback_two_shot",
         ],
     },
 }

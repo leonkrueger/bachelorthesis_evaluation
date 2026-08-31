@@ -20,9 +20,14 @@ def insert_to_string(
         + ", ".join([quote_str + column + quote_str for column in insert["columns"]])
         + ") "
     )
-    return (
-        f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join(insert['values'])});\n"
-    )
+    if isinstance(insert["values"][0], (list, tuple)):
+        row_values_strings = [
+            f"({', '.join([str(value) if value is not None else 'NULL' for value in row_values])})" for row_values in insert['values']
+        ]
+        
+        return f"INSERT INTO {table_str}{columns_str}VALUES {', '.join(row_values_strings)};\n"
+    else:
+        return f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join([str(value) if value is not None else 'NULL' for value in insert['values']])});\n"
 
 
 def is_usable_value(value: str | Any) -> bool:
@@ -146,7 +151,7 @@ def get_data_from_create_table(
             attribute_name = attribute[1]
             i = 2
             while attribute[i] != "`":
-                attribute_name += "_" + attribute[i]
+                attribute_name += attribute[i]
                 i += 1
             attributes.append(
                 [

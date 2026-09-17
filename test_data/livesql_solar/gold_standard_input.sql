@@ -1,0 +1,267 @@
+CREATE TABLE `plant`
+(`growregistry` VARCHAR(1023),
+`growalias` VARCHAR(1023),
+`gencapmw` DOUBLE,
+`initdate` DATE);
+CREATE TABLE `panel`
+(`panemark` VARCHAR(1023),
+`hubregistry` VARCHAR(1023),
+`panemfr` VARCHAR(1023),
+`paneline` VARCHAR(1023),
+`panetype` VARCHAR(1023),
+`powratew` BIGINT,
+`paneeffpct` DOUBLE,
+`nomtempc` DOUBLE,
+`tempcoef` DOUBLE);
+CREATE TABLE `environment`
+(`envregistry` VARCHAR(1023),
+`arearegistry` VARCHAR(1023),
+`envmoment` DATETIME,
+`celltempc` DOUBLE,
+`ambtempc` DOUBLE,
+`soillosspct` DOUBLE,
+`dustdengm2` DOUBLE,
+`cleancycledays` BIGINT,
+`lastcleandt` DATE,
+`relhumpct` DOUBLE,
+`windspdms` DOUBLE,
+`winddirdeg` DOUBLE,
+`preciptmm` DOUBLE,
+`airpresshpa` DOUBLE,
+`uv_idx` DOUBLE,
+`cloudcovpct` DOUBLE,
+`snowcovpct` DOUBLE,
+`irradiance_conditions` VARCHAR(1023));
+CREATE TABLE `inverter`
+(`invertregistry` VARCHAR(1023),
+`siteref` VARCHAR(1023),
+`invertmoment` DATETIME,
+`inverttempc` DOUBLE,
+`gridvolt` DOUBLE,
+`gridfreqhz` DOUBLE,
+`pwrqualidx` DOUBLE,
+`power_metrics` VARCHAR(1023));
+CREATE TABLE `performance`
+(`perfregistry` VARCHAR(1023),
+`solmodref` VARCHAR(1023),
+`perfmoment` DATETIME,
+`measpoww` DOUBLE,
+`powlossw` DOUBLE,
+`efficiency_profile` VARCHAR(1023));
+CREATE TABLE `alerts`
+(`alertreg` VARCHAR(1023),
+`compreg` VARCHAR(1023),
+`deviceref` VARCHAR(1023),
+`incidentref` VARCHAR(1023),
+`alertmoment` DATETIME,
+`alertstat` VARCHAR(1023),
+`alertcnt` BIGINT,
+`maintprior` VARCHAR(1023),
+`replaceprior` VARCHAR(1023),
+`optpotential` VARCHAR(1023));
+CREATE TABLE `electrical`
+(`elecregistry` VARCHAR(1023),
+`engyunitref` VARCHAR(1023),
+`efflogref` VARCHAR(1023),
+`iscinita` DOUBLE,
+`isccurra` DOUBLE,
+`vocinitv` DOUBLE,
+`voccurrv` DOUBLE,
+`impinita` DOUBLE,
+`impcurra` DOUBLE,
+`vmpinitv` DOUBLE,
+`vmpcurrv` DOUBLE,
+`ffactorinit` DOUBLE,
+`ffactorcurr` DOUBLE,
+`seriesresohm` DOUBLE,
+`shuntresohm` DOUBLE);
+CREATE TABLE `maintenance`
+(`maintregistry` VARCHAR(1023),
+`powerref` VARCHAR(1023),
+`compref` VARCHAR(1023),
+`obsref` VARCHAR(1023),
+`inspectmeth` VARCHAR(1023),
+`inspectres` VARCHAR(1023),
+`inspectdate` DATE,
+`maintsched` VARCHAR(1023),
+`wtystatus` VARCHAR(1023),
+`wtyclaimcnt` BIGINT,
+`maintcostusd` DOUBLE,
+`cleancostusd` DOUBLE,
+`replacecostusd` DOUBLE,
+`revlossusd` DOUBLE);
+INSERT INTO plant VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'Solar Plant Torresmouth', 38.730, '2016-06-24');
+INSERT INTO plant VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'Solar Plant Petersonborough', 54.900, '2017-10-25');
+INSERT INTO plant VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'Solar Plant Youngmouth', 14.490, '2024-01-06');
+INSERT INTO plant VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'Solar Plant North Matthew', 183.260, '2020-02-16');
+INSERT INTO plant VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', 'Solar Plant Timothyfurt', 121.970, '2017-07-06');
+INSERT INTO plant VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', 'Solar Plant Alanbury', 282.700, '2020-09-06');
+INSERT INTO plant VALUES ('21ff2835-a1b2-4514-8472-c277f84345ed', 'Solar Plant East Daniel', 211.010, '2023-04-11');
+INSERT INTO plant VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'Solar Plant Mendozaborough', 328.310, '2016-12-25');
+INSERT INTO plant VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', 'Solar Plant South Katherineshire', 150.130, '2022-10-30');
+INSERT INTO plant VALUES ('0935111f-abdb-4927-a586-edbde56d3348', 'Solar Plant North Jessicaside', 167.910, '2019-08-08');
+INSERT INTO plant VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', 'Solar Plant Nicoleberg', 394.370, '2015-12-25');
+INSERT INTO plant VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'Solar Plant New Scott', 28.250, '2021-02-04');
+INSERT INTO plant VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', 'Solar Plant West Ericahaven', 395.570, '2016-04-07');
+INSERT INTO plant VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', 'Solar Plant North Eric', 205.750, '2017-02-13');
+INSERT INTO plant VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'Solar Plant Jennifermouth', 120.550, '2016-01-26');
+INSERT INTO plant VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'Solar Plant Guerraville', 357.250, '2016-10-22');
+INSERT INTO plant VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', 'Solar Plant Lake Olivia', 43.750, '2023-11-09');
+INSERT INTO plant VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'Solar Plant Amandamouth', 383.190, '2019-11-02');
+INSERT INTO plant VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', 'Solar Plant Joneston', 322.720, '2018-04-18');
+INSERT INTO plant VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'Solar Plant Waltersport', 289.880, '2018-02-04');
+INSERT INTO plant VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', 'Solar Plant Weekshaven', 87.880, '2022-08-16');
+INSERT INTO plant VALUES ('5511673f-5b30-461e-90d2-09456e59753f', 'Solar Plant Joyfort', 469.750, '2018-11-28');
+INSERT INTO panel VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'Trina', 'Model-332', 'Poly-PERC', 600, 19.400, 46.300, -0.398);
+INSERT INTO panel VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 'Longi', 'Model-982', 'Mono-PERC', 450, 22.510, 45.900, -0.407);
+INSERT INTO panel VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'JinkoSolar', 'Model-990', 'TOPCon', 600, 20.060, 42.700, -0.392);
+INSERT INTO panel VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'Canadian Solar', 'Model-822', 'Poly-PERC', 450, 19.100, 46.600, -0.412);
+INSERT INTO panel VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', 'JinkoSolar', 'Model-717', 'TOPCon', 450, 19.430, 43.100, -0.391);
+INSERT INTO panel VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', 'JA Solar', 'Model-341', 'Bifacial', 650, 21.120, 43.500, -0.391);
+INSERT INTO panel VALUES ('21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', 'JinkoSolar', 'Model-256', 'Poly-PERC', 450, 21.100, 44.000, -0.440);
+INSERT INTO panel VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'JinkoSolar', 'Model-902', 'Poly-PERC', 650, 18.470, 45.700, -0.409);
+INSERT INTO panel VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', 'Canadian Solar', 'Model-291', 'HJT', 500, 19.730, 46.800, -0.388);
+INSERT INTO panel VALUES ('0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', 'JA Solar', 'Model-770', 'HJT', 450, 19.960, 46.600, -0.383);
+INSERT INTO panel VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', 'Longi', 'Model-140', 'Bifacial', 450, 19.310, 44.400, -0.414);
+INSERT INTO panel VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 'Canadian Solar', 'Model-222', 'Bifacial', 500, 18.940, 46.000, -0.404);
+INSERT INTO panel VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', 'Longi', 'Model-968', 'HJT', 550, 18.020, 47.900, -0.390);
+INSERT INTO panel VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', 'Canadian Solar', 'Model-800', 'TOPCon', 550, 22.360, 42.400, -0.371);
+INSERT INTO panel VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 'Longi', 'Model-710', 'HJT', 500, 18.810, 44.600, -0.369);
+INSERT INTO panel VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 'JinkoSolar', 'Model-451', 'TOPCon', 650, 20.890, 42.300, -0.358);
+INSERT INTO panel VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', 'JinkoSolar', 'Model-744', 'Bifacial', 450, 21.020, 46.500, -0.416);
+INSERT INTO panel VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'Trina', 'Model-243', 'Poly-PERC', 600, 20.160, 44.000, -0.370);
+INSERT INTO panel VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', 'Trina', 'Model-727', 'Poly-PERC', 450, 19.370, 42.700, -0.359);
+INSERT INTO panel VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 'JinkoSolar', 'Model-387', 'TOPCon', 450, 18.050, 42.900, -0.381);
+INSERT INTO panel VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', 'Longi', 'Model-860', 'TOPCon', 650, 22.790, 46.900, -0.401);
+INSERT INTO panel VALUES ('5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', 'Longi', 'Model-548', 'Bifacial', 600, 21.370, 47.700, -0.402);
+INSERT INTO environment VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', '2021-09-03 23:25:21.089832', 26.400, -0.100, 10.960, 2.692, 28, '2025-01-02', 67.400, 11.500, 118.500, 45.70, 995.80, 11.500, 81.100, 9.100, '{"specmisfac": 1.001, "irradiance_types": [521.60, 318.4, 91.800, 128.500]}');
+INSERT INTO environment VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', '2022-01-18 07:50:40.143667', 35.700, 15.100, 1.670, 0.979, 37, '2025-02-11', 99.900, 7.100, 324.000, 22.30, 994.60, 2.200, 73.400, 93.100, '{"specmisfac": 1.014, "irradiance_types": [141.30, 979.5, 180.800, 747.700]}');
+INSERT INTO environment VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', '2020-11-25 05:13:44.10689', 42.400, 13.400, 8.360, 4.629, 25, '2025-02-15', 18.000, 18.500, 20.600, 21.00, 1068.50, 9.600, 11.500, 17.400, '{"specmisfac": 0.963, "irradiance_types": [1043.50, 390.1, 156.400, 839.000]}');
+INSERT INTO environment VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', '2018-09-13 22:26:31.076834', 55.800, 5.300, 5.940, 4.636, 12, '2025-02-09', 47.300, 8.800, 211.300, 7.70, 1006.60, 9.100, 46.300, 32.900, '{"specmisfac": 1.013, "irradiance_types": [403.40, 767.9, 35.600, 1047.000]}');
+INSERT INTO environment VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '2021-01-25 06:48:59.08302', 74.200, 5.400, 0.280, 0.562, 26, '2024-12-30', 20.500, 19.700, 164.600, 13.70, 966.30, 0.100, 50.500, 52.800, '{"specmisfac": 0.961, "irradiance_types": [658.90, 716.0, 51.900, 232.200]}');
+INSERT INTO environment VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '2024-12-21 11:18:50.145392', 25.900, 24.500, 10.110, 2.378, 57, '2025-01-17', NULL, 25.000, 242.900, 43.60, 1080.20, 4.100, 51.000, 88.100, '{"specmisfac": 1.043, "irradiance_types": [1048.60, 137.3, 112.100, 483.100]}');
+INSERT INTO environment VALUES ('21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', '2018-03-31 03:54:16.10743', 27.600, 12.200, 3.190, 2.552, 52, '2025-02-15', 25.200, 8.800, 102.600, 42.80, 995.70, 10.800, 81.800, 4.700, '{"specmisfac": 1.033, "irradiance_types": [362.90, 137.8, 14.100, 884.900]}');
+INSERT INTO environment VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '2016-07-13 15:57:05.095051', 58.000, 36.400, 7.410, 2.268, 34, '2025-01-03', 39.400, 5.100, 40.100, 1.70, 900.60, 5.700, 60.900, 55.400, '{"specmisfac": 1.002, "irradiance_types": [324.50, 796.0, 188.200, 954.700]}');
+INSERT INTO environment VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', '2022-10-29 17:28:17.121427', 31.600, -3.200, 8.840, 1.543, 53, '2025-01-30', 15.800, 13.800, 2.300, 12.80, 934.70, 2.300, 78.900, 19.000, '{"specmisfac": 1.044, "irradiance_types": [1111.80, 959.6, 16.400, 966.900]}');
+INSERT INTO environment VALUES ('0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '2023-06-12 20:59:06.133943', 47.500, 6.100, 11.210, 1.232, 39, '2025-02-03', 93.400, 9.400, 186.800, 30.30, 949.10, 1.700, 45.000, 2.600, '{"specmisfac": 0.963, "irradiance_types": [717.90, 973.2, 44.900, 761.100]}');
+INSERT INTO environment VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '2016-06-21 21:59:01.08302', 65.700, -0.100, 6.510, 0.029, 17, '2025-01-29', 60.100, 5.000, 66.300, 26.60, 927.50, 6.600, 28.200, 41.800, '{"specmisfac": 1.019, "irradiance_types": [329.10, 34.0, 8.500, 878.800]}');
+INSERT INTO environment VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', '2019-03-10 04:45:43.08302', 40.600, 5.300, 10.120, 4.853, 12, '2024-12-29', 97.000, 23.900, 75.400, 11.60, 999.00, 7.900, 26.900, 15.100, '{"specmisfac": 0.953, "irradiance_types": [991.70, 321.0, 86.600, 895.700]}');
+INSERT INTO environment VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '2022-08-15 13:06:25.070815', 25.100, 16.600, 9.020, 3.635, 19, '2025-01-21', 98.700, 18.600, 91.900, 41.90, 1034.50, 6.000, 80.800, 76.200, '{"specmisfac": 0.999, "irradiance_types": [781.40, 282.0, 164.000, 230.500]}');
+INSERT INTO environment VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '2019-07-11 19:10:27.070815', 54.300, 8.900, 8.180, 0.560, 27, '2024-12-21', 48.200, 2.000, 145.100, 30.80, 1073.10, 8.600, 10.300, 92.500, '{"specmisfac": 1.028, "irradiance_types": [1122.10, 976.0, 107.400, 402.400]}');
+INSERT INTO environment VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', '2018-12-21 08:37:33.112994', 63.100, 17.400, 3.730, 2.812, 14, '2025-02-19', 66.400, 4.100, 223.800, 17.20, 1019.30, 6.800, 23.900, 58.700, '{"specmisfac": 1.049, "irradiance_types": [1017.90, 997.0, 97.400, 806.600]}');
+INSERT INTO environment VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', '2016-01-04 17:05:07.05948', 58.800, 25.600, 12.830, 3.166, 15, '2025-01-10', 17.200, 13.200, 210.000, 46.50, 1029.80, 4.600, 41.200, 57.700, '{"specmisfac": 0.994, "irradiance_types": [330.80, 626.2, 116.900, 253.100]}');
+INSERT INTO environment VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '2022-11-10 13:29:06.140268', 40.900, 24.600, 4.390, 4.346, 45, '2025-02-10', 98.100, 18.200, 284.400, 33.90, 1061.40, 1.500, 33.600, 71.300, '{"specmisfac": 1.029, "irradiance_types": [610.60, 108.5, 17.400, 430.800]}');
+INSERT INTO environment VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', '2018-07-28 01:19:54.12775', 70.100, 44.500, 3.550, 1.798, 54, '2025-01-05', 41.300, 0.500, 251.300, 28.80, 1077.50, 7.200, 16.900, 53.700, '{"specmisfac": 0.998, "irradiance_types": [644.70, 319.9, 187.200, 170.600]}');
+INSERT INTO environment VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '2021-05-03 21:39:22.12775', 62.500, 43.000, 12.490, 4.765, 49, '2025-01-11', 46.100, 2.300, 107.500, 6.30, 1006.20, 1.600, 92.200, 20.200, '{"specmisfac": 1.038, "irradiance_types": [276.80, 342.3, 60.700, 820.100]}');
+INSERT INTO environment VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', '2022-07-09 03:56:09.141267', 43.000, 14.200, 12.770, 1.341, 24, '2025-01-19', 98.700, 20.800, 150.700, 5.70, 951.40, 3.200, 82.900, 65.400, '{"specmisfac": 0.958, "irradiance_types": [15.50, 563.3, 20.600, 366.200]}');
+INSERT INTO environment VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '2024-04-23 14:18:59.101512', 41.600, 10.200, 9.290, 2.328, 52, '2025-01-01', 81.700, 6.000, 329.600, 13.60, 929.70, 8.400, 7.600, 64.700, '{"specmisfac": 1.037, "irradiance_types": [2.90, 83.9, 146.300, 416.700]}');
+INSERT INTO environment VALUES ('5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '2024-04-01 01:53:36.089832', 60.400, -7.300, 8.700, 4.622, 12, '2024-12-22', 64.200, 9.900, 292.100, 23.60, 1014.00, 9.100, 25.100, 50.500, '{"specmisfac": 1.013, "irradiance_types": [622.90, 406.8, 82.400, 470.800]}');
+INSERT INTO inverter VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', '2021-09-03 23:25:21.089832', 53.600, 223.500, 49.840, 0.344, '{"harmdistpct": 3.380, "reacpwrkvar": 6.27, "inverteffpct": 96.850, "invertpowfac": 0.954}');
+INSERT INTO inverter VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', '2022-01-18 07:50:40.143667', 37.900, 222.500, 49.980, 0.829, '{"harmdistpct": 3.430, "reacpwrkvar": -14.12, "inverteffpct": 96.910, "invertpowfac": 0.941}');
+INSERT INTO inverter VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', '2020-11-25 05:13:44.10689', 58.900, 229.300, 49.840, 0.167, '{"harmdistpct": 4.370, "reacpwrkvar": 6.59, "inverteffpct": 95.270, "invertpowfac": 0.978}');
+INSERT INTO inverter VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', '2018-09-13 22:26:31.076834', 53.100, 225.400, 49.770, 0.839, '{"harmdistpct": 1.840, "reacpwrkvar": 96.40, "inverteffpct": 97.510, "invertpowfac": 0.943}');
+INSERT INTO inverter VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '2021-01-25 06:48:59.08302', 23.400, 225.500, 50.400, 0.268, '{"harmdistpct": 1.690, "reacpwrkvar": 0.96, "inverteffpct": 98.430, "invertpowfac": 0.966}');
+INSERT INTO inverter VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '2024-12-21 11:18:50.145392', 34.100, 223.900, 49.960, 0.730, '{"harmdistpct": 1.180, "reacpwrkvar": -66.51, "inverteffpct": 98.980, "invertpowfac": 0.909}');
+INSERT INTO inverter VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '2016-07-13 15:57:05.095051', 48.600, 222.300, 49.760, 0.260, '{"harmdistpct": 3.290, "reacpwrkvar": -43.52, "inverteffpct": 95.910, "invertpowfac": 0.953}');
+INSERT INTO inverter VALUES ('21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', '2018-03-31 03:54:16.10743', 26.700, 233.500, 50.030, 0.804, '{"harmdistpct": 1.990, "reacpwrkvar": -40.79, "inverteffpct": 97.080, "invertpowfac": 0.925}');
+INSERT INTO inverter VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', '2022-10-29 17:28:17.121427', 43.400, 223.100, 49.750, 0.609, '{"harmdistpct": 2.030, "reacpwrkvar": -48.87, "inverteffpct": 95.540, "invertpowfac": 0.948}');
+INSERT INTO inverter VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '2016-06-21 21:59:01.08302', 32.200, 228.800, 50.190, 0.070, '{"harmdistpct": 0.120, "reacpwrkvar": 71.46, "inverteffpct": 98.390, "invertpowfac": 0.983}');
+INSERT INTO inverter VALUES ('0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '2023-06-12 20:59:06.133943', 41.800, 237.000, 50.120, 0.278, '{"harmdistpct": 1.480, "reacpwrkvar": -1.19, "inverteffpct": 97.620, "invertpowfac": 0.988}');
+INSERT INTO inverter VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', '2019-03-10 04:45:43.08302', 20.200, 230.800, 50.290, 0.882, '{"harmdistpct": 1.240, "reacpwrkvar": -83.13, "inverteffpct": 98.810, "invertpowfac": 0.914}');
+INSERT INTO inverter VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '2022-08-15 13:06:25.070815', 33.700, 237.700, 50.280, 0.033, '{"harmdistpct": 4.980, "reacpwrkvar": 88.25, "inverteffpct": 98.770, "invertpowfac": 0.998}');
+INSERT INTO inverter VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '2019-07-11 19:10:27.070815', 31.500, 221.700, 50.180, 0.335, '{"harmdistpct": 0.380, "reacpwrkvar": 8.68, "inverteffpct": 95.900, "invertpowfac": 0.962}');
+INSERT INTO inverter VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', '2016-01-04 17:05:07.05948', 47.200, 239.300, 50.210, 0.037, '{"harmdistpct": 4.050, "reacpwrkvar": -84.88, "inverteffpct": 95.630, "invertpowfac": 0.918}');
+INSERT INTO inverter VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', '2018-12-21 08:37:33.112994', 54.400, 234.100, 50.050, 0.341, '{"harmdistpct": 0.050, "reacpwrkvar": -79.01, "inverteffpct": 97.150, "invertpowfac": 0.996}');
+INSERT INTO inverter VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '2022-11-10 13:29:06.140268', 42.600, 222.000, 49.990, 0.690, '{"harmdistpct": 3.600, "reacpwrkvar": 34.56, "inverteffpct": 98.490, "invertpowfac": 0.908}');
+INSERT INTO inverter VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', '2018-07-28 01:19:54.12775', 21.500, 220.500, 49.570, 0.128, '{"harmdistpct": 4.840, "reacpwrkvar": 80.30, "inverteffpct": 95.960, "invertpowfac": 0.997}');
+INSERT INTO inverter VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '2021-05-03 21:39:22.12775', 26.200, 237.000, 50.310, 0.444, '{"harmdistpct": 1.580, "reacpwrkvar": 56.30, "inverteffpct": 95.620, "invertpowfac": 0.946}');
+INSERT INTO inverter VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '2024-04-23 14:18:59.101512', 56.000, 222.700, 50.200, 0.146, '{"harmdistpct": 0.200, "reacpwrkvar": -37.58, "inverteffpct": 98.090, "invertpowfac": 0.931}');
+INSERT INTO inverter VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', '2022-07-09 03:56:09.141267', 30.400, 234.300, 50.340, 0.796, '{"harmdistpct": 0.480, "reacpwrkvar": -75.29, "inverteffpct": 97.890, "invertpowfac": 0.993}');
+INSERT INTO inverter VALUES ('5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '2024-04-01 01:53:36.089832', 49.700, 226.900, 49.960, 0.329, '{"harmdistpct": 3.910, "reacpwrkvar": -3.86, "inverteffpct": 95.860, "invertpowfac": 0.993}');
+INSERT INTO performance VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', '2022-01-18 07:50:40.143667', 413.240, 36.760, '{"degradation": {"cumdegpct": 8.170, "anndegrate": 1.010}, "current_efficiency": {"curreffpct": 20.170, "efflosspct": 2.340}}');
+INSERT INTO performance VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', '2020-11-25 05:13:44.10689', 518.820, 81.180, '{"degradation": {"cumdegpct": 13.530, "anndegrate": 0.470}, "current_efficiency": {"curreffpct": 17.070, "efflosspct": 2.990}}');
+INSERT INTO performance VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', '2018-09-13 22:26:31.076834', 391.770, 58.230, '{"degradation": {"cumdegpct": 12.940, "anndegrate": 0.770}, "current_efficiency": {"curreffpct": 16.020, "efflosspct": 3.080}}');
+INSERT INTO performance VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '2021-01-25 06:48:59.08302', 427.950, 22.050, '{"degradation": {"cumdegpct": 4.900, "anndegrate": 0.420}, "current_efficiency": {"curreffpct": 15.140, "efflosspct": 4.290}}');
+INSERT INTO performance VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '2016-07-13 15:57:05.095051', 452.350, 47.650, '{"degradation": {"cumdegpct": 9.530, "anndegrate": 0.780}, "current_efficiency": {"curreffpct": 17.950, "efflosspct": 1.780}}');
+INSERT INTO performance VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '2024-12-21 11:18:50.145392', 641.230, 8.770, '{"degradation": {"cumdegpct": 1.350, "anndegrate": 0.410}, "current_efficiency": {"curreffpct": 19.990, "efflosspct": 1.130}}');
+INSERT INTO performance VALUES ('21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', '2018-03-31 03:54:16.10743', 414.270, 35.730, '{"degradation": {"cumdegpct": 7.940, "anndegrate": 0.710}, "current_efficiency": {"curreffpct": 16.690, "efflosspct": 4.410}}');
+INSERT INTO performance VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', '2022-10-29 17:28:17.121427', 630.110, 19.890, '{"degradation": {"cumdegpct": 3.060, "anndegrate": 1.180}, "current_efficiency": {"curreffpct": 17.050, "efflosspct": 1.420}}');
+INSERT INTO performance VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '2016-06-21 21:59:01.08302', 444.420, 5.580, '{"degradation": {"cumdegpct": 1.240, "anndegrate": 1.120}, "current_efficiency": {"curreffpct": 20.980, "efflosspct": -1.670}}');
+INSERT INTO performance VALUES ('0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '2023-06-12 20:59:06.133943', 440.820, 9.180, '{"degradation": {"cumdegpct": 2.040, "anndegrate": 0.390}, "current_efficiency": {"curreffpct": 18.710, "efflosspct": 1.250}}');
+INSERT INTO performance VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', '2019-03-10 04:45:43.08302', 494.100, 5.900, '{"degradation": {"cumdegpct": 1.180, "anndegrate": 0.450}, "current_efficiency": {"curreffpct": 20.030, "efflosspct": -1.090}}');
+INSERT INTO performance VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '2022-08-15 13:06:25.070815', 478.220, 71.780, '{"degradation": {"cumdegpct": 13.050, "anndegrate": 0.730}, "current_efficiency": {"curreffpct": 16.120, "efflosspct": 1.900}}');
+INSERT INTO performance VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '2019-07-11 19:10:27.070815', 544.660, 5.340, '{"degradation": {"cumdegpct": 0.970, "anndegrate": 1.120}, "current_efficiency": {"curreffpct": 20.900, "efflosspct": 1.460}}');
+INSERT INTO performance VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', '2016-01-04 17:05:07.05948', 567.710, 82.290, '{"degradation": {"cumdegpct": 12.660, "anndegrate": 1.050}, "current_efficiency": {"curreffpct": 15.250, "efflosspct": 5.640}}');
+INSERT INTO performance VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', '2018-12-21 08:37:33.112994', 453.400, 46.600, '{"degradation": {"cumdegpct": 9.320, "anndegrate": 0.990}, "current_efficiency": {"curreffpct": 18.090, "efflosspct": 0.720}}');
+INSERT INTO performance VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '2022-11-10 13:29:06.140268', 398.930, 51.070, '{"degradation": {"cumdegpct": 11.350, "anndegrate": 0.970}, "current_efficiency": {"curreffpct": 16.410, "efflosspct": 4.610}}');
+INSERT INTO performance VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', '2018-07-28 01:19:54.12775', 590.280, 9.720, '{"degradation": {"cumdegpct": 1.620, "anndegrate": 0.540}, "current_efficiency": {"curreffpct": 19.840, "efflosspct": 0.320}}');
+INSERT INTO performance VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '2021-05-03 21:39:22.12775', 443.970, 6.030, '{"degradation": {"cumdegpct": 1.340, "anndegrate": 0.540}, "current_efficiency": {"curreffpct": 19.930, "efflosspct": -0.560}}');
+INSERT INTO performance VALUES ('5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '2024-04-01 01:53:36.089832', 564.720, 35.280, '{"degradation": {"cumdegpct": 5.880, "anndegrate": 0.740}, "current_efficiency": {"curreffpct": 15.070, "efflosspct": 6.300}}');
+INSERT INTO performance VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', '2022-07-09 03:56:09.141267', 410.710, 39.290, '{"degradation": {"cumdegpct": 8.730, "anndegrate": 0.740}, "current_efficiency": {"curreffpct": 18.460, "efflosspct": -0.410}}');
+INSERT INTO performance VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '2024-04-23 14:18:59.101512', 636.150, 13.850, '{"degradation": {"cumdegpct": 2.130, "anndegrate": 0.300}, "current_efficiency": {"curreffpct": 19.000, "efflosspct": 3.790}}');
+INSERT INTO performance VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', '2021-09-03 23:25:21.089832', 581.280, 18.720, '{"degradation": {"cumdegpct": 3.120, "anndegrate": 0.920}, "current_efficiency": {"curreffpct": 16.120, "efflosspct": 3.280}}');
+INSERT INTO alerts VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', '2021-09-03 23:25:21.089832', NULL, 6, 'Low', 'Low', 'Medium');
+INSERT INTO alerts VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', '2022-01-18 07:50:40.143667', 'Critical', 6, 'High', 'Low', 'High');
+INSERT INTO alerts VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', '2020-11-25 05:13:44.10689', 'Warning', 9, 'High', 'Medium', 'Low');
+INSERT INTO alerts VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', '2018-09-13 22:26:31.076834', 'Warning', 10, 'Medium', 'Low', 'High');
+INSERT INTO alerts VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '2021-01-25 06:48:59.08302', 'Warning', 8, 'Low', 'Medium', 'Medium');
+INSERT INTO alerts VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '2024-12-21 11:18:50.145392', 'Warning', 4, 'High', 'Low', 'Medium');
+INSERT INTO alerts VALUES ('21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', '2018-03-31 03:54:16.10743', NULL, 3, 'Low', 'Low', 'Medium');
+INSERT INTO alerts VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', '2022-10-29 17:28:17.121427', NULL, 1, 'Medium', 'Medium', 'Medium');
+INSERT INTO alerts VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '2016-07-13 15:57:05.095051', NULL, 2, 'Medium', 'Medium', 'High');
+INSERT INTO alerts VALUES ('0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '2023-06-12 20:59:06.133943', NULL, 9, 'Medium', 'High', 'High');
+INSERT INTO alerts VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '2016-06-21 21:59:01.08302', NULL, 10, 'Low', 'Medium', 'Low');
+INSERT INTO alerts VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', '2019-03-10 04:45:43.08302', 'Warning', 6, 'Low', 'High', 'Medium');
+INSERT INTO alerts VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '2022-08-15 13:06:25.070815', NULL, 5, 'Medium', 'Low', 'Medium');
+INSERT INTO alerts VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '2019-07-11 19:10:27.070815', NULL, 7, 'Medium', 'Medium', 'Medium');
+INSERT INTO alerts VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', '2018-12-21 08:37:33.112994', 'Warning', 1, 'Low', 'Low', 'High');
+INSERT INTO alerts VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', '2016-01-04 17:05:07.05948', 'Critical', 5, 'High', 'High', 'High');
+INSERT INTO alerts VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '2022-11-10 13:29:06.140268', 'Critical', 5, 'High', 'High', 'High');
+INSERT INTO alerts VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', '2018-07-28 01:19:54.12775', NULL, 1, 'Low', 'High', 'Low');
+INSERT INTO alerts VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '2021-05-03 21:39:22.12775', 'Warning', 9, 'Low', 'Medium', 'Medium');
+INSERT INTO alerts VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', '2022-07-09 03:56:09.141267', NULL, 4, 'Medium', 'High', 'High');
+INSERT INTO alerts VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '2024-04-23 14:18:59.101512', 'Critical', 1, 'High', 'Medium', 'Low');
+INSERT INTO alerts VALUES ('5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '2024-04-01 01:53:36.089832', 'Warning', 3, 'High', 'Low', 'Medium');
+INSERT INTO electrical VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 10.960, 9.260, 47.610, 46.710, 9.180, 8.710, 36.650, 37.09, 0.804, 0.711, 0.624, 866.7);
+INSERT INTO electrical VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 10.110, 8.870, 48.200, 45.150, 8.290, 7.870, 37.940, 33.58, 0.757, 0.729, 0.539, 443.7);
+INSERT INTO electrical VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 9.870, 8.120, 47.440, 44.560, 9.900, 7.620, 35.870, 36.14, 0.827, 0.740, 0.988, 460.1);
+INSERT INTO electrical VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 9.490, 9.080, 47.040, 44.210, 9.480, 7.050, 37.120, 34.55, 0.830, 0.755, 0.534, 916.8);
+INSERT INTO electrical VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', 10.970, 9.660, 45.180, 44.480, 8.000, 8.930, 37.740, 37.37, 0.760, 0.742, 0.669, 609.4);
+INSERT INTO electrical VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', 9.270, 8.140, 45.450, 45.990, 8.920, 7.510, 35.650, 33.15, 0.825, 0.709, 0.910, 856.7);
+INSERT INTO electrical VALUES ('21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', '21ff2835-a1b2-4514-8472-c277f84345ed', 9.110, 9.090, 45.800, 44.930, 8.230, 7.850, 39.000, 33.42, 0.818, 0.764, 0.761, 993.6);
+INSERT INTO electrical VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 9.180, 8.750, 48.740, 43.870, 9.940, 7.810, 38.140, 37.28, 0.819, 0.792, 0.688, 452.1);
+INSERT INTO electrical VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', 9.940, 9.200, 47.870, 44.670, 8.290, 8.680, 38.170, 35.70, 0.791, 0.740, 0.600, 231.6);
+INSERT INTO electrical VALUES ('0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', 9.510, 9.530, 45.720, 45.550, 9.730, 7.740, 36.880, 33.24, 0.822, 0.793, 0.468, 837.6);
+INSERT INTO electrical VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', 9.170, 8.810, 48.120, 44.690, 9.750, 8.530, 36.630, 33.58, 0.795, 0.708, 0.769, 434.2);
+INSERT INTO electrical VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 10.940, 8.150, 48.140, 46.950, 8.890, 7.740, 35.960, 37.30, 0.821, 0.716, 0.144, 573.0);
+INSERT INTO electrical VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', 9.900, 8.080, 46.930, 45.290, 8.440, 7.750, 37.560, 37.13, 0.759, 0.765, 0.592, 537.1);
+INSERT INTO electrical VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', 9.240, 9.250, 49.730, 45.460, 8.920, 8.160, 36.760, 34.78, 0.781, 0.718, 0.796, 695.5);
+INSERT INTO electrical VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 9.800, 9.560, 48.310, 45.840, 8.590, 8.890, 36.590, 36.78, 0.755, 0.702, 0.288, 621.8);
+INSERT INTO electrical VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 10.080, 8.140, 48.130, 44.990, 9.080, 8.280, 39.640, 35.57, 0.841, 0.795, 0.506, 497.9);
+INSERT INTO electrical VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', 9.920, 8.160, 48.520, 44.950, 9.100, 8.120, 38.120, 36.66, 0.807, 0.783, 0.483, 972.6);
+INSERT INTO electrical VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 9.130, 8.660, 47.280, 46.550, 8.370, 7.390, 35.540, 33.31, 0.763, 0.739, 0.750, 658.7);
+INSERT INTO electrical VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', 9.410, 9.020, 46.510, 45.200, 8.680, 7.150, 38.000, 36.05, 0.771, 0.709, 0.145, 400.4);
+INSERT INTO electrical VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 10.700, 9.790, 47.740, 43.720, 9.550, 8.830, 37.960, 35.50, 0.791, 0.790, 0.409, 416.3);
+INSERT INTO electrical VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', 10.600, 8.070, 49.300, 47.210, 9.290, 7.720, 39.710, 34.30, 0.819, 0.783, 0.173, 643.7);
+INSERT INTO electrical VALUES ('5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', 10.730, 9.710, 47.270, 47.310, 9.070, 8.850, 37.090, 34.61, 0.802, 0.742, 0.965, 536.3);
+INSERT INTO maintenance VALUES ('d01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'd01cbccd-14ff-47e6-b15a-2b37ff34dee9', 'EL Imaging', 'Major Issues', '2024-12-23', 'Overdue', 'Expired', NULL, 8788.42, 4760.450, 12677.020, 19301.08);
+INSERT INTO maintenance VALUES ('c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 'c2eff9ea-27c1-46da-894a-1440be6d01fd', 'IR Thermal', 'Major Issues', '2024-11-04', 'Delayed', 'Expired', 4, 8528.75, 1240.110, 23259.030, 18166.58);
+INSERT INTO maintenance VALUES ('ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'ee2889a3-e64c-45e7-aed6-16e2dad3464e', 'Visual', 'Minor Issues', '2025-01-02', 'Delayed', 'Claimed', 3, 5710.11, 3997.150, 32160.130, 8405.87);
+INSERT INTO maintenance VALUES ('ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'ecabfef3-3d3d-4cd4-bb68-4578cbfc2930', 'EL Imaging', 'Pass', '2025-01-09', 'On Schedule', 'Active', 2, 7086.69, 742.740, 4705.530, 14281.57);
+INSERT INTO maintenance VALUES ('3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', '3b9d1a83-8406-46ae-900a-6f970332ee54', 'EL Imaging', 'Pass', '2024-10-17', 'On Schedule', 'Claimed', 4, 9051.71, 3239.830, 43890.850, 17749.51);
+INSERT INTO maintenance VALUES ('61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', '61ad27a5-cc5b-40d4-891a-ba5b7d9c518a', 'IR Thermal', 'Pass', '2024-08-29', 'On Schedule', 'Expired', 4, 8447.35, 3760.510, 46216.070, 1565.37);
+INSERT INTO maintenance VALUES ('a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'a5aad5a1-0405-49c8-8c7b-e15057e5f1f4', 'EL Imaging', 'Major Issues', '2025-01-26', 'Overdue', 'Expired', 5, 1220.69, 480.660, 42688.750, 16904.71);
+INSERT INTO maintenance VALUES ('31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', '31c3f569-8792-432b-97df-2c0d5a3a98d9', 'IR Thermal', 'Major Issues', '2024-10-21', 'Overdue', 'Claimed', 1, 7589.46, 4143.400, 27853.450, 7442.10);
+INSERT INTO maintenance VALUES ('0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', '0935111f-abdb-4927-a586-edbde56d3348', 'IR Thermal', 'Minor Issues', '2024-09-22', 'Overdue', 'Claimed', NULL, 1998.44, 4564.650, 46845.180, 3744.84);
+INSERT INTO maintenance VALUES ('38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', '38c47a2b-e9d5-45b7-a76a-97a0ba9b3356', 'EL Imaging', 'Pass', '2024-12-26', 'Delayed', 'Active', 5, 4799.31, 2983.600, 423.100, 17688.25);
+INSERT INTO maintenance VALUES ('e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 'e3b190a2-aa6e-4a85-affc-9f084b499889', 'IV Curve', 'Pass', '2024-08-31', 'Delayed', 'Claimed', 3, 5427.00, 313.790, 26236.080, 1079.86);
+INSERT INTO maintenance VALUES ('7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', '7a37407b-f778-4e38-b7a9-af8d7d56031e', 'Visual', 'Pass', '2024-09-06', 'Delayed', 'Active', 5, 3029.03, 987.280, 16040.390, 15081.74);
+INSERT INTO maintenance VALUES ('47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', '47e57ba9-eea6-4aa1-a6a5-007c1b5aed96', 'Visual', 'Minor Issues', '2024-10-29', 'On Schedule', 'Claimed', 2, 4220.57, 3644.740, 8166.480, 4505.77);
+INSERT INTO maintenance VALUES ('f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 'f393267d-7170-4c83-9774-d272759ae108', 'IV Curve', 'Pass', '2024-10-05', 'On Schedule', 'Active', 1, 3103.02, 2388.710, 8597.770, 14852.95);
+INSERT INTO maintenance VALUES ('becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 'becaa11c-b895-410f-9679-74bee57866e5', 'EL Imaging', 'Major Issues', '2025-02-19', 'On Schedule', 'Expired', NULL, 6582.60, 669.910, 707.960, 11996.94);
+INSERT INTO maintenance VALUES ('97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', '97fc8fdf-be5b-474e-8da3-58d153e596ef', 'Visual', 'Major Issues', '2024-11-29', 'Delayed', 'Claimed', 4, 6086.60, 2950.960, 25431.160, 3073.48);
+INSERT INTO maintenance VALUES ('b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'b9cbbbca-b9e9-4247-b1d6-41fbad8edd20', 'EL Imaging', 'Pass', '2025-02-12', 'On Schedule', 'Active', 5, 9546.16, 4049.860, 19276.520, 16032.83);
+INSERT INTO maintenance VALUES ('8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', '8557c58e-e537-4223-96bb-a3024fc9621d', 'IR Thermal', 'Major Issues', '2024-12-08', 'On Schedule', 'Active', NULL, 9092.07, 1738.960, 38334.520, 17238.34);
+INSERT INTO maintenance VALUES ('d0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 'd0c40795-89fc-4358-baac-80a86edb2845', 'Visual', 'Minor Issues', '2025-01-29', 'Delayed', 'Claimed', 4, 5954.58, 4309.540, 1630.030, 17553.97);
+INSERT INTO maintenance VALUES ('5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', '5be837f8-d9ee-4a89-872f-e2beef4539dc', 'IR Thermal', 'Major Issues', '2024-09-22', 'On Schedule', 'Active', 2, 7276.39, 4859.700, 46966.150, 433.55);
+INSERT INTO maintenance VALUES ('5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', '5511673f-5b30-461e-90d2-09456e59753f', 'EL Imaging', 'Minor Issues', '2024-09-23', 'On Schedule', 'Active', 4, 2491.38, 2975.060, 24634.020, 6949.63);

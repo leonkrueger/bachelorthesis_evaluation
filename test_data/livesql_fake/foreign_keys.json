@@ -1,0 +1,112 @@
+[
+    {
+        "table_name": "profile",
+        "column_names": [
+            "profaccref"
+        ],
+        "reference_table_name": "account",
+        "reference_column_names": [
+            "accindex"
+        ]
+    },
+    {
+        "table_name": "sessionbehavior",
+        "column_names": [
+            "sessprofref"
+        ],
+        "reference_table_name": "profile",
+        "reference_column_names": [
+            "profkey"
+        ]
+    },
+    {
+        "table_name": "contentbehavior",
+        "column_names": [
+            "cntsessref"
+        ],
+        "reference_table_name": "sessionbehavior",
+        "reference_column_names": [
+            "sessref"
+        ]
+    },
+    {
+        "table_name": "networkmetrics",
+        "column_names": [
+            "netsessref"
+        ],
+        "reference_table_name": "sessionbehavior",
+        "reference_column_names": [
+            "sessref"
+        ]
+    },
+    {
+        "table_name": "messaginganalysis",
+        "column_names": [
+            "msgcntref"
+        ],
+        "reference_table_name": "contentbehavior",
+        "reference_column_names": [
+            "cntref"
+        ]
+    },
+    {
+        "table_name": "messaginganalysis",
+        "column_names": [
+            "msgnetref"
+        ],
+        "reference_table_name": "networkmetrics",
+        "reference_column_names": [
+            "netkey"
+        ]
+    },
+    {
+        "table_name": "technicalinfo",
+        "column_names": [
+            "techmsgref"
+        ],
+        "reference_table_name": "messaginganalysis",
+        "reference_column_names": [
+            "msgkey"
+        ]
+    },
+    {
+        "table_name": "technicalinfo",
+        "column_names": [
+            "technetref"
+        ],
+        "reference_table_name": "networkmetrics",
+        "reference_column_names": [
+            "netkey"
+        ]
+    },
+    {
+        "table_name": "securitydetection",
+        "column_names": [
+            "sectechref"
+        ],
+        "reference_table_name": "technicalinfo",
+        "reference_column_names": [
+            "techkey"
+        ]
+    },
+    {
+        "table_name": "moderationaction",
+        "column_names": [
+            "macntref"
+        ],
+        "reference_table_name": "contentbehavior",
+        "reference_column_names": [
+            "cntref"
+        ]
+    },
+    {
+        "table_name": "moderationaction",
+        "column_names": [
+            "masedetref"
+        ],
+        "reference_table_name": "securitydetection",
+        "reference_column_names": [
+            "secdetkey"
+        ]
+    }
+]

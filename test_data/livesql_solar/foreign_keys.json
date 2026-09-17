@@ -1,0 +1,122 @@
+[
+    {
+        "table_name": "panel",
+        "column_names": [
+            "hubregistry"
+        ],
+        "reference_table_name": "plant",
+        "reference_column_names": [
+            "growregistry"
+        ]
+    },
+    {
+        "table_name": "performance",
+        "column_names": [
+            "solmodref"
+        ],
+        "reference_table_name": "panel",
+        "reference_column_names": [
+            "panemark"
+        ]
+    },
+    {
+        "table_name": "alerts",
+        "column_names": [
+            "compreg"
+        ],
+        "reference_table_name": "plant",
+        "reference_column_names": [
+            "growregistry"
+        ]
+    },
+    {
+        "table_name": "alerts",
+        "column_names": [
+            "deviceref"
+        ],
+        "reference_table_name": "panel",
+        "reference_column_names": [
+            "panemark"
+        ]
+    },
+    {
+        "table_name": "alerts",
+        "column_names": [
+            "incidentref"
+        ],
+        "reference_table_name": "performance",
+        "reference_column_names": [
+            "perfregistry"
+        ]
+    },
+    {
+        "table_name": "electrical",
+        "column_names": [
+            "efflogref"
+        ],
+        "reference_table_name": "performance",
+        "reference_column_names": [
+            "perfregistry"
+        ]
+    },
+    {
+        "table_name": "electrical",
+        "column_names": [
+            "engyunitref"
+        ],
+        "reference_table_name": "panel",
+        "reference_column_names": [
+            "panemark"
+        ]
+    },
+    {
+        "table_name": "environment",
+        "column_names": [
+            "arearegistry"
+        ],
+        "reference_table_name": "plant",
+        "reference_column_names": [
+            "growregistry"
+        ]
+    },
+    {
+        "table_name": "inverter",
+        "column_names": [
+            "siteref"
+        ],
+        "reference_table_name": "plant",
+        "reference_column_names": [
+            "growregistry"
+        ]
+    },
+    {
+        "table_name": "maintenance",
+        "column_names": [
+            "compref"
+        ],
+        "reference_table_name": "panel",
+        "reference_column_names": [
+            "panemark"
+        ]
+    },
+    {
+        "table_name": "maintenance",
+        "column_names": [
+            "obsref"
+        ],
+        "reference_table_name": "performance",
+        "reference_column_names": [
+            "perfregistry"
+        ]
+    },
+    {
+        "table_name": "maintenance",
+        "column_names": [
+            "powerref"
+        ],
+        "reference_table_name": "plant",
+        "reference_column_names": [
+            "growregistry"
+        ]
+    }
+]

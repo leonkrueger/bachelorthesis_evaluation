@@ -1,0 +1,92 @@
+[
+    {
+        "table_name": "employeeterritories",
+        "column_names": [
+            "employeeid"
+        ],
+        "reference_table_name": "employees",
+        "reference_column_names": [
+            "employeeid"
+        ]
+    },
+    {
+        "table_name": "employeeterritories",
+        "column_names": [
+            "territoryid"
+        ],
+        "reference_table_name": "territories",
+        "reference_column_names": [
+            "territoryid"
+        ]
+    },
+    {
+        "table_name": "order_details",
+        "column_names": [
+            "orderid"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "orderid"
+        ]
+    },
+    {
+        "table_name": "order_details",
+        "column_names": [
+            "productid"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "productid"
+        ]
+    },
+    {
+        "table_name": "orders",
+        "column_names": [
+            "customerid"
+        ],
+        "reference_table_name": "customers",
+        "reference_column_names": [
+            "customerid"
+        ]
+    },
+    {
+        "table_name": "orders",
+        "column_names": [
+            "employeeid"
+        ],
+        "reference_table_name": "employees",
+        "reference_column_names": [
+            "employeeid"
+        ]
+    },
+    {
+        "table_name": "products",
+        "column_names": [
+            "supplierid"
+        ],
+        "reference_table_name": "suppliers",
+        "reference_column_names": [
+            "supplierid"
+        ]
+    },
+    {
+        "table_name": "products",
+        "column_names": [
+            "categoryid"
+        ],
+        "reference_table_name": "categories",
+        "reference_column_names": [
+            "categoryid"
+        ]
+    },
+    {
+        "table_name": "territories",
+        "column_names": [
+            "regionid"
+        ],
+        "reference_table_name": "region",
+        "reference_column_names": [
+            "regionid"
+        ]
+    }
+]

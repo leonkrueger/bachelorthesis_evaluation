@@ -1,0 +1,242 @@
+[
+    {
+        "table_name": "location",
+        "column_names": [
+            "loceqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "communication",
+        "column_names": [
+            "commeqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "communication",
+        "column_names": [
+            "commlocref"
+        ],
+        "reference_table_name": "location",
+        "reference_column_names": [
+            "locationregistry"
+        ]
+    },
+    {
+        "table_name": "cabinenvironment",
+        "column_names": [
+            "cabincommref"
+        ],
+        "reference_table_name": "communication",
+        "reference_column_names": [
+            "commregistry"
+        ]
+    },
+    {
+        "table_name": "cabinenvironment",
+        "column_names": [
+            "cabineqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "cabinenvironment",
+        "column_names": [
+            "cabinlocref"
+        ],
+        "reference_table_name": "location",
+        "reference_column_names": [
+            "locationregistry"
+        ]
+    },
+    {
+        "table_name": "powerbattery",
+        "column_names": [
+            "pwrbatteqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "engineandfluids",
+        "column_names": [
+            "engfluidseqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "engineandfluids",
+        "column_names": [
+            "engfluidspbref"
+        ],
+        "reference_table_name": "powerbattery",
+        "reference_column_names": [
+            "powerbattregistry"
+        ]
+    },
+    {
+        "table_name": "transmission",
+        "column_names": [
+            "transengfluidsref"
+        ],
+        "reference_table_name": "engineandfluids",
+        "reference_column_names": [
+            "engineregistry"
+        ]
+    },
+    {
+        "table_name": "transmission",
+        "column_names": [
+            "transeqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "chassisandvehicle",
+        "column_names": [
+            "chassisengref"
+        ],
+        "reference_table_name": "engineandfluids",
+        "reference_column_names": [
+            "engineregistry"
+        ]
+    },
+    {
+        "table_name": "chassisandvehicle",
+        "column_names": [
+            "chassiseqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "chassisandvehicle",
+        "column_names": [
+            "chassistransref"
+        ],
+        "reference_table_name": "transmission",
+        "reference_column_names": [
+            "transregistry"
+        ]
+    },
+    {
+        "table_name": "lightingandsafety",
+        "column_names": [
+            "lighteqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "operationmaintenance",
+        "column_names": [
+            "opmainteqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "operationmaintenance",
+        "column_names": [
+            "opmaintlocref"
+        ],
+        "reference_table_name": "location",
+        "reference_column_names": [
+            "locationregistry"
+        ]
+    },
+    {
+        "table_name": "scientific",
+        "column_names": [
+            "scieqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "thermalsolarwindandgrid",
+        "column_names": [
+            "thermalcommref"
+        ],
+        "reference_table_name": "communication",
+        "reference_column_names": [
+            "commregistry"
+        ]
+    },
+    {
+        "table_name": "thermalsolarwindandgrid",
+        "column_names": [
+            "thermaleqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "thermalsolarwindandgrid",
+        "column_names": [
+            "thermalpowerref"
+        ],
+        "reference_table_name": "powerbattery",
+        "reference_column_names": [
+            "powerbattregistry"
+        ]
+    },
+    {
+        "table_name": "waterandwaste",
+        "column_names": [
+            "watereqref"
+        ],
+        "reference_table_name": "equipment",
+        "reference_column_names": [
+            "equipmentcode"
+        ]
+    },
+    {
+        "table_name": "weatherandstructure",
+        "column_names": [
+            "weatherlocref"
+        ],
+        "reference_table_name": "location",
+        "reference_column_names": [
+            "locationregistry"
+        ]
+    },
+    {
+        "table_name": "weatherandstructure",
+        "column_names": [
+            "weatheropmaintref"
+        ],
+        "reference_table_name": "operationmaintenance",
+        "reference_column_names": [
+            "opmaintregistry"
+        ]
+    }
+]

@@ -1,0 +1,212 @@
+[
+    {
+        "table_name": "exhibitionhalls",
+        "column_names": [
+            "hallrecord"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "showcases",
+        "column_names": [
+            "hallref"
+        ],
+        "reference_table_name": "exhibitionhalls",
+        "reference_column_names": [
+            "hallrecord"
+        ]
+    },
+    {
+        "table_name": "environmentalreadingscore",
+        "column_names": [
+            "showcaseref"
+        ],
+        "reference_table_name": "showcases",
+        "reference_column_names": [
+            "showcasereg"
+        ]
+    },
+    {
+        "table_name": "airqualityreadings",
+        "column_names": [
+            "envreadref"
+        ],
+        "reference_table_name": "environmentalreadingscore",
+        "reference_column_names": [
+            "envreadregistry"
+        ]
+    },
+    {
+        "table_name": "artifactratings",
+        "column_names": [
+            "artref"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "artifactsecurityaccess",
+        "column_names": [
+            "artref"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "artifactsecurityaccess",
+        "column_names": [
+            "ratingref"
+        ],
+        "reference_table_name": "artifactratings",
+        "reference_column_names": [
+            "ratingrecordregistry"
+        ]
+    },
+    {
+        "table_name": "lightandradiationreadings",
+        "column_names": [
+            "envreadref"
+        ],
+        "reference_table_name": "environmentalreadingscore",
+        "reference_column_names": [
+            "envreadregistry"
+        ]
+    },
+    {
+        "table_name": "conditionassessments",
+        "column_names": [
+            "artrefexamined"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "conditionassessments",
+        "column_names": [
+            "lightreadrefobserved"
+        ],
+        "reference_table_name": "lightandradiationreadings",
+        "reference_column_names": [
+            "lightradregistry"
+        ]
+    },
+    {
+        "table_name": "conditionassessments",
+        "column_names": [
+            "showcaserefexamined"
+        ],
+        "reference_table_name": "showcases",
+        "reference_column_names": [
+            "showcasereg"
+        ]
+    },
+    {
+        "table_name": "surfaceandphysicalreadings",
+        "column_names": [
+            "envreadref"
+        ],
+        "reference_table_name": "environmentalreadingscore",
+        "reference_column_names": [
+            "envreadregistry"
+        ]
+    },
+    {
+        "table_name": "conservationandmaintenance",
+        "column_names": [
+            "artrefmaintained"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "conservationandmaintenance",
+        "column_names": [
+            "hallrefmaintained"
+        ],
+        "reference_table_name": "exhibitionhalls",
+        "reference_column_names": [
+            "hallrecord"
+        ]
+    },
+    {
+        "table_name": "conservationandmaintenance",
+        "column_names": [
+            "surfreadrefobserved"
+        ],
+        "reference_table_name": "surfaceandphysicalreadings",
+        "reference_column_names": [
+            "surfphysregistry"
+        ]
+    },
+    {
+        "table_name": "riskassessments",
+        "column_names": [
+            "artrefconcerned"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "riskassessments",
+        "column_names": [
+            "hallrefconcerned"
+        ],
+        "reference_table_name": "exhibitionhalls",
+        "reference_column_names": [
+            "hallrecord"
+        ]
+    },
+    {
+        "table_name": "sensitivitydata",
+        "column_names": [
+            "artref"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "usagerecords",
+        "column_names": [
+            "artrefused"
+        ],
+        "reference_table_name": "artifactscore",
+        "reference_column_names": [
+            "artregistry"
+        ]
+    },
+    {
+        "table_name": "usagerecords",
+        "column_names": [
+            "sensdatalink"
+        ],
+        "reference_table_name": "sensitivitydata",
+        "reference_column_names": [
+            "sensitivityregistry"
+        ]
+    },
+    {
+        "table_name": "usagerecords",
+        "column_names": [
+            "showcaserefused"
+        ],
+        "reference_table_name": "showcases",
+        "reference_column_names": [
+            "showcasereg"
+        ]
+    }
+]

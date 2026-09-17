@@ -1,0 +1,112 @@
+[
+    {
+        "table_name": "Album",
+        "column_names": [
+            "ArtistId"
+        ],
+        "reference_table_name": "Artist",
+        "reference_column_names": [
+            "ArtistId"
+        ]
+    },
+    {
+        "table_name": "Customer",
+        "column_names": [
+            "SupportRepId"
+        ],
+        "reference_table_name": "Employee",
+        "reference_column_names": [
+            "EmployeeId"
+        ]
+    },
+    {
+        "table_name": "Employee",
+        "column_names": [
+            "ReportsTo"
+        ],
+        "reference_table_name": "Employee",
+        "reference_column_names": [
+            "EmployeeId"
+        ]
+    },
+    {
+        "table_name": "Invoice",
+        "column_names": [
+            "CustomerId"
+        ],
+        "reference_table_name": "Customer",
+        "reference_column_names": [
+            "CustomerId"
+        ]
+    },
+    {
+        "table_name": "InvoiceLine",
+        "column_names": [
+            "InvoiceId"
+        ],
+        "reference_table_name": "Invoice",
+        "reference_column_names": [
+            "InvoiceId"
+        ]
+    },
+    {
+        "table_name": "InvoiceLine",
+        "column_names": [
+            "TrackId"
+        ],
+        "reference_table_name": "Track",
+        "reference_column_names": [
+            "TrackId"
+        ]
+    },
+    {
+        "table_name": "PlaylistTrack",
+        "column_names": [
+            "PlaylistId"
+        ],
+        "reference_table_name": "Playlist",
+        "reference_column_names": [
+            "PlaylistId"
+        ]
+    },
+    {
+        "table_name": "PlaylistTrack",
+        "column_names": [
+            "TrackId"
+        ],
+        "reference_table_name": "Track",
+        "reference_column_names": [
+            "TrackId"
+        ]
+    },
+    {
+        "table_name": "Track",
+        "column_names": [
+            "AlbumId"
+        ],
+        "reference_table_name": "Album",
+        "reference_column_names": [
+            "AlbumId"
+        ]
+    },
+    {
+        "table_name": "Track",
+        "column_names": [
+            "GenreId"
+        ],
+        "reference_table_name": "Genre",
+        "reference_column_names": [
+            "GenreId"
+        ]
+    },
+    {
+        "table_name": "Track",
+        "column_names": [
+            "MediaTypeId"
+        ],
+        "reference_table_name": "MediaType",
+        "reference_column_names": [
+            "MediaTypeId"
+        ]
+    }
+]

@@ -138,6 +138,16 @@ EXPERIMENTS = {
             "justine_3_3_retry_with_feedback_two_shot",
         ],
     },
+    "thesis_base_evaluation": {
+        "adjustments": [
+            (Adjustments.SHUFFLE_COLUMNS, []),
+            (Adjustments.COMBINE_INSERTS, [0.5], (5, 10)),
+            (Adjustments.DELETE_COLUMN, [0.3]),
+            (Adjustments.USE_COLUMN_SYNONYMS, [0.5]),
+            (Adjustments.DELETE_TABLE, [0.5]),
+            (Adjustments.USE_TABLE_SYNONYMS, [0.6]),
+        ]
+    },
 }
 
 FINE_TUNING = {

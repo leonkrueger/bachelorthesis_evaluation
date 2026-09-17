@@ -1,0 +1,112 @@
+[
+    {
+        "table_name": "salesperson",
+        "column_names": [
+            "territoryid"
+        ],
+        "reference_table_name": "salesterritory",
+        "reference_column_names": [
+            "territoryid"
+        ]
+    },
+    {
+        "table_name": "product",
+        "column_names": [
+            "productsubcategoryid"
+        ],
+        "reference_table_name": "productsubcategory",
+        "reference_column_names": [
+            "productsubcategoryid"
+        ]
+    },
+    {
+        "table_name": "productmodelproductdescriptionculture",
+        "column_names": [
+            "productdescriptionid"
+        ],
+        "reference_table_name": "productdescription",
+        "reference_column_names": [
+            "productdescriptionid"
+        ]
+    },
+    {
+        "table_name": "productreview",
+        "column_names": [
+            "productid"
+        ],
+        "reference_table_name": "product",
+        "reference_column_names": [
+            "productid"
+        ]
+    },
+    {
+        "table_name": "productsubcategory",
+        "column_names": [
+            "productcategoryid"
+        ],
+        "reference_table_name": "productcategory",
+        "reference_column_names": [
+            "productcategoryid"
+        ]
+    },
+    {
+        "table_name": "salesorderdetail",
+        "column_names": [
+            "salesorderid"
+        ],
+        "reference_table_name": "salesorderheader",
+        "reference_column_names": [
+            "salesorderid"
+        ]
+    },
+    {
+        "table_name": "salesorderdetail",
+        "column_names": [
+            "productid"
+        ],
+        "reference_table_name": "product",
+        "reference_column_names": [
+            "productid"
+        ]
+    },
+    {
+        "table_name": "salesorderheader",
+        "column_names": [
+            "salespersonid"
+        ],
+        "reference_table_name": "salesperson",
+        "reference_column_names": [
+            "businessentityid"
+        ]
+    },
+    {
+        "table_name": "salesorderheader",
+        "column_names": [
+            "territoryid"
+        ],
+        "reference_table_name": "salesterritory",
+        "reference_column_names": [
+            "territoryid"
+        ]
+    },
+    {
+        "table_name": "salesorderheader",
+        "column_names": [
+            "currencyrateid"
+        ],
+        "reference_table_name": "currencyrate",
+        "reference_column_names": [
+            "currencyrateid"
+        ]
+    },
+    {
+        "table_name": "SalesPersonQuotaHistory",
+        "column_names": [
+            "BusinessEntityID"
+        ],
+        "reference_table_name": "salesperson",
+        "reference_column_names": [
+            "businessentityid"
+        ]
+    }
+]

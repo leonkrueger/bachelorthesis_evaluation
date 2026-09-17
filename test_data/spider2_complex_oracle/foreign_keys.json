@@ -1,0 +1,102 @@
+[
+    {
+        "table_name": "customers",
+        "column_names": [
+            "country_id"
+        ],
+        "reference_table_name": "countries",
+        "reference_column_names": [
+            "country_id"
+        ]
+    },
+    {
+        "table_name": "sales",
+        "column_names": [
+            "promo_id"
+        ],
+        "reference_table_name": "promotions",
+        "reference_column_names": [
+            "promo_id"
+        ]
+    },
+    {
+        "table_name": "sales",
+        "column_names": [
+            "cust_id"
+        ],
+        "reference_table_name": "customers",
+        "reference_column_names": [
+            "cust_id"
+        ]
+    },
+    {
+        "table_name": "sales",
+        "column_names": [
+            "prod_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "prod_id"
+        ]
+    },
+    {
+        "table_name": "sales",
+        "column_names": [
+            "channel_id"
+        ],
+        "reference_table_name": "channels",
+        "reference_column_names": [
+            "channel_id"
+        ]
+    },
+    {
+        "table_name": "sales",
+        "column_names": [
+            "time_id"
+        ],
+        "reference_table_name": "times",
+        "reference_column_names": [
+            "time_id"
+        ]
+    },
+    {
+        "table_name": "costs",
+        "column_names": [
+            "promo_id"
+        ],
+        "reference_table_name": "promotions",
+        "reference_column_names": [
+            "promo_id"
+        ]
+    },
+    {
+        "table_name": "costs",
+        "column_names": [
+            "prod_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "prod_id"
+        ]
+    },
+    {
+        "table_name": "costs",
+        "column_names": [
+            "time_id"
+        ],
+        "reference_table_name": "times",
+        "reference_column_names": [
+            "time_id"
+        ]
+    },
+    {
+        "table_name": "costs",
+        "column_names": [
+            "channel_id"
+        ],
+        "reference_table_name": "channels",
+        "reference_column_names": [
+            "channel_id"
+        ]
+    }
+]

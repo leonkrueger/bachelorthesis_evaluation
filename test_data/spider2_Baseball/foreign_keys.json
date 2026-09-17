@@ -1,0 +1,384 @@
+[
+    {
+        "table_name": "all_star",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "all_star",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "appearances",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "appearances",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "manager_award",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "player_award",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "manager_award_vote",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "player_award_vote",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "batting",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "batting",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "batting_postseason",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "batting_postseason",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "player_college",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "player_college",
+        "column_names": [
+            "college_id"
+        ],
+        "reference_table_name": "college",
+        "reference_column_names": [
+            "college_id"
+        ]
+    },
+    {
+        "table_name": "fielding",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "fielding",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "fielding_postseason",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "fielding_postseason",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "hall_of_fame",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "home_game",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "home_game",
+        "column_names": [
+            "park_id"
+        ],
+        "reference_table_name": "park",
+        "reference_column_names": [
+            "park_id"
+        ]
+    },
+    {
+        "table_name": "manager",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "manager",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "manager_half",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "manager_half",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "pitching",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "pitching",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "pitching_postseason",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "pitching_postseason",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "salary",
+        "column_names": [
+            "player_id"
+        ],
+        "reference_table_name": "player",
+        "reference_column_names": [
+            "player_id"
+        ]
+    },
+    {
+        "table_name": "salary",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    },
+    {
+        "table_name": "team",
+        "column_names": [
+            "franchise_id"
+        ],
+        "reference_table_name": "team_franchise",
+        "reference_column_names": [
+            "franchise_id"
+        ]
+    },
+    {
+        "table_name": "team_half",
+        "column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ],
+        "reference_table_name": "team",
+        "reference_column_names": [
+            "year",
+            "league_id",
+            "team_id"
+        ]
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "table_name": "Cards",
+        "column_names": [
+            "table_id"
+        ],
+        "reference_table_name": "Tables",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Cards",
+        "column_names": [
+            "location_id"
+        ],
+        "reference_table_name": "Locations",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Cards",
+        "column_names": [
+            "promotion_id"
+        ],
+        "reference_table_name": "Promotions",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Cards",
+        "column_names": [
+            "event_id"
+        ],
+        "reference_table_name": "Events",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Matches",
+        "column_names": [
+            "card_id"
+        ],
+        "reference_table_name": "Cards",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Matches",
+        "column_names": [
+            "winner_id"
+        ],
+        "reference_table_name": "Wrestlers",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Matches",
+        "column_names": [
+            "loser_id"
+        ],
+        "reference_table_name": "Wrestlers",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Matches",
+        "column_names": [
+            "title_id"
+        ],
+        "reference_table_name": "Belts",
+        "reference_column_names": [
+            "id"
+        ]
+    }
+]

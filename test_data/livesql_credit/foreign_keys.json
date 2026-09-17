@@ -1,0 +1,52 @@
+[
+    {
+        "table_name": "employment_and_income",
+        "column_names": [
+            "emplcoreref"
+        ],
+        "reference_table_name": "core_record",
+        "reference_column_names": [
+            "coreregistry"
+        ]
+    },
+    {
+        "table_name": "expenses_and_assets",
+        "column_names": [
+            "expemplref"
+        ],
+        "reference_table_name": "employment_and_income",
+        "reference_column_names": [
+            "emplcoreref"
+        ]
+    },
+    {
+        "table_name": "bank_and_transactions",
+        "column_names": [
+            "bankexpref"
+        ],
+        "reference_table_name": "expenses_and_assets",
+        "reference_column_names": [
+            "expemplref"
+        ]
+    },
+    {
+        "table_name": "credit_and_compliance",
+        "column_names": [
+            "compbankref"
+        ],
+        "reference_table_name": "bank_and_transactions",
+        "reference_column_names": [
+            "bankexpref"
+        ]
+    },
+    {
+        "table_name": "credit_accounts_and_history",
+        "column_names": [
+            "histcompref"
+        ],
+        "reference_table_name": "credit_and_compliance",
+        "reference_column_names": [
+            "compbankref"
+        ]
+    }
+]

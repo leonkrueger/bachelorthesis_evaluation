@@ -1,0 +1,222 @@
+[
+    {
+        "table_name": "interactions",
+        "column_names": [
+            "interactfanpivot"
+        ],
+        "reference_table_name": "fans",
+        "reference_column_names": [
+            "userregistry"
+        ]
+    },
+    {
+        "table_name": "interactions",
+        "column_names": [
+            "interactidolpivot"
+        ],
+        "reference_table_name": "virtualidols",
+        "reference_column_names": [
+            "entityreg"
+        ]
+    },
+    {
+        "table_name": "membershipandspending",
+        "column_names": [
+            "memberfanpivot"
+        ],
+        "reference_table_name": "fans",
+        "reference_column_names": [
+            "userregistry"
+        ]
+    },
+    {
+        "table_name": "engagement",
+        "column_names": [
+            "engageactivitypivot"
+        ],
+        "reference_table_name": "interactions",
+        "reference_column_names": [
+            "activityreg"
+        ]
+    },
+    {
+        "table_name": "engagement",
+        "column_names": [
+            "engagememberpivot"
+        ],
+        "reference_table_name": "membershipandspending",
+        "reference_column_names": [
+            "memberreg"
+        ]
+    },
+    {
+        "table_name": "commerceandcollection",
+        "column_names": [
+            "commerceengagepivot"
+        ],
+        "reference_table_name": "engagement",
+        "reference_column_names": [
+            "engagereg"
+        ]
+    },
+    {
+        "table_name": "commerceandcollection",
+        "column_names": [
+            "commercememberpivot"
+        ],
+        "reference_table_name": "membershipandspending",
+        "reference_column_names": [
+            "memberreg"
+        ]
+    },
+    {
+        "table_name": "socialcommunity",
+        "column_names": [
+            "socialcommercepivot"
+        ],
+        "reference_table_name": "commerceandcollection",
+        "reference_column_names": [
+            "commercereg"
+        ]
+    },
+    {
+        "table_name": "socialcommunity",
+        "column_names": [
+            "socialengagepivot"
+        ],
+        "reference_table_name": "engagement",
+        "reference_column_names": [
+            "engagereg"
+        ]
+    },
+    {
+        "table_name": "eventsandclub",
+        "column_names": [
+            "eventsmemberpivot"
+        ],
+        "reference_table_name": "membershipandspending",
+        "reference_column_names": [
+            "memberreg"
+        ]
+    },
+    {
+        "table_name": "eventsandclub",
+        "column_names": [
+            "eventssocialpivot"
+        ],
+        "reference_table_name": "socialcommunity",
+        "reference_column_names": [
+            "socialreg"
+        ]
+    },
+    {
+        "table_name": "loyaltyandachievements",
+        "column_names": [
+            "loyaltyengagepivot"
+        ],
+        "reference_table_name": "engagement",
+        "reference_column_names": [
+            "engagereg"
+        ]
+    },
+    {
+        "table_name": "loyaltyandachievements",
+        "column_names": [
+            "loyaltyeventspivot"
+        ],
+        "reference_table_name": "eventsandclub",
+        "reference_column_names": [
+            "eventsreg"
+        ]
+    },
+    {
+        "table_name": "retentionandinfluence",
+        "column_names": [
+            "retainengagepivot"
+        ],
+        "reference_table_name": "engagement",
+        "reference_column_names": [
+            "engagereg"
+        ]
+    },
+    {
+        "table_name": "retentionandinfluence",
+        "column_names": [
+            "retainloyaltypivot"
+        ],
+        "reference_table_name": "loyaltyandachievements",
+        "reference_column_names": [
+            "loyaltyreg"
+        ]
+    },
+    {
+        "table_name": "additionalnotes",
+        "column_names": [
+            "notesretainpivot"
+        ],
+        "reference_table_name": "retentionandinfluence",
+        "reference_column_names": [
+            "retreg"
+        ]
+    },
+    {
+        "table_name": "moderationandcompliance",
+        "column_names": [
+            "moderationinteractpivot"
+        ],
+        "reference_table_name": "interactions",
+        "reference_column_names": [
+            "activityreg"
+        ]
+    },
+    {
+        "table_name": "moderationandcompliance",
+        "column_names": [
+            "moderationsocialpivot"
+        ],
+        "reference_table_name": "socialcommunity",
+        "reference_column_names": [
+            "socialreg"
+        ]
+    },
+    {
+        "table_name": "preferencesandsettings",
+        "column_names": [
+            "preferencesmemberpivot"
+        ],
+        "reference_table_name": "membershipandspending",
+        "reference_column_names": [
+            "memberreg"
+        ]
+    },
+    {
+        "table_name": "preferencesandsettings",
+        "column_names": [
+            "preferencessocialpivot"
+        ],
+        "reference_table_name": "socialcommunity",
+        "reference_column_names": [
+            "socialreg"
+        ]
+    },
+    {
+        "table_name": "supportandfeedback",
+        "column_names": [
+            "supportinteractpivot"
+        ],
+        "reference_table_name": "interactions",
+        "reference_column_names": [
+            "activityreg"
+        ]
+    },
+    {
+        "table_name": "supportandfeedback",
+        "column_names": [
+            "supportprefpivot"
+        ],
+        "reference_table_name": "preferencesandsettings",
+        "reference_column_names": [
+            "prefreg"
+        ]
+    }
+]

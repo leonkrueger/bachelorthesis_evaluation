@@ -1,0 +1,318 @@
+[
+    {
+        "table_name": "packaging_relations",
+        "column_names": [
+            "packaging_id"
+        ],
+        "reference_table_name": "packaging",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "packaging_relations",
+        "column_names": [
+            "contains_id"
+        ],
+        "reference_table_name": "packaging",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "products",
+        "column_names": [
+            "group_id"
+        ],
+        "reference_table_name": "product_groups",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "monthly_sales",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "purchases",
+        "column_names": [
+            "brewery_id"
+        ],
+        "reference_table_name": "breweries",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "purchases",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "product_alcohol",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "customer_favorites",
+        "column_names": [
+            "customer_id"
+        ],
+        "reference_table_name": "customers",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "customer_reviews",
+        "column_names": [
+            "customer_id"
+        ],
+        "reference_table_name": "customers",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "inventory",
+        "column_names": [
+            "location_id"
+        ],
+        "reference_table_name": "locations",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "inventory",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "inventory",
+        "column_names": [
+            "purchase_id"
+        ],
+        "reference_table_name": "purchases",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "orders",
+        "column_names": [
+            "customer_id"
+        ],
+        "reference_table_name": "customers",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "orderlines",
+        "column_names": [
+            "order_id"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "orderlines",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "monthly_budget",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "product_minimums",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "ticker",
+        "column_names": [
+            "symbol"
+        ],
+        "reference_table_name": "stock",
+        "reference_column_names": [
+            "symbol"
+        ]
+    },
+    {
+        "table_name": "web_pages",
+        "column_names": [
+            "app_id"
+        ],
+        "reference_table_name": "web_apps",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "web_counter_hist",
+        "column_names": [
+            "app_id",
+            "page_no"
+        ],
+        "reference_table_name": "web_pages",
+        "reference_column_names": [
+            "app_id",
+            "page_no"
+        ]
+    },
+    {
+        "table_name": "web_page_visits",
+        "column_names": [
+            "app_id",
+            "page_no"
+        ],
+        "reference_table_name": "web_pages",
+        "reference_column_names": [
+            "app_id",
+            "page_no"
+        ]
+    },
+    {
+        "table_name": "employees",
+        "column_names": [
+            "supervisor_id"
+        ],
+        "reference_table_name": "employees",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "emp_hire_periods",
+        "column_names": [
+            "emp_id"
+        ],
+        "reference_table_name": "employees",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_list",
+        "column_names": [
+            "picker_emp_id"
+        ],
+        "reference_table_name": "employees",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_line",
+        "column_names": [
+            "picklist_id"
+        ],
+        "reference_table_name": "picking_list",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_line",
+        "column_names": [
+            "location_id"
+        ],
+        "reference_table_name": "locations",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_line",
+        "column_names": [
+            "order_id"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_line",
+        "column_names": [
+            "product_id"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_log",
+        "column_names": [
+            "picklist_id"
+        ],
+        "reference_table_name": "picking_list",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_log",
+        "column_names": [
+            "location_id"
+        ],
+        "reference_table_name": "locations",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "picking_log",
+        "column_names": [
+            "picklist_id",
+            "pickline_no"
+        ],
+        "reference_table_name": "picking_line",
+        "reference_column_names": [
+            "picklist_id",
+            "line_no"
+        ]
+    }
+]

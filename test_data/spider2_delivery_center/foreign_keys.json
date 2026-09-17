@@ -1,0 +1,62 @@
+[
+    {
+        "table_name": "deliveries",
+        "column_names": [
+            "delivery_order_id"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "delivery_order_id"
+        ]
+    },
+    {
+        "table_name": "deliveries",
+        "column_names": [
+            "driver_id"
+        ],
+        "reference_table_name": "drivers",
+        "reference_column_names": [
+            "driver_id"
+        ]
+    },
+    {
+        "table_name": "payments",
+        "column_names": [
+            "payment_order_id"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "payment_order_id"
+        ]
+    },
+    {
+        "table_name": "stores",
+        "column_names": [
+            "hub_id"
+        ],
+        "reference_table_name": "hubs",
+        "reference_column_names": [
+            "hub_id"
+        ]
+    },
+    {
+        "table_name": "orders",
+        "column_names": [
+            "store_id"
+        ],
+        "reference_table_name": "stores",
+        "reference_column_names": [
+            "store_id"
+        ]
+    },
+    {
+        "table_name": "orders",
+        "column_names": [
+            "channel_id"
+        ],
+        "reference_table_name": "channels",
+        "reference_column_names": [
+            "channel_id"
+        ]
+    }
+]

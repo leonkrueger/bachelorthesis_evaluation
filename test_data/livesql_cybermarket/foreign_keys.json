@@ -1,0 +1,162 @@
+[
+    {
+        "table_name": "vendors",
+        "column_names": [
+            "mktref"
+        ],
+        "reference_table_name": "markets",
+        "reference_column_names": [
+            "mktregistry"
+        ]
+    },
+    {
+        "table_name": "buyers",
+        "column_names": [
+            "mktref"
+        ],
+        "reference_table_name": "markets",
+        "reference_column_names": [
+            "mktregistry"
+        ]
+    },
+    {
+        "table_name": "buyers",
+        "column_names": [
+            "vendref"
+        ],
+        "reference_table_name": "vendors",
+        "reference_column_names": [
+            "vendregistry"
+        ]
+    },
+    {
+        "table_name": "products",
+        "column_names": [
+            "buyref"
+        ],
+        "reference_table_name": "buyers",
+        "reference_column_names": [
+            "buyregistry"
+        ]
+    },
+    {
+        "table_name": "products",
+        "column_names": [
+            "vendref"
+        ],
+        "reference_table_name": "vendors",
+        "reference_column_names": [
+            "vendregistry"
+        ]
+    },
+    {
+        "table_name": "transactions",
+        "column_names": [
+            "buyref"
+        ],
+        "reference_table_name": "buyers",
+        "reference_column_names": [
+            "buyregistry"
+        ]
+    },
+    {
+        "table_name": "transactions",
+        "column_names": [
+            "mktref"
+        ],
+        "reference_table_name": "markets",
+        "reference_column_names": [
+            "mktregistry"
+        ]
+    },
+    {
+        "table_name": "transactions",
+        "column_names": [
+            "prodref"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "prodregistry"
+        ]
+    },
+    {
+        "table_name": "communication",
+        "column_names": [
+            "prodref"
+        ],
+        "reference_table_name": "products",
+        "reference_column_names": [
+            "prodregistry"
+        ]
+    },
+    {
+        "table_name": "communication",
+        "column_names": [
+            "txref"
+        ],
+        "reference_table_name": "transactions",
+        "reference_column_names": [
+            "txregistry"
+        ]
+    },
+    {
+        "table_name": "riskanalysis",
+        "column_names": [
+            "commref"
+        ],
+        "reference_table_name": "communication",
+        "reference_column_names": [
+            "commregistry"
+        ]
+    },
+    {
+        "table_name": "riskanalysis",
+        "column_names": [
+            "txref"
+        ],
+        "reference_table_name": "transactions",
+        "reference_column_names": [
+            "txregistry"
+        ]
+    },
+    {
+        "table_name": "securitymonitoring",
+        "column_names": [
+            "commref"
+        ],
+        "reference_table_name": "communication",
+        "reference_column_names": [
+            "commregistry"
+        ]
+    },
+    {
+        "table_name": "securitymonitoring",
+        "column_names": [
+            "riskref"
+        ],
+        "reference_table_name": "riskanalysis",
+        "reference_column_names": [
+            "riskregistry"
+        ]
+    },
+    {
+        "table_name": "investigation",
+        "column_names": [
+            "riskref"
+        ],
+        "reference_table_name": "riskanalysis",
+        "reference_column_names": [
+            "riskregistry"
+        ]
+    },
+    {
+        "table_name": "investigation",
+        "column_names": [
+            "secref"
+        ],
+        "reference_table_name": "securitymonitoring",
+        "reference_column_names": [
+            "secmonregistry"
+        ]
+    }
+]

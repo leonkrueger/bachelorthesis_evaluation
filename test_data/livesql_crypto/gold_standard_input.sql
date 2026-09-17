@@ -1,0 +1,274 @@
+CREATE TABLE `users`
+(`usersnode` BIGINT,
+`userstamp` VARCHAR(1023),
+`acctscope` VARCHAR(1023));
+CREATE TABLE `marketdata`
+(`marketdatanode` BIGINT,
+`quote_depth_snapshot` VARCHAR(1023));
+CREATE TABLE `accountbalances`
+(`accountbalancesnode` BIGINT,
+`walletsum` DOUBLE,
+`availsum` DOUBLE,
+`frozensum` DOUBLE,
+`margsum` DOUBLE,
+`unrealline` DOUBLE,
+`realline` DOUBLE,
+`usertag` VARCHAR(1023));
+CREATE TABLE `marketstats`
+(`marketstatsmark` BIGINT,
+`fundrate` DOUBLE,
+`fundspot` DATETIME,
+`openstake` DOUBLE,
+`volday` DOUBLE,
+`tradeday` BIGINT,
+`tnoverday` DOUBLE,
+`priceshiftday` DOUBLE,
+`highspotday` DOUBLE,
+`lowspotday` DOUBLE,
+`vwapday` DOUBLE,
+`mktsize` DOUBLE,
+`circtotal` DOUBLE,
+`totsupply` DOUBLE,
+`maxsupply` DOUBLE,
+`mkthold` DOUBLE,
+`traderank` BIGINT,
+`liquidscore` DOUBLE,
+`volmeter` DOUBLE,
+`mdlink` BIGINT);
+CREATE TABLE `orders`
+(`orderspivot` BIGINT,
+`recordvault` VARCHAR(1023),
+`timecode` DATETIME,
+`exchspot` VARCHAR(1023),
+`mktnote` VARCHAR(1023),
+`orderstamp` VARCHAR(1023),
+`userlink` VARCHAR(1023),
+`ordertune` VARCHAR(1023),
+`dealedge` VARCHAR(1023),
+`dealquote` DOUBLE,
+`dealcount` DOUBLE,
+`notionsum` DOUBLE,
+`orderflow` VARCHAR(1023),
+`timespan` VARCHAR(1023),
+`orderbase` VARCHAR(1023),
+`clientmark` VARCHAR(1023),
+`createspot` DATETIME,
+`updatespot` DATETIME);
+CREATE TABLE `analyticsindicators`
+(`analyticsindicatorsnode` BIGINT,
+`mdataref` BIGINT,
+`mstatsref` BIGINT,
+`market_sentiment_indicators` VARCHAR(1023));
+CREATE TABLE `fees`
+(`feesnode` BIGINT,
+`feerange` VARCHAR(1023),
+`feerate` DOUBLE,
+`feetotal` DOUBLE,
+`feecoin` VARCHAR(1023),
+`rebrate` DOUBLE,
+`rebtotal` DOUBLE,
+`orderslink` VARCHAR(1023));
+CREATE TABLE `orderexecutions`
+(`orderexecmark` BIGINT,
+`fillcount` DOUBLE,
+`remaincount` DOUBLE,
+`fillquote` DOUBLE,
+`fillsum` DOUBLE,
+`expirespot` DATETIME,
+`cancelnote` VARCHAR(1023),
+`exectune` VARCHAR(1023),
+`ordersmark` VARCHAR(1023));
+CREATE TABLE `riskandmargin`
+(`riskandmarginpivot` BIGINT,
+`ordervault` VARCHAR(1023),
+`risk_margin_profile` VARCHAR(1023));
+CREATE TABLE `systemmonitoring`
+(`systemmonitoringpivot` BIGINT,
+`apireqtotal` BIGINT,
+`apierrtotal` BIGINT,
+`apilatmark` DOUBLE,
+`wsstate` VARCHAR(1023),
+`rateremain` BIGINT,
+`lastupdnote` VARCHAR(1023),
+`seqcode` VARCHAR(1023),
+`slipratio` DOUBLE,
+`exectimespan` DOUBLE,
+`queueline` BIGINT,
+`mkteffect` DOUBLE,
+`priceeffect` DOUBLE,
+`aitrack` BIGINT);
+INSERT INTO users VALUES (353, 'U185961', 'Options');
+INSERT INTO users VALUES (130, 'U892655', 'Futures');
+INSERT INTO users VALUES (68, 'U277472', 'Futures');
+INSERT INTO users VALUES (422, 'U170818', 'Spot');
+INSERT INTO users VALUES (956, 'U399858', 'Spot');
+INSERT INTO users VALUES (455, 'U708327', 'Options');
+INSERT INTO users VALUES (390, 'U169565', 'Margin');
+INSERT INTO users VALUES (972, 'U276135', 'Spot');
+INSERT INTO users VALUES (334, 'U109488', 'Futures');
+INSERT INTO users VALUES (817, 'U790355', 'Options');
+INSERT INTO users VALUES (530, 'U760316', 'Margin');
+INSERT INTO users VALUES (403, 'U524825', 'Margin');
+INSERT INTO users VALUES (190, 'U499936', 'Spot');
+INSERT INTO users VALUES (502, 'U779212', 'Futures');
+INSERT INTO users VALUES (632, 'U115508', 'Margin');
+INSERT INTO users VALUES (476, 'U980144', 'Spot');
+INSERT INTO users VALUES (990, 'U122233', 'Margin');
+INSERT INTO users VALUES (736, 'U534566', 'Futures');
+INSERT INTO marketdata VALUES (637, '{"depth": {"askdepth": 138, "askunits": 10.2711, "biddepth": 532, "bidunits": 84.1112}, "quotes": {"askquote": 2947.660, "bidquote": 2944.650, "midquote": 2946.150, "markquote": 2947.980, "indexquote": 2945.760}, "spread": {"spreadband": 3.01, "spreadrate": 0.1022}, "metadata": {"exchnote": "EX373     ", "mktcombo": "ETH-USDT", "timetrack": "2025-02-19T08:29:46.101953"}}');
+INSERT INTO marketdata VALUES (540, '{"depth": {"askdepth": 545, "askunits": 9.6718, "biddepth": 807, "bidunits": 75.2978}, "quotes": {"askquote": 45502.410, "bidquote": 45466.250, "midquote": 45484.330, "markquote": 45508.570, "indexquote": 45446.260}, "spread": {"spreadband": 36.16, "spreadrate": 0.0795}, "metadata": {"exchnote": "EX287     ", "mktcombo": "ETH-USD", "timetrack": "2025-02-19T08:29:46.092189"}}');
+INSERT INTO marketdata VALUES (722, '{"depth": {"askdepth": 934, "askunits": 71.6852, "biddepth": 851, "bidunits": 88.7358}, "quotes": {"askquote": 691.810, "bidquote": 691.410, "midquote": 691.610, "markquote": 691.500, "indexquote": 691.660}, "spread": {"spreadband": 0.4, "spreadrate": 0.0578}, "metadata": {"exchnote": "EX556     ", "mktcombo": "SOL-USDC", "timetrack": "2025-02-19T08:29:46.109843"}}');
+INSERT INTO marketdata VALUES (645, '{"depth": {"askdepth": 101, "askunits": 30.8163, "biddepth": 207, "bidunits": 88.5162}, "quotes": {"askquote": 23940.640, "bidquote": 23906.100, "midquote": 23923.370, "markquote": 23923.140, "indexquote": 23924.080}, "spread": {"spreadband": 34.54, "spreadrate": 0.1444}, "metadata": {"exchnote": "EX370     ", "mktcombo": "SOL-USDC", "timetrack": "2025-02-19T08:29:46.10296"}}');
+INSERT INTO marketdata VALUES (808, '{"depth": {"askdepth": 890, "askunits": 20.9278, "biddepth": 4, "bidunits": 88.5971}, "quotes": {"askquote": 21367.830, "bidquote": 21338.580, "midquote": 21353.210, "markquote": 21350.330, "indexquote": 21340.450}, "spread": {"spreadband": 29.25, "spreadrate": 0.1370}, "metadata": {"exchnote": "EX939     ", "mktcombo": "SOL-USD", "timetrack": "2025-02-19T08:29:46.115571"}}');
+INSERT INTO marketdata VALUES (841, '{"depth": {"askdepth": 807, "askunits": 2.1701, "biddepth": 341, "bidunits": 86.8333}, "quotes": {"askquote": 11457.480, "bidquote": 11443.280, "midquote": 11450.380, "markquote": 11455.720, "indexquote": 11443.980}, "spread": {"spreadband": 14.2, "spreadrate": 0.1240}, "metadata": {"exchnote": "EX844     ", "mktcombo": "ADA-USDC", "timetrack": "2025-02-19T08:29:46.115571"}}');
+INSERT INTO marketdata VALUES (420, '{"depth": {"askdepth": 121, "askunits": 56.3808, "biddepth": 631, "bidunits": 14.7450}, "quotes": {"askquote": 49762.330, "bidquote": 49724.690, "midquote": 49743.510, "markquote": 49774.650, "indexquote": 49709.640}, "spread": {"spreadband": 37.64, "spreadrate": 0.0757}, "metadata": {"exchnote": "EX249     ", "mktcombo": "SOL-USDT", "timetrack": "2025-02-19T08:29:46.08474"}}');
+INSERT INTO marketdata VALUES (427, '{"depth": {"askdepth": 634, "askunits": 6.1907, "biddepth": 867, "bidunits": 37.8778}, "quotes": {"askquote": 31292.410, "bidquote": 31272.680, "midquote": 31282.540, "markquote": 31272.880, "indexquote": 31276.070}, "spread": {"spreadband": 19.73, "spreadrate": 0.0631}, "metadata": {"exchnote": "EX892     ", "mktcombo": "ADA-USDT", "timetrack": "2025-02-19T08:29:46.085103"}}');
+INSERT INTO marketdata VALUES (787, '{"depth": {"askdepth": 476, "askunits": 61.9376, "biddepth": 750, "bidunits": 12.3540}, "quotes": {"askquote": 16305.690, "bidquote": 16287.080, "midquote": 16296.390, "markquote": 16312.770, "indexquote": 16307.910}, "spread": {"spreadband": 18.61, "spreadrate": 0.1142}, "metadata": {"exchnote": "EX634     ", "mktcombo": "SOL-USDT", "timetrack": "2025-02-19T08:29:46.115571"}}');
+INSERT INTO marketdata VALUES (367, '{"depth": {"askdepth": 649, "askunits": 63.7901, "biddepth": 102, "bidunits": 69.5776}, "quotes": {"askquote": 9255.090, "bidquote": 9244.440, "midquote": 9249.760, "markquote": 9244.680, "indexquote": 9254.560}, "spread": {"spreadband": 10.65, "spreadrate": 0.1151}, "metadata": {"exchnote": "EX120     ", "mktcombo": "ETH-USDT", "timetrack": "2025-02-19T08:29:46.079176"}}');
+INSERT INTO marketdata VALUES (959, '{"depth": {"askdepth": 209, "askunits": 55.7622, "biddepth": 485, "bidunits": 1.8347}, "quotes": {"askquote": 1457.360, "bidquote": 1457.190, "midquote": 1457.280, "markquote": 1456.330, "indexquote": 1456.800}, "spread": {"spreadband": 0.17, "spreadrate": 0.0117}, "metadata": {"exchnote": "EX943     ", "mktcombo": "ETH-USDC", "timetrack": "2025-02-19T08:29:46.128673"}}');
+INSERT INTO marketdata VALUES (530, '{"depth": {"askdepth": 848, "askunits": 8.8582, "biddepth": 981, "bidunits": 96.9467}, "quotes": {"askquote": 22086.960, "bidquote": 22050.730, "midquote": 22068.850, "markquote": 22083.460, "indexquote": 22066.790}, "spread": {"spreadband": 36.23, "spreadrate": 0.1642}, "metadata": {"exchnote": "EX208     ", "mktcombo": "ADA-USDT", "timetrack": "2025-02-19T08:29:46.092189"}}');
+INSERT INTO marketdata VALUES (662, '{"depth": {"askdepth": 235, "askunits": 45.6177, "biddepth": 323, "bidunits": 24.8375}, "quotes": {"askquote": 20971.230, "bidquote": 20945.300, "midquote": 20958.260, "markquote": 20942.790, "indexquote": 20955.410}, "spread": {"spreadband": 25.93, "spreadrate": 0.1237}, "metadata": {"exchnote": "EX291     ", "mktcombo": "ETH-USDC", "timetrack": "2025-02-19T08:29:46.10496"}}');
+INSERT INTO marketdata VALUES (695, '{"depth": {"askdepth": 210, "askunits": 37.8560, "biddepth": 761, "bidunits": 76.6289}, "quotes": {"askquote": 28417.380, "bidquote": 28385.690, "midquote": 28401.530, "markquote": 28420.050, "indexquote": 28390.480}, "spread": {"spreadband": 31.69, "spreadrate": 0.1116}, "metadata": {"exchnote": "EX674     ", "mktcombo": "ETH-USDC", "timetrack": "2025-02-19T08:29:46.107767"}}');
+INSERT INTO marketdata VALUES (340, '{"depth": {"askdepth": 959, "askunits": 15.0014, "biddepth": 530, "bidunits": 2.1110}, "quotes": {"askquote": 14278.390, "bidquote": 14260.650, "midquote": 14269.520, "markquote": 14267.640, "indexquote": 14272.210}, "spread": {"spreadband": 17.74, "spreadrate": 0.1243}, "metadata": {"exchnote": "EX429     ", "mktcombo": "ADA-USDC", "timetrack": "2025-02-19T08:29:46.077668"}}');
+INSERT INTO marketdata VALUES (731, '{"depth": {"askdepth": 783, "askunits": 21.2351, "biddepth": 174, "bidunits": 75.9133}, "quotes": {"askquote": 44209.450, "bidquote": 44196.440, "midquote": 44202.940, "markquote": 44213.560, "indexquote": 44232.970}, "spread": {"spreadband": 13.01, "spreadrate": 0.0294}, "metadata": {"exchnote": "EX182     ", "mktcombo": "SOL-USDC", "timetrack": "2025-02-19T08:29:46.110719"}}');
+INSERT INTO marketdata VALUES (375, '{"depth": {"askdepth": 960, "askunits": 65.8812, "biddepth": 987, "bidunits": 35.1187}, "quotes": {"askquote": 5972.000, "bidquote": 5966.000, "midquote": 5969.000, "markquote": 5973.030, "indexquote": 5967.230}, "spread": {"spreadband": 6, "spreadrate": 0.1005}, "metadata": {"exchnote": "EX332     ", "mktcombo": "ADA-USD", "timetrack": "2025-02-19T08:29:46.079176"}}');
+INSERT INTO marketdata VALUES (344, '{"depth": {"askdepth": 559, "askunits": 76.5178, "biddepth": 757, "bidunits": 80.0763}, "quotes": {"askquote": 13355.910, "bidquote": 13347.410, "midquote": 13351.660, "markquote": 13354.870, "indexquote": 13342.560}, "spread": {"spreadband": 8.5, "spreadrate": 0.0637}, "metadata": {"exchnote": "EX242     ", "mktcombo": "BTC-USDT", "timetrack": "2025-02-19T08:29:46.077668"}}');
+INSERT INTO accountbalances VALUES (353, 243920.210, 79688.350, 164231.860, 20990.170, -31777.54, -35827.39, 'U185961');
+INSERT INTO accountbalances VALUES (130, 852550.960, 440321.670, 412229.290, 237736.800, -37947.07, 10836.59, 'U892655');
+INSERT INTO accountbalances VALUES (68, 26780.930, 13891.370, 12889.560, 586459.480, -27449.86, -69077.58, 'U277472');
+INSERT INTO accountbalances VALUES (422, 899836.850, 572270.680, 327566.170, 983145.050, -72891.13, -9608.18, 'U170818');
+INSERT INTO accountbalances VALUES (956, 115547.750, 36131.280, 79416.470, 433284.800, -55193.97, 22475.89, 'U399858');
+INSERT INTO accountbalances VALUES (455, 564019.790, 488113.540, 75906.250, 21172.990, -76123.12, -37851.84, 'U708327');
+INSERT INTO accountbalances VALUES (390, 717531.290, 650726.570, 66804.720, 130500.920, -81830.24, 28697.3, 'U169565');
+INSERT INTO accountbalances VALUES (972, 205829.560, 195489.460, 10340.100, 545032.400, 57115.47, -23250.86, 'U276135');
+INSERT INTO accountbalances VALUES (334, 362138.930, 22868.350, 339270.580, 797460.120, 79148.75, -25454.93, 'U109488');
+INSERT INTO accountbalances VALUES (817, 951120.730, 148287.700, 802833.030, 663698.650, -14622.61, 79510.68, 'U790355');
+INSERT INTO accountbalances VALUES (530, 117869.010, 47881.020, 69987.990, 837189.920, 65442.05, 10123.09, 'U760316');
+INSERT INTO accountbalances VALUES (403, 176520.970, 97842.160, 78678.810, 716867.450, -34394.12, -59432.52, 'U524825');
+INSERT INTO accountbalances VALUES (190, 927712.940, 304254.930, 623458.010, 401816.910, -65144.03, 20168.19, 'U499936');
+INSERT INTO accountbalances VALUES (502, 515662.410, 396603.740, 119058.670, 567557.490, -75355.56, 54266.88, 'U779212');
+INSERT INTO accountbalances VALUES (632, 294801.190, 31689.120, 263112.070, 198171.510, 14935.82, -31633.46, 'U115508');
+INSERT INTO accountbalances VALUES (476, 164172.660, 147029.670, 17142.990, 564934.750, 73064.3, 84814.4, 'U980144');
+INSERT INTO accountbalances VALUES (990, 358547.000, 100381.470, 258165.530, 631813.140, 39933.22, -3970.06, 'U122233');
+INSERT INTO accountbalances VALUES (736, 202703.250, 28664.530, 174038.720, 71292.310, 52446.59, 54569.35, 'U534566');
+INSERT INTO marketstats VALUES (420, -0.0005, '2025-02-19 15:29:46', 656953.28000, 985139.97, 14638, 3022434.460, 0.143, 50830.490, 45459.950, 51637.050, 730794372.130, 76659607.550, 151619422.020, 257406355.550, 0.035, 83, 0.25, 33.99, 420);
+INSERT INTO marketstats VALUES (645, -0.0007, '2025-02-19 16:29:46', 497970.17000, 6569257.6, 31209, 2398722.460, -0.122, 25106.490, 22449.330, 24571.320, 677648279.010, 93339166.110, 155759768.400, 214889365.210, 0.475, 95, 0.55, 69.69, 645);
+INSERT INTO marketstats VALUES (808, 0.0004, '2025-02-19 11:29:46', 558393.89000, 8104982.59, 94415, 4596970.010, 0.170, 21550.150, 20946.270, 20516.100, 998081925.110, 21731509.030, 26805069.050, 29580520.160, 0.371, 72, 0.62, 62.14, 808);
+INSERT INTO marketstats VALUES (841, -0.0005, '2025-02-19 10:29:46', 291938.92000, 5934071.75, 61718, 4694420.230, -0.163, 12411.280, 11210.490, 11150.220, 614042745.270, 65054841.390, 124996110.780, 149617696.640, 0.179, 90, 0.67, 81.62, 841);
+INSERT INTO marketstats VALUES (427, 0.0009, '2025-02-19 13:29:46', 822363.49000, 7698166.02, 39689, 8054760.710, -0.057, 33820.600, 29132.510, 29906.750, 462893371.680, 95342942.480, 110267242.120, 211370420.560, 0.325, 30, 0.97, 38.93, 427);
+INSERT INTO marketstats VALUES (367, -0.0005, '2025-02-19 13:29:46', 959722.65000, 5284885.79, 18761, 2468550.230, 0.144, 9331.860, 8541.940, 9223.460, 939422173.030, 65151672.340, 67075526.100, 75884700.080, 0.175, 73, 0.87, 88.56, 367);
+INSERT INTO marketstats VALUES (722, -0.0003, '2025-02-19 12:29:46', 826018.96000, 5912846.81, 13981, 2196846.640, -0.167, 699.420, 640.270, 680.440, 803509773.400, 50382987.480, 84885315.650, 139781846.010, 0.168, 5, 0.05, 55.06, 722);
+INSERT INTO marketstats VALUES (530, -0.0009, '2025-02-19 09:29:46', 238266.19000, 3150520.13, 74231, 452360.930, 0.022, 23362.040, 21391.080, 22000.940, 839582262.000, 91446045.350, 129748003.550, 191302041.800, 0.261, 26, 0.34, 8.35, 530);
+INSERT INTO marketstats VALUES (340, -0.0009, '2025-02-19 12:29:46', 980547.94000, 4587928.16, 71464, 1004763.900, -0.194, 14292.380, 13265.570, 14050.230, 279868669.010, 63510420.390, 70337492.180, 107338638.800, 0.340, 54, 0.43, 63.55, 340);
+INSERT INTO marketstats VALUES (787, 0.0010, '2025-02-19 10:29:46', 93507.66000, 7825609.75, 60116, 8063009.890, 0.056, 17346.290, 15944.970, 16659.220, 565459537.120, 2725238.000, 3207355.440, 5002331.070, 0.243, 10, 0.67, 82.79, 787);
+INSERT INTO marketstats VALUES (662, 0.0007, '2025-02-19 16:29:46', 138664.03000, 371678.61, 66843, 6129038.440, 0.175, 22553.470, 19169.320, 20865.490, 681566332.260, 44124327.940, 73546479.130, 108243790.180, 0.317, 41, 0.87, 87.10, 662);
+INSERT INTO marketstats VALUES (695, -0.0004, '2025-02-19 13:29:46', 989547.65000, 4650637.51, 10457, 4580867.900, -0.070, 30454.550, 27514.380, 28900.330, 388710979.390, 26346355.150, 50607229.800, 58102283.180, 0.209, 43, 0.16, 10.94, 695);
+INSERT INTO marketstats VALUES (344, -0.0006, '2025-02-19 12:29:46', 525213.38000, 7236369.93, 36629, 8367213.500, 0.073, 14670.940, 12778.380, 13319.670, 466114336.980, 91467972.580, 97239608.120, 112446197.340, 0.257, 33, 0.28, 21.14, 344);
+INSERT INTO marketstats VALUES (375, -0.0007, '2025-02-19 12:29:46', 688590.92000, 715062.03, 30647, 5093765.960, -0.093, 6494.560, 5808.430, 6178.800, 595744728.190, 33105803.680, 45281364.200, 78542483.100, 0.278, 45, 0.40, 97.89, 375);
+INSERT INTO marketstats VALUES (731, 0.0002, '2025-02-19 10:29:46', 503107.11000, 2558272.78, 18493, 5407562.110, 0.027, 48037.940, 43295.440, 42492.280, 219395435.610, 59405417.560, 91313302.690, 129584334.860, 0.116, 41, 0.50, 6.38, 731);
+INSERT INTO marketstats VALUES (540, -0.0010, '2025-02-19 09:29:46', 138422.89000, 15367.91, 15599, 608383.010, 0.124, 49558.930, 43331.340, 45151.940, 784545935.780, 39350709.250, 50225264.390, 87678352.620, 0.479, 5, 0.66, 76.14, 540);
+INSERT INTO marketstats VALUES (637, -0.0005, '2025-02-19 10:29:46', 390129.47000, 7169861.16, 67909, 5105260.490, 0.166, 3173.530, 2811.390, 2998.920, 350303470.030, 15287660.640, 22612861.860, 36664382.150, 0.264, 70, 0.59, 51.52, 637);
+INSERT INTO marketstats VALUES (959, -0.0004, '2025-02-19 14:29:46', 79550.54000, 5145919.19, 3502, 1629821.130, -0.168, 1583.050, 1409.360, 1470.690, 273237208.590, 99526079.260, 166817250.130, 175823911.050, 0.252, 89, 0.73, 92.99, 959);
+INSERT INTO orders VALUES (956, 'OB783045', '2025-02-19 08:29:46.128673', 'EX784', 'ETH-USD', 'OR1411703', 'U399858', 'Stop', 'Sell', 30799.550, 0.8806, 27123.100, 'PartiallyFilled', 'FOK', 'Bot', 'CL5863214', '2025-02-18 19:54:56.128673', '2025-02-19 08:29:46.128673');
+INSERT INTO orders VALUES (353, 'OB929685', '2025-02-19 08:29:46.079176', 'EX855', 'SOL-USDC', 'OR6175422', 'U185961', 'StopLimit', 'Sell', 16369.150, 4.6077, 75423.440, 'Cancelled', 'GTC', 'Web', 'CL8079871', '2025-02-18 13:44:58.079176', '2025-02-19 08:29:46.079176');
+INSERT INTO orders VALUES (130, 'OB958565', '2025-02-19 08:29:46.060678', 'EX782', 'ETH-USDC', 'OR6109168', 'U892655', 'Limit', 'Buy', 30561.360, 9.2959, 284094.980, 'Cancelled', 'GTC', 'Bot', 'CL2359548', '2025-02-19 00:32:14.060678', '2025-02-19 08:29:46.060678');
+INSERT INTO orders VALUES (68, 'OB648538', '2025-02-19 08:29:46.055391', 'EX250', 'ETH-USD', 'OR8742341', 'U277472', 'Limit', 'Buy', 44084.850, 3.2908, 145074.600, 'Filled', 'GTD', 'Web', 'CL1454017', '2025-02-19 08:09:02.055391', '2025-02-19 08:29:46.055391');
+INSERT INTO orders VALUES (422, 'OB882664', '2025-02-19 08:29:46.08474', 'EX681', 'ETH-USDT', 'OR3399432', 'U170818', 'StopLimit', 'Buy', 28109.600, 4.6840, 131666.210, 'New', 'GTD', 'Web', 'CL7164793', '2025-02-19 05:43:33.08474', '2025-02-19 08:29:46.08474');
+INSERT INTO orders VALUES (455, 'OB422443', '2025-02-19 08:29:46.085103', 'EX269', 'ETH-USD', 'OR6498572', 'U708327', 'Stop', 'Sell', 28971.130, 2.7971, 81036.340, 'Cancelled', 'GTC', 'Bot', 'CL8196336', '2025-02-18 17:39:05.085103', '2025-02-19 08:29:46.085103');
+INSERT INTO orders VALUES (972, 'OB297785', '2025-02-19 08:29:46.128673', 'EX109', 'BTC-USDT', 'OR6589012', 'U276135', 'Market', 'Buy', 39007.500, 9.2642, 361372.270, 'Cancelled', 'IOC', 'Web', 'CL8838226', '2025-02-19 05:59:27.128673', '2025-02-19 08:29:46.128673');
+INSERT INTO orders VALUES (334, 'OB135062', '2025-02-19 08:29:46.07316', 'EX145', 'SOL-USDC', 'OR9965897', 'U109488', 'Market', 'Sell', 15326.100, 4.3997, 67430.900, 'PartiallyFilled', 'IOC', 'Bot', 'CL3052111', '2025-02-18 23:07:46.07316', '2025-02-19 08:29:46.07316');
+INSERT INTO orders VALUES (817, 'OB537380', '2025-02-19 08:29:46.115571', 'EX867', 'ETH-USD', 'OR1094605', 'U790355', 'Limit', 'Buy', 5817.430, 9.0918, 52890.800, 'Cancelled', 'GTD', 'API', 'CL9057055', '2025-02-19 01:03:56.115571', '2025-02-19 08:29:46.115571');
+INSERT INTO orders VALUES (530, 'OB797782', '2025-02-19 08:29:46.092189', 'EX208', 'ADA-USDT', 'OR4176361', 'U760316', 'Limit', 'Sell', 22066.590, 6.8878, 151989.460, 'PartiallyFilled', 'GTD', 'Mobile', 'CL7656388', '2025-02-18 10:31:44.092189', '2025-02-19 08:29:46.092189');
+INSERT INTO orders VALUES (403, 'OB322795', '2025-02-19 08:29:46.079176', 'EX661', 'BTC-USD', 'OR4518846', 'U524825', 'Stop', 'Buy', 42069.370, 9.9585, 418947.740, 'PartiallyFilled', 'IOC', 'Mobile', 'CL3245177', '2025-02-18 10:49:57.079176', '2025-02-19 08:29:46.079176');
+INSERT INTO orders VALUES (502, 'OB139324', '2025-02-19 08:29:46.091129', 'EX553', 'ADA-USDC', 'OR1354310', 'U779212', 'Limit', 'Sell', 47711.650, 0.5129, 24472.780, 'PartiallyFilled', 'IOC', 'Web', 'CL7571847', '2025-02-18 10:29:03.091129', '2025-02-19 08:29:46.091129');
+INSERT INTO orders VALUES (632, 'OB995206', '2025-02-19 08:29:46.101953', 'EX722', 'ADA-USDT', 'OR8866866', 'U115508', 'Stop', 'Sell', 47409.530, 6.3401, 300581.300, 'New', 'IOC', 'Bot', 'CL6892719', '2025-02-19 00:35:06.101953', '2025-02-19 08:29:46.101953');
+INSERT INTO orders VALUES (476, 'OB287560', '2025-02-19 08:29:46.085103', 'EX693', 'BTC-USDC', 'OR7382434', 'U980144', 'Market', 'Sell', 28593.800, 6.5504, 187300.940, 'Filled', 'GTD', 'Bot', 'CL1444845', '2025-02-19 05:24:03.085103', '2025-02-19 08:29:46.085103');
+INSERT INTO orders VALUES (990, 'OB535059', '2025-02-19 08:29:46.132317', 'EX502', 'SOL-USDT', 'OR7644278', 'U122233', 'StopLimit', 'Sell', 35619.950, 3.3335, 118740.530, 'New', 'GTC', 'Bot', 'CL6970747', '2025-02-18 14:27:31.132317', '2025-02-19 08:29:46.132317');
+INSERT INTO orders VALUES (190, 'OB336166', '2025-02-19 08:29:46.065533', 'EX877', 'SOL-USDT', 'OR3456537', 'U499936', 'StopLimit', 'Sell', 21220.330, 7.7466, 164385.470, 'Cancelled', 'GTC', 'Bot', 'CL5436428', '2025-02-18 16:59:12.065533', '2025-02-19 08:29:46.065533');
+INSERT INTO orders VALUES (736, 'OB855088', '2025-02-19 08:29:46.110719', 'EX136', 'ADA-USD', 'OR3377591', 'U534566', 'Market', 'Buy', 10729.560, 1.4193, 15228.740, 'Cancelled', 'FOK', 'Bot', 'CL6059419', '2025-02-19 07:35:51.110719', '2025-02-19 08:29:46.110719');
+INSERT INTO analyticsindicators VALUES (645, 645, 645, '{"flow": {"instflow": -0.619, "flowimbal": -0.635, "retailflow": 0.538, "smartforce": 0.906, "tradeimbal": -0.815, "largeflowrate": 0.740}, "walls": {"buywallband": 0.063, "sellwallband": 0.073}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.048, "sellforce": 0.75, "techmeter": "Hold"}, "arbitrage": {"fundgap": 0.0048, "basisgap": 0.0011, "xexchband": 0.0092, "arbpotential": 0.0084}, "big_players": {"makermotion": "Medium", "whalemotion": "Low"}, "oscillators": {"bbandspan": 85.070, "macdtrail": -6.420, "rsi14spot": 54.420}}');
+INSERT INTO analyticsindicators VALUES (420, 420, 420, '{"flow": {"instflow": -0.988, "flowimbal": 0.788, "retailflow": 0.091, "smartforce": -0.516, "tradeimbal": -0.665, "largeflowrate": 0.389}, "walls": {"buywallband": 0.084, "sellwallband": 0.053}, "momentum": {"mktfeel": "Neutral", "buyforce": 0.675, "sellforce": 0.007, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0013, "basisgap": 0.0057, "xexchband": 0.0051, "arbpotential": 0.0028}, "big_players": {"makermotion": "Low", "whalemotion": "Medium"}, "oscillators": {"bbandspan": 71.900, "macdtrail": -5.600, "rsi14spot": 2.400}}');
+INSERT INTO analyticsindicators VALUES (808, 808, 808, '{"flow": {"instflow": 0.765, "flowimbal": -0.94, "retailflow": 0.411, "smartforce": -0.76, "tradeimbal": 0.498, "largeflowrate": 0.667}, "walls": {"buywallband": 0.035, "sellwallband": 0.042}, "momentum": {"mktfeel": "Bearish", "buyforce": 0.953, "sellforce": 0.733, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0070, "basisgap": 0.0036, "xexchband": 0.0082, "arbpotential": 0.0017}, "big_players": {"makermotion": "Medium", "whalemotion": "Medium"}, "oscillators": {"bbandspan": 40.850, "macdtrail": -2.770, "rsi14spot": 96.890}}');
+INSERT INTO analyticsindicators VALUES (841, 841, 841, '{"flow": {"instflow": -0.644, "flowimbal": -0.34, "retailflow": 0.285, "smartforce": -0.613, "tradeimbal": -0.612, "largeflowrate": 0.238}, "walls": {"buywallband": 0.058, "sellwallband": 0.036}, "momentum": {"mktfeel": "Bearish", "buyforce": 0.447, "sellforce": 0.152, "techmeter": "Sell"}, "arbitrage": {"fundgap": 0.0078, "basisgap": 0.0073, "xexchband": 0.0013, "arbpotential": 0.0048}, "big_players": {"makermotion": "Low", "whalemotion": "Medium"}, "oscillators": {"bbandspan": 32.070, "macdtrail": 9.290, "rsi14spot": 94.640}}');
+INSERT INTO analyticsindicators VALUES (427, 427, 427, '{"flow": {"instflow": -0.243, "flowimbal": -0.199, "retailflow": 0.646, "smartforce": -0.628, "tradeimbal": -0.517, "largeflowrate": 0.031}, "walls": {"buywallband": 0.013, "sellwallband": 0.021}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.492, "sellforce": 0.764, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0013, "basisgap": 0.0072, "xexchband": 0.0082, "arbpotential": 0.0004}, "big_players": {"makermotion": "High", "whalemotion": "Medium"}, "oscillators": {"bbandspan": 41.600, "macdtrail": -5.030, "rsi14spot": 22.390}}');
+INSERT INTO analyticsindicators VALUES (367, 367, 367, '{"flow": {"instflow": 0.522, "flowimbal": -0.462, "retailflow": 0.967, "smartforce": 0.617, "tradeimbal": -0.519, "largeflowrate": 0.957}, "walls": {"buywallband": 0.084, "sellwallband": 0.064}, "momentum": {"mktfeel": "Neutral", "buyforce": 0.345, "sellforce": 0.332, "techmeter": "Hold"}, "arbitrage": {"fundgap": 0.0057, "basisgap": 0.0008, "xexchband": 0.0005, "arbpotential": 0.0015}, "big_players": {"makermotion": "Low", "whalemotion": "Medium"}, "oscillators": {"bbandspan": 0.330, "macdtrail": 9.380, "rsi14spot": 83.500}}');
+INSERT INTO analyticsindicators VALUES (722, 722, 722, '{"flow": {"instflow": -0.734, "flowimbal": -0.407, "retailflow": -0.111, "smartforce": 0.583, "tradeimbal": 0.749, "largeflowrate": 0.849}, "walls": {"buywallband": 0.054, "sellwallband": 0.057}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.494, "sellforce": 0.403, "techmeter": "Hold"}, "arbitrage": {"fundgap": 0.0073, "basisgap": 0.0002, "xexchband": 0.0024, "arbpotential": 0.0011}, "big_players": {"makermotion": "Medium", "whalemotion": "Low"}, "oscillators": {"bbandspan": 19.550, "macdtrail": 9.020, "rsi14spot": 72.580}}');
+INSERT INTO analyticsindicators VALUES (530, 530, 530, '{"flow": {"instflow": 0.292, "flowimbal": 0.625, "retailflow": 0.068, "smartforce": -0.979, "tradeimbal": 0.674, "largeflowrate": 0.156}, "walls": {"buywallband": 0.042, "sellwallband": 0.097}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.288, "sellforce": 0.019, "techmeter": "Sell"}, "arbitrage": {"fundgap": 0.0089, "basisgap": 0.0082, "xexchband": 0.0090, "arbpotential": 0.0092}, "big_players": {"makermotion": "Medium", "whalemotion": "Low"}, "oscillators": {"bbandspan": 4.320, "macdtrail": -0.500, "rsi14spot": 30.220}}');
+INSERT INTO analyticsindicators VALUES (787, 787, 787, '{"flow": {"instflow": -0.83, "flowimbal": -0.737, "retailflow": 0.222, "smartforce": 0.636, "tradeimbal": 0.069, "largeflowrate": 0.631}, "walls": {"buywallband": 0.037, "sellwallband": 0.075}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.579, "sellforce": 0.662, "techmeter": "Sell"}, "arbitrage": {"fundgap": 0.0057, "basisgap": 0.0057, "xexchband": 0.0048, "arbpotential": 0.0026}, "big_players": {"makermotion": "Low", "whalemotion": "High"}, "oscillators": {"bbandspan": 37.920, "macdtrail": 1.000, "rsi14spot": 98.970}}');
+INSERT INTO analyticsindicators VALUES (340, 340, 340, '{"flow": {"instflow": 0.852, "flowimbal": 0.084, "retailflow": 0.289, "smartforce": -0.913, "tradeimbal": -0.067, "largeflowrate": 0.713}, "walls": {"buywallband": 0.030, "sellwallband": 0.041}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.05, "sellforce": 0.308, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0021, "basisgap": 0.0007, "xexchband": 0.0086, "arbpotential": 0.0015}, "big_players": {"makermotion": "Low", "whalemotion": "Low"}, "oscillators": {"bbandspan": 46.480, "macdtrail": -0.730, "rsi14spot": 91.740}}');
+INSERT INTO analyticsindicators VALUES (662, 662, 662, '{"flow": {"instflow": -0.725, "flowimbal": 0.291, "retailflow": -0.497, "smartforce": -0.826, "tradeimbal": 0.226, "largeflowrate": 0.677}, "walls": {"buywallband": 0.017, "sellwallband": 0.013}, "momentum": {"mktfeel": "Bearish", "buyforce": 0.887, "sellforce": 0.714, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0056, "basisgap": 0.0050, "xexchband": 0.0043, "arbpotential": 0.0090}, "big_players": {"makermotion": "High", "whalemotion": "High"}, "oscillators": {"bbandspan": 76.830, "macdtrail": 8.300, "rsi14spot": 19.120}}');
+INSERT INTO analyticsindicators VALUES (695, 695, 695, '{"flow": {"instflow": -0.803, "flowimbal": -0.324, "retailflow": 0.979, "smartforce": 0.401, "tradeimbal": -0.336, "largeflowrate": 0.281}, "walls": {"buywallband": 0.017, "sellwallband": 0.093}, "momentum": {"mktfeel": "Neutral", "buyforce": 0.797, "sellforce": 0.389, "techmeter": "Hold"}, "arbitrage": {"fundgap": 0.0071, "basisgap": 0.0024, "xexchband": 0.0026, "arbpotential": 0.0055}, "big_players": {"makermotion": "High", "whalemotion": "High"}, "oscillators": {"bbandspan": 24.180, "macdtrail": 5.100, "rsi14spot": 22.100}}');
+INSERT INTO analyticsindicators VALUES (375, 375, 375, '{"flow": {"instflow": -0.513, "flowimbal": 0.375, "retailflow": 0.773, "smartforce": -0.543, "tradeimbal": -0.335, "largeflowrate": 0.044}, "walls": {"buywallband": 0.030, "sellwallband": 0.079}, "momentum": {"mktfeel": "Bearish", "buyforce": 0.465, "sellforce": 0.97, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0009, "basisgap": 0.0022, "xexchband": 0.0038, "arbpotential": 0.0014}, "big_players": {"makermotion": "Low", "whalemotion": "High"}, "oscillators": {"bbandspan": 12.340, "macdtrail": -4.660, "rsi14spot": 38.760}}');
+INSERT INTO analyticsindicators VALUES (344, 344, 344, '{"flow": {"instflow": -0.334, "flowimbal": 0.005, "retailflow": 0.26, "smartforce": -0.463, "tradeimbal": 0.977, "largeflowrate": 0.092}, "walls": {"buywallband": 0.057, "sellwallband": 0.031}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.746, "sellforce": 0.354, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0081, "basisgap": 0.0052, "xexchband": 0.0024, "arbpotential": 0.0083}, "big_players": {"makermotion": "Medium", "whalemotion": "Low"}, "oscillators": {"bbandspan": 15.650, "macdtrail": -6.020, "rsi14spot": 19.690}}');
+INSERT INTO analyticsindicators VALUES (731, 731, 731, '{"flow": {"instflow": 0.334, "flowimbal": 0.492, "retailflow": 0.26, "smartforce": -0.583, "tradeimbal": 0.737, "largeflowrate": 0.363}, "walls": {"buywallband": 0.010, "sellwallband": 0.034}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.35, "sellforce": 0.867, "techmeter": "Sell"}, "arbitrage": {"fundgap": 0.0070, "basisgap": 0.0005, "xexchband": 0.0079, "arbpotential": 0.0012}, "big_players": {"makermotion": "Low", "whalemotion": "High"}, "oscillators": {"bbandspan": 55.060, "macdtrail": -9.010, "rsi14spot": 36.670}}');
+INSERT INTO analyticsindicators VALUES (540, 540, 540, '{"flow": {"instflow": 0.434, "flowimbal": 0.148, "retailflow": 0.891, "smartforce": 0.04, "tradeimbal": -0.718, "largeflowrate": 0.667}, "walls": {"buywallband": 0.055, "sellwallband": 0.050}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.427, "sellforce": 0.615, "techmeter": "Hold"}, "arbitrage": {"fundgap": 0.0052, "basisgap": 0.0085, "xexchband": 0.0080, "arbpotential": 0.0037}, "big_players": {"makermotion": "High", "whalemotion": "Low"}, "oscillators": {"bbandspan": 9.730, "macdtrail": 0.800, "rsi14spot": 61.460}}');
+INSERT INTO analyticsindicators VALUES (637, 637, 637, '{"flow": {"instflow": 0.516, "flowimbal": 0.856, "retailflow": 0.344, "smartforce": -0.502, "tradeimbal": 0.099, "largeflowrate": 0.035}, "walls": {"buywallband": 0.065, "sellwallband": 0.065}, "momentum": {"mktfeel": "Bullish", "buyforce": 0.065, "sellforce": 0.967, "techmeter": "Sell"}, "arbitrage": {"fundgap": 0.0047, "basisgap": 0.0005, "xexchband": 0.0046, "arbpotential": 0.0036}, "big_players": {"makermotion": "Medium", "whalemotion": "Low"}, "oscillators": {"bbandspan": 23.790, "macdtrail": -7.840, "rsi14spot": 13.340}}');
+INSERT INTO analyticsindicators VALUES (959, 959, 959, '{"flow": {"instflow": -0.743, "flowimbal": 0.197, "retailflow": 0.157, "smartforce": -0.57, "tradeimbal": 0.93, "largeflowrate": 0.741}, "walls": {"buywallband": 0.017, "sellwallband": 0.100}, "momentum": {"mktfeel": "Neutral", "buyforce": 0.426, "sellforce": 0.502, "techmeter": "Buy"}, "arbitrage": {"fundgap": 0.0004, "basisgap": 0.0075, "xexchband": 0.0016, "arbpotential": 0.0069}, "big_players": {"makermotion": "High", "whalemotion": "Low"}, "oscillators": {"bbandspan": 54.580, "macdtrail": -7.790, "rsi14spot": 59.230}}');
+INSERT INTO fees VALUES (353, 'Tier3', 0.00090, 54.639414, 'USDT', 0.00070, 42.497322, 'OB929685');
+INSERT INTO fees VALUES (130, 'Tier2', 0.00140, 70.139566, 'USDC', 0.00040, 20.039876, 'OB958565');
+INSERT INTO fees VALUES (68, 'Tier2', 0.00140, 109.997398, 'USDT', 0.00030, 23.570871, 'OB648538');
+INSERT INTO fees VALUES (422, 'Tier4', 0.00040, 51.276060, 'USDC', 0.00010, 12.819015, 'OB882664');
+INSERT INTO fees VALUES (956, 'Tier4', 0.00190, 2.546760, 'USD', 0.00050, 0.670200, 'OB783045');
+INSERT INTO fees VALUES (455, 'Tier2', 0.00080, 7.032256, 'USD', 0.00050, 4.395160, 'OB422443');
+INSERT INTO fees VALUES (972, 'Tier2', 0.00170, 618.719369, 'USDC', 0.00010, 36.395257, 'OB297785');
+INSERT INTO fees VALUES (334, 'Tier1', 0.00010, 1.647350, 'USDC', 0.00050, 8.236750, 'OB135062');
+INSERT INTO fees VALUES (817, 'Tier4', 0.00200, 88.240860, 'USD', 0.00080, 35.296344, 'OB537380');
+INSERT INTO fees VALUES (530, 'Tier3', 0.00200, 278.571760, 'USDT', 0.00080, 111.428704, 'OB797782');
+INSERT INTO fees VALUES (403, 'Tier1', 0.00070, 295.382262, 'USD', 0.00070, 295.382262, 'OB322795');
+INSERT INTO fees VALUES (190, 'Tier2', 0.00020, 14.655832, 'USD', 0.00100, 73.279160, 'OB336166');
+INSERT INTO fees VALUES (502, 'Tier2', 0.00080, 9.928232, 'USDT', 0.00020, 2.482058, 'OB139324');
+INSERT INTO fees VALUES (632, 'Tier3', 0.00130, 272.069512, 'USDT', 0.00010, 20.928424, 'OB995206');
+INSERT INTO fees VALUES (476, 'Tier1', 0.00150, 260.317185, 'USDC', 0.00040, 69.417916, 'OB287560');
+INSERT INTO fees VALUES (990, 'Tier2', 0.00110, 1.270357, 'USDC', 0.00080, 0.923896, 'OB535059');
+INSERT INTO fees VALUES (736, 'Tier1', 0.00140, 4.626286, 'USDT', 0.00060, 1.982694, 'OB855088');
+INSERT INTO orderexecutions VALUES (353, 3.6551, 0.9526, 16609.790, 60710.460, '2025-03-16 08:29:46.079176', 'InsufficientFunds', 'Maker', 'OB929685');
+INSERT INTO orderexecutions VALUES (130, 1.6683, 7.6276, 30029.770, 50099.690, '2025-03-15 08:29:46.060678', 'UserRequested', 'Maker', 'OB958565');
+INSERT INTO orderexecutions VALUES (68, 1.7073, 1.5835, 46019.270, 78569.570, '2025-03-21 08:29:46.055391', 'UserRequested', 'Taker', 'OB648538');
+INSERT INTO orderexecutions VALUES (422, 4.3857, 0.2983, 29229.120, 128190.150, '2025-02-23 08:29:46.08474', 'Expired', 'Taker', 'OB882664');
+INSERT INTO orderexecutions VALUES (956, 0.0418, 0.8389, 32085.510, 1340.400, '2025-02-28 08:29:46.128673', 'InsufficientFunds', NULL, 'OB783045');
+INSERT INTO orderexecutions VALUES (455, 0.2999, 2.4972, 29308.700, 8790.320, '2025-02-27 08:29:46.085103', 'UserRequested', NULL, 'OB422443');
+INSERT INTO orderexecutions VALUES (972, 8.9810, 0.2832, 40524.790, 363952.570, '2025-02-26 08:29:46.128673', 'UserRequested', 'Maker', 'OB297785');
+INSERT INTO orderexecutions VALUES (334, 1.0728, 3.3269, 15355.440, 16473.500, '2025-02-23 08:29:46.07316', 'UserRequested', 'Maker', 'OB135062');
+INSERT INTO orderexecutions VALUES (817, 7.4460, 1.6458, 5925.410, 44120.430, '2025-02-24 08:29:46.115571', 'Expired', NULL, 'OB537380');
+INSERT INTO orderexecutions VALUES (530, 6.0905, 0.7973, 22869.340, 139285.880, '2025-03-12 08:29:46.092189', 'Expired', NULL, 'OB797782');
+INSERT INTO orderexecutions VALUES (403, 9.8168, 0.1417, 42984.880, 421974.660, '2025-02-23 08:29:46.079176', 'Expired', 'Taker', 'OB322795');
+INSERT INTO orderexecutions VALUES (190, 3.4024, 4.3442, 21537.250, 73279.160, '2025-03-16 08:29:46.065533', 'InsufficientFunds', 'Maker', 'OB336166');
+INSERT INTO orderexecutions VALUES (502, 0.2706, 0.2423, 45854.170, 12410.290, '2025-02-24 08:29:46.091129', 'UserRequested', 'Taker', 'OB139324');
+INSERT INTO orderexecutions VALUES (632, 4.4758, 1.8643, 46759.310, 209284.240, '2025-02-20 08:29:46.101953', 'UserRequested', NULL, 'OB995206');
+INSERT INTO orderexecutions VALUES (476, 6.3718, 0.1786, 27236.200, 173544.790, '2025-03-04 08:29:46.085103', 'UserRequested', NULL, 'OB287560');
+INSERT INTO orderexecutions VALUES (990, 0.0310, 3.3025, 37196.150, 1154.870, '2025-03-15 08:29:46.132317', 'Expired', NULL, 'OB535059');
+INSERT INTO orderexecutions VALUES (736, 0.3167, 1.1027, 10434.970, 3304.490, '2025-02-19 08:29:46.110719', 'InsufficientFunds', 'Taker', 'OB855088');
+INSERT INTO riskandmargin VALUES (130, 'OB958565', '{"iceberg": {"viscount": 7.597666, "icebcount": 1.698222}, "leverage": {"levscale": "1", "margform": null}, "position": {"possum": 1134420.450, "posedge": "Long", "posmagn": "10", "poscount": 37.119, "posriskrate": 0.497}, "collateral": {"collsum": 779473.420, "collcoin": "USDT", "collrate": 0.181, "insfundshare": 53.360}, "margin_rates": {"margrate": 0.539, "bkptquote": 16131.880, "margcallquote": 35750.000}, "price_levels": {"liqquote": 43642.140, "stopquote": 29159.960, "traildiff": 0.019, "trigquote": 29520.380}, "risk_factors": {"cpfactor": "0.28", "liqfactor": "0.003", "netfactor": "0.987", "regfactor": "0.961", "setfactor": "0.029", "custfactor": "0.029"}, "margin_thresholds": {"inithold": 284094.980, "mainthold": 142047.490}}');
+INSERT INTO riskandmargin VALUES (68, 'OB648538', '{"iceberg": {"viscount": 1.833314, "icebcount": 1.45749}, "leverage": {"levscale": "100", "margform": "Isolated"}, "position": {"possum": 4390092.490, "posedge": null, "posmagn": "2", "poscount": 99.583, "posriskrate": 0.363}, "collateral": {"collsum": 179421.050, "collcoin": "ETH", "collrate": 0.505, "insfundshare": 83.330}, "margin_rates": {"margrate": 0.709, "bkptquote": 68341.050, "margcallquote": 42564.340}, "price_levels": {"liqquote": 56834.200, "stopquote": 40769.030, "traildiff": 0.045, "trigquote": 42099.420}, "risk_factors": {"cpfactor": "0.091", "liqfactor": "0.86", "netfactor": "0.921", "regfactor": "0.206", "setfactor": "0.13", "custfactor": "0.522"}, "margin_thresholds": {"inithold": 1450.750, "mainthold": 725.380}}');
+INSERT INTO riskandmargin VALUES (632, 'OB995206', '{"iceberg": {"viscount": 3.963216, "icebcount": 2.376887}, "leverage": {"levscale": "10", "margform": "Isolated"}, "position": {"possum": 626205.550, "posedge": "Short", "posmagn": "100", "poscount": 13.208, "posriskrate": 0.507}, "collateral": {"collsum": 318165.030, "collcoin": "BTC", "collrate": 0.370, "insfundshare": 50.220}, "margin_rates": {"margrate": 0.198, "bkptquote": 20253.340, "margcallquote": 44151.070}, "price_levels": {"liqquote": 43254.080, "stopquote": 44938.490, "traildiff": 0.034, "trigquote": 50138.410}, "risk_factors": {"cpfactor": "0.657", "liqfactor": "0.172", "netfactor": "0.119", "regfactor": "0.929", "setfactor": "0.756", "custfactor": "0.876"}, "margin_thresholds": {"inithold": 30058.130, "mainthold": 15029.070}}');
+INSERT INTO riskandmargin VALUES (403, 'OB322795', '{"iceberg": {"viscount": 8.384111, "icebcount": 1.574387}, "leverage": {"levscale": "10", "margform": "Cross"}, "position": {"possum": 460117.160, "posedge": "Long", "posmagn": "10", "poscount": 10.937, "posriskrate": 0.451}, "collateral": {"collsum": 355764.640, "collcoin": "USDC", "collrate": 0.643, "insfundshare": 5.330}, "margin_rates": {"margrate": 0.800, "bkptquote": 67742.560, "margcallquote": 56093.000}, "price_levels": {"liqquote": 47876.120, "stopquote": 40675.640, "traildiff": 0.036, "trigquote": 41577.770}, "risk_factors": {"cpfactor": "0.556", "liqfactor": "0.325", "netfactor": "0.067", "regfactor": "0.382", "setfactor": "0.34", "custfactor": "0.799"}, "margin_thresholds": {"inithold": 41894.770, "mainthold": 20947.380}}');
+INSERT INTO riskandmargin VALUES (530, 'OB797782', '{"iceberg": {"viscount": 3.462945, "icebcount": 3.424819}, "leverage": {"levscale": "5", "margform": "Isolated"}, "position": {"possum": 317210.630, "posedge": "Short", "posmagn": "10", "poscount": 14.375, "posriskrate": 0.291}, "collateral": {"collsum": 862638.470, "collcoin": "USDC", "collrate": 0.876, "insfundshare": 49.160}, "margin_rates": {"margrate": 0.994, "bkptquote": 25980.830, "margcallquote": 19544.800}, "price_levels": {"liqquote": 19262.870, "stopquote": 21686.270, "traildiff": 0.024, "trigquote": 21891.170}, "risk_factors": {"cpfactor": "0.899", "liqfactor": "0.188", "netfactor": "0.292", "regfactor": "0.865", "setfactor": "0.739", "custfactor": "0.062"}, "margin_thresholds": {"inithold": 30397.890, "mainthold": 15198.940}}');
+INSERT INTO riskandmargin VALUES (455, 'OB422443', '{"iceberg": {"viscount": 2.356914, "icebcount": 0.440227}, "leverage": {"levscale": "10", "margform": "Cross"}, "position": {"possum": 309437.920, "posedge": "Short", "posmagn": "100", "poscount": 10.681, "posriskrate": 0.766}, "collateral": {"collsum": 673845.890, "collcoin": "BTC", "collrate": 0.448, "insfundshare": 72.300}, "margin_rates": {"margrate": 0.074, "bkptquote": 34518.520, "margcallquote": 20022.120}, "price_levels": {"liqquote": 33850.000, "stopquote": 29091.020, "traildiff": 0.012, "trigquote": 28133.200}, "risk_factors": {"cpfactor": "0.595", "liqfactor": "0.081", "netfactor": "0.603", "regfactor": "0.314", "setfactor": "0.358", "custfactor": "0.77"}, "margin_thresholds": {"inithold": 8103.630, "mainthold": 4051.820}}');
+INSERT INTO riskandmargin VALUES (502, 'OB139324', '{"iceberg": {"viscount": 0.342059, "icebcount": 0.170872}, "leverage": {"levscale": "5", "margform": "Cross"}, "position": {"possum": 1234962.770, "posedge": "Long", "posmagn": "5", "poscount": 25.884, "posriskrate": 0.738}, "collateral": {"collsum": 954048.810, "collcoin": "USDC", "collrate": 0.666, "insfundshare": 63.950}, "margin_rates": {"margrate": 0.241, "bkptquote": 43071.840, "margcallquote": 51449.640}, "price_levels": {"liqquote": 34030.400, "stopquote": 51280.150, "traildiff": 0.024, "trigquote": 48991.470}, "risk_factors": {"cpfactor": "0.056", "liqfactor": "0.013", "netfactor": "0.984", "regfactor": "0.271", "setfactor": "0.966", "custfactor": "0.036"}, "margin_thresholds": {"inithold": 4894.560, "mainthold": 2447.280}}');
+INSERT INTO riskandmargin VALUES (736, 'OB855088', '{"iceberg": {"viscount": 0.879957, "icebcount": 0.539369}, "leverage": {"levscale": "10", "margform": "Isolated"}, "position": {"possum": 305958.420, "posedge": null, "posmagn": "3", "poscount": 28.515, "posriskrate": 0.342}, "collateral": {"collsum": 13400.130, "collcoin": "USDC", "collrate": 0.517, "insfundshare": 41.500}, "margin_rates": {"margrate": 0.484, "bkptquote": 15091.250, "margcallquote": 6101.150}, "price_levels": {"liqquote": 12019.880, "stopquote": 9810.640, "traildiff": 0.035, "trigquote": 11218.630}, "risk_factors": {"cpfactor": "0.347", "liqfactor": "0.466", "netfactor": "0.183", "regfactor": "0.089", "setfactor": "0.889", "custfactor": "0.958"}, "margin_thresholds": {"inithold": 1522.870, "mainthold": 761.430}}');
+INSERT INTO riskandmargin VALUES (972, 'OB297785', '{"iceberg": {"viscount": 7.728029, "icebcount": 1.536145}, "leverage": {"levscale": "1", "margform": "Isolated"}, "position": {"possum": 267133.030, "posedge": "Long", "posmagn": "2", "poscount": 6.848, "posriskrate": 0.346}, "collateral": {"collsum": 53200.890, "collcoin": "ETH", "collrate": 0.199, "insfundshare": 60.380}, "margin_rates": {"margrate": 0.575, "bkptquote": 51622.780, "margcallquote": 52290.510}, "price_levels": {"liqquote": 24103.130, "stopquote": 39576.820, "traildiff": 0.048, "trigquote": 35274.680}, "risk_factors": {"cpfactor": "0.954", "liqfactor": "0.552", "netfactor": "0.402", "regfactor": "0.777", "setfactor": "0.025", "custfactor": "0.818"}, "margin_thresholds": {"inithold": 361372.270, "mainthold": 180686.140}}');
+INSERT INTO riskandmargin VALUES (353, 'OB929685', '{"iceberg": {"viscount": 3.749028, "icebcount": 0.85863}, "leverage": {"levscale": "50", "margform": "Cross"}, "position": {"possum": 1155629.600, "posedge": null, "posmagn": "50", "poscount": 70.598, "posriskrate": 0.587}, "collateral": {"collsum": 175360.470, "collcoin": "BTC", "collrate": 0.892, "insfundshare": 69.780}, "margin_rates": {"margrate": 0.134, "bkptquote": 21600.550, "margcallquote": 18268.040}, "price_levels": {"liqquote": 23384.450, "stopquote": 16364.720, "traildiff": 0.040, "trigquote": 14874.580}, "risk_factors": {"cpfactor": "0.193", "liqfactor": "0.72", "netfactor": "0.995", "regfactor": "0.83", "setfactor": "0.648", "custfactor": "0.747"}, "margin_thresholds": {"inithold": 1508.470, "mainthold": 754.240}}');
+INSERT INTO riskandmargin VALUES (476, 'OB287560', '{"iceberg": {"viscount": 4.378055, "icebcount": 2.172349}, "leverage": {"levscale": "5", "margform": "Isolated"}, "position": {"possum": 1927596.960, "posedge": "Long", "posmagn": "50", "poscount": 67.413, "posriskrate": 0.788}, "collateral": {"collsum": 227372.090, "collcoin": "USDT", "collrate": 0.635, "insfundshare": 29.860}, "margin_rates": {"margrate": 0.688, "bkptquote": 40693.880, "margcallquote": 34867.820}, "price_levels": {"liqquote": 27829.540, "stopquote": 27485.260, "traildiff": 0.025, "trigquote": 29664.420}, "risk_factors": {"cpfactor": "0.287", "liqfactor": "0.533", "netfactor": "0.947", "regfactor": "0.466", "setfactor": "0.902", "custfactor": "0.429"}, "margin_thresholds": {"inithold": 37460.190, "mainthold": 18730.100}}');
+INSERT INTO riskandmargin VALUES (422, 'OB882664', '{"iceberg": {"viscount": 4.190467, "icebcount": 0.493563}, "leverage": {"levscale": "5", "margform": null}, "position": {"possum": 52146.260, "posedge": null, "posmagn": "10", "poscount": 1.855, "posriskrate": 0.266}, "collateral": {"collsum": 110029.940, "collcoin": "BTC", "collrate": 0.372, "insfundshare": 24.210}, "margin_rates": {"margrate": 0.868, "bkptquote": 27915.680, "margcallquote": 22428.750}, "price_levels": {"liqquote": 15731.580, "stopquote": 30745.880, "traildiff": 0.031, "trigquote": 28694.860}, "risk_factors": {"cpfactor": "0.065", "liqfactor": "0.928", "netfactor": "0.766", "regfactor": "0.616", "setfactor": "0.848", "custfactor": "0.948"}, "margin_thresholds": {"inithold": 26333.240, "mainthold": 13166.620}}');
+INSERT INTO riskandmargin VALUES (334, 'OB135062', '{"iceberg": {"viscount": 3.061577, "icebcount": 1.338166}, "leverage": {"levscale": "100", "margform": null}, "position": {"possum": 617666.920, "posedge": "Short", "posmagn": "3", "poscount": 40.302, "posriskrate": 0.490}, "collateral": {"collsum": 678520.700, "collcoin": "USDC", "collrate": 0.981, "insfundshare": 72.730}, "margin_rates": {"margrate": 0.279, "bkptquote": 18241.650, "margcallquote": 17635.350}, "price_levels": {"liqquote": 16622.120, "stopquote": 16468.750, "traildiff": 0.016, "trigquote": 16062.090}, "risk_factors": {"cpfactor": "0.744", "liqfactor": "0.496", "netfactor": "0.515", "regfactor": "0.897", "setfactor": "0.067", "custfactor": "0.884"}, "margin_thresholds": {"inithold": 674.310, "mainthold": 337.150}}');
+INSERT INTO riskandmargin VALUES (817, 'OB537380', '{"iceberg": {"viscount": 6.962094, "icebcount": 2.129687}, "leverage": {"levscale": "10", "margform": null}, "position": {"possum": 469359.110, "posedge": "Short", "posmagn": "100", "poscount": 80.682, "posriskrate": 0.648}, "collateral": {"collsum": 764475.440, "collcoin": "USDT", "collrate": 0.540, "insfundshare": 13.350}, "margin_rates": {"margrate": 0.396, "bkptquote": 3150.460, "margcallquote": 7956.510}, "price_levels": {"liqquote": 5901.620, "stopquote": 6308.180, "traildiff": 0.048, "trigquote": 5965.810}, "risk_factors": {"cpfactor": "0.895", "liqfactor": "0.27", "netfactor": "0.66", "regfactor": "0.592", "setfactor": "0.94", "custfactor": "0.27"}, "margin_thresholds": {"inithold": 5289.080, "mainthold": 2644.540}}');
+INSERT INTO riskandmargin VALUES (956, 'OB783045', '{"iceberg": {"viscount": 0.692531, "icebcount": 0.188102}, "leverage": {"levscale": "2", "margform": "Isolated"}, "position": {"possum": 1752852.380, "posedge": "Short", "posmagn": "10", "poscount": 56.912, "posriskrate": 0.152}, "collateral": {"collsum": 910577.990, "collcoin": "USDT", "collrate": 0.187, "insfundshare": 76.750}, "margin_rates": {"margrate": 0.765, "bkptquote": 35177.570, "margcallquote": 29672.310}, "price_levels": {"liqquote": 34667.240, "stopquote": 32585.400, "traildiff": 0.049, "trigquote": 31281.040}, "risk_factors": {"cpfactor": "0.842", "liqfactor": "0.892", "netfactor": "0.143", "regfactor": "0.734", "setfactor": "0.89", "custfactor": "0.135"}, "margin_thresholds": {"inithold": 13561.550, "mainthold": 6780.770}}');
+INSERT INTO riskandmargin VALUES (990, 'OB535059', '{"iceberg": {"viscount": 2.326894, "icebcount": 1.006646}, "leverage": {"levscale": "10", "margform": null}, "position": {"possum": 1566378.220, "posedge": "Long", "posmagn": "100", "poscount": 43.975, "posriskrate": 0.800}, "collateral": {"collsum": 817852.600, "collcoin": "ETH", "collrate": 0.715, "insfundshare": 56.140}, "margin_rates": {"margrate": 0.232, "bkptquote": 40225.960, "margcallquote": 26131.520}, "price_levels": {"liqquote": 40847.610, "stopquote": 36811.180, "traildiff": 0.027, "trigquote": 34863.010}, "risk_factors": {"cpfactor": "0.77", "liqfactor": "0.193", "netfactor": "0.534", "regfactor": "0.72", "setfactor": "0.534", "custfactor": "0.418"}, "margin_thresholds": {"inithold": 11874.050, "mainthold": 5937.020}}');
+INSERT INTO riskandmargin VALUES (190, 'OB336166', '{"iceberg": {"viscount": 4.567606, "icebcount": 3.178997}, "leverage": {"levscale": "5", "margform": null}, "position": {"possum": 1454846.090, "posedge": "Short", "posmagn": "10", "poscount": 68.559, "posriskrate": 0.573}, "collateral": {"collsum": 847882.930, "collcoin": "USDT", "collrate": 0.706, "insfundshare": 42.920}, "margin_rates": {"margrate": 0.212, "bkptquote": 5220.140, "margcallquote": 31669.420}, "price_levels": {"liqquote": 17087.660, "stopquote": 22237.750, "traildiff": 0.027, "trigquote": 22068.810}, "risk_factors": {"cpfactor": "0.521", "liqfactor": "0.782", "netfactor": "0.105", "regfactor": "0.22", "setfactor": "0.08", "custfactor": "0.166"}, "margin_thresholds": {"inithold": 32877.090, "mainthold": 16438.540}}');
+INSERT INTO systemmonitoring VALUES (420, 928, 23, 868, 'Disconnected', 509, '2185019', '7456390', -0.002, 376.00, 230, -0.0076, 0.0045, 420);
+INSERT INTO systemmonitoring VALUES (645, 8153, 9, 979, 'Connected', 920, '6573197', '9038313', -0.009, 51.00, 811, -0.0014, 0.0093, 645);
+INSERT INTO systemmonitoring VALUES (808, 1818, 0, 267, 'Connected', 174, '9179922', '7556652', -0.009, 149.00, 990, -0.0091, 0.0015, 808);
+INSERT INTO systemmonitoring VALUES (841, 4609, 3, 721, 'Connected', 429, '2265362', '3883004', 0.008, 141.00, 500, -0.0015, 0.0063, 841);
+INSERT INTO systemmonitoring VALUES (427, 8535, 55, 298, 'Disconnected', 348, '1662997', '7315405', 0.008, 113.00, 430, 0.0043, 0.0089, 427);
+INSERT INTO systemmonitoring VALUES (367, 7078, 24, 350, 'Connected', 175, '5530548', '8265876', -0.003, 577.00, 342, 0.0018, 0.0028, 367);
+INSERT INTO systemmonitoring VALUES (722, 8086, 53, 810, 'Connected', 400, '9142147', '5159896', 0.009, 146.00, 756, -0.0009, 0.0019, 722);
+INSERT INTO systemmonitoring VALUES (530, 2727, 100, 925, 'Connected', 39, '2711910', '7714400', 0.003, 850.00, 437, 0.0041, 0.0071, 530);
+INSERT INTO systemmonitoring VALUES (340, 7860, 98, 78, 'Disconnected', 738, '2808068', '3736779', 0.000, 175.00, 483, 0.0028, 0.0033, 340);
+INSERT INTO systemmonitoring VALUES (662, 2253, 65, 446, 'Disconnected', 205, '2004484', '8723694', -0.002, 840.00, 434, 0.009, 0.009, 662);
+INSERT INTO systemmonitoring VALUES (695, 7388, 7, 973, 'Connected', 451, '2747337', '9974611', 0.008, 178.00, 786, -0.0019, 0.0042, 695);
+INSERT INTO systemmonitoring VALUES (344, 5636, 37, 548, 'Connected', 993, '8896117', '9703123', -0.009, 587.00, 924, -0.0075, 0.0023, 344);
+INSERT INTO systemmonitoring VALUES (375, 9034, 25, 994, 'Connected', 859, '6379247', '8277275', 0.007, 398.00, 102, -0.0075, 0.0027, 375);
+INSERT INTO systemmonitoring VALUES (731, 3361, 34, 829, 'Connected', 639, '6344636', '2610712', 0.005, 123.00, 916, -0.0024, 0.0027, 731);
+INSERT INTO systemmonitoring VALUES (540, 8648, 81, 778, 'Connected', 481, '6587472', '2075660', 0.008, 751.00, 426, -0.0058, 0.0043, 540);
+INSERT INTO systemmonitoring VALUES (637, 9931, 30, 315, 'Disconnected', 625, '1373079', '4821644', 0.007, 456.00, 98, 0.0038, 0.0087, 637);
+INSERT INTO systemmonitoring VALUES (959, 9067, 9, 812, 'Connected', 793, '6631956', '1463752', -0.008, 807.00, 659, -0.0014, 0.0092, 959);

@@ -1,0 +1,92 @@
+[
+    {
+        "table_name": "accountbalances",
+        "column_names": [
+            "usertag"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "userstamp"
+        ]
+    },
+    {
+        "table_name": "marketstats",
+        "column_names": [
+            "mdlink"
+        ],
+        "reference_table_name": "marketdata",
+        "reference_column_names": [
+            "marketdatanode"
+        ]
+    },
+    {
+        "table_name": "analyticsindicators",
+        "column_names": [
+            "mdataref"
+        ],
+        "reference_table_name": "marketdata",
+        "reference_column_names": [
+            "marketdatanode"
+        ]
+    },
+    {
+        "table_name": "analyticsindicators",
+        "column_names": [
+            "mstatsref"
+        ],
+        "reference_table_name": "marketstats",
+        "reference_column_names": [
+            "marketstatsmark"
+        ]
+    },
+    {
+        "table_name": "orders",
+        "column_names": [
+            "userlink"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "userstamp"
+        ]
+    },
+    {
+        "table_name": "fees",
+        "column_names": [
+            "orderslink"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "recordvault"
+        ]
+    },
+    {
+        "table_name": "orderexecutions",
+        "column_names": [
+            "ordersmark"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "recordvault"
+        ]
+    },
+    {
+        "table_name": "riskandmargin",
+        "column_names": [
+            "ordervault"
+        ],
+        "reference_table_name": "orders",
+        "reference_column_names": [
+            "recordvault"
+        ]
+    },
+    {
+        "table_name": "systemmonitoring",
+        "column_names": [
+            "aitrack"
+        ],
+        "reference_table_name": "analyticsindicators",
+        "reference_column_names": [
+            "analyticsindicatorsnode"
+        ]
+    }
+]

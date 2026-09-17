@@ -1,0 +1,308 @@
+CREATE TABLE `productdescription`
+(`productdescriptionid` BIGINT,
+`description` VARCHAR(1023),
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `productcategory`
+(`productcategoryid` BIGINT,
+`name` VARCHAR(1023),
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `salesterritory`
+(`territoryid` BIGINT,
+`name` VARCHAR(1023),
+`countryregioncode` VARCHAR(1023),
+`group` VARCHAR(1023),
+`salesytd` DOUBLE,
+`saleslastyear` DOUBLE,
+`costytd` DOUBLE,
+`costlastyear` DOUBLE,
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `countryregioncurrency`
+(`countryregioncode` VARCHAR(1023),
+`currencycode` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `currencyrate`
+(`currencyrateid` BIGINT,
+`currencyratedate` DATE,
+`fromcurrencycode` VARCHAR(1023),
+`tocurrencycode` VARCHAR(1023),
+`averagerate` DOUBLE,
+`endofdayrate` DOUBLE,
+`modifieddate` DATE);
+CREATE TABLE `salesperson`
+(`businessentityid` BIGINT,
+`territoryid` BIGINT,
+`salesquota` BIGINT,
+`bonus` BIGINT,
+`commissionpct` DOUBLE,
+`salesytd` DOUBLE,
+`saleslastyear` DOUBLE,
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `productmodelproductdescriptionculture`
+(`productmodelid` BIGINT,
+`productdescriptionid` BIGINT,
+`cultureid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `productsubcategory`
+(`productsubcategoryid` BIGINT,
+`productcategoryid` BIGINT,
+`name` VARCHAR(1023),
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `product`
+(`productid` BIGINT,
+`NAME` VARCHAR(1023),
+`productnumber` VARCHAR(1023),
+`makeflag` BIGINT,
+`finishedgoodsflag` BIGINT,
+`color` VARCHAR(1023),
+`safetystocklevel` BIGINT,
+`reorderpoint` BIGINT,
+`standardcost` DOUBLE,
+`listprice` DOUBLE,
+`size` VARCHAR(1023),
+`sizeunitmeasurecode` VARCHAR(1023),
+`weightunitmeasurecode` VARCHAR(1023),
+`weight` DOUBLE,
+`daystomanufacture` BIGINT,
+`productline` VARCHAR(1023),
+`class` VARCHAR(1023),
+`style` VARCHAR(1023),
+`productsubcategoryid` BIGINT,
+`productmodelid` BIGINT,
+`sellstartdate` DATE,
+`sellenddate` DATE,
+`discontinueddate` DATE,
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `salesorderheader`
+(`salesorderid` BIGINT,
+`revisionnumber` BIGINT,
+`orderdate` DATE,
+`duedate` DATE,
+`shipdate` DATE,
+`STATUS` VARCHAR(1023),
+`onlineorderflag` BIGINT,
+`purchaseordernumber` VARCHAR(1023),
+`accountnumber` VARCHAR(1023),
+`customerid` BIGINT,
+`salespersonid` BIGINT,
+`territoryid` BIGINT,
+`billtoaddressid` BIGINT,
+`shiptoaddressid` BIGINT,
+`shipmethodid` BIGINT,
+`creditcardid` BIGINT,
+`creditcardapprovalcode` VARCHAR(1023),
+`currencyrateid` BIGINT,
+`subtotal` DOUBLE,
+`taxamt` DOUBLE,
+`freight` DOUBLE,
+`totaldue` DOUBLE,
+`comment` VARCHAR(1023),
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+CREATE TABLE `SalesPersonQuotaHistory`
+(`BusinessEntityID` BIGINT,
+`QuotaDate` VARCHAR(1023),
+`SalesQuota` DOUBLE,
+`rowguid` VARCHAR(1023),
+`ModifiedDate` VARCHAR(1023));
+CREATE TABLE `productreview`
+(`productreviewid` BIGINT,
+`productid` BIGINT,
+`reviewername` VARCHAR(1023),
+`reviewdate` DATE,
+`emailaddress` VARCHAR(1023),
+`rating` BIGINT,
+`comments` VARCHAR(1023),
+`modifeddate_date` DATE,
+`modifeddate` VARCHAR(1023));
+CREATE TABLE `salesorderdetail`
+(`salesorderid` BIGINT,
+`salesorderdetailid` BIGINT,
+`carriertrackingnumber` VARCHAR(1023),
+`orderqty` BIGINT,
+`productid` BIGINT,
+`specialofferid` BIGINT,
+`unitprice` DOUBLE,
+`unitpricediscount` DOUBLE,
+`rowguid` VARCHAR(1023),
+`modifieddate` DATE);
+INSERT INTO productdescription VALUES(1187,'Carries 4 bikes securely; steel construction, fits 2 receiver hitch.','7eeb1ba1-4a5e-43cb-9597-4d35fe1f734c','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1631,'ยางเบรกสำหรับทุกสภาพอากาศ เพื่อการหยุดที่มั่นใจ ด้วยหน้าสัมผัสกับขอบล้อมากกว่า','4962ebc3-fdb8-4cca-aa68-c222631f8525','2014-02-08 10:32:17.973');
+INSERT INTO productdescription VALUES(1375,'يمكنكِ باستخدام هذه الدراجة الأنيقة التي تتميز بخاصية الديناميكية الهوائية والمصممة للنساء التدرب على مهارات مختلفة أو التسابق أو مجرد المشاركة في نشاط اجتماعي. وتوفر لكِ تقنية المقاعد المتقدمة الراحة طوال اليوم.','999f199e-4f89-4ebc-b6d4-2b6362785c3c','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1930,'轻型泡沫填充的车座。','a38e37dd-111e-471e-a9e4-e10b6e57c4a8','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(903,'Comparible traction, less expensive wire bead casing.','b83be4a3-a95b-4d96-81de-16325f0df11e','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1770,'מסגרת ה- ML, העשויה סגסוגת אלומיניום זהה לזו המשמשת ליצור מסגרת HL מהקו המוביל שלנו, מתאפיינת בצלע תחתונה קלת משקל החרוטה לקוטר המושלם הנדרש לחוזק אופטימלי. גירסה לנשים.','8ff78cd2-eb0d-4402-82af-f733c59ccdd0','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1639,'เฟรมแต่ละชิ้นผ่านการสร้างด้วยมือในโรงงาน Bothell เพื่อให้ได้ขนาดและความหนาที่เหมาะที่สุดสำหรับเฟรมจักรยานภูเขาชั้นดี  เฟรมอลูมิเนียมหล่อด้วยความร้อน มีโพรงขนาดใหญ่ซึ่งช่วยซึมซับแรงกระแทก','82f5a863-07cd-4047-bace-ccff3635a000','2014-02-08 10:32:17.973');
+INSERT INTO productdescription VALUES(1674,'ขอบล้อแอโรไดนามิคสำหรับการขับขี่ที่นุ่มนวล','e475bba4-2065-4d82-a54e-aef0645b00f7','2014-02-08 10:32:17.973');
+INSERT INTO productdescription VALUES(1808,'עיצוב אנטומי לרכיבה נוחה לאורך כל היום. עור עמיד.','4362cb9a-d948-4355-ae20-72c2ac64e839','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(849,'Stainless steel; designed to shed mud easily.','dad9fd48-510c-46cb-95e5-77eac3472976','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1453,'وقد تم تخصيص شكل هيكل HL المصنوع من الألومنيوم لتوفير كل من جمال الشكل والقوة، كما أن بإمكانه مواجهة أصعب تحديات القيادة اليومية. الطراز الرجالي.','2b43d966-9911-48f4-aa23-066cda0e9045','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1518,'Roue de secours tout-terrain pour vététiste occasionnel.','5e0e8215-c919-4f17-8210-27ed63d6e605','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1911,'无扣带式脚踏轻型耐用且松紧可调。','dcfaba06-58a8-4b54-9e3b-c1dc26fa110e','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1747,'אופני איכות לכל מטרה עם תכונות הנוחות והבטיחות הבסיסיות שלנו. מציעים צמיגים רחבים ויציבים יותר לרכיבה ברחבי העיר או לטיולי סופשבוע.','4747518e-0432-4f2d-89b3-bb7055ed9528','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1523,'Roue solide avec jante double paroi.','d14d63a9-9536-4da9-ad80-3d875c4dd099','2013-04-30 00:00:00');
+INSERT INTO productdescription VALUES(1394,'تصميم قوي يمتص الصدمات ويوفر قيادة أكثر دقة.','b89188a2-b5de-4db0-bce1-7d708e666647','2013-04-30 00:00:00');
+INSERT INTO productcategory VALUES(1,'Bikes','cfbda25c-df71-47a7-b81b-64ee161aa37c','2008-04-30 00:00:00');
+INSERT INTO productcategory VALUES(2,'Components','c657828d-d808-4aba-91a3-af2ce02300e9','2008-04-30 00:00:00');
+INSERT INTO productcategory VALUES(3,'Clothing','10a7c342-ca82-48d4-8a38-46a2eb089b74','2008-04-30 00:00:00');
+INSERT INTO productcategory VALUES(4,'Accessories','2be3be36-d9a2-4eee-b593-ed895d97c2a6','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(1,'Northwest','US','North America',7887186.788200000302,3298694.493799999822,0.0,0.0,'43689a10-e30b-497f-b0de-11de20267ff7','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(2,'Northeast','US','North America',2402176.84759999998,3607148.937100000214,0.0,0.0,'00fb7309-96cc-49e2-8363-0a1ba72486f2','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(3,'Central','US','North America',3072175.117999999784,3205014.076700000093,0.0,0.0,'df6e7fd8-1a8d-468c-b103-ed8addb452c1','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(4,'Southwest','US','North America',10510853.8739,5366575.709800000303,0.0,0.0,'dc3e9ea0-7950-4431-9428-99dbcbc33865','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(5,'Southeast','US','North America',2538667.25149999978,3925071.431799999904,0.0,0.0,'6dc4165a-5e4c-42d2-809d-4344e0ac75e7','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(6,'Canada','CA','North America',6771829.137600000016,5693988.860000000335,0.0,0.0,'06b4af8a-1639-476e-9266-110461d66b00','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(7,'France','FR','Europe',4772398.307799999602,2396539.760100000073,0.0,0.0,'bf806804-9b4c-4b07-9d19-706f2e689552','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(8,'Germany','DE','Europe',3805202.347800000105,1307949.791699999944,0.0,0.0,'6d2450db-8159-414f-a917-e73ee91c38a9','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(9,'Australia','AU','Pacific',5977814.91540000029,2278548.977599999867,0.0,0.0,'602e612e-dfe9-41d9-b894-27e489747885','2008-04-30 00:00:00');
+INSERT INTO salesterritory VALUES(10,'United Kingdom','GB','Europe',5012905.365600000135,1635823.396699999925,0.0,0.0,'05fc7e1f-2dea-414e-9ecd-09d150516fb5','2008-04-30 00:00:00');
+INSERT INTO countryregioncurrency VALUES('AR','ARS','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('ES','EUR','2008-04-30 00:00:00');
+INSERT INTO countryregioncurrency VALUES('MA','MAD','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('MU','MUR','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('FR','EUR','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('TW','TWD','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('TH','THB','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('FI','FIM','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('GR','GRD','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('BH','BHD','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('VN','VND','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('BN','BND','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('IT','EUR','2008-04-30 00:00:00');
+INSERT INTO countryregioncurrency VALUES('EC','USD','2014-02-08 10:17:21.51');
+INSERT INTO countryregioncurrency VALUES('SI','SIT','2014-02-08 10:17:21.51');
+INSERT INTO currencyrate VALUES(7105,'2013-02-01 00:00:00','USD','CNY',8.277699999999999391,8.278200000000000002,'2013-02-01 00:00:00');
+INSERT INTO currencyrate VALUES(7298,'2013-02-18 00:00:00','USD','VEB',728.5,728.4400000000000546,'2013-02-18 00:00:00');
+INSERT INTO currencyrate VALUES(3393,'2012-02-29 00:00:00','USD','VEB',689.0,689.0900000000000318,'2012-02-29 00:00:00');
+INSERT INTO currencyrate VALUES(4389,'2012-05-30 00:00:00','USD','EUR',1.16339999999999999,1.162800000000000055,'2012-05-30 00:00:00');
+INSERT INTO currencyrate VALUES(8741,'2013-06-30 00:00:00','USD','AUD',1.925300000000000011,1.925300000000000011,'2013-06-30 00:00:00');
+INSERT INTO currencyrate VALUES(3399,'2012-03-01 00:00:00','USD','EUR',1.095399999999999929,1.095199999999999952,'2012-03-01 00:00:00');
+INSERT INTO currencyrate VALUES(8745,'2013-06-30 00:00:00','USD','EUR',1.106200000000000073,1.106100000000000084,'2013-06-30 00:00:00');
+INSERT INTO currencyrate VALUES(875,'2011-08-06 00:00:00','USD','CAD',1.447400000000000019,1.441300000000000025,'2011-08-06 00:00:00');
+INSERT INTO currencyrate VALUES(3279,'2012-02-19 00:00:00','USD','GBP',0.6645999999999999686,0.6646999999999999576,'2012-02-19 00:00:00');
+INSERT INTO currencyrate VALUES(5808,'2012-10-06 00:00:00','USD','EUR',1.12719999999999998,1.127899999999999902,'2012-10-06 00:00:00');
+INSERT INTO currencyrate VALUES(2614,'2011-12-21 00:00:00','USD','AUD',1.716599999999999904,1.717500000000000026,'2011-12-21 00:00:00');
+INSERT INTO currencyrate VALUES(9847,'2013-10-08 00:00:00','USD','JPY',132.9300000000000068,132.8880000000000052,'2013-10-08 00:00:00');
+INSERT INTO currencyrate VALUES(3414,'2012-03-02 00:00:00','USD','SAR',3.750700000000000144,3.758300000000000196,'2012-03-02 00:00:00');
+INSERT INTO currencyrate VALUES(1338,'2011-09-10 00:00:00','USD','SAR',3.750700000000000144,3.759100000000000108,'2011-09-10 00:00:00');
+INSERT INTO currencyrate VALUES(12955,'2012-10-31 00:00:00','USD','USD',1.0,1.0,'2014-01-02 17:39:45.26');
+INSERT INTO salesperson VALUES(275,2,300000,4100,0.01200000000000000024,3763178.178700000048,1750406.478499999969,'1e0a7274-3064-4f58-88ee-4c6586c87169','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(276,4,250000,2000,0.01499999999999999945,4251368.549700000323,1439156.029099999927,'4dd9eee4-8e81-4f8c-af97-683394c1f7c0','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(277,3,250000,2500,0.01499999999999999945,3189418.366200000047,1997186.203699999955,'39012928-bfec-4242-874d-423162c3f567','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(278,6,250000,500,0.0100000000000000002,1453719.465300000039,1620276.896600000094,'7a0ae1ab-b283-40f9-91d1-167abf06d720','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(279,5,300000,6700,0.0100000000000000002,2315185.611000000033,1849640.941799999914,'52a5179d-3239-4157-ae29-17e868296dc0','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(280,1,250000,5000,0.0100000000000000002,1352577.132500000065,1927059.178000000072,'be941a4a-fb50-4947-bda4-bb8972365b08','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(281,4,250000,3550,0.0100000000000000002,2458535.616899999789,2073505.999899999938,'35326ddb-7278-4fef-b3ba-ea137b69094e','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(282,6,250000,5000,0.01499999999999999945,2604540.71719999984,2038234.654899999965,'31fd7fc1-dc84-4f05-b9a0-762519eacacc','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(283,1,250000,3500,0.01200000000000000024,1573012.938300000037,1371635.315799999983,'6bac15b2-8ffb-45a9-b6d5-040e16c2073f','2011-05-24 00:00:00');
+INSERT INTO salesperson VALUES(284,1,300000,3900,0.01899999999999999953,1576562.196599999909,0.0,'ac94ec04-a2dc-43e3-8654-dd0c546abc17','2012-09-23 00:00:00');
+INSERT INTO salesperson VALUES(286,9,250000,5650,0.01799999999999999863,1421810.924200000008,2278548.977599999867,'9b968777-75dc-45bd-a8df-9cdaa72839e1','2013-05-23 00:00:00');
+INSERT INTO salesperson VALUES(288,8,250000,75,0.01799999999999999863,1827066.711799999932,1307949.791699999944,'224bb25a-62e3-493e-acaf-4f8f5c72396a','2013-05-23 00:00:00');
+INSERT INTO salesperson VALUES(289,10,250000,5150,0.02000000000000000041,4116871.227700000164,1635823.396699999925,'25f6838d-9db4-4833-9ddc-7a24283af1ba','2012-05-23 00:00:00');
+INSERT INTO salesperson VALUES(290,7,250000,985,0.01600000000000000033,3121616.320199999959,2396539.760100000073,'f509e3d4-76c8-42aa-b353-90b7b8db08de','2012-05-23 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(42,1518,'fr','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(102,1631,'th','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(17,1770,'he','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(81,1808,'he','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(7,1453,'ar','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(82,1930,'zh-cht','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(104,1394,'ar','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(51,1523,'fr','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(36,1747,'he','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(85,903,'en','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(63,1911,'zh-cht','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(64,849,'en','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(5,1639,'th','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(27,1375,'ar','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(118,1187,'en','2013-04-30 00:00:00');
+INSERT INTO productmodelproductdescriptionculture VALUES(43,1674,'th','2013-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(1,1,'Mountain Bikes','2d364ade-264a-433c-b092-4fcbf3804e01','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(2,1,'Road Bikes','000310c0-bcc8-42c4-b0c3-45ae611af06b','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(34,4,'Locks','19646983-3fa0-4773-9a0c-f34c49df9bc8','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(36,4,'Pumps','fe4d46f2-c87c-48c5-a4a1-3f55712d80b1','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(37,4,'Tires and Tubes','3c17c9ae-e906-48b4-bdd3-60e28d47dcdf','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(11,2,'Headsets','7c782bbe-5a16-495a-aa50-10afe5a84af2','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(13,2,'Pedals','6d24ac07-7a84-4849-864a-865a14125bc9','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(15,2,'Saddles','049fffa3-9d30-46df-82f7-f20730ec02b3','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(17,2,'Wheels','43521287-4b0b-438e-b80e-d82d9ad7c9f0','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(22,3,'Shorts','1a5ba5b3-03c3-457c-b11e-4fa85ede87da','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(23,3,'Socks','701019c3-09fe-4949-8386-c6ce686474e5','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(24,3,'Tights','5deb3e55-9897-4416-b18a-515e970bc2d1','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(28,4,'Bottles and Cages','9b7dff41-9fa3-4776-8def-2c9a48c8b779','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(30,4,'Fenders','1697f8a2-0a08-4883-b7dd-d19117b4e9a7','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(31,4,'Helmets','f5e07a33-c9e0-439c-b5f3-9f25fb65becc','2008-04-30 00:00:00');
+INSERT INTO productsubcategory VALUES(32,4,'Hydration Packs','646a8906-fc87-4267-a443-9c6d791e6693','2008-04-30 00:00:00');
+INSERT INTO product VALUES(819,'ML Road Front Wheel','FW-R762','t','t','Black',500,375,110.282899999999998,248.384999999999991,'','','G  ',850.0,1,'R ','M ','',17,50,'2012-05-30 00:00:00','2013-05-29 00:00:00','','6ea94fbf-b9aa-43fc-84e8-91d508dde751','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(790,'Road-250 Red, 48','BK-R89R-48','t','t','Red',100,75,1518.786399999999958,2443.34999999999991,'48','CM ','LB ',15.13000000000000078,4,'R ','H ','U ',2,26,'2012-05-30 00:00:00','2013-05-29 00:00:00','','115ddade-70e3-43f9-80dc-638daea271c4','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(760,'Road-650 Red, 60','BK-R50R-60','t','t','Red',100,75,486.7065999999999804,782.990000000000009,'60','CM ','LB ',19.89999999999999857,4,'R ','L ','U ',2,30,'2011-05-31 00:00:00','2013-05-29 00:00:00','','664867e5-4ab3-4783-96f9-42efde92f49b','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(761,'Road-650 Red, 62','BK-R50R-62','t','t','Red',100,75,486.7065999999999804,782.990000000000009,'62','CM ','LB ',20.0,4,'R ','L ','U ',2,30,'2011-05-31 00:00:00','2013-05-29 00:00:00','','1da14e09-6d71-4e2a-9ee9-1bdfdfd8a109','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(794,'Road-250 Black, 48','BK-R89B-48','t','t','Black',100,75,1554.947899999999891,2443.34999999999991,'48','CM ','LB ',15.13000000000000078,4,'R ','H ','U ',2,26,'2012-05-30 00:00:00','','','9d165ddf-8f5d-41c7-9bb8-13f41a3d1f62','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(841,'Men''s Sports Shorts, S','SH-M897-S','f','t','Black',4,3,24.7458999999999989,59.99000000000000198,'S','','','',0,'S ','','M ',22,13,'2012-05-30 00:00:00','2013-05-29 00:00:00','','34b08c1f-99d1-43c4-8ef7-2cd754b6665d','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(764,'Road-650 Red, 52','BK-R50R-52','t','t','Red',100,75,486.7065999999999804,782.990000000000009,'52','CM ','LB ',19.42000000000000171,4,'R ','L ','U ',2,30,'2011-05-31 00:00:00','2013-05-29 00:00:00','','07cfe1ea-8a37-4d2a-835f-bc8d37e564af','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(797,'Road-550-W Yellow, 38','BK-R64Y-38','t','t','Yellow',100,75,713.0797999999999775,1120.490000000000009,'38','CM ','LB ',17.35000000000000143,4,'R ','M ','W ',2,29,'2012-05-30 00:00:00','','','aad81532-a572-49a5-83c3-dfa9e3b4fea6','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(798,'Road-550-W Yellow, 40','BK-R64Y-40','t','t','Yellow',100,75,713.0797999999999775,1120.490000000000009,'40','CM ','LB ',17.76999999999999958,4,'R ','M ','W ',2,29,'2012-05-30 00:00:00','','','a35a1c35-c128-4697-951e-4199062e78f3','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(762,'Road-650 Red, 44','BK-R50R-44','t','t','Red',100,75,486.7065999999999804,782.990000000000009,'44','CM ','LB ',18.76999999999999958,4,'R ','L ','U ',2,30,'2011-05-31 00:00:00','2013-05-29 00:00:00','','f247aaae-12e3-4048-a37b-cce4a8999e81','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(768,'Road-650 Black, 44','BK-R50B-44','t','t','Black',100,75,486.7065999999999804,782.990000000000009,'44','CM ','LB ',18.76999999999999958,4,'R ','L ','U ',2,30,'2011-05-31 00:00:00','2013-05-29 00:00:00','','11d563ac-115c-4f0d-a1e5-e946eee8b38b','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(801,'Road-550-W Yellow, 48','BK-R64Y-48','t','t','Yellow',100,75,713.0797999999999775,1120.490000000000009,'48','CM ','LB ',18.67999999999999972,4,'R ','M ','W ',2,29,'2012-05-30 00:00:00','','','c90cc877-804c-4ce7-afc3-4c8791a13dfb','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(770,'Road-650 Black, 52','BK-R50B-52','t','t','Black',100,75,486.7065999999999804,782.990000000000009,'52','CM ','LB ',19.42000000000000171,4,'R ','L ','U ',2,30,'2011-05-31 00:00:00','2013-05-29 00:00:00','','136e2865-e0da-4624-963a-31349279ab1a','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(707,'Sport-100 Helmet, Red','HL-U509-R','f','t','Red',4,3,13.0862999999999996,34.99000000000000198,'','','','',0,'S ','','',31,33,'2011-05-31 00:00:00','','','2e1ef41a-c08a-4ff6-8ada-bde58b64a712','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(708,'Sport-100 Helmet, Black','HL-U509','f','t','Black',4,3,13.0862999999999996,34.99000000000000198,'','','','',0,'S ','','',31,33,'2011-05-31 00:00:00','','','a25a44fb-c2de-4268-958f-110b8d7621e2','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(709,'Mountain Bike Socks, M','SO-B909-M','f','t','White',4,3,3.396300000000000096,9.5,'M','','','',0,'M ','','U ',23,18,'2011-05-31 00:00:00','2012-05-29 00:00:00','','18f95f47-1540-4e02-8f1f-cc1bcb6828d0','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(937,'HL Mountain Pedal','PD-M562','f','t','Silver/Black',500,375,35.95960000000000178,80.98999999999999489,'','','G  ',185.0,1,'M ','H ','',13,64,'2013-05-30 00:00:00','','','a05464e8-6b4d-42b3-a4d6-8683136f4b66','2014-02-08 10:01:36.827');
+INSERT INTO product VALUES(843,'Cable Lock','LO-C100','f','t','',4,3,10.3125,25.0,'','','','',0,'S ','','',34,115,'2012-05-30 00:00:00','2013-05-29 00:00:00','','56ffd7b9-1014-4640-b1bd-b2649589b4d7','2014-02-08 10:01:36.827');
+INSERT INTO salesorderheader VALUES(51695,9,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO19140113527','10-4020-000681',29723,288,8,753,753,5,15616,'65144Vi80653',8745,249.5427999999999998,19.96340000000000003,6.238599999999999924,275.744799999999998,'','7135da0f-9b7b-458d-9d70-bf673a779d17','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51696,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO18821111879','10-4020-000686',29986,290,7,714,714,5,12198,'85171Vi63083',8745,2006.046000000000049,191.2342999999999905,59.76069999999999994,2257.041000000000168,'','c38fc93a-4064-4438-900b-0580beca8713','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51697,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO19140124286','10-4020-000681',29723,288,8,753,753,5,15616,'65175Vi80653',8745,356.8980000000000245,35.21390000000000242,11.0044000000000004,403.1163000000000238,'','3614af60-9b62-49bc-9de8-366a31852e4c','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51735,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO13456167695','10-4020-000614',29564,290,7,708,708,5,10832,'16042Vi55888',8745,85091.66700000000128,8920.818999999999506,2787.75590000000011,96800.2418999999937,'','d64cf513-eceb-4afc-a1ff-c92c191afde0','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51801,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO13282153776','10-4020-000157',29630,290,7,683,683,5,5589,'107608Vi29279',8745,72.16200000000000614,7.120000000000000106,2.225000000000000088,81.507000000000005,'','704c1d10-6bda-4561-948b-45897735187b','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(46652,8,'2012-05-30 00:00:00','2012-06-11 00:00:00','2012-06-06 00:00:00','5','f','PO3509195138','10-4020-000139',29795,290,7,682,682,5,8672,'87920Vi44761',4389,42438.46450000000186,4195.284200000000055,1311.026299999999992,47944.77500000000145,'','cadd2605-d43b-422a-b8f2-41ac92455662','2012-06-06 00:00:00');
+INSERT INTO salesorderheader VALUES(51804,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO12064177768','10-4020-000159',29556,286,9,413,413,5,11087,'47612Vi57197',8741,868.8540000000000418,83.78319999999999367,26.18220000000000169,978.819399999999974,'','3c59dc1a-fd97-4392-9d14-e29c8ead310b','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51742,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO12731111072','10-4020-000247',29869,290,7,688,688,5,19174,'116138Vi99636',8745,3547.019999999999982,317.9605000000000245,99.3627000000000037,3964.343199999999798,'','26e9aa30-58ac-487a-9aa0-f8a1043d6ce0','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51806,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO9425112104','10-4020-000519',30015,286,9,433,433,5,1642,'117617Vi8414',8741,14267.06910000000061,1498.94100000000003,468.4189999999999828,16234.42909999999939,'','117c50d8-30fc-4aba-ac61-783b0e38c516','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51840,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO5249136112','10-4020-000357',29516,286,9,424,424,5,11472,'107700Vi59190',8741,567.8977999999999611,72.69089999999999919,22.71590000000000132,663.3046000000000503,'','587c2b98-2146-44d4-9209-8477b420931f','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51805,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO13079114537','10-4020-000554',29495,288,8,745,745,5,1970,'117614Vi10271',8745,762.9023999999999432,109.8579000000000007,34.33059999999999689,907.0909000000000332,'','821e2391-c20d-4220-a66b-adc1564907a1','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51871,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO9164147296','10-4020-000339',29790,286,9,423,423,5,15711,'88681Vi81221',8741,200.0519999999999925,19.73849999999999837,6.168300000000000338,225.9587999999999966,'','1baedd61-42a2-4db3-874e-0d0f21698d8b','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51753,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO11281190563','10-4020-000068',29586,288,8,718,718,5,16467,'116325Vi85223',8745,4667.64350000000013,437.3876000000000203,136.6836000000000126,5241.714700000000448,'','20a4fd6f-e499-4b8f-b783-1d6ce1772fd9','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51814,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO7801116238','10-4020-000087',29706,286,9,409,409,5,14546,'57636Vi75443',8741,57103.06839999999648,6581.620899999999893,2056.75649999999996,65741.44580000000132,'','aa754dd2-8670-4412-b89e-7801aeb75cfe','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51817,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO8149119969','10-4020-000615',29845,288,8,748,748,5,12299,'67640Vi63597',8745,1822.907999999999902,175.9508999999999901,54.98469999999999658,2053.843600000000152,'','adb9564d-c30f-4d09-af24-f45b25139007','2013-07-07 00:00:00');
+INSERT INTO salesorderheader VALUES(51690,8,'2013-06-30 00:00:00','2013-07-12 00:00:00','2013-07-07 00:00:00','5','f','PO406191881','10-4020-000663',29542,288,8,752,752,5,12491,'85014Vi64595',8745,3170.628000000000156,301.2583999999999947,94.1432999999999965,3566.029700000000048,'','c867ef4c-673c-4405-8a04-0d0d06a3e037','2013-07-07 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(279,'2012-11-30 00:00:00',571000.0,'{E7F639AC-53C3-4B66-8ECD-5F71E7CACB99}','2012-10-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(279,'2013-02-28 00:00:00',572000.0,'{173AD1F3-C953-4182-8168-97190CA5F929}','2013-01-14 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(286,'2013-08-30 00:00:00',389000.0,'{34B585BA-DD7E-41E6-AF29-A4AC61EAE320}','2013-07-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(279,'2013-08-30 00:00:00',675000.0,'{3BD5FB9E-0D3C-41B5-A619-CB98D6E5B7FE}','2013-07-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(283,'2011-12-01 00:00:00',280000.0,'{7A09CD71-EED6-485B-8AF4-800C82AEC15A}','2011-10-17 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(284,'2013-08-30 00:00:00',380000.0,'{4B6EBE93-65ED-474B-9210-3115F0979546}','2013-07-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(275,'2012-11-30 00:00:00',729000.0,'{A2907D41-6271-43D5-8439-DFFEB6B963FA}','2012-10-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(275,'2013-05-30 00:00:00',1575000.0,'{AA3C8A00-6590-497E-80F6-075BB947E025}','2013-04-15 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(278,'2012-08-30 00:00:00',329000.0,'{B06507B8-6A96-4819-AC31-A77411C9B777}','2012-07-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(283,'2013-08-30 00:00:00',372000.0,'{C97C50F2-2DBE-465D-8780-FE201F0CFD25}','2013-07-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(281,'2011-12-01 00:00:00',473000.0,'{90489216-EA7E-43B0-BE90-17F2ED47F2E2}','2011-10-17 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(289,'2014-03-01 00:00:00',1329000.0,'{15BE4C16-782C-40FD-861F-DD85CDEBCA83}','2014-01-15 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(279,'2011-05-31 00:00:00',669000.0,'{C40AC76F-5027-4417-9B60-CB1210AC079A}','2011-04-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(290,'2012-11-30 00:00:00',217000.0,'{AA12DE6F-C835-4876-9AFB-7AE5501DB57E}','2012-10-16 00:00:00');
+INSERT INTO salespersonquotahistory VALUES(279,'2012-02-29 00:00:00',802000.0,'{B762B64B-0E51-41C9-889F-1535BF553BED}','2012-01-15 00:00:00');
+INSERT INTO productreview VALUES(1,709,'John Smith','2013-09-18 00:00:00','john@fourthcoffee.com',5,unistr('I can''t believe I''m singing the praises of a pair of socks, but I just came back from a grueling\u000a3-day ride and these socks really helped make the trip a blast. They''re lightweight yet really cushioned my feet all day. \u000aThe reinforced toe is nearly bullet-proof and I didn''t experience any problems with rubbing or blisters like I have with\u000aother brands. I know it sounds silly, but it''s always the little stuff (like comfortable feet) that makes or breaks a long trip.\u000aI won''t go on another trip without them!'),NULL,'2013-09-18 00:00:00');
+INSERT INTO productreview VALUES(2,937,'David','2013-11-13 00:00:00','david@graphicdesigninstitute.com',4,unistr('A little on the heavy side, but overall the entry/exit is easy in all conditions. I''ve used these pedals for \u000amore than 3 years and I''ve never had a problem. Cleanup is easy. Mud and sand don''t get trapped. I would like \u000athem even better if there was a weight reduction. Maybe in the next design. Still, I would recommend them to a friend.'),NULL,'2013-11-13 00:00:00');
+INSERT INTO productreview VALUES(3,937,'Jill','2013-11-15 00:00:00','jill@margiestravel.com',2,unistr('Maybe it''s just because I''m new to mountain biking, but I had a terrible time getting use\u000ato these pedals. In my first outing, I wiped out trying to release my foot. Any suggestions on\u000aways I can adjust the pedals, or is it just a learning curve thing?'),NULL,'2013-11-15 00:00:00');
+INSERT INTO productreview VALUES(4,798,'Laura Norman','2013-11-15 00:00:00','laura@treyresearch.net',5,unistr('The Road-550-W from Adventure Works Cycles is everything it''s advertised to be. Finally, a quality bike that\u000ais actually built for a woman and provides control and comfort in one neat package. The top tube is shorter, the suspension is weight-tuned and there''s a much shorter reach to the brake\u000alevers. All this adds up to a great mountain bike that is sure to accommodate any woman''s anatomy. In addition to getting the size right, the saddle is incredibly comfortable. \u000aAttention to detail is apparent in every aspect from the frame finish to the careful design of each component. Each component is a solid performer without any fluff. \u000aThe designers clearly did their homework and thought about size, weight, and funtionality throughout. And at less than 19 pounds, the bike is manageable for even the most petite cyclist.\u000a\u000aWe had 5 riders take the bike out for a spin and really put it to the test. The results were consistent and very positive. Our testers loved the manuverability \u000aand control they had with the redesigned frame on the 550-W. A definite improvement over the 2012 design. Four out of five testers listed quick handling\u000aand responsivness were the key elements they noticed. Technical climbing and on the flats, the bike just cruises through the rough. Tight corners and obstacles were handled effortlessly. The fifth tester was more impressed with the smooth ride. The heavy-duty shocks absorbed even the worst bumps and provided a soft ride on all but the \u000anastiest trails and biggest drops. The shifting was rated superb and typical of what we''ve come to expect from Adventure Works Cycles. On descents, the bike handled flawlessly and tracked very well. The bike is well balanced front-to-rear and frame flex was minimal. In particular, the testers\u000anoted that the brake system had a unique combination of power and modulation.  While some brake setups can be overly touchy, these brakes had a good\u000aamount of power, but also a good feel that allows you to apply as little or as much braking power as is needed. Second is their short break-in period. We found that they tend to break-in well before\u000athe end of the first ride; while others take two to three rides (or more) to come to full power. \u000a\u000aOn the negative side, the pedals were not quite up to our tester''s standards. \u000aJust for fun, we experimented with routine maintenance tasks. Overall we found most operations to be straight forward and easy to complete. The only exception was replacing the front wheel. The maintenance manual that comes\u000awith the bike say to install the front wheel with the axle quick release or bolt, then compress the fork a few times before fastening and tightening the two quick-release mechanisms on the bottom of the dropouts. This is to seat the axle in the dropouts, and if you do not\u000ado this, the axle will become seated after you tightened the two bottom quick releases, which will then become loose. It''s better to test the tightness carefully or you may notice that the two bottom quick releases have come loose enough to fall completely open. And that''s something you don''t want to experience\u000awhile out on the road! \u000a\u000aThe Road-550-W frame is available in a variety of sizes and colors and has the same durable, high-quality aluminum that AWC is known for. At a MSRP of just under $1125.00, it''s comparable in price to its closest competitors and\u000awe think that after a test drive you''l find the quality and performance above and beyond . You''ll have a grin on your face and be itching to get out on the road for more. While designed for serious road racing, the Road-550-W would be an excellent choice for just about any terrain and \u000aany level of experience. It''s a huge step in the right direction for female cyclists and well worth your consideration and hard-earned money.'),NULL,'2013-11-15 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11736,'D7E0-44F6-86',5,843,1,15.0,0.0,'9fab1490-eac4-4116-af05-d8f743fa0eb6','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11749,'D7E0-44F6-86',3,797,1,600.2625000000000454,0.0,'b922a748-7963-46a7-a08a-69233d791c9c','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11750,'D7E0-44F6-86',4,798,1,600.2625000000000454,0.0,'44643fb4-8059-4a26-8d5e-991ee9ed7e09','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11751,'D7E0-44F6-86',5,794,1,1308.9375,0.0,'87a00982-81ba-46cf-9a73-5f88174468b0','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11755,'D7E0-44F6-86',6,790,1,1466.009999999999991,0.0,'a2249a4c-7d94-44e8-9151-dc12407bfe21','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11758,'D7E0-44F6-86',4,707,8,16.82209999999999895,0.1000000000000000055,'3029e6da-80e5-48d7-a8a4-69c70d4025f8','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11759,'D7E0-44F6-86',8,762,9,234.8969999999999914,0.2999999999999999889,'e404f1d2-e7df-4380-852f-9b0c66491350','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11733,'D7E0-44F6-86',1,819,1,149.0310000000000059,0.0,'a30326ca-5020-45d4-95f6-b8564b42c69e','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11766,'D7E0-44F6-86',11,708,8,16.82209999999999895,0.1000000000000000055,'93c2ace8-e8b8-4c7a-8496-3cf6e9690502','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11735,'D7E0-44F6-86',2,768,1,469.7939999999999828,0.0,'7a8f0fe5-3c7c-4216-a522-9f308a3096ca','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11767,'D7E0-44F6-86',8,770,1,469.7939999999999828,0.0,'9601a6a5-0311-46bc-b8af-6b0ccc0890e1','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11773,'D7E0-44F6-86',3,760,1,469.7939999999999828,0.0,'77c02a3c-e09e-4675-9476-f7532c37c5c2','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11734,'D7E0-44F6-86',5,841,1,35.99399999999999978,0.0,'fa4046a1-2512-414a-9da3-5ed2b04637d4','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11771,'D7E0-44F6-86',3,764,1,469.7939999999999828,0.0,'6af784cf-8e19-4d67-aa14-1e8e03cc53bc','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11741,'D7E0-44F6-86',3,761,1,469.7939999999999828,0.0,'dce74066-12af-4960-9277-1c32c9ce2951','2012-05-30 00:00:00');
+INSERT INTO salesorderdetail VALUES(46652,11743,'D7E0-44F6-86',2,801,1,600.2625000000000454,0.0,'150825a5-a98e-4380-ac43-94139768f2f4','2012-05-30 00:00:00');

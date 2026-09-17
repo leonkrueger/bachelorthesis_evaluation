@@ -1,0 +1,222 @@
+[
+    {
+        "table_name": "city",
+        "column_names": [
+            "country_id"
+        ],
+        "reference_table_name": "country",
+        "reference_column_names": [
+            "country_id"
+        ]
+    },
+    {
+        "table_name": "address",
+        "column_names": [
+            "city_id"
+        ],
+        "reference_table_name": "city",
+        "reference_column_names": [
+            "city_id"
+        ]
+    },
+    {
+        "table_name": "customer",
+        "column_names": [
+            "store_id"
+        ],
+        "reference_table_name": "store",
+        "reference_column_names": [
+            "store_id"
+        ]
+    },
+    {
+        "table_name": "customer",
+        "column_names": [
+            "address_id"
+        ],
+        "reference_table_name": "address",
+        "reference_column_names": [
+            "address_id"
+        ]
+    },
+    {
+        "table_name": "film",
+        "column_names": [
+            "language_id"
+        ],
+        "reference_table_name": "language",
+        "reference_column_names": [
+            "language_id"
+        ]
+    },
+    {
+        "table_name": "film",
+        "column_names": [
+            "original_language_id"
+        ],
+        "reference_table_name": "language",
+        "reference_column_names": [
+            "language_id"
+        ]
+    },
+    {
+        "table_name": "film_actor",
+        "column_names": [
+            "actor_id"
+        ],
+        "reference_table_name": "actor",
+        "reference_column_names": [
+            "actor_id"
+        ]
+    },
+    {
+        "table_name": "film_actor",
+        "column_names": [
+            "film_id"
+        ],
+        "reference_table_name": "film",
+        "reference_column_names": [
+            "film_id"
+        ]
+    },
+    {
+        "table_name": "film_category",
+        "column_names": [
+            "film_id"
+        ],
+        "reference_table_name": "film",
+        "reference_column_names": [
+            "film_id"
+        ]
+    },
+    {
+        "table_name": "film_category",
+        "column_names": [
+            "category_id"
+        ],
+        "reference_table_name": "category",
+        "reference_column_names": [
+            "category_id"
+        ]
+    },
+    {
+        "table_name": "inventory",
+        "column_names": [
+            "store_id"
+        ],
+        "reference_table_name": "store",
+        "reference_column_names": [
+            "store_id"
+        ]
+    },
+    {
+        "table_name": "inventory",
+        "column_names": [
+            "film_id"
+        ],
+        "reference_table_name": "film",
+        "reference_column_names": [
+            "film_id"
+        ]
+    },
+    {
+        "table_name": "staff",
+        "column_names": [
+            "store_id"
+        ],
+        "reference_table_name": "store",
+        "reference_column_names": [
+            "store_id"
+        ]
+    },
+    {
+        "table_name": "staff",
+        "column_names": [
+            "address_id"
+        ],
+        "reference_table_name": "address",
+        "reference_column_names": [
+            "address_id"
+        ]
+    },
+    {
+        "table_name": "store",
+        "column_names": [
+            "manager_staff_id"
+        ],
+        "reference_table_name": "staff",
+        "reference_column_names": [
+            "staff_id"
+        ]
+    },
+    {
+        "table_name": "store",
+        "column_names": [
+            "address_id"
+        ],
+        "reference_table_name": "address",
+        "reference_column_names": [
+            "address_id"
+        ]
+    },
+    {
+        "table_name": "payment",
+        "column_names": [
+            "rental_id"
+        ],
+        "reference_table_name": "rental",
+        "reference_column_names": [
+            "rental_id"
+        ]
+    },
+    {
+        "table_name": "payment",
+        "column_names": [
+            "customer_id"
+        ],
+        "reference_table_name": "customer",
+        "reference_column_names": [
+            "customer_id"
+        ]
+    },
+    {
+        "table_name": "payment",
+        "column_names": [
+            "staff_id"
+        ],
+        "reference_table_name": "staff",
+        "reference_column_names": [
+            "staff_id"
+        ]
+    },
+    {
+        "table_name": "rental",
+        "column_names": [
+            "staff_id"
+        ],
+        "reference_table_name": "staff",
+        "reference_column_names": [
+            "staff_id"
+        ]
+    },
+    {
+        "table_name": "rental",
+        "column_names": [
+            "inventory_id"
+        ],
+        "reference_table_name": "inventory",
+        "reference_column_names": [
+            "inventory_id"
+        ]
+    },
+    {
+        "table_name": "rental",
+        "column_names": [
+            "customer_id"
+        ],
+        "reference_table_name": "customer",
+        "reference_column_names": [
+            "customer_id"
+        ]
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "table_name": "telescopes",
+        "column_names": [
+            "observstation"
+        ],
+        "reference_table_name": "observatories",
+        "reference_column_names": [
+            "observstation"
+        ]
+    },
+    {
+        "table_name": "signals",
+        "column_names": [
+            "telescref"
+        ],
+        "reference_table_name": "telescopes",
+        "reference_column_names": [
+            "telescregistry"
+        ]
+    },
+    {
+        "table_name": "observationalconditions",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    },
+    {
+        "table_name": "researchprocess",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    },
+    {
+        "table_name": "signaladvancedphenomena",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    },
+    {
+        "table_name": "signalclassification",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    },
+    {
+        "table_name": "signaldecoding",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    },
+    {
+        "table_name": "signaldynamics",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    },
+    {
+        "table_name": "signalprobabilities",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    },
+    {
+        "table_name": "sourceproperties",
+        "column_names": [
+            "signalref"
+        ],
+        "reference_table_name": "signals",
+        "reference_column_names": [
+            "signalregistry"
+        ]
+    }
+]

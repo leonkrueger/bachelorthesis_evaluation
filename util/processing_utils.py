@@ -22,9 +22,10 @@ def insert_to_string(
     )
     if isinstance(insert["values"][0], (list, tuple)):
         row_values_strings = [
-            f"({', '.join([str(value) if value is not None else 'NULL' for value in row_values])})" for row_values in insert['values']
+            f"({', '.join([str(value) if value is not None else 'NULL' for value in row_values])})"
+            for row_values in insert["values"]
         ]
-        
+
         return f"INSERT INTO {table_str}{columns_str}VALUES {', '.join(row_values_strings)};\n"
     else:
         return f"INSERT INTO {table_str}{columns_str}VALUES ({', '.join([str(value) if value is not None else 'NULL' for value in insert['values']])});\n"
@@ -76,6 +77,11 @@ def map_type(type: str) -> str:
         "TIME": "TIME",
         "BLOB": "BLOB",
         "DEFAULT": "VARCHAR(1023)",
+        "CHARACTER": "VARCHAR(1023)",
+        "JSONB": "VARCHAR(1023)",
+        "UUID": "VARCHAR(1023)",
+        "INET": "VARCHAR(1023)",
+        "NVARCHAR": "VARCHAR(1023)",
     }
     if type.upper() not in type_mapping.keys():
         print(f"ERROR: NO TYPE MAPPING FOR TYPE {type}")

@@ -1,0 +1,64 @@
+[
+    {
+        "table_name": "Bowler_Scores",
+        "column_names": [
+            "BowlerID"
+        ],
+        "reference_table_name": "Bowlers",
+        "reference_column_names": [
+            "BowlerID"
+        ]
+    },
+    {
+        "table_name": "Bowler_Scores",
+        "column_names": [
+            "MatchID",
+            "GameNumber"
+        ],
+        "reference_table_name": "Match_Games",
+        "reference_column_names": [
+            "MatchID",
+            "GameNumber"
+        ]
+    },
+    {
+        "table_name": "Bowlers",
+        "column_names": [
+            "TeamID"
+        ],
+        "reference_table_name": "Teams",
+        "reference_column_names": [
+            "TeamID"
+        ]
+    },
+    {
+        "table_name": "Tourney_Matches",
+        "column_names": [
+            "EvenLaneTeamID"
+        ],
+        "reference_table_name": "Teams",
+        "reference_column_names": [
+            "TeamID"
+        ]
+    },
+    {
+        "table_name": "Tourney_Matches",
+        "column_names": [
+            "OddLaneTeamID"
+        ],
+        "reference_table_name": "Teams",
+        "reference_column_names": [
+            "TeamID"
+        ]
+    },
+    {
+        "table_name": "Tourney_Matches",
+        "column_names": [
+            "TourneyID"
+        ],
+        "reference_table_name": "Tournaments",
+        "reference_column_names": [
+            "TourneyID"
+        ]
+    }
+]

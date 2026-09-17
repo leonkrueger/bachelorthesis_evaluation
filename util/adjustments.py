@@ -105,7 +105,7 @@ EXPERIMENTS = {
         "adjustments": [
             (Adjustments.COMBINE_INSERTS, [0.8], (5, 10)),
             (Adjustments.DELETE_COLUMN, [0.2]),
-            (Adjustments.USE_TABLE_SYNONYMS, [0.375]),
+            (Adjustments.USE_COLUMN_SYNONYMS, [0.375]),
             (Adjustments.DELETE_TABLE, [0.5]),
             (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
         ],
@@ -117,7 +117,7 @@ EXPERIMENTS = {
         "adjustments": [
             (Adjustments.SHUFFLE_COLUMNS, []),
             (Adjustments.DELETE_COLUMN, [0.2]),
-            (Adjustments.USE_TABLE_SYNONYMS, [0.375]),
+            (Adjustments.USE_COLUMN_SYNONYMS, [0.375]),
             (Adjustments.DELETE_TABLE, [0.5]),
             (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
         ],
@@ -127,10 +127,10 @@ EXPERIMENTS = {
     },
     "batch_shuffled_columns": {
         "adjustments": [
-            (Adjustments.COMBINE_INSERTS, [0.8], (5, 10)),
             (Adjustments.SHUFFLE_COLUMNS, []),
+            (Adjustments.COMBINE_INSERTS, [0.8], (5, 10)),
             (Adjustments.DELETE_COLUMN, [0.2]),
-            (Adjustments.USE_TABLE_SYNONYMS, [0.375]),
+            (Adjustments.USE_COLUMN_SYNONYMS, [0.375]),
             (Adjustments.DELETE_TABLE, [0.5]),
             (Adjustments.USE_TABLE_SYNONYMS, [0.5]),
         ],

@@ -1,0 +1,12 @@
+INSERT INTO `StudentSubmissions` (`Scores`, `Author`, `Submission_ID`, `College`) VALUES (92.0, 'Don Bitterlich', 7, 'Temple');
+INSERT INTO (`Venue`, `Date`, `Name`, `Workshop_ID`) VALUES ('London UK', 'August 21, 2007', 'Conference 2007', 2);
+INSERT INTO `Submission_Workshop_Status` (`Submission_ID`, `Workshop_ID`, `Result`) VALUES (3, 2, 'Rejected');
+INSERT INTO (`Name`, `Date`, `Venue`, `Workshop_ID`) VALUES ('Anual Workshop 2011', 'July 5, 2011', 'Istanbul Turkey', 6);
+INSERT INTO (`Result`, `Workshop_ID`, `Submission_ID`) VALUES ('Accepted', 1, 1);
+INSERT INTO (`Result`, `Submission_ID`, `Workshop_ID`) VALUES ('Accepted', 2, 5);
+INSERT INTO VALUES (5, 'New York USA', '2008 qualification', 'January 14, 2008');
+INSERT INTO (`Workshop_ID`, `Result`, `Submission_ID`) VALUES (3, 'Rejected', 2), (6, 'Rejected', 4), (6, 'Rejected', 5);
+INSERT INTO `workshop` (`Name`, `Date`, `Venue`, `Workshop_ID`) VALUES ('Workshop 2007', 'August 25, 2007', 'New Jersey USA', 3), ('ABC 2007', 'August 18, 2007', 'London UK', 1), ('2007 qualification', 'October 8, 2007', 'New York USA', 4);
+INSERT INTO `submission` (`Scores`, `College`, `Author`, `Submission_ID`) VALUES (89.0, 'Tulsa', 'Rick Engles', 6);
+INSERT INTO `StudentSubmissions` (`Submission_ID`, `College`, `Scores`, `Author`) VALUES (10, 'Fisk', 83.0, 'Andy Bolton'), (1, 'Notre Dame', 72.0, 'Steve Niehaus'), (4, 'Georgia Tech', 79.0, 'Steve Raible'), (2, 'Florida', 79.0, 'Sammy Green'), (8, 'New Mexico', 93.0, 'Steve Myer'), (3, 'Miami (OH)', 78.0, 'Sherman Smith'), (9, 'Georgia', 82.0, 'Randy Johnson');
+INSERT INTO (`Author`, `College`, `Scores`, `Submission_ID`) VALUES ('Jeff Lloyd', 'West Texas State', 82.0, 5);

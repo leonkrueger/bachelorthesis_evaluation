@@ -1,0 +1,32 @@
+[
+    {
+        "table_name": "place_of_birth",
+        "column_names": [
+            "located_in_time_zone"
+        ],
+        "reference_table_name": "time_zone",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "author",
+        "column_names": [
+            "place_of_birth"
+        ],
+        "reference_table_name": "place_of_birth",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "novelette",
+        "column_names": [
+            "author"
+        ],
+        "reference_table_name": "author",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

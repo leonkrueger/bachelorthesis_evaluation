@@ -1,0 +1,192 @@
+[
+    {
+        "table_name": "races",
+        "column_names": [
+            "year"
+        ],
+        "reference_table_name": "seasons",
+        "reference_column_names": [
+            "year"
+        ]
+    },
+    {
+        "table_name": "races",
+        "column_names": [
+            "circuitId"
+        ],
+        "reference_table_name": "circuits",
+        "reference_column_names": [
+            "circuitId"
+        ]
+    },
+    {
+        "table_name": "constructorResults",
+        "column_names": [
+            "raceId"
+        ],
+        "reference_table_name": "races",
+        "reference_column_names": [
+            "raceId"
+        ]
+    },
+    {
+        "table_name": "constructorResults",
+        "column_names": [
+            "constructorId"
+        ],
+        "reference_table_name": "constructors",
+        "reference_column_names": [
+            "constructorId"
+        ]
+    },
+    {
+        "table_name": "constructorStandings",
+        "column_names": [
+            "raceId"
+        ],
+        "reference_table_name": "races",
+        "reference_column_names": [
+            "raceId"
+        ]
+    },
+    {
+        "table_name": "constructorStandings",
+        "column_names": [
+            "constructorId"
+        ],
+        "reference_table_name": "constructors",
+        "reference_column_names": [
+            "constructorId"
+        ]
+    },
+    {
+        "table_name": "driverStandings",
+        "column_names": [
+            "raceId"
+        ],
+        "reference_table_name": "races",
+        "reference_column_names": [
+            "raceId"
+        ]
+    },
+    {
+        "table_name": "driverStandings",
+        "column_names": [
+            "driverId"
+        ],
+        "reference_table_name": "drivers",
+        "reference_column_names": [
+            "driverId"
+        ]
+    },
+    {
+        "table_name": "lapTimes",
+        "column_names": [
+            "raceId"
+        ],
+        "reference_table_name": "races",
+        "reference_column_names": [
+            "raceId"
+        ]
+    },
+    {
+        "table_name": "lapTimes",
+        "column_names": [
+            "driverId"
+        ],
+        "reference_table_name": "drivers",
+        "reference_column_names": [
+            "driverId"
+        ]
+    },
+    {
+        "table_name": "pitStops",
+        "column_names": [
+            "raceId"
+        ],
+        "reference_table_name": "races",
+        "reference_column_names": [
+            "raceId"
+        ]
+    },
+    {
+        "table_name": "pitStops",
+        "column_names": [
+            "driverId"
+        ],
+        "reference_table_name": "drivers",
+        "reference_column_names": [
+            "driverId"
+        ]
+    },
+    {
+        "table_name": "qualifying",
+        "column_names": [
+            "raceId"
+        ],
+        "reference_table_name": "races",
+        "reference_column_names": [
+            "raceId"
+        ]
+    },
+    {
+        "table_name": "qualifying",
+        "column_names": [
+            "driverId"
+        ],
+        "reference_table_name": "drivers",
+        "reference_column_names": [
+            "driverId"
+        ]
+    },
+    {
+        "table_name": "qualifying",
+        "column_names": [
+            "constructorId"
+        ],
+        "reference_table_name": "constructors",
+        "reference_column_names": [
+            "constructorId"
+        ]
+    },
+    {
+        "table_name": "results",
+        "column_names": [
+            "raceId"
+        ],
+        "reference_table_name": "races",
+        "reference_column_names": [
+            "raceId"
+        ]
+    },
+    {
+        "table_name": "results",
+        "column_names": [
+            "driverId"
+        ],
+        "reference_table_name": "drivers",
+        "reference_column_names": [
+            "driverId"
+        ]
+    },
+    {
+        "table_name": "results",
+        "column_names": [
+            "constructorId"
+        ],
+        "reference_table_name": "constructors",
+        "reference_column_names": [
+            "constructorId"
+        ]
+    },
+    {
+        "table_name": "results",
+        "column_names": [
+            "statusId"
+        ],
+        "reference_table_name": "status",
+        "reference_column_names": [
+            "statusId"
+        ]
+    }
+]

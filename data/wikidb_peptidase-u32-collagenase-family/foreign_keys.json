@@ -1,0 +1,62 @@
+[
+    {
+        "table_name": "taxon",
+        "column_names": [
+            "parent_taxon"
+        ],
+        "reference_table_name": "taxon",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "natural_product",
+        "column_names": [
+            "parent_taxon"
+        ],
+        "reference_table_name": "taxon",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "encoded_by",
+        "column_names": [
+            "found_in_taxon"
+        ],
+        "reference_table_name": "natural_product",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "encoded_by",
+        "column_names": [
+            "encodes"
+        ],
+        "reference_table_name": "encodes",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "peptidase_u32_collagenase_family",
+        "column_names": [
+            "encoded_by"
+        ],
+        "reference_table_name": "encoded_by",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "peptidase_u32_collagenase_family",
+        "column_names": [
+            "found_in_taxon"
+        ],
+        "reference_table_name": "natural_product",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

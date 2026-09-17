@@ -1,0 +1,12 @@
+[
+    {
+        "table_name": "alpha_defensins",
+        "column_names": [
+            "cites_work"
+        ],
+        "reference_table_name": "citation",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

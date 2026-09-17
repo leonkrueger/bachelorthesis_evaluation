@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
+        "column_names": [
+            "encoded_by"
+        ],
+        "reference_table_name": "encoded_by",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "chemotaxis_methyl_accepting_receptor_tar_related_ligand_binding_domain_protein_family",
+        "column_names": [
+            "found_in_taxon"
+        ],
+        "reference_table_name": "natural_product",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

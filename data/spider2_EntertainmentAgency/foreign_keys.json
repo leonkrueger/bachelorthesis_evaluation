@@ -1,0 +1,92 @@
+[
+    {
+        "table_name": "Engagements",
+        "column_names": [
+            "AgentID"
+        ],
+        "reference_table_name": "Agents",
+        "reference_column_names": [
+            "AgentID"
+        ]
+    },
+    {
+        "table_name": "Engagements",
+        "column_names": [
+            "CustomerID"
+        ],
+        "reference_table_name": "Customers",
+        "reference_column_names": [
+            "CustomerID"
+        ]
+    },
+    {
+        "table_name": "Engagements",
+        "column_names": [
+            "EntertainerID"
+        ],
+        "reference_table_name": "Entertainers",
+        "reference_column_names": [
+            "EntertainerID"
+        ]
+    },
+    {
+        "table_name": "Entertainer_Members",
+        "column_names": [
+            "EntertainerID"
+        ],
+        "reference_table_name": "Entertainers",
+        "reference_column_names": [
+            "EntertainerID"
+        ]
+    },
+    {
+        "table_name": "Entertainer_Members",
+        "column_names": [
+            "MemberID"
+        ],
+        "reference_table_name": "Members",
+        "reference_column_names": [
+            "MemberID"
+        ]
+    },
+    {
+        "table_name": "Entertainer_Styles",
+        "column_names": [
+            "EntertainerID"
+        ],
+        "reference_table_name": "Entertainers",
+        "reference_column_names": [
+            "EntertainerID"
+        ]
+    },
+    {
+        "table_name": "Entertainer_Styles",
+        "column_names": [
+            "StyleID"
+        ],
+        "reference_table_name": "Musical_Styles",
+        "reference_column_names": [
+            "StyleID"
+        ]
+    },
+    {
+        "table_name": "Musical_Preferences",
+        "column_names": [
+            "CustomerID"
+        ],
+        "reference_table_name": "Customers",
+        "reference_column_names": [
+            "CustomerID"
+        ]
+    },
+    {
+        "table_name": "Musical_Preferences",
+        "column_names": [
+            "StyleID"
+        ],
+        "reference_table_name": "Musical_Styles",
+        "reference_column_names": [
+            "StyleID"
+        ]
+    }
+]

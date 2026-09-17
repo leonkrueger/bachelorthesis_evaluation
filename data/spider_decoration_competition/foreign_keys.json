@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "member",
+        "column_names": [
+            "College_ID"
+        ],
+        "reference_table_name": "college",
+        "reference_column_names": [
+            "College_ID"
+        ]
+    },
+    {
+        "table_name": "round",
+        "column_names": [
+            "Member_ID"
+        ],
+        "reference_table_name": "member",
+        "reference_column_names": [
+            "Member_ID"
+        ]
+    }
+]

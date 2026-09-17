@@ -1,0 +1,12 @@
+[
+    {
+        "table_name": "entrepreneur",
+        "column_names": [
+            "People_ID"
+        ],
+        "reference_table_name": "people",
+        "reference_column_names": [
+            "People_ID"
+        ]
+    }
+]

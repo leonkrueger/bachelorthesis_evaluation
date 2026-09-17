@@ -1,0 +1,52 @@
+[
+    {
+        "table_name": "Player_Attributes",
+        "column_names": [
+            "player_fifa_api_id"
+        ],
+        "reference_table_name": "Player",
+        "reference_column_names": [
+            "player_fifa_api_id"
+        ]
+    },
+    {
+        "table_name": "Player_Attributes",
+        "column_names": [
+            "player_api_id"
+        ],
+        "reference_table_name": "Player",
+        "reference_column_names": [
+            "player_api_id"
+        ]
+    },
+    {
+        "table_name": "League",
+        "column_names": [
+            "country_id"
+        ],
+        "reference_table_name": "country",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Team_Attributes",
+        "column_names": [
+            "team_fifa_api_id"
+        ],
+        "reference_table_name": "Team",
+        "reference_column_names": [
+            "team_fifa_api_id"
+        ]
+    },
+    {
+        "table_name": "Team_Attributes",
+        "column_names": [
+            "team_api_id"
+        ],
+        "reference_table_name": "Team",
+        "reference_column_names": [
+            "team_api_id"
+        ]
+    }
+]

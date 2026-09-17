@@ -1,0 +1,132 @@
+[
+    {
+        "table_name": "badges",
+        "column_names": [
+            "UserId"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "comments",
+        "column_names": [
+            "PostId"
+        ],
+        "reference_table_name": "posts",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "comments",
+        "column_names": [
+            "UserId"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "postHistory",
+        "column_names": [
+            "PostId"
+        ],
+        "reference_table_name": "posts",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "postHistory",
+        "column_names": [
+            "UserId"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "postLinks",
+        "column_names": [
+            "PostId"
+        ],
+        "reference_table_name": "posts",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "postLinks",
+        "column_names": [
+            "RelatedPostId"
+        ],
+        "reference_table_name": "posts",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "posts",
+        "column_names": [
+            "LastEditorUserId"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "posts",
+        "column_names": [
+            "OwnerUserId"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "posts",
+        "column_names": [
+            "ParentId"
+        ],
+        "reference_table_name": "posts",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "tags",
+        "column_names": [
+            "ExcerptPostId"
+        ],
+        "reference_table_name": "posts",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "votes",
+        "column_names": [
+            "PostId"
+        ],
+        "reference_table_name": "posts",
+        "reference_column_names": [
+            "Id"
+        ]
+    },
+    {
+        "table_name": "votes",
+        "column_names": [
+            "UserId"
+        ],
+        "reference_table_name": "users",
+        "reference_column_names": [
+            "Id"
+        ]
+    }
+]

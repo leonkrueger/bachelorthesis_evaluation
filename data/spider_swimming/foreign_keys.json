@@ -1,0 +1,32 @@
+[
+    {
+        "table_name": "event",
+        "column_names": [
+            "Stadium_ID"
+        ],
+        "reference_table_name": "stadium",
+        "reference_column_names": [
+            "ID"
+        ]
+    },
+    {
+        "table_name": "record",
+        "column_names": [
+            "Event_ID"
+        ],
+        "reference_table_name": "event",
+        "reference_column_names": [
+            "ID"
+        ]
+    },
+    {
+        "table_name": "record",
+        "column_names": [
+            "Swimmer_ID"
+        ],
+        "reference_table_name": "swimmer",
+        "reference_column_names": [
+            "ID"
+        ]
+    }
+]

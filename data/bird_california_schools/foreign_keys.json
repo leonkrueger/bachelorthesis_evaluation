@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "frpm",
+        "column_names": [
+            "CDSCode"
+        ],
+        "reference_table_name": "schools",
+        "reference_column_names": [
+            "CDSCode"
+        ]
+    },
+    {
+        "table_name": "satscores",
+        "column_names": [
+            "cds"
+        ],
+        "reference_table_name": "schools",
+        "reference_column_names": [
+            "CDSCode"
+        ]
+    }
+]

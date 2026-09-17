@@ -1,0 +1,92 @@
+[
+    {
+        "table_name": "encodes",
+        "column_names": [
+            "encoded_by"
+        ],
+        "reference_table_name": "encoded_by",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "encodes",
+        "column_names": [
+            "biological_process"
+        ],
+        "reference_table_name": "biological_process",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "encodes",
+        "column_names": [
+            "molecular_function"
+        ],
+        "reference_table_name": "molecular_function",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "encoded_by",
+        "column_names": [
+            "chromosome"
+        ],
+        "reference_table_name": "chromosome",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "encoded_by",
+        "column_names": [
+            "encodes"
+        ],
+        "reference_table_name": "encodes",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "encoded_by",
+        "column_names": [
+            "expressed_in"
+        ],
+        "reference_table_name": "expressed_in",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "paz_domain_superfamily",
+        "column_names": [
+            "encoded_by"
+        ],
+        "reference_table_name": "encoded_by",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "paz_domain_superfamily",
+        "column_names": [
+            "biological_process"
+        ],
+        "reference_table_name": "biological_process",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "paz_domain_superfamily",
+        "column_names": [
+            "molecular_function"
+        ],
+        "reference_table_name": "molecular_function",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

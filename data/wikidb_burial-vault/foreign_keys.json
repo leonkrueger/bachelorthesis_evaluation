@@ -1,0 +1,32 @@
+[
+    {
+        "table_name": "country",
+        "column_names": [
+            "part_of"
+        ],
+        "reference_table_name": "part",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "burial_vault",
+        "column_names": [
+            "located_in_the_administrative_territorial_entity"
+        ],
+        "reference_table_name": "administrative_territorial_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "burial_vault",
+        "column_names": [
+            "country"
+        ],
+        "reference_table_name": "country",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

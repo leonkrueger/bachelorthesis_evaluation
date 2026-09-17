@@ -1,0 +1,172 @@
+[
+    {
+        "table_name": "Class_Rooms",
+        "column_names": [
+            "BuildingCode"
+        ],
+        "reference_table_name": "Buildings",
+        "reference_column_names": [
+            "BuildingCode"
+        ]
+    },
+    {
+        "table_name": "Classes",
+        "column_names": [
+            "ClassRoomID"
+        ],
+        "reference_table_name": "Class_Rooms",
+        "reference_column_names": [
+            "ClassRoomID"
+        ]
+    },
+    {
+        "table_name": "Classes",
+        "column_names": [
+            "SubjectID"
+        ],
+        "reference_table_name": "Subjects",
+        "reference_column_names": [
+            "SubjectID"
+        ]
+    },
+    {
+        "table_name": "Departments",
+        "column_names": [
+            "DeptChair"
+        ],
+        "reference_table_name": "Staff",
+        "reference_column_names": [
+            "StaffID"
+        ]
+    },
+    {
+        "table_name": "Faculty",
+        "column_names": [
+            "StaffID"
+        ],
+        "reference_table_name": "Staff",
+        "reference_column_names": [
+            "StaffID"
+        ]
+    },
+    {
+        "table_name": "Faculty_Categories",
+        "column_names": [
+            "CategoryID"
+        ],
+        "reference_table_name": "Categories",
+        "reference_column_names": [
+            "CategoryID"
+        ]
+    },
+    {
+        "table_name": "Faculty_Categories",
+        "column_names": [
+            "StaffID"
+        ],
+        "reference_table_name": "Faculty",
+        "reference_column_names": [
+            "StaffID"
+        ]
+    },
+    {
+        "table_name": "Faculty_Classes",
+        "column_names": [
+            "ClassID"
+        ],
+        "reference_table_name": "Classes",
+        "reference_column_names": [
+            "ClassID"
+        ]
+    },
+    {
+        "table_name": "Faculty_Classes",
+        "column_names": [
+            "StaffID"
+        ],
+        "reference_table_name": "Staff",
+        "reference_column_names": [
+            "StaffID"
+        ]
+    },
+    {
+        "table_name": "Faculty_Subjects",
+        "column_names": [
+            "StaffID"
+        ],
+        "reference_table_name": "Faculty",
+        "reference_column_names": [
+            "StaffID"
+        ]
+    },
+    {
+        "table_name": "Faculty_Subjects",
+        "column_names": [
+            "SubjectID"
+        ],
+        "reference_table_name": "Subjects",
+        "reference_column_names": [
+            "SubjectID"
+        ]
+    },
+    {
+        "table_name": "Student_Schedules",
+        "column_names": [
+            "ClassID"
+        ],
+        "reference_table_name": "Classes",
+        "reference_column_names": [
+            "ClassID"
+        ]
+    },
+    {
+        "table_name": "Student_Schedules",
+        "column_names": [
+            "ClassStatus"
+        ],
+        "reference_table_name": "Student_Class_Status",
+        "reference_column_names": [
+            "ClassStatus"
+        ]
+    },
+    {
+        "table_name": "Student_Schedules",
+        "column_names": [
+            "StudentID"
+        ],
+        "reference_table_name": "Students",
+        "reference_column_names": [
+            "StudentID"
+        ]
+    },
+    {
+        "table_name": "Students",
+        "column_names": [
+            "StudMajor"
+        ],
+        "reference_table_name": "Majors",
+        "reference_column_names": [
+            "MajorID"
+        ]
+    },
+    {
+        "table_name": "Subjects",
+        "column_names": [
+            "CategoryID"
+        ],
+        "reference_table_name": "Categories",
+        "reference_column_names": [
+            "CategoryID"
+        ]
+    },
+    {
+        "table_name": "Subjects",
+        "column_names": [
+            "SubjectPreReq"
+        ],
+        "reference_table_name": "Subjects",
+        "reference_column_names": [
+            "SubjectCode"
+        ]
+    }
+]

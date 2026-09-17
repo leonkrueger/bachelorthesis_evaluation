@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "Office_locations",
+        "column_names": [
+            "building_id"
+        ],
+        "reference_table_name": "buildings",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "Office_locations",
+        "column_names": [
+            "company_id"
+        ],
+        "reference_table_name": "Companies",
+        "reference_column_names": [
+            "id"
+        ]
+    }
+]

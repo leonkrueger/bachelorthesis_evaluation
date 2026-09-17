@@ -25,7 +25,7 @@ def read_all_inserts(file_path: str) -> tuple[list, dict]:
         statement = statement.strip()
 
         if statement.startswith("CREATE TABLE"):
-            _, table_name, _, column_data = get_data_from_create_table(
+            _, table_name, _, column_data, _ = get_data_from_create_table(
                 statement, use_mysql_quotes=False
             )
             columns = [column[0] for column in column_data]

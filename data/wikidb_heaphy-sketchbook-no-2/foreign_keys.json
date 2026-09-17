@@ -1,0 +1,12 @@
+[
+    {
+        "table_name": "heaphy_sketchbook_no_2",
+        "column_names": [
+            "depicts"
+        ],
+        "reference_table_name": "depiction",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

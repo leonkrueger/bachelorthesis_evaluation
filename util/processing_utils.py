@@ -118,23 +118,90 @@ def get_data_from_create_table(
     table_new_name = remove_quotes(table_name, use_mysql_quotes)
 
     # Save primary keys of the table
-    if len(attribute_data[0]) > 2 and attribute_data[0][2] == "primary":
-        primary_keys = [attribute_data[0][0]]
+    column_name_offset = 1 if attribute_data[0][0] == "`" else 0
+    if any([token.lower() == "primary" for token in attribute_data[0]]):
+        primary_keys = [
+            remove_quotes(attribute_data[0][column_name_offset], use_mysql_quotes=False)
+        ]
     else:
         primary_key_data = [
-            attribute for attribute in attribute_data if attribute[0] == "primary"
+            attribute
+            for attribute in attribute_data
+            if attribute[0].lower() == "primary"
         ]
         if len(primary_key_data) > 0:  # WikiDB has no defined primary keys
-            number_of_keys = (
-                len(primary_key_data[0]) - 2  # For tokens "primary" and "key"
-            )
             primary_keys = [
-                attribute[0]
-                for index, attribute in enumerate(attribute_data)
-                if index < number_of_keys
+                remove_quotes(token, use_mysql_quotes=False)
+                for token in primary_key_data[0][2:]
+                if token not in ["(", ")", ",", "`"]
             ]
         else:
             primary_keys = []
+
+    # Get foreign key relationships
+    foreign_keys = []
+    foreign_key_data = [
+        attribute for attribute in attribute_data if attribute[0].lower() == "foreign"
+    ]
+    for foreign_key in foreign_key_data:
+        current_token = 3
+
+        column_names = []
+        while foreign_key[current_token] != ")":
+            if foreign_key[current_token] == ",":
+                current_token += 1
+            key_name = ""
+            if foreign_key[current_token] == "`":
+                while foreign_key[current_token + 1] != "`":
+                    key_name += foreign_key[current_token + 1]
+                    current_token += 1
+                current_token += 2
+            else:
+                key_name = remove_quotes(
+                    foreign_key[current_token], use_mysql_quotes=False
+                )
+                current_token += 1
+            column_names.append(key_name)
+        current_token += 2
+
+        reference_table_name = ""
+        if foreign_key[current_token] == "`":
+            while foreign_key[current_token + 1] != "`":
+                reference_table_name += foreign_key[current_token + 1]
+                current_token += 1
+            current_token += 2
+        else:
+            reference_table_name = remove_quotes(
+                foreign_key[current_token], use_mysql_quotes=False
+            )
+            current_token += 1
+        current_token += 1
+
+        reference_column_names = []
+        while foreign_key[current_token] != ")":
+            if foreign_key[current_token] == ",":
+                current_token += 1
+            reference_column_name = ""
+            if foreign_key[current_token] == "`":
+                while foreign_key[current_token + 1] != "`":
+                    reference_column_name += foreign_key[current_token + 1]
+                    current_token += 1
+                current_token += 2
+            else:
+                reference_column_name = remove_quotes(
+                    foreign_key[current_token], use_mysql_quotes=False
+                )
+                current_token += 1
+            reference_column_names.append(reference_column_name)
+
+        foreign_keys.append(
+            {
+                "table_name": remove_quotes(table_old_name, use_mysql_quotes=False),
+                "column_names": column_names,
+                "reference_table_name": reference_table_name,
+                "reference_column_names": reference_column_names,
+            }
+        )
 
     # Get the right data types and create the correct "CREATE TABLE" statement
     attributes = []
@@ -164,4 +231,4 @@ def get_data_from_create_table(
                 [remove_quotes(attribute[0], use_mysql_quotes), map_type(attribute[1])]
             )
 
-    return (table_old_name, table_new_name, primary_keys, attributes)
+    return (table_old_name, table_new_name, primary_keys, attributes, foreign_keys)

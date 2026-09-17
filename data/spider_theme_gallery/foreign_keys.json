@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "exhibition",
+        "column_names": [
+            "Artist_ID"
+        ],
+        "reference_table_name": "artist",
+        "reference_column_names": [
+            "Artist_ID"
+        ]
+    },
+    {
+        "table_name": "exhibition_record",
+        "column_names": [
+            "Exhibition_ID"
+        ],
+        "reference_table_name": "exhibition",
+        "reference_column_names": [
+            "Exhibition_ID"
+        ]
+    }
+]

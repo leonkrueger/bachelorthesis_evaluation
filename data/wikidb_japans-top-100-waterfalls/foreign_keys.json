@@ -1,0 +1,122 @@
+[
+    {
+        "table_name": "replacing_subject",
+        "column_names": [
+            "shares_border_with"
+        ],
+        "reference_table_name": "political_border",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "replacing_subject",
+        "column_names": [
+            "replaces"
+        ],
+        "reference_table_name": "replaced_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "replacing_subject",
+        "column_names": [
+            "located_in_the_administrative_territorial_entity"
+        ],
+        "reference_table_name": "administrative_territorial_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "replaced_entity",
+        "column_names": [
+            "located_in_the_administrative_territorial_entity"
+        ],
+        "reference_table_name": "administrative_territorial_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "replaced_entity",
+        "column_names": [
+            "replaced_by"
+        ],
+        "reference_table_name": "replacing_subject",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "replaced_entity",
+        "column_names": [
+            "located_in_the_present_day_administrative_territorial_entity"
+        ],
+        "reference_table_name": "located_in_the_present_day_administrative_territorial_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "political_border",
+        "column_names": [
+            "shares_border_with"
+        ],
+        "reference_table_name": "political_border",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "political_border",
+        "column_names": [
+            "replaces"
+        ],
+        "reference_table_name": "replaced_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "administrative_territorial_entity",
+        "column_names": [
+            "located_in_the_administrative_territorial_entity"
+        ],
+        "reference_table_name": "administrative_territorial_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "administrative_territorial_entity",
+        "column_names": [
+            "shares_border_with"
+        ],
+        "reference_table_name": "political_border",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "japans_top_100_waterfalls",
+        "column_names": [
+            "located_in_the_administrative_territorial_entity"
+        ],
+        "reference_table_name": "administrative_territorial_entity",
+        "reference_column_names": [
+            "label"
+        ]
+    },
+    {
+        "table_name": "japans_top_100_waterfalls",
+        "column_names": [
+            "part_of"
+        ],
+        "reference_table_name": "part",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]

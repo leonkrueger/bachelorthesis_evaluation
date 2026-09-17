@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "Acceptance",
+        "column_names": [
+            "Submission_ID"
+        ],
+        "reference_table_name": "submission",
+        "reference_column_names": [
+            "Submission_ID"
+        ]
+    },
+    {
+        "table_name": "Acceptance",
+        "column_names": [
+            "Workshop_ID"
+        ],
+        "reference_table_name": "workshop",
+        "reference_column_names": [
+            "Workshop_ID"
+        ]
+    }
+]

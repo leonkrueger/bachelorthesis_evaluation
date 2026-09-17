@@ -1,0 +1,52 @@
+[
+    {
+        "table_name": "atom",
+        "column_names": [
+            "molecule_id"
+        ],
+        "reference_table_name": "molecule",
+        "reference_column_names": [
+            "molecule_id"
+        ]
+    },
+    {
+        "table_name": "bond",
+        "column_names": [
+            "molecule_id"
+        ],
+        "reference_table_name": "molecule",
+        "reference_column_names": [
+            "molecule_id"
+        ]
+    },
+    {
+        "table_name": "connected",
+        "column_names": [
+            "atom_id"
+        ],
+        "reference_table_name": "atom",
+        "reference_column_names": [
+            "atom_id"
+        ]
+    },
+    {
+        "table_name": "connected",
+        "column_names": [
+            "atom_id2"
+        ],
+        "reference_table_name": "atom",
+        "reference_column_names": [
+            "atom_id"
+        ]
+    },
+    {
+        "table_name": "connected",
+        "column_names": [
+            "bond_id"
+        ],
+        "reference_table_name": "bond",
+        "reference_column_names": [
+            "bond_id"
+        ]
+    }
+]

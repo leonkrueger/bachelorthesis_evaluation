@@ -1,0 +1,82 @@
+[
+    {
+        "table_name": "attendance",
+        "column_names": [
+            "link_to_event"
+        ],
+        "reference_table_name": "event",
+        "reference_column_names": [
+            "event_id"
+        ]
+    },
+    {
+        "table_name": "attendance",
+        "column_names": [
+            "link_to_member"
+        ],
+        "reference_table_name": "member",
+        "reference_column_names": [
+            "member_id"
+        ]
+    },
+    {
+        "table_name": "budget",
+        "column_names": [
+            "link_to_event"
+        ],
+        "reference_table_name": "event",
+        "reference_column_names": [
+            "event_id"
+        ]
+    },
+    {
+        "table_name": "expense",
+        "column_names": [
+            "link_to_budget"
+        ],
+        "reference_table_name": "budget",
+        "reference_column_names": [
+            "budget_id"
+        ]
+    },
+    {
+        "table_name": "expense",
+        "column_names": [
+            "link_to_member"
+        ],
+        "reference_table_name": "member",
+        "reference_column_names": [
+            "member_id"
+        ]
+    },
+    {
+        "table_name": "income",
+        "column_names": [
+            "link_to_member"
+        ],
+        "reference_table_name": "member",
+        "reference_column_names": [
+            "member_id"
+        ]
+    },
+    {
+        "table_name": "member",
+        "column_names": [
+            "link_to_major"
+        ],
+        "reference_table_name": "major",
+        "reference_column_names": [
+            "major_id"
+        ]
+    },
+    {
+        "table_name": "member",
+        "column_names": [
+            "zip"
+        ],
+        "reference_table_name": "zip_code",
+        "reference_column_names": [
+            "zip_code"
+        ]
+    }
+]

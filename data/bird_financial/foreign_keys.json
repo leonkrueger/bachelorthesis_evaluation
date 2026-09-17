@@ -1,0 +1,82 @@
+[
+    {
+        "table_name": "account",
+        "column_names": [
+            "district_id"
+        ],
+        "reference_table_name": "district",
+        "reference_column_names": [
+            "district_id"
+        ]
+    },
+    {
+        "table_name": "card",
+        "column_names": [
+            "disp_id"
+        ],
+        "reference_table_name": "disp",
+        "reference_column_names": [
+            "disp_id"
+        ]
+    },
+    {
+        "table_name": "client",
+        "column_names": [
+            "district_id"
+        ],
+        "reference_table_name": "district",
+        "reference_column_names": [
+            "district_id"
+        ]
+    },
+    {
+        "table_name": "disp",
+        "column_names": [
+            "account_id"
+        ],
+        "reference_table_name": "account",
+        "reference_column_names": [
+            "account_id"
+        ]
+    },
+    {
+        "table_name": "disp",
+        "column_names": [
+            "client_id"
+        ],
+        "reference_table_name": "client",
+        "reference_column_names": [
+            "client_id"
+        ]
+    },
+    {
+        "table_name": "loan",
+        "column_names": [
+            "account_id"
+        ],
+        "reference_table_name": "account",
+        "reference_column_names": [
+            "account_id"
+        ]
+    },
+    {
+        "table_name": "order",
+        "column_names": [
+            "account_id"
+        ],
+        "reference_table_name": "account",
+        "reference_column_names": [
+            "account_id"
+        ]
+    },
+    {
+        "table_name": "trans",
+        "column_names": [
+            "account_id"
+        ],
+        "reference_table_name": "account",
+        "reference_column_names": [
+            "account_id"
+        ]
+    }
+]

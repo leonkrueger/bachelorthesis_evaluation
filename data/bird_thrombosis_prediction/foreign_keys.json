@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "Examination",
+        "column_names": [
+            "ID"
+        ],
+        "reference_table_name": "Patient",
+        "reference_column_names": [
+            "ID"
+        ]
+    },
+    {
+        "table_name": "Laboratory",
+        "column_names": [
+            "ID"
+        ],
+        "reference_table_name": "Patient",
+        "reference_column_names": [
+            "ID"
+        ]
+    }
+]

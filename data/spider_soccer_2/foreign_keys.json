@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "Tryout",
+        "column_names": [
+            "pID"
+        ],
+        "reference_table_name": "Player",
+        "reference_column_names": [
+            "pID"
+        ]
+    },
+    {
+        "table_name": "Tryout",
+        "column_names": [
+            "cName"
+        ],
+        "reference_table_name": "College",
+        "reference_column_names": [
+            "cName"
+        ]
+    }
+]

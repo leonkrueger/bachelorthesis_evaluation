@@ -1,0 +1,112 @@
+[
+    {
+        "table_name": "superhero",
+        "column_names": [
+            "alignment_id"
+        ],
+        "reference_table_name": "alignment",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "superhero",
+        "column_names": [
+            "eye_colour_id"
+        ],
+        "reference_table_name": "colour",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "superhero",
+        "column_names": [
+            "gender_id"
+        ],
+        "reference_table_name": "gender",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "superhero",
+        "column_names": [
+            "hair_colour_id"
+        ],
+        "reference_table_name": "colour",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "superhero",
+        "column_names": [
+            "publisher_id"
+        ],
+        "reference_table_name": "publisher",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "superhero",
+        "column_names": [
+            "race_id"
+        ],
+        "reference_table_name": "race",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "superhero",
+        "column_names": [
+            "skin_colour_id"
+        ],
+        "reference_table_name": "colour",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "hero_attribute",
+        "column_names": [
+            "attribute_id"
+        ],
+        "reference_table_name": "attribute",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "hero_attribute",
+        "column_names": [
+            "hero_id"
+        ],
+        "reference_table_name": "superhero",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "hero_power",
+        "column_names": [
+            "hero_id"
+        ],
+        "reference_table_name": "superhero",
+        "reference_column_names": [
+            "id"
+        ]
+    },
+    {
+        "table_name": "hero_power",
+        "column_names": [
+            "power_id"
+        ],
+        "reference_table_name": "superpower",
+        "reference_column_names": [
+            "id"
+        ]
+    }
+]

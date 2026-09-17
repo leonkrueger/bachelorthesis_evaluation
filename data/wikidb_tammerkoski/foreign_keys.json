@@ -1,0 +1,12 @@
+[
+    {
+        "table_name": "tammerkoski",
+        "column_names": [
+            "architect"
+        ],
+        "reference_table_name": "architect",
+        "reference_column_names": [
+            "label"
+        ]
+    }
+]
